@@ -288,11 +288,8 @@ footer {
 	background-color:#fc6;
 }
 
-#navTweet #m_tools {
-	background-image: url(../../images/icons/icon_tool.png);
-	background-position: 2px center;
-	background-repeat: no-repeat;
-	padding-left: 23px;
+#m_tools span {
+	padding-right: .2rem;
 }
 
 #navTweet li ul {
@@ -317,13 +314,15 @@ footer {
 }
 #enterTweet h2 a {
 	text-decoration: none;
-	padding: 10px 6px 10px 40px;
-	background: url(../../images/icons/placeholder-35.png) no-repeat;
+	padding: 5px;
 	display: inline-block;
+}
+#enterTweet h2 span {
+	padding-right: .25rem;
 }
 #enterTweet h2 a:hover,
 #enterTweet h2 a:focus {
-	background: #A1D5F9 url(../../images/icons/placeholder-35.png) no-repeat;	
+	background-color: #A1D5F9;	
 }
 #enterTweet textarea {
 	float: left;
@@ -434,22 +433,14 @@ button:hover, button:focus,
 	display: inline-block;
 }
 .js .btnOptions h3 {
-	padding: 0;
+	padding: .5rem .5rem .5rem 0;
 }
 .js a.btnOptionsTweet,
 .js a.btnOptionsUser {
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
-	width: 50px;
-	height: 40px;
-	margin-right: .75rem;
-	top: 2px;
-	text-indent:-999rem;
-	border: 1px solid #928b8b;
-	
-	font-size: 1em; /* need this to set the positioning identical in webkit and FF */
-	background: #f5f6f7 url(../../images/icons/placeholder-35.png) no-repeat center;
+	padding: .5rem .6rem .1rem;	
+	border: 1px solid #ccc;
+	font-size: 1.25em; /* need this to set the positioning identical in webkit and FF */
+	text-decoration: none;
 	
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
