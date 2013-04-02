@@ -13,6 +13,7 @@ $(".btnOptions a").click(function(e) {
 		$(this).attr("aria-expanded",false);
 	}
 });
+$(".btnOptions a").attr("role","button");
 
 /* Show/hide write tweet ************************************/
 $("#enterTweet h2 a").click(function(e) {
@@ -29,6 +30,7 @@ $("#enterTweet h2 a").click(function(e) {
 		$(this).attr("aria-expanded",false);
 	}
 });
+$("#enterTweet h2 a").attr("role","button");
 
 /* Character counter ***************************************/
 // Update the count
