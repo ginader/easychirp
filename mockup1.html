@@ -23,15 +23,12 @@
 
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if lte IE 7]><script src="include/js/lte-ie7.js"></script><![endif]-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body class="theme-default no-js"><!--theme-inverse js-->
 
 <script>
-(function(){
-	$('body').removeClass('no-js').addClass('js');
-})();
+	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
 <div id="wrapper">
@@ -213,6 +210,7 @@
 
 </div><!--wrapper-->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="include/js/general.js"></script>
 <script>
 (function(){
