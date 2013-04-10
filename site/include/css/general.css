@@ -1,0 +1,598 @@
+/*
+Reset
+Base
+Utilities
+Layout (menus, write tweet, alert messages)
+Module (buttons, tweets)
+State
+Theme
+Media queries 
+*/
+
+/* Reset  **************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+main, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+body {
+line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+display:block;
+}
+
+nav ul {
+list-style:none;
+}
+
+blockquote, q {
+quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+content:'';
+content:none;
+}
+
+a {
+margin:0;
+padding:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+mark {
+background-color:#ff9;
+color:#000; 
+font-style:italic;
+font-weight:bold;
+}
+
+ins {
+font-style:italic;
+text-decoration:none;
+}
+
+del {
+text-decoration: line-through;
+}
+
+abbr[title], 
+dfn[title] {
+border-bottom:1px dotted;
+cursor:help;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+border-collapse:collapse;
+border-spacing:0;
+}
+
+hr {
+display:block;
+height:1px;
+border:0;   
+border-top:1px solid #ccc;
+margin:1em 0;
+padding:0;
+}
+
+input, select {
+vertical-align:middle;
+}
+
+/* Base   **************************************************/
+body {
+	/* text-align:center; Required for pesky IE */
+	margin-top: 6px;
+	font-size: 1em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+input[type="text"],
+textarea {
+	font-size: 1em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+	font-size: 2rem;
+	padding: 1rem 0 .5rem;
+	clear: left;
+}
+h2 {
+	font-size: 1.75rem;
+	padding: 1rem 0 .5rem;
+}
+h3 {
+	font-size: 1.5rem;
+	padding: 1rem 0 .5rem;
+}
+h4 {
+	font-size: 1.25rem;
+	padding: 1rem 0 .5rem;
+}
+
+p, td, dd, li, q {
+	line-height: 1.25rem;
+	margin-bottom: .5rem;
+}
+dd, li {
+	margin-left: 1.5rem;
+}
+
+.smallText {
+	font-size: .8rem;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration:none;
+	background-color: #A1D5F9;
+}
+
+.rounded {
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	border-radius: 15px;
+}
+
+/* Utilities ************************************************/
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.hide {
+position: absolute !important;
+clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+clip: rect(1px, 1px, 1px, 1px);
+padding: 0 !important;
+border: 0 !important;
+height: 1px !important;
+width: 1px !important;
+overflow: hidden;
+}
+
+.ar{text-align:right;}
+.ac{text-align:center;}
+
+/* Layout **************************************************/
+
+#wrapper {
+	margin: 0 auto 2rem;
+	width: 99%;
+	max-width: 1100px;
+	/* text-align:left; Overrides the previously set center alignment that older IE versions reqd */
+}
+
+#skip {
+	margin-bottom: 10px;
+}
+
+header > div {
+	margin: 15px 0 5px;
+}
+
+#welcome {
+	float: right;
+	margin-top: -140px;
+}
+
+#welcome p {
+	line-height: 1.2em;
+	margin-bottom: 0;
+	text-align: right;
+}
+
+footer {
+	clear: left;
+	padding-top: 3rem;
+}
+
+/* app menu */
+#navMain {
+	list-style: none;
+	float: left;
+	clear: left;
+}
+#navMain li {
+	float: left;
+	margin: .1em 0;
+}
+#navMain li a {
+	float: left;
+	padding: .15em .5em;
+	margin-right: .25em;
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+#navMain li a.current {
+}
+
+/* tweet menu */
+#navTweet {
+	padding: .5rem 0;
+	list-style: none;
+	clear: left;
+}
+#navTweet li {
+	float: left;
+	margin:.15rem 0;
+}
+#navTweet li a {
+	float: left;
+	text-decoration: none;
+	padding: .25rem .5rem;
+	margin-right: .75rem;
+	font-weight: bold;
+	border: 1px solid #333;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#navTweet li a:hover,
+#navTweet li a:focus {
+	color: #333;
+	border-color:#a1d5f9;
+	background-color:#a1d5f9;
+}
+#navTweet li a.current {
+	color: #333;
+	border-color:#a1d5f9;
+	background-color:#a1d5f9;
+}
+
+#navMain li a:active,
+#navTweet li a:active {
+	background-color:#fc6;
+}
+
+#m_tools span {
+	padding-right: .2rem;
+}
+
+#navTweet li ul {
+	display:none;
+}
+
+/* write tweet */
+#enterTweet {
+	border: 2px solid #a1d5f9; /*#0487E0*/;
+	padding: .5rem 1rem;
+	margin-bottom: 1rem;
+}
+.js #enterTweetContent {
+	display: none;
+}
+#enterTweet h2 {
+	font-size: 1.15rem;
+	padding-top: 0;
+}
+.js #enterTweet h2 {
+	padding-bottom: 0;
+}
+#enterTweet h2 a {
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+}
+#enterTweet h2 span {
+	padding-right: .5rem;
+}
+#enterTweet h2 a:hover,
+#enterTweet h2 a:focus {
+	background-color: #A1D5F9;	
+}
+#enterTweet textarea {
+	float: left;
+	margin-right: 1rem;
+	width: 80%;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+}
+#enterTweet textarea:focus {
+	border-color :#fc6;
+}
+#enterTweet h3 {
+    font-size: 1rem;
+    padding: .8rem 0 .3rem;
+}
+#charlimit {
+	margin: .5rem 0;
+}
+#frmUrlShort {
+	margin-bottom: .8rem;
+}
+#urlService {
+	margin: 0 .75rem;
+}
+
+/* alert messages */
+div.msgBox{
+	border:2px solid #a1d5f9;
+	padding:.25em .75em;
+	margin-bottom:.5em;
+	display:block;
+}
+div.msgBoxPos,
+div.msgBoxNeg{
+	border: 2px solid #0388e5;
+	/*background: #fff url(../../images/icon_check3.gif) no-repeat 5px 2px;*/
+	padding: .5rem 0 .5rem 50px;
+	margin-bottom: .5rem;
+	display: block;
+}
+div.msgBoxNeg{
+	border-color: #c30;
+	/*background: #fff url(../../images/icon_x2.gif) no-repeat 9px 2px;*/
+}
+.msgBoxPos h2,
+.msgBoxNeg h2 {
+	padding: .3rem 0;
+}
+
+/* Module **************************************************/
+
+/* Buttons */
+button {
+	border: 2px solid #0487E0;
+	padding:.3rem .8rem;
+	font-size: 1rem;
+	background-color: #fff;
+	cursor:pointer;
+	
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-khtml-border-radius: 12px;
+	border-radius: 12px;
+}
+.btnPost {
+	font-size:1.5rem;
+	/*margin: .25rem 0 0 .5rem;*/
+	padding: .9rem .7rem .7rem;
+}
+button:hover, button:focus,
+.btnPost:hover, .btnPost:focus {
+	border-color:#fc6;
+}
+
+/* Tweets */
+.tweet,
+.tweet h3,
+.tweet h4 {
+	clear: left;
+}
+.tweet h3 {
+	padding: 0;
+}
+.tweet {
+	border: 2px solid #a1d5f9;
+	padding: .25rem .5rem .5rem 64px;
+	margin-bottom: 1rem;
+}
+.tweet .tweetAvatar {
+	width: 64px;
+	height: 64px;
+	float: left;
+	margin-left: -64px;
+	margin-top: 3px;
+	background: no-repeat top;
+}
+.tweet q {
+	display: block;
+	font-size: 1.35rem;
+	line-height: 1.7rem;
+	margin: 0 0 .5em;
+}
+.no-js .tweet h3 {
+	font-size: 1rem;
+}
+.tweet ul {
+	list-style: none;
+}
+.tweet li {
+	float: left;
+	margin: 0 .5rem .5rem 0;
+}
+.js .tweet li {
+	margin: .5rem .5rem 0 0;
+}
+.reply {
+	border-color:#ccc;
+	background:url(../../images/icons/icon_reply_big.gif) top right no-repeat;
+}
+.retweet {
+	border-color:#ccc;
+	background:url(../../images/icons/icon_rt_big.gif) top right no-repeat;
+}
+.tweet.reply,
+.tweet.retweet {
+	padding-right: 60px;
+}
+
+/* tweet/user option buttons etc */
+.js .btnOptions {
+	position: relative;
+	display: inline-block;
+}
+.js .btnOptions h3 {
+	padding: .5rem .5rem .5rem 0;
+}
+.js a.btnOptionsTweet,
+.js a.btnOptionsUser {
+	padding: .5rem .6rem .1rem;	
+	border: 1px solid #ccc;
+	font-size: 1.25em; /* need this to set the positioning identical in webkit and FF */
+	text-decoration: none;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.js a.btnOptionsTweet:focus, 
+.js a.btnOptionsTweet:hover, 
+.js a.btnOptionsUser:focus, 
+.js a.btnOptionsUser:hover {
+	background-color:#A1D5F9;
+}
+.js .btnOptions ul {
+	display: none;
+}
+
+/* State  **************************************************/
+
+.js .btnOptions ul.displayOptions {
+	display: block;
+}
+.js #enterTweetContent.displayEnterTweet {
+	display: block;
+}
+
+.alert {
+	color: #f00;
+}
+
+/* Theme  **************************************************/
+
+body.theme-default {
+	background-color: #fff;
+	color: #333;
+}
+body.theme-inverse {
+	background-color: #222;
+	color: #fff;
+}
+
+.theme-default a {
+	color:#333;
+}
+.theme-inverse a {
+	color:#fff;
+}
+
+.theme-inverse .tweet {
+	border-color: #666;
+}
+
+.theme-inverse #navTweet li a {
+	border-color: #aaa;
+}
+
+.theme-inverse a:hover,
+.theme-inverse a:focus,
+.theme-inverse a:active {
+	background-color: #666;
+}
+
+.theme-inverse #navTweet li a:hover,
+.theme-inverse #navTweet li a:focus {
+	color: #fff;
+	border-color: #666;
+	background-color: #666;
+}
+
+.theme-inverse button.btnPost {
+	color: #fff;
+	background-color: #666;
+	border-color: #666;
+}
+.theme-inverse button.btnPost:hover,
+.theme-inverse button.btnPost:focus {
+	border-color: #fff;
+}
+
+.theme-inverse #enterTweet {
+	border: 2px solid #666;
+}
+
+/* Media queries *******************************************/
+
+@media only screen and (max-width: 800px) {
+	body {
+		font-size:.8em;
+	}
+	#welcome {
+		margin-top: -136px;
+	}
+	h1 {
+		font-size: 1.5rem;
+		padding: 1rem 0 .5rem;
+	}
+	#urlService {
+		display: block;
+		margin: .5rem 0;
+	}
+	.tweet q {
+		font-size: 1.25rem;
+		line-height: 1.6rem;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.tweet q {
+		font-size: 1.15rem;
+		line-height: 1.5rem;
+	}
+	#navMain li a {
+		padding: .1em .35em;
+		margin-right: .1em;
+	}
+	#navTweet li a {
+		margin-right: .25rem;
+	}
+	button,
+	button.btnPost {
+		padding: .2rem;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#hdUserStats {
+		display: none;
+	}
+}
+
+
+
+
