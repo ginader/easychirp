@@ -1,21 +1,17 @@
-
 Dennis Lembree
 Author of Easy Chirp and WebAxe. Owner of Web Overhauls
-@dennisl
-@webaxe
+@easychirp, @dennisl, @webaxe
 Role: Project lead, Accessibility, HTML5/CSS
-WebOverhauls@gmail.com
-
+info@easychirp.com
 
 Dirk Ginader
 Web Developer at Google
 @ginader
 Role: Front End Developer, Javascript, HTML5/CSS, Accessibility
-
+dirk@ginader.com
 
 Andrew Woods
 Author of CafeWorkr
 @awoods
 Role: Backend Web Developer, PHP, MySQL, API
 atwoods1@gmail.com
-
