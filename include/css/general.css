@@ -315,10 +315,10 @@ footer {
 #enterTweet h2 a {
 	text-decoration: none;
 	padding: 5px;
-	display: inline-block;
+	display: block;
 }
 #enterTweet h2 span {
-	padding-right: .25rem;
+	padding-right: .5rem;
 }
 #enterTweet h2 a:hover,
 #enterTweet h2 a:focus {
