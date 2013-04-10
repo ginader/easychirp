@@ -2,7 +2,7 @@
 Reset
 Base
 Utilities
-Layout (menus, write tweet)
+Layout (menus, write tweet, alert messages)
 Module (buttons, tweets)
 State
 Theme
@@ -346,6 +346,30 @@ footer {
 }
 #urlService {
 	margin: 0 .75rem;
+}
+
+/* alert messages */
+div.msgBox{
+	border:2px solid #a1d5f9;
+	padding:.25em .75em;
+	margin-bottom:.5em;
+	display:block;
+}
+div.msgBoxPos,
+div.msgBoxNeg{
+	border: 2px solid #0388e5;
+	/*background: #fff url(../../images/icon_check3.gif) no-repeat 5px 2px;*/
+	padding: .5rem 0 .5rem 50px;
+	margin-bottom: .5rem;
+	display: block;
+}
+div.msgBoxNeg{
+	border-color: #c30;
+	/*background: #fff url(../../images/icon_x2.gif) no-repeat 9px 2px;*/
+}
+.msgBoxPos h2,
+.msgBoxNeg h2 {
+	padding: .3rem 0;
 }
 
 /* Module **************************************************/
