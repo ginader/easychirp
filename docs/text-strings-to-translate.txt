@@ -1,0 +1,126 @@
+
+
+===== global =====
+
+skip to sign in
+skip to main content
+
+My Info
+welcome
+sign out
+following:
+followers:
+tweets: 
+
+Easy Chirp 2
+
+Copyright
+
+Menu
+App Menu
+Home
+My Profile
+Tips
+Articles & Feedback
+Features
+About
+
+Tweet Menu
+Timeline
+My Tweets
+Retweets
+ReTweets By Me
+ReTweets Of Me
+ReTweets To Me
+Mentions
+Favorites
+Direct Messages
+Tools
+
+favorite
+reply
+reply to all
+retweet
+quote tweet
+email tweet 
+user options
+timeline
+direct message
+tweet message
+report spammer
+mute user (for this session)
+
+Write Tweet
+Characters remaining
+Post
+Shorten URL
+Enter URL
+Service
+Shorten
+
+from [username]
+retweet
+responding
+retweeted [x] times
+
+===== home page =====
+
+
+===== tips page =====
+
+
+===== articles page =====
+
+
+===== features page =====
+
+
+===== about page =====
+
+
+===== Lists =====
+Full name
+Description
+Subsribers
+Members
+Add member
+Add
+Mode
+public
+private
+Actions
+edit settings
+Unsubscribe
+delete
+View on Twitter
+
+You are are the owner of this list.
+View list members.
+View tweets from this list.
+View list subscribers.
+
+===== Search =====
+
+
+===== retweets =====
+
+(Tweets by me that have been retweeted by others.)
+(Retweets posted by users that I follow.)
+
+===== DM =====
+The user to whom you're messaging must be following you.
+
+TIP: You can also send a Direct Message thru the regular status update box with the command: d + username + message
+
+Send a direct message to (username):
+
+Message:
+
+
+
+
+
+
+
+
+
