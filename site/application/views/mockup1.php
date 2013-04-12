@@ -151,6 +151,7 @@
 				<li><a href="#">timeline</a></li>
 				<li><a href="#">direct message</a></li>
 				<li><a href="#">tweet message</a></li>
+				<li><a href="#" title="remove tweets from this user for this session only">mute user</a></li>
 				<li><a href="#" class="spammer">report spammer</a></li>
 			</ul>
 		</div>
@@ -178,6 +179,7 @@
 				<li><a href="#">timeline</a></li>
 				<li><a href="#">direct message</a></li>
 				<li><a href="#">tweet message</a></li>
+				<li><a href="#" title="remove tweets from this user for this session only">mute user</a></li>
 				<li><a href="#" class="spammer">report spammer</a></li>
 			</ul>
 		</div>
@@ -205,6 +207,7 @@
 				<li><a href="#">timeline</a></li>
 				<li><a href="#">direct message</a></li>
 				<li><a href="#">tweet message</a></li>
+				<li><a href="#" title="remove tweets from this user for this session only">mute user</a></li>
 				<li><a href="#" class="spammer">report spammer</a></li>
 			</ul>
 		</div>
