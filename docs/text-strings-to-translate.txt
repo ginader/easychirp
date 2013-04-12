@@ -1,5 +1,4 @@
 
-
 ===== global =====
 
 skip to sign in
@@ -36,6 +35,11 @@ Mentions
 Favorites
 Direct Messages
 Tools
+go to user
+search
+Quick Search
+lists
+trends
 
 favorite
 reply
@@ -52,6 +56,7 @@ mute user (for this session)
 
 Write Tweet
 Characters remaining
+The character limit is 140.
 Post
 Shorten URL
 Enter URL
@@ -109,17 +114,12 @@ View list subscribers.
 
 ===== DM =====
 The user to whom you're messaging must be following you.
-
 TIP: You can also send a Direct Message thru the regular status update box with the command: d + username + message
 
 Send a direct message to (username):
-
 Message:
-
-
-
-
-
+Inbox
+Sent
 
 
 
