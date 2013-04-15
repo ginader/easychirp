@@ -136,7 +136,7 @@
 		<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | via <a href="#">app</a></p>
 		<div class="btnOptions">
 			<h3><a href="#tweetOptions_1" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
-			<ul>
+			<ul id="tweetOptions_1">
 				<li><a href="#" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
 				<li><a href="#" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
 				<li><a href="#" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
@@ -147,7 +147,7 @@
 		</div>
 		<div class="btnOptions">
 			<h3><a href="#userOptions_1" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
-			<ul>
+			<ul id="userOptions_1">
 				<li><a href="#" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
 				<li><a href="#" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
 				<li><a href="#" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
@@ -164,7 +164,7 @@
 		<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | retweeted 3 times | via <a href="#">app</a></p>
 		<div class="btnOptions">
 			<h3><a href="#tweetOptions_2" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
-			<ul>
+			<ul id="tweetOptions_2">
 				<li><a href="#" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
 				<li><a href="#" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
 				<li><a href="#" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
@@ -174,8 +174,8 @@
 			</ul>
 		</div>
 		<div class="btnOptions">
-			<h3><a href="#userOptions_1" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
-			<ul>
+			<h3><a href="#userOptions_2" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
+			<ul id="userOptions_2">
 				<li><a href="#" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
 				<li><a href="#" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
 				<li><a href="#" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
@@ -192,7 +192,7 @@
 		<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | via <a href="#">app</a></p>
 		<div class="btnOptions">
 			<h3><a href="#tweetOptions_3" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
-			<ul>
+			<ul id="tweetOptions_3">
 				<li><a href="#" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
 				<li><a href="#" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
 				<li><a href="#" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
@@ -202,8 +202,8 @@
 			</ul>
 		</div>
 		<div class="btnOptions">
-			<h3><a href="#userOptions_1" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
-			<ul>
+			<h3><a href="#userOptions_3" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
+			<ul id="userOptions_3">
 				<li><a href="#" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
 				<li><a href="#" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
 				<li><a href="#" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
