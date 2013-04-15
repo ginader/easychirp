@@ -440,11 +440,11 @@ button:hover, button:focus,
 }
 .reply {
 	border-color:#ccc;
-	background:url(../../images/icons/icon_reply_big.gif) top right no-repeat;
+	background:url(../../images/bg_reply_big.gif) top right no-repeat;
 }
 .retweet {
 	border-color:#ccc;
-	background:url(../../images/icons/icon_rt_big.gif) top right no-repeat;
+	background:url(../../images/bg_rt_big.gif) top right no-repeat;
 }
 .tweet.reply,
 .tweet.retweet {
