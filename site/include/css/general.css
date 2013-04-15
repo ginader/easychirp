@@ -460,22 +460,23 @@ button:hover, button:focus,
 	padding: .5rem .5rem .5rem 0;
 }
 .js a.btnOptionsTweet,
-.js a.btnOptionsUser {
+.js a.btnOptionsUser,
+.js .displayOptions a {
 	padding: .5rem .6rem .1rem;	
 	border: 1px solid #ccc;
-	font-size: 1.25em; /* need this to set the positioning identical in webkit and FF */
+	font-size: 1.3em; /* need this to set the positioning identical in webkit and FF */
 	text-decoration: none;
 	
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
-.js a.btnOptionsTweet:focus, 
+/*.js a.btnOptionsTweet:focus, 
 .js a.btnOptionsTweet:hover, 
 .js a.btnOptionsUser:focus, 
 .js a.btnOptionsUser:hover {
 	background-color:#A1D5F9;
-}
+}*/
 .js .btnOptions ul {
 	display: none;
 }

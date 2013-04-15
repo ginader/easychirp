@@ -19,7 +19,7 @@
 
 	<link rel="shortcut icon" href="images/brand/favicon.ico" />
 	<link rel="stylesheet" href="include/css/general.css" />
-	<link rel="stylesheet" href="include/css/ico-moon-fonts.css" />
+	<link rel="stylesheet" href="include/css/ico-moon-fonts2.css" />
 
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if lte IE 7]><script src="include/js/lte-ie7.js"></script><![endif]-->
@@ -75,7 +75,7 @@
 				<li><a href="app/direct.php?type=sent">Sent</a></li>
 			</ul>
 		</li>
-		<li><a href="app/tools.php" id="m_tools" accesskey="7"><span data-icon="&#xe001;" aria-hidden="true"></span>Tools</a>
+		<li><a href="app/tools.php" id="m_tools" accesskey="7"><span data-icon="&#x26;" aria-hidden="true"></span>Tools</a>
 			<ul>
 				<li><a href="app/go-to-user.php">Go to User</a></li>
 				<li><a href="app/search.php">Search</a></li>
@@ -102,7 +102,7 @@
 	
 	<div id="enterTweet" class="rounded">
 		<h2>
-			<label for="txtEnterTweet"><a href="#enterTweetContent"><span data-icon="&#xe000;" aria-hidden="true"></span>Write tweet</a></label>
+			<label for="txtEnterTweet"><a href="#enterTweetContent"><span data-icon="&#x27;" aria-hidden="true"></span>Write tweet</a></label>
 		</h2>
 		<div id="enterTweetContent">
 			<p id="charlimit"><span id="displayCharCountMessage">The character limit is 140.</span><strong id="displayCharCountNumber" aria-live="polite"></strong></p>
@@ -135,24 +135,24 @@
 		<q>tweet the tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweet</q>
 		<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | via <a href="#">app</a></p>
 		<div class="btnOptions">
-			<h3><a href="#tweetOptions_1" class="btnOptionsTweet" title="tweet options" data-icon="&#xe008;"><span class="hide">tweet options</span></a></h3>
+			<h3><a href="#tweetOptions_1" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
 			<ul>
-				<li><a href="#">favorite</a></li>
-				<li><a href="#">reply</a></li>
-				<li><a href="#">reply to all</a></li>
-				<li><a href="#">retweet</a></li>
-				<li><a href="#">quote tweet</a></li>
-				<li><a href="#">email tweet</a></li>
+				<li><a href="#" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
+				<li><a href="#" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
+				<li><a href="#" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
+				<li><a href="#" data-icon="&#x3f;" title="retweet"><span class="hide">retweet</span></a></li>
+				<li><a href="#" data-icon="&#x30;" title="quote tweet"><span class="hide">quote tweet</span></a></li>
+				<li><a href="#" data-icon="&#x31;" title="email tweet"><span class="hide">email tweet</span></a></li>
 			</ul>
 		</div>
 		<div class="btnOptions">
-			<h3><a href="#userOptions_1" class="btnOptionsUser" title="user options" data-icon="&#xe00e;"><span class="hide">user options</span></a></h3>
+			<h3><a href="#userOptions_1" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
 			<ul>
-				<li><a href="#">timeline</a></li>
-				<li><a href="#">direct message</a></li>
-				<li><a href="#">tweet message</a></li>
-				<li><a href="#" title="remove tweets from this user for this session only">mute user</a></li>
-				<li><a href="#" class="spammer">report spammer</a></li>
+				<li><a href="#" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
+				<li><a href="#" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
+				<li><a href="#" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
+				<li><a href="#" data-icon="&#x3d;" title="muter user"><span class="hide">mute user</span></a></li>
+				<li><a href="#" data-icon="&#x33;" title="report spammer" class="spammer"><span class="hide">report spammer</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -163,24 +163,24 @@
 		<q>Yo mama the tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweet</q>
 		<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | retweeted 3 times | via <a href="#">app</a></p>
 		<div class="btnOptions">
-			<h3><a href="#tweetOptions_2" class="btnOptionsTweet" title="tweet options" data-icon="&#xe008;"><span class="hide">tweet options</span></a></h3>
+			<h3><a href="#tweetOptions_2" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
 			<ul>
-				<li><a href="#">favorite</a></li>
-				<li><a href="#">reply</a></li>
-				<li><a href="#">reply to all</a></li>
-				<li><a href="#">retweet</a></li>
-				<li><a href="#">quote tweet</a></li>
-				<li><a href="#">email tweet</a></li>
+				<li><a href="#" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
+				<li><a href="#" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
+				<li><a href="#" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
+				<li><a href="#" data-icon="&#x3f;" title="retweet"><span class="hide">retweet</span></a></li>
+				<li><a href="#" data-icon="&#x30;" title="quote tweet"><span class="hide">quote tweet</span></a></li>
+				<li><a href="#" data-icon="&#x31;" title="email tweet"><span class="hide">email tweet</span></a></li>
 			</ul>
 		</div>
 		<div class="btnOptions">
-			<h3><a href="#userOptions_2" class="btnOptionsUser" title="user options" data-icon="&#xe00e;"><span class="hide">user options</span></a></h3>
+			<h3><a href="#userOptions_1" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
 			<ul>
-				<li><a href="#">timeline</a></li>
-				<li><a href="#">direct message</a></li>
-				<li><a href="#">tweet message</a></li>
-				<li><a href="#" title="remove tweets from this user for this session only">mute user</a></li>
-				<li><a href="#" class="spammer">report spammer</a></li>
+				<li><a href="#" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
+				<li><a href="#" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
+				<li><a href="#" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
+				<li><a href="#" data-icon="&#x3d;" title="muter user"><span class="hide">mute user</span></a></li>
+				<li><a href="#" data-icon="&#x33;" title="report spammer" class="spammer"><span class="hide">report spammer</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -191,24 +191,24 @@
 		<q>The end of the tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweeweetthe tweet the tweetthe tweet the et the tweetthe tweet the tweet</q>
 		<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | via <a href="#">app</a></p>
 		<div class="btnOptions">
-			<h3><a href="#tweetOptions_3" class="btnOptionsTweet" title="tweet options" data-icon="&#xe008;"><span class="hide">tweet options</span></a></h3>
+			<h3><a href="#tweetOptions_3" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
 			<ul>
-				<li><a href="#">favorite</a></li>
-				<li><a href="#">reply</a></li>
-				<li><a href="#">reply to all</a></li>
-				<li><a href="#">retweet</a></li>
-				<li><a href="#">quote tweet</a></li>
-				<li><a href="#">email tweet</a></li>
+				<li><a href="#" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
+				<li><a href="#" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
+				<li><a href="#" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
+				<li><a href="#" data-icon="&#x3f;" title="retweet"><span class="hide">retweet</span></a></li>
+				<li><a href="#" data-icon="&#x30;" title="quote tweet"><span class="hide">quote tweet</span></a></li>
+				<li><a href="#" data-icon="&#x31;" title="email tweet"><span class="hide">email tweet</span></a></li>
 			</ul>
 		</div>
 		<div class="btnOptions">
-			<h3><a href="#userOptions_3" class="btnOptionsUser" title="user options" data-icon="&#xe00e;"><span class="hide">user options</span></a></h3>
+			<h3><a href="#userOptions_1" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
 			<ul>
-				<li><a href="#">timeline</a></li>
-				<li><a href="#">direct message</a></li>
-				<li><a href="#">tweet message</a></li>
-				<li><a href="#" title="remove tweets from this user for this session only">mute user</a></li>
-				<li><a href="#" class="spammer">report spammer</a></li>
+				<li><a href="#" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
+				<li><a href="#" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
+				<li><a href="#" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
+				<li><a href="#" data-icon="&#x3d;" title="muter user"><span class="hide">mute user</span></a></li>
+				<li><a href="#" data-icon="&#x33;" title="report spammer" class="spammer"><span class="hide">report spammer</span></a></li>
 			</ul>
 		</div>
 	</div>

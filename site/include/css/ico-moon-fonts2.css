@@ -1,0 +1,138 @@
+@font-face {
+	font-family: 'easy-chirp-2a';
+	src:url('fonts/easy-chirp-2a.eot');
+	src:url('fonts/easy-chirp-2a.eot?#iefix') format('embedded-opentype'),
+		url('fonts/easy-chirp-2a.woff') format('woff'),
+		url('fonts/easy-chirp-2a.ttf') format('truetype'),
+		url('fonts/easy-chirp-2a.svg#easy-chirp-2a') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'easy-chirp-2a';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-reload1, .icon-close1, .icon-lock, .icon-trash, .icon-list, .icon-wrench, .icon-pencil, .icon-waiting, .icon-gear, .icon-star, .icon-star2, .icon-reload2, .icon-twitter, .icon-close, .icon-checkmark, .icon-quote, .icon-mail, .icon-bug, .icon-alert, .icon-image, .icon-link, .icon-home, .icon-bubbles, .icon-at, .icon-blocked, .icon-arrow1, .icon-users, .icon-user, .icon-mute, .icon-list2, .icon-twitter2, .icon-arrow2, .icon-arrow3 {
+	font-family: 'easy-chirp-2a';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-reload1:before {
+	content: "\21";
+}
+.icon-close1:before {
+	content: "\22";
+}
+.icon-lock:before {
+	content: "\23";
+}
+.icon-trash:before {
+	content: "\24";
+}
+.icon-list:before {
+	content: "\25";
+}
+.icon-wrench:before {
+	content: "\26";
+}
+.icon-pencil:before {
+	content: "\27";
+}
+.icon-waiting:before {
+	content: "\28";
+}
+.icon-gear:before {
+	content: "\29";
+}
+.icon-star:before {
+	content: "\2a";
+}
+.icon-star2:before {
+	content: "\2b";
+}
+.icon-reload2:before {
+	content: "\2c";
+}
+.icon-twitter:before {
+	content: "\2d";
+}
+.icon-close:before {
+	content: "\2e";
+}
+.icon-checkmark:before {
+	content: "\2f";
+}
+.icon-quote:before {
+	content: "\30";
+}
+.icon-mail:before {
+	content: "\31";
+}
+.icon-bug:before {
+	content: "\32";
+}
+.icon-alert:before {
+	content: "\33";
+}
+.icon-image:before {
+	content: "\34";
+}
+.icon-link:before {
+	content: "\35";
+}
+.icon-home:before {
+	content: "\38";
+}
+.icon-bubbles:before {
+	content: "\39";
+}
+.icon-at:before {
+	content: "\3a";
+}
+.icon-blocked:before {
+	content: "\3b";
+}
+.icon-arrow1:before {
+	content: "\3c";
+}
+.icon-users:before {
+	content: "\3d";
+}
+.icon-user:before {
+	content: "\e00e";
+}
+.icon-mute:before {
+	content: "\36";
+}
+.icon-list2:before {
+	content: "\e01d";
+}
+.icon-twitter2:before {
+	content: "\e018";
+}
+.icon-arrow2:before {
+	content: "\e00f";
+}
+.icon-arrow3:before {
+	content: "\e020";
+}
