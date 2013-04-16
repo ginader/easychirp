@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
 	<meta charset="utf-8" />
 	<title>Easy Chirp : a simple and accessible web-based Twitter application</title>
@@ -36,7 +36,7 @@
 <div id="skip"><a href="#signin">skip to sign in</a> | <a href="#main">skip to main content</a></div>
 
 <header role="banner">
-	<div><img src="images/brand/EasyChirp_Logo2_300.png" alt="Easy Chirp 2" width="300" height="109" /></div>
+	<div><a href="#"><img src="images/brand/EasyChirp_Logo2_300.png" alt="Easy Chirp 2" width="300" height="109" /></a></div>
 	<div id="welcome">
 		<h2 class="hide">My Info</h2>
 		<p>welcome webaxe! [<a href="#">sign out</a>]</p>
@@ -48,7 +48,7 @@
 	<h2 class="hide">Menu</h2>
 	<h3 class="hide">App Menu</h3>
 	<ul id="navMain">
-		<li><a href="index.php" id="m_home" accesskey="0">Home</a></li>
+		<!-- <li><a href="index.php" id="m_home" accesskey="0" data-icon="&#x36;"><span class="hide">Home</span></a></li> -->
 		<li><a href="app/profile.php" id="m_profile">My Profile</a></li>
 		<li><a href="app/tips.php" id="m_tips">Tips</a></li>
 		<li><a href="articles.php" id="m_articles">Articles &amp; Feedback</a></li>
