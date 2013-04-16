@@ -150,7 +150,7 @@ dd, li {
 a:hover,
 a:focus,
 a:active {
-	text-decoration:none;
+	text-decoration: none;
 	background-color: #A1D5F9;
 }
 
@@ -162,6 +162,7 @@ a:active {
 }
 
 /* Utilities ************************************************/
+
 .fl{float:left;}
 .fr{float:right;}
 .clear{clear:both}
@@ -174,7 +175,7 @@ content: " ";
 clear: both;
 height: 0;
 }
-* html .clearfix             { zoom: 1; } /* IE6 */
+* html .clearfix { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 .hide {
@@ -232,12 +233,12 @@ footer {
 }
 #navMain li {
 	float: left;
-	margin: .1em 0;
+	margin: .1rem 0;
 }
 #navMain li a {
 	float: left;
-	padding: .15em .5em;
-	margin-right: .25em;
+	padding: .15rem .5rem;
+	margin-right: .25rem;
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -246,6 +247,11 @@ footer {
 }
 #navMain li a.current {
 }
+/*#navMain li #m_home {
+	padding-bottom: 0;
+	text-decoration: none;
+	color: #333;
+}*/
 
 /* tweet menu */
 #navTweet {
@@ -255,7 +261,7 @@ footer {
 }
 #navTweet li {
 	float: left;
-	margin:.15rem 0;
+	margin: .15rem 0;
 }
 #navTweet li a {
 	float: left;
@@ -279,13 +285,13 @@ footer {
 }
 #navTweet li a.current {
 	color: #333;
-	border-color:#a1d5f9;
-	background-color:#a1d5f9;
+	border-color: #a1d5f9;
+	background-color: #a1d5f9;
 }
 
 #navMain li a:active,
 #navTweet li a:active {
-	background-color:#fc6;
+	background-color: #fc6;
 }
 
 #m_tools span {
@@ -293,7 +299,7 @@ footer {
 }
 
 #navTweet li ul {
-	display:none;
+	display: none;
 }
 
 /* write tweet */
@@ -350,10 +356,10 @@ footer {
 
 /* alert messages */
 div.msgBox{
-	border:2px solid #a1d5f9;
-	padding:.25em .75em;
-	margin-bottom:.5em;
-	display:block;
+	border: 2px solid #a1d5f9;
+	padding: .25em .75em;
+	margin-bottom: .5em;
+	display: block;
 }
 div.msgBoxPos,
 div.msgBoxNeg{
@@ -377,10 +383,10 @@ div.msgBoxNeg{
 /* Buttons */
 button {
 	border: 2px solid #0487E0;
-	padding:.3rem .8rem;
+	padding: .3rem .8rem;
 	font-size: 1rem;
 	background-color: #fff;
-	cursor:pointer;
+	cursor: pointer;
 	
 	-moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
@@ -388,13 +394,13 @@ button {
 	border-radius: 12px;
 }
 .btnPost {
-	font-size:1.5rem;
+	font-size: 1.5rem;
 	/*margin: .25rem 0 0 .5rem;*/
 	padding: .9rem .7rem .7rem;
 }
 button:hover, button:focus,
 .btnPost:hover, .btnPost:focus {
-	border-color:#fc6;
+	border-color: #fc6;
 }
 
 /* Tweets */
@@ -506,10 +512,10 @@ body.theme-inverse {
 }
 
 .theme-default a {
-	color:#333;
+	color: #333;
 }
 .theme-inverse a {
-	color:#fff;
+	color: #fff;
 }
 
 .theme-inverse .tweet {
@@ -556,7 +562,7 @@ body.theme-inverse {
 
 @media only screen and (max-width: 800px) {
 	body {
-		font-size:.8em;
+		font-size: .8em;
 	}
 	#welcome {
 		margin-top: -136px;
