@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" class="no-js">
 <head>
 	<meta charset="utf-8" />
 	<title>Easy Chirp : a simple and accessible web-based Twitter application</title>
@@ -25,7 +25,7 @@
 	<!--[if lte IE 7]><script src="include/js/lte-ie7.js"></script><![endif]-->
 </head>
 
-<body class="theme-default no-js"><!--theme-inverse js-->
+<body class="theme-default"><!--theme-inverse-->
 
 <script>
 	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
