@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Main extends EC_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -17,9 +17,12 @@ class Main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+
+
 	public function index()
 	{
-		$this->load->view('mockup1');
+		$this->layout->set_title('Homepage of EasyChirp');
+		$this->layout->view('home');
 	}
 }
 

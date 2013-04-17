@@ -1,7 +1,17 @@
 #
-# EasyChirp Primary HTAccess File
+# Dossier Primary HTAccess File
+# 2013 Apr 15 Mon 
 #
 ################################################################################
+
+#AuthUserFile /www/sites/dossier/web/site/.htpasswd
+#AuthGroupFile /dev/null
+#AuthName "Dossier Login"
+#AuthType Basic
+#<Limit GET>
+#	require valid-user
+#</Limit>
+
 
 <IfModule mod_rewrite.c>
  
@@ -12,8 +22,8 @@
  
     # If your default controller is something other than
     # "welcome" you should probably change this
-    RewriteRule ^(welcome(/index)?|index(\.php)?)/?$ / [L,R=301]
-    RewriteRule ^(.*)/index/?$ $1 [L,R=301]
+    RewriteRule ^(main(/index)?|index(\.php)?)/$ / [L,R=301]
+    RewriteRule ^(.*)/index/$ $1 [L,R=301]
  
     # Removes trailing slashes (prevents SEO duplicate content issues)
     RewriteCond %{REQUEST_FILENAME} !-d
@@ -26,15 +36,15 @@
     # previously this would not have been possible.
     # 'system' can be replaced if you have renamed your system folder.
     RewriteCond %{REQUEST_URI} ^system.*
-    RewriteRule ^(.*)$ /index.php/$1 [L]
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
  
     # Checks to see if the user is attempting to access a valid file,
     # such as an image or css document, if this isn't true it sends the
     # request to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php/$1 [L]
- 
+    RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+
 </IfModule>
  
 <IfModule !mod_rewrite.c>
