@@ -355,27 +355,73 @@ footer {
 }
 
 /* alert messages */
-div.msgBox{
-	border: 2px solid #a1d5f9;
-	padding: .25em .75em;
-	margin-bottom: .5em;
-	display: block;
-}
+
 div.msgBoxPos,
-div.msgBoxNeg{
+div.msgBoxNeg {
 	border: 2px solid #0388e5;
 	/*background: #fff url(../../images/icon_check3.gif) no-repeat 5px 2px;*/
-	padding: .5rem 0 .5rem 50px;
+	padding: .5rem;
 	margin-bottom: .5rem;
 	display: block;
 }
-div.msgBoxNeg{
+div.msgBoxNeg {
 	border-color: #c30;
 	/*background: #fff url(../../images/icon_x2.gif) no-repeat 9px 2px;*/
 }
 .msgBoxPos h2,
 .msgBoxNeg h2 {
-	padding: .3rem 0;
+	padding: .3rem 0 .3rem 40px;
+}
+.msgBoxPos p,
+.msgBoxNeg p {
+	margin-left: 40px;
+}
+
+.icon-cancel-circle-sprite,
+.icon-checkmark-circle-sprite,
+.icon-warning-sprite,.icon-close-sprite,
+.icon-checkmark-sprite,
+.icon-checkmark2-sprite,
+.icon-minus-sprite,
+.icon-plus-sprite {
+	display: inline-block;
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin-top: 4px;
+	background-image: url(../../images/sprites.png);
+	background-repeat: no-repeat;
+	background-color: #eee;
+	padding: 3px;
+
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	border-radius: 7px;
+}
+.icon-cancel-circle-sprite {
+	background-position: 0 3px;
+}
+.icon-checkmark-circle-sprite {
+	background-position: -48px 3px;
+}
+.icon-warning-sprite {
+	background-position: -96px 3px;
+}
+.icon-close-sprite {
+	background-position: -141px 3px;
+}
+.icon-checkmark-sprite {
+	background-position: -189px 3px;
+}
+.icon-checkmark2-sprite {
+	background-position: -240px 3px;
+}
+.icon-minus-sprite {
+	background-position: -288px 3px;
+}
+.icon-plus-sprite {
+	background-position: -336px 3px;
 }
 
 /* Module **************************************************/
@@ -414,7 +460,7 @@ button:hover, button:focus,
 }
 .tweet {
 	border: 2px solid #a1d5f9;
-	padding: .25rem .5rem .5rem 64px;
+	padding: .5rem .5rem .5rem 64px;
 	margin-bottom: 1rem;
 }
 .tweet .tweetAvatar {
@@ -458,16 +504,16 @@ button:hover, button:focus,
 }
 
 /* tweet/user option buttons etc */
-.js .btnOptions {
+.btnOptions {
 	position: relative;
 	display: inline-block;
 }
-.js .btnOptions h3 {
+.btnOptions h3 {
 	padding: .5rem .5rem .5rem 0;
 }
-.js a.btnOptionsTweet,
-.js a.btnOptionsUser,
-.js .displayOptions a {
+a.btnOptionsTweet,
+a.btnOptionsUser,
+.displayOptions a {
 	padding: .5rem .6rem .1rem;	
 	border: 1px solid #ccc;
 	font-size: 1.3em; /* need this to set the positioning identical in webkit and FF */

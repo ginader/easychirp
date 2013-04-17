@@ -91,11 +91,13 @@
 	<h1>Timeline</h1>
 
 	<div class="msgBoxPos rounded">
+		<span class="icon-checkmark-sprite"></span>
 		<h2>Positive Message</h2>
 		<p>This is an example of a (server-side?) container for a positive message.</p>
 	</div>
 
 	<div class="msgBoxNeg rounded">
+		<span class="icon-close-sprite"></span>
 		<h2>Negative Message</h2>
 		<p>This is an example of a (server-side?) container for a negative message.</p>
 	</div>
