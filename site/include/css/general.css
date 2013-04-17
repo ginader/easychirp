@@ -359,14 +359,12 @@ footer {
 div.msgBoxPos,
 div.msgBoxNeg {
 	border: 2px solid #0388e5;
-	/*background: #fff url(../../images/icon_check3.gif) no-repeat 5px 2px;*/
 	padding: .5rem;
 	margin-bottom: .5rem;
 	display: block;
 }
 div.msgBoxNeg {
 	border-color: #c30;
-	/*background: #fff url(../../images/icon_x2.gif) no-repeat 9px 2px;*/
 }
 .msgBoxPos h2,
 .msgBoxNeg h2 {
@@ -478,7 +476,12 @@ button:hover, button:focus,
 	margin: 0 0 .5em;
 }
 .no-js .tweet h3 {
-	font-size: 1rem;
+	/*font-size: 1rem;
+	margin-bottom: .5rem;*/
+	display: none;
+}
+.no-js .btnOptions {
+	margin-top: .5rem;
 }
 .tweet ul {
 	list-style: none;
@@ -513,7 +516,7 @@ button:hover, button:focus,
 }
 a.btnOptionsTweet,
 a.btnOptionsUser,
-.displayOptions a {
+.btnOptions a {
 	padding: .5rem .6rem .1rem;	
 	border: 1px solid #ccc;
 	font-size: 1.3em; /* need this to set the positioning identical in webkit and FF */
@@ -523,12 +526,6 @@ a.btnOptionsUser,
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
-/*.js a.btnOptionsTweet:focus, 
-.js a.btnOptionsTweet:hover, 
-.js a.btnOptionsUser:focus, 
-.js a.btnOptionsUser:hover {
-	background-color:#A1D5F9;
-}*/
 .js .btnOptions ul {
 	display: none;
 }
