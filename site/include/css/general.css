@@ -136,7 +136,7 @@ h4 {
 }
 
 p, td, dd, li, q {
-	line-height: 1.25rem;
+	line-height: 1.45rem;
 	margin-bottom: .5rem;
 }
 dd, li {
@@ -246,12 +246,14 @@ footer {
 	border-radius: 10px;
 }
 #navMain li a.current {
+	background-color: #a1d5f9;
+	text-decoration: none;
 }
-/*#navMain li #m_home {
+#navMain li #m_home {
 	padding-bottom: 0;
 	text-decoration: none;
-	color: #333;
-}*/
+	color: #444;
+}
 
 /* tweet menu */
 #navTweet {
