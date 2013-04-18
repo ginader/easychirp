@@ -38,6 +38,9 @@
 |
 */
 
+$route['articles'] = "main/articles";
+$route['about'] = "main/about";
+$route['features'] = "main/features";
 $route['default_controller'] = "main";
 $route['404_override'] = '';
 

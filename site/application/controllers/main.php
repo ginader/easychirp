@@ -22,7 +22,29 @@ class Main extends EC_Controller {
 	public function index()
 	{
 		$this->layout->set_title('Homepage of EasyChirp');
+		$this->layout->set_description('Homepage description');
 		$this->layout->view('home');
+	}
+
+	public function about()
+	{
+		$this->layout->set_title('About');
+		$this->layout->set_description('Description of About page');
+		$this->layout->view('about');
+	}
+
+	public function articles()
+	{
+		$this->layout->set_title('Articles and Feedback');
+		$this->layout->set_description('Description of Articles and Feedback page goes here');
+		$this->layout->view('articles');
+	}
+
+	public function features()
+	{
+		$this->layout->set_title('Features');
+		$this->layout->set_description('Description of Features page');
+		$this->layout->view('features');
 	}
 }
 
