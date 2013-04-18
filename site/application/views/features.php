@@ -1,7 +1,11 @@
 <h1>Features</h1>	
 
-<h2>Accessibility Features</h2>
-<p>TBD</p>
+<div class="box1 rounded">
+	<h2>Accessibility Features</h2>
+	<p>TBD</p>
+</div>
 
-<h2>Main Features</h2>
-<p>TBD</p>
+<div class="box1 rounded">
+	<h2>Main Features</h2>
+	<p>TBD</p>
+</div>
