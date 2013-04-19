@@ -32,7 +32,13 @@
 
 <div class="box1 rounded">
 	<h2>Article &amp; Blog Mentions</h2>
-	<p>TBD</p>
+	<p>Highlights:</p>
+	<ul>
+		<li><a rel="nofollow" href="http://preparednessforall.wordpress.com/2012/06/04/report-sociability-social-media-for-people-with-a-disability/">Report: Sociability, Social Media for People with a Disability</a> (Preparedness For All)</li>
+		<li><a rel="nofollow" href="http://www.lessfussdesign.com/blog/2009/07/accessible-twitter/">Accessible Twitter: how it should have been done to start with</a> (Less Fuss Design)</li>
+		<li><a rel="nofollow" href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a> (Nomensa)</li>
+	</ul>
+	<p>View more on the <a href="/articles">Articles &amp; Feedback</a> page.</p>
 </div>
 
 <div class="box1 rounded">
@@ -42,7 +48,17 @@
 
 <div class="box1 rounded">
 	<h2>Notable Features</h2>
-	<p>TBD</p>
+      <ul>
+        <li>A built-in shorten URL tool with choice of service.</li>
+        <li>Search, user search, and saved searches.</li>
+        <li>View, subscribe, and create Twitter Lists.</li>
+        <li>Daily and weekly Trends.</li>
+        <li>Works great with or without JavaScript.</li>
+        <li>Fully keyboard accessible.</li>
+        <li>Inline threading of tweets; displays reply &quot;conversation&quot;.</li>
+        <li>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</li>
+      </ul>
+      <p><a href="/features">More Features</a></p>
 </div>
 
 <div class="box1 rounded">
@@ -57,7 +73,6 @@
 
 <div class="box1 rounded">
 	<h2>Development Tasks</h2>
-	<p>TBD</p>
 
 	<h3>Known Issues</h3>
 	<p>TBD</p>
