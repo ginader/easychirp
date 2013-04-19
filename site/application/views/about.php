@@ -7,11 +7,6 @@
 </div>
 
 <div class="box1 rounded">
-	<h2>Our Twitter Account</h2>
-	<p>Follow Easy Chirp 2 on Twitter: <a href="http://twitter.com/EasyChirp">@EasyChirp</a>.</p>
-</div>
-
-<div class="box1 rounded">
 	<h2>Donate</h2>
 	<p>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</p>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -23,7 +18,12 @@
 </div>
 
 <div class="box1 rounded">
-	<h2>Feedback &amp; Email</h2>
+	<h2><span data-icon="&#x3f;" aria-hidden="true"></span> Our Twitter Account</h2>
+	<p>Follow Easy Chirp 2 on Twitter: <a href="http://twitter.com/EasyChirp">@EasyChirp</a>.</p>
+</div>
+
+<div class="box1 rounded">
+	<h2><span data-icon="&#x31;" aria-hidden="true"></span> Feedback &amp; Email</h2>
 	<p>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</p>
 </div>
 
@@ -41,7 +41,7 @@
 
 <div class="box1 rounded">
 	<h2>Technical</h2>
-	<p>This web application is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the <a rel="nofollow" href="http://dev.twitter.com/">Twitter API</a>.</p>
+	<p>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the <a rel="nofollow" href="http://dev.twitter.com/">Twitter API</a>.</p>
 </div>
 
 <div class="box1 rounded">
@@ -70,8 +70,9 @@
 </div>
 
 	<div class="box1 rounded">
-	<h2>Authors</h2>
-	<p><a href="http://www.dennislembree.com/">Dennis Lembree</a> is the owner and original developer of Easy Chirp/Accessible Twitter. When Easy Chirp 2 is developed by Dennis, Andrew Woods, and Dirk Ginader.</p>
+	<h2><span data-icon="&#x3c;" aria-hidden="true"></span> Authors</h2>
+	<p><a href="http://www.dennislembree.com/">Dennis Lembree</a> is the owner and original developer of Easy Chirp/Accessible Twitter. 
+		 Easy Chirp 2 is developed by Dennis, <a href="http://andrewwoods.net/">Andrew Woods</a>, and <a href="http://ginader.com/">Dirk Ginader</a>.</p>
 </div>
 
 <div class="box1 rounded">
