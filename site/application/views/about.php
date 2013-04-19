@@ -1,4 +1,4 @@
-<h1>About</h1>
+<h1 class="rounded">About</h1>
 
 <div class="box1 rounded">
 	<h2>The Name</h2>
@@ -52,7 +52,6 @@
 
 <div class="box1 rounded">
 	<h2>Awards!</h2>
-	<p>TBD</p>
 
 	<h3>Recipient of the AFB 2011 Access Award</h3>
 	<p>Accessible Twitter was honored with  the <a href="http://www.afb.org/Section.asp?DocumentID=5410">American Foundation for the Blind 2011 Access Award</a>. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</p>

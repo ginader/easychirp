@@ -1,4 +1,4 @@
-<h1>Articles &amp; Feedback</h1>
+<h1 class="rounded">Articles &amp; Feedback</h1>
 
 <div class="box1 rounded">
 	<h2>We're in Books!</h2>

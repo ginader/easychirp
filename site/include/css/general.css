@@ -118,9 +118,12 @@ textarea {
 }
 
 h1 {
-	font-size: 2rem;
-	padding: 1rem 0 .5rem;
 	clear: left;
+    margin-top: 0.5rem;
+    padding: .5rem 1rem;
+	font-size: 1.8rem;
+    background-color: #eee;
+    border-color: #eee;
 }
 h2 {
 	font-size: 1.75rem;
@@ -241,13 +244,14 @@ header > div {
 	text-align: right;
 }
 
+.content {
+	clear: both;
+	padding-top: .1rem;
+}
+
 footer {
 	clear: left;
 	padding-top: 3rem;
-}
-
-.content {
-	clear: both;
 }
 
 .box1 {

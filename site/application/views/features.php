@@ -1,4 +1,4 @@
-<h1>Features</h1>	
+<h1 class="rounded">Features</h1>	
 
 <div class="box1 rounded">
 	<h2>Accessibility Features</h2>
