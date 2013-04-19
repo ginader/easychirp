@@ -21,7 +21,7 @@ class Main extends EC_Controller {
 
 	public function index()
 	{
-		$this->layout->set_title('Homepage of EasyChirp');
+		$this->layout->set_title('Home');
 		$this->layout->set_description('Homepage description');
 		$this->layout->view('home');
 	}
@@ -45,6 +45,13 @@ class Main extends EC_Controller {
 		$this->layout->set_title('Features');
 		$this->layout->set_description('Description of Features page');
 		$this->layout->view('features');
+	}
+
+	public function tips()
+	{
+		$this->layout->set_title('Tips');
+		$this->layout->set_description('Description of Tips page');
+		$this->layout->view('tips');
 	}
 }
 
