@@ -38,9 +38,10 @@
 |
 */
 
-$route['articles'] = "main/articles";
 $route['about'] = "main/about";
+$route['articles'] = "main/articles";
 $route['features'] = "main/features";
+$route['tips'] = "main/tips";
 $route['default_controller'] = "main";
 $route['404_override'] = '';
 

@@ -32,7 +32,7 @@
 	<ul id="navMain">
 		<li><a href="/" id="m_home" accesskey="0" data-icon="&#x36;"><span class="hide">Home</span></a></li>
 		<li><a href="app/profile.php" id="m_profile">My Profile</a></li>
-		<li><a href="app/tips.php" id="m_tips">Tips</a></li>
+		<li><a href="/tips" id="m_tips">Tips</a></li>
 		<li><a href="/articles" id="m_articles">Articles &amp; Feedback</a></li>
 		<li><a href="/features" id="m_features">Features</a></li>
 		<li><a href="/about" id="m_about">About</a></li>

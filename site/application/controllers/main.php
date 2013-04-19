@@ -46,6 +46,13 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Description of Features page');
 		$this->layout->view('features');
 	}
+
+	public function tips()
+	{
+		$this->layout->set_title('Tips');
+		$this->layout->set_description('Description of Tips page');
+		$this->layout->view('tips');
+	}
 }
 
 /* End of file main.php */
