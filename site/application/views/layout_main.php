@@ -40,7 +40,7 @@
 
 	<h3 class="hide">Tweet Menu</h3>
 	<ul id="navTweet">
-		<li><a href="app/tweetroll.php" id="m_roll" accesskey="1">Timeline</a></li>
+		<li><a href="/timeline" id="m_roll" accesskey="1">Timeline</a></li>
 		<li><a href="app/mytweets.php" id="m_mytweets" accesskey="2">My Tweets</a></li>
 		<li><a href="app/retweets.php" id="m_retweets" accesskey="3">Retweets</a>
 			<ul>

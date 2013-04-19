@@ -53,6 +53,13 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Description of Tips page');
 		$this->layout->view('tips');
 	}
+
+	public function timeline()
+	{
+		$this->layout->set_title('Timeline');
+		$this->layout->set_description('Description of Timeline page');
+		$this->layout->view('timeline');
+	}
 }
 
 /* End of file main.php */
