@@ -215,7 +215,7 @@ class Layout
 		$tags = '';
 		if ( sizeof($this->head_codes['meta_equiv']) > 0 )
 		{
-			foreach ($this->head_codes['meta_equive'] As $name => $value)
+			foreach ($this->head_codes['meta_equiv'] As $name => $value)
 			{
 				$tags .= "<meta http-equiv=\"" . $name .  "\" content=\""  . $value . "\" />\n"; 
 			}			
@@ -226,7 +226,14 @@ class Layout
 		{
 			foreach ($this->head_codes['meta'] AS $name => $value)
 			{
-				$tags .= "<meta name=\"" . $name . "\" content=\""  . $value . "\" />\n"; 
+				if ($name === 'charset')
+				{
+					$tags .= "<meta charset=\"" . $value . "\" />\n"; 
+				}
+				else 
+				{
+					$tags .= "<meta name=\"" . $name . "\" content=\""  . $value . "\" />\n"; 
+				}
 			}
 		}
 		$tags .= "\n";

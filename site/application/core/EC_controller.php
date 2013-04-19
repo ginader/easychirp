@@ -27,7 +27,7 @@ class EC_Controller extends CI_Controller {
 		$this->layout->set_description('Easy Chirp. Web accessibility for the Twitter web site application. The Twitter.com website redone with strict web standards and web accessibility. Great for screen readers, low-vision, beginners, older browsers, text-only browsers, and non-JavaScript.');
 
 		// META TAGS
-		$this->layout->add_meta_tag_name('Content-Type', 'text/html; charset=utf-8');
+		$this->layout->add_meta_tag_name('charset', 'utf-8');
 		$this->layout->add_meta_tag_name('author', 'Dennis E Lembree, Web Overhauls');
 		$this->layout->add_meta_tag_name('viewport', 'width=device-width, initial-scale=1.0');
 		$this->layout->add_meta_tag_name('verify-v1', '3gSFkFi1HCTZp2MP2dUh9mteuUJdRlMzx+HrFKopQN4=');
