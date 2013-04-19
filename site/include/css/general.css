@@ -185,6 +185,15 @@ a:active {
 	border-radius: 15px;
 }
 
+.box1 blockquote {
+	padding: 10px 0 10px 38px;
+	background: url(/images/blockquote.png) no-repeat 0 10px;
+}
+.box1 blockquote div {
+	font-style: italic;
+	text-align: right;
+}
+
 /* Utilities ************************************************/
 
 .fl{float:left;}
