@@ -48,11 +48,25 @@ class Main extends EC_Controller {
 		$this->layout->view('features');
 	}
 
+	public function profile()
+	{
+		$this->layout->set_title('Profile');
+		$this->layout->set_description('Description of Profile page');
+		$this->layout->view('profile');
+	}
+
 	public function tips()
 	{
 		$this->layout->set_title('Tips');
 		$this->layout->set_description('Description of Tips page');
 		$this->layout->view('tips');
+	}
+
+	public function timeline()
+	{
+		$this->layout->set_title('Timeline');
+		$this->layout->set_description('Description of Timeline page');
+		$this->layout->view('timeline');
 	}
 }
 

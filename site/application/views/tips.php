@@ -30,7 +30,7 @@
 	<tbody>
 		<tr>
 			<th scope="row">@username + message</th>
-			<td>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and accounts following both will see this tweet.</td>
+			<td>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</td>
 			<td>@caratina I love that song too, The Cure rules!</td>
 		</tr>
 		<tr>
@@ -40,8 +40,13 @@
 		</tr>
 		<tr>
 			<th scope="row">RT @username + their message</th>
-			<td>Known as a Retweet, or RT for short. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</td>
+			<td>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</td>
 			<td>RT @easychirp Working on some performance enhancements with the API.</td>
+		</tr>
+		<tr>
+			<th scope="row">MT @username + their message</th>
+			<td>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</td>
+			<td>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</td>
 		</tr>
 		<tr>
 			<th scope="row">^ + user initials</th>
@@ -74,13 +79,15 @@
 
 <div class="box1 rounded">
 	<h2>Web Applications</h2>
-	<ul class="ulList1">
+	<ul>
 		<li><a href="http://twuffer.com/" rel="external">Twuffer</a>: a Twitter buffer (schedule tweets)</li>
-		<li><a href="http://twtvite.com/" rel="external">Twtvite</a>: Organize a tweetup!</li>
-		<li><a href="http://tweetbeep.com/" rel="external">tweetbeep</a>: Free Twitter alerts by email.</li>
+		<li><a href="http://topsy.com/" rel="external">Topsy</a>: Twitter search.</li>
 		<li><a href="http://backtweets.com/" rel="external">BackTweet</a>: Search links on Twitter.</li>
 		<li><a href="http://monitter.com/" rel="external">Monitter</a>: monitor tweets with keywords.</li>
 		<li><a href="http://tweetstats.com" rel="external">TweetStats</a>: Graphin' your stats!</li>
+		<li><a href="http://twtvite.com/" rel="external">Twtvite</a>: Organize a tweetup!</li>
+		<li><a href="http://twtpoll.com/" rel="external">TwtPoll</a>: create and distribute polls on Twitter.</li>
+		<li><a href="http://tweetbeep.com/" rel="external">tweetbeep</a>: Free Twitter alerts by email.</li>
 	</ul>
 </div>
 

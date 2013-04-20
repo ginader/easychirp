@@ -145,6 +145,30 @@ p, td, dd, li, q {
 dd, li {
 	margin-left: 1.5rem;
 }
+dl#profile {
+	margin: .5em 0 1em;
+}
+dl#profile dt {
+	font-weight: bold;
+	width: 20%;
+	text-align: right;
+	float: left;
+	clear: left;
+	margin-top: .5em;
+	margin-right: .5em;
+	line-height: 1em;
+}
+dl#profile dt:after {
+	content:':';
+}
+dl#profile dd {
+	float: left;
+	width: 65%;
+	margin-top: .5em;
+	margin-left: 0;
+	line-height: 1em;
+}
+
 /*.article_mentions a {
 	text-decoration: none;
 	border-bottom: #ccc 1px dashed;
@@ -164,7 +188,7 @@ dd, li {
 .content ul li {
 	padding-left: 1em;
 	margin-left: .5em;
-	background: url(/images/bullet1.gif) no-repeat 0 .35em;
+	background: url(/images/bullet1.gif) no-repeat 0 .45em;
 }
 
 .smallText {
@@ -183,6 +207,15 @@ a:active {
 	-webkit-border-radius: 15px;
 	-khtml-border-radius: 15px;
 	border-radius: 15px;
+}
+
+.box1 blockquote {
+	padding: 10px 0 10px 38px;
+	background: url(/images/blockquote.png) no-repeat 0 10px;
+}
+.box1 blockquote div {
+	font-style: italic;
+	text-align: right;
 }
 
 /* Utilities ************************************************/
@@ -273,6 +306,12 @@ td, th {
 th {
 	font-weight:bold;
 	text-align: left;
+}
+
+#editProfilePara {
+	text-align: right; 
+	margin: -2.1rem 0 1rem 0; 
+	padding-right: 1rem;
 }
 
 /* app menu */
@@ -577,6 +616,11 @@ a.btnOptionsUser,
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+}
+/* reset from styled 'regular' lists */
+.btnOptions ul li {
+	background-image: none;
+	padding-left: 0;
 }
 .js .btnOptions ul {
 	display: none;
