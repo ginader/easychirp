@@ -1,6 +1,6 @@
 <h1 class="hide">Easy Chirp 2</h1>
 
-<div class="box1 rounded">
+<div class="box1 rounded" style="background-color:#efefef;">
 	<h2>Web accessibility for the Twitter website application</h2>
 	<p>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about <a href="http://en.wikipedia.org/wiki/Web_accessibility">web accessibility</a>.</p>
 	<p>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the <a href="/about">About</a> and <a href="/features">Features</a> pages. You may also read an extensive list of user feedback and blogs/articles about this application.</p>

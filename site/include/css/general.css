@@ -268,7 +268,7 @@ header > div {
 
 #welcome {
 	float: right;
-	margin-top: -140px;
+	margin-top: -148px;
 }
 
 #welcome p {
@@ -721,6 +721,9 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 640px) {
+	#hdUserStats {
+		display: none;
+	}
 	.tweet q {
 		font-size: 1.15rem;
 		line-height: 1.5rem;
@@ -739,9 +742,6 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 480px) {
-	#hdUserStats {
-		display: none;
-	}
 }
 
 
