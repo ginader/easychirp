@@ -47,6 +47,13 @@ class Main extends EC_Controller {
 		$this->layout->view('features');
 	}
 
+	public function profile()
+	{
+		$this->layout->set_title('Profile');
+		$this->layout->set_description('Description of Profile page');
+		$this->layout->view('profile');
+	}
+
 	public function tips()
 	{
 		$this->layout->set_title('Tips');

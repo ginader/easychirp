@@ -41,6 +41,7 @@
 $route['about'] = "main/about";
 $route['articles'] = "main/articles";
 $route['features'] = "main/features";
+$route['profile'] = "main/profile";
 $route['tips'] = "main/tips";
 $route['timeline'] = "main/timeline";
 $route['default_controller'] = "main";
