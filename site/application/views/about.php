@@ -70,7 +70,7 @@
 </div>
 
 	<div class="box1 rounded">
-	<h2><span data-icon="&#x3c;" aria-hidden="true"></span> Authors</h2>
+	<h2><span data-icon="&#x3b;" aria-hidden="true"></span> Authors</h2>
 	<p><a href="http://www.dennislembree.com/">Dennis Lembree</a> is the owner and original developer of Easy Chirp/Accessible Twitter. 
 		 Easy Chirp 2 is developed by Dennis, <a href="http://andrewwoods.net/">Andrew Woods</a>, and <a href="http://ginader.com/">Dirk Ginader</a>.</p>
 </div>
