@@ -23,6 +23,7 @@ class Layout
 	private $title_delimiter = ' | ';
 
 	public $layout;
+	public $skip_to_sign_in = FALSE;
 	public $title = '';
 	public $sign_in_url = '';
 	public $base_url = '';
@@ -57,6 +58,22 @@ class Layout
 		
 		$this->layout = $layout;
 	}
+
+	/**
+	* Override the default layout script
+	*
+	* @param String $layout name of the template file in the views directory
+	* @return void
+	*/ 
+	function set_skip_to_sign_in($value)
+	{
+		if ( ! is_bool($value))
+		{
+			throw new Exception('The argument must be a boolean. TRUE or FALSE');
+		}
+		$this->skip_to_sign_in = $value;
+	}
+
 
 	/**
 	* Override the default layout script
@@ -345,6 +362,7 @@ class Layout
 		$loaded_data['base_url'] = $this->base_url;
 		$loaded_data['sign_in_url'] = $this->sign_in_url;
 		$loaded_data['logged_in'] = $this->logged_in;
+		$loaded_data['skip_to_sign_in'] = $this->skip_to_sign_in;
 
 		if($return)
 		{

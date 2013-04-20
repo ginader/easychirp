@@ -15,7 +15,10 @@
 
 <div id="wrapper">
 
-<div id="skip"><a href="#signin">skip to sign in</a> | <a href="#main">skip to main content</a></div>
+<div id="skip">
+<?php if ($skip_to_sign_in): ?> 
+<a href="#signin">skip to sign in</a> | 
+<?php endif; ?> <a href="#main">skip to main content</a></div>
 
 <header role="banner">
 	<div><img src="images/brand/EasyChirp_Logo2_300.png" alt="Easy Chirp 2" width="300" height="109" /></div>

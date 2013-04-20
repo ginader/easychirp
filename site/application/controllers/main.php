@@ -23,6 +23,7 @@ class Main extends EC_Controller {
 	{
 		$this->layout->set_title('Home');
 		$this->layout->set_description('Homepage description');
+		$this->layout->set_skip_to_sign_in( TRUE );
 		$this->layout->view('home');
 	}
 
