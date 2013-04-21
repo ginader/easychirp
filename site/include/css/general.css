@@ -146,7 +146,7 @@ dd, li {
 	margin-left: 1.5rem;
 }
 dl#profile {
-	margin: .5em 0 1em;
+	margin: .5rem 0 1rem;
 }
 dl#profile dt {
 	font-weight: bold;
@@ -154,9 +154,9 @@ dl#profile dt {
 	text-align: right;
 	float: left;
 	clear: left;
-	margin-top: .5em;
-	margin-right: .5em;
-	line-height: 1em;
+	margin-top: .5rem;
+	margin-right: .5rem;
+	line-height: 1rem;
 }
 dl#profile dt:after {
 	content:':';
@@ -164,9 +164,9 @@ dl#profile dt:after {
 dl#profile dd {
 	float: left;
 	width: 65%;
-	margin-top: .5em;
+	margin-top: .5rem;
 	margin-left: 0;
-	line-height: 1em;
+	line-height: 1rem;
 }
 
 /*.article_mentions a {
@@ -174,8 +174,8 @@ dl#profile dd {
 	border-bottom: #ccc 1px dashed;
 }*/
 .article_mentions dt {
-	margin: 1.2em 0 .5em 0;
-	line-height: 1.5em;
+	margin: 1.2rem 0 .5rem 0;
+	line-height: 1.5rem;
 }
 .article_mentions dd {
 	/*margin: .25em 0 .25em 2em;*/
@@ -308,10 +308,25 @@ th {
 	text-align: left;
 }
 
-#editProfilePara {
+#editProfileLink {
 	text-align: right; 
 	margin: -2.1rem 0 1rem 0; 
 	padding-right: 1rem;
+}
+
+/* buttons */
+button {
+	border: 2px solid #0487E0;
+	font-weight: bold;
+	margin: .5rem .5rem .5rem 0;
+	padding: .4rem .9rem;
+	background-color: #fff;
+	cursor: pointer;
+
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-khtml-border-radius: 12px;
+	border-radius: 12px;
 }
 
 /* app menu */

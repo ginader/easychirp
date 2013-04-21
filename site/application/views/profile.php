@@ -1,4 +1,3 @@
-
 <style type="text/css">
 h2 {
 	margin-left: 1rem;
@@ -7,7 +6,7 @@ h2 {
 
 <h1 class="rounded">My Profile</h1>
 
-<p id="editProfilePara"><a href="/settings">Edit Profile</a></p>
+<p id="editProfileLink"><a href="/profile_edit">Edit Profile</a></p>
 
 <h2>Details</h2>
 <div class="box1 rounded" style="margin: 0;">
@@ -52,11 +51,7 @@ h2 {
 </div>
 
 <!-- <div class="box1 rounded">
-	<h2><a href="/settings">Edit Profile</a></h2>
-</div> -->
-
-<!-- <div class="box1 rounded">
-	<h2>Latest Tweet</h2>
+	<h2><a href="/profile_edit">Edit Profile</a></h2>
 </div> -->
 
 <h2>Latest Tweet</h2>
@@ -87,7 +82,5 @@ h2 {
 		</ul>
 	</div>
 </div>
-
-
 
 
