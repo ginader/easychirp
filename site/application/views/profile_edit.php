@@ -6,7 +6,7 @@
 	<h2>[AVATAR] Edit Profile</h2>
 	<form id="frmProfileEdit" action="actions/doSettings.php" method="post">
 		<dl id="profile" class="editProfile">
-			<dt>Username</dt>
+			<dt style="padding-top: 0;">Username</dt>
 			<dd>USERNAME</dd>
 			
 			<dt><label for="name">Name <span class="smallText">(required)</span></label></dt>
