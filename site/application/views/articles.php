@@ -54,6 +54,12 @@
 	</dl>
 	<h3>More, ordered by date</h3>
 	<dl>
+	<dt><a href="http://manuel.a12x.net/2013/04/21/easy-chirp-web-accesible-para-manejo-de-twitter-multiplataforma/">EASY CHIRP: Web accesible para manejo de Twitter multiplataforma</a></dt>
+		<dd>Blog de Manuel Cortez</dd>
+		<dd>2013 Apr 21</dd>
+	<dt><a href="http://www.mediaaccess.org.au/latest_news/general/easy-chirp-seeks-funding-for-update">Easy Chirp seeks funding for update</a></dt>
+		<dd>Media Access Australia</dd>
+		<dd>2013 Apr 05</dd>
 	<dt><a href="http://www.readbelowthefold.com/web-accessibility/got-accessibility-tips-for-social-media.html">Got Accessibility? Tips for Social Media</a></dt>
 		<dd>Below The Fold</dd>
 		<dd>2012 Oct 4</dd>
