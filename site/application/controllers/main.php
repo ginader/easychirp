@@ -62,10 +62,24 @@ class Main extends EC_Controller {
 		$this->layout->view('profile_edit');
 	}
 
+	public function quote()
+	{
+		$this->layout->set_title('Quote');
+		$this->layout->set_description('Quote a tweet.');
+		$this->layout->view('quote');
+	}
+
+	public function status()
+	{
+		$this->layout->set_title('View Single Tweet');
+		$this->layout->set_description('View a single status/tweet.');
+		$this->layout->view('status');
+	}
+
 	public function tips()
 	{
 		$this->layout->set_title('Tips');
-		$this->layout->set_description('Description of Tips page');
+		$this->layout->set_description('Tips for this app, using Twitter, and recommended apps.');
 		$this->layout->view('tips');
 	}
 
