@@ -698,6 +698,9 @@ body.theme-inverse {
 .theme-inverse #enterTweet {
 	border: 2px solid #666;
 }
+.boxAccent {
+	background-color:#efefef;
+}
 
 /* Media queries *******************************************/
 
