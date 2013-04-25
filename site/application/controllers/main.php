@@ -50,8 +50,8 @@ class Main extends EC_Controller {
 
 	public function profile()
 	{
-		$this->layout->set_title('Profile');
-		$this->layout->set_description('Description of Profile page');
+		$this->layout->set_title('My Profile');
+		$this->layout->set_description('Details on my Twitter profile.');
 		$this->layout->view('profile');
 	}
 
@@ -81,6 +81,13 @@ class Main extends EC_Controller {
 		$this->layout->set_title('Tips');
 		$this->layout->set_description('Tips for this app, using Twitter, and recommended apps.');
 		$this->layout->view('tips');
+	}
+
+	public function user()
+	{
+		$this->layout->set_title('User Details');
+		$this->layout->set_description('Information for Twitter user.');
+		$this->layout->view('user');
 	}
 
 	public function timeline()
