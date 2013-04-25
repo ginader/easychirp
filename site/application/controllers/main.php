@@ -55,6 +55,13 @@ class Main extends EC_Controller {
 		$this->layout->view('profile');
 	}
 
+	public function profile_edit()
+	{
+		$this->layout->set_title('Edit Profile');
+		$this->layout->set_description('Edit your Twitter account profile.');
+		$this->layout->view('profile_edit');
+	}
+
 	public function tips()
 	{
 		$this->layout->set_title('Tips');

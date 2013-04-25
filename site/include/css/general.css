@@ -2,7 +2,7 @@
 Reset
 Base
 Utilities
-Layout (menus, write tweet, alert messages)
+Layout (tables, app menu, tweet menu, write tweet, alert messages, page-specific)
 Module (buttons, tweets)
 State
 Theme
@@ -10,6 +10,7 @@ Media queries
 */
 
 /* Reset  **************************************************/
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -104,6 +105,7 @@ vertical-align:middle;
 }
 
 /* Base   **************************************************/
+
 body {
 	/* text-align:center; Required for pesky IE */
 	margin-top: 6px;
@@ -145,42 +147,7 @@ p, td, dd, li, q {
 dd, li {
 	margin-left: 1.5rem;
 }
-dl#profile {
-	margin: .5em 0 1em;
-}
-dl#profile dt {
-	font-weight: bold;
-	width: 20%;
-	text-align: right;
-	float: left;
-	clear: left;
-	margin-top: .5em;
-	margin-right: .5em;
-	line-height: 1em;
-}
-dl#profile dt:after {
-	content:':';
-}
-dl#profile dd {
-	float: left;
-	width: 65%;
-	margin-top: .5em;
-	margin-left: 0;
-	line-height: 1em;
-}
 
-/*.article_mentions a {
-	text-decoration: none;
-	border-bottom: #ccc 1px dashed;
-}*/
-.article_mentions dt {
-	margin: 1.2em 0 .5em 0;
-	line-height: 1.5em;
-}
-.article_mentions dd {
-	/*margin: .25em 0 .25em 2em;*/
-	line-height: 1rem;
-}
 
 .content ul {
 	list-style: none;
@@ -268,7 +235,7 @@ header > div {
 
 #welcome {
 	float: right;
-	margin-top: -140px;
+	margin-top: -148px;
 }
 
 #welcome p {
@@ -308,7 +275,7 @@ th {
 	text-align: left;
 }
 
-#editProfilePara {
+#editProfileLink {
 	text-align: right; 
 	margin: -2.1rem 0 1rem 0; 
 	padding-right: 1rem;
@@ -446,7 +413,6 @@ th {
 }
 
 /* alert messages */
-
 div.msgBoxPos,
 div.msgBoxNeg {
 	border: 2px solid #0388e5;
@@ -513,16 +479,53 @@ div.msgBoxNeg {
 	background-position: -336px 3px;
 }
 
+/* page-specific */
+#frmProfileEdit dt {
+	padding-top: .4rem;
+}
+dl#profile {
+	margin: .5rem 0 1rem;
+}
+dl#profile dt {
+	font-weight: bold;
+	width: 20%;
+	text-align: right;
+	float: left;
+	clear: left;
+	margin-top: .5rem;
+	margin-right: .5rem;
+	line-height: 1rem;
+}
+dl#profile dt:after {
+	content:':';
+}
+dl#profile dd {
+	float: left;
+	width: 65%;
+	margin-top: .5rem;
+	margin-left: 0;
+	line-height: 1rem;
+}
+.article_mentions dt {
+	margin: 1.2rem 0 .5rem 0;
+	line-height: 1.5rem;
+}
+.article_mentions dd {
+	line-height: 1rem;
+}
+
 /* Module **************************************************/
 
 /* Buttons */
 button {
 	border: 2px solid #0487E0;
-	padding: .3rem .8rem;
+	font-weight: bold;
 	font-size: 1rem;
+	margin: .5rem .5rem .5rem 0;
+	padding: .4rem .9rem;
 	background-color: #fff;
 	cursor: pointer;
-	
+
 	-moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-khtml-border-radius: 12px;
@@ -530,7 +533,6 @@ button {
 }
 .btnPost {
 	font-size: 1.5rem;
-	/*margin: .25rem 0 0 .5rem;*/
 	padding: .9rem .7rem .7rem;
 }
 button:hover, button:focus,
@@ -696,6 +698,9 @@ body.theme-inverse {
 .theme-inverse #enterTweet {
 	border: 2px solid #666;
 }
+.boxAccent {
+	background-color:#efefef;
+}
 
 /* Media queries *******************************************/
 
@@ -721,6 +726,9 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 640px) {
+	#hdUserStats {
+		display: none;
+	}
 	.tweet q {
 		font-size: 1.15rem;
 		line-height: 1.5rem;
@@ -739,9 +747,6 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 480px) {
-	#hdUserStats {
-		display: none;
-	}
 }
 
 
