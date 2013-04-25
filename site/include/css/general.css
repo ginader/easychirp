@@ -726,6 +726,7 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 640px) {
+	#skip,
 	#hdUserStats {
 		display: none;
 	}
