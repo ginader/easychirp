@@ -21,20 +21,20 @@
 
 <div class="box1 rounded">
 	<h2>Latest Tweets from Easy Chirp</h2>
-	<div class="tweets">
+	<ul id="homeECtweets">
 	<?php $count = 0; ?>
 	<?php foreach($easychirp_statuses AS $tweet): ?>
 		<?php $count++; ?>
 		<?php if ($count > 7){ break; }  ?>
-	<?php $tweet_url = 'http://twitter.com/' . $tweet->user->screen_name 
-		. '/status/' . $tweet->id_str; ?>
-		<div class="tweet">
-			<?php echo $tweet->text; ?><br />
+	<?php /*?><?php $tweet_url = 'http://twitter.com/' . $tweet->user->screen_name 
+		. '/status/' . $tweet->id_str; ?><?php */?>
+		<li>
+			<?php echo $tweet->text; ?><?php /*?><br />
 			<a href="<?php echo $tweet_url; ?>"><?php echo $tweet->user->name; ?></a> 
-			(<?php echo $tweet->user->screen_name; ?>)
-		</div>
+			(<?php echo $tweet->user->screen_name; ?>)<?php */?>
+		</li>
 	<?php endforeach; ?>
-	</div>
+	</ul>
 	<p>Follow me on Twitter at: <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
 </div>
 
