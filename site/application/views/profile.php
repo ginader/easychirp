@@ -1,14 +1,8 @@
-<style type="text/css">
-h2 {
-	margin-left: 1rem;
-}
-</style>
-
 <h1 class="rounded">My Profile</h1>
 
 <p id="editProfileLink"><a href="/profile_edit">Edit Profile</a></p>
 
-<h2>Details</h2>
+<h2 class="marginAdjustment">Details</h2>
 <div class="box1 rounded no-margin">
 	<dl id="profile" class="clearfix">
 		<dt>Username</dt>
@@ -54,7 +48,7 @@ h2 {
 	<h2><a href="/profile_edit">Edit Profile</a></h2>
 </div> -->
 
-<h2>Latest Tweet</h2>
+<h2 class="marginAdjustment">Latest Tweet</h2>
 <div class="tweet rounded clearfix">
 	<div class="tweetAvatar" style="background-image:url(images/avatar_todd.png);"></div>
 	<h2 class="hide">Username 3</h2>

@@ -1,24 +1,18 @@
-<style type="text/css">
-h2 {
-	margin-left: 1rem;
-}
-</style>
-
 <h1 class="rounded">User Details : @{username}</h1>
 
-<h2>Contact</h2>
+<h2 class="marginAdjustment">Contact</h2>
 <div class="box1 rounded no-margin">
 	<div id="userAvatar">
 		<a href="https://api.twitter.com/1/users/profile_image?screen_name=mariasharapova&size=original" title="view full image in new window" target="_blank">
 		<img src="http://a0.twimg.com/profile_images/3107339665/1de166d6b00d5867925f9b25b4b8be62_normal.jpeg" width="48" height="48" alt="avatar" /></a>
 	</div>
 	<h3>{name}</h3>
-	<p>Following (<a href="#">Unfollow</a>) OR Not Following (<a href="#">Follow</a>)</p>
-	<p><a href="#">Is following me?</a></p>
+	<p>Following (<a href="#">Unfollow</a>) | Not Following (<a href="#">Follow</a>)</p>
+	<p><a href="#">Is {username} following me?</a> YES | NO</p>
 	<p><span data-icon="&#x2f;" aria-hidden="true"></span> Verified User</p>
 </div>
 
-<h2>Details</h2>
+<h2 class="marginAdjustment">Details</h2>
 <div class="box1 rounded no-margin">
 	<dl id="profile" class="clearfix">
 		<dt>Username</dt>
@@ -62,7 +56,7 @@ h2 {
 	</dl>
 </div>
 
-<h2>Latest Tweet</h2>
+<h2 class="marginAdjustment">Latest Tweet</h2>
 <div class="tweet rounded clearfix">
 	<div class="tweetAvatar" style="background-image:url(images/avatar_todd.png);"></div>
 	<h2 class="hide">Username 3</h2>
