@@ -4,9 +4,19 @@ h2 {
 }
 </style>
 
-<h1 class="rounded">My Profile</h1>
+<h1 class="rounded">User Details : @{username}</h1>
 
-<p id="editProfileLink"><a href="/profile_edit">Edit Profile</a></p>
+<h2>Contact</h2>
+<div class="box1 rounded no-margin">
+	<div id="userAvatar">
+		<a href="https://api.twitter.com/1/users/profile_image?screen_name=mariasharapova&size=original" title="view full image in new window" target="_blank">
+		<img src="http://a0.twimg.com/profile_images/3107339665/1de166d6b00d5867925f9b25b4b8be62_normal.jpeg" width="48" height="48" alt="avatar" /></a>
+	</div>
+	<h3>{name}</h3>
+	<p>Following (<a href="#">Unfollow</a>) OR Not Following (<a href="#">Follow</a>)</p>
+	<p><a href="#">Is following me?</a></p>
+	<p><span data-icon="&#x2f;" aria-hidden="true"></span> Verified User</p>
+</div>
 
 <h2>Details</h2>
 <div class="box1 rounded no-margin">
@@ -38,21 +48,19 @@ h2 {
 		<dt>Followers</dt>
 		<dd><a href="/followers" title="view users following me">[COUNT]</a></dd>
 
+		<dt>Favorites</dt>
+		<dd>[COUNT]</dd>
+
 		<dt>Lists</dt>
 		<dd><a href="/lists">My Lists</a></dd>
 
-		<!-- [IF DATA READILY AVAILABLE] -->
-		<dt>Remaining API hits</dt>
-		<dd>[COUNT]</dd>
+		<dt>Retweets</dt>
+		<dd><a href="#">Retweets by {username}</a>; <a href="#">retweets to {username}</a></dd>
 
 		<dt>Background image</dt>
-		<dd>[VIEW IMAGE | YOU HAVE NO BACKGROUND IMAGE] (No alternative text is offered from Twitter.)</dd>
+		<dd>[VIEW IMAGE | HAS NO BACKGROUND IMAGE] (No alternative text is offered from Twitter.)</dd>
 	</dl>
 </div>
-
-<!-- <div class="box1 rounded">
-	<h2><a href="/profile_edit">Edit Profile</a></h2>
-</div> -->
 
 <h2>Latest Tweet</h2>
 <div class="tweet rounded clearfix">
