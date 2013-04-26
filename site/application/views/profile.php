@@ -9,7 +9,7 @@ h2 {
 <p id="editProfileLink"><a href="/profile_edit">Edit Profile</a></p>
 
 <h2>Details</h2>
-<div class="box1 rounded" style="margin: 0;">
+<div class="box1 rounded no-margin">
 	<dl id="profile" class="clearfix">
 		<dt>Username</dt>
 		<dd>USERNAME</dd>
@@ -46,7 +46,7 @@ h2 {
 		<dd>[COUNT]</dd>
 
 		<dt>Background image</dt>
-		<dd>[VIEW IMAGE | YOU HAVE NO BACKGROUND IMAGE]</dd>
+		<dd>[VIEW IMAGE | YOU HAVE NO BACKGROUND IMAGE] (No alternative text is offered from Twitter.)</dd>
 	</dl>
 </div>
 

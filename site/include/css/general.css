@@ -189,7 +189,8 @@ a:active {
 
 .fl{float:left;}
 .fr{float:right;}
-.clear{clear:both}
+.clear{clear:both;}
+#main .content .no-margin{margin:0;}
 
 .clearfix:after {
 visibility: hidden;
@@ -512,6 +513,14 @@ dl#profile dd {
 }
 .article_mentions dd {
 	line-height: 1rem;
+}
+
+#userAvatar a {
+	display: block;
+	height: 48px;
+	padding: .25rem;
+	margin-top: .5rem;
+	width: 48px;
 }
 
 /* Module **************************************************/
