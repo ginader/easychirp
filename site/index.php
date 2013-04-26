@@ -1,5 +1,7 @@
 <?php
 
+define('EASYCHIRP_VERSION', '1.9.0423'); // last 4 digits are MMDD
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT

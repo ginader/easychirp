@@ -21,7 +21,9 @@ class EC_Controller extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-	
+		
+		$this->load->helper('debug');
+
 		$this->layout->set_site_name('EasyChirp');
 		$this->layout->set_tagline('web accessibility for the Twitter.com website application');
 		$this->layout->set_description('Easy Chirp. Web accessibility for the Twitter web site application. The Twitter.com website redone with strict web standards and web accessibility. Great for screen readers, low-vision, beginners, older browsers, text-only browsers, and non-JavaScript.');

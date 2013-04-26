@@ -21,10 +21,25 @@ class Main extends EC_Controller {
 
 	public function index()
 	{
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->config->item('tw_access_key');
+		$params[] = $this->config->item('tw_access_secret');
+
+		$this->load->library('twitter_lib', $params);
+
+		$easychirp_statuses = $this->twitter_lib->twitteroauth->get( 
+			$this->config->item('tw_url_home_timeline') 
+		);
+
+		$data = array();
+		$data['easychirp_statuses'] = $easychirp_statuses;
+		
 		$this->layout->set_title('Home');
 		$this->layout->set_description('Homepage description');
 		$this->layout->set_skip_to_sign_in( TRUE );
-		$this->layout->view('home');
+		$this->layout->view('home', $data);
 	}
 
 	public function about()

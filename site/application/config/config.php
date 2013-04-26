@@ -358,5 +358,38 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+|--------------------------------------------------------------------------
+| Twitter Settings
+|--------------------------------------------------------------------------
+|
+| Settings for connecting to the Twitter 1.1 API   
+|	Consumer key       HLnV0sg6AyT7gTOHPtgrA
+|	Consumer secret    fLVBNIlhblmxsDvMvDWb1RLKwd3Fvbyadx1Hl4a85I
+|	Request token URL  https://api.twitter.com/oauth/request_token
+|	Authorize URL      https://api.twitter.com/oauth/authorize
+|	Access token URL   https://api.twitter.com/oauth/access_token
+|	Callback URL       http://easychirp.local/oauth_callback
+|
+|   Access token          14256894-cpNuNgxmDQKwuHb0ptpSbvUMqmPakcQnJUNJKugUz
+|   Access token secret   Q8k4ht449lcXUBg6A4vdWd0J32eqoBPnMh5OpZYxfs
+|   Access level          Read-only
+|
+*/
+$config['tw_api_url'] = 'https://api.twitter.com/1.1/';
+$config['tw_user_agent'] = 'easychirp/' . EASYCHIRP_VERSION; 
+$config['tw_access_key'] = '14256894-cpNuNgxmDQKwuHb0ptpSbvUMqmPakcQnJUNJKugUz'; 
+$config['tw_access_secret'] = 'Q8k4ht449lcXUBg6A4vdWd0J32eqoBPnMh5OpZYxfs'; 
+$config['tw_consumer_key'] = 'HLnV0sg6AyT7gTOHPtgrA'; 
+$config['tw_consumer_secret'] = 'fLVBNIlhblmxsDvMvDWb1RLKwd3Fvbyadx1Hl4a85I'; 
+
+$config['tw_request_token_url'] = 'https://api.twitter.com/oauth/request_token'; 
+$config['tw_authorize_url'] = 'https://api.twitter.com/oauth/authorize'; 
+$config['tw_access_token_url'] = 'https://api.twitter.com/oauth/access_token'; 
+$config['tw_callback_url'] = 'http://easychirp.local/oauth_callback'; 
+$config['tw_url_home_timeline'] = 'https://api.twitter.com/1.1/statuses/home_timeline.json';
+
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

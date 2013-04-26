@@ -21,7 +21,17 @@
 
 <div class="box1 rounded">
 	<h2>Latest Tweets from Easy Chirp</h2>
-	<p class="alert">[UNDER DEVELOPMENT]</p>
+	<div class="tweets">
+	<?php foreach($easychirp_statuses AS $tweet): ?>
+	<?php $tweet_url = 'http://twitter.com/' . $tweet->user->screen_name 
+		. '/status/' . $tweet->id_str; ?>
+		<div class="tweet">
+			<?php echo $tweet->text; ?><br />
+			<a href="<?php echo $tweet_url; ?>"><?php echo $tweet->user->name; ?></a> 
+			(<?php echo $tweet->user->screen_name; ?>)
+		</div>
+	<?php endforeach; ?>
+	</div>
 	<p>Follow me on Twitter at: <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
 </div>
 
