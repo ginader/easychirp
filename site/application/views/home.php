@@ -22,7 +22,10 @@
 <div class="box1 rounded">
 	<h2>Latest Tweets from Easy Chirp</h2>
 	<div class="tweets">
+	<?php $count = 0; ?>
 	<?php foreach($easychirp_statuses AS $tweet): ?>
+		<?php $count++; ?>
+		<?php if ($count > 7){ break; }  ?>
 	<?php $tweet_url = 'http://twitter.com/' . $tweet->user->screen_name 
 		. '/status/' . $tweet->id_str; ?>
 		<div class="tweet">
