@@ -364,15 +364,16 @@ $config['proxy_ips'] = '';
 |--------------------------------------------------------------------------
 |
 | Settings for connecting to the Twitter 1.1 API   
-|	Consumer key       HLnV0sg6AyT7gTOHPtgrA
-|	Consumer secret    fLVBNIlhblmxsDvMvDWb1RLKwd3Fvbyadx1Hl4a85I
+|	Consumer key       9Y5dW1jWkxL6px9626yHEg
+|	Consumer secret    pXpxNT4MNQEelSCfoZ7u7m0Dc0MhNgvx2Lmksi1jnj0
+
 |	Request token URL  https://api.twitter.com/oauth/request_token
 |	Authorize URL      https://api.twitter.com/oauth/authorize
 |	Access token URL   https://api.twitter.com/oauth/access_token
 |	Callback URL       http://easychirp.local/oauth_callback
 |
-|   Access token          14256894-cpNuNgxmDQKwuHb0ptpSbvUMqmPakcQnJUNJKugUz
-|   Access token secret   Q8k4ht449lcXUBg6A4vdWd0J32eqoBPnMh5OpZYxfs
+|   Access token          14150648-iifSAz4eoMxE3aoTbYGocDtwU6H4VB4IttXBJjtXk 
+|   Access token secret   neIu61wM8aBzPzxotMVdGOQj1cjRLVtlqrGgnujoYBg
 |   Access level          Read-only
 |
 */
@@ -458,7 +459,7 @@ $config['tweet_menu'] = array(
 	,'/app/direct' => array(
 		'id' => 'm_direct', 
 		'access_key' => '6', 
-		'label' => 'DM', 
+		'label' => '<abbr title="Direct Messages">DM</abbr>', 
 		'parent' => '')
 	,'/app/direct/inbox' => array(
 		'id' => 'm_direct_inbox', 
@@ -473,7 +474,7 @@ $config['tweet_menu'] = array(
 	,'/app/tools' => array(
 		'id' => 'm_tools', 
 		'access_key' => '7', 
-		'label' => 'Tools', 
+		'label' => '<span data-icon="&#x26;" aria-hidden="true"></span>Tools', 
 		'parent' => '')
 	,'/app/go_to_user' => array(
 		'id' => 'm_goto_user', 
