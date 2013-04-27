@@ -132,6 +132,9 @@ h2 {
 	padding: 1rem 0 .5rem;
 	font-weight: normal;
 }
+h2.marginAdjustment {
+	margin-left: 1rem;
+}
 h3 {
 	font-size: 1.15rem;
 	padding: 1rem 0 .5rem;
@@ -148,7 +151,6 @@ dd, li {
 	margin-left: 1.5rem;
 }
 
-
 .content ul {
 	list-style: none;
 }
@@ -156,6 +158,9 @@ dd, li {
 	padding-left: 1em;
 	margin-left: .5em;
 	background: url(/images/bullet1.gif) no-repeat 0 .45em;
+}
+h2 + ul {
+	margin-top: .3rem;
 }
 
 .smallText {
@@ -481,6 +486,11 @@ div.msgBoxNeg {
 }
 
 /* page-specific */
+
+#homeECtweets li {
+	line-height: 1.25rem;
+	margin-bottom: .75rem;
+}
 #frmProfileEdit dt {
 	padding-top: .4rem;
 }
