@@ -18,11 +18,13 @@ class EC_Controller extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 
+
 	public function __construct()
 	{
 		parent::__construct();
 		
 		$this->load->helper('debug');
+		$this->load->library('menu_generator');
 
 		$this->layout->set_site_name('EasyChirp');
 		$this->layout->set_tagline('web accessibility for the Twitter.com website application');
@@ -47,8 +49,12 @@ class EC_Controller extends CI_Controller {
 		$this->layout->add_link_tag('include/css/general.css', 'stylesheet', 'text/css');
 		$this->layout->add_link_tag('include/css/ico-moon-fonts2.css', 'stylesheet');
 
-		// $this->layout->add_script_tag('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');
+		// $this->menu_generator->set_current_page( current_url() );
+		$this->menu_generator->load( $this->config->item('main_menu') );
+		$this->layout->main_menu = $this->menu_generator->generate('navMain'); 
 
+		$this->menu_generator->load( $this->config->item('tweet_menu') );
+		$this->layout->tweet_menu = $this->menu_generator->generate('navTweet');
 	}
 
 }

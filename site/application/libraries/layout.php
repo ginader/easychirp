@@ -29,6 +29,8 @@ class Layout
 	public $base_url = '';
 	public $description = "";
 	public $logged_in = "";
+	public $main_menu = "";
+	public $tweet_menu = "";
 	public $meta_name_tags = array();
 	public $meta_http_equiv_tags = array();
 	public $head_codes = array(
@@ -363,6 +365,8 @@ class Layout
 		$loaded_data['sign_in_url'] = $this->sign_in_url;
 		$loaded_data['logged_in'] = $this->logged_in;
 		$loaded_data['skip_to_sign_in'] = $this->skip_to_sign_in;
+		$loaded_data['main_menu'] = $this->main_menu;
+		$loaded_data['tweet_menu'] = $this->tweet_menu;
 
 		if($return)
 		{

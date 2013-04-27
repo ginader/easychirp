@@ -26,7 +26,7 @@ $config['base_url']	= 'http://easychirp.local';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -389,6 +389,113 @@ $config['tw_access_token_url'] = 'https://api.twitter.com/oauth/access_token';
 $config['tw_callback_url'] = 'http://easychirp.local/oauth_callback'; 
 $config['tw_url_home_timeline'] = 'https://api.twitter.com/1.1/statuses/home_timeline.json';
 
+$config['main_menu'] = array(
+	'/' => array(
+		'id' => 'm_home', 
+		'accesskey' => '0', 
+		'label' => 'Home', 
+		'parent' => '')
+	,'/profile' => array(
+		'id' => 'm_profile', 
+		'label' => 'My Profile', 
+		'parent' => '')
+	,'/tips' => array(
+		'id' => 'm_tips', 
+		'label' => 'Tips', 
+		'parent' => '')
+	,'/articles' => array(
+		'id' => 'm_articles', 
+		'label' => 'Articles &amp; Feedback', 
+		'parent' => '')
+	,'/features' => array(
+		'id' => 'm_features', 
+		'label' => 'Features', 
+		'parent' => '')
+	,'/about' => array(
+		'id' => 'm_about', 
+		'label' => 'About', 
+		'parent' => '')
+);
+
+$config['tweet_menu'] = array(
+	'/timeline' => array(
+		'id' => 'm_timeline', 
+		'accesskey' => '1', 
+		'label' => 'Timeline', 
+		'parent' => '')
+	,'/app/mytweets' => array(
+		'id' => 'm_mytweets', 
+		'accesskey' => '2', 
+		'label' => 'My Tweets', 
+		'parent' => '')
+	,'/app/retweets' => array(
+		'id' => 'm_retweets', 
+		'accesskey' => '3', 
+		'label' => 'Retweets', 
+		'parent' => '')
+	,'/app/retweets_by_me' => array(
+		'id' => 'm_retweets_by_me', 
+		'label' => 'Retweets By Me', 
+		'parent' => '/app/retweets')
+	,'/app/retweets_of_me' => array(
+		'id' => 'm_retweets_of_me', 
+		'label' => 'Retweets Of Me', 
+		'parent' => '/app/retweets')
+	,'/app/retweets_to_me' => array(
+		'id' => 'm_retweets_to_me', 
+		'label' => 'Retweets To Me', 
+		'parent' => '/app/retweets')
+	,'/mentions' => array(
+		'id' => 'm_mentions', 
+		'accesskey' => '4', 
+		'label' => 'Mentions', 
+		'parent' => '')
+	,'/favorites' => array(
+		'id' => 'm_favorites', 
+		'accesskey' => '5', 
+		'label' => 'Favorites', 
+		'parent' => '')
+	,'/app/direct' => array(
+		'id' => 'm_direct', 
+		'accesskey' => '6', 
+		'label' => 'DM', 
+		'parent' => '')
+	,'/app/direct/inbox' => array(
+		'id' => 'm_direct_inbox', 
+		'accesskey' => '6', 
+		'label' => 'Inbox', 
+		'parent' => '/app/direct')
+	,'/app/direct/sent' => array(
+		'id' => 'm_direct_sent', 
+		'accesskey' => '6', 
+		'label' => 'Sent', 
+		'parent' => '/app/direct')
+	,'/app/tools' => array(
+		'id' => 'm_tools', 
+		'accesskey' => '7', 
+		'label' => 'Tools', 
+		'parent' => '')
+	,'/app/go_to_user' => array(
+		'id' => 'm_goto_user', 
+		'label' => 'Go to User', 
+		'parent' => '/app/tools')
+	,'/app/search' => array(
+		'id' => 'm_search', 
+		'label' => 'Search', 
+		'parent' => '/app/tools')
+	,'/app/quick_search' => array(
+		'id' => 'm_quick_search', 
+		'label' => 'Quick Search', 
+		'parent' => '/app/tools')
+	,'/app/lists' => array(
+		'id' => 'm_lists', 
+		'label' => 'Lists', 
+		'parent' => '/app/tools')
+	,'/app/trends' => array(
+		'id' => 'm_trends', 
+		'label' => 'Trends', 
+		'parent' => '/app/tools')
+);
 
 
 /* End of file config.php */

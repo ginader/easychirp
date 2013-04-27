@@ -7,7 +7,7 @@
 	<!--[if lte IE 7]><script src="include/js/lte-ie7.js"></script><![endif]-->
 </head>
 
-<body class="theme-default"><!--theme-inverse-->
+<body class="theme-default">
 
 <script>
 	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
@@ -32,44 +32,10 @@
 <nav role="navigation">
 	<h2 class="hide">Menu</h2>
 	<h3 class="hide">App Menu</h3>
-	<ul id="navMain">
-		<li><a href="/" id="m_home" accesskey="0" data-icon="&#x36;"><span class="hide">Home</span></a></li>
-		<li><a href="/profile" id="m_profile">My Profile</a></li>
-		<li><a href="/tips" id="m_tips">Tips</a></li>
-		<li><a href="/articles" id="m_articles">Articles &amp; Feedback</a></li>
-		<li><a href="/features" id="m_features">Features</a></li>
-		<li><a href="/about" id="m_about">About</a></li>
-	</ul>
+	<?php echo $main_menu; ?>
 
 	<h3 class="hide">Tweet Menu</h3>
-	<ul id="navTweet">
-		<li><a href="/timeline" id="m_roll" accesskey="1">Timeline</a></li>
-		<li><a href="app/mytweets.php" id="m_mytweets" accesskey="2">My Tweets</a></li>
-		<li><a href="app/retweets.php" id="m_retweets" accesskey="3">Retweets</a>
-			<ul>
-				<li><a href="/app/retweets_by_me.php">ReTweets By Me</a></li>
-				<li><a href="/app/retweets_of_me.php">ReTweets Of Me</a></li>
-				<li><a href="/app/retweets_to_me.php">ReTweets To Me</a></li>
-			</ul>
-		</li>
-		<li><a href="app/mentions.php" id="m_replies" accesskey="4">Mentions</a></li>
-		<li><a href="app/favorites.php" id="m_favorites" accesskey="5">Favorites</a></li>
-		<li><a href="app/direct.php" id="m_direct" accesskey="6"><abbr title="Direct Messages">DM</abbr></a>
-			<ul>
-				<li><a href="app/direct.php?type=inbox">Inbox</a></li>
-				<li><a href="app/direct.php?type=sent">Sent</a></li>
-			</ul>
-		</li>
-		<li><a href="app/tools.php" id="m_tools" accesskey="7"><span data-icon="&#x26;" aria-hidden="true"></span>Tools</a>
-			<ul>
-				<li><a href="app/go-to-user.php">Go to User</a></li>
-				<li><a href="app/search.php">Search</a></li>
-				<li><a href="app/search-quick.php">Quick Search</a></li>
-				<li><a href="app/lists.php">Lists</a></li>
-				<li><a href="app/trends.php">Trends</a></li>
-			</ul>
-		</li>
-	</ul>
+	<?php echo $tweet_menu; ?>
 </nav>
 
 <main role="main" id="main" tabindex="-1">
