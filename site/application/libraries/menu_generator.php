@@ -33,11 +33,13 @@ class Menu_generator {
 			$menu .= "\t<li>";
 			if ( isset($item['children']) )
 			{
-				$menu .= $this->render_link($url, $item['label'], $css_class );
+				$css_class = ($path === $url) ? $selected_class : '';
+				$access_key = (isset($item['access_key'])) ? $item['access_key'] : '';
+
+				$menu .= $this->render_link($url, $item['label'], $css_class, $access_key );
 				$menu .= "\n\t<ul class=\"submenu\">";
 				foreach ($item['children'] AS $data)
 				{
-					error_log('IF path=' . $path . '. data url=' . $data['url']);
 					$css_class = ($path === $url) ? $selected_class : '';
 					$menu .= "\n\t\t<li>"
 					. $this->render_link($data['url'], $data['label'], $css_class)
@@ -48,10 +50,10 @@ class Menu_generator {
 			}
 			else
 			{
-				error_log('ELSE path=' . $path . ' url=' . $url);
 				$css_class = ($path === $url) ? $selected_class : '';
+				$access_key = (isset($item['access_key'])) ? $item['access_key'] : '';
 				
-				$menu .= $this->render_link($url, $item['label'], $css_class );
+				$menu .= $this->render_link($url, $item['label'], $css_class, $access_key );
 			}
 			$menu .= "\t</li>\n";
 		}
@@ -82,13 +84,19 @@ class Menu_generator {
 	}
 	
 
-	public function render_link($path, $label, $selected_class = '')
+	public function render_link($path, $label, $selected_class = '', $access_key = '')
 	{
+		$link = '<a href="' . $path . '" ';
 		if ($selected_class){
-			return "<a class=\"{$selected_class}\" href=\"{$path}\">{$label}</a>"; 
-		} else {
-			return "<a href=\"{$path}\">{$label}</a>"; 
-		}
+			$link .= ' class="' . $selected_class . '" ';
+		} 
+		if ($access_key !== ''){
+			$link .= ' accesskey="' . $access_key . '" ';
+		} 
+
+		$link .= '>' . $label . '</a>'; 
+
+		return $link;
 	}
 
 }
