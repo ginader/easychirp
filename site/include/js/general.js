@@ -36,6 +36,8 @@ $("#enterTweet h2 a").attr("role","button");
 // Update the count
 var charCntNum = $('#displayCharCountNumber');
 function updateCharCount(charCountField) {
+	// Continue if exists on page
+	if(!document.getElementById(charCountField)) { return; }
 	
 	// Calculate number of characters entered
 	theField = document.getElementById(charCountField);
@@ -55,6 +57,9 @@ function updateCharCount(charCountField) {
 // Initialize widget
 function initCharacterCount() {
 	var charCountField = "txtEnterTweet";
+
+	// Continue if exists on page
+	if(!document.getElementById(charCountField)) { return; }
 	
 	// Modify default text
 	$('#displayCharCountMessage').html("Characters remaining: ");
