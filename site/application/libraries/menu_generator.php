@@ -25,7 +25,7 @@ class Menu_generator {
 		return $this->render_menu($menu_id, $this->current_page );
 	}
 
-	public function render_menu ($menu_id, $path, $selected_class = 'current_item') 
+	public function render_menu ($menu_id, $path, $selected_class = 'current') 
 	{
 		$menu = "<ul id=\"{$menu_id}\">\n";
 		foreach ($this->nodes AS $url => $item)
@@ -82,10 +82,10 @@ class Menu_generator {
 	}
 	
 
-	public function render_link($path, $label, $selected = '')
+	public function render_link($path, $label, $selected_class = '')
 	{
-		if ($selected){
-			return "<a class=\"current_item\" href=\"{$path}\">{$label}</a>"; 
+		if ($selected_class){
+			return "<a class=\"{$selected_class}\" href=\"{$path}\">{$label}</a>"; 
 		} else {
 			return "<a href=\"{$path}\">{$label}</a>"; 
 		}

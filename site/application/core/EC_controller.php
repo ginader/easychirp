@@ -24,6 +24,7 @@ class EC_Controller extends CI_Controller {
 		parent::__construct();
 		
 		$this->load->helper('debug');
+		$this->load->helper('url');
 		$this->load->library('menu_generator');
 
 		$this->layout->set_site_name('EasyChirp');
@@ -49,12 +50,20 @@ class EC_Controller extends CI_Controller {
 		$this->layout->add_link_tag('include/css/general.css', 'stylesheet', 'text/css');
 		$this->layout->add_link_tag('include/css/ico-moon-fonts2.css', 'stylesheet');
 
-		// $this->menu_generator->set_current_page( current_url() );
+		$this->menu_generator->set_current_page( $this->get_current_url() );
 		$this->menu_generator->load( $this->config->item('main_menu') );
 		$this->layout->main_menu = $this->menu_generator->generate('navMain'); 
 
 		$this->menu_generator->load( $this->config->item('tweet_menu') );
 		$this->layout->tweet_menu = $this->menu_generator->generate('navTweet');
+	}
+
+	public function get_current_url()
+	{
+		$current_url = current_url();
+		$site_url = rtrim(site_url(), '/');
+	
+		return str_replace($site_url, '', $current_url);
 	}
 
 }
