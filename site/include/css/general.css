@@ -248,7 +248,7 @@ header > div {
 }
 
 #welcome p {
-	line-height: 1.2em;
+	line-height: 1.4rem;
 	margin-bottom: 0;
 	text-align: right;
 }
@@ -756,9 +756,6 @@ body.theme-inverse {
 	/*body {
 		font-size: .8em;
 	}*/
-	#welcome {
-		margin-top: -136px;
-	}
 	h1 {
 		font-size: 1.5rem;
 		padding: 1rem 0 .5rem;
@@ -777,6 +774,9 @@ body.theme-inverse {
 	#skip,
 	#hdUserStats {
 		display: none;
+	}
+	#welcome {
+		margin-top: -130px;
 	}
 	.tweet q {
 		font-size: 1.15rem;
