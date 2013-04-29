@@ -135,6 +135,9 @@ h2 {
 h2.marginAdjustment {
 	margin-left: 1rem;
 }
+p.marginAdjustment {
+	margin: .5rem 0 0 1rem;
+}
 h3 {
 	font-size: 1.15rem;
 	padding: 1rem 0 .5rem;
@@ -531,6 +534,32 @@ dl#profile dd {
 	padding: .25rem;
 	margin-top: .5rem;
 	width: 48px;
+}
+
+#createList {
+	margin-top: .5rem;
+}
+#createList legend { 
+	padding: .2rem 0 .5rem;
+}
+#createList div.row {
+	margin: .5rem 0;
+}
+#createList div.row span {
+	display: block;
+	margin: .25rem 0;
+	font-size: .9rem;
+}
+#createList fieldset div.row label {
+	font-weight: normal;
+}
+#createList label,
+#createList legend {
+	font-weight: bold;
+}
+#createList fieldset label,
+#createList legend span {
+	font-weight: normal;
 }
 
 /* Module **************************************************/
