@@ -41,6 +41,9 @@
 $route['about'] = "main/about";
 $route['articles'] = "main/articles";
 $route['features'] = "main/features";
+$route['followers'] = "main/followers";
+$route['following'] = "main/following";
+$route['lists'] = "main/lists";
 $route['profile'] = "main/profile";
 $route['profile_edit'] = "main/profile_edit";
 $route['quote'] = "main/quote";
