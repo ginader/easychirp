@@ -78,7 +78,6 @@
         <li>A built-in shorten URL tool with choice of service.</li>
         <li>Search, user search, and saved searches.</li>
         <li>View, subscribe, and create Twitter Lists.</li>
-        <li>Daily and weekly Trends.</li>
         <li>Works great with or without JavaScript.</li>
         <li>Fully keyboard accessible.</li>
         <li>Inline threading of tweets; displays reply &quot;conversation&quot;.</li>
