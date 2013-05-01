@@ -67,6 +67,27 @@ class Main extends EC_Controller {
 		$this->layout->view('features');
 	}
 
+	public function followers()
+	{
+		$this->layout->set_title('Followers');
+		$this->layout->set_description('Description of Followers page');
+		$this->layout->view('followers');
+	}
+
+	public function following()
+	{
+		$this->layout->set_title('Following');
+		$this->layout->set_description('Description of Following page');
+		$this->layout->view('following');
+	}
+
+	public function lists()
+	{
+		$this->layout->set_title('Lists');
+		$this->layout->set_description('Description of Lists page');
+		$this->layout->view('lists');
+	}
+
 	public function profile()
 	{
 		$this->layout->set_title('My Profile');

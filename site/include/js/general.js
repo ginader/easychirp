@@ -78,9 +78,37 @@ function initCharacterCount() {
 	}
 }
 
+/*** show/hide for create list content ***/
+//hide create list form
+$('#frmCreateList').hide();
+
+//create link to show completed tasks
+$('<p id="showCreateList"><a href="#" id="showCreateAnchor" title="show content to create list">Open &#187;<\/a><\/p>').insertBefore('#frmCreateList');
+
+//behavior to show/hide completed tasks
+$('#showCreateAnchor').click(function() {
+	$('#showCreateList').hide();
+	$('#frmCreateList').show();//('slow');
+	
+	//create link to hide form
+	$('<p id="hideCreateList"><a href="#" id="hideCreateAnchor" title="hide content to create list">&#171; Close<\/a><\/p>').insertAfter('#frmCreateList');
+	
+	$('#txt_listName').focus();
+	
+	//behavior to hide completed tasks
+	$('#hideCreateAnchor').click(function() {
+		$('#hideCreateList').hide();
+		$('#frmCreateList').hide();
+		$('#showCreateList').show();
+		$('#showCreateAnchor').focus();
+		return false;
+	});
+	return false;
+});
+
 // Browser batch (such as Chrome) for anchor links, such as skip to feature ****************/
 $("a[href^='#']").click(function() {
-  $("#"+$(this).attr("href").slice(1)+"").focus()
+	$("#"+$(this).attr("href").slice(1)+"").focus()
 });
 
 

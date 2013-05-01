@@ -135,6 +135,9 @@ h2 {
 h2.marginAdjustment {
 	margin-left: 1rem;
 }
+p.marginAdjustment {
+	margin: .5rem 0 0 1rem;
+}
 h3 {
 	font-size: 1.15rem;
 	padding: 1rem 0 .5rem;
@@ -245,7 +248,7 @@ header > div {
 }
 
 #welcome p {
-	line-height: 1.2em;
+	line-height: 1.4rem;
 	margin-bottom: 0;
 	text-align: right;
 }
@@ -533,6 +536,32 @@ dl#profile dd {
 	width: 48px;
 }
 
+#createList {
+	margin-top: .5rem;
+}
+#createList legend { 
+	padding: .2rem 0 .5rem;
+}
+#createList div.row {
+	margin: .5rem 0;
+}
+#createList div.row span {
+	display: block;
+	margin: .25rem 0;
+	font-size: .9rem;
+}
+#createList fieldset div.row label {
+	font-weight: normal;
+}
+#createList label,
+#createList legend {
+	font-weight: bold;
+}
+#createList fieldset label,
+#createList legend span {
+	font-weight: normal;
+}
+
 /* Module **************************************************/
 
 /* Buttons */
@@ -727,9 +756,6 @@ body.theme-inverse {
 	/*body {
 		font-size: .8em;
 	}*/
-	#welcome {
-		margin-top: -136px;
-	}
 	h1 {
 		font-size: 1.5rem;
 		padding: 1rem 0 .5rem;
@@ -748,6 +774,9 @@ body.theme-inverse {
 	#skip,
 	#hdUserStats {
 		display: none;
+	}
+	#welcome {
+		margin-top: -130px;
 	}
 	.tweet q {
 		font-size: 1.15rem;
