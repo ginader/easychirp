@@ -28,9 +28,6 @@ class Main extends EC_Controller {
 		$params[] = $this->config->item('tw_access_secret');
 
 		$this->load->library('twitter_lib', $params);
-		$this->load->library('xliff_reader');
-
-		$this->xliff_reader->load('en_gb');
 
 		$easychirp_statuses = $this->twitter_lib->twitteroauth->get( 
 			$this->config->item('tw_url_home_timeline') 
@@ -48,23 +45,32 @@ class Main extends EC_Controller {
 
 	public function about()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('About');
 		$this->layout->set_description('Description of About page');
-		$this->layout->view('about');
+		$this->layout->view('about', $data);
 	}
 
 	public function articles()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Articles and Feedback');
 		$this->layout->set_description('Description of Articles and Feedback page goes here');
-		$this->layout->view('articles');
+		$this->layout->view('articles', $data);
 	}
 
 	public function features()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Features');
 		$this->layout->set_description('Description of Features page');
-		$this->layout->view('features');
+		$this->layout->view('features', $data);
 	}
 
 	public function followers()
@@ -90,9 +96,12 @@ class Main extends EC_Controller {
 
 	public function profile()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('My Profile');
 		$this->layout->set_description('Details on my Twitter profile.');
-		$this->layout->view('profile');
+		$this->layout->view('profile', $data);
 	}
 
 	public function profile_edit()
@@ -118,9 +127,13 @@ class Main extends EC_Controller {
 
 	public function tips()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+
 		$this->layout->set_title('Tips');
 		$this->layout->set_description('Tips for this app, using Twitter, and recommended apps.');
-		$this->layout->view('tips');
+		$this->layout->view('tips', $data);
 	}
 
 	public function user()
@@ -132,9 +145,12 @@ class Main extends EC_Controller {
 
 	public function timeline()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Timeline');
 		$this->layout->set_description('Description of Timeline page');
-		$this->layout->view('timeline');
+		$this->layout->view('timeline', $data);
 	}
 }
 

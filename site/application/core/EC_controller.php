@@ -63,8 +63,8 @@ class EC_Controller extends CI_Controller {
 			$data['label'] = $this->xliff_reader->get( $data['label'] );
 			$main_menu[ $path ] = $data;
 		}
-		
-		$main_menu = array();
+
+		$tweet_menu = array();
 		foreach ($this->config->item('tweet_menu') AS $path => $data){
 			$data['label'] = $this->xliff_reader->get( $data['label'] );
 			$tweet_menu[ $path ] = $data;
