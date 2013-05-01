@@ -377,6 +377,9 @@ $config['proxy_ips'] = '';
 |   Access level          Read-only
 |
 */
+
+$config['langs'] = array('en_gb' => 'British English', 'ar-sa' => 'Saudi Arabian Arabic');
+
 $config['tw_api_url'] = 'https://api.twitter.com/1.1/';
 $config['tw_user_agent'] = 'easychirp/' . EASYCHIRP_VERSION; 
 $config['tw_access_key'] = '14256894-cpNuNgxmDQKwuHb0ptpSbvUMqmPakcQnJUNJKugUz'; 

@@ -25,8 +25,13 @@ class EC_Controller extends CI_Controller {
 		
 		$this->load->helper('debug');
 		$this->load->helper('url');
-		$this->load->library('menu_generator');
 
+		$this->load->library('menu_generator');
+		$this->load->library('xliff_reader');
+		 
+		$this->xliff_reader->load('en_gb');
+
+		
 		$this->layout->set_site_name('EasyChirp');
 		$this->layout->set_tagline('web accessibility for the Twitter.com website application');
 		$this->layout->set_description('Easy Chirp. Web accessibility for the Twitter web site application. The Twitter.com website redone with strict web standards and web accessibility. Great for screen readers, low-vision, beginners, older browsers, text-only browsers, and non-JavaScript.');
@@ -50,11 +55,27 @@ class EC_Controller extends CI_Controller {
 		$this->layout->add_link_tag('include/css/general.css', 'stylesheet', 'text/css');
 		$this->layout->add_link_tag('include/css/ico-moon-fonts2.css', 'stylesheet');
 
+		//
+		//	Translate menus
+		// 
+		$main_menu = array();
+		foreach ($this->config->item('main_menu') AS $path => $data){
+			$data['label'] = $this->xliff_reader->get( $data['label'] );
+			$main_menu[ $path ] = $data;
+		}
+		
+		$main_menu = array();
+		foreach ($this->config->item('tweet_menu') AS $path => $data){
+			$data['label'] = $this->xliff_reader->get( $data['label'] );
+			$tweet_menu[ $path ] = $data;
+		}
+
 		$this->menu_generator->set_current_page( $this->get_current_url() );
-		$this->menu_generator->load( $this->config->item('main_menu') );
+		$this->menu_generator->load( $main_menu );
+		
 		$this->layout->main_menu = $this->menu_generator->generate('navMain'); 
 
-		$this->menu_generator->load( $this->config->item('tweet_menu') );
+		$this->menu_generator->load( $tweet_menu );
 		$this->layout->tweet_menu = $this->menu_generator->generate('navTweet');
 	}
 

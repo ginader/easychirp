@@ -17,15 +17,15 @@
 
 <div id="skip">
 <?php if ($skip_to_sign_in): ?> 
-<a href="#signin">skip to sign in</a> | 
-<?php endif; ?> <a href="#main">skip to main content</a></div>
+<a href="#signin"><?php echo $xliff_reader->get('Skip to Sign In'); ?></a> | 
+<?php endif; ?> <a href="#main"><?php echo $xliff_reader->get('Skip to Main Content'); ?></a></div>
 
 <header role="banner">
 	<div><img src="images/brand/EasyChirp_Logo2_300.png" alt="Easy Chirp 2" width="300" height="109" /></div>
 	<div id="welcome">
 		<h2 class="hide">My Info</h2>
-		<p>welcome webaxe! [<a href="#">sign out</a>]</p>
-		<p id="hdUserStats"><a href="#">following: 270</a> | <a href="#">followers: 2724</a> | <a href="#">tweets: 10120</a></p>
+		<p><?php  printf( $xliff_reader->get("Welcome %s"), "webaxe"); ?> [<a href="#">sign out</a>]</p>
+		<p id="hdUserStats"><a href="#"><?php printf( $xliff_reader->get("Following: %d"), 270); ?></a> | <a href="#"><?php printf( $xliff_reader->get("Followers: %d"), 3021); ?></a> | <a href="#"><?php printf( $xliff_reader->get("Tweets: %d"), 16000); ?></a></p>
 	</div>
 </header>
 

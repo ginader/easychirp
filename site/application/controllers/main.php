@@ -28,6 +28,9 @@ class Main extends EC_Controller {
 		$params[] = $this->config->item('tw_access_secret');
 
 		$this->load->library('twitter_lib', $params);
+		$this->load->library('xliff_reader');
+
+		$this->xliff_reader->load('en_gb');
 
 		$easychirp_statuses = $this->twitter_lib->twitteroauth->get( 
 			$this->config->item('tw_url_home_timeline') 
@@ -35,8 +38,9 @@ class Main extends EC_Controller {
 
 		$data = array();
 		$data['easychirp_statuses'] = $easychirp_statuses;
+		$data['xliff_reader'] = $this->xliff_reader; 	
 		
-		$this->layout->set_title('Home');
+		$this->layout->set_title( $this->xliff_reader->get('Home') );
 		$this->layout->set_description('Homepage description');
 		$this->layout->set_skip_to_sign_in( TRUE );
 		$this->layout->view('home', $data);
