@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US" class="no-js">
+<html lang="<?php echo $lang_code; ?>" class="no-js">
 <head>
 	<?php echo $head_codes; ?>
 

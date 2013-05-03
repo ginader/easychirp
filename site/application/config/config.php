@@ -69,7 +69,11 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']	= 'en-US';
+$config['supported_langs'] = array(
+	'en-GB' => 'British English', 
+	'ar-SA' => 'Saudi Arabian Arabic'
+);
 
 /*
 |--------------------------------------------------------------------------
@@ -180,7 +184,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 4;
 
 /*
 |--------------------------------------------------------------------------
@@ -378,7 +382,6 @@ $config['proxy_ips'] = '';
 |
 */
 
-$config['langs'] = array('en_gb' => 'British English', 'ar-sa' => 'Saudi Arabian Arabic');
 
 $config['tw_api_url'] = 'https://api.twitter.com/1.1/';
 $config['tw_user_agent'] = 'easychirp/' . EASYCHIRP_VERSION; 

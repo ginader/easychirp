@@ -25,6 +25,7 @@ class Layout
 	public $layout;
 	public $skip_to_sign_in = FALSE;
 	public $title = '';
+	public $lang_code = '';
 	public $sign_in_url = '';
 	public $base_url = '';
 	public $description = "";
@@ -367,6 +368,7 @@ class Layout
 		$loaded_data['skip_to_sign_in'] = $this->skip_to_sign_in;
 		$loaded_data['main_menu'] = $this->main_menu;
 		$loaded_data['tweet_menu'] = $this->tweet_menu;
+		$loaded_data['lang_code'] = $this->lang_code;
 
 		if($return)
 		{

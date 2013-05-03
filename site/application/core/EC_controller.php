@@ -28,15 +28,27 @@ class EC_Controller extends CI_Controller {
 
 		$this->load->library('menu_generator');
 		$this->load->library('xliff_reader');
-		 
-		$this->xliff_reader->load('en_gb');
 
+		$lang_code = $this->config->item('language');
+		$supported = $this->config->item('supported_langs');
+		foreach ($this->get_user_languages() AS $lang)
+		{
+			if ( isset(  $supported[ $lang ]  ) )
+			{
+				$lang_code = $lang ;
+				break;
+			}
+
+		}
+		error_log('lang_code=' . $lang_code);
+		$this->xliff_reader->load( $lang_code );
 		
 		$this->layout->set_site_name('EasyChirp');
 		$this->layout->set_tagline('web accessibility for the Twitter.com website application');
 		$this->layout->set_description('Easy Chirp. Web accessibility for the Twitter web site application. The Twitter.com website redone with strict web standards and web accessibility. Great for screen readers, low-vision, beginners, older browsers, text-only browsers, and non-JavaScript.');
 
 		// META TAGS
+		$this->layout->lang_code = $lang_code;
 		$this->layout->add_meta_tag_name('charset', 'utf-8');
 		$this->layout->add_meta_tag_name('author', 'Dennis E Lembree, Web Overhauls');
 		$this->layout->add_meta_tag_name('viewport', 'width=device-width, initial-scale=1.0');
@@ -78,6 +90,17 @@ class EC_Controller extends CI_Controller {
 		$this->menu_generator->load( $tweet_menu );
 		$this->layout->tweet_menu = $this->menu_generator->generate('navTweet');
 	}
+
+	/**
+	* Determine which languages the user's browser can understand
+	*/
+	public function get_user_languages(){
+		$http_headers = getallheaders();
+		list($data, $junk) = preg_split('/;/', $http_headers['Accept-Language']);
+
+		return preg_split('/,/', $data);
+	}
+
 
 	public function get_current_url()
 	{

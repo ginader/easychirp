@@ -1,6 +1,6 @@
 <?php
 
-define('EASYCHIRP_VERSION', '1.9.0423'); // last 4 digits are MMDD
+define('EASYCHIRP_VERSION', '1.9.0502'); // last 4 digits are MMDD
 
 /*
  *---------------------------------------------------------------
@@ -35,11 +35,13 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL);
+			error_reporting(E_ALL | E_STRICT);
+			ini_set('display_errors', 1);
 		break;
 	
 		case 'testing':
 		case 'production':
+			ini_set('display_errors', '0');
 			error_reporting(0);
 		break;
 

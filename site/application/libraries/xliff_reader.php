@@ -32,6 +32,7 @@ class Xliff_reader
 	*/
 	public function lang_to_file($lang)
 	{
+		$lang = strtolower( $lang );
 		return APPPATH . 'language/' . $lang . '.xliff';
 	}
 
@@ -41,18 +42,21 @@ class Xliff_reader
 	public function load( $lang )
 	{
 		$file = $this->lang_to_file( $lang );
-		$this->doc = simplexml_load_file( $file );	
+		if ( file_exists( $file ) ){
+			
+			$this->doc = simplexml_load_file( $file );	
 
-		$this->source_lang = (string) $file['source-language'];
-		$this->target_lang = (string) $file['target-language'];
-		
-		$trans_units = $this->doc->file->body->children();
-		foreach ($trans_units AS $unit)
-		{
-			$source = (string) $unit->source;
-			$target = (string) $unit->target;
+			$this->source_lang = (string) $file['source-language'];
+			$this->target_lang = (string) $file['target-language'];
+			
+			$trans_units = $this->doc->file->body->children();
+			foreach ($trans_units AS $unit)
+			{
+				$source = (string) $unit->source;
+				$target = (string) $unit->target;
 
-			$this->translations[$source] = $target; 
+				$this->translations[$source] = $target; 
+			}
 		}
 	}
 
