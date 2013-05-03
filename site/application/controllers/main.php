@@ -75,23 +75,32 @@ class Main extends EC_Controller {
 
 	public function followers()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Followers');
 		$this->layout->set_description('Description of Followers page');
-		$this->layout->view('followers');
+		$this->layout->view('followers', $data);
 	}
 
 	public function following()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Following');
 		$this->layout->set_description('Description of Following page');
-		$this->layout->view('following');
+		$this->layout->view('following', $data);
 	}
 
 	public function lists()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Lists');
 		$this->layout->set_description('Description of Lists page');
-		$this->layout->view('lists');
+		$this->layout->view('lists', $data);
 	}
 
 	public function profile()
@@ -106,23 +115,32 @@ class Main extends EC_Controller {
 
 	public function profile_edit()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Edit Profile');
 		$this->layout->set_description('Edit your Twitter account profile.');
-		$this->layout->view('profile_edit');
+		$this->layout->view('profile_edit', $data);
 	}
 
 	public function quote()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('Quote');
 		$this->layout->set_description('Quote a tweet.');
-		$this->layout->view('quote');
+		$this->layout->view('quote', $data);
 	}
 
 	public function status()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('View Single Tweet');
 		$this->layout->set_description('View a single status/tweet.');
-		$this->layout->view('status');
+		$this->layout->view('status', $data);
 	}
 
 	public function tips()
@@ -138,9 +156,12 @@ class Main extends EC_Controller {
 
 	public function user()
 	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
 		$this->layout->set_title('User Details');
 		$this->layout->set_description('Information for Twitter user.');
-		$this->layout->view('user');
+		$this->layout->view('user', $data);
 	}
 
 	public function timeline()
