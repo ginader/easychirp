@@ -47,6 +47,7 @@ $route['lists'] = "main/lists";
 $route['profile'] = "main/profile";
 $route['profile_edit'] = "main/profile_edit";
 $route['quote'] = "main/quote";
+$route['search'] = "main/search";
 $route['status'] = "main/status"; // View single tweet
 $route['tips'] = "main/tips";
 $route['user'] = "main/user"; // User details

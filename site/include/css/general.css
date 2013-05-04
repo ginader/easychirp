@@ -482,6 +482,12 @@ div.msgBoxNeg {
 	background-position: -336px 3px;
 }
 
+.delete-saved-search {
+	text-decoration: none;
+	margin-left: .6rem;
+	font-size: .9rem;
+}
+
 /* page-specific */
 
 #homeECtweets li {
