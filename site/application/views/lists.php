@@ -45,7 +45,7 @@
 				<input type="hidden" name="listSlug" value="html5" />
 				<input type="hidden" name="lstid" value="33678339" />
 				<input type="text" size="12" name="userNameToAdd" value="" id="txt33678339" title="enter username" />
-				<input type="submit" value="Add" class="btn4" />
+				<button type="submit" class="btnSmall">Add</button>
 			</form>
 		</dd>
 		<dt>Mode</dt>

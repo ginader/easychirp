@@ -586,6 +586,12 @@ button {
 	font-size: 1.5rem;
 	padding: .9rem .7rem .7rem;
 }
+.btnSmall {
+	margin: 0;
+	padding: .2rem .4rem;
+	border-width: 1px;
+	font-weight: normal;
+}
 button:hover, button:focus,
 .btnPost:hover, .btnPost:focus {
 	border-color: #fc6;
