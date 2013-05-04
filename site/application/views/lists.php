@@ -26,22 +26,56 @@
 	</form>
 </div>
 
-<div class="box1 rounded">
+<div class="box1 rounded twList">
 	<h2>My Lists</h2>
-	<p></p>
-	<ul>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+	
+	<h3><span data-icon="&#x25;" aria-hidden="true"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
+	<dl class="clearfix">
+		<dt>Full name</dt>
+		<dd>@dennisl/html5</dd>
+		<dt>Description</dt>
+		<dd>text here</dd>
+		<dt>Subscribers</dt>
+		<dd>0</dd>
+		<dt>Members</dt>
+		<dd><a class="listSubMemLink" href="#">11</a></dd>
+		<dt class="twListDtAdj"><label for="txt33678339">Add Member</label></dt>
+		<dd>
+			<form action="actions/doListAddMember.php" class="frmListAddMember">
+				<input type="hidden" name="listSlug" value="html5" />
+				<input type="hidden" name="lstid" value="33678339" />
+				<input type="text" size="12" name="userNameToAdd" value="" id="txt33678339" title="enter username" />
+				<input type="submit" value="Add" class="btn4" />
+			</form>
+		</dd>
+		<dt>Mode</dt>
+		<dd>public</dd>
+		<dt>Actions</dt>
+		<dd><a href="listEdit.php?lstid=33678339">Edit Settings</a> | <a rel="deleteList" href="actions/doDeleteList.php?lstid=33678339">Delete</a></dd>
+		<dt>View on Twitter</dt>
+		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
+	</dl>
+
 </div>
 
-<div class="box1 rounded">
+<div class="box1 rounded twList">
 	<h2>Subscribed Lists</h2>
-	<p></p>
-	<ul>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+
+	<h3><span data-icon="&#x25;" aria-hidden="true"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
+	<dl class="clearfix">
+		<dt>Full name</dt>
+		<dd>@dennisl/html5</dd>
+		<dt>Description</dt>
+		<dd>text here</dd>
+		<dt>Subscribers</dt>
+		<dd>0</dd>
+		<dt>Members</dt>
+		<dd><a class="listSubMemLink" href="#">11</a></dd>
+		<dt>Mode</dt>
+		<dd>public</dd>
+		<dt>Actions</dt>
+		<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team">Unsubscribe</a></dd>
+		<dt>View on Twitter</dt>
+		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
+	</dl>
 </div>
