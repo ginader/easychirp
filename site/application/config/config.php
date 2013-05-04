@@ -480,7 +480,7 @@ $config['tweet_menu'] = array(
 	,'/app/tools' => array(
 		'id' => 'm_tools', 
 		'access_key' => '7', 
-		'label' => '<span data-icon="&#x26;" aria-hidden="true"></span>Tools', 
+		'label' => '<span aria-hidden="true" class="icon-wrench"></span> Tools', 
 		'parent' => '')
 	,'/app/go_to_user' => array(
 		'id' => 'm_goto_user', 

@@ -29,7 +29,7 @@
 <div class="box1 rounded twList">
 	<h2>My Lists</h2>
 	
-	<h3><span data-icon="&#x25;" aria-hidden="true"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
+	<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
 	<dl class="clearfix">
 		<dt>Full name</dt>
 		<dd>@dennisl/html5</dd>
@@ -61,7 +61,7 @@
 <div class="box1 rounded twList">
 	<h2>Subscribed Lists</h2>
 
-	<h3><span data-icon="&#x25;" aria-hidden="true"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
+	<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
 	<dl class="clearfix">
 		<dt>Full name</dt>
 		<dd>@dennisl/html5</dd>

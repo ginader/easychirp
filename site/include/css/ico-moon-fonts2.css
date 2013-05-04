@@ -21,6 +21,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
+
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
@@ -101,38 +102,38 @@ you can use the generic selector below, but it's slower:
 	content: "\35";
 }
 .icon-home:before {
-	content: "\38";
-}
-.icon-bubbles:before {
-	content: "\39";
-}
-.icon-at:before {
-	content: "\3a";
-}
-.icon-blocked:before {
-	content: "\3b";
-}
-.icon-arrow1:before {
-	content: "\3c";
-}
-.icon-users:before {
-	content: "\3d";
-}
-.icon-user:before {
-	content: "\e00e";
-}
-.icon-mute:before {
 	content: "\36";
 }
+.icon-bubbles:before {
+	content: "\37";
+}
+.icon-at:before {
+	content: "\38";
+}
+.icon-blocked:before {
+	content: "\39";
+}
+.icon-arrow1:before {
+	content: "\3a";
+}
+.icon-users:before {
+	content: "\3b";
+}
+.icon-user:before {
+	content: "\3c";
+}
+.icon-mute:before {
+	content: "\3d";
+}
 .icon-list2:before {
-	content: "\e01d";
+	content: "\3e";
 }
 .icon-twitter2:before {
-	content: "\e018";
+	content: "\3f";
 }
 .icon-arrow2:before {
-	content: "\e00f";
+	content: "\40";
 }
 .icon-arrow3:before {
-	content: "\e020";
+	content: "\41";
 }
