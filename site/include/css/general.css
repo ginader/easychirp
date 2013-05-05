@@ -482,9 +482,10 @@ div.msgBoxNeg {
 	background-position: -336px 3px;
 }
 
-.delete-saved-search {
+a.delete-link {
 	text-decoration: none;
-	margin-left: .6rem;
+}
+a.delete-link span { /* reduce size of icon a bit */
 	font-size: .9rem;
 }
 
@@ -569,6 +570,10 @@ div.msgBoxNeg {
 #createList fieldset label,
 #createList legend span {
 	font-weight: normal;
+}
+
+a.delete-search {
+	margin-left: .5rem;
 }
 
 /* Module **************************************************/

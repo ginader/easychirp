@@ -51,7 +51,7 @@
 		<dt>Mode</dt>
 		<dd>public</dd>
 		<dt>Actions</dt>
-		<dd><a href="listEdit.php?lstid=33678339">Edit Settings</a> | <a rel="deleteList" href="actions/doDeleteList.php?lstid=33678339">Delete</a></dd>
+		<dd><a href="listEdit.php?lstid=33678339">Edit Settings</a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?lstid=33678339"><span aria-hidden="true" class="icon-close1"></span> Delete</a></dd>
 		<dt>View on Twitter</dt>
 		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
 	</dl>
@@ -74,7 +74,7 @@
 		<dt>Mode</dt>
 		<dd>public</dd>
 		<dt>Actions</dt>
-		<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team">Unsubscribe</a></dd>
+		<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> Unsubscribe</a></dd>
 		<dt>View on Twitter</dt>
 		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
 	</dl>

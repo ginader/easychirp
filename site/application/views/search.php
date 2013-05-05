@@ -62,9 +62,9 @@
 	<h2>Saved Searches</h2>
 	<p>None found.</p>
 	<ul>
-		<li><a href="#">screen reader twitter</a> <a href="#" class="delete-saved-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
-		<li><a href="#">#a11y css</a> <a href="#" class="delete-saved-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
-		<li><a href="#">your mama and papa</a> <a href="#" class="delete-saved-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
+		<li><a href="#">screen reader twitter</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
+		<li><a href="#">#a11y css</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
+		<li><a href="#">your mama and papa</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
 	</ul>
 </div>
 
