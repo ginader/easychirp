@@ -31,9 +31,9 @@
 <h2>More</h2>
 
 <ul>
-	<li><a href="https://twitter.com/{username}/status/{id}" rel="external">This tweet on Twitter</a> <span class="smallText icon-twitter2" aria-hidden="true"></span></li>
+	<li><span class="icon-twitter2" aria-hidden="true"></span> <a href="https://twitter.com/{username}/status/{id}" rel="external">This tweet on Twitter</a></li>
+	<li><span class="icon-list2" aria-hidden="true"></span> <a href="">Lists by {username}</a></li>
 	<li><a href="">Details on {username}</a></li>
-	<li><a href="">Lists by {username}</a></li>
 	<li><a href="">Tweets by {username}</a></li>
 </ul>
 
