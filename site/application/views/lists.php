@@ -41,7 +41,7 @@
 		<dd><a class="listSubMemLink" href="#">11</a></dd>
 		<dt class="twListDtAdj"><label for="txt33678339">Add Member</label></dt>
 		<dd>
-			<form action="actions/doListAddMember.php" class="frmListAddMember">
+			<form action="#" class="frmListAddMember">
 				<input type="hidden" name="listSlug" value="html5" />
 				<input type="hidden" name="lstid" value="33678339" />
 				<input type="text" size="12" name="userNameToAdd" value="" id="txt33678339" title="enter username" />
@@ -51,7 +51,7 @@
 		<dt>Mode</dt>
 		<dd>public</dd>
 		<dt>Actions</dt>
-		<dd><a href="listEdit.php?lstid=33678339">Edit Settings</a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?lstid=33678339"><span aria-hidden="true" class="icon-close1"></span> Delete</a></dd>
+		<dd><a href="list_edit?lstid=33678339">Edit Settings</a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?lstid=33678339"><span aria-hidden="true" class="icon-close1"></span> Delete</a></dd>
 		<dt>View on Twitter</dt>
 		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
 	</dl>

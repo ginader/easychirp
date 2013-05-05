@@ -103,6 +103,16 @@ class Main extends EC_Controller {
 		$this->layout->view('lists', $data);
 	}
 
+	public function list_edit()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Edit List');
+		$this->layout->set_description('Description of Edit List page');
+		$this->layout->view('list_edit', $data);
+	}
+
 	public function profile()
 	{
 		$data = array();
