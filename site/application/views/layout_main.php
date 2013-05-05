@@ -25,7 +25,7 @@
 	<div id="welcome">
 		<h2 class="hide">My Info</h2>
 		<p><?php  printf( $xliff_reader->get("welcome %s"), "webaxe"); ?> [<a href="#">sign out</a>]</p>
-		<p id="hdUserStats"><a href="#"><?php printf( $xliff_reader->get("following: %d"), 270); ?></a> | <a href="#"><?php printf( $xliff_reader->get("followers: %d"), 3021); ?></a> | <a href="#"><?php printf( $xliff_reader->get("tweets: %d"), 16000); ?></a></p>
+		<p id="hdUserStats"><a href="/following"><?php printf( $xliff_reader->get("following: %d"), 270); ?></a> | <a href="/followers"><?php printf( $xliff_reader->get("followers: %d"), 3021); ?></a> | <a href="/mytweets"><?php printf( $xliff_reader->get("tweets: %d"), 16000); ?></a></p>
 	</div>
 </header>
 
