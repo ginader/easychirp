@@ -4,8 +4,8 @@
 	<h2 style="color:#900">Report Spam</h2>
 	<p>You can report a spammer account to Twitter three ways:</p>
 	<ul>
-		<li>Click the Report Spammer link under the user options in a tweet.</li>
-		<li>Click the Report Spammer link on the user details page.</li>
+		<li>Click the Report Spammer icon link <span aria-hidden="true" class="icon-alert"></span> under the user options in a tweet.</li>
+		<li>Click the Report Spammer icon link <span aria-hidden="true" class="icon-alert"></span> on the user details page.</li>
 		<li>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. 
 			Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</li>
 	</ul>
@@ -22,7 +22,7 @@
 	<table aria-describedby="tblSyntaxSummary">
 	<thead>
 		<tr>
-			<th scope="col" style="width:13em;">Syntax</th>
+			<th scope="col" style="width:30%;">Syntax</th>
 			<th scope="col">Explanation</th>
 			<th scope="col">Example</th>
 		</tr>

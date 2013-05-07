@@ -9,7 +9,9 @@
 	<h3>{name}</h3>
 	<p>Following (<a href="#">Unfollow</a>) | Not Following (<a href="#">Follow</a>)</p>
 	<p><a href="#">Is {username} following me?</a> YES | NO</p>
-	<p><span data-icon="&#x2f;" aria-hidden="true"></span> Verified User</p>
+	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#">Report Spammer</a></p>
+	<p><span aria-hidden="true" class="icon-blocked"></span> <a href="#">Block User</a></p>
+	<p><span aria-hidden="true" class="icon-checkmark"></span> Verified User</p>
 </div>
 
 <h2 class="marginAdjustment">Details</h2>

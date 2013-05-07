@@ -103,6 +103,16 @@ class Main extends EC_Controller {
 		$this->layout->view('lists', $data);
 	}
 
+	public function list_edit()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Edit List');
+		$this->layout->set_description('Description of Edit List page');
+		$this->layout->view('list_edit', $data);
+	}
+
 	public function profile()
 	{
 		$data = array();
@@ -131,6 +141,16 @@ class Main extends EC_Controller {
 		$this->layout->set_title('Quote');
 		$this->layout->set_description('Quote a tweet.');
 		$this->layout->view('quote', $data);
+	}
+
+	public function search()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Search');
+		$this->layout->set_description('Search tweets, saved searches, and search users.');
+		$this->layout->view('search', $data);
 	}
 
 	public function status()

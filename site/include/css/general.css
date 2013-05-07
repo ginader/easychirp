@@ -284,12 +284,6 @@ th {
 	text-align: left;
 }
 
-#editProfileLink {
-	text-align: right; 
-	margin: -2.1rem 0 1rem 0; 
-	padding-right: 1rem;
-}
-
 /* app menu */
 #navMain {
 	list-style: none;
@@ -488,19 +482,33 @@ div.msgBoxNeg {
 	background-position: -336px 3px;
 }
 
+a.delete-link {
+	text-decoration: none;
+}
+a.delete-link span { /* reduce size of icon a bit */
+	font-size: .9rem;
+}
+
 /* page-specific */
 
 #homeECtweets li {
 	line-height: 1.25rem;
 	margin-bottom: .75rem;
 }
-#frmProfileEdit dt {
+#editProfileLink {
+	text-align: right; 
+	margin: -2.1rem 0 1rem 0; 
+	padding-right: 1rem;
+}
+#frmProfileEdit dt,
+.twListDtAdj {
 	padding-top: .4rem;
 }
-dl#profile {
+#profile {
 	margin: .5rem 0 1rem;
 }
-dl#profile dt {
+#profile dt,
+.twList dt {
 	font-weight: bold;
 	width: 20%;
 	text-align: right;
@@ -510,10 +518,12 @@ dl#profile dt {
 	margin-right: .5rem;
 	line-height: 1rem;
 }
-dl#profile dt:after {
+#profile dt:after,
+.twList dt:after {
 	content:':';
 }
-dl#profile dd {
+#profile dd,
+.twList dd {
 	float: left;
 	width: 65%;
 	margin-top: .5rem;
@@ -562,6 +572,10 @@ dl#profile dd {
 	font-weight: normal;
 }
 
+a.delete-search {
+	margin-left: .5rem;
+}
+
 /* Module **************************************************/
 
 /* Buttons */
@@ -582,6 +596,12 @@ button {
 .btnPost {
 	font-size: 1.5rem;
 	padding: .9rem .7rem .7rem;
+}
+.btnSmall {
+	margin: 0;
+	padding: .2rem .4rem;
+	border-width: 1px;
+	font-weight: normal;
 }
 button:hover, button:focus,
 .btnPost:hover, .btnPost:focus {

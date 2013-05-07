@@ -18,12 +18,12 @@
 </div>
 
 <div class="box1 rounded">
-	<h2><span data-icon="&#x3f;" aria-hidden="true"></span> Our Twitter Account</h2>
+	<h2><span aria-hidden="true" class="icon-twitter2"></span> Our Twitter Account</h2>
 	<p>Follow Easy Chirp 2 on Twitter: <a href="http://twitter.com/EasyChirp">@EasyChirp</a>.</p>
 </div>
 
 <div class="box1 rounded">
-	<h2><span data-icon="&#x31;" aria-hidden="true"></span> Feedback &amp; Email</h2>
+	<h2><span aria-hidden="true" class="icon-mail"></span> Feedback &amp; Email</h2>
 	<p>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</p>
 </div>
 
@@ -70,7 +70,7 @@
 </div>
 
 	<div class="box1 rounded">
-	<h2><span data-icon="&#x3b;" aria-hidden="true"></span> Authors</h2>
+	<h2><span aria-hidden="true" class="icon-users"></span> Authors</h2>
 	<p><a href="http://www.dennislembree.com/">Dennis Lembree</a> is the owner and original developer of Easy Chirp/Accessible Twitter. 
 		 Easy Chirp 2 is developed by Dennis, <a href="http://andrewwoods.net/">Andrew Woods</a>, and <a href="http://ginader.com/">Dirk Ginader</a>.</p>
 </div>
