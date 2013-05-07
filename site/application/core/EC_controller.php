@@ -105,7 +105,6 @@ class EC_Controller extends CI_Controller {
 		{
 			$data = $http_headers['Accept-Language'];
 		}
-		$data = 'en-US'; 
 
 		if ( strpos($data, ';') !== FALSE )
 		{
