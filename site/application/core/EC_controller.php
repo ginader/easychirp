@@ -96,9 +96,32 @@ class EC_Controller extends CI_Controller {
 	*/
 	public function get_user_languages(){
 		$http_headers = getallheaders();
-		list($data, $junk) = preg_split('/;/', $http_headers['Accept-Language']);
+		
+		if ( isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) )
+		{
+			$data = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+		}
+		else
+		{
+			$data = $http_headers['Accept-Language'];
+		}
+		$data = 'en-US'; 
 
-		return preg_split('/,/', $data);
+		if ( strpos($data, ';') !== FALSE )
+		{
+			list($data, $junk) = preg_split('/;/', $http_headers['Accept-Language']);
+		}
+
+		if ( strpos($data, ',') !== FALSE )
+		{
+			list($data, $junk) = preg_split('/,/', $data);
+		}
+
+		if (is_string($data))
+		{
+			return array( $data );
+		}
+		return $data;	
 	}
 
 
