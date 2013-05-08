@@ -48,6 +48,7 @@ $route['list_edit'] = "main/list_edit";
 $route['profile'] = "main/profile";
 $route['profile_edit'] = "main/profile_edit";
 $route['quote'] = "main/quote";
+$route['retweets'] = "main/retweets"; // For non-JS use case
 $route['search'] = "main/search";
 $route['status'] = "main/status"; // View single tweet
 $route['tips'] = "main/tips";
