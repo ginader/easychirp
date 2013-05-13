@@ -143,6 +143,16 @@ class Main extends EC_Controller {
 		$this->layout->view('quote', $data);
 	}
 
+	public function retweets()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Retweets');
+		$this->layout->set_description('Links to retweet pages.');
+		$this->layout->view('retweets', $data);
+	}
+
 	public function search()
 	{
 		$data = array();
