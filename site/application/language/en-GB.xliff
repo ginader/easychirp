@@ -96,8 +96,8 @@
       </trans-unit>
 
       <trans-unit id="nav-direct-messages" datatype="html">
-        <source><abbr title="Direct Messages">DM</abbr></source>
-        <target><abbr title="DIRECT MESSAGES">D.M.</abbr></target>
+        <source>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</source>
+        <target>&lt;abbr title="DIRECT MESSAGES"&gt;D.M.&lt;/abbr&gt;</target>
       </trans-unit>
 
       <trans-unit id="nav-direct-inbox" datatype="html">
@@ -106,8 +106,8 @@
       </trans-unit>
 
       <trans-unit id="nav-direct-sent" datatype="html">
-        <source><abbr title="Direct Messages">DM</abbr></source>
-        <target><abbr title="DIRECT MESSAGES">D.M.</abbr></target>
+        <source>Sent</source>
+        <target>SENT</target>
       </trans-unit>
 
       <trans-unit id="nav-timeline" datatype="html">
@@ -162,7 +162,6 @@
       <trans-unit id="nav-tools" datatype="html">
         <source>Tools</source>
         <target>TOOLS</target>
-        <note priority="1" from="description"></note>
       </trans-unit>
 
       <trans-unit id="nav-trends" datatype="html">

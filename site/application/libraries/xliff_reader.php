@@ -65,8 +65,11 @@ class Xliff_reader
 				$id =  $trans->attributes()->id;
 
 				$source = (string) $trans->source->asXML();
-				$target = (string) $trans->target->asXML();
-
+				$target =  $trans->target;
+				if ($target->children)
+				{
+					$target =  $trans->target->getChildren->asXML();
+				}
 				$this->translations["$id"] = array( 
 					$this->source_lang => $source 
 					, $this->target_lang => $target 
