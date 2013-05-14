@@ -178,10 +178,19 @@ class Main extends EC_Controller {
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
-
 		$this->layout->set_title('Tips');
 		$this->layout->set_description('Tips for this app, using Twitter, and recommended apps.');
 		$this->layout->view('tips', $data);
+	}
+
+	public function tools()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Tools');
+		$this->layout->set_description('Tools including search, lists and trends.');
+		$this->layout->view('tools', $data);
 	}
 
 	public function user()

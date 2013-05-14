@@ -52,6 +52,7 @@ $route['retweets'] = "main/retweets"; // For non-JS use case
 $route['search'] = "main/search";
 $route['status'] = "main/status"; // View single tweet
 $route['tips'] = "main/tips";
+$route['tools'] = "main/tools"; // For non-JS use case
 $route['user'] = "main/user"; // User details
 $route['timeline'] = "main/timeline";
 $route['default_controller'] = "main";
