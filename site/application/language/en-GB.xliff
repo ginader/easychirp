@@ -78,34 +78,101 @@
         <note priority="1" from="description"></note>
       </trans-unit>
 
+      <trans-unit id="nav-mentions" datatype="html">
+        <source>Mentions</source>
+        <target>MENTIONS</target>
+        <note priority="1" from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-favorites" datatype="html">
+        <source>Favorites</source>
+        <target>FAVORITES</target>
+        <note priority="1" from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-lists" datatype="html">
+        <source>Lists</source>
+        <target>LISTS</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-messages" datatype="html">
+        <source><abbr title="Direct Messages">DM</abbr></source>
+        <target><abbr title="DIRECT MESSAGES">D.M.</abbr></target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-inbox" datatype="html">
+        <source>Inbox</source>
+        <target>INBOX</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-sent" datatype="html">
+        <source><abbr title="Direct Messages">DM</abbr></source>
+        <target><abbr title="DIRECT MESSAGES">D.M.</abbr></target>
+      </trans-unit>
+
+      <trans-unit id="nav-timeline" datatype="html">
+        <source>Timeline</source>
+        <target>TIMELINE</target>
+      </trans-unit>
+
+      <trans-unit id="nav-my-tweets" datatype="html">
+        <source>My Tweets</source>
+        <target>MY TWEETS</target>
+      </trans-unit>
+
       <trans-unit id="nav-retweets" datatype="html">
         <source>Retweets</source>
         <target>RETWEETS</target>
         <note priority="1" from="description"></note>
       </trans-unit>
 
-      <trans-unit id="nav-retweets" datatype="html">
-        <source>Mentions</source>
-        <target>MENTIONS</target>
+      <trans-unit id="nav-retweets-of-me" datatype="html">
+        <source>Retweets of Me</source>
+        <target>RETWEETS OF ME</target>
         <note priority="1" from="description"></note>
       </trans-unit>
 
-      <trans-unit id="nav-retweets" datatype="html">
-        <source>Favorites</source>
-        <target>FAVORITES</target>
+      <trans-unit id="nav-retweets-by-me" datatype="html">
+        <source>Retweets by Me</source>
+        <target>RETWEETS BY ME</target>
         <note priority="1" from="description"></note>
       </trans-unit>
 
-      <trans-unit id="nav-retweets" datatype="html">
-        <source><abbr title="Direct Messages">DM</abbr></source>
-        <target><abbr title="DIRECT MESSAGES">D.M.</abbr></target>
+      <trans-unit id="nav-retweets-to-me" datatype="html">
+        <source>Retweets To Me</source>
+        <target>RETWEETS TO ME</target>
         <note priority="1" from="description"></note>
       </trans-unit>
 
-      <trans-unit id="nav-retweets" datatype="html">
+      <trans-unit id="nav-goto-user" datatype="html">
+        <source>Go To User</source>
+        <target>GO TO USER</target>
+      </trans-unit>
+
+      <trans-unit id="nav-search" datatype="html">
+        <source>Search</source>
+        <target>SEARCH</target>
+      </trans-unit>
+
+      <trans-unit id="nav-quick-search" datatype="html">
+        <source>Quick Search</source>
+        <target>QUICK SEARCH</target>
+      </trans-unit>
+
+      <trans-unit id="nav-tools" datatype="html">
         <source>Tools</source>
         <target>TOOLS</target>
         <note priority="1" from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-trends" datatype="html">
+        <source>Trends</source>
+        <target>TRENDS</target>
+      </trans-unit>
+
+      <trans-unit id="home" datatype="html">
+        <source>Home</source>
+        <target>HOME</target>
       </trans-unit>
     </body>
   </file>

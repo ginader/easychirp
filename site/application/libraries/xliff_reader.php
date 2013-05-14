@@ -46,16 +46,31 @@ class Xliff_reader
 			
 			$this->doc = simplexml_load_file( $file );	
 
-			$this->source_lang = (string) $file['source-language'];
-			$this->target_lang = (string) $file['target-language'];
-			
-			$trans_units = $this->doc->file->body->children();
-			foreach ($trans_units AS $unit)
+			$this->source_lang = $this->doc->file->attributes()->source_language;
+			$this->target_lang = $this->doc->file->attributes()->target_language;
+				
+			if ( empty($this->source_lang) )
 			{
-				$source = (string) $unit->source;
-				$target = (string) $unit->target;
+				$this->source_lang = 'en-US';
+			}
+			
+			if ( empty($this->target_lang) )
+			{
+				$this->target_lang = $lang;
+			}
+				
+			$trans_units = $this->doc->file->body->children();
+			foreach ($trans_units AS $trans)
+			{
+				$id =  $trans->attributes()->id;
 
-				$this->translations[$source] = $target; 
+				$source = (string) $trans->source->asXML();
+				$target = (string) $trans->target->asXML();
+
+				$this->translations["$id"] = array( 
+					$this->source_lang => $source 
+					, $this->target_lang => $target 
+				); 
 			}
 		}
 	}
@@ -63,24 +78,25 @@ class Xliff_reader
 	/**
 	* Retrieve translation text for Source text
 	*/
-	public function get( $source )
+	public function get( $id )
 	{
-		if ( isset($this->translations[ $source ]) )
+		error_log('xliff_reader::get id=' . $id . ' SL='. $this->source_lang . ' TL='. $this->target_lang);
+		if ( isset($this->translations["$id"]["$this->target_lang"]) )
 		{
 			// returns the Target translation
-			return $this->translations[ $source ];
+			return $this->translations["$id"]["$this->target_lang"];
 		}
 		else 
 		{
 			// use the original text since i cant find the translated text
-			return $source;
+			return $this->translations["$id"][$this->source_lang];
 		}
 	}
 
 	/**
 	* print out the structure of the value 
 	*/
-	public function debug($value)
+	public function debug_object($value)
 	{
 		echo '<pre>';
 		print_r( $value );

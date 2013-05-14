@@ -17,15 +17,15 @@
 
 <div id="skip">
 <?php if ($skip_to_sign_in): ?> 
-<a href="#signin"><?php echo $xliff_reader->get('skip to sign in'); ?></a> | 
-<?php endif; ?> <a href="#main"><?php echo $xliff_reader->get('skip to main content'); ?></a></div>
+<a href="#signin"><?php echo $xliff_reader->get('skip-sign-in'); ?></a> | 
+<?php endif; ?> <a href="#main"><?php echo $xliff_reader->get('skip-main-content'); ?></a></div>
 
 <header role="banner">
 	<div><img src="images/brand/EasyChirp_Logo2_300.png" alt="Easy Chirp 2" width="300" height="109" /></div>
 	<div id="welcome">
 		<h2 class="hide">My Info</h2>
-		<p><?php  printf( $xliff_reader->get("welcome %s"), "webaxe"); ?> [<a href="#">sign out</a>]</p>
-		<p id="hdUserStats"><a href="/following"><?php printf( $xliff_reader->get("following: %d"), 270); ?></a> | <a href="/followers"><?php printf( $xliff_reader->get("followers: %d"), 3021); ?></a> | <a href="/mytweets"><?php printf( $xliff_reader->get("tweets: %d"), 16000); ?></a></p>
+		<p><?php  printf( $xliff_reader->get("nav-welcome-user"), "webaxe"); ?> [<a href="#">sign out</a>]</p>
+		<p id="hdUserStats"><a href="/following"><?php printf( $xliff_reader->get("nav-following"), 270); ?></a> | <a href="/followers"><?php printf( $xliff_reader->get("nav-followers"), 3021); ?></a> | <a href="/mytweets"><?php printf( $xliff_reader->get("nav-tweet-count"), 16000); ?></a></p>
 	</div>
 </header>
 

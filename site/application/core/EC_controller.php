@@ -40,6 +40,7 @@ class EC_Controller extends CI_Controller {
 			}
 
 		}
+		$lang_code = 'en-GB';
 		error_log('lang_code=' . $lang_code);
 		$this->xliff_reader->load( $lang_code );
 		
@@ -72,13 +73,13 @@ class EC_Controller extends CI_Controller {
 		// 
 		$main_menu = array();
 		foreach ($this->config->item('main_menu') AS $path => $data){
-			$data['label'] = $this->xliff_reader->get( $data['label'] );
+			$data['label'] = $this->xliff_reader->get( $data['lang-id'] );
 			$main_menu[ $path ] = $data;
 		}
 
 		$tweet_menu = array();
 		foreach ($this->config->item('tweet_menu') AS $path => $data){
-			$data['label'] = $this->xliff_reader->get( $data['label'] );
+			$data['label'] = $this->xliff_reader->get( $data['lang-id'] );
 			$tweet_menu[ $path ] = $data;
 		}
 
