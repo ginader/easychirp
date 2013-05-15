@@ -7,52 +7,52 @@
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
-        <source>Skip to Sign In</source>
-        <target>Skip to Sign In</target>
-        <note from="description">Skip Navigation link for Accessibility</note>
+        <source>skip to sign in</source>
+        <target>skip to sign in</target>
+        <note from="description">Skip nav link for accessibility</note>
       </trans-unit>
 
       <trans-unit id="skip-main-content" datatype="html">
-        <source>Skip to Main Content</source>
-        <target>Skip to Main Content</target>
-        <note from="description">Skip Navigation link for Accessibility</note>
+        <source>skip to main content</source>
+        <target>skip to main content</target>
+        <note from="description">Skip nav link for accessibility</note>
       </trans-unit>
 
       <!-- NAVIGATION -->
 
       <trans-unit id="nav-welcome-user" datatype="html">
-        <source>Welcome %s</source>
-        <target>Welcome %s</target>
+        <source>welcome %s</source>
+        <target>welcome %s</target>
         <note from="description">%s represents the username</note>
       </trans-unit>
       
       <trans-unit id="nav-sign-in" datatype="html">
-        <source>Sign in</source>
-        <target>Sign in</target>
+        <source>sign in</source>
+        <target>sign in</target>
         <note from="description"></note>
       </trans-unit>
       
       <trans-unit id="nav-sign-out" datatype="html">
-        <source>Sign out</source>
-        <target>Sign out</target>
+        <source>sign out</source>
+        <target>sign out</target>
         <note from="description"></note>
       </trans-unit>
       
       <trans-unit id="nav-following" datatype="html">
-        <source>Following: %d</source>
-        <target>Following: %d</target>
+        <source>following: %d</source>
+        <target>following: %d</target>
         <note from="description">People that I follow</note>
       </trans-unit>
       
       <trans-unit id="nav-followers" datatype="html">
-        <source>Followers: %d</source>
-        <target>Followers: %d</target>
+        <source>followers: %d</source>
+        <target>followers: %d</target>
         <note from="description">People that follow me</note>
       </trans-unit>
       
       <trans-unit id="nav-tweet-count" datatype="html">
-        <source>Tweets: %d</source>
-        <target>Tweets: %d</target>
+        <source>tweets: %d</source>
+        <target>tweets: %d</target>
         <note from="description"></note>
       </trans-unit>
     
@@ -65,7 +65,7 @@
 
       <trans-unit id="nav-heading-app-menu" datatype="html">
         <source>App Menu</source>
-        <target>APP Menu</target>
+        <target>App Menu</target>
       </trans-unit>
 
       <trans-unit id="nav-heading-tweet-menu" datatype="html">
@@ -162,19 +162,19 @@
       <trans-unit id="nav-retweets-of-me" datatype="html">
         <source>Retweets of Me</source>
         <target>Retweets of Me</target>
-        <note from="description"></note>
+        <note from="description">Tweets by me that other people retweeted.</note>
       </trans-unit>
 
       <trans-unit id="nav-retweets-by-me" datatype="html">
         <source>Retweets by Me</source>
         <target>Retweets by Me</target>
-        <note from="description"></note>
+        <note from="description">Tweets that I retweeted.</note>
       </trans-unit>
 
       <trans-unit id="nav-retweets-to-me" datatype="html">
         <source>Retweets To Me</source>
         <target>Retweets To Me</target>
-        <note from="description"></note>
+        <note from="description">Retweets by people that I'm following.</note>
       </trans-unit>
 
       <trans-unit id="nav-goto-user" datatype="html">
@@ -189,7 +189,7 @@
 
       <trans-unit id="nav-quick-search" datatype="html">
         <source>Quick Search</source>
-        <target>QUICK Search</target>
+        <target>Quick Search</target>
       </trans-unit>
 
       <trans-unit id="nav-tools" datatype="html">
@@ -214,9 +214,39 @@
         <target>Web accessibility for the Twitter website application</target>
       </trans-unit>
 
+      <trans-unit id="home-lead-p1" datatype="html">
+        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
+        <target>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="home-lead-p2" datatype="html">
+        <source>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the &lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt; and &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; pages. You may also read an extensive list of user feedback and blogs/articles about this application.</source>
+        <target>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the &lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt; and &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; pages. You may also read an extensive list of user feedback and blogs/articles about this application.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-signin" datatype="html">
         <source>Sign In</source>
         <target>Sign In</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-donate" datatype="html">
+        <source>Donate to Easy Chirp</source>
+        <target>Donate to Easy Chirp</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-latest-tweets" datatype="html">
+        <source>Latest Tweets from Easy Chirp</source>
+        <target>Latest Tweets from Easy Chirp</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-follow-me" datatype="html">
+        <source>Follow me on Twitter at:</source>
+        <target>Follow me on Twitter at:</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-share" datatype="html">
+        <source>Share</source>
+        <target>Share</target>
       </trans-unit>
 
 

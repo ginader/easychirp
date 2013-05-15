@@ -2,15 +2,15 @@
 
 <div class="box1 rounded boxAccent">
 	<h2><?php echo $xliff_reader->get('home-h2-lead'); ?></h2>
-	<p>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about <a href="http://en.wikipedia.org/wiki/Web_accessibility">web accessibility</a>.</p>
-	<p>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the <a href="/about">About</a> and <a href="/features">Features</a> pages. You may also read an extensive list of user feedback and blogs/articles about this application.</p>
+	<p><?php echo $xliff_reader->get('home-lead-p1'); ?></p>
+	<p><?php echo $xliff_reader->get('home-lead-p2'); ?></p>
 </div>
 
 <div class="box1 rounded">
 	<h2 id="signin" tabindex="-1"><?php echo $xliff_reader->get('home-h2-signin'); ?></h2>
 	<div><a href="include/oauth/redirect.php"><img src="/images/sign-in-with-twitter.png" alt="Sign in with Twitter" width="151" height="24" /></a></div>
 
-	<h2>Donate to Easy Chirp</h2>
+	<h2><?php echo $xliff_reader->get('home-h2-donate'); ?></h2>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 		<input type="hidden" name="cmd" value="_s-xclick" />
 		<input type="hidden" name="hosted_button_id" value="2JSYK7TQNL5GA" />
@@ -20,7 +20,7 @@
 </div>
 
 <div class="box1 rounded">
-	<h2>Latest Tweets from Easy Chirp</h2>
+	<h2><?php echo $xliff_reader->get('home-h2-latest-tweets'); ?></h2>
 	<ul id="homeECtweets">
 	<?php $count = 0; ?>
 	<?php foreach($easychirp_statuses AS $tweet): ?>
@@ -35,11 +35,11 @@
 		</li>
 	<?php endforeach; ?>
 	</ul>
-	<p>Follow me on Twitter at: <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
+	<p><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
 </div>
 
 <div class="box1 rounded">
-	<h2>Share</h2>
+	<h2><?php echo $xliff_reader->get('home-h2-share'); ?></h2>
 	<div>
 		<a href="http://twitter.com/home?status=Try+this+user-friendly+%23Twitter+web+app!+http%3a%2f%2fwww.EasyChirp.com+%40EasyChirp+%23a11y+%23app"><img src="/images/share/twitter.png" width="50" height="50" alt="Twitter" /></a> &nbsp;
 		<a href="http://www.facebook.com/sharer.php?u=http://www.EasyChirp.com"><img src="/images/share/facebook.png" width="50" height="50" alt="Facebook" /></a> &nbsp;
