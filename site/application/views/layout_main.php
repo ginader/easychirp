@@ -30,11 +30,11 @@
 </header>
 
 <nav role="navigation">
-	<h2 class="hide">Menu</h2>
-	<h3 class="hide">App Menu</h3>
+	<h2 class="hide"><?php echo $xliff_reader->get('nav-heading-menu'); ?></h2>
+	<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-app-menu'); ?></h3>
 	<?php echo $main_menu; ?>
 
-	<h3 class="hide">Tweet Menu</h3>
+	<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-tweet-menu'); ?></h3>
 	<?php echo $tweet_menu; ?>
 </nav>
 
@@ -46,8 +46,8 @@
 
 <footer role="contentinfo" class="smallText">
 	<h2 class="hide">Footer</h2>
-	<p>Select language: English (selected) | <a href="#">Arabic</a> | Espa&ntilde;ol (coming soon) | Fran&ccedil;ais (coming soon)</p>
-	<p>&copy; Copyright 2009-2013 <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
+	<p><?php echo $xliff_reader->get('footer-select-language'); ?>: English (selected) | <a href="#">Arabic</a> | Espa&ntilde;ol (coming soon) | Fran&ccedil;ais (coming soon)</p>
+	<p>&copy; <?php echo $xliff_reader->get('footer-copyright'); ?> 2009-2013 <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
 	<a href="http://www.weboverhauls.com" title="tune-up your web site! | www.weboverhauls.com">Web Overhauls</a></p>
 	<p><img src="images/powered-by-twitter-sig.gif" width="137" height="11" alt="powered by Twitter" /></p>
 </footer>
