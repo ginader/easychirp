@@ -1,7 +1,7 @@
 <h1 class="rounded">Tips</h1>
 
 <div class="box1 rounded">
-	<h2 style="color:#900">Report Spam</h2>
+	<h2 class="alert">Report Spam</h2>
 	<p>You can report a spammer account to Twitter three ways:</p>
 	<ul>
 		<li>Click the Report Spammer icon link <span aria-hidden="true" class="icon-alert"></span> under the user options in a tweet.</li>
