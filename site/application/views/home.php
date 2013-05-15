@@ -8,13 +8,13 @@
 
 <div class="box1 rounded">
 	<h2 id="signin" tabindex="-1"><?php echo $xliff_reader->get('home-h2-signin'); ?></h2>
-	<div><a href="include/oauth/redirect.php"><img src="/images/sign-in-with-twitter.png" alt="Sign in with Twitter" width="151" height="24" /></a></div>
+	<div><a href="include/oauth/redirect.php"><img src="/images/sign-in-with-twitter.png" alt="<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>" width="151" height="24" /></a></div>
 
 	<h2><?php echo $xliff_reader->get('home-h2-donate'); ?></h2>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 		<input type="hidden" name="cmd" value="_s-xclick" />
 		<input type="hidden" name="hosted_button_id" value="2JSYK7TQNL5GA" />
-		<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="Donate with PayPal; credit cards accepted." />
+		<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="<?php echo $xliff_reader->get('home-donate-btn-alt'); ?>" />
 		<img alt="" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1" />
 	</form>
 </div>
@@ -55,18 +55,18 @@
 </div>
 
 <div class="box1 rounded">
-	<h2>Article &amp; Blog Mentions</h2>
-	<p>Highlights:</p>
+	<h2><?php echo $xliff_reader->get('home-h2-articles'); ?></h2>
+	<p><?php echo $xliff_reader->get('home-articles-highlights'); ?></p>
 	<ul>
 		<li><a rel="nofollow" href="http://preparednessforall.wordpress.com/2012/06/04/report-sociability-social-media-for-people-with-a-disability/">Report: Sociability, Social Media for People with a Disability</a> (Preparedness For All)</li>
 		<li><a rel="nofollow" href="http://www.lessfussdesign.com/blog/2009/07/accessible-twitter/">Accessible Twitter: how it should have been done to start with</a> (Less Fuss Design)</li>
 		<li><a rel="nofollow" href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a> (Nomensa)</li>
 	</ul>
-	<p>View more on the <a href="/articles">Articles &amp; Feedback</a> page.</p>
+	<p><?php echo $xliff_reader->get('home-articles-more'); ?></p>
 </div>
 
 <div class="box1 rounded">
-	<h2>What People Are Tweeting</h2>
+	<h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
 	<p class="alert">[UNDER DEVELOPMENT, MOCKUP]</p>
 	
 	<blockquote>
@@ -84,21 +84,21 @@
 </div>
 
 <div class="box1 rounded">
-	<h2>Notable Features</h2>
+	<h2><?php echo $xliff_reader->get('home-h2-features'); ?></h2>
       <ul>
-        <li>A built-in shorten URL tool with choice of service.</li>
-        <li>Search, user search, and saved searches.</li>
-        <li>View, subscribe, and create Twitter Lists.</li>
-        <li>Works great with or without JavaScript.</li>
-        <li>Fully keyboard accessible.</li>
-        <li>Inline threading of tweets; displays reply &quot;conversation&quot;.</li>
-        <li>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</li>
+        <li><?php echo $xliff_reader->get('home-features-shorten'); ?></li>
+        <li><?php echo $xliff_reader->get('home-features-search'); ?></li>
+        <li><?php echo $xliff_reader->get('home-features-lists'); ?></li>
+        <li><?php echo $xliff_reader->get('home-features-no-js'); ?></li>
+        <li><?php echo $xliff_reader->get('home-features-keyboard'); ?></li>
+        <li><?php echo $xliff_reader->get('home-features-thread'); ?></li>
+        <li><?php echo $xliff_reader->get('home-features-devices'); ?></li>
       </ul>
       <p><a href="/features">More Features</a></p>
 </div>
 
 <div class="box1 rounded">
-	<h2>Awards!</h2>
+	<h2><?php echo $xliff_reader->get('home-h2-awards'); ?></h2>
 	<ul class="ulList1">
 		<li>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</li>
 		<li>Recipient of the 2009 Access IT @web2.0 Award.</li>
@@ -108,7 +108,7 @@
 </div>
 
 <div class="box1 rounded">
-	<h2>Development Tasks</h2>
+	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
 
 	<h3>Known Issues</h3>
 	<p>TBD</p>

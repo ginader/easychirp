@@ -229,9 +229,19 @@
         <target>Sign In</target>
       </trans-unit>
 
+      <trans-unit id="home-signin-btn-alt" datatype="html">
+        <source>Sign in with Twitter</source>
+        <target>Sign in with Twitter</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-donate" datatype="html">
         <source>Donate to Easy Chirp</source>
         <target>Donate to Easy Chirp</target>
+      </trans-unit>
+
+      <trans-unit id="home-donate-btn-alt" datatype="html">
+        <source>Donate with PayPal; credit cards accepted.</source>
+        <target>Donate with PayPal; credit cards accepted.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-latest-tweets" datatype="html">
@@ -247,6 +257,76 @@
       <trans-unit id="home-h2-share" datatype="html">
         <source>Share</source>
         <target>Share</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-articles" datatype="html">
+        <source>Article &amp; Blog Mentions</source>
+        <target>Article &amp; Blog Mentions</target>
+      </trans-unit>
+
+      <trans-unit id="home-articles-highlights" datatype="html">
+        <source>Highlights:</source>
+        <target>Highlights:</target>
+      </trans-unit>
+
+      <trans-unit id="home-articles-more" datatype="html">
+        <source>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</source>
+        <target>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-what-tweeting" datatype="html">
+        <source>What People Are Tweeting</source>
+        <target>What People Are Tweeting</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-features" datatype="html">
+        <source>Notable Features</source>
+        <target>Notable Features</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-shorten" datatype="html">
+        <source>A built-in shorten URL tool with choice of service.</source>
+        <target>A built-in shorten URL tool with choice of service.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-search" datatype="html">
+        <source>Search, user search, and saved searches.</source>
+        <target>Search, user search, and saved searches.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-lists" datatype="html">
+        <source>View, subscribe, and create Twitter Lists.</source>
+        <target>View, subscribe, and create Twitter Lists.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-no-js" datatype="html">
+        <source>Works great with or without JavaScript.</source>
+        <target>Works great with or without JavaScript.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-keyboard" datatype="html">
+        <source>Fully keyboard accessible.</source>
+        <target>Fully keyboard accessible.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-thread" datatype="html">
+        <source>Inline threading of tweets; displays reply &quot;conversation&quot;.</source>
+        <target>Inline threading of tweets; displays reply &quot;conversation&quot;.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-devices" datatype="html">
+        <source>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</source>
+        <target>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-awards" datatype="html">
+        <source>Awards!</source>
+        <target>Awards!</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-dev-tasks" datatype="html">
+        <source>Development Tasks</source>
+        <target>Development Tasks</target>
       </trans-unit>
 
 
