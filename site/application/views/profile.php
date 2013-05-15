@@ -1,54 +1,50 @@
-<h1 class="rounded">My Profile</h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('profile-h1'); ?></h1>
 
-<p id="editProfileLink"><a href="/profile_edit">Edit Profile</a></p>
+<p id="editProfileLink"><a href="/profile_edit"><?php echo $xliff_reader->get('profile-edit-link'); ?></a></p>
 
 <h2 class="marginAdjustment">Details</h2>
 <div class="box1 rounded no-margin">
 	<dl id="profile" class="clearfix">
-		<dt>Username</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-username'); ?></dt>
 		<dd>USERNAME</dd>
 		
-		<dt>Name</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-name'); ?></dt>
 		<dd>NAME</dd>
 		
-		<dt>Location</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-location'); ?></dt>
 		<dd>LOCATION</dd>
 
-		<dt>Member Since</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
 		<dd>DATE</dd>
 		
 		<dt><abbr title="one-line biography">Bio</abbr></dt>
 		<dd>BIO</dd>
 		
-		<dt>Website</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
 		<dd><a href="#">URL</a></dd>
 
-		<dt>Tweets</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
 		<dd><a href="/mytweets" title="view my tweets">[COUNT]</a></dd>
 
-		<dt>Following</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-following'); ?></dt>
 		<dd><a href="/following" title="view users that I'm following">[COUNT]</a></dd>
 
-		<dt>Followers</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-followers'); ?></dt>
 		<dd><a href="/followers" title="view users following me">[COUNT]</a></dd>
 
-		<dt>Lists</dt>
-		<dd><a href="/lists">My Lists</a></dd>
+		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
+		<dd><a href="/lists"><?php echo $xliff_reader->get('profile-dd-my-lists'); ?></a></dd>
 
 		<!-- [IF DATA READILY AVAILABLE] -->
-		<dt>Remaining API hits</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-api-hits'); ?></dt>
 		<dd>[COUNT]</dd>
 
-		<dt>Background image</dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-bg-image'); ?></dt>
 		<dd>[VIEW IMAGE | YOU HAVE NO BACKGROUND IMAGE] (No alternative text is offered from Twitter.)</dd>
 	</dl>
 </div>
 
-<!-- <div class="box1 rounded">
-	<h2><a href="/profile_edit">Edit Profile</a></h2>
-</div> -->
-
-<h2 class="marginAdjustment">Latest Tweet</h2>
+<h2 class="marginAdjustment"><?php echo $xliff_reader->get('profile-h2-latest'); ?></h2>
 <div class="tweet rounded clearfix">
 	<div class="tweetAvatar" style="background-image:url(images/avatar_todd.png);"></div>
 	<h2 class="hide">Username 3</h2>

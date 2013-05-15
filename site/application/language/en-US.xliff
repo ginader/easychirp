@@ -329,6 +329,88 @@
         <target>Development Tasks</target>
       </trans-unit>
 
+      <!-- MY PROFILE -->
+
+      <trans-unit id="profile-h1" datatype="html">
+        <source>My Profile</source>
+        <target>My Profile</target>
+      </trans-unit>
+
+      <trans-unit id="profile-edit-link" datatype="html">
+        <source>Edit Profile</source>
+        <target>Edit Profile</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-username" datatype="html">
+        <source>Username</source>
+        <target>Username</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-name" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-location" datatype="html">
+        <source>Location</source>
+        <target>Location</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-since" datatype="html">
+        <source>Member Since</source>
+        <target>Member Since</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-bio" datatype="html">
+        <source>Bio</source>
+        <target>Bio</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-website" datatype="html">
+        <source>Website</source>
+        <target>Website</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-tweets" datatype="html">
+        <source>Tweets</source>
+        <target>Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-following" datatype="html">
+        <source>Following</source>
+        <target>Following</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-followers" datatype="html">
+        <source>Followers</source>
+        <target>Followers</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-lists" datatype="html">
+        <source>Lists</source>
+        <target>Lists</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dd-my-lists" datatype="html">
+        <source>My Lists</source>
+        <target>My Lists</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-api-hits" datatype="html">
+        <source>Remaining API hits</source>
+        <target>Remaining API hits</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-bg-image" datatype="html">
+        <source>Background image</source>
+        <target>Background image</target>
+      </trans-unit>
+
+      <trans-unit id="profile-h2-latest" datatype="html">
+        <source>Latest Tweet</source>
+        <target>Latest Tweet</target>
+      </trans-unit>
+
 
 
       <!-- FOOTER -->
