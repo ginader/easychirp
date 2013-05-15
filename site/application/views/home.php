@@ -44,13 +44,13 @@
 		<a href="http://twitter.com/home?status=Try+this+user-friendly+%23Twitter+web+app!+http%3a%2f%2fwww.EasyChirp.com+%40EasyChirp+%23a11y+%23app"><img src="/images/share/twitter.png" width="50" height="50" alt="Twitter" /></a> &nbsp;
 		<a href="http://www.facebook.com/sharer.php?u=http://www.EasyChirp.com"><img src="/images/share/facebook.png" width="50" height="50" alt="Facebook" /></a> &nbsp;
 		<a href="https://plus.google.com/share?url=http://www.easychirp.com/"><img src="/images/share/googleplus.png" width="50" height="50" alt="Google Plus" /></a> &nbsp;
-		<a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.easychirp.com&amp;title=Check+out+Easy+Chirp!&amp;summary=Easy+Chirp+is+a+user-friendly+Twitter+web+application.+It+is+designed+to+be+easier+to+use+and+is+optimized+for+disabled+users.+It+also+works+with+keyboard-only%2C+older+browsers+like+IE6%2C+lowband+internet+connection%2C+and+without+JavaScript."><img src="/images/share/linkedin.png" width="50" height="50" alt="LinkedIn" /></a> &nbsp;
+		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.easychirp.com&amp;title=Check+out+Easy+Chirp!&amp;summary=Easy+Chirp+is+a+user-friendly+Twitter+web+application.+It+is+designed+to+be+easier+to+use+and+is+optimized+for+disabled+users.+It+also+works+with+keyboard-only%2C+older+browsers+like+IE6%2C+lowband+internet+connection%2C+and+without+JavaScript."><img src="/images/share/linkedin.png" width="50" height="50" alt="LinkedIn" /></a> &nbsp;
 		<!--<a href="#"><img src="/images/share/pinterest.png" width="50" height="50" alt="Pinterest" /></a> &nbsp;-->
 		<a href="http://del.icio.us/post?url=http://www.EasyChirp.com/&amp;title=Easy%20Chirp"><img src="/images/share/delicious.png" width="50" height="50" alt="delicious" /></a> &nbsp; 
 		<a href="http://www.stumbleupon.com/submit?url=http://www.EasyChirp.com/"><img src="/images/share/stumbleupon.png" width="50" height="50" alt="stumbleupon" /></a> &nbsp; 
 		<!--<a href="http://digg.com/"><img src="/images/share/digg.png" width="50" height="50" alt="digg" /></a> &nbsp;--> 
 		<a href="http://www.reddit.com/submit?url=http://www.EasyChirp.com/&amp;t=Easy+Chirp"><img src="/images/share/reddit.png" width="50" height="50" alt="reddit" /></a> &nbsp; 
-		<a href="mailto:?subject=Easy Chirp&body=Check out this awesome, user-friendly Twitter web app! http://www.easychirp.com"><img src="/images/share/email.png" width="50" height="50" alt="email" /></a> &nbsp;
+		<a href="mailto:?subject=Easy Chirp&amp;body=Check out this awesome, user-friendly Twitter web app! http://www.easychirp.com"><img src="/images/share/email.png" width="50" height="50" alt="email" /></a> &nbsp;
 	</div>
 </div>
 
