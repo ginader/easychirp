@@ -44,8 +44,8 @@
 	</div>	
 </main>
 
-<footer role="contentinfo" class="smallText">
-	<h2 class="hide">Footer</h2>
+<footer role="contentinfo">
+	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
 	<p><?php echo $xliff_reader->get('footer-select-language'); ?>: English (selected) | <a href="#">Arabic</a> | Espa&ntilde;ol (coming soon) | Fran&ccedil;ais (coming soon)</p>
 	<p>&copy; <?php echo $xliff_reader->get('footer-copyright'); ?> 2009-2013 <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
 	<a href="http://www.weboverhauls.com" title="tune-up your web site! | www.weboverhauls.com">Web Overhauls</a></p>

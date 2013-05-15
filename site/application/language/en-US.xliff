@@ -343,6 +343,10 @@
         <target>Copyright</target>
       </trans-unit>
 
+      <trans-unit id="footer-h2" datatype="html">
+        <source>Footer</source>
+        <target>Footer</target>
+      </trans-unit>
 
     </body>
   </file>
