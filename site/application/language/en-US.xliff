@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-us" target-language="en-us" original="easychirp.local" datatype="html" 
+	state="needs-translation" xml:space="preserve">
+    <body>
+      
+      <!-- SKIP LINKS -->
+
+      <trans-unit id="skip-sign-in" datatype="html">
+        <source>Skip to Sign In</source>
+        <target>Skip to Sign In</target>
+        <note from="description">Skip Navigation link for Accessibility</note>
+      </trans-unit>
+
+      <trans-unit id="skip-main-content" datatype="html">
+        <source>Skip to Main Content</source>
+        <target>Skip to Main Content</target>
+        <note from="description">Skip Navigation link for Accessibility</note>
+      </trans-unit>
+
+      <!-- NAVIGATION -->
+
+      <trans-unit id="nav-welcome-user" datatype="html">
+        <source>Welcome %s</source>
+        <target>Welcome %s</target>
+        <note from="description">%s represents the username</note>
+      </trans-unit>
+      
+      <trans-unit id="nav-sign-in" datatype="html">
+        <source>Sign in</source>
+        <target>Sign in</target>
+        <note from="description"></note>
+      </trans-unit>
+      
+      <trans-unit id="nav-sign-out" datatype="html">
+        <source>Sign out</source>
+        <target>Sign out</target>
+        <note from="description"></note>
+      </trans-unit>
+      
+      <trans-unit id="nav-following" datatype="html">
+        <source>Following: %d</source>
+        <target>Following: %d</target>
+        <note from="description">People that I follow</note>
+      </trans-unit>
+      
+      <trans-unit id="nav-followers" datatype="html">
+        <source>Followers: %d</source>
+        <target>Followers: %d</target>
+        <note from="description">People that follow me</note>
+      </trans-unit>
+      
+      <trans-unit id="nav-tweet-count" datatype="html">
+        <source>Tweets: %d</source>
+        <target>Tweets: %d</target>
+        <note from="description"></note>
+      </trans-unit>
+    
+      <!-- app menu -->
+
+      <trans-unit id="nav-heading-menu" datatype="html">
+        <source>Menu</source>
+        <target>Menu</target>
+      </trans-unit>
+
+      <trans-unit id="nav-heading-app-menu" datatype="html">
+        <source>App Menu</source>
+        <target>APP Menu</target>
+      </trans-unit>
+
+      <trans-unit id="nav-heading-tweet-menu" datatype="html">
+        <source>Tweet Menu</source>
+        <target>Tweet Menu</target>
+      </trans-unit>
+
+      <trans-unit id="nav-home" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+        <note from="description"></note>
+      </trans-unit>
+      
+      <trans-unit id="nav-profile" datatype="html">
+        <source>My Profile</source>
+        <target>My Profile</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-tips" datatype="html">
+        <source>Tips</source>
+        <target>Tips</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-articles" datatype="html">
+        <source>Articles &amp; Feedback</source>
+        <target>Articles &amp; Feedback</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-features" datatype="html">
+        <source>Features</source>
+        <target>Features</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-about" datatype="html">
+        <source>About</source>
+        <target>About</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <!-- tweet menu -->
+
+      <trans-unit id="nav-mentions" datatype="html">
+        <source>Mentions</source>
+        <target>Mentions</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-favorites" datatype="html">
+        <source>Favorites</source>
+        <target>Favorites</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-lists" datatype="html">
+        <source>Lists</source>
+        <target>Lists</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-messages" datatype="html">
+        <source>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</source>
+        <target>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-inbox" datatype="html">
+        <source>Inbox</source>
+        <target>Inbox</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-sent" datatype="html">
+        <source>Sent</source>
+        <target>Sent</target>
+      </trans-unit>
+
+      <trans-unit id="nav-timeline" datatype="html">
+        <source>Timeline</source>
+        <target>Timeline</target>
+      </trans-unit>
+
+      <trans-unit id="nav-my-tweets" datatype="html">
+        <source>My Tweets</source>
+        <target>My Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets" datatype="html">
+        <source>Retweets</source>
+        <target>Retweets</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets-of-me" datatype="html">
+        <source>Retweets of Me</source>
+        <target>Retweets of Me</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets-by-me" datatype="html">
+        <source>Retweets by Me</source>
+        <target>Retweets by Me</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets-to-me" datatype="html">
+        <source>Retweets To Me</source>
+        <target>Retweets To Me</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-goto-user" datatype="html">
+        <source>Go To User</source>
+        <target>Go To User</target>
+      </trans-unit>
+
+      <trans-unit id="nav-search" datatype="html">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
+
+      <trans-unit id="nav-quick-search" datatype="html">
+        <source>Quick Search</source>
+        <target>QUICK Search</target>
+      </trans-unit>
+
+      <trans-unit id="nav-tools" datatype="html">
+        <source>Tools</source>
+        <target>Tools</target>
+      </trans-unit>
+
+      <trans-unit id="nav-trends" datatype="html">
+        <source>Trends</source>
+        <target>Trends</target>
+      </trans-unit>
+
+      <!-- HOME PAGE -->
+
+      <trans-unit id="home" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-lead" datatype="html">
+        <source>Web accessibility for the Twitter website application</source>
+        <target>Web accessibility for the Twitter website application</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-signin" datatype="html">
+        <source>Sign In</source>
+        <target>Sign In</target>
+      </trans-unit>
+
+
+
+      <!-- FOOTER -->
+            
+      <trans-unit id="footer-select-language" datatype="html">
+        <source>Select language</source>
+        <target>Select language</target>
+      </trans-unit>
+
+      <trans-unit id="footer-copyright" datatype="html">
+        <source>Copyright</source>
+        <target>Copyright</target>
+      </trans-unit>
+
+
+    </body>
+  </file>
+</xliff>
+

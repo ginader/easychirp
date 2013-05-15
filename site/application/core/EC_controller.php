@@ -40,7 +40,7 @@ class EC_Controller extends CI_Controller {
 			}
 
 		}
-		$lang_code = 'en-GB';
+		$lang_code = 'en-US';
 		error_log('lang_code=' . $lang_code);
 		$this->xliff_reader->load( $lang_code );
 		
