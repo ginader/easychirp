@@ -463,6 +463,124 @@
         <target>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</target>
       </trans-unit>
 
+      <trans-unit id="tips-table-th-1" datatype="html">
+        <source>Syntax</source>
+        <target>Syntax</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-th-2" datatype="html">
+        <source>Explanation</source>
+        <target>Explanation</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-th-3" datatype="html">
+        <source>Example</source>
+        <target>Example</target>
+      </trans-unit>
+
+
+      <trans-unit id="tips-table-at-1" datatype="html">
+        <source>@username + message</source>
+        <target>@username + message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-at-2" datatype="html">
+        <source>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</source>
+        <target>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-at-3" datatype="html">
+        <source>@caratina I love that song too, The Cure rules!</source>
+        <target>@caratina I love that song too, The Cure rules!</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-dot-at-1" datatype="html">
+        <source>.@username + message</source>
+        <target>.@username + message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-dot-at-2" datatype="html">
+        <source>Same as above but allows all accounts to view the tweet. (Period at beginning.)</source>
+        <target>Same as above but allows all accounts to view the tweet. (Period at beginning.)</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-dot-at-3" datatype="html">
+        <source>.@jennison I love that song too, Joy Division rules!</source>
+        <target>.@jennison I love that song too, Joy Division rules!</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-rt-1" datatype="html">
+        <source>RT @username + their message</source>
+        <target>RT @username + their message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-rt-2" datatype="html">
+        <source>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</source>
+        <target>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-rt-3" datatype="html">
+        <source>RT @easychirp Working on some performance enhancements with the API.</source>
+        <target>RT @easychirp Working on some performance enhancements with the API.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-mt-1" datatype="html">
+        <source>MT @username + their message</source>
+        <target>MT @username + their message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-mt-2" datatype="html">
+        <source>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</source>
+        <target>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-mt-3" datatype="html">
+        <source>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</source>
+        <target>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-caret-1" datatype="html">
+        <source>^ + user initials</source>
+        <target>^ + user initials</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-caret-2" datatype="html">
+        <source>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</source>
+        <target>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-caret-3" datatype="html">
+        <source>@somebody Yes, sent to email address associated with the account. ^DW</source>
+        <target>@somebody Yes, sent to email address associated with the account. ^DW</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-d-1" datatype="html">
+        <source>D username + message</source>
+        <target>D username + message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-d-2" datatype="html">
+        <source>Sends a person a direct (private) message.</source>
+        <target>Sends a person a direct (private) message.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-d-3" datatype="html">
+        <source>d dennisl Want to meet at Starbucks at 4pm today?</source>
+        <target>d dennisl Want to meet at Starbucks at 4pm today?</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-keys" datatype="html">
+        <source>Access Keys</source>
+        <target>Access Keys</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-apps" datatype="html">
+        <source>Web Applications</source>
+        <target>Web Applications</target>
+      </trans-unit>
+
+
+
 
 
       <!-- FOOTER -->

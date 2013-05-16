@@ -21,48 +21,48 @@
 	<table aria-describedby="tblSyntaxSummary">
 	<thead>
 		<tr>
-			<th scope="col" style="width:30%;">Syntax</th>
-			<th scope="col">Explanation</th>
-			<th scope="col">Example</th>
+			<th scope="col" style="width:30%;"><?php echo $xliff_reader->get('tips-table-th-1'); ?></th>
+			<th scope="col"><?php echo $xliff_reader->get('tips-table-th-2'); ?></th>
+			<th scope="col"><?php echo $xliff_reader->get('tips-table-th-3'); ?></th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<th scope="row">@username + message</th>
-			<td>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</td>
-			<td>@caratina I love that song too, The Cure rules!</td>
+			<th scope="row"><?php echo $xliff_reader->get('tips-table-at-1'); ?></th>
+			<td><?php echo $xliff_reader->get('tips-table-at-2'); ?></td>
+			<td><?php echo $xliff_reader->get('tips-table-at-3'); ?></td>
 		</tr>
 		<tr>
-			<th scope="row">.@username + message</th>
-			<td>Same as above but allows all accounts to view the tweet. (Period at beginning.)</td>
-			<td>.@jennison I love that song too, Joy Division rules!</td>
+			<th scope="row"><?php echo $xliff_reader->get('tips-table-dot-at-1'); ?></th>
+			<td><?php echo $xliff_reader->get('tips-table-dot-at-2'); ?></td>
+			<td><?php echo $xliff_reader->get('tips-table-dot-at-3'); ?></td>
 		</tr>
 		<tr>
-			<th scope="row">RT @username + their message</th>
-			<td>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</td>
-			<td>RT @easychirp Working on some performance enhancements with the API.</td>
+			<th scope="row"><?php echo $xliff_reader->get('tips-table-rt-1'); ?></th>
+			<td><?php echo $xliff_reader->get('tips-table-rt-2'); ?></td>
+			<td><?php echo $xliff_reader->get('tips-table-rt-3'); ?></td>
 		</tr>
 		<tr>
-			<th scope="row">MT @username + their message</th>
-			<td>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</td>
-			<td>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</td>
+			<th scope="row"><?php echo $xliff_reader->get('tips-table-mt-1'); ?></th>
+			<td><?php echo $xliff_reader->get('tips-table-mt-2'); ?></td>
+			<td><?php echo $xliff_reader->get('tips-table-mt-3'); ?></td>
 		</tr>
 		<tr>
-			<th scope="row">^ + user initials</th>
-			<td>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</td>
-			<td>@somebody Yes, sent to email address associated with the account. ^DW</td>
+			<th scope="row"><?php echo $xliff_reader->get('tips-table-caret-1'); ?></th>
+			<td><?php echo $xliff_reader->get('tips-table-caret-2'); ?></td>
+			<td><?php echo $xliff_reader->get('tips-table-caret-3'); ?></td>
 		</tr>
 		<tr>
-			<th scope="row">D username + message</th>
-			<td>Sends a person a direct (private) message.</td>
-			<td>d dennisl Want to meet at Starbucks at 4pm today?</td>
+			<th scope="row"><?php echo $xliff_reader->get('tips-table-d-1'); ?></th>
+			<td><?php echo $xliff_reader->get('tips-table-d-2'); ?></td>
+			<td><?php echo $xliff_reader->get('tips-table-d-3'); ?></td>
 		</tr>
 	</tbody>
 	</table>
 </div>
 
 <div class="box1 rounded">
-	<h2>Access Keys</h2>
+	<h2><?php echo $xliff_reader->get('tips-h2-keys'); ?></h2>
 	<ul>
 		<li>0 Home</li>
 		<li>1 Timeline</li>
@@ -77,7 +77,7 @@
 </div>
 
 <div class="box1 rounded">
-	<h2>Web Applications</h2>
+	<h2><?php echo $xliff_reader->get('tips-h2-apps'); ?></h2>
 	<ul>
 		<li><a href="http://twuffer.com/" rel="external">Twuffer</a>: a Twitter buffer (schedule tweets)</li>
 		<li><a href="http://topsy.com/" rel="external">Topsy</a>: Twitter search.</li>
