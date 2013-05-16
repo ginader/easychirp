@@ -411,6 +411,58 @@
         <target>Latest Tweet</target>
       </trans-unit>
 
+      <!-- TIPS -->
+
+      <trans-unit id="tips-h1" datatype="html">
+        <source>Tips</source>
+        <target>Tips</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-spam" datatype="html">
+        <source>Report Spam</source>
+        <target>Report Spam</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-p" datatype="html">
+        <source>You can report a spammer account to Twitter three ways:</source>
+        <target>You can report a spammer account to Twitter three ways:</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-li-1" datatype="html">
+        <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</source>
+        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-li-2" datatype="html">
+        <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</source>
+        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-li-3" datatype="html">
+        <source>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</source>
+        <target>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-search" datatype="html">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
+
+      <trans-unit id="tips-search-p" datatype="html">
+        <source>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</source>
+        <target>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-table" datatype="html">
+        <source>Friends, Favorites, Direct Messages</source>
+        <target>Friends, Favorites, Direct Messages</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-p" datatype="html">
+        <source>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</source>
+        <target>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</target>
+      </trans-unit>
+
 
 
       <!-- FOOTER -->

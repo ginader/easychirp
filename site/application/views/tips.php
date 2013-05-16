@@ -1,24 +1,23 @@
-<h1 class="rounded">Tips</h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('tips-h1'); ?></h1>
 
 <div class="box1 rounded">
-	<h2 class="alert">Report Spam</h2>
-	<p>You can report a spammer account to Twitter three ways:</p>
+	<h2 class="alert"><?php echo $xliff_reader->get('tips-h2-spam'); ?></h2>
+	<p><?php echo $xliff_reader->get('tips-spam-p'); ?></p>
 	<ul>
-		<li>Click the Report Spammer icon link <span aria-hidden="true" class="icon-alert"></span> under the user options in a tweet.</li>
-		<li>Click the Report Spammer icon link <span aria-hidden="true" class="icon-alert"></span> on the user details page.</li>
-		<li>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. 
-			Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</li>
+		<li><?php echo $xliff_reader->get('tips-spam-li-1'); ?></li>
+		<li><?php echo $xliff_reader->get('tips-spam-li-2'); ?></li>
+		<li><?php echo $xliff_reader->get('tips-spam-li-3'); ?></li>
 	</ul>
 </div>
 
 <div class="box1 rounded">
-	<h2>Search</h2>
-	<p>Tips for searching are listed on the <a href="/search">Search</a> page.</p>
+	<h2><?php echo $xliff_reader->get('tips-h2-search'); ?></h2>
+	<p><?php echo $xliff_reader->get('tips-search-p'); ?></p>
 </div>
 
 <div class="box1 rounded">
-	<h2>Friends, Favorites, Direct Messages</h2>
-	<p id="tblSyntaxSummary">The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</p>
+	<h2><?php echo $xliff_reader->get('tips-h2-table'); ?></h2>
+	<p id="tblSyntaxSummary"><?php echo $xliff_reader->get('tips-table-p'); ?></p>
 	<table aria-describedby="tblSyntaxSummary">
 	<thead>
 		<tr>
