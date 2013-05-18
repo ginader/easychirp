@@ -64,15 +64,15 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('tips-h2-keys'); ?></h2>
 	<ul>
-		<li>0 Home</li>
-		<li>1 Timeline</li>
-		<li>2 My Tweets</li>
-		<li>3 Mentions</li>
-		<li>4 Favorites</li>
-		<li>5 Direct Message (DM)</li>
-		<li>6 Search</li>
-		<li>7 Lists</li>
-		<li>8 Trends</li>
+		<li>0 <?php echo $xliff_reader->get('tips-keys-0'); ?></li>
+		<li>1 <?php echo $xliff_reader->get('tips-keys-1'); ?></li>
+		<li>2 <?php echo $xliff_reader->get('tips-keys-2'); ?></li>
+		<li>3 <?php echo $xliff_reader->get('tips-keys-3'); ?></li>
+		<li>4 <?php echo $xliff_reader->get('tips-keys-4'); ?></li>
+		<li>5 <?php echo $xliff_reader->get('tips-keys-5'); ?></li>
+		<li>6 <?php echo $xliff_reader->get('tips-keys-6'); ?></li>
+		<li>7 <?php echo $xliff_reader->get('tips-keys-7'); ?></li>
+		<li>8 <?php echo $xliff_reader->get('tips-keys-8'); ?></li>
 	</ul>
 </div>
 

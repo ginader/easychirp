@@ -1,22 +1,22 @@
-<h1 class="rounded">Articles &amp; Feedback</h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('articles-h1'); ?></h1>
 
 <div class="box1 rounded">
-	<h2>We're in Books!</h2>
+	<h2><?php echo $xliff_reader->get('articles-h2-books'); ?></h2>
 	
 	<h3>The Twitter Book</h3>
-	<p><a href="http://www.amazon.com/gp/product/0596802811?ie=UTF8&amp;tag=odma-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596802811" title="purchase book on Amazon"><img src="/images/the_twitter_book.jpg" alt="cover of The Twitter Book" width="100" height="75" class="fl" style="margin-right:.35em;" /></a> Easy Chirp is mentioned in <a href="http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201"><em>The Twitter Book</em></a>, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</p>
+	<p><img src="/images/the_twitter_book.jpg" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" width="100" height="75" class="fl" style="margin-right:.35em;" /> Easy Chirp is mentioned in <a href="http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201"><em>The Twitter Book</em></a>, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</p>
 	
 	<h3 class="clear">N&auml;in k&auml;yt&auml;t Twitteri&auml; (How to Use Twitter)</h3>
-	<p class="clearfix"><a href="http://www.twitterkirja.fi/kirja/"><img src="/images/twitter-kirja.jpg" width="69" height="94" alt="cover of &quot;Twitter-kirja&quot; book" class="fl" style="margin-right:.35em;" /></a> Accessible Twitter is mentioned in <a href="http://www.twitterkirja.fi/kirja/">N&auml;in k&auml;yt&auml;t Twitteri&auml;</a> (How to Use Twitter) (<a href="http://translate.googleusercontent.com/translate_c?hl=en&amp;ie=UTF-8&amp;sl=auto&amp;tl=en&amp;u=http://www.twitterkirja.fi/kirja/&amp;prev=_t&amp;rurl=translate.google.com&amp;twu=1&amp;usg=ALkJrhiT6SI1MCSxdeMtpH3uFsEqyOnqNQ">English translation</a>). A book written in Finnish by author <a href="http://www.fiikus.net/">Maija Haavisto</a> (@DiamonDie).</p>
+	<p class="clearfix"><img src="/images/twitter-kirja.jpg" width="69" height="94" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" class="fl" style="margin-right:.35em;" /> Accessible Twitter is mentioned in <a href="http://www.twitterkirja.fi/kirja/">N&auml;in k&auml;yt&auml;t Twitteri&auml;</a> (How to Use Twitter) (<a href="http://translate.googleusercontent.com/translate_c?hl=en&amp;ie=UTF-8&amp;sl=auto&amp;tl=en&amp;u=http://www.twitterkirja.fi/kirja/&amp;prev=_t&amp;rurl=translate.google.com&amp;twu=1&amp;usg=ALkJrhiT6SI1MCSxdeMtpH3uFsEqyOnqNQ">English translation</a>). A book written in Finnish by author <a href="http://www.fiikus.net/">Maija Haavisto</a> (@DiamonDie).</p>
 </div>
 
 <div class="box1 rounded">
-	<h2>User Feedback</h2>
+	<h2><?php echo $xliff_reader->get('articles-h2-user'); ?></h2>
 	<p>[UNDER DEVELOPMENT]</p>
 </div>
 
 <div class="box1 rounded">
-	<h2>We're in Wikis!</h2>
+	<h2><?php echo $xliff_reader->get('articles-h2-wikis'); ?></h2>
 
 	<h3>Wikipedia</h3>
 	<p><a href="http://en.wikipedia.org/wiki/Easy_Chirp">Easy Chirp on Wikipedia</a></p>
@@ -36,8 +36,8 @@
 </div>
 
 <div class="box1 rounded article_mentions">
-	<h2>Article & Blog Mentions</h2>
-	<h3>Highlights</h3>
+	<h2><?php echo $xliff_reader->get('articles-h2-blogs'); ?></h2>
+	<h3><?php echo $xliff_reader->get('articles-h3-highlights'); ?></h3>
 	<dl>
 	<dt><a href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a></dt>
 		<dd>Nomensa, L&eacute;onie Watson</dd>
@@ -52,7 +52,7 @@
 		<dd>Marco Zehe</dd>
 		<dd>2011 Dec 08</dd>
 	</dl>
-	<h3>More, ordered by date</h3>
+	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
 	<dt><a href="http://manuel.a12x.net/2013/04/21/easy-chirp-web-accesible-para-manejo-de-twitter-multiplataforma/">EASY CHIRP: Web accesible para manejo de Twitter multiplataforma</a></dt>
 		<dd>Blog de Manuel Cortez</dd>
