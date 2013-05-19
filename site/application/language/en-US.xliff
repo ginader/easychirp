@@ -667,7 +667,181 @@
         <target>More, ordered by date</target>
       </trans-unit>
 
+      <!-- FEATURES -->
 
+      <!-- a11y features -->
+
+      <trans-unit id="features-a11y-h2" datatype="html">
+        <source>Accessibility Features</source>
+        <target>Accessibility Features</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-kybd" datatype="html">
+        <source>All links and functionality is keyboard accessible.</source>
+        <target>All links and functionality is keyboard accessible.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-layout" datatype="html">
+        <source>Simple, consistent layout and navigation is provided.</source>
+        <target>Simple, consistent layout and navigation is provided.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-headings" datatype="html">
+        <source>Headings and page titles are implemented carefully for optimal accessibility.</source>
+        <target>Headings and page titles are implemented carefully for optimal accessibility.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-ajax" datatype="html">
+        <source>Ajax actions are concluded with an alert (JS or ARIA) that notifies the user of the result of the action.</source>
+        <target>Ajax actions are concluded with an alert (JS or ARIA) that notifies the user of the result of the action.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-contrast" datatype="html">
+        <source>Large default text size and high high color contrast.</source>
+        <target>Large default text size and high high color contrast.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-resize" datatype="html">
+        <source>Text may be resized many levels without breaking layout.</source>
+        <target>Text may be resized many levels without breaking layout.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-keys" datatype="html">
+        <source>Access keys (native keyboard shortcuts) to main menu items.</source>
+        <target>Access keys (native keyboard shortcuts) to main menu items.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-forms" datatype="html">
+        <source>Forms and data tables are marked up for optimal accessibility.</source>
+        <target>Forms and data tables are marked up for optimal accessibility.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-semantic" datatype="html">
+        <source>Code is semantic, light, and adheres to best practices for Web Standards.</source>
+        <target>Code is semantic, light, and adheres to best practices for Web Standards.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-aria" datatype="html">
+        <source>ARIA is implemented throughout including document landmark roles, alert roles, and live region for the dynamic character counter.</source>
+        <target>ARIA is implemented throughout including document landmark roles, alert roles, and live region for the dynamic character counter.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-skip" datatype="html">
+        <source>A &quot;skip to main content&quot; link is provided for keyboard users (and a &quot;skip to sign in&quot; link on the home page).</source>
+        <target>A &quot;skip to main content&quot; link is provided for keyboard users (and a &quot;skip to sign in&quot; link on the home page).</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-js" datatype="html">
+        <source>Works with or without JavaScript.</source>
+        <target>Works with or without JavaScript.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-at" datatype="html">
+        <source>Works with all types of assistive technology including screen readers, screen enlargers, braille-output, text-only browsers, and pretty much any web-enabled device.</source>
+        <target>Works with all types of assistive technology including screen readers, screen enlargers, braille-output, text-only browsers, and pretty much any web-enabled device.</target>
+      </trans-unit>
+
+      <!-- main features -->
+
+      <trans-unit id="features-main-h2" datatype="html">
+        <source>Main Features</source>
+        <target>Main Features</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-shortener" datatype="html">
+        <source>When writing a tweet, a character counter and a Shorten URL feature (choose bit.ly or weba.im) are available.</source>
+        <target>When writing a tweet, a character counter and a Shorten URL feature (choose bit.ly or weba.im) are available.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-replytoall" datatype="html">
+        <source>In addition to the basic retweet, quote tweet, and reply, user can reply to all and email tweet.</source>
+        <target>In addition to the basic retweet, quote tweet, and reply, user can reply to all and email tweet.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-lists" datatype="html">
+        <source>View, subscribe, and create Twitter Lists.</source>
+        <target>View, subscribe, and create Twitter Lists.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-search" datatype="html">
+        <source>Search tweets and users (and search tips).</source>
+        <target>Search tweets and users (and search tips).</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-saved-search" datatype="html">
+        <source>Add, delete, and run saved searches.</source>
+        <target>Add, delete, and run saved searches.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-edit-profile" datatype="html">
+        <source>Edit basic profile settings including updating avatar.</source>
+        <target>Edit basic profile settings including updating avatar.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-jump" datatype="html">
+        <source>Easily jump to user's profile and timeline.</source>
+        <target>Easily jump to user's profile and timeline.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-thread" datatype="html">
+        <source>Inline threading of tweets; displays reply &quot;conversation&quot;.</source>
+        <target>Inline threading of tweets; displays reply &quot;conversation&quot;.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-linked" datatype="html">
+        <source>Tweets contain linked hash tags and usernames.</source>
+        <target>Tweets contain linked hash tags and usernames.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-review" datatype="html">
+        <source>Easy to review a tweet when replying and quoting.</source>
+        <target>Easy to review a tweet when replying and quoting.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-foll" datatype="html">
+        <source>View details of who you're following and your followers.</source>
+        <target>View details of who you're following and your followers.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-block" datatype="html">
+        <source>Blocking is supported.</source>
+        <target>Blocking is supported.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-retweets-num" datatype="html">
+        <source>Number of retweets are displayed on each tweet (if 1 or more).</source>
+        <target>Number of retweets are displayed on each tweet (if 1 or more).</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-retweets-types" datatype="html">
+        <source>View Retweets by you, of you, and to you.</source>
+        <target>View Retweets by you, of you, and to you.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-isfollow" datatype="html">
+        <source>Quickly find out if a user is following you from the user's profile page.</source>
+        <target>Quickly find out if a user is following you from the user's profile page.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-trends" datatype="html">
+        <source>View current Twitter Trends.</source>
+        <target>View current Twitter Trends.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-twitter-links" datatype="html">
+        <source>A link to Twitter is provided for 'View Single Tweet' page and for owned and subscribed lists.</source>
+        <target>A link to Twitter is provided for 'View Single Tweet' page and for owned and subscribed lists.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-screens" datatype="html">
+        <source>Designed for all screen resolutions, great for desktop, tablet and mobile.</source>
+        <target>Designed for all screen resolutions, great for desktop, tablet and mobile.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-browsers" datatype="html">
+        <source>Works on all major browsers: IE7, IE8, IE9, Firefox, Safari, Opera, and Chrome.</source>
+        <target>Works on all major browsers: IE7, IE8, IE9, Firefox, Safari, Opera, and Chrome.</target>
+      </trans-unit>
 
 
       <!-- FOOTER -->
