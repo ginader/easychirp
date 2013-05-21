@@ -843,6 +843,85 @@
         <target>Works on all major browsers: IE7, IE8, IE9, Firefox, Safari, Opera, and Chrome.</target>
       </trans-unit>
 
+      <!-- ABOUT -->
+
+      <trans-unit id="about-h1" datatype="html">
+        <source>About</source>
+        <target>About</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-name" datatype="html">
+        <source>The Name</source>
+        <target>The Name</target>
+      </trans-unit>
+
+      <trans-unit id="about-name-p1" datatype="html">
+        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
+        <target>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
+      </trans-unit>
+
+      <trans-unit id="about-name-p2" datatype="html">
+        <source>Originally, the app was named &amp;quot;Accessible Twitter&amp;quot;. Many of the articles and awards cited on this website use this name. Learn more &lt;a href=&quot;http://www.weboverhauls.com/ce/pressreleases/pr_2011_06_01.htm&quot;&gt;about the name change&lt;/a&gt;.</source>
+        <target>Originally, the app was named &amp;quot;Accessible Twitter&amp;quot;. Many of the articles and awards cited on this website use this name. Learn more &lt;a href=&quot;http://www.weboverhauls.com/ce/pressreleases/pr_2011_06_01.htm&quot;&gt;about the name change&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-donate" datatype="html">
+        <source>Donate</source>
+        <target>Donate</target>
+      </trans-unit>
+
+      <trans-unit id="about-donate-p1" datatype="html">
+        <source>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</source>
+        <target>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</target>
+      </trans-unit>
+
+      <trans-unit id="about-donate-alt" datatype="html">
+        <source>Donate with PayPal; credit cards accepted.</source>
+        <target>Donate with PayPal; credit cards accepted.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-account" datatype="html">
+        <source>Our Twitter Account</source>
+        <target>Our Twitter Account</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-feedback" datatype="html">
+        <source>Feedback &amp; Email</source>
+        <target>Feedback &amp; Email</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-promote" datatype="html">
+        <source>Promote Easy Chirp!</source>
+        <target>Promote Easy Chirp!</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-technical" datatype="html">
+        <source>Technical</source>
+        <target>Technical</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-disclaimer" datatype="html">
+        <source>Disclaimer</source>
+        <target>Disclaimer</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-awards" datatype="html">
+        <source>Awards!</source>
+        <target>Awards!</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-authors" datatype="html">
+        <source>Authors</source>
+        <target>Authors</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-more" datatype="html">
+        <source>More Info</source>
+        <target>More Info</target>
+      </trans-unit>
+
+
+
 
       <!-- FOOTER -->
             
