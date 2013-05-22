@@ -83,7 +83,6 @@ class Xliff_reader
 	*/
 	public function get( $id )
 	{
-		error_log('xliff_reader::get id=' . $id . ' SL='. $this->source_lang . ' TL='. $this->target_lang);
 		if ( isset($this->translations["$id"]["$this->target_lang"]) )
 		{
 			// returns the Target translation
@@ -94,16 +93,6 @@ class Xliff_reader
 			// use the original text since i cant find the translated text
 			return $this->translations["$id"][$this->source_lang];
 		}
-	}
-
-	/**
-	* print out the structure of the value 
-	*/
-	public function debug_object($value)
-	{
-		echo '<pre>';
-		print_r( $value );
-		echo '</pre>';
 	}
 
 

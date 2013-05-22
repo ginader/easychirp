@@ -69,7 +69,8 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'en-US';
+$config['language']	= 'english';
+$config['site_language'] = 'en-US';
 $config['supported_langs'] = array(
 	'en-GB' => 'British English', 
 	'ar-SA' => 'Saudi Arabian Arabic'
@@ -228,7 +229,8 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'q1z0s2e@9c1f9t7b3h$u^m&k*ol.p;/!';
+// $config['encryption_key'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -248,15 +250,15 @@ $config['encryption_key'] = '';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'ci_session';
-$config['sess_expiration']		= 7200;
+$config['sess_cookie_name']		= 'cisession';
+$config['sess_expiration']		= 2 * HOUR_IN_SECONDS;
 $config['sess_expire_on_close']	= FALSE;
-$config['sess_encrypt_cookie']	= FALSE;
-$config['sess_use_database']	= FALSE;
+$config['sess_encrypt_cookie']	= TRUE;
+$config['sess_use_database']	= TRUE;
 $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
-$config['sess_time_to_update']	= 300;
+$config['sess_time_to_update']	= 5 * MINUTE_IN_SECONDS;
 
 /*
 |--------------------------------------------------------------------------
@@ -393,7 +395,7 @@ $config['tw_consumer_secret'] = 'fLVBNIlhblmxsDvMvDWb1RLKwd3Fvbyadx1Hl4a85I';
 $config['tw_request_token_url'] = 'https://api.twitter.com/oauth/request_token'; 
 $config['tw_authorize_url'] = 'https://api.twitter.com/oauth/authorize'; 
 $config['tw_access_token_url'] = 'https://api.twitter.com/oauth/access_token'; 
-$config['tw_callback_url'] = 'http://easychirp.local/oauth_callback'; 
+$config['tw_callback_url'] = 'oauth_callback'; 
 $config['tw_url_home_timeline'] = 'https://api.twitter.com/1.1/statuses/home_timeline.json';
 
 $config['main_menu'] = array(

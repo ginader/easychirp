@@ -21,15 +21,13 @@ class EC_Controller extends CI_Controller {
 
 	public function __construct()
 	{
+		session_start();
 		parent::__construct();
-		
-		$this->load->helper('debug');
-		$this->load->helper('url');
 
 		$this->load->library('menu_generator');
 		$this->load->library('xliff_reader');
 
-		$lang_code = $this->config->item('language');
+		$lang_code = $this->config->item('site_language');
 		$supported = $this->config->item('supported_langs');
 		foreach ($this->get_user_languages() AS $lang)
 		{
@@ -69,6 +67,15 @@ class EC_Controller extends CI_Controller {
 		$this->layout->add_link_tag('include/css/ico-moon-fonts2.css', 'stylesheet');
 
 		//
+		// Get Session Data
+		//
+		$this->layout->screen_name = $this->session->userdata('screen_name');
+		if ($this->layout->screen_name)
+		{
+			$this->layout->screen_name = '';
+		}
+
+		//
 		//	Translate menus
 		// 
 		$main_menu = array();
@@ -85,6 +92,7 @@ class EC_Controller extends CI_Controller {
 
 		$this->menu_generator->set_current_page( $this->get_current_url() );
 		$this->menu_generator->load( $main_menu );
+
 		
 		$this->layout->main_menu = $this->menu_generator->generate('navMain'); 
 

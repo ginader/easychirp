@@ -111,6 +111,28 @@ if (defined('ENVIRONMENT'))
 
 /*
  * -------------------------------------------------------------------
+ *  CUSTOM CONSTANTS
+ * -------------------------------------------------------------------
+ *
+ *  This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ */
+    // Constants for expressing human-readable intervals
+    // in their respective number of seconds.
+	define('MINUTE_IN_SECONDS', 60);
+	define('HOUR_IN_SECONDS',   60 * MINUTE_IN_SECONDS);
+	define('DAY_IN_SECONDS',    24 * HOUR_IN_SECONDS);
+	define('WEEK_IN_SECONDS',    7 * DAY_IN_SECONDS);  
+	define('YEAR_IN_SECONDS',  365 * DAY_IN_SECONDS);  
+
+/*
+ * -------------------------------------------------------------------
  *  CUSTOM CONFIG VALUES
  * -------------------------------------------------------------------
  *
