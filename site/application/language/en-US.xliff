@@ -885,9 +885,19 @@
         <target>Our Twitter Account</target>
       </trans-unit>
 
+      <trans-unit id="about-account-p1" datatype="html">
+        <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
+        <target>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
+      </trans-unit>
+
       <trans-unit id="about-h2-feedback" datatype="html">
         <source>Feedback &amp; Email</source>
         <target>Feedback &amp; Email</target>
+      </trans-unit>
+
+      <trans-unit id="about-feedback-p1" datatype="html">
+        <source>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</source>
+        <target>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-promote" datatype="html">
@@ -895,9 +905,44 @@
         <target>Promote Easy Chirp!</target>
       </trans-unit>
 
-      <trans-unit id="about-h2-technical" datatype="html">
+      <trans-unit id="about-promote-p1" datatype="html">
+        <source>Show your support for web accessibility by promoting Easy Chirp! Or just because you like it (smiley). Here are some ideas on how:</source>
+        <target>Show your support for web accessibility by promoting Easy Chirp! Or just because you like it (smiley). Here are some ideas on how:</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-use" datatype="html">
+        <source>Use the Easy Chirp application.</source>
+        <target>Use the Easy Chirp application.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-tweet" datatype="html">
+        <source>Write a tweet about us.</source>
+        <target>Write a tweet about us.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-mention" datatype="html">
+        <source>Mention us on Facebook or Google Plus.</source>
+        <target>Mention us on Facebook or Google Plus.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-email" datatype="html">
+        <source>Email your friends.</source>
+        <target>Email your friends.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-write" datatype="html">
+        <source>Write a blog about it.</source>
+        <target>Write a blog about it.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-tech" datatype="html">
         <source>Technical</source>
         <target>Technical</target>
+      </trans-unit>
+
+      <trans-unit id="about-tech-p1" datatype="html">
+        <source>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;http://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</source>
+        <target>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;http://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-disclaimer" datatype="html">
@@ -905,9 +950,64 @@
         <target>Disclaimer</target>
       </trans-unit>
 
+      <trans-unit id="about-disclaimer-p1" datatype="html">
+        <source>This site is not affiliated in any way to &lt;a rel=&quot;nofollow&quot; href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt;.</source>
+        <target>This site is not affiliated in any way to &lt;a rel=&quot;nofollow&quot; href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="about-disclaimer-p2" datatype="html">
+        <source>Your information is safe with us! The information in your profile, tweets, etc., will not used in any way outside of this web application. Use of this web site is voluntary. This site is not responsible for any data which may be changed or lost.</source>
+        <target>Your information is safe with us! The information in your profile, tweets, etc., will not used in any way outside of this web application. Use of this web site is voluntary. This site is not responsible for any data which may be changed or lost.</target>
+      </trans-unit>
+
       <trans-unit id="about-h2-awards" datatype="html">
         <source>Awards!</source>
         <target>Awards!</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-afb" datatype="html">
+        <source>Recipient of the AFB 2011 Access Award</source>
+        <target>Recipient of the AFB 2011 Access Award</target>
+      </trans-unit>
+      <trans-unit id="about-awards-afb" datatype="html">
+        <source>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</source>
+        <target>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-accessit" datatype="html">
+        <source>Recipient of the 2009 Access IT @web2.0 Award</source>
+        <target>Recipient of the 2009 Access IT @web2.0 Award</target>
+      </trans-unit>
+      <trans-unit id="about-awards-accessit" datatype="html">
+        <source>The &lt;a href=&quot;http://access-it-events.org/2009_access_it_winners.php&quot;&gt;Access IT @web2.0 Award&lt;/a&gt; is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
+        <target>The &lt;a href=&quot;http://access-it-events.org/2009_access_it_winners.php&quot;&gt;Access IT @web2.0 Award&lt;/a&gt; is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-bestweb" datatype="html">
+        <source>Nominated in the 2010 Best of the Web Awards</source>
+        <target>Nominated in the 2010 Best of the Web Awards</target>
+      </trans-unit>
+      <trans-unit id="about-awards-bestweb" datatype="html">
+        <source>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;http://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</source>
+        <target>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;http://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-bb" datatype="html">
+        <source>Nominated in the Blind Bargains: 2009 &amp; 2010 Access Awards</source>
+        <target>Nominated in the Blind Bargains: 2009 &amp; 2010 Access Awards</target>
+      </trans-unit>
+      <trans-unit id="about-awards-bb" datatype="html">
+        <source>Accessible Twitter was a nominee for &amp;quot;Best Blindness-related Website&amp;quot; in the &lt;a href=&quot;http://www.blindbargains.com/awardlist09.php&quot;&gt;Blind Bargains: 2009 Access Awards&lt;/a&gt; and the &lt;a href=&quot;http://www.blindbargains.com/awardlist10.php&quot;&gt;Blind Bargains: 2010 Access Awards&lt;/a&gt; (category 7).</source>
+        <target>Accessible Twitter was a nominee for &amp;quot;Best Blindness-related Website&amp;quot; in the &lt;a href=&quot;http://www.blindbargains.com/awardlist09.php&quot;&gt;Blind Bargains: 2009 Access Awards&lt;/a&gt; and the &lt;a href=&quot;http://www.blindbargains.com/awardlist10.php&quot;&gt;Blind Bargains: 2010 Access Awards&lt;/a&gt; (category 7).</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-rnib" datatype="html">
+        <source>RNIB Featured Website, December 2011</source>
+        <target>RNIB Featured Website, December 2011</target>
+      </trans-unit>
+      <trans-unit id="about-awards-rnib" datatype="html">
+        <source>Easy Chirp was the &lt;a href=&quot;http://www.rnib.org.uk/livingwithsightloss/computersphones/updates/techknowmore/Lists/Posts/Post.aspx?id=64&quot;&gt;&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website&lt;/a&gt;, December 2011.</source>
+        <target>Easy Chirp was the &lt;a href=&quot;http://www.rnib.org.uk/livingwithsightloss/computersphones/updates/techknowmore/Lists/Posts/Post.aspx?id=64&quot;&gt;&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website&lt;/a&gt;, December 2011.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-authors" datatype="html">
@@ -915,9 +1015,20 @@
         <target>Authors</target>
       </trans-unit>
 
+      <trans-unit id="about-authors-p1" datatype="html">
+        <source>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis, &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;, and &lt;a href=&quot;http://ginader.com/&quot;&gt;Dirk Ginader&lt;/a&gt;.</source>
+        <target>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis, &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;, and &lt;a href=&quot;http://ginader.com/&quot;&gt;Dirk Ginader&lt;/a&gt;.</target>
+      </trans-unit>
+
+
       <trans-unit id="about-h2-more" datatype="html">
         <source>More Info</source>
         <target>More Info</target>
+      </trans-unit>
+
+      <trans-unit id="about-more-p1" datatype="html">
+        <source>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</source>
+        <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
       </trans-unit>
 
 

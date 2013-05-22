@@ -19,64 +19,63 @@
 
 <div class="box1 rounded">
 	<h2><span aria-hidden="true" class="icon-twitter2"></span> <?php echo $xliff_reader->get('about-h2-account'); ?></h2>
-	<p>Follow Easy Chirp 2 on Twitter: <a href="http://twitter.com/EasyChirp">@EasyChirp</a>.</p>
+	<p><?php echo $xliff_reader->get('about-account-p1'); ?></p>
 </div>
 
 <div class="box1 rounded">
 	<h2><span aria-hidden="true" class="icon-mail"></span> <?php echo $xliff_reader->get('about-h2-feedback'); ?></h2>
-	<p>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</p>
+	<p><?php echo $xliff_reader->get('about-feedback-p1'); ?></p>
 </div>
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('about-h2-promote'); ?></h2>
-	<p><img class="fr" style="margin:0 1em;" src="/images/brand/easy_chirp_icon1.png" alt="Easy Chirp icon" width="48" height="48" /> Show your support for web accessibility by promoting Easy Chirp! Or just because you like it (smiley). Here are some ideas on how:</p>
+	<p><img class="fr" style="margin:0 1em;" src="/images/brand/easy_chirp_icon1.png" alt="Easy Chirp icon" width="48" height="48" /> <?php echo $xliff_reader->get('about-promote-p1'); ?></p>
 	<ul>
-		<li>Use the Easy Chirp application.</li>
-		<li>Write a tweet about us.</li>
-		<li>Mention us on Facebook or Google Plus.</li>
-		<li>Email your friends.</li>
-		<li>Write a blog about it.</li>
+		<li><?php echo $xliff_reader->get('about-promote-li-use'); ?></li>
+		<li><?php echo $xliff_reader->get('about-promote-li-tweet'); ?></li>
+		<li><?php echo $xliff_reader->get('about-promote-li-mention'); ?></li>
+		<li><?php echo $xliff_reader->get('about-promote-li-email'); ?></li>
+		<li><?php echo $xliff_reader->get('about-promote-li-write'); ?></li>
 	</ul>
 </div>
 
 <div class="box1 rounded">
-	<h2><?php echo $xliff_reader->get('about-h2-technical'); ?></h2>
-	<p>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the <a rel="nofollow" href="http://dev.twitter.com/">Twitter API</a>.</p>
+	<h2><?php echo $xliff_reader->get('about-h2-tech'); ?></h2>
+	<p><?php echo $xliff_reader->get('about-tech-p1'); ?></p>
 </div>
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('about-h2-disclaimer'); ?></h2>
-	<p>This site is not affiliated in any way to <a rel="nofollow" href="http://www.twitter.com">Twitter</a>.</p>
-	<p>Your information is safe with us! The information in your profile, tweets, etc., will not used in any way outside of this web application. Use of this web site is voluntary. This site is not responsible for any data which may be changed or lost.</p>
+	<p><?php echo $xliff_reader->get('about-disclaimer-p1'); ?></p>
+	<p><?php echo $xliff_reader->get('about-disclaimer-p2'); ?></p>
 </div>
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('about-h2-awards'); ?></h2>
 
-	<h3>Recipient of the AFB 2011 Access Award</h3>
-	<p>Accessible Twitter was honored with  the <a href="http://www.afb.org/Section.asp?DocumentID=5410">American Foundation for the Blind 2011 Access Award</a>. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</p>
+	<h3><?php echo $xliff_reader->get('about-awards-h3-afb'); ?></h3>
+	<p><?php echo $xliff_reader->get('about-awards-afb'); ?></p>
 
-	<h3>Recipient of the 2009 Access IT @web2.0 Award</h3>
-	<p class="clearfix"><img src="/images/awards/access-it-2009-award-sm.jpg" alt="award icon; man in wheelchair holding globe over head" width="55" height="88" class="fl" style="margin-right:10px;" /> The <a href="http://access-it-events.org/2009_access_it_winners.php">Access IT @web2.0 Award</a> is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the <a href="http://www.iwa.it/">International Webmasters Association</a> (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</p>
+	<h3><?php echo $xliff_reader->get('about-awards-h3-accessit'); ?></h3>
+	<p class="clearfix"><img src="/images/awards/access-it-2009-award-sm.jpg" alt="award icon; man in wheelchair holding globe over head" width="55" height="88" class="fl" style="margin-right:10px;" /> <?php echo $xliff_reader->get('about-awards-accessit'); ?></p>
 
-	<h3>Nominated in the 2010 Best of the Web Awards</h3>
-	<p class="clearfix"><img src="images/awards/net_mag_awards_2010_sm.png" alt=".net Magazine Awards 2010" width="70" height="58" class="fl" style="margin:0 10px 8px 0;" /> Accessible Twitter was a nominee for &quot;Best API Use&quot; in the 2010 <a href="http://www.thenetawards.com/">.net Magazine's Best of the Web</a> awards.</p>
+	<h3><?php echo $xliff_reader->get('about-awards-h3-bestweb'); ?></h3>
+	<p class="clearfix"><img src="images/awards/net_mag_awards_2010_sm.png" alt=".net Magazine Awards 2010" width="70" height="58" class="fl" style="margin:0 10px 8px 0;" /> <?php echo $xliff_reader->get('about-awards-bestweb'); ?></p>
 
-	<h3>Nominated in the Blind Bargains: 2009 &amp; 2010 Access Awards</h3>
-	<p>Accessible Twitter was a nominee for &quot;Best Blindness-related Website&quot; in the <a href="http://www.blindbargains.com/awardlist09.php">Blind Bargains: 2009 Access Awards</a> and the  <a href="http://www.blindbargains.com/awardlist10.php">Blind Bargains: 2010 Access Awards</a> (category 7).</p>
+	<h3><?php echo $xliff_reader->get('about-awards-h3-bb'); ?></h3>
+	<p><?php echo $xliff_reader->get('about-awards-bb'); ?></p>
 
-	<h3>RNIB Featured Website, December 2011</h3>
-	<p>Easy Chirp was the <a href="http://www.rnib.org.uk/livingwithsightloss/computersphones/updates/techknowmore/Lists/Posts/Post.aspx?id=64"><abbr title="Royal National Institute of Blind People">RNIB</abbr> Featured Website</a>, December 2011.</p>
+	<h3><?php echo $xliff_reader->get('about-awards-h3-rnib'); ?></h3>
+	<p><?php echo $xliff_reader->get('about-awards-rnib'); ?></p>
 </div>
 
 	<div class="box1 rounded">
 	<h2><span aria-hidden="true" class="icon-users"></span> <?php echo $xliff_reader->get('about-h2-authors'); ?></h2>
-	<p><a href="http://www.dennislembree.com/">Dennis Lembree</a> is the owner and original developer of Easy Chirp/Accessible Twitter. 
-		 Easy Chirp 2 is developed by Dennis, <a href="http://andrewwoods.net/">Andrew Woods</a>, and <a href="http://ginader.com/">Dirk Ginader</a>.</p>
+	<p><?php echo $xliff_reader->get('about-authors-p1'); ?></p>
 </div>
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('about-h2-more'); ?></h2>
-	<p>For more information, visit the <a href="/features">Features</a> and <a href="/articles">Articles &amp; Feedback</a> pages.</p>
+	<p><?php echo $xliff_reader->get('about-more-p1'); ?></p>
 </div>
 
