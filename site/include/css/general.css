@@ -322,6 +322,7 @@ th {
 }
 #navTweet li {
 	float: left;
+	position: relative;
 	margin: .15rem 0;
 }
 #navTweet li a {
@@ -331,6 +332,7 @@ th {
 	margin-right: .75rem;
 	font-weight: bold;
 	border: 1px solid #333;
+	background-color: #fff;
 
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -359,8 +361,24 @@ th {
 	padding-right: .2rem;
 }
 
-#navTweet li ul {
+.submenu {
 	display: none;
+	position: absolute;
+	clear: left;
+	top: 2.25rem;
+	width: 10rem;
+}
+.submenu li {
+	clear: left;
+	float: left;
+}
+.submenu li:first-child {
+    padding-top: 0.5rem;
+}
+
+/* magic */
+#navTweet li:hover ul {
+    display: block;
 }
 
 /* write tweet */
