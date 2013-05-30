@@ -160,14 +160,14 @@
       </trans-unit>
 
       <trans-unit id="nav-retweets-of-me" datatype="html">
-        <source>Retweets of Me</source>
-        <target>Retweets of Me</target>
+        <source>Retweets Of Me</source>
+        <target>Retweets Of Me</target>
         <note from="description">Tweets by me that other people retweeted.</note>
       </trans-unit>
 
       <trans-unit id="nav-retweets-by-me" datatype="html">
-        <source>Retweets by Me</source>
-        <target>Retweets by Me</target>
+        <source>Retweets By Me</source>
+        <target>Retweets By Me</target>
         <note from="description">Tweets that I retweeted.</note>
       </trans-unit>
 
