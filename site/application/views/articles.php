@@ -1,5 +1,8 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('articles-h1'); ?></h1>
 
+<div class="p-row-r">
+	<div class="p-col-1-2">
+
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('articles-h2-books'); ?></h2>
 	
@@ -34,6 +37,9 @@
 	<h3>Emergency 2.0 Wiki</h3>
 	<p><a href="http://emergency20wiki.org/wiki/index.php/Accessibility_Toolkit">Accessibility Toolkit</a></p>
 </div>
+
+	</div>
+	<div class="p-col-1-2">
 
 <div class="box1 rounded article_mentions">
 	<h2><?php echo $xliff_reader->get('articles-h2-blogs'); ?></h2>
@@ -233,6 +239,9 @@
 		<dd>Media Access Australia</dd>
 		<dd>date not available</dd>
 	</dl>
-
 </div>
+
+	</div>
+</div>	
+
 

@@ -346,15 +346,6 @@ footer {
 	max-width: 100%;
 }
 
-/*@media (min-width:980px) {
-	.p-visible-phone     { display: none; }
-	.p-visible-tablet    { display: none; }
-	.p-visible-desktop   { }
-	.p-hidden-phone      { }
-	.p-hidden-tablet     { }
-	.p-hidden-desktop    { display: none; }
-}*/
-
 @media (max-width:480px) {
 	.p-row-r > [class ^= "p-col"] {
 		width:100%;
@@ -378,13 +369,6 @@ footer {
 		margin-left: 0;
 	}
 }
-
-/*@media (min-width:768px) and (max-width:979px) {
-	.p-visible-tablet    {}
-	.p-hidden-tablet     { display: none; }
-	.p-hidden-desktop    {}
-	.p-visible-desktop   { display: none; }
-}*/
 
 /* app menu */
 #navMain {
