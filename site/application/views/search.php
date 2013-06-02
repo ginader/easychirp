@@ -1,5 +1,9 @@
 <h1 class="rounded">Search</h1>
 
+<div class="p-row-r">
+	<div class="p-col-1-2">
+
+
 <div class="box1 rounded">
 	
 	<h2>Search Tweets</h2>
@@ -58,6 +62,9 @@
 	</table>
 </div>
 
+	</div>
+	<div class="p-col-1-2">
+
 <div class="box1 rounded">
 	<h2>Saved Searches</h2>
 	<p>None found.</p>
@@ -68,7 +75,7 @@
 	</ul>
 </div>
 
-<div class="box1 rounded">
+<div class="box1 rounded" style="padding-bottom: 1.5rem;">
 	<h2>Search Users</h2>
 	<form id="frmSearchUsers" action="#" method="post">
 		<label for="queryUsers" class="hide">Enter search user term:</label>
@@ -76,3 +83,7 @@
 		<button type="submit" class="btnSmall">Search Users</button>
 	</form>
 </div>
+
+	</div>
+</div>
+

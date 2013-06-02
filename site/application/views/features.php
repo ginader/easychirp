@@ -1,5 +1,8 @@
 <h1 class="rounded">Features</h1>	
 
+<div class="p-row-r">
+	<div class="p-col-1-2">
+
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('features-a11y-h2'); ?></h2>
 	<ul>
@@ -18,6 +21,9 @@
 		<li><?php echo $xliff_reader->get('features-a11y-at'); ?>
 	</ul>
 </div>
+
+	</div>
+	<div class="p-col-1-2">
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('features-main-h2'); ?></h2>
@@ -44,7 +50,8 @@
 	</ul>
 </div>
 
-	
+	</div>
+</div>	
 
 
 
