@@ -230,7 +230,6 @@ $config['cache_path'] = '';
 |
 */
 $config['encryption_key'] = 'q1z0s2e@9c1f9t7b3h$u^m&k*ol.p;/!';
-// $config['encryption_key'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -251,7 +250,7 @@ $config['encryption_key'] = 'q1z0s2e@9c1f9t7b3h$u^m&k*ol.p;/!';
 |
 */
 $config['sess_cookie_name']		= 'cisession';
-$config['sess_expiration']		= 2 * HOUR_IN_SECONDS;
+$config['sess_expiration']		= 12 * HOUR_IN_SECONDS;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= TRUE;
 $config['sess_use_database']	= TRUE;
