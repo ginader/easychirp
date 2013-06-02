@@ -1,24 +1,19 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+ * Main Controller for EasyChirp
+ *
+ * @package EasyChirp
+ * @subpackage Controllers
+ * @author EasyChirp Team
+ */
 class Main extends EC_Controller {
 
 	/**
-	 * Index Page for this controller.
+	 * Manages the homepage.
 	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
+	 * @return void
 	 */
-
-
 	public function index()
 	{
 		$params = array();
@@ -35,7 +30,7 @@ class Main extends EC_Controller {
 		);
 		
 		$data = array();
-		if ($easychirp_statuses->errors)
+		if ( is_object($easychirp_statuses) && $easychirp_statuses->errors)
 		{
 			$data['error'] = $easychirp_statuses->errors[0]->message;
 		}
@@ -48,6 +43,11 @@ class Main extends EC_Controller {
 		$this->layout->view('home', $data);
 	}
 
+	/**
+	* Manage the about page "/about"
+	*
+	* @return void
+	*/
 	public function about()
 	{
 		$data = array();
@@ -58,6 +58,11 @@ class Main extends EC_Controller {
 		$this->layout->view('about', $data);
 	}
 
+	/**
+	* Manages the articles page - /articles
+	*
+	* @return void
+	*/
 	public function articles()
 	{
 		$data = array();
@@ -68,6 +73,11 @@ class Main extends EC_Controller {
 		$this->layout->view('articles', $data);
 	}
 
+	/**
+	* Manages the features page - /features
+	*
+	* @return void
+	*/
 	public function features()
 	{
 		$data = array();
@@ -78,6 +88,11 @@ class Main extends EC_Controller {
 		$this->layout->view('features', $data);
 	}
 
+	/**
+	* Manages the followers page - /followers
+	*
+	* @return void
+	*/
 	public function followers()
 	{
 		$data = array();
@@ -88,6 +103,11 @@ class Main extends EC_Controller {
 		$this->layout->view('followers', $data);
 	}
 
+	/**
+	* Manages the following page - /following
+	*
+	* @return void
+	*/
 	public function following()
 	{
 		$data = array();
@@ -98,6 +118,11 @@ class Main extends EC_Controller {
 		$this->layout->view('following', $data);
 	}
 
+	/**
+	* Manages the lists page - /lists
+	*
+	* @return void
+	*/
 	public function lists()
 	{
 		$data = array();
@@ -108,6 +133,11 @@ class Main extends EC_Controller {
 		$this->layout->view('lists', $data);
 	}
 
+	/**
+	* Manages the list_edit page - /list_edit
+	*
+	* @return void
+	*/
 	public function list_edit()
 	{
 		$data = array();
@@ -118,6 +148,11 @@ class Main extends EC_Controller {
 		$this->layout->view('list_edit', $data);
 	}
 
+	/**
+	* Manages the profile page - /profile
+	*
+	* @return void
+	*/
 	public function profile()
 	{
 		$data = array();
@@ -128,6 +163,11 @@ class Main extends EC_Controller {
 		$this->layout->view('profile', $data);
 	}
 
+	/**
+	* Manages the profile edit page - /profile_edit
+	*
+	* @return void
+	*/
 	public function profile_edit()
 	{
 		$data = array();
@@ -138,6 +178,11 @@ class Main extends EC_Controller {
 		$this->layout->view('profile_edit', $data);
 	}
 
+	/**
+	* Manages the quote page - /quote
+	*
+	* @return void
+	*/
 	public function quote()
 	{
 		$data = array();
@@ -148,6 +193,11 @@ class Main extends EC_Controller {
 		$this->layout->view('quote', $data);
 	}
 
+	/**
+	* Manages the retweets page - /retweets
+	*
+	* @return void
+	*/
 	public function retweets()
 	{
 		$data = array();
@@ -157,8 +207,14 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Links to retweet pages.');
 		$this->layout->view('retweets', $data);
 	}
-
-	public function search()
+	
+	/**
+	 * Manage the search page - /search
+	 *
+	 * @param string $_POST['query'] the query you want to search via twitter
+	 * @return void
+	 */
+	public function search($query)
 	{
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
@@ -168,6 +224,14 @@ class Main extends EC_Controller {
 		$this->layout->view('search', $data);
 	}
 
+	/**
+	* Manage the sign in page - /sign_in
+	*
+	* Allows user to sign in to Twitter. Setup oauth tokens and send user to twitter to login
+	* Twitter will send the user to $this->oauth_callback();
+	*
+	* @return void
+	*/
 	public function sign_in()
 	{
 		if ( isset($_SERVER["HTTP_REFERER"]) )
@@ -201,7 +265,7 @@ class Main extends EC_Controller {
 		$oauth_access_token = "http://twitter.com/oauth/access_token";
 
 		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
-		error_log('callback_url=' . callback_url);
+		error_log('callback_url=' . $callback_url);
 		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
 		 
 		$req = OAuthRequest::from_consumer_and_token($test_consumer, NULL, "GET", $oauth_request_token);     
@@ -229,14 +293,29 @@ class Main extends EC_Controller {
 		header("Location: $acc_req"); 
 	}
 
+	/**
+	* Handles the callback from twitter
+	*
+	* @param string $oauth_token A $_GET parameter 
+	* @param string $oauth_verifier A $_GET parameter
+	* @return void
+	*/
 	public function oauth_callback()
 	{
 		$oauth_token = $this->input->get('oauth_token', FALSE);	
 		$oauth_verifier = $this->input->get('oauth_verifier', FALSE);	
 
+		error_log('oauth_token=' . $oauth_token);
+		error_log('oauth_verifier=' . $oauth_verifier);
 		$callback_url = base_url() . $this->config->item('tw_callback_url');
 		$consumer_key = $this->config->item('consumer_key'); 
 		$consumer_secret = $this->config->item('consumer_secret'); 
+
+		/*
+		http://easychirp.local/oauth_callback?
+		oauth_token=2D79LX8weSITozzHCcGDF53YG8VW6cuPVE6ObGikyY
+		&oauth_verifier=EK2kjC4I2c2qFl6lcORUzWeqpia8sR73ozQsMqrSMYw
+		*/
 
 		$this->load->library('twitter_lib');
 		$param = array();
@@ -245,27 +324,39 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($param);	
 
 		$oauth_access_token = $this->twitter_lib->twitteroauth->accessTokenURL();
-		   
+		 
 		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
 		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
 		    
-		$acc_token = new OAuthConsumer($_SESSION['oauth_token'], $_SESSION['oauth_token_secret'], 1); 
+		$oauth_token = $this->session->userdata('oauth_token');
+		$oauth_token_secret = $this->session->userdata('oauth_token');
+		$acc_token = new OAuthConsumer($oauth_token, $oauth_token_secret, 1); 
 			                 
+
 		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $acc_token, "GET", $oauth_access_token); 
 		$acc_req->sign_request($sig_method, $test_consumer, $acc_token); 
 							  
+
 		$oc = new OAuthCurl(); 
-		$reqData = $oc->fetchData("{$acc_req}&oauth_verifier={$_GET['oauth_verifier']}"); 
-		
+		$reqData = $oc->fetchData("{$acc_req}&oauth_verifier={$oauth_verifier}"); 
+
 		parse_str($reqData['content'], $accOAuthData); 
 	
 
 		if ( empty($accOAuthData['screen_name']) ){
-			echo '<h2>Token Error</h2>';
-			debug_object($accOAuthData, TRUE);
+			error_log('error callback');
+			$remove = array();
+			$remove['user_oauth_token'] = ''; 
+			$remove['user_oauth_token_secret'] = '';
+			$remove['user_id'] = '';
+			$remove['screen_name'] = ''; 
+
+			$this->sesssion->unset_userdata($remove);
+			redirect( base_url() );
 		}
 		else
 		{
+			error_log('successful callback');
 			$session_data = array();
 			$session_data['user_oauth_token'] = $accOAuthData['oauth_token']; 
 			$session_data['user_oauth_token_secret'] = $accOAuthData['oauth_token_secret']; 
@@ -281,6 +372,11 @@ class Main extends EC_Controller {
 	}
 
 
+	/**
+	* Manages the status page - /status
+	*
+	* @return void
+	*/
 	public function status()
 	{
 		$data = array();
@@ -291,6 +387,11 @@ class Main extends EC_Controller {
 		$this->layout->view('status', $data);
 	}
 
+	/**
+	* Manages the tips page - /tips
+	*
+	* @return void
+	*/
 	public function tips()
 	{
 		$data = array();
@@ -301,6 +402,11 @@ class Main extends EC_Controller {
 		$this->layout->view('tips', $data);
 	}
 
+	/**
+	* Manages the tools page - /tools
+	*
+	* @return void
+	*/
 	public function tools()
 	{
 		$data = array();
@@ -311,6 +417,11 @@ class Main extends EC_Controller {
 		$this->layout->view('tools', $data);
 	}
 
+	/**
+	* Manages the useer page - /user
+	*
+	* @return void
+	*/
 	public function user()
 	{
 		$data = array();
@@ -321,6 +432,11 @@ class Main extends EC_Controller {
 		$this->layout->view('user', $data);
 	}
 
+	/**
+	* Manages the timeline page - /timeline
+	*
+	* @return void
+	*/
 	public function timeline()
 	{
 		$data = array();
