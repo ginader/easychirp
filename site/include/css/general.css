@@ -346,7 +346,7 @@ th {
 	border-color:#a1d5f9;
 	background-color:#a1d5f9;
 }
-#navTweet li a.current {
+#navTweet > li > a.current {
 	color: #333;
 	border-color: #a1d5f9;
 	background-color: #a1d5f9;
