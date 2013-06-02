@@ -472,7 +472,7 @@ footer {
 #enterTweet {
 	border: 2px solid #a1d5f9; /*#0487E0*/;
 	padding: .5rem 1rem;
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 }
 .js #enterTweetContent {
 	display: none;
