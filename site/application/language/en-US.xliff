@@ -329,6 +329,27 @@
         <target>Development Tasks</target>
       </trans-unit>
 
+      <!-- FAVORITES -->
+
+      <trans-unit id="favorites-h1" datatype="html">
+        <source>Favorites</source>
+        <target>Favorites</target>
+      </trans-unit>
+
+      <!-- MENTIONS -->
+
+      <trans-unit id="mentions-h1" datatype="html">
+        <source>Mentions</source>
+        <target>Mentions</target>
+      </trans-unit>
+
+      <!-- MY TWEETS -->
+
+      <trans-unit id="mytweets-h1" datatype="html">
+        <source>My Tweets</source>
+        <target>My Tweets</target>
+      </trans-unit>
+
       <!-- MY PROFILE -->
 
       <trans-unit id="profile-h1" datatype="html">
