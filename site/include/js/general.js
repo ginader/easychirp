@@ -30,7 +30,7 @@ $("#enterTweet h2 a").click(function(e) {
 		$(this).attr("aria-expanded",false);
 	}
 });
-$("#enterTweet h2 a").attr("role","button");
+$("#enterTweet h2 a").attr("role","button").attr("aria-expanded",false);
 
 /* Character counter ***************************************/
 // Update the count

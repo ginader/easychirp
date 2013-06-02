@@ -1,7 +1,8 @@
 
 <div id="enterTweet" class="rounded">
 	<h2>
-		<label for="txtEnterTweet"><a href="#enterTweetContent"><span data-icon="&#x27;" aria-hidden="true"></span>Write tweet</a></label>
+		<label for="txtEnterTweet"><a href="#enterTweetContent" aria-controls="enterTweetContent">
+			<span data-icon="&#x27;" aria-hidden="true"></span>Write tweet</a></label>
 	</h2>
 	<div id="enterTweetContent">
 		<p id="charlimit"><span id="displayCharCountMessage">The character limit is 140.</span><strong id="displayCharCountNumber" aria-live="polite"></strong></p>
