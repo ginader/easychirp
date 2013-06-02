@@ -1,10 +1,47 @@
-<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bird Poop! (<?php echo $heading; ?>)</title>
+<link rel="shortcut icon" href="/images/brand/favicon.ico">
 
-<h4>A PHP Error was encountered</h4>
+<!-- <link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/images/brand/favicon.ico" rel="shortcut icon">
+<link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/include/css/general.css" type="text/css">
+<link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/include/css/ico-moon-fonts2.css" type="text/css">
+ -->
+<style type="text/css">
+#container {
+	width: 50%; 
+	margin: 2rem auto;
+}
+#errorImage {
+	text-align: left; 
+	margin: 1rem 1rem 0 2.25rem;
+}
+.boxError {
+	padding: 0 2rem 2rem 2rem;
+}
+</style>
+</head>
+<body>
 
-<p>Severity: <?php echo $severity; ?></p>
-<p>Message:  <?php echo $message; ?></p>
-<p>Filename: <?php echo $filepath; ?></p>
-<p>Line Number: <?php echo $line; ?></p>
+	<div id="container">
+		<div id="errorImage"><img src="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/images/brand/easy_chirp_icon1.png" alt="Easy Chirp icon" width="48" height="48" /></div>
+		<div class="boxError">
+			<h1>Oh, bird poop!</h1>
+			<p>Apologies, a PHP Error was encountered. Details:</p>
 
-</div>
+			<p>Severity: <?php echo $severity; ?></p>
+			<p>Message:  <?php echo $message; ?></p>
+			<p>Filename: <?php echo $filepath; ?></p>
+			<p>Line Number: <?php echo $line; ?></p>
+
+			<p>You may:</p>
+			<ul>
+				<li>Go to previous page using the browser back button.</li>
+				<li>Report error by emailing: info [AT] Easy Chirp [DOT] com.</li>
+				<li><a href="http://www.EasyChirp.com/">Go to Easy Chirp home page</a>.</li>
+			</ul>
+		</div>
+
+</body>
+</html>
