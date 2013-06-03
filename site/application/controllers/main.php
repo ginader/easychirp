@@ -54,7 +54,7 @@ class Main extends EC_Controller {
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('About');
-		$this->layout->set_description('Description of About page');
+		$this->layout->set_description('All about Easy Chirp 2');
 		$this->layout->view('about', $data);
 	}
 
@@ -64,8 +64,18 @@ class Main extends EC_Controller {
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Articles and Feedback');
-		$this->layout->set_description('Description of Articles and Feedback page goes here');
+		$this->layout->set_description('Articles, user feedback, books, wikis, and awards listed here.');
 		$this->layout->view('articles', $data);
+	}
+
+	public function direct()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Direct Messages');
+		$this->layout->set_description('Direct messages of user.');
+		$this->layout->view('direct', $data);
 	}
 
 	public function favorites()
@@ -74,7 +84,7 @@ class Main extends EC_Controller {
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Favorites');
-		$this->layout->set_description('Tweets user marked as a favorite.');
+		$this->layout->set_description('Tweets that user marked as a favorite.');
 		$this->layout->view('favorites', $data);
 	}
 
@@ -84,7 +94,7 @@ class Main extends EC_Controller {
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Features');
-		$this->layout->set_description('Description of Features page');
+		$this->layout->set_description('General and accessibility features of Easy Chirp.');
 		$this->layout->view('features', $data);
 	}
 
@@ -339,6 +349,16 @@ class Main extends EC_Controller {
 		$this->layout->set_title('Tools');
 		$this->layout->set_description('Tools including search, lists and trends.');
 		$this->layout->view('tools', $data);
+	}
+
+	public function trends()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Trends');
+		$this->layout->set_description('Trending topics on Twitter.');
+		$this->layout->view('trends', $data);
 	}
 
 	public function user()

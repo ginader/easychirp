@@ -371,6 +371,13 @@
         <target>Development Tasks</target>
       </trans-unit>
 
+      <!-- DIRECT MESSAGES (DM) -->
+
+      <trans-unit id="dm-h1" datatype="html">
+        <source>Direct Messages</source>
+        <target>Direct Messages</target>
+      </trans-unit>
+
       <!-- FAVORITES -->
 
       <trans-unit id="favorites-h1" datatype="html">
@@ -541,7 +548,6 @@
         <target>Example</target>
       </trans-unit>
 
-
       <trans-unit id="tips-table-at-1" datatype="html">
         <source>@username + message</source>
         <target>@username + message</target>
@@ -687,8 +693,14 @@
         <target>Web Applications</target>
       </trans-unit>
 
+      <!-- TRENDS -->
 
-      <!-- Articles & Feedback -->
+      <trans-unit id="trends-h1" datatype="html">
+        <source>Trends</source>
+        <target>Trends</target>
+      </trans-unit>
+
+      <!-- ARTICLES & FEEDBACK -->
 
       <trans-unit id="articles-h1" datatype="html">
         <source>Articles &amp; Feedback</source>
@@ -1083,7 +1095,6 @@
         <target>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis, &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;, and &lt;a href=&quot;http://ginader.com/&quot;&gt;Dirk Ginader&lt;/a&gt;.</target>
       </trans-unit>
 
-
       <trans-unit id="about-h2-more" datatype="html">
         <source>More Info</source>
         <target>More Info</target>
@@ -1093,7 +1104,6 @@
         <source>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</source>
         <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
       </trans-unit>
-
 
 
 
