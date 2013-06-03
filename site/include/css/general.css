@@ -2,11 +2,11 @@
 Reset
 Base
 Utilities
-Layout (tables, app menu, tweet menu, write tweet, alert messages, page-specific)
+Layout (2-col, menus, write tweet, alert messages, page-specific)
 Module (buttons, tweets)
 State
 Theme
-Media queries 
+Media queries (except for 2-col)
 */
 
 /* Reset  **************************************************/
