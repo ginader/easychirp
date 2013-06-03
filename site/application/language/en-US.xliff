@@ -214,6 +214,11 @@
         <target>The character limit is 140.</target>
       </trans-unit>
 
+      <trans-unit id="write-tweet-char-remain" datatype="html">
+        <source>Characters remaining:</source>
+        <target>Characters remaining:</target>
+      </trans-unit>
+
       <trans-unit id="write-tweet-post" datatype="html">
         <source>Post</source>
         <target>Post</target>

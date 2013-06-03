@@ -62,7 +62,7 @@ function initCharacterCount() {
 	if(!document.getElementById(charCountField)) { return; }
 	
 	// Modify default text
-	$('#displayCharCountMessage').html("Characters remaining: ");
+	$('#displayCharCountMessage').html($("#enterTweetContent").attr("data-char-remain")+' ');
 
 	// If DM
 	/*if ($("#txtDirectMessage").length) { 

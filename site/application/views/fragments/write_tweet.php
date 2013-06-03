@@ -4,7 +4,7 @@
 		<label for="txtEnterTweet"><a href="#enterTweetContent" aria-controls="enterTweetContent">
 			<span data-icon="&#x27;" aria-hidden="true"></span><?php echo $xliff_reader->get('write-tweet-h2-label'); ?></a></label>
 	</h2>
-	<div id="enterTweetContent">
+	<div id="enterTweetContent" data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
 		<p id="charlimit"><span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span><strong id="displayCharCountNumber" aria-live="polite"></strong></p>
 		<form id="frmSubmitTweet" action="actions/submitStatus.php" method="post" class="clearfix">
 			<div>
