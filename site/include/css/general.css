@@ -284,7 +284,7 @@ footer {
 	margin: 1rem 0;
 }
 
-/* 2-column based off Yahoo's Pure */
+/* 2-column layout (based off Yahoo's Pure) */
 .p-row {
 	letter-spacing: -0.31em;
 	*letter-spacing: normal;
@@ -879,13 +879,6 @@ body.theme-inverse {
 /* Media queries *******************************************/
 
 @media only screen and (max-width: 800px) {
-	/*body {
-		font-size: .8em;
-	}*/
-	h1 {
-		font-size: 1.5rem;
-		padding: 1rem 0 .5rem;
-	}
 	#urlService {
 		display: block;
 		margin: .5rem 0;
