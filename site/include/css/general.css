@@ -284,7 +284,7 @@ footer {
 	margin: 1rem 0;
 }
 
-/* 2-column */
+/* 2-column based off Yahoo's Pure */
 .p-row {
 	letter-spacing: -0.31em;
 	*letter-spacing: normal;
@@ -453,6 +453,7 @@ footer {
 	clear: left;
 	top: 2.25rem;
 	width: 10rem;
+	z-index: 1;
 }
 .submenu li {
 	clear: left;
