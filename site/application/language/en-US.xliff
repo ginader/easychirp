@@ -202,6 +202,43 @@
         <target>Trends</target>
       </trans-unit>
 
+      <!-- WRITE TWEET -->
+
+      <trans-unit id="write-tweet-h2-label" datatype="html">
+        <source>Write Tweet</source>
+        <target>Write Tweet</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-char-limit" datatype="html">
+        <source>The character limit is 140.</source>
+        <target>The character limit is 140.</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-post" datatype="html">
+        <source>Post</source>
+        <target>Post</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-h3" datatype="html">
+        <source>Shorten URL</source>
+        <target>Shorten URL</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-enter-url" datatype="html">
+        <source>Enter URL:</source>
+        <target>Enter URL:</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-service" datatype="html">
+        <source>Service:</source>
+        <target>Service:</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-shorten" datatype="html">
+        <source>Shorten</source>
+        <target>Shorten</target>
+      </trans-unit>
+
       <!-- HOME PAGE -->
 
       <trans-unit id="home" datatype="html">
