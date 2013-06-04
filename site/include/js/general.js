@@ -111,5 +111,21 @@ $("a[href^='#']").click(function() {
 	$("#"+$(this).attr("href").slice(1)+"").focus()
 });
 
+// Validate tweet entry
+$('#frmSubmitTweet').submit(function() {
+	var x=$("#txtEnterTweet");
+	var y = x.val();
+	if (y.length>140) {
+		alert("You must enter less than 140 characters.");
+		x.focus();
+		return false;
+	}
+	if (y.length==0) {
+		alert("Please enter a tweet.");
+		x.focus();
+		return false;
+	}
+});
+
 
 
