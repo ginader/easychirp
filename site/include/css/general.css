@@ -167,7 +167,11 @@ h2 + ul {
 }
 
 .smallText {
-	font-size: .8rem;
+	font-size: .85rem;
+}
+.notes {
+	margin-bottom:0; 
+	line-height: 1.2rem;
 }
 
 a:hover,
@@ -206,6 +210,14 @@ td, th {
 th {
 	font-weight:bold;
 	text-align: left;
+}
+
+input[type=text], textarea {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border: 1px solid #0487E0;
+	font-size: 1.1rem;
+	padding: .25rem;
+	margin: .25rem 0;
 }
 
 /* Utilities ************************************************/
@@ -682,6 +694,21 @@ a.delete-search {
 	margin-left: .5rem;
 }
 
+#enterTweep {
+	float: left;
+	padding: .5em 0 0 .5em;
+}
+
+#txtEnterTweet, #txtDirectMessage {
+	height: 3.3rem;
+	min-height: 3.3rem;
+	margin-right: .7rem;
+	line-height: 1.6rem;
+	overflow: auto;
+	width: 70%;
+	float: left;
+}
+
 /* Module **************************************************/
 
 /* Buttons */
@@ -702,6 +729,7 @@ button {
 .btnPost {
 	font-size: 1.5rem;
 	padding: .9rem .7rem .7rem;
+	margin-top: .2rem;
 }
 .btnSmall {
 	margin: 0;
