@@ -57,17 +57,18 @@ function updateCharCount(charCountField) {
 // Initialize char counter widget
 function initCharacterCount() {
 	var charCountField = "txtEnterTweet";
-
-	// Continue if exists on page
-	if(!document.getElementById(charCountField)) { return; }
 	
 	// Modify default text
 	$('#displayCharCountMessage').html($("#enterTweetContent").attr("data-char-remain")+' ');
 
 	// If DM
-	/*if ($("#txtDirectMessage").length) { 
+	if ($("#txtDirectMessage").length) { 
 		charCountField = "txtDirectMessage";
-	}*/
+		$('#displayCharCountMessage').html($("#frmDirectMessage").attr("data-char-remain")+' ');
+	}
+
+	// Continue if exists on page
+	if(!document.getElementById(charCountField)) { return; }
 
 	// Set initial value and variables
 	updateCharCount(charCountField);
