@@ -378,6 +378,52 @@
         <target>Direct Messages</target>
       </trans-unit>
 
+      <trans-unit id="dm-h2-send" datatype="html">
+        <source>Send a DM</source>
+        <target>Send a DM</target>
+      </trans-unit>
+
+      <trans-unit id="dm-label-tweep" datatype="html">
+        <source>Send a direct message to (username):</source>
+        <target>Send a direct message to (username):</target>
+      </trans-unit>
+
+      <trans-unit id="dm-label-txtDirectMessage" datatype="html">
+        <source>Message:</source>
+        <target>Message:</target>
+      </trans-unit>
+
+      <trans-unit id="dm-note1" datatype="html">
+        <source>The user to whom you're messaging must be following you.</source>
+        <target>The user to whom you're messaging must be following you.</target>
+      </trans-unit>
+
+      <trans-unit id="dm-send" datatype="html">
+        <source>Send</source>
+        <target>Send</target>
+      </trans-unit>
+
+      <trans-unit id="dm-note2" datatype="html">
+        <source>You can also send a Direct Message thru the regular status update box with the command: d + username + message</source>
+        <target>You can also send a Direct Message thru the regular status update box with the command: d + username + message</target>
+      </trans-unit>
+
+      <trans-unit id="dm-h2-page" datatype="html">
+        <source>Select a page:</source>
+        <target>Select a page:</target>
+      </trans-unit>
+
+      <trans-unit id="dm-inbox" datatype="html">
+        <source>Inbox</source>
+        <target>Inbox</target>
+      </trans-unit>
+
+      <trans-unit id="dm-sent" datatype="html">
+        <source>Sent</source>
+        <target>Sent</target>
+      </trans-unit>
+
+
       <!-- FAVORITES -->
 
       <trans-unit id="favorites-h1" datatype="html">
