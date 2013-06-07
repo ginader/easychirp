@@ -835,6 +835,12 @@ a.btnOptionsUser,
 	display: none;
 }
 
+/* go to user */
+#frmGoUser h3 {
+	margin:.2rem .3em 0 0;
+	float: left;
+}
+
 /* State  **************************************************/
 
 .js .btnOptions ul.displayOptions {
