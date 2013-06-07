@@ -444,6 +444,13 @@
         <target>Followers</target>
       </trans-unit>
 
+      <!-- GO TO USER -->
+
+      <trans-unit id="gotouser-h1" datatype="html">
+        <source>Go To User</source>
+        <target>Go To User</target>
+      </trans-unit>
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">

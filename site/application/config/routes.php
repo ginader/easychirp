@@ -45,6 +45,7 @@ $route['features'] = "main/features";
 $route['favorites'] = "main/favorites";
 $route['followers'] = "main/followers";
 $route['following'] = "main/following";
+$route['go_to_user'] = "main/go_to_user";
 $route['lists'] = "main/lists";
 $route['list_edit'] = "main/list_edit";
 $route['mentions'] = "main/mentions";

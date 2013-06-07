@@ -104,7 +104,7 @@ class Main extends EC_Controller {
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Followers');
-		$this->layout->set_description('Description of Followers page');
+		$this->layout->set_description('Twitter users following me.');
 		$this->layout->view('followers', $data);
 	}
 
@@ -114,8 +114,18 @@ class Main extends EC_Controller {
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Following');
-		$this->layout->set_description('Description of Following page');
+		$this->layout->set_description('Twitter users whom I am following.');
 		$this->layout->view('following', $data);
+	}
+
+	public function go_to_user()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Go To User');
+		$this->layout->set_description('Go to user');
+		$this->layout->view('go_to_user', $data);
 	}
 
 	public function lists()
