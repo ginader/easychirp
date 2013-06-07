@@ -19,12 +19,12 @@
 			<dd><input class="input1" type="text" id="location" name="location" maxlength="30" size="30" value="" /></dd>
 			
 			<dt><label for="description">Bio</label></dt>
-			<dd><input class="input1" type="text" id="description" name="description" maxlength="160" size="80" style="width:99%;" value="" /></dd>
+			<dd><input class="input1" type="text" id="description" name="description" maxlength="160" size="70" style="width:98%;" value="" /></dd>
 			
 			<dt><label for="url">Web Site</label></dt>
-			<dd><input class="input1" type="text" id="url" name="url" maxlength="100" size="50" value="" /></dd>
+			<dd><input class="input1" type="text" id="url" name="url" maxlength="100" size="50" style="width:98%;" value="" /></dd>
 		</dl>
-		<div class="clear" style="margin-left: 20%;">
+		<div id="editProfileUpdateBtn" class="clear">
 			<button type="submit" style="margin-left: .5rem;">Update</button>
 		</div>
 	</form>

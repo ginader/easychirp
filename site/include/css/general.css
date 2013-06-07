@@ -628,13 +628,13 @@ a.delete-link span { /* reduce size of icon a bit */
 #profile dt,
 .twList dt {
 	font-weight: bold;
-	width: 20%;
+	width: 30%;
 	text-align: right;
 	float: left;
 	clear: left;
 	margin-top: .5rem;
 	margin-right: .5rem;
-	line-height: 1rem;
+	line-height: 1.2rem;
 }
 #profile dt:after,
 .twList dt:after {
@@ -646,8 +646,12 @@ a.delete-link span { /* reduce size of icon a bit */
 	width: 65%;
 	margin-top: .5rem;
 	margin-left: 0;
-	line-height: 1rem;
+	line-height: 1.2rem;
 }
+#editProfileUpdateBtn {
+	margin-left: 30%;
+}
+
 .article_mentions dt {
 	margin: 1.2rem 0 .5rem 0;
 	line-height: 1.5rem;
@@ -699,7 +703,8 @@ a.delete-search {
 	padding: .5em 0 0 .5em;
 }
 
-#txtEnterTweet, #txtDirectMessage {
+#txtEnterTweet, 
+#txtDirectMessage {
 	height: 3.3rem;
 	min-height: 3.3rem;
 	margin-right: .7rem;
@@ -939,6 +944,18 @@ body.theme-inverse {
 	button,
 	button.btnPost {
 		padding: .2rem;
+	}
+
+	#profile dt,
+	.twList dt {
+		width: 35%;
+	}
+	#profile dd,
+	.twList dd {
+		width: 60%;
+	}
+	#editProfileUpdateBtn {
+		margin-left: 35%;
 	}
 }
 
