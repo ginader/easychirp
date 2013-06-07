@@ -423,12 +423,25 @@
         <target>Sent</target>
       </trans-unit>
 
-
       <!-- FAVORITES -->
 
       <trans-unit id="favorites-h1" datatype="html">
         <source>Favorites</source>
         <target>Favorites</target>
+      </trans-unit>
+
+      <!-- FOLLOWING -->
+
+      <trans-unit id="following-h1" datatype="html">
+        <source>Following</source>
+        <target>Following</target>
+      </trans-unit>
+
+      <!-- FOLLOWERS -->
+
+      <trans-unit id="followers-h1" datatype="html">
+        <source>Followers</source>
+        <target>Followers</target>
       </trans-unit>
 
       <!-- MENTIONS -->
@@ -790,6 +803,11 @@
 
       <!-- FEATURES -->
 
+      <trans-unit id="features-h1" datatype="html">
+        <source>Features</source>
+        <target>Features</target>
+      </trans-unit>
+
       <!-- a11y features -->
 
       <trans-unit id="features-a11y-h2" datatype="html">
@@ -1150,8 +1168,6 @@
         <source>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</source>
         <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
       </trans-unit>
-
-
 
       <!-- FOOTER -->
             
