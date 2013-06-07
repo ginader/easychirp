@@ -930,6 +930,10 @@ body.theme-inverse {
 	#welcome {
 		margin-top: -130px;
 	}
+	header img {
+		width: 210px;
+		height: 76px;
+	}
 	.tweet q {
 		font-size: 1.15rem;
 		line-height: 1.5rem;
