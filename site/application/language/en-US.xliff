@@ -549,6 +549,11 @@
 
       <!-- EDIT PROFILE -->
 
+      <trans-unit id="edit-profile-back-to" datatype="html">
+        <source>back to My Profile</source>
+        <target>back to My Profile</target>
+      </trans-unit>
+
       <trans-unit id="edit-profile-h1" datatype="html">
         <source>Edit Profile</source>
         <target>Edit Profile</target>

@@ -1,6 +1,6 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('edit-profile-h1'); ?></h1>
 
-<p id="editProfileLink"><a href="profile">My Profile</a></p>
+<p id="editProfileLink"><a href="profile"><?php echo $xliff_reader->get('edit-profile-back-to'); ?></a></p>
 
 <div class="box1 rounded" style="margin-top: 1.65rem">
 	<h2>[AVATAR] <?php echo $xliff_reader->get('edit-profile-h1'); ?></h2>
