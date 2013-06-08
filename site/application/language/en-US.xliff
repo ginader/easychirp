@@ -547,6 +547,38 @@
         <target>Latest Tweet</target>
       </trans-unit>
 
+      <!-- EDIT PROFILE -->
+
+      <trans-unit id="edit-profile-h1" datatype="html">
+        <source>Edit Profile</source>
+        <target>Edit Profile</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-email" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-update" datatype="html">
+        <source>Update</source>
+        <target>Update</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-avatar-h2" datatype="html">
+        <source>Change Avatar</source>
+        <target>Change Avatar</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-avatar-p" datatype="html">
+        <source>Must be a valid GIF, JPG, or PNG image of less than 700 kilobytes in size.</source>
+        <target>Must be a valid GIF, JPG, or PNG image of less than 700 kilobytes in size.</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-avatar-path" datatype="html">
+        <source>Path of New Avatar Image</source>
+        <target>Path of New Avatar Image</target>
+      </trans-unit>
+
       <!-- TIPS -->
 
       <trans-unit id="tips-h1" datatype="html">
