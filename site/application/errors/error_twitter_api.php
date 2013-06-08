@@ -3,7 +3,6 @@
 <head>
 <title>Bird Poop! (<?php echo $heading; ?>)</title>
 <link rel="shortcut icon" href="/images/brand/favicon.ico">
-<link href="/include/css/general.css" media="screen" rel="stylesheet" type="text/css"/>
 
 <!-- <link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/images/brand/favicon.ico" rel="shortcut icon">
 <link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/include/css/general.css" type="text/css">
@@ -29,8 +28,8 @@
 		<div id="errorImage"><img src="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/images/brand/easy_chirp_icon1.png" alt="Easy Chirp icon" width="48" height="48" /></div>
 		<div class="boxError">
 			<h1>Oh, bird poop!</h1>
-			<p>Apologies, the following error an occurred: <?php echo $heading; ?></p>
-			<?php echo $message; ?>
+			<p>Apologies, the data from Twitter is unavailable at this time.</p>
+			<p>We are unable to connect to the Twitter API. Please try again soon.</p>
 			<p>You may:</p>
 			<ul>
 				<li>Go to previous page using the browser back button.</li>

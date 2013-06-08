@@ -1,5 +1,8 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('about-h1'); ?></h1>
 
+<div class="p-row-r">
+	<div class="p-col-1-2">
+
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('about-h2-name'); ?></h2>
 	<p><?php echo $xliff_reader->get('about-name-p1'); ?></p>
@@ -50,6 +53,9 @@
 	<p><?php echo $xliff_reader->get('about-disclaimer-p2'); ?></p>
 </div>
 
+	</div>
+	<div class="p-col-1-2">
+
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('about-h2-awards'); ?></h2>
 
@@ -79,3 +85,5 @@
 	<p><?php echo $xliff_reader->get('about-more-p1'); ?></p>
 </div>
 
+	</div>
+</div>

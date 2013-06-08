@@ -1,5 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
+/**
+ * Base controller used by all EasyChirp controllers
+ *
+ * @package EasyChirp
+ * @subpackage core
+ * @author EasyChirp Team
+ */
 class EC_Controller extends CI_Controller {
 
 	/**
@@ -141,6 +149,7 @@ class EC_Controller extends CI_Controller {
 		return str_replace($site_url, '', $current_url);
 	}
 
+	
 }
 
 /* End of file EC_controller.php */

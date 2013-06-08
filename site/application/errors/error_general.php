@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <title>Error</title>
+<link href="/include/css/general.css" media="screen" rel="stylesheet" type="text/css"/>
+
 <style type="text/css">
 
 ::selection{ background-color: #E13300; color: white; }

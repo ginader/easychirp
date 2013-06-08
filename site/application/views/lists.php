@@ -26,7 +26,10 @@
 	</form>
 </div>
 
-<div class="box1 rounded twList">
+<div class="p-row-r">
+	<div class="p-col-1-2">
+
+<div class="box1 rounded twList" style="margin-top:0;">
 	<h2>My Lists</h2>
 	
 	<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
@@ -55,10 +58,12 @@
 		<dt>View on Twitter</dt>
 		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
 	</dl>
-
 </div>
 
-<div class="box1 rounded twList">
+	</div>
+	<div class="p-col-1-2">
+
+<div class="box1 rounded twList" style="margin-top:0;">
 	<h2>Subscribed Lists</h2>
 
 	<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
@@ -79,3 +84,7 @@
 		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
 	</dl>
 </div>
+
+	</div>
+</div>	
+

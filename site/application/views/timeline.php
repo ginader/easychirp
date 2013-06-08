@@ -1,6 +1,8 @@
-<h1 class="rounded">Timeline<span class="alert"> [UNDER DEVELOPMENT]</span></h1>
+<h1 class="rounded">Timeline</h1>
 
-<p>[INCLUDE WRITE TWEET]</p>
+<?php
+require_once 'fragments/write_tweet.php';
+?>
 
 <p>[INCLUDE TIMELINE]</p>
 

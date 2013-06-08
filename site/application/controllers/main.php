@@ -73,6 +73,16 @@ class Main extends EC_Controller {
 		$this->layout->view('articles', $data);
 	}
 
+	public function favorites()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Favorites');
+		$this->layout->set_description('Tweets user marked as a favorite.');
+		$this->layout->view('favorites', $data);
+	}
+
 	/**
 	* Manages the features page - /features
 	*
@@ -146,6 +156,26 @@ class Main extends EC_Controller {
 		$this->layout->set_title('Edit List');
 		$this->layout->set_description('Description of Edit List page');
 		$this->layout->view('list_edit', $data);
+	}
+
+	public function mentions()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Mentions');
+		$this->layout->set_description('Tweets that contain my user name.');
+		$this->layout->view('mentions', $data);
+	}
+
+	public function mytweets()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('My Tweets');
+		$this->layout->set_description('Tweets that I posted.');
+		$this->layout->view('mytweets', $data);
 	}
 
 	/**

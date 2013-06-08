@@ -54,7 +54,7 @@ function updateCharCount(charCountField) {
 		charCntNum.removeClass("alert");
 	}
 }
-// Initialize widget
+// Initialize char counter widget
 function initCharacterCount() {
 	var charCountField = "txtEnterTweet";
 
@@ -88,7 +88,7 @@ $('<p id="showCreateList"><a href="#" id="showCreateAnchor" title="show content 
 //behavior to show/hide completed tasks
 $('#showCreateAnchor').click(function() {
 	$('#showCreateList').hide();
-	$('#frmCreateList').show();//('slow');
+	$('#frmCreateList').show();
 	
 	//create link to hide form
 	$('<p id="hideCreateList"><a href="#" id="hideCreateAnchor" title="hide content to create list">&#171; Close<\/a><\/p>').insertAfter('#frmCreateList');
