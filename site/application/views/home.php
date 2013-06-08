@@ -7,8 +7,8 @@
 </div>
 
 <div class="box1 rounded">
-	<h2 id="signin" tabindex="-1"><?php echo $xliff_reader->get('home-h2-signin'); ?></h2>
-	<div><a href="include/oauth/redirect.php"><img src="/images/sign-in-with-twitter.png" alt="<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>" width="151" height="24" /></a></div>
+	<h2 id="sign_in" tabindex="-1"><?php echo $xliff_reader->get('home-h2-signin'); ?></h2>
+	<div><a href="/sign_in"><img src="/images/sign-in-with-twitter.png" alt="<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>" width="151" height="24" /></a></div>
 
 	<h2><?php echo $xliff_reader->get('home-h2-donate'); ?></h2>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">

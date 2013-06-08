@@ -17,7 +17,7 @@
 
 <div id="skip">
 <?php if ($skip_to_sign_in): ?> 
-<a href="/sign_in"><?php echo $xliff_reader->get('skip-sign-in'); ?></a> | 
+<a href="#sign_in"><?php echo $xliff_reader->get('skip-sign-in'); ?></a> | 
 <?php endif; ?> <a href="#main"><?php echo $xliff_reader->get('skip-main-content'); ?></a></div>
 
 <header role="banner">
