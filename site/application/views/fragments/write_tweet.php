@@ -1,29 +1,33 @@
 
 <div id="enterTweet" class="rounded">
 	<h2>
-		<label for="txtEnterTweet"><a href="#enterTweetContent"><span data-icon="&#x27;" aria-hidden="true"></span>Write tweet</a></label>
+		<label for="txtEnterTweet"><a href="#enterTweetContent" aria-controls="enterTweetContent">
+			<span data-icon="&#x27;" aria-hidden="true"></span><?php echo $xliff_reader->get('write-tweet-h2-label'); ?></a></label>
 	</h2>
-	<div id="enterTweetContent">
-		<p id="charlimit"><span id="displayCharCountMessage">The character limit is 140.</span><strong id="displayCharCountNumber" aria-live="polite"></strong></p>
+	<div id="enterTweetContent" data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
+		<p id="charlimit">
+			<span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span>
+			<strong id="displayCharCountNumber" aria-live="polite"></strong>
+		</p>
 		<form id="frmSubmitTweet" action="actions/submitStatus.php" method="post" class="clearfix">
 			<div>
 				<textarea id="txtEnterTweet" name="status" rows="3"></textarea>
-				<button class="btnPost" type="submit">Post</button>
+				<button class="btnPost" type="submit"><?php echo $xliff_reader->get('write-tweet-post'); ?></button>
 			</div>
 		</form>
 
-		<h3>Shorten URL</h3>
+		<h3><?php echo $xliff_reader->get('write-tweet-h3'); ?></h3>
 		<form id="frmUrlShort" method="post" action="actions/doUrlShorten.php">
-			<label for="urlLong">Enter URL:</label>
+			<label for="urlLong"><?php echo $xliff_reader->get('write-tweet-enter-url'); ?></label>
 			<input type="text" name="urlLong" id="urlLong" size="50" class="input1" placeholder="http://" />
 			<span id="urlService">
-				Service:
-				<input type="radio" name="urlService" id="bitly" value="bitly" checked="checked" />
+				<span id="urlServiceLabel"><?php echo $xliff_reader->get('write-tweet-service'); ?></span>
+				<input type="radio" name="urlService" id="bitly" value="bitly" checked="checked" aria-describedby="urlServiceLabel" />
 				<label for="bitly">bit.ly</label>
-				<input type="radio" name="urlService" id="webaim" value="webaim" />
+				<input type="radio" name="urlService" id="webaim" value="webaim" aria-describedby="urlServiceLabel" />
 				<label for="webaim">weba.im</label>
 			</span>
-			<button type="submit" id="btnShorten" class="btn3">Shorten</button>
+			<button type="submit" id="btnShorten" class="btn3"><?php echo $xliff_reader->get('write-tweet-shorten'); ?></button>
 		</form>
 	</div>
 </div>

@@ -30,7 +30,7 @@ $("#enterTweet h2 a").click(function(e) {
 		$(this).attr("aria-expanded",false);
 	}
 });
-$("#enterTweet h2 a").attr("role","button");
+$("#enterTweet h2 a").attr("role","button").attr("aria-expanded",false);
 
 /* Character counter ***************************************/
 // Update the count
@@ -57,17 +57,18 @@ function updateCharCount(charCountField) {
 // Initialize char counter widget
 function initCharacterCount() {
 	var charCountField = "txtEnterTweet";
+	
+	// Modify default text
+	$('#displayCharCountMessage').html($("#enterTweetContent").attr("data-char-remain")+' ');
+
+	// If DM
+	if ($("#txtDirectMessage").length) { 
+		charCountField = "txtDirectMessage";
+		$('#displayCharCountMessage').html($("#frmDirectMessage").attr("data-char-remain")+' ');
+	}
 
 	// Continue if exists on page
 	if(!document.getElementById(charCountField)) { return; }
-	
-	// Modify default text
-	$('#displayCharCountMessage').html("Characters remaining: ");
-
-	// If DM
-	/*if ($("#txtDirectMessage").length) { 
-		charCountField = "txtDirectMessage";
-	}*/
 
 	// Set initial value and variables
 	updateCharCount(charCountField);
@@ -109,6 +110,50 @@ $('#showCreateAnchor').click(function() {
 // Browser batch (such as Chrome) for anchor links, such as skip to feature ****************/
 $("a[href^='#']").click(function() {
 	$("#"+$(this).attr("href").slice(1)+"").focus()
+});
+
+// Validate tweet entry
+$('#frmSubmitTweet').submit(function() {
+	var x=$("#txtEnterTweet");
+	var y = x.val();
+	if (y.length>140) {
+		alert("You must enter less than 140 characters.");
+		x.focus();
+		return false;
+	}
+	if (y.length==0) {
+		alert("Please enter a tweet.");
+		x.focus();
+		return false;
+	}
+});
+
+// Validate URL shortener
+$("#frmUrlShort").submit(function(ev) {
+	//ev.preventDefault();		
+	var objLongURL = $('#urlLong');
+	var txtLongURL = $('#urlLong').val();
+	//var txtUrlService = $('input:radio[name=urlService]:checked').val();
+	
+	//validate for completed field
+	if (txtLongURL == "") {
+		alert("URL field is blank. Please enter a URL.");
+		objLongURL.focus();
+		return false;
+	}
+	//validate for non bit.ly
+	if (txtLongURL.toLowerCase().indexOf("http://bit.ly") >= 0) {
+		alert("URL cannot be a bit.ly link. Please enter a different URL.");
+		objLongURL.focus();
+		return false;
+	}
+	//validate for valid URL
+	var v = new RegExp();
+	v.compile("^(http)(s?)\:\/\/((www\.)+[a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;=:%\$#_]*)?");
+	if ( (!v.test(txtLongURL)) || (txtLongURL.length <=7) ) {
+		alert("You must provide a valid URL.");
+		return false;
+	}
 });
 
 

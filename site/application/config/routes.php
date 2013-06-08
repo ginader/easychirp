@@ -40,10 +40,12 @@
 
 $route['about'] = "main/about";
 $route['articles'] = "main/articles";
+$route['direct'] = "main/direct";
 $route['features'] = "main/features";
 $route['favorites'] = "main/favorites";
 $route['followers'] = "main/followers";
 $route['following'] = "main/following";
+$route['go_to_user'] = "main/go_to_user";
 $route['lists'] = "main/lists";
 $route['list_edit'] = "main/list_edit";
 $route['mentions'] = "main/mentions";
@@ -60,6 +62,7 @@ $route['tips'] = "main/tips";
 $route['tools'] = "main/tools"; // For non-JS and keyboard use cases
 $route['user'] = "main/user"; // User details
 $route['timeline'] = "main/timeline";
+$route['trends'] = "main/trends";
 $route['default_controller'] = "main";
 $route['404_override'] = '';
 

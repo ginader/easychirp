@@ -8,13 +8,13 @@
 
       <trans-unit id="skip-sign-in" datatype="html">
         <source>skip to sign in</source>
-        <target>skip to sign in</target>
+        <target>Ir a registrarse</target>
         <note from="description">Skip nav link for accessibility</note>
       </trans-unit>
 
       <trans-unit id="skip-main-content" datatype="html">
         <source>skip to main content</source>
-        <target>skip to main content</target>
+        <target>Ir al contenido</target>
         <note from="description">Skip nav link for accessibility</note>
       </trans-unit>
 
@@ -22,31 +22,31 @@
 
       <trans-unit id="nav-welcome-user" datatype="html">
         <source>welcome %s</source>
-        <target>welcome %s</target>
+        <target>bienvenido %s</target>
         <note from="description">%s represents the username</note>
       </trans-unit>
       
       <trans-unit id="nav-sign-in" datatype="html">
         <source>sign in</source>
-        <target>sign in</target>
+        <target>registrarse</target>
         <note from="description"></note>
       </trans-unit>
       
       <trans-unit id="nav-sign-out" datatype="html">
         <source>sign out</source>
-        <target>sign out</target>
+        <target>cerrar sesi&#243;n</target>
         <note from="description"></note>
       </trans-unit>
       
       <trans-unit id="nav-following" datatype="html">
         <source>following: %d</source>
-        <target>following: %d</target>
+        <target>siguiendo: %d</target>
         <note from="description">People that I follow</note>
       </trans-unit>
       
       <trans-unit id="nav-followers" datatype="html">
         <source>followers: %d</source>
-        <target>followers: %d</target>
+        <target>seguidores: %d</target>
         <note from="description">People that follow me</note>
       </trans-unit>
       
@@ -60,52 +60,52 @@
 
       <trans-unit id="nav-heading-menu" datatype="html">
         <source>Menu</source>
-        <target>Menu</target>
+        <target>Men&#250;</target>
       </trans-unit>
 
       <trans-unit id="nav-heading-app-menu" datatype="html">
         <source>App Menu</source>
-        <target>App Menu</target>
+        <target>Men&#250; de Applicaciones</target>
       </trans-unit>
 
       <trans-unit id="nav-heading-tweet-menu" datatype="html">
         <source>Tweet Menu</source>
-        <target>Tweet Menu</target>
+        <target>Men&#250; de Tweet</target>
       </trans-unit>
 
       <trans-unit id="nav-home" datatype="html">
         <source>Home</source>
-        <target>Home</target>
+        <target>P&#225;gina  Principal</target>
         <note from="description"></note>
       </trans-unit>
       
       <trans-unit id="nav-profile" datatype="html">
         <source>My Profile</source>
-        <target>My Profile</target>
+        <target>Mi Perfil</target>
         <note from="description"></note>
       </trans-unit>
 
       <trans-unit id="nav-tips" datatype="html">
         <source>Tips</source>
-        <target>Tips</target>
+        <target>Consejos</target>
         <note from="description"></note>
       </trans-unit>
 
       <trans-unit id="nav-articles" datatype="html">
         <source>Articles &amp; Feedback</source>
-        <target>Articles &amp; Feedback</target>
+        <target>Articulos y Comentarios</target>
         <note from="description"></note>
       </trans-unit>
 
       <trans-unit id="nav-features" datatype="html">
         <source>Features</source>
-        <target>Features</target>
+        <target>Caracter&#237;sticas</target>
         <note from="description"></note>
       </trans-unit>
 
       <trans-unit id="nav-about" datatype="html">
         <source>About</source>
-        <target>About</target>
+        <target>Sobre</target>
         <note from="description"></note>
       </trans-unit>
 
@@ -113,44 +113,44 @@
 
       <trans-unit id="nav-mentions" datatype="html">
         <source>Mentions</source>
-        <target>Mentions</target>
+        <target>Menciones</target>
         <note from="description"></note>
       </trans-unit>
 
       <trans-unit id="nav-favorites" datatype="html">
         <source>Favorites</source>
-        <target>Favorites</target>
+        <target>Favoritos</target>
         <note from="description"></note>
       </trans-unit>
 
       <trans-unit id="nav-lists" datatype="html">
         <source>Lists</source>
-        <target>Lists</target>
+        <target>Listas</target>
       </trans-unit>
 
       <trans-unit id="nav-direct-messages" datatype="html">
         <source>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</source>
-        <target>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</target>
+        <target>Mensajes Directos</target>
       </trans-unit>
 
       <trans-unit id="nav-direct-inbox" datatype="html">
         <source>Inbox</source>
-        <target>Inbox</target>
+        <target>Entrada</target>
       </trans-unit>
 
       <trans-unit id="nav-direct-sent" datatype="html">
         <source>Sent</source>
-        <target>Sent</target>
+        <target>Enviados</target>
       </trans-unit>
 
       <trans-unit id="nav-timeline" datatype="html">
         <source>Timeline</source>
-        <target>Timeline</target>
+        <target>L&#237;nea de tiempo</target>
       </trans-unit>
 
       <trans-unit id="nav-my-tweets" datatype="html">
         <source>My Tweets</source>
-        <target>My Tweets</target>
+        <target>Mis Tweets</target>
       </trans-unit>
 
       <trans-unit id="nav-retweets" datatype="html">
@@ -161,87 +161,87 @@
 
       <trans-unit id="nav-retweets-of-me" datatype="html">
         <source>Retweets Of Me</source>
-        <target>Retweets Of Me</target>
+        <target>Retweets sobre m&#237;</target>
         <note from="description">Tweets by me that other people retweeted.</note>
       </trans-unit>
 
       <trans-unit id="nav-retweets-by-me" datatype="html">
         <source>Retweets By Me</source>
-        <target>Retweets By Me</target>
+        <target>Mis Retweets</target>
         <note from="description">Tweets that I retweeted.</note>
       </trans-unit>
 
       <trans-unit id="nav-retweets-to-me" datatype="html">
         <source>Retweets To Me</source>
-        <target>Retweets To Me</target>
+        <target>Retweets para m&#237;</target>
         <note from="description">Retweets by people that I'm following.</note>
       </trans-unit>
 
       <trans-unit id="nav-goto-user" datatype="html">
         <source>Go To User</source>
-        <target>Go To User</target>
+        <target>Ir a usuario</target>
       </trans-unit>
 
       <trans-unit id="nav-search" datatype="html">
         <source>Search</source>
-        <target>Search</target>
+        <target>Buscar</target>
       </trans-unit>
 
       <trans-unit id="nav-quick-search" datatype="html">
         <source>Quick Search</source>
-        <target>Quick Search</target>
+        <target>Busqueda Rapida</target>
       </trans-unit>
 
       <trans-unit id="nav-tools" datatype="html">
         <source>Tools</source>
-        <target>Tools</target>
+        <target>Herramientas</target>
       </trans-unit>
 
       <trans-unit id="nav-trends" datatype="html">
         <source>Trends</source>
-        <target>Trends</target>
+        <target>Tendencias</target>
       </trans-unit>
 
       <!-- WRITE TWEET -->
 
       <trans-unit id="write-tweet-h2-label" datatype="html">
         <source>Write Tweet</source>
-        <target>Write Tweet</target>
+        <target>Escribir un tweet</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-char-limit" datatype="html">
         <source>The character limit is 140.</source>
-        <target>The character limit is 140.</target>
+        <target>El l&#237;mite de caracteres es 140.</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-char-remain" datatype="html">
         <source>Characters remaining:</source>
-        <target>Characters remaining:</target>
+        <target>Caracteres restantes</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-post" datatype="html">
         <source>Post</source>
-        <target>Post</target>
+        <target>Publicar</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-h3" datatype="html">
         <source>Shorten URL</source>
-        <target>Shorten URL</target>
+        <target>Acortar URL</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-enter-url" datatype="html">
         <source>Enter URL:</source>
-        <target>Enter URL:</target>
+        <target>Entrar URL:</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-service" datatype="html">
         <source>Service:</source>
-        <target>Service:</target>
+        <target>Servicio:</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-shorten" datatype="html">
         <source>Shorten</source>
-        <target>Shorten</target>
+        <target>Acortar</target>
       </trans-unit>
 
       <!-- HOME PAGE -->

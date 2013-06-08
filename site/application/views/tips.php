@@ -61,7 +61,10 @@
 	</table>
 </div>
 
-<div class="box1 rounded">
+<div class="p-row-r">
+	<div class="p-col-1-2">
+
+<div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('tips-h2-keys'); ?></h2>
 	<ul>
 		<li>0 <?php echo $xliff_reader->get('tips-keys-0'); ?></li>
@@ -76,7 +79,10 @@
 	</ul>
 </div>
 
-<div class="box1 rounded">
+	</div>
+	<div class="p-col-1-2">
+
+<div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('tips-h2-apps'); ?></h2>
 	<ul>
 		<li><a href="http://twuffer.com/" rel="external">Twuffer</a>: a Twitter buffer (schedule tweets)</li>
@@ -90,6 +96,8 @@
 	</ul>
 </div>
 
+	</div>
+</div>	
 
 
 

@@ -73,7 +73,8 @@ $config['language']	= 'english';
 $config['site_language'] = 'en-US';
 $config['supported_langs'] = array(
 	'en-GB' => 'British English', 
-	'ar-SA' => 'Saudi Arabian Arabic'
+	'ar-SA' => 'Saudi Arabian Arabic', 
+	'es' => 'Spanish'
 );
 
 /*

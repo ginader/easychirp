@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <title>Bird Poop! (<?php echo $heading; ?>)</title>
-<link rel="shortcut icon" href="/images/brand/favicon.ico">
-<link href="/include/css/general.css" media="screen" rel="stylesheet" type="text/css"/>
 
-<!-- <link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/images/brand/favicon.ico" rel="shortcut icon">
-<link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/include/css/general.css" type="text/css">
-<link href="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/include/css/ico-moon-fonts2.css" type="text/css">
- -->
+<link rel="shortcut icon" href="/images/brand/favicon.ico"/>
+<link rel="stylesheet" href="/include/css/general.css" type="text/css"/>
+<link rel="stylesheet" href="/include/css/ico-moon-fonts2.css"/>
+
 <style type="text/css">
 #container {
 	width: 50%; 
 	margin: 2rem auto;
+}
+h1 {
+	margin-bottom: .75rem;
 }
 #errorImage {
 	text-align: left; 
@@ -26,9 +27,9 @@
 <body>
 
 	<div id="container">
-		<div id="errorImage"><img src="http://<?php echo $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']; ?>/images/brand/easy_chirp_icon1.png" alt="Easy Chirp icon" width="48" height="48" /></div>
+		<div id="errorImage"><img src="/images/brand/easy_chirp_icon1.png" alt="Easy Chirp icon" width="48" height="48" /></div>
 		<div class="boxError">
-			<h1>Oh, bird poop!</h1>
+			<h1 class="rounded">Oh, bird poop!</h1>
 			<p>Apologies, the following error an occurred: <?php echo $heading; ?></p>
 			<?php echo $message; ?>
 			<p>You may:</p>

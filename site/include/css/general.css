@@ -2,11 +2,11 @@
 Reset
 Base
 Utilities
-Layout (tables, app menu, tweet menu, write tweet, alert messages, page-specific)
+Layout (2-col, menus, write tweet, alert messages, page-specific)
 Module (buttons, tweets)
 State
 Theme
-Media queries 
+Media queries (except for 2-col)
 */
 
 /* Reset  **************************************************/
@@ -167,7 +167,11 @@ h2 + ul {
 }
 
 .smallText {
-	font-size: .8rem;
+	font-size: .85rem;
+}
+.notes {
+	margin-bottom:0; 
+	line-height: 1.2rem;
 }
 
 a:hover,
@@ -206,6 +210,14 @@ td, th {
 th {
 	font-weight:bold;
 	text-align: left;
+}
+
+input[type=text], textarea {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border: 1px solid #0487E0;
+	font-size: 1.1rem;
+	padding: .25rem;
+	margin: .25rem 0;
 }
 
 /* Utilities ************************************************/
@@ -284,7 +296,7 @@ footer {
 	margin: 1rem 0;
 }
 
-/* 2-column */
+/* 2-column layout (based off Yahoo's Pure) */
 .p-row {
 	letter-spacing: -0.31em;
 	*letter-spacing: normal;
@@ -453,6 +465,7 @@ footer {
 	clear: left;
 	top: 2.25rem;
 	width: 10rem;
+	z-index: 1;
 }
 .submenu li {
 	clear: left;
@@ -615,13 +628,13 @@ a.delete-link span { /* reduce size of icon a bit */
 #profile dt,
 .twList dt {
 	font-weight: bold;
-	width: 20%;
+	width: 30%;
 	text-align: right;
 	float: left;
 	clear: left;
 	margin-top: .5rem;
 	margin-right: .5rem;
-	line-height: 1rem;
+	line-height: 1.2rem;
 }
 #profile dt:after,
 .twList dt:after {
@@ -633,8 +646,12 @@ a.delete-link span { /* reduce size of icon a bit */
 	width: 65%;
 	margin-top: .5rem;
 	margin-left: 0;
-	line-height: 1rem;
+	line-height: 1.2rem;
 }
+#editProfileUpdateBtn {
+	margin-left: 30%;
+}
+
 .article_mentions dt {
 	margin: 1.2rem 0 .5rem 0;
 	line-height: 1.5rem;
@@ -681,6 +698,22 @@ a.delete-search {
 	margin-left: .5rem;
 }
 
+#enterTweep {
+	float: left;
+	padding: .5em 0 0 .5em;
+}
+
+#txtEnterTweet, 
+#txtDirectMessage {
+	height: 3.3rem;
+	min-height: 3.3rem;
+	margin-right: .7rem;
+	line-height: 1.6rem;
+	overflow: auto;
+	width: 70%;
+	float: left;
+}
+
 /* Module **************************************************/
 
 /* Buttons */
@@ -701,6 +734,7 @@ button {
 .btnPost {
 	font-size: 1.5rem;
 	padding: .9rem .7rem .7rem;
+	margin-top: .2rem;
 }
 .btnSmall {
 	margin: 0;
@@ -801,6 +835,12 @@ a.btnOptionsUser,
 	display: none;
 }
 
+/* go to user */
+#frmGoUser h3 {
+	margin:.2rem .3em 0 0;
+	float: left;
+}
+
 /* State  **************************************************/
 
 .js .btnOptions ul.displayOptions {
@@ -878,13 +918,6 @@ body.theme-inverse {
 /* Media queries *******************************************/
 
 @media only screen and (max-width: 800px) {
-	/*body {
-		font-size: .8em;
-	}*/
-	h1 {
-		font-size: 1.5rem;
-		padding: 1rem 0 .5rem;
-	}
 	#urlService {
 		display: block;
 		margin: .5rem 0;
@@ -903,6 +936,10 @@ body.theme-inverse {
 	#welcome {
 		margin-top: -130px;
 	}
+	header img {
+		width: 210px;
+		height: 76px;
+	}
 	.tweet q {
 		font-size: 1.15rem;
 		line-height: 1.5rem;
@@ -917,6 +954,18 @@ body.theme-inverse {
 	button,
 	button.btnPost {
 		padding: .2rem;
+	}
+
+	#profile dt,
+	.twList dt {
+		width: 35%;
+	}
+	#profile dd,
+	.twList dd {
+		width: 60%;
+	}
+	#editProfileUpdateBtn {
+		margin-left: 35%;
 	}
 }
 

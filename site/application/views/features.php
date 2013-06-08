@@ -1,4 +1,4 @@
-<h1 class="rounded">Features</h1>	
+<h1 class="rounded"><?php echo $xliff_reader->get('features-h1'); ?></h1>	
 
 <div class="p-row-r">
 	<div class="p-col-1-2">
