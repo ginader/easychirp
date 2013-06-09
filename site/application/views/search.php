@@ -25,37 +25,32 @@
 		<tr>
 			<th scope="row">space</th>
 			<td>twitter search</td>
-			<td>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</td>
+			<td><?php echo $xliff_reader->get('search-result-space'); ?></td>
 		</tr>
 		<tr>
 			<th scope="row">OR</th>
 			<td>love OR hate</td>
-			<td>containing either &quot;love&quot; or &quot;hate&quot; (or both)</td>
+			<td><?php echo $xliff_reader->get('search-result-or'); ?></td>
 		</tr>
 		<tr>
 			<th scope="row">-</th>
 			<td>beer -root</td>
-			<td>containing &quot;beer&quot; but not &quot;root&quot;</td>
+			<td><?php echo $xliff_reader->get('search-result-hyphen'); ?></td>
 		</tr>
 		<tr>
 			<th scope="row">#</th>
 			<td>#haiku</td>
-			<td>containing the hashtag &quot;haiku&quot;</td>
+			<td><?php echo $xliff_reader->get('search-result-hash'); ?></td>
 		</tr>
 		<tr>
 			<th scope="row">from:</th>
 			<td>from:alexiskold</td>
-			<td>sent from person &quot;alexiskold&quot;</td>
+			<td><?php echo $xliff_reader->get('search-result-from'); ?></td>
 		</tr>
 		<tr>
 			<th scope="row">to:</th>
 			<td>to:techcrunch</td>
-			<td>sent to person &quot;techcrunch&quot;</td>
-		</tr>
-		<tr>
-			<th scope="row">@</th>
-			<td>@mashable</td>
-			<td>referencing person &quot;mashable&quot;</td>
+			<td><?php echo $xliff_reader->get('search-result-to'); ?></td>
 		</tr>
 		</tbody>
 	</table>

@@ -1275,79 +1275,34 @@
         <target>Result</target>
       </trans-unit>
 
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
+      <trans-unit id="search-result-space" datatype="html">
+        <source>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</source>
+        <target>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</target>
       </trans-unit>
 
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
+      <trans-unit id="search-result-or" datatype="html">
+        <source>containing either &quot;love&quot; or &quot;hate&quot; (or both)</source>
+        <target>containing either &quot;love&quot; or &quot;hate&quot; (or both)</target>
       </trans-unit>
 
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
+      <trans-unit id="search-result-hyphen" datatype="html">
+        <source>containing &quot;beer&quot; but not &quot;root&quot;</source>
+        <target>containing &quot;beer&quot; but not &quot;root&quot;</target>
       </trans-unit>
 
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
+      <trans-unit id="search-result-hash" datatype="html">
+        <source>containing the hashtag &quot;haiku&quot;</source>
+        <target>containing the hashtag &quot;haiku&quot;</target>
       </trans-unit>
 
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
+      <trans-unit id="search-result-from" datatype="html">
+        <source>sent from person &quot;alexiskold&quot;</source>
+        <target>sent from person &quot;alexiskold&quot;</target>
       </trans-unit>
 
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="search-" datatype="html">
-        <source></source>
-        <target></target>
+      <trans-unit id="search-result-to" datatype="html">
+        <source>sent to person &quot;techcrunch&quot;</source>
+        <target>sent to person &quot;techcrunch&quot;</target>
       </trans-unit>
 
       <trans-unit id="search-h2-saved" datatype="html">
