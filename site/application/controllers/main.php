@@ -178,6 +178,11 @@ class Main extends EC_Controller {
 		$this->layout->view('list_edit', $data);
 	}
 
+	/**
+	* Manages the Mentions page - /mentions
+	*
+	* @return void
+	*/
 	public function mentions()
 	{
 		$data = array();
@@ -188,6 +193,11 @@ class Main extends EC_Controller {
 		$this->layout->view('mentions', $data);
 	}
 
+	/**
+	* Manages the My Tweets page - /mytweets
+	*
+	* @return void
+	*/
 	public function mytweets()
 	{
 		$data = array();
@@ -272,6 +282,22 @@ class Main extends EC_Controller {
 		$this->layout->set_title('Search');
 		$this->layout->set_description('Search tweets, saved searches, and search users.');
 		$this->layout->view('search', $data);
+	}
+
+	/**
+	 * Manage the search results page - /search_results
+	 *
+	 * @param string $_POST['query'] the query you want to search via twitter
+	 * @return void
+	 */
+	public function search_results($query)
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Search Results');
+		$this->layout->set_description('Search results.');
+		$this->layout->view('search_results', $data);
 	}
 
 	/**
@@ -467,6 +493,11 @@ class Main extends EC_Controller {
 		$this->layout->view('tools', $data);
 	}
 
+	/**
+	* Manages the trends page - /trends
+	*
+	* @return void
+	*/
 	public function trends()
 	{
 		$data = array();
