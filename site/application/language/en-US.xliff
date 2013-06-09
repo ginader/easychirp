@@ -478,6 +478,124 @@
         <target>Go</target>
       </trans-unit>
 
+      <!-- LISTS -->
+
+      <trans-unit id="lists-h1" datatype="html">
+        <source>Lists</source>
+        <target>Lists</target>
+      </trans-unit>
+
+      <trans-unit id="lists-note1" datatype="html">
+        <source>Note: You may subscribe to a list from the Lists page of a specific user.</source>
+        <target>Note: You may subscribe to a list from the Lists page of a specific user.</target>
+      </trans-unit>
+
+      <trans-unit id="lists-h2-create" datatype="html">
+        <source>Create List</source>
+        <target>Create List</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-name" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-name-tip" datatype="html">
+        <source>(required, under 25 characters, letters and numbers only)</source>
+        <target>(required, under 25 characters, letters and numbers only)</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-desc" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-desc-tip" datatype="html">
+        <source>(optional, under 100 characters)</source>
+        <target>(optional, under 100 characters)</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-privacy" datatype="html">
+        <source>Privacy</source>
+        <target>Privacy</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-privacy-public" datatype="html">
+        <source>Public</source>
+        <target>Public</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-privacy-private" datatype="html">
+        <source>Private</source>
+        <target>Private</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-submit" datatype="html">
+        <source>Create</source>
+        <target>Create</target>
+      </trans-unit>
+
+      <trans-unit id="lists-h2-my" datatype="html">
+        <source>My Lists</source>
+        <target>My Lists</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-fullname" datatype="html">
+        <source>Full name</source>
+        <target>Full name</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-desc" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-subs" datatype="html">
+        <source>Subscribers</source>
+        <target>Subscribers</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-mems" datatype="html">
+        <source>Members</source>
+        <target>Members</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-add-mem" datatype="html">
+        <source>Add Member</source>
+        <target>Add Member</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-add-placeholder" datatype="html">
+        <source>@UserName</source>
+        <target>@UserName</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-add-submit" datatype="html">
+        <source>Add</source>
+        <target>Add</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-mode" datatype="html">
+        <source>Mode</source>
+        <target>Mode</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-actions" datatype="html">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-edit" datatype="html">
+        <source>Edit Settings</source>
+        <target>Edit Settings</target>
+      </trans-unit>
+
+      <trans-unit id="lists-my-on-twitter" datatype="html">
+        <source>View on Twitter</source>
+        <target>View on Twitter</target>
+      </trans-unit>
+
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">
