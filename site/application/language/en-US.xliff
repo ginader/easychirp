@@ -451,6 +451,26 @@
         <target>Go To User</target>
       </trans-unit>
 
+      <trans-unit id="gotouser-username" datatype="html">
+        <source>@UserName</source>
+        <target>@UserName</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-timeline" datatype="html">
+        <source>Timeline</source>
+        <target>Timeline</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-profile" datatype="html">
+        <source>Profile</source>
+        <target>Profile</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-go" datatype="html">
+        <source>Go</source>
+        <target>Go</target>
+      </trans-unit>
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">
