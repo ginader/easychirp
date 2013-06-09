@@ -63,9 +63,9 @@
 	<h2><?php echo $xliff_reader->get('search-h2-saved'); ?></h2>
 	<p><?php echo $xliff_reader->get('search-saved-none'); ?></p>
 	<ul>
-		<li><a href="#">screen reader twitter</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
-		<li><a href="#">#a11y css</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
-		<li><a href="#">your mama and papa</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
+		<li><a href="#">screen reader twitter</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></li>
+		<li><a href="#">#a11y css</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></li>
+		<li><a href="#">your mama and papa</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></li>
 	</ul>
 </div>
 
