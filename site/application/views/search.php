@@ -1,25 +1,24 @@
-<h1 class="rounded">Search</h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('search-h1'); ?></h1>
 
 <div class="p-row-r">
 	<div class="p-col-1-2">
 
-
 <div class="box1 rounded">
 	
-	<h2>Search Tweets</h2>
+	<h2><?php echo $xliff_reader->get('search-h2-tweets'); ?></h2>
 	<form id="frmSearch" action="#" method="post">
-		<label for="query" class="hide">Enter search terms:</label>
+		<label for="query" class="hide"><?php echo $xliff_reader->get('search-tweets-query'); ?></label>
 		<input name="query" id="query" type="text" size="35" maxlength="50" class="input1" aria-required="true" />
-		<button type="submit" class="btnSmall">Search Tweets</button>
+		<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('search-tweets-submit'); ?></button>
 	</form>
 
-	<h3>Hints for Searching Tweets</h3>
+	<h3><?php echo $xliff_reader->get('search-h3-hints'); ?></h3>
 	<table>
 		<thead>
 		<tr>
-			<th scope="col">Operator</th>
-			<th scope="col">Example</th>
-			<th scope="col">Result</th>
+			<th scope="col"><?php echo $xliff_reader->get('search-th-operator'); ?></th>
+			<th scope="col"><?php echo $xliff_reader->get('search-th-example'); ?></th>
+			<th scope="col"><?php echo $xliff_reader->get('search-th-result'); ?></th>
 		</tr>
 		</thead>
 		<tbody>
@@ -66,8 +65,8 @@
 	<div class="p-col-1-2">
 
 <div class="box1 rounded">
-	<h2>Saved Searches</h2>
-	<p>None found.</p>
+	<h2><?php echo $xliff_reader->get('search-h2-saved'); ?></h2>
+	<p><?php echo $xliff_reader->get('search-saved-none'); ?></p>
 	<ul>
 		<li><a href="#">screen reader twitter</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
 		<li><a href="#">#a11y css</a> <a href="#" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> Delete</a></li>
@@ -76,11 +75,11 @@
 </div>
 
 <div class="box1 rounded" style="padding-bottom: 1.5rem;">
-	<h2>Search Users</h2>
+	<h2><?php echo $xliff_reader->get('search-h2-users'); ?></h2>
 	<form id="frmSearchUsers" action="#" method="post">
-		<label for="queryUsers" class="hide">Enter search user term:</label>
+		<label for="queryUsers" class="hide"><?php echo $xliff_reader->get('search-users-query'); ?></label>
 		<input name="queryUsers" id="queryUsers" type="text" size="35" maxlength="50" class="input1" aria-required="true" />
-		<button type="submit" class="btnSmall">Search Users</button>
+		<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('search-users-submit'); ?></button>
 	</form>
 </div>
 

@@ -1233,8 +1233,157 @@
         <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
       </trans-unit>
 
+      <!-- SEARCH -->
+
+      <trans-unit id="search-h1" datatype="html">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-tweets" datatype="html">
+        <source>Search Tweets</source>
+        <target>Search Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-tweets-query" datatype="html">
+        <source>Enter search terms:</source>
+        <target>Enter search terms:</target>
+      </trans-unit>
+
+      <trans-unit id="search-tweets-submit" datatype="html">
+        <source>Search Tweets</source>
+        <target>Search Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-h3-hints" datatype="html">
+        <source>Hints for Searching Tweets</source>
+        <target>Hints for Searching Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-operator" datatype="html">
+        <source>Operator</source>
+        <target>Operator</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-example" datatype="html">
+        <source>Example</source>
+        <target>Example</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-result" datatype="html">
+        <source>Result</source>
+        <target>Result</target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-saved" datatype="html">
+        <source>Saved Searches</source>
+        <target>Saved Searches</target>
+      </trans-unit>
+
+      <trans-unit id="search-saved-none" datatype="html">
+        <source>None found.</source>
+        <target>None found.</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-users" datatype="html">
+        <source>Search Users</source>
+        <target>Search Users</target>
+      </trans-unit>
+
+      <trans-unit id="search-users-query" datatype="html">
+        <source>Enter search user term:</source>
+        <target>Enter search user term:</target>
+      </trans-unit>
+
+      <trans-unit id="search-users-submit" datatype="html">
+        <source>Search Users</source>
+        <target>Search Users</target>
+      </trans-unit>
+
+      <!-- SEARCH RESULTS -->
+
+      <trans-unit id="search-results-h1" datatype="html">
+        <source>Search Results</source>
+        <target>Search Results</target>
+      </trans-unit>
+
       <!-- FOOTER -->
-            
+
       <trans-unit id="footer-select-language" datatype="html">
         <source>Select language</source>
         <target>Select language</target>
