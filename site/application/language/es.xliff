@@ -81,7 +81,7 @@
       
       <trans-unit id="nav-profile" datatype="html">
         <source>My Profile</source>
-        <target>Mi Perfil</target>
+        <target>Mi P&#233;rfil</target>
         <note from="description"></note>
       </trans-unit>
 
@@ -450,6 +450,26 @@
       <trans-unit id="gotouser-h1" datatype="html">
         <source>Go To User</source>
         <target>Ir A Usuario</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-username" datatype="html">
+        <source>@UserName</source>
+        <target>@NombreDeUsuario</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-timeline" datatype="html">
+        <source>Timeline</source>
+        <target>L&#237;nea de tiempo</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-profile" datatype="html">
+        <source>Profile</source>
+        <target>P&#233;rfil</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-go" datatype="html">
+        <source>Go</source>
+        <target>Ir</target>
       </trans-unit>
 
       <!-- MENTIONS -->
@@ -1214,6 +1234,110 @@
         <target>Para mas información, visite las páginas &lt;a href=&quot;/articles&quot;&gt;Articulos &amp; Comentarios&lt;/a&gt; y &lt;a href=&quot;/features&quot;&gt;Características&lt;/a&gt;.</target>
       </trans-unit>
 
+      <!-- SEARCH -->
+
+      <trans-unit id="search-h1" datatype="html">
+        <source>Search</source>
+        <target>Buscar</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-tweets" datatype="html">
+        <source>Search Tweets</source>
+        <target>Buscar Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-tweets-query" datatype="html">
+        <source>Enter search terms:</source>
+        <target>Enter search terms:</target>
+      </trans-unit>
+
+      <trans-unit id="search-tweets-submit" datatype="html">
+        <source>Search Tweets</source>
+        <target>Buscar Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-h3-hints" datatype="html">
+        <source>Hints for Searching Tweets</source>
+        <target>Consejos Para Buscar Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-operator" datatype="html">
+        <source>Operator</source>
+        <target>Operador</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-example" datatype="html">
+        <source>Example</source>
+        <target>Ejemplo</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-result" datatype="html">
+        <source>Result</source>
+        <target>Resultados</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-space" datatype="html">
+        <source>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</source>
+        <target>Conteniendo ambos "Twitter" y "search" este es el operador de inicio</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-or" datatype="html">
+        <source>containing either &quot;love&quot; or &quot;hate&quot; (or both)</source>
+        <target>Contenga alguno "love" ó "hate" (o ambos)</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-hyphen" datatype="html">
+        <source>containing &quot;beer&quot; but not &quot;root&quot;</source>
+        <target>Contenga "beer" pero no "root"</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-hash" datatype="html">
+        <source>containing the hashtag &quot;haiku&quot;</source>
+        <target>Contenga el hashtag "haiku"</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-from" datatype="html">
+        <source>sent from person &quot;alexiskold&quot;</source>
+        <target>Enviado de la persona "alexisold"</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-to" datatype="html">
+        <source>sent to person &quot;techcrunch&quot;</source>
+        <target>Enviado para la persona "techcrunch"</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-saved" datatype="html">
+        <source>Saved Searches</source>
+        <target>Busquedas guardadas</target>
+      </trans-unit>
+
+      <trans-unit id="search-saved-none" datatype="html">
+        <source>None found.</source>
+        <target>None found.</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-users" datatype="html">
+        <source>Buscar usuarios</source>
+        <target>Buscar usuarios</target>
+      </trans-unit>
+
+      <trans-unit id="search-users-query" datatype="html">
+        <source>Enter search user term:</source>
+        <target>Enter search user term:</target>
+      </trans-unit>
+
+      <trans-unit id="search-users-submit" datatype="html">
+        <source>Buscar usuarios</source>
+        <target>Buscar usuarios</target>
+      </trans-unit>
+
+      <!-- SEARCH RESULTS -->
+
+      <trans-unit id="search-results-h1" datatype="html">
+        <source>Search Results</source>
+        <target>Resultados de la Búsqueda</target>
+      </trans-unit>
+
       <!-- FOOTER -->
             
       <trans-unit id="footer-select-language" datatype="html">
@@ -1223,7 +1347,7 @@
 
       <trans-unit id="footer-copyright" datatype="html">
         <source>Copyright</source>
-        <target>Copyright</target>
+        <target>Derechos de Autor</target>
       </trans-unit>
 
       <trans-unit id="footer-h2" datatype="html">
