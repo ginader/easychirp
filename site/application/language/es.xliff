@@ -536,7 +536,15 @@
         <target>Crear</target>
       </trans-unit>
 
+      <trans-unit id="lists-create-open" datatype="html">
+        <source>Open</source>
+        <target>Abrir</target>
+      </trans-unit>
 
+      <trans-unit id="lists-create-close" datatype="html">
+        <source>Close</source>
+        <target>Cerrar</target>
+      </trans-unit>
 
       <trans-unit id="lists-h2-my" datatype="html">
         <source>My Lists</source>

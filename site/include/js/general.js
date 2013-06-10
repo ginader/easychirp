@@ -84,19 +84,23 @@ function initCharacterCount() {
 //hide create list form
 $('#frmCreateList').hide();
 
-//create link to show content
-$('<p id="showCreateList"><a href="#" id="showCreateAnchor" title="show content to create list">Open &#187;<\/a><\/p>').insertBefore('#frmCreateList');
+// Get open & close text values
+var txtOpen = $("#createList").attr("data-open");
+var txtClose = $("#createList").attr("data-close");
 
-//behavior to show/hide content
+// Create link to show content
+$('<p id="showCreateList"><a href="#" id="showCreateAnchor">' + txtOpen + ' &#187;<\/a><\/p>').insertBefore('#frmCreateList');
+
+// Behavior to show/hide content
 $('#showCreateAnchor').click(function() {
 	$('#showCreateList').hide();
 	$('#frmCreateList').show();
 	
-	//create link to close content
-	$('<p id="hideCreateList"><a href="#" id="hideCreateAnchor" title="hide content to create list">&#171; Close<\/a><\/p>').insertAfter('#frmCreateList');
+	// Create link to close content
+	$('<p id="hideCreateList"><a href="#" id="hideCreateAnchor">&#171; ' + txtClose + '<\/a><\/p>').insertAfter('#frmCreateList');
 	$('#txt_listName').focus();
 	
-	//behavior to hide content
+	// Behavior to hide content
 	$('#hideCreateAnchor').click(function() {
 		$('#hideCreateList').hide();
 		$('#frmCreateList').hide();

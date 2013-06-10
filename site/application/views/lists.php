@@ -2,7 +2,7 @@
 
 <p class="marginAdjustment"><?php echo $xliff_reader->get('lists-note1'); ?></p>
 
-<div id="createList" class="box1 rounded">
+<div id="createList" class="box1 rounded" data-open="<?php echo $xliff_reader->get('lists-create-open'); ?>" data-close="<?php echo $xliff_reader->get('lists-create-close'); ?>">
 	<h2><?php echo $xliff_reader->get('lists-h2-create'); ?></h2>
 	<form action="actions/doListCreate.php" method="post" id="frmCreateList">
 	<div class="row">
