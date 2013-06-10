@@ -1,25 +1,34 @@
 <h1 class="hide">Easy Chirp 2</h1>
 
-<div class="box1 rounded boxAccent">
-	<h2><?php echo $xliff_reader->get('home-h2-lead'); ?></h2>
-	<p><?php echo $xliff_reader->get('home-lead-p1'); ?></p>
-	<p><?php echo $xliff_reader->get('home-lead-p2'); ?></p>
+<div class="p-row-r">
+	<div class="p-col-1-2">
+
+		<div class="box1 rounded boxAccent">
+			<h2><?php echo $xliff_reader->get('home-h2-lead'); ?></h2>
+			<p><?php echo $xliff_reader->get('home-lead-p1'); ?></p>
+			<p><?php echo $xliff_reader->get('home-lead-p2'); ?></p>
+		</div>
+
+	</div>
+	<div class="p-col-1-2">
+
+		<div class="box1 rounded">
+			<h2 id="sign_in" tabindex="-1"><?php echo $xliff_reader->get('home-h2-signin'); ?></h2>
+			<div><a href="/sign_in"><img src="/images/sign-in-with-twitter.png" alt="<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>" width="151" height="24" /></a></div>
+
+			<h2><?php echo $xliff_reader->get('home-h2-donate'); ?></h2>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick" />
+				<input type="hidden" name="hosted_button_id" value="2JSYK7TQNL5GA" />
+				<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="<?php echo $xliff_reader->get('home-donate-btn-alt'); ?>" />
+				<img alt="" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1" />
+			</form>
+		</div>
+
+	</div>
 </div>
 
-<div class="box1 rounded">
-	<h2 id="sign_in" tabindex="-1"><?php echo $xliff_reader->get('home-h2-signin'); ?></h2>
-	<div><a href="/sign_in"><img src="/images/sign-in-with-twitter.png" alt="<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>" width="151" height="24" /></a></div>
-
-	<h2><?php echo $xliff_reader->get('home-h2-donate'); ?></h2>
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-		<input type="hidden" name="cmd" value="_s-xclick" />
-		<input type="hidden" name="hosted_button_id" value="2JSYK7TQNL5GA" />
-		<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="<?php echo $xliff_reader->get('home-donate-btn-alt'); ?>" />
-		<img alt="" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1" />
-	</form>
-</div>
-
-<div class="box1 rounded">
+<div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('home-h2-latest-tweets'); ?></h2>
 	<?php if ($error): ?>
 		<p class="error">
