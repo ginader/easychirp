@@ -7,10 +7,12 @@
 	<h2><?php echo $xliff_reader->get('articles-h2-books'); ?></h2>
 	
 	<h3>The Twitter Book</h3>
-	<p><img src="/images/the_twitter_book.jpg" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" width="100" height="75" class="fl" style="margin-right:.35em;" /> Easy Chirp is mentioned in <a href="http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201"><em>The Twitter Book</em></a>, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</p>
+	<p><img src="/images/the_twitter_book.jpg" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" width="100" height="75" class="fl" style="margin-right:.35em;" /> 
+		<?php echo $xliff_reader->get('articles-books-thetwitter'); ?></p>
 	
 	<h3 class="clear">N&auml;in k&auml;yt&auml;t Twitteri&auml; (How to Use Twitter)</h3>
-	<p class="clearfix"><img src="/images/twitter-kirja.jpg" width="69" height="94" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" class="fl" style="margin-right:.35em;" /> Accessible Twitter is mentioned in <a href="http://www.twitterkirja.fi/kirja/">N&auml;in k&auml;yt&auml;t Twitteri&auml;</a> (How to Use Twitter) (<a href="http://translate.googleusercontent.com/translate_c?hl=en&amp;ie=UTF-8&amp;sl=auto&amp;tl=en&amp;u=http://www.twitterkirja.fi/kirja/&amp;prev=_t&amp;rurl=translate.google.com&amp;twu=1&amp;usg=ALkJrhiT6SI1MCSxdeMtpH3uFsEqyOnqNQ">English translation</a>). A book written in Finnish by author <a href="http://www.fiikus.net/">Maija Haavisto</a> (@DiamonDie).</p>
+	<p class="clearfix"><img src="/images/twitter-kirja.jpg" width="69" height="94" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" class="fl" style="margin-right:.35em;" /> 
+		<?php echo $xliff_reader->get('articles-books-finnish'); ?></p>
 </div>
 
 <div class="box1 rounded">

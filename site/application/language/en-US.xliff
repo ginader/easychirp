@@ -1004,6 +1004,16 @@
         <target>book cover</target>
       </trans-unit>
 
+      <trans-unit id="articles-books-thetwitter" datatype="html">
+        <source>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</source>
+        <target>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</target>
+      </trans-unit>
+
+      <trans-unit id="articles-books-finnish" datatype="html">
+        <source>Accessible Twitter is mentioned in &lt;a href=&quot;http://www.twitterkirja.fi/kirja/&quot;&gt;N&amp;auml;in k&amp;auml;yt&amp;auml;t Twitteri&amp;auml;&lt;/a&gt; (How to Use Twitter). A book written in Finnish by author &lt;a href=&quot;http://www.fiikus.net/&quot;&gt;Maija Haavisto&lt;/a&gt; (@DiamonDie).</source>
+        <target>Accessible Twitter is mentioned in &lt;a href=&quot;http://www.twitterkirja.fi/kirja/&quot;&gt;N&amp;auml;in k&amp;auml;yt&amp;auml;t Twitteri&amp;auml;&lt;/a&gt; (How to Use Twitter). A book written in Finnish by author &lt;a href=&quot;http://www.fiikus.net/&quot;&gt;Maija Haavisto&lt;/a&gt; (@DiamonDie).</target>
+      </trans-unit>
+
       <trans-unit id="articles-h2-user" datatype="html">
         <source>User Feedback</source>
         <target>User Feedback</target>
