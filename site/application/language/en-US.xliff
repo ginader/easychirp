@@ -388,6 +388,11 @@
         <target>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</target>
       </trans-unit>
 
+      <trans-unit id="home-awards-more" datatype="html">
+        <source>Read &lt;a href=&quot;/about&quot;&gt;more about Easy Chirp's awards&lt;/a&gt; on the About page.</source>
+        <target>Read &lt;a href=&quot;/about&quot;&gt;more about Easy Chirp's awards&lt;/a&gt; on the About page.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-dev-tasks" datatype="html">
         <source>Development Tasks</source>
         <target>Development Tasks</target>

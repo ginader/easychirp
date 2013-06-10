@@ -110,7 +110,7 @@
 		<li><?php echo $xliff_reader->get('home-awards-it'); ?></li>
 		<li><?php echo $xliff_reader->get('home-awards-rnib'); ?></li>
 	</ul>
-	<p>Read <a href="/about">more about Easy Chirp's awards</a> on the About page.</p>
+	<p><?php echo $xliff_reader->get('home-awards-more'); ?></p>
 </div>
 
 <div class="box1 rounded">

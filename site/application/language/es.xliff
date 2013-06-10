@@ -389,6 +389,11 @@
         <target>Pagina web del mes, Diciembre 2011, otorgado por RNIB.</target>
       </trans-unit>
 
+      <trans-unit id="home-awards-more" datatype="html">
+        <source>Read &lt;a href=&quot;/about&quot;&gt;more about Easy Chirp's awards&lt;/a&gt; on the About page.</source>
+        <target>Leer más sobre los &lt;a href=&quot;/about&quot;&gt;premios de Easy Chirp&lt;/a&gt; en la pagina de Acerca de.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-dev-tasks" datatype="html">
         <source>Development Tasks</source>
         <target>MISSING Development Tasks</target>
