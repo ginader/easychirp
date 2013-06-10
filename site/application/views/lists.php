@@ -34,28 +34,28 @@
 	
 	<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
 	<dl class="clearfix">
-		<dt><?php echo $xliff_reader->get('lists-my-fullname'); ?></dt>
+		<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 		<dd>@dennisl/html5</dd>
-		<dt><?php echo $xliff_reader->get('lists-my-desc'); ?></dt>
+		<dt><?php echo $xliff_reader->get('lists-desc'); ?></dt>
 		<dd>text here</dd>
-		<dt><?php echo $xliff_reader->get('lists-my-subs'); ?></dt>
+		<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
 		<dd>0</dd>
-		<dt><?php echo $xliff_reader->get('lists-my-mems'); ?></dt>
+		<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
 		<dd><a class="listSubMemLink" href="#">11</a></dd>
-		<dt class="twListDtAdj"><label for="txt33678339"><?php echo $xliff_reader->get('lists-my-add-mem'); ?></label></dt>
+		<dt class="twListDtAdj"><label for="txt33678339"><?php echo $xliff_reader->get('lists-add-mem'); ?></label></dt>
 		<dd>
 			<form action="#" class="frmListAddMember">
 				<input type="hidden" name="listSlug" value="html5" />
 				<input type="hidden" name="lstid" value="33678339" />
-				<input type="text" size="12" name="userNameToAdd" value="" id="txt33678339" placeholder="<?php echo $xliff_reader->get('lists-my-add-placeholder'); ?>" />
-				<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-my-add-submit'); ?></button>
+				<input type="text" size="12" name="userNameToAdd" value="" id="txt33678339" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
+				<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-add-submit'); ?></button>
 			</form>
 		</dd>
-		<dt><?php echo $xliff_reader->get('lists-my-mode'); ?></dt>
+		<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 		<dd>public</dd>
-		<dt><?php echo $xliff_reader->get('lists-my-actions'); ?></dt>
-		<dd><a href="list_edit?lstid=33678339"><?php echo $xliff_reader->get('lists-my-edit'); ?></a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?lstid=33678339"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></dd>
-		<dt><?php echo $xliff_reader->get('lists-my-on-twitter'); ?></dt>
+		<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
+		<dd><a href="list_edit?lstid=33678339"><?php echo $xliff_reader->get('lists-edit'); ?></a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?lstid=33678339"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></dd>
+		<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
 	</dl>
 </div>
@@ -64,23 +64,23 @@
 	<div class="p-col-1-2">
 
 <div class="box1 rounded twList" style="margin-top:0;">
-	<h2>Subscribed Lists</h2>
+	<h2><?php echo $xliff_reader->get('lists-h2-sub'); ?></h2>
 
 	<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#">HTML5</a></h3>
 	<dl class="clearfix">
-		<dt>Full name</dt>
+		<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 		<dd>@dennisl/html5</dd>
-		<dt>Description</dt>
+		<dt><?php echo $xliff_reader->get('lists-desc'); ?></dt>
 		<dd>text here</dd>
-		<dt>Subscribers</dt>
+		<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
 		<dd>0</dd>
-		<dt>Members</dt>
+		<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
 		<dd><a class="listSubMemLink" href="#">11</a></dd>
-		<dt>Mode</dt>
+		<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 		<dd>public</dd>
-		<dt>Actions</dt>
-		<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> Unsubscribe</a></dd>
-		<dt>View on Twitter</dt>
+		<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
+		<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
+		<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 		<dd><a rel="external" href="http://twitter.com/dennisl/html5" title="View list on Twitter">html5</a></dd>
 	</dl>
 </div>

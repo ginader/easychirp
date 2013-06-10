@@ -540,61 +540,70 @@
         <target>My Lists</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-fullname" datatype="html">
+      <trans-unit id="lists-h2-sub" datatype="html">
+        <source>Subscribed Lists</source>
+        <target>Subscribed Lists</target>
+      </trans-unit>
+
+      <trans-unit id="lists-fullname" datatype="html">
         <source>Full name</source>
         <target>Full name</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-desc" datatype="html">
+      <trans-unit id="lists-desc" datatype="html">
         <source>Description</source>
         <target>Description</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-subs" datatype="html">
+      <trans-unit id="lists-subs" datatype="html">
         <source>Subscribers</source>
         <target>Subscribers</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-mems" datatype="html">
+      <trans-unit id="lists-mems" datatype="html">
         <source>Members</source>
         <target>Members</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-add-mem" datatype="html">
+      <trans-unit id="lists-add-mem" datatype="html">
         <source>Add Member</source>
         <target>Add Member</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-add-placeholder" datatype="html">
+      <trans-unit id="lists-add-placeholder" datatype="html">
         <source>@UserName</source>
         <target>@UserName</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-add-submit" datatype="html">
+      <trans-unit id="lists-add-submit" datatype="html">
         <source>Add</source>
         <target>Add</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-mode" datatype="html">
+      <trans-unit id="lists-mode" datatype="html">
         <source>Mode</source>
         <target>Mode</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-actions" datatype="html">
+      <trans-unit id="lists-actions" datatype="html">
         <source>Actions</source>
         <target>Actions</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-edit" datatype="html">
+      <trans-unit id="lists-edit" datatype="html">
         <source>Edit Settings</source>
         <target>Edit Settings</target>
       </trans-unit>
 
-      <trans-unit id="lists-my-on-twitter" datatype="html">
+      <trans-unit id="lists-on-twitter" datatype="html">
         <source>View on Twitter</source>
         <target>View on Twitter</target>
       </trans-unit>
 
+      <trans-unit id="lists-unsubscribe" datatype="html">
+        <source>Unsubscribe</source>
+        <target>Unsubscribe</target>
+      </trans-unit>
 
       <!-- MENTIONS -->
 
