@@ -106,9 +106,9 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-awards'); ?></h2>
 	<ul class="ulList1">
-		<li>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</li>
-		<li>Recipient of the 2009 Access IT @web2.0 Award.</li>
-		<li><abbr title="Royal National Institute of Blind People">RNIB</abbr> Website of the Month, December 2011.</li>
+		<li><?php echo $xliff_reader->get('home-awards-afb'); ?></li>
+		<li><?php echo $xliff_reader->get('home-awards-it'); ?></li>
+		<li><?php echo $xliff_reader->get('home-awards-rnib'); ?></li>
 	</ul>
 	<p>Read <a href="/about">more about Easy Chirp's awards</a> on the About page.</p>
 </div>

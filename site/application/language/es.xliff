@@ -374,6 +374,21 @@
         <target>Premios!</target>
       </trans-unit>
 
+      <trans-unit id="home-awards-afb" datatype="html">
+        <source>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</source>
+        <target>Premio de Acceso en el 2011 otorgado por la Fundación Americana para los ciegos.</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-it" datatype="html">
+        <source>Recipient of the 2009 Access IT @web2.0 Award.</source>
+        <target>Receptor del premio de Access IT @web2.0 en el 2009.</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-rnib" datatype="html">
+        <source>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</source>
+        <target>Pagina web del mes, Diciembre 2011, otorgado por RNIB.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-dev-tasks" datatype="html">
         <source>Development Tasks</source>
         <target>MISSING Development Tasks</target>

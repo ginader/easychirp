@@ -373,6 +373,21 @@
         <target>Awards!</target>
       </trans-unit>
 
+      <trans-unit id="home-awards-afb" datatype="html">
+        <source>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</source>
+        <target>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-it" datatype="html">
+        <source>Recipient of the 2009 Access IT @web2.0 Award.</source>
+        <target>Recipient of the 2009 Access IT @web2.0 Award.</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-rnib" datatype="html">
+        <source>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</source>
+        <target>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-dev-tasks" datatype="html">
         <source>Development Tasks</source>
         <target>Development Tasks</target>
