@@ -15,13 +15,13 @@
 
       <trans-unit id="skip-sign-in" datatype="html">
         <source>skip to sign in</source>
-        <target>Ir a registrarse</target>
+        <target>ir a registrarse</target>
         <note from="description">Skip nav link for accessibility</note>
       </trans-unit>
 
       <trans-unit id="skip-main-content" datatype="html">
         <source>skip to main content</source>
-        <target>Ir al contenido</target>
+        <target>ir al contenido</target>
         <note from="description">Skip nav link for accessibility</note>
       </trans-unit>
 
@@ -152,7 +152,7 @@
 
       <trans-unit id="nav-timeline" datatype="html">
         <source>Timeline</source>
-        <target>L&#237;nea de tiempo</target>
+        <target>L&#237;nea de Tiempo</target>
       </trans-unit>
 
       <trans-unit id="nav-my-tweets" datatype="html">
@@ -168,7 +168,7 @@
 
       <trans-unit id="nav-retweets-of-me" datatype="html">
         <source>Retweets Of Me</source>
-        <target>Retweets sobre m&#237;</target>
+        <target>Retweets Sobre M&#237;</target>
         <note from="description">Tweets by me that other people retweeted.</note>
       </trans-unit>
 
@@ -180,13 +180,13 @@
 
       <trans-unit id="nav-retweets-to-me" datatype="html">
         <source>Retweets To Me</source>
-        <target>Retweets para m&#237;</target>
+        <target>Retweets Para M&#237;</target>
         <note from="description">Retweets by people that I'm following.</note>
       </trans-unit>
 
       <trans-unit id="nav-goto-user" datatype="html">
         <source>Go To User</source>
-        <target>Ir a usuario</target>
+        <target>Ir A Usuario</target>
       </trans-unit>
 
       <trans-unit id="nav-search" datatype="html">
@@ -213,7 +213,7 @@
 
       <trans-unit id="write-tweet-h2-label" datatype="html">
         <source>Write Tweet</source>
-        <target>Escribir un tweet</target>
+        <target>Escribir Un Tweet</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-char-limit" datatype="html">
@@ -255,7 +255,7 @@
 
       <trans-unit id="home" datatype="html">
         <source>Home</source>
-        <target>P&#225;gina  Principal</target>
+        <target>P&#225;gina Principal</target>
       </trans-unit>
 
       <trans-unit id="home-h2-lead" datatype="html">
@@ -296,7 +296,7 @@
 
       <trans-unit id="home-h2-latest-tweets" datatype="html">
         <source>Latest Tweets from Easy Chirp</source>
-        <target>Ultimos tweets de Easy Chirp</target>
+        <target>Ultimos Tweets de Easy Chirp</target>
       </trans-unit>
 
       <trans-unit id="home-h2-follow-me" datatype="html">
@@ -311,7 +311,7 @@
 
       <trans-unit id="home-h2-articles" datatype="html">
         <source>Article &amp; Blog Mentions</source>
-        <target>Art&#237;culos y menciones del Blog</target>
+        <target>Art&#237;culos y Menciones del Blog</target>
       </trans-unit>
 
       <trans-unit id="home-articles-highlights" datatype="html">
@@ -331,7 +331,7 @@
 
       <trans-unit id="home-h2-features" datatype="html">
         <source>Notable Features</source>
-        <target>Caracteristicas notables</target>
+        <target>Caracteristicas Notables</target>
       </trans-unit>
 
       <trans-unit id="home-features-search" datatype="html">
@@ -603,7 +603,7 @@
 
       <trans-unit id="lists-add-placeholder" datatype="html">
         <source>@UserName</source>
-        <target>@UserName</target>
+        <target>@NombreDeUsuario</target>
       </trans-unit>
 
       <trans-unit id="lists-add-submit" datatype="html">
