@@ -450,6 +450,20 @@
         <target>Sent</target>
       </trans-unit>
 
+      <!-- DIRECT MESSAGES - INBOX -->
+
+      <trans-unit id="dm-inbox-h1" datatype="html">
+        <source>Direct Messages - Inbox</source>
+        <target>Direct Messages - Inbox</target>
+      </trans-unit>
+
+      <!-- DIRECT MESSAGES - SENT -->
+
+      <trans-unit id="dm-sent-h1" datatype="html">
+        <source>Direct Messages - Sent</source>
+        <target>Direct Messages - Sent</target>
+      </trans-unit>
+
       <!-- FAVORITES -->
 
       <trans-unit id="favorites-h1" datatype="html">

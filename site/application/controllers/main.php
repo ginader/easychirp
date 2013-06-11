@@ -79,8 +79,28 @@ class Main extends EC_Controller {
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Direct Messages');
-		$this->layout->set_description('Direct messages of user.');
+		$this->layout->set_description('Send a direct message.');
 		$this->layout->view('direct', $data);
+	}
+
+	public function direct_inbox()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Inbox | Direct Messages');
+		$this->layout->set_description('Direct messages sent to user.');
+		$this->layout->view('direct_inbox', $data);
+	}
+
+	public function direct_sent()
+	{
+		$data = array();
+		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->layout->set_title('Sent | Direct Messages');
+		$this->layout->set_description('Direct messages sent from user.');
+		$this->layout->view('direct_sent', $data);
 	}
 
 	public function favorites()
