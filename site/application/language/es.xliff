@@ -664,7 +664,7 @@
 
       <trans-unit id="profile-dt-username" datatype="html">
         <source>Username</source>
-        <target>nombre de usuario</target>
+        <target>Nombre de Usuario</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-name" datatype="html">
