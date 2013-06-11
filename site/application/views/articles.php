@@ -62,6 +62,9 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
+	<dt><a href="http://www.webable.tv/Events/m_enabling_summit_130606.aspx?VID=/webable/130604_SMD_EasyChirp.flv&Cap=/WebAble/130604_SMD_EasyChirp.xml#anchor">Social Media and Disability Pilot Program Featuring Easy Chirp</a> (video)</dt>
+		<dd>WebAble.tv</dd>
+		<dd>2013 Jun 05</dd>
 	<dt><a href="http://manuel.a12x.net/2013/04/21/easy-chirp-web-accesible-para-manejo-de-twitter-multiplataforma/">EASY CHIRP: Web accesible para manejo de Twitter multiplataforma</a></dt>
 		<dd>Blog de Manuel Cortez</dd>
 		<dd>2013 Apr 21</dd>
