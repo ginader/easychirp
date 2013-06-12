@@ -1,0 +1,3085 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_DB_active_record</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_DB_active_record</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Active Record Class</p>
+<p class="description"><p>This is the platform-independent base Active Record implementation class.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/database/">http://codeigniter.com/user_guide/database/</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---database---DB_active_rec.php.html">/system/database/DB_active_rec.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a29">29</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../CodeIgniter/Drivers/CI_DB_driver.html">CI_DB_driver</a>
+   |
+   --CI_DB_active_record</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																																																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_aliased_tables" title="details" class="var-name">$ar_aliased_tables</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_exists" title="details" class="var-name">$ar_cache_exists</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_from" title="details" class="var-name">$ar_cache_from</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_groupby" title="details" class="var-name">$ar_cache_groupby</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_having" title="details" class="var-name">$ar_cache_having</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_join" title="details" class="var-name">$ar_cache_join</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_like" title="details" class="var-name">$ar_cache_like</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_no_escape" title="details" class="var-name">$ar_cache_no_escape</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_orderby" title="details" class="var-name">$ar_cache_orderby</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_select" title="details" class="var-name">$ar_cache_select</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_set" title="details" class="var-name">$ar_cache_set</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_cache_where" title="details" class="var-name">$ar_cache_where</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_caching" title="details" class="var-name">$ar_caching</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_distinct" title="details" class="var-name">$ar_distinct</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_from" title="details" class="var-name">$ar_from</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_groupby" title="details" class="var-name">$ar_groupby</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_having" title="details" class="var-name">$ar_having</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_join" title="details" class="var-name">$ar_join</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_keys" title="details" class="var-name">$ar_keys</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_like" title="details" class="var-name">$ar_like</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_limit" title="details" class="var-name">$ar_limit</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_no_escape" title="details" class="var-name">$ar_no_escape</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_offset" title="details" class="var-name">$ar_offset</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_order" title="details" class="var-name">$ar_order</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_orderby" title="details" class="var-name">$ar_orderby</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_select" title="details" class="var-name">$ar_select</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_set" title="details" class="var-name">$ar_set</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_store_array" title="details" class="var-name">$ar_store_array</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_where" title="details" class="var-name">$ar_where</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ar_wherein" title="details" class="var-name">$ar_wherein</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#count_all_results" title="details" class="method-name">count_all_results</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#dbprefix" title="details" class="method-name">dbprefix</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">NULL</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reset_data</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#distinct" title="details" class="method-name">distinct</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#empty_table" title="details" class="method-name">empty_table</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#flush_cache" title="details" class="method-name">flush_cache</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#from" title="details" class="method-name">from</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$from</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#get" title="details" class="method-name">get</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#get_where" title="details" class="method-name">get_where</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#group_by" title="details" class="method-name">group_by</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$by</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#having" title="details" class="method-name">having</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#insert" title="details" class="method-name">insert</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#insert_batch" title="details" class="method-name">insert_batch</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#join" title="details" class="method-name">join</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$cond</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#like" title="details" class="method-name">like</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#limit" title="details" class="method-name">limit</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#not_like" title="details" class="method-name">not_like</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#offset" title="details" class="method-name">offset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#order_by" title="details" class="method-name">order_by</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$orderby</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#or_having" title="details" class="method-name">or_having</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#or_like" title="details" class="method-name">or_like</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#or_not_like" title="details" class="method-name">or_not_like</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#or_where" title="details" class="method-name">or_where</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#or_where_in" title="details" class="method-name">or_where_in</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#or_where_not_in" title="details" class="method-name">or_where_not_in</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#replace" title="details" class="method-name">replace</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#select" title="details" class="method-name">select</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">'*'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#select_avg" title="details" class="method-name">select_avg</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#select_max" title="details" class="method-name">select_max</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#select_min" title="details" class="method-name">select_min</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#select_sum" title="details" class="method-name">select_sum</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#set" title="details" class="method-name">set</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_dbprefix" title="details" class="method-name">set_dbprefix</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#set_insert_batch" title="details" class="method-name">set_insert_batch</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#set_update_batch" title="details" class="method-name">set_update_batch</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#start_cache" title="details" class="method-name">start_cache</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#stop_cache" title="details" class="method-name">stop_cache</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#truncate" title="details" class="method-name">truncate</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#update" title="details" class="method-name">update</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#update_batch" title="details" class="method-name">update_batch</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#where" title="details" class="method-name">where</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#where_in" title="details" class="method-name">where_in</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#where_not_in" title="details" class="method-name">where_not_in</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_compile_select" title="details" class="method-name">_compile_select</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$select_override</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_create_alias_from_table" title="details" class="method-name">_create_alias_from_table</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#_having" title="details" class="method-name">_having</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#_like" title="details" class="method-name">_like</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$not</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#_max_min_avg_sum" title="details" class="method-name">_max_min_avg_sum</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'MAX'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_merge_cache" title="details" class="method-name">_merge_cache</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#_object_to_array" title="details" class="method-name">_object_to_array</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#_object_to_array_batch" title="details" class="method-name">_object_to_array_batch</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_reset_run" title="details" class="method-name">_reset_run</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$ar_reset_items</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_reset_select" title="details" class="method-name">_reset_select</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_reset_write" title="details" class="method-name">_reset_write</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_track_aliases" title="details" class="method-name">_track_aliases</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#_where" title="details" class="method-name">_where</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#_where_in" title="details" class="method-name">_where_in</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$not</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$ar_aliased_tables" id="$ar_aliased_tables"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_aliased_tables</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_exists" id="$ar_cache_exists"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_exists</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_from" id="$ar_cache_from"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_from</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_groupby" id="$ar_cache_groupby"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_groupby</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_having" id="$ar_cache_having"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_having</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a58">58</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_join" id="$ar_cache_join"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_join</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_like" id="$ar_cache_like"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_like</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_no_escape" id="$ar_cache_no_escape"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_no_escape</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a63">63</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_orderby" id="$ar_cache_orderby"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_orderby</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a59">59</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_select" id="$ar_cache_select"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_select</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_set" id="$ar_cache_set"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_set</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a60">60</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_cache_where" id="$ar_cache_where"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_cache_where</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_caching" id="$ar_caching"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_caching</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_distinct" id="$ar_distinct"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_distinct</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_from" id="$ar_from"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_from</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_groupby" id="$ar_groupby"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_groupby</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_having" id="$ar_having"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_having</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_join" id="$ar_join"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_join</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_keys" id="$ar_keys"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_keys</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_like" id="$ar_like"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_like</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_limit" id="$ar_limit"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_limit</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_no_escape" id="$ar_no_escape"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_no_escape</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_offset" id="$ar_offset"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_offset</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_order" id="$ar_order"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_order</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_orderby" id="$ar_orderby"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_orderby</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_select" id="$ar_select"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_select</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_set" id="$ar_set"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_set</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_store_array" id="$ar_store_array"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_store_array</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_where" id="$ar_where"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_where</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$ar_wherein" id="$ar_wherein"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ar_wherein</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html">CI_DB_driver</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$autoinit">CI_DB_driver::$autoinit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$benchmark">CI_DB_driver::$benchmark</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$bind_marker">CI_DB_driver::$bind_marker</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$CACHE">CI_DB_driver::$CACHE</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$cachedir">CI_DB_driver::$cachedir</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$cache_autodel">CI_DB_driver::$cache_autodel</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$cache_on">CI_DB_driver::$cache_on</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$char_set">CI_DB_driver::$char_set</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$conn_id">CI_DB_driver::$conn_id</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$curs_id">CI_DB_driver::$curs_id</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$database">CI_DB_driver::$database</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$data_cache">CI_DB_driver::$data_cache</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$dbcollat">CI_DB_driver::$dbcollat</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$dbdriver">CI_DB_driver::$dbdriver</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$dbprefix">CI_DB_driver::$dbprefix</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$db_debug">CI_DB_driver::$db_debug</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$hostname">CI_DB_driver::$hostname</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$limit_used">CI_DB_driver::$limit_used</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$password">CI_DB_driver::$password</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$pconnect">CI_DB_driver::$pconnect</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$port">CI_DB_driver::$port</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$queries">CI_DB_driver::$queries</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$query_count">CI_DB_driver::$query_count</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$query_times">CI_DB_driver::$query_times</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$result_id">CI_DB_driver::$result_id</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$save_queries">CI_DB_driver::$save_queries</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$stmt_id">CI_DB_driver::$stmt_id</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$swap_pre">CI_DB_driver::$swap_pre</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$trans_enabled">CI_DB_driver::$trans_enabled</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$trans_strict">CI_DB_driver::$trans_strict</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$username">CI_DB_driver::$username</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$_protect_identifiers">CI_DB_driver::$_protect_identifiers</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$_reserved_identifiers">CI_DB_driver::$_reserved_identifiers</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$_trans_depth">CI_DB_driver::$_trans_depth</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#var$_trans_status">CI_DB_driver::$_trans_status</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodcount_all_results" id="count_all_results"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">count_all_results</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a977">977</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">&quot;Count All Results&quot; query</p>
+<p class="description"><p>Generates a platform-specific query string that counts all records  returned by an Active Record query.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			count_all_results
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddbprefix" id="dbprefix"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">dbprefix</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1593">1593</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DB Prefix</p>
+<p class="description"><p>Prepends a database prefix if one exists in configuration</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			dbprefix
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1520">1520</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete</p>
+<p class="description"><p>Compiles a delete string and runs the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			delete
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">NULL</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$reset_data</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$table</span><span class="var-description">: the table(s) to delete from. String or array</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$where</span><span class="var-description">: the where clause</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$limit</span><span class="var-description">: the limit clause</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$reset_data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddistinct" id="distinct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">distinct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a240">240</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DISTINCT</p>
+<p class="description"><p>Sets a flag which tells the query string compiler to add DISTINCT</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			distinct
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodempty_table" id="empty_table"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">empty_table</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1441">1441</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Empty Table</p>
+<p class="description"><p>Compiles a delete string and runs &quot;DELETE FROM table&quot;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			empty_table
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table to empty</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodflush_cache" id="flush_cache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">flush_cache</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1912">1912</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Flush Cache</p>
+<p class="description"><p>Empties the AR cache</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			flush_cache
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfrom" id="from"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">from</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a256">256</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">From</p>
+<p class="description"><p>Generates the FROM portion of the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			from
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$from</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$from</span><span class="var-description">: can be a string or array</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a948">948</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get</p>
+<p class="description"><p>Compiles the select statement based on the other functions called  and runs the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			get
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$limit</span><span class="var-description">: the limit clause</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$offset</span><span class="var-description">: the offset clause</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_where" id="get_where"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_where</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1011">1011</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get_Where</p>
+<p class="description"><p>Allows the where clause, limit and offset to be added directly</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			get_where
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the where clause</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: the limit clause</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$limit</span><span class="var-description">: the offset clause</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$offset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgroup_by" id="group_by"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">group_by</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a706">706</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">GROUP BY</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			group_by
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$by</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$by</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhaving" id="having"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">having</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a742">742</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the HAVING value</p>
+<p class="description"><p>Separates multiple calls with AND</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			having
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert" id="insert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1163">1163</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Insert</p>
+<p class="description"><p>Compiles an insert string and runs the query</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			insert
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table to insert data into</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$set</span><span class="var-description">: an associative array of insert values</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert_batch" id="insert_batch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_batch</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1046">1046</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Insert_Batch</p>
+<p class="description"><p>Compiles batch insert strings and runs the queries</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			insert_batch
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table to retrieve the results from</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$set</span><span class="var-description">: an associative array of insert values</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodjoin" id="join"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">join</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a310">310</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Join</p>
+<p class="description"><p>Generates the JOIN portion of the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			join
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$cond</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cond</span><span class="var-description">: the join condition</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of join</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlike" id="like"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">like</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a581">581</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Like</p>
+<p class="description"><p>Generates a %LIKE% portion of the query. Separates  multiple calls with AND</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			like
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$match</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$side</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlimit" id="limit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">limit</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a875">875</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the LIMIT value</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			limit
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span><span class="var-description">: the limit value</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: the offset value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnot_like" id="not_like"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">not_like</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a598">598</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Not Like</p>
+<p class="description"><p>Generates a NOT LIKE portion of the query. Separates  multiple calls with AND</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			not_like
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$match</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$side</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodoffset" id="offset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">offset</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a895">895</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the OFFSET value</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			offset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: the offset value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodorder_by" id="order_by"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">order_by</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a820">820</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the ORDER BY value</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			order_by
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$orderby</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$direction</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$orderby</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$direction</span><span class="var-description">: direction: asc or desc</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodor_having" id="or_having"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">or_having</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a758">758</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the OR HAVING value</p>
+<p class="description"><p>Separates multiple calls with OR</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			or_having
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodor_like" id="or_like"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">or_like</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a615">615</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OR Like</p>
+<p class="description"><p>Generates a %LIKE% portion of the query. Separates  multiple calls with OR</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			or_like
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$match</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$side</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodor_not_like" id="or_not_like"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">or_not_like</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a632">632</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OR Not Like</p>
+<p class="description"><p>Generates a NOT LIKE portion of the query. Separates  multiple calls with OR</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			or_not_like
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$match</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$side</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodor_where" id="or_where"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">or_where</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a381">381</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OR Where</p>
+<p class="description"><p>Generates the WHERE portion of the query. Separates  multiple calls with OR</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			or_where
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodor_where_in" id="or_where_in"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">or_where_in</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a482">482</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Where_in_or</p>
+<p class="description"><p>Generates a WHERE field IN ('item', 'item') SQL query joined with  OR if appropriate</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			or_where_in
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The field to search</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The values searched on</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodor_where_not_in" id="or_where_not_in"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">or_where_not_in</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a516">516</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Where_not_in_or</p>
+<p class="description"><p>Generates a WHERE field NOT IN ('item', 'item') SQL query joined  with OR if appropriate</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			or_where_not_in
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The field to search</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The values searched on</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreplace" id="replace"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">replace</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1210">1210</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replace</p>
+<p class="description"><p>Compiles an replace into string and runs the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			replace
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table to replace data into</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$set</span><span class="var-description">: an associative array of insert values</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselect" id="select"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">select</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a75">75</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Select</p>
+<p class="description"><p>Generates the SELECT portion of the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			select
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">'*'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$select</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselect_avg" id="select_avg"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">select_avg</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a145">145</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Select Average</p>
+<p class="description"><p>Generates a SELECT AVG(field) portion of a query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			select_avg
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$select</span><span class="var-description">: the field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alias</span><span class="var-description">: an alias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselect_max" id="select_max"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">select_max</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a113">113</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Select Max</p>
+<p class="description"><p>Generates a SELECT MAX(field) portion of a query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			select_max
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$select</span><span class="var-description">: the field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alias</span><span class="var-description">: an alias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselect_min" id="select_min"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">select_min</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Select Min</p>
+<p class="description"><p>Generates a SELECT MIN(field) portion of a query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			select_min
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$select</span><span class="var-description">: the field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alias</span><span class="var-description">: an alias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselect_sum" id="select_sum"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">select_sum</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a161">161</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Select Sum</p>
+<p class="description"><p>Generates a SELECT SUM(field) portion of a query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			select_sum
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$select</span><span class="var-description">: the field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alias</span><span class="var-description">: an alias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset" id="set"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a911">911</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The &quot;set&quot; function.  Allows key/value pairs to be set for inserting or updating</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			set
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_dbprefix" id="set_dbprefix"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_dbprefix</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1613">1613</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set DB Prefix</p>
+<p class="description"><p>Set's the DB Prefix to something new without needing to reconnect</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_dbprefix
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: the prefix</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_insert_batch" id="set_insert_batch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_insert_batch</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1104">1104</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The &quot;set_insert_batch&quot; function.  Allows key/value pairs to be set for batch inserts</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			set_insert_batch
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_update_batch" id="set_update_batch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_update_batch</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1385">1385</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The &quot;set_update_batch&quot; function.  Allows key/value pairs to be set for batch updating</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			set_update_batch
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$index</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstart_cache" id="start_cache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">start_cache</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1883">1883</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start Cache</p>
+<p class="description"><p>Starts AR caching</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			start_cache
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodstop_cache" id="stop_cache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">stop_cache</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1897">1897</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stop Cache</p>
+<p class="description"><p>Stops AR caching</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			stop_cache
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtruncate" id="truncate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">truncate</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1480">1480</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Truncate</p>
+<p class="description"><p>Compiles a truncate string and runs the query  If the database does not support the truncate() command  This function maps to &quot;DELETE FROM table&quot;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			truncate
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table to truncate</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate" id="update"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">update</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1258">1258</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update</p>
+<p class="description"><p>Compiles an update string and runs the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			update
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table to retrieve the results from</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$set</span><span class="var-description">: an associative array of update values</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$where</span><span class="var-description">: the where clause</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_batch" id="update_batch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_batch</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1320">1320</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update_Batch</p>
+<p class="description"><p>Compiles an update string and runs the query</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			update_batch
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table to retrieve the results from</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$set</span><span class="var-description">: an associative array of update values</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$index</span><span class="var-description">: the where key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwhere" id="where"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">where</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a364">364</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Where</p>
+<p class="description"><p>Generates the WHERE portion of the query. Separates  multiple calls with AND</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			where
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwhere_in" id="where_in"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">where_in</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a465">465</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Where_in</p>
+<p class="description"><p>Generates a WHERE field IN ('item', 'item') SQL query joined with  AND if appropriate</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			where_in
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The field to search</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The values searched on</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwhere_not_in" id="where_not_in"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">where_not_in</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a499">499</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Where_not_in</p>
+<p class="description"><p>Generates a WHERE field NOT IN ('item', 'item') SQL query joined  with AND if appropriate</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			where_not_in
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The field to search</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The values searched on</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_compile_select" id="_compile_select"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_compile_select</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1673">1673</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compile the SELECT statement</p>
+<p class="description"><p>Generates a query string based on which functions were used.  Should not be called directly.  The get() function calls it.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_compile_select
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$select_override</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$select_override</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_create_alias_from_table" id="_create_alias_from_table"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_create_alias_from_table</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a220">220</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines the alias name based on the table</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_create_alias_from_table
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$item</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_having" id="_having"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_having</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a774">774</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the HAVING values</p>
+<p class="description"><p>Called by having() or or_having()</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			_having
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_like" id="_like"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_like</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a649">649</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Like</p>
+<p class="description"><p>Called by like() or orlike()</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			_like
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$match</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$side</span> = <span class="var-default">'both'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$not</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$match</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$side</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$not</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_max_min_avg_sum" id="_max_min_avg_sum"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_max_min_avg_sum</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a180">180</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Processing Function for the four functions above:</p>
+<p class="description"><p>select_max() 	select_min() 	select_avg()   select_sum()</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			_max_min_avg_sum
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$select</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$alias</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'MAX'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$select</span><span class="var-description">: the field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alias</span><span class="var-description">: an alias</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_merge_cache" id="_merge_cache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_merge_cache</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1939">1939</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Merge Cache</p>
+<p class="description"><p>When called, this function merges any cached AR arrays with  locally called ones.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_merge_cache
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_object_to_array" id="_object_to_array"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_object_to_array</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1815">1815</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object to Array</p>
+<p class="description"><p>Takes an object as input and converts the class variables to array key/vals</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_object_to_array
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_object_to_array_batch" id="_object_to_array_batch"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_object_to_array_batch</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1845">1845</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object to Array</p>
+<p class="description"><p>Takes an object as input and converts the class variables to array key/vals</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_object_to_array_batch
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_reset_run" id="_reset_run"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_reset_run</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1977">1977</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resets the active record values.  Called by the get() function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_reset_run
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$ar_reset_items</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ar_reset_items</span><span class="var-description">: An array of fields to reset</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_reset_select" id="_reset_select"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_reset_select</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1995">1995</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resets the active record values.  Called by the get() function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_reset_select
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#method_reset_select">CI_DB_driver::_reset_select()</a></dt>
+						<dd>Dummy method that allows Active Record class to be disabled</dd>
+					</dl>
+			
+	</div>
+<a name="method_reset_write" id="_reset_write"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_reset_write</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a2027">2027</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resets the active record &quot;write&quot; values.</p>
+<p class="description"><p>Called by the insert() update() insert_batch() update_batch() and delete() functions</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_reset_write
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_track_aliases" id="_track_aliases"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_track_aliases</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a1628">1628</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Track Aliases</p>
+<p class="description"><p>Used to track SQL statements written with aliased tables.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_track_aliases
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: The table to inspect</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_where" id="_where"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_where</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a398">398</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Where</p>
+<p class="description"><p>Called by where() or or_where()</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			_where
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$escape</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$escape</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_where_in" id="_where_in"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_where_in</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_active_rec.php.html#a534">534</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Where_in</p>
+<p class="description"><p>Called by where_in, where_in_or, where_not_in, where_not_in_or</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			_where_in
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">NULL</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$not</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'AND '</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: The field to search</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The values searched on</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$not</span><span class="var-description">: If the statement would be IN or NOT IN</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html">CI_DB_driver</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#method__construct">CI_DB_driver::__construct()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodcache_delete">CI_DB_driver::cache_delete()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodcache_delete_all">CI_DB_driver::cache_delete_all()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodcache_off">CI_DB_driver::cache_off()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodcache_on">CI_DB_driver::cache_on()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodcache_set_path">CI_DB_driver::cache_set_path()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodcall_function">CI_DB_driver::call_function()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodclose">CI_DB_driver::close()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodcompile_binds">CI_DB_driver::compile_binds()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methoddb_set_charset">CI_DB_driver::db_set_charset()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methoddisplay_error">CI_DB_driver::display_error()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodelapsed_time">CI_DB_driver::elapsed_time()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodescape">CI_DB_driver::escape()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodescape_like_str">CI_DB_driver::escape_like_str()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodfield_data">CI_DB_driver::field_data()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodfield_exists">CI_DB_driver::field_exists()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodinitialize">CI_DB_driver::initialize()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodinsert_string">CI_DB_driver::insert_string()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodis_write_type">CI_DB_driver::is_write_type()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodlast_query">CI_DB_driver::last_query()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodlist_fields">CI_DB_driver::list_fields()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodlist_tables">CI_DB_driver::list_tables()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodload_rdriver">CI_DB_driver::load_rdriver()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodplatform">CI_DB_driver::platform()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodprimary">CI_DB_driver::primary()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodquery">CI_DB_driver::query()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodsimple_query">CI_DB_driver::simple_query()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodtable_exists">CI_DB_driver::table_exists()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodtotal_queries">CI_DB_driver::total_queries()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodtrans_complete">CI_DB_driver::trans_complete()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodtrans_off">CI_DB_driver::trans_off()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodtrans_start">CI_DB_driver::trans_start()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodtrans_status">CI_DB_driver::trans_status()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodtrans_strict">CI_DB_driver::trans_strict()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodupdate_string">CI_DB_driver::update_string()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#methodversion">CI_DB_driver::version()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Drivers/CI_DB_driver.html#method_reset_select">CI_DB_driver::_reset_select()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:01 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

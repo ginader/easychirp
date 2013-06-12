@@ -1,0 +1,1669 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_Upload</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_Upload</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File Uploading Class</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/libraries/file_uploading.html">http://codeigniter.com/user_guide/libraries/file_uploading.html</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---libraries---Upload.php.html">/system/libraries/Upload.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a27">27</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$allowed_types" title="details" class="var-name">$allowed_types</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$client_name" title="details" class="var-name">$client_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$encrypt_name" title="details" class="var-name">$encrypt_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$error_msg" title="details" class="var-name">$error_msg</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$file_ext" title="details" class="var-name">$file_ext</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$file_name" title="details" class="var-name">$file_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$file_size" title="details" class="var-name">$file_size</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$file_temp" title="details" class="var-name">$file_temp</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$file_type" title="details" class="var-name">$file_type</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$image_height" title="details" class="var-name">$image_height</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$image_size_str" title="details" class="var-name">$image_size_str</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$image_type" title="details" class="var-name">$image_type</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$image_width" title="details" class="var-name">$image_width</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$is_image" title="details" class="var-name">$is_image</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$max_filename" title="details" class="var-name">$max_filename</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$max_height" title="details" class="var-name">$max_height</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$max_size" title="details" class="var-name">$max_size</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$max_width" title="details" class="var-name">$max_width</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$mimes" title="details" class="var-name">$mimes</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$orig_name" title="details" class="var-name">$orig_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$overwrite" title="details" class="var-name">$overwrite</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$remove_spaces" title="details" class="var-name">$remove_spaces</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$temp_prefix" title="details" class="var-name">$temp_prefix</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$upload_path" title="details" class="var-name">$upload_path</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$xss_clean" title="details" class="var-name">$xss_clean</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_file_name_override" title="details" class="var-name">$_file_name_override</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">CI_Upload</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$props</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#clean_file_name" title="details" class="method-name">clean_file_name</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#data" title="details" class="method-name">data</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#display_errors" title="details" class="method-name">display_errors</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$open</span> = <span class="var-default">'&lt;p&gt;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$close</span> = <span class="var-default">'&lt;/p&gt;'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#do_upload" title="details" class="method-name">do_upload</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">'userfile'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#do_xss_clean" title="details" class="method-name">do_xss_clean</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_extension" title="details" class="method-name">get_extension</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#initialize" title="details" class="method-name">initialize</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_allowed_dimensions" title="details" class="method-name">is_allowed_dimensions</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_allowed_filesize" title="details" class="method-name">is_allowed_filesize</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_allowed_filetype" title="details" class="method-name">is_allowed_filetype</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$ignore_mime</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_image" title="details" class="method-name">is_image</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#limit_filename_length" title="details" class="method-name">limit_filename_length</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$length</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#mimes_types" title="details" class="method-name">mimes_types</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_allowed_types" title="details" class="method-name">set_allowed_types</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$types</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_error" title="details" class="method-name">set_error</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_filename" title="details" class="method-name">set_filename</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_image_properties" title="details" class="method-name">set_image_properties</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_max_filename" title="details" class="method-name">set_max_filename</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_max_filesize" title="details" class="method-name">set_max_filesize</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_max_height" title="details" class="method-name">set_max_height</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_max_width" title="details" class="method-name">set_max_width</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_upload_path" title="details" class="method-name">set_upload_path</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_xss_clean" title="details" class="method-name">set_xss_clean</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$flag</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#validate_upload_path" title="details" class="method-name">validate_upload_path</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_file_mime_type" title="details" class="method-name">_file_mime_type</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_prep_filename" title="details" class="method-name">_prep_filename</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$allowed_types" id="$allowed_types"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$allowed_types</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$client_name" id="$client_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$client_name</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$encrypt_name" id="$encrypt_name"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$encrypt_name</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$error_msg" id="$error_msg"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$error_msg</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$file_ext" id="$file_ext"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$file_ext</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$file_name" id="$file_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$file_name</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$file_size" id="$file_size"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$file_size</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$file_temp" id="$file_temp"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$file_temp</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$file_type" id="$file_type"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$file_type</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$image_height" id="$image_height"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$image_height</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$image_size_str" id="$image_size_str"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$image_size_str</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$image_type" id="$image_type"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$image_type</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$image_width" id="$image_width"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$image_width</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$is_image" id="$is_image"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$is_image</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$max_filename" id="$max_filename"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$max_filename</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$max_height" id="$max_height"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$max_height</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$max_size" id="$max_size"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$max_size</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$max_width" id="$max_width"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$max_width</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mimes" id="$mimes"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$mimes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$orig_name" id="$orig_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$orig_name</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$overwrite" id="$overwrite"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$overwrite</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$remove_spaces" id="$remove_spaces"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$remove_spaces</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$temp_prefix" id="$temp_prefix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$temp_prefix</span>
+			 = <span class="var-default"> &quot;temp_file_&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$upload_path" id="$upload_path"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$upload_path</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$xss_clean" id="$xss_clean"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$xss_clean</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_file_name_override" id="$_file_name_override"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_file_name_override</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a62">62</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">CI_Upload</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$props</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$props</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclean_file_name" id="clean_file_name"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">clean_file_name</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a751">751</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clean the file name for security</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			clean_file_name
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddata" id="data"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">data</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a343">343</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finalized Data Array</p>
+<p class="description"><p>Returns an associative array containing all of the information  related to the upload, allowing the developer easy access in one array.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			data
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddisplay_errors" id="display_errors"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">display_errors</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a925">925</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display the error message</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			display_errors
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$open</span> = <span class="var-default">'&lt;p&gt;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$close</span> = <span class="var-default">'&lt;/p&gt;'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$open</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$close</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddo_upload" id="do_upload"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">do_upload</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a143">143</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Perform the file upload</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			do_upload
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">'userfile'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddo_xss_clean" id="do_xss_clean"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">do_xss_clean</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a824">824</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Runs the file through the XSS clean function</p>
+<p class="description"><p>This prevents people from embedding malicious code in their files.  I'm not sure that it won't negatively affect certain files in unexpected ways,  but so far I haven't found that it causes trouble.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			do_xss_clean
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_extension" id="get_extension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_extension</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a737">737</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extract the file extension</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_extension
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinitialize" id="initialize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">initialize</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a80">80</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initialize preferences</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			initialize
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_allowed_dimensions" id="is_allowed_dimensions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_allowed_dimensions</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a663">663</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Verify that the image is within the allowed width/height</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_allowed_dimensions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodis_allowed_filesize" id="is_allowed_filesize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_allowed_filesize</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a644">644</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Verify that the file is within the allowed size</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_allowed_filesize
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodis_allowed_filetype" id="is_allowed_filetype"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_allowed_filetype</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a584">584</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Verify that the filetype is allowed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_allowed_filetype
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$ignore_mime</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ignore_mime</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_image" id="is_image"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_image</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a550">550</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate the image</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_image
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlimit_filename_length" id="limit_filename_length"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">limit_filename_length</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a795">795</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Limit the File Name Length</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			limit_filename_length
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$length</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$length</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmimes_types" id="mimes_types"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">mimes_types</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a947">947</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of Mime Types</p>
+<p class="description"><p>This is a list of mime types.  We use it to validate  the &quot;allowed types&quot; set by the developer</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			mimes_types
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mime</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_allowed_types" id="set_allowed_types"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_allowed_types</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a486">486</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Allowed File Types</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_allowed_types
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$types</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$types</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_error" id="set_error"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_error</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a894">894</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set an error message</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_error
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_filename" id="set_filename"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_filename</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a390">390</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the file name</p>
+<p class="description"><p>This function takes a filename/path as input and looks for the  existence of a file with the same name. If found, it will append a  number to the end of the filename to avoid overwriting a pre-existing file.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_filename
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_image_properties" id="set_image_properties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_image_properties</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a506">506</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Image Properties</p>
+<p class="description"><p>Uses GD to determine the width/height/type of image</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_image_properties
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_max_filename" id="set_max_filename"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_max_filename</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a447">447</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Maximum File Name Length</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_max_filename
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_max_filesize" id="set_max_filesize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_max_filesize</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a434">434</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Maximum File Size</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_max_filesize
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_max_height" id="set_max_height"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_max_height</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a473">473</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Maximum Image Height</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_max_height
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_max_width" id="set_max_width"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_max_width</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a460">460</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Maximum Image Width</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_max_width
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_upload_path" id="set_upload_path"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_upload_path</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a371">371</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Upload Path</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_upload_path
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_xss_clean" id="set_xss_clean"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_xss_clean</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a538">538</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set XSS Clean</p>
+<p class="description"><p>Enables the XSS flag so that the file that was uploaded  will be run through the XSS filter.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_xss_clean
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$flag</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$flag</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidate_upload_path" id="validate_upload_path"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validate_upload_path</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a700">700</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate Upload Path</p>
+<p class="description"><p>Verifies that it is a valid upload path with proper permissions.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			validate_upload_path
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_file_mime_type" id="_file_mime_type"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_file_mime_type</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a1023">1023</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File MIME type</p>
+<p class="description"><p>Detects the (actual) MIME type of the uploaded file, if possible.  The input array is expected to be $_FILES[$field]</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_file_mime_type
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_prep_filename" id="_prep_filename"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_prep_filename</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesUpload.php.html#a984">984</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prep Filename</p>
+<p class="description"><p>Prevents possible script execution from Apache's handling of files multiple extensions  http://httpd.apache.org/docs/1.3/mod/mod_mime.html#multipleext</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_prep_filename
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:25:17 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

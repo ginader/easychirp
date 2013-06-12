@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page Common.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/system/core/Common.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CodeIgniter</p>
+<p class="description"><p>An open source application development framework for PHP 5.1.6 or newer</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2008 - 2011, EllisLab, Inc.</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com">http://codeigniter.com</a></li>
+				<li><span class="field">since:</span> Version 1.0</li>
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://codeigniter.com/user_guide/license.html">http://codeigniter.com/user_guide/license.html</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionconfig_item" id="functionconfig_item"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">config_item</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a271">271</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the specified config item</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			config_item
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$item</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_escape" id="functionhtml_escape"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_escape</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a550">550</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns HTML escaped variable</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			html_escape
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$var</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$var</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionis_loaded" id="functionis_loaded"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">is_loaded</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a190">190</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Keeps track of which libraries have been loaded.  This function is  called by the load_class() function above</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			&amp;is_loaded
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionis_php" id="functionis_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">is_php</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a44">44</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines if the current version of PHP is greater then the supplied value</p>
+<p class="description"><p>Since there are a few places where we conditionally test for PHP &gt; 5  we'll set a static variable.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> TRUE if the current version is $version or higher</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_php
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$version</span> = <span class="var-default">&#039;5.0.0&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$version</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionload_class" id="functionload_class"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">load_class</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a123">123</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class registry</p>
+<p class="description"><p>This function acts as a singleton.  If the requested class does not  exist it is instantiated and set to a static variable.  If it has  previously been instantiated the variable is returned.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			&amp;load_class
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">&#039;libraries&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">&#039;CI_&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: the class name being requested</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$directory</span><span class="var-description">: the directory where the class should be found</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: the class name prefix</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlog_message" id="functionlog_message"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">log_message</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a349">349</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error Logging Interface</p>
+<p class="description"><p>We use this as a simple mechanism to access the logging  class and send messages to be logged.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			log_message
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">&#039;error&#039;</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$php_error</span> = <span class="var-default">FALSE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$level</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$message</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$php_error</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionremove_invisible_characters" id="functionremove_invisible_characters"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">remove_invisible_characters</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a514">514</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove Invisible Characters</p>
+<p class="description"><p>This prevents sandwiching null characters  between ascii characters, like Java\0script.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			remove_invisible_characters
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$url_encoded</span> = <span class="var-default">TRUE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$url_encoded</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionset_status_header" id="functionset_status_header"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">set_status_header</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a375">375</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set HTTP Status Header</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_status_header
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">200</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$code</span><span class="var-description">: the status code</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_404" id="functionshow_404"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_404</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a328">328</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">404 Page Handler</p>
+<p class="description"><p>This function is similar to the show_error() function above  However, instead of the standard error template it displays  404 errors.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_404
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$log_error</span> = <span class="var-default">TRUE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$page</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$log_error</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_error" id="functionshow_error"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_error</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemcoreCommon.php.html#a306">306</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error Handler</p>
+<p class="description"><p>This function lets us invoke the exception class and  display errors using the standard error template located  in application/errors/errors.php  This function will send the error page directly to the  browser and exit.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_error
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$status_code</span> = <span class="var-default">500</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$heading</span> = <span class="var-default">&#039;An Error Was Encountered&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$message</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$status_code</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$heading</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:23:50 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

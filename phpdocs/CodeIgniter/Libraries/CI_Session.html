@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_Session</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_Session</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Session Class</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/libraries/sessions.html">http://codeigniter.com/user_guide/libraries/sessions.html</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---libraries---Session.php.html">/system/libraries/Session.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a27">27</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$CI" title="details" class="var-name">$CI</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$cookie_domain" title="details" class="var-name">$cookie_domain</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$cookie_path" title="details" class="var-name">$cookie_path</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$cookie_prefix" title="details" class="var-name">$cookie_prefix</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$cookie_secure" title="details" class="var-name">$cookie_secure</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$encryption_key" title="details" class="var-name">$encryption_key</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$flashdata_key" title="details" class="var-name">$flashdata_key</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$gc_probability" title="details" class="var-name">$gc_probability</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$now" title="details" class="var-name">$now</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_cookie_name" title="details" class="var-name">$sess_cookie_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_encrypt_cookie" title="details" class="var-name">$sess_encrypt_cookie</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_expiration" title="details" class="var-name">$sess_expiration</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_expire_on_close" title="details" class="var-name">$sess_expire_on_close</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_match_ip" title="details" class="var-name">$sess_match_ip</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_match_useragent" title="details" class="var-name">$sess_match_useragent</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_table_name" title="details" class="var-name">$sess_table_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_time_to_update" title="details" class="var-name">$sess_time_to_update</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sess_use_database" title="details" class="var-name">$sess_use_database</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$time_reference" title="details" class="var-name">$time_reference</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$userdata" title="details" class="var-name">$userdata</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">CI_Session</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#all_userdata" title="details" class="method-name">all_userdata</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#flashdata" title="details" class="method-name">flashdata</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#keep_flashdata" title="details" class="method-name">keep_flashdata</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#sess_create" title="details" class="method-name">sess_create</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#sess_destroy" title="details" class="method-name">sess_destroy</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#sess_read" title="details" class="method-name">sess_read</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#sess_update" title="details" class="method-name">sess_update</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#sess_write" title="details" class="method-name">sess_write</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_flashdata" title="details" class="method-name">set_flashdata</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$newdata</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$newval</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_userdata" title="details" class="method-name">set_userdata</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$newdata</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$newval</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#unset_userdata" title="details" class="method-name">unset_userdata</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$newdata</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#userdata" title="details" class="method-name">userdata</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_sess_gc" title="details" class="method-name">_sess_gc</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_set_cookie" title="details" class="method-name">_set_cookie</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$cookie_data</span> = <span class="var-default">NULL</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$CI" id="$CI"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$CI</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$cookie_domain" id="$cookie_domain"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$cookie_domain</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$cookie_path" id="$cookie_path"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$cookie_path</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$cookie_prefix" id="$cookie_prefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$cookie_prefix</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$cookie_secure" id="$cookie_secure"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$cookie_secure</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$encryption_key" id="$encryption_key"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$encryption_key</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$flashdata_key" id="$flashdata_key"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$flashdata_key</span>
+			 = <span class="var-default"> 'flash'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$gc_probability" id="$gc_probability"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$gc_probability</span>
+			 = <span class="var-default"> 5</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$now" id="$now"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$now</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_cookie_name" id="$sess_cookie_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_cookie_name</span>
+			 = <span class="var-default"> 'ci_session'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_encrypt_cookie" id="$sess_encrypt_cookie"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_encrypt_cookie</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_expiration" id="$sess_expiration"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_expiration</span>
+			 = <span class="var-default"> 7200</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_expire_on_close" id="$sess_expire_on_close"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_expire_on_close</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_match_ip" id="$sess_match_ip"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_match_ip</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_match_useragent" id="$sess_match_useragent"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_match_useragent</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_table_name" id="$sess_table_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_table_name</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_time_to_update" id="$sess_time_to_update"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_time_to_update</span>
+			 = <span class="var-default"> 300</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sess_use_database" id="$sess_use_database"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sess_use_database</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$time_reference" id="$time_reference"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$time_reference</span>
+			 = <span class="var-default"> 'time'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$userdata" id="$userdata"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$userdata</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a56">56</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Session Constructor</p>
+<p class="description"><p>The constructor runs the session routines automatically  whenever the class is instantiated.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">CI_Session</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodall_userdata" id="all_userdata"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">all_userdata</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a444">444</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch all session data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			all_userdata
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodflashdata" id="flashdata"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">flashdata</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a562">562</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch a specific flashdata item from the session array</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			flashdata
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodkeep_flashdata" id="keep_flashdata"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">keep_flashdata</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a540">540</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Keeps existing flashdata available to next request.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			keep_flashdata
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsess_create" id="sess_create"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">sess_create</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a305">305</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a new session</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sess_create
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsess_destroy" id="sess_destroy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">sess_destroy</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a399">399</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Destroy the current session</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sess_destroy
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsess_read" id="sess_read"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">sess_read</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a135">135</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch the current session data if it exists</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			sess_read
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsess_update" id="sess_update"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">sess_update</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a343">343</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing session</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sess_update
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsess_write" id="sess_write"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">sess_write</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a253">253</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Write the session data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sess_write
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_flashdata" id="set_flashdata"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_flashdata</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a514">514</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add or change flashdata, only available  until the next request</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_flashdata
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$newdata</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$newval</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$newdata</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$newval</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_userdata" id="set_userdata"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_userdata</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a459">459</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add or change data in the &quot;userdata&quot; array</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_userdata
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$newdata</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$newval</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$newdata</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$newval</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunset_userdata" id="unset_userdata"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">unset_userdata</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a485">485</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a session variable from the &quot;userdata&quot; array</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			unset_userdata
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$newdata</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$newdata</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduserdata" id="userdata"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">userdata</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a431">431</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch a specific item from the session array</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			userdata
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$item</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_sess_gc" id="_sess_gc"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_sess_gc</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a756">756</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Garbage collection</p>
+<p class="description"><p>This deletes expired session rows from database  if the probability percentage is met</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_sess_gc
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_set_cookie" id="_set_cookie"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_set_cookie</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesSession.php.html#a645">645</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Write the session cookie</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_set_cookie
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$cookie_data</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$cookie_data</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:25:05 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

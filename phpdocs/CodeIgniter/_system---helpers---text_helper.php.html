@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page text_helper.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/system/helpers/text_helper.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CodeIgniter</p>
+<p class="description"><p>An open source application development framework for PHP 5.1.6 or newer</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2008 - 2011, EllisLab, Inc.</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com">http://codeigniter.com</a></li>
+				<li><span class="field">since:</span> Version 1.0</li>
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://codeigniter.com/user_guide/license.html">http://codeigniter.com/user_guide/license.html</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionascii_to_entities" id="functionascii_to_entities"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">ascii_to_entities</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a118">118</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">High ASCII to Entities</p>
+<p class="description"><p>Converts High ascii text and MS Word special characters to character entities</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			ascii_to_entities
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncharacter_limiter" id="functioncharacter_limiter"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">character_limiter</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a77">77</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Character Limiter</p>
+<p class="description"><p>Limits the string based on the character count.  Preserves complete words  so the character count may not be exactly as specified.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			character_limiter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">500</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$end_char</span> = <span class="var-default">&#039;&amp;amp;#8230;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$end_char</span><span class="var-description">: the end character. Usually an ellipsis</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionconvert_accented_characters" id="functionconvert_accented_characters"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">convert_accented_characters</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a367">367</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert Accented Foreign Characters to ASCII</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			convert_accented_characters
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: the text string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionellipsize" id="functionellipsize"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ellipsize</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a506">506</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ellipsize String</p>
+<p class="description"><p>This function will strip tags from a string, split it at its max_length and ellipsize</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ellipsized string</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			ellipsize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max_length</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$position</span> = <span class="var-default">1</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ellipsis</span> = <span class="var-default">&#039;&amp;amp;hellip;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: string to ellipsize</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max_length</span><span class="var-description">: max length of string</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$position</span><span class="var-description">: int (1|0) or float, .5, .2, etc for position to split</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ellipsis</span><span class="var-description">: ellipsis ; Default '...'</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionentities_to_ascii" id="functionentities_to_ascii"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">entities_to_ascii</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a180">180</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Entities to ASCII</p>
+<p class="description"><p>Converts character entities back to ASCII</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			entities_to_ascii
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$all</span> = <span class="var-default">TRUE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$all</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhighlight_code" id="functionhighlight_code"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">highlight_code</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a283">283</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Code Highlighter</p>
+<p class="description"><p>Colorizes code strings</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			highlight_code
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: the text string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhighlight_phrase" id="functionhighlight_phrase"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">highlight_phrase</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a340">340</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Phrase Highlighter</p>
+<p class="description"><p>Highlights a phrase within a text string</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			highlight_phrase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$phrase</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$tag_open</span> = <span class="var-default">&#039;&amp;lt;strong&amp;gt;&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tag_close</span> = <span class="var-default">&#039;&amp;lt;/strong&amp;gt;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: the text string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$phrase</span><span class="var-description">: the phrase you'd like to highlight</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tag_open</span><span class="var-description">: the openging tag to precede the phrase with</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tag_close</span><span class="var-description">: the closing tag to end the phrase with</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionword_censor" id="functionword_censor"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">word_censor</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a239">239</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Word Censoring Function</p>
+<p class="description"><p>Supply a string and an array of disallowed words and any  matched words will be converted to #### or to the replacement  word you've submitted.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			word_censor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$censored</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$replacement</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: the text string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$censored</span><span class="var-description">: the array of censoered words</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$replacement</span><span class="var-description">: the optional replacement value</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionword_limiter" id="functionword_limiter"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">word_limiter</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a43">43</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Word Limiter</p>
+<p class="description"><p>Limits a string to X number of words.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			word_limiter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">100</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$end_char</span> = <span class="var-default">&#039;&amp;amp;#8230;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limit</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$end_char</span><span class="var-description">: the end character. Usually an ellipsis</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionword_wrap" id="functionword_wrap"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">word_wrap</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelperstext_helper.php.html#a403">403</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Word Wrap</p>
+<p class="description"><p>Wraps text at the specified character.  Maintains the integrity of words.  Anything placed between {unwrap}{/unwrap} will not be word wrapped, nor  will URLs.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			word_wrap
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$charlim</span> = <span class="var-default">&#039;76&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: the text string</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$charlim</span><span class="var-description">: the number of characters to wrap at</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:25:12 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_Form_validation</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_Form_validation</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Form Validation Class</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/libraries/form_validation.html">http://codeigniter.com/user_guide/libraries/form_validation.html</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---libraries---Form_validation.php.html">/system/libraries/Form_validation.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a27">27</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$CI" title="details" class="var-name">$CI</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$error_string" title="details" class="var-name">$error_string</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_config_rules" title="details" class="var-name">$_config_rules</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_error_array" title="details" class="var-name">$_error_array</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_error_messages" title="details" class="var-name">$_error_messages</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_error_prefix" title="details" class="var-name">$_error_prefix</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_error_suffix" title="details" class="var-name">$_error_suffix</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_field_data" title="details" class="var-name">$_field_data</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_safe_form_data" title="details" class="var-name">$_safe_form_data</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">CI_Form_validation</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$rules</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#alpha" title="details" class="method-name">alpha</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#alpha_dash" title="details" class="method-name">alpha_dash</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#alpha_numeric" title="details" class="method-name">alpha_numeric</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#decimal" title="details" class="method-name">decimal</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#encode_php_tags" title="details" class="method-name">encode_php_tags</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#error" title="details" class="method-name">error</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">str</span>
+										<a href="#error_string" title="details" class="method-name">error_string</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#exact_length" title="details" class="method-name">exact_length</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">value</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#greater_than" title="details" class="method-name">greater_than</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$min</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#integer" title="details" class="method-name">integer</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_natural" title="details" class="method-name">is_natural</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_natural_no_zero" title="details" class="method-name">is_natural_no_zero</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_numeric" title="details" class="method-name">is_numeric</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#is_unique" title="details" class="method-name">is_unique</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">field</span>&nbsp;<span class="var-name">$field</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#less_than" title="details" class="method-name">less_than</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#matches" title="details" class="method-name">matches</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">field</span>&nbsp;<span class="var-name">$field</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#max_length" title="details" class="method-name">max_length</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">value</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#min_length" title="details" class="method-name">min_length</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">value</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#numeric" title="details" class="method-name">numeric</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#prep_for_form" title="details" class="method-name">prep_for_form</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#prep_url" title="details" class="method-name">prep_url</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#regex_match" title="details" class="method-name">regex_match</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">regex</span>&nbsp;<span class="var-name">$regex</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#required" title="details" class="method-name">required</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#run" title="details" class="method-name">run</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_checkbox" title="details" class="method-name">set_checkbox</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_error_delimiters" title="details" class="method-name">set_error_delimiters</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'&lt;p&gt;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">'&lt;/p&gt;'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_message" title="details" class="method-name">set_message</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_radio" title="details" class="method-name">set_radio</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_rules" title="details" class="method-name">set_rules</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rules</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_select" title="details" class="method-name">set_select</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_value" title="details" class="method-name">set_value</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#strip_image_tags" title="details" class="method-name">strip_image_tags</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#valid_base64" title="details" class="method-name">valid_base64</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#valid_email" title="details" class="method-name">valid_email</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#valid_emails" title="details" class="method-name">valid_emails</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#valid_ip" title="details" class="method-name">valid_ip</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$which</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#xss_clean" title="details" class="method-name">xss_clean</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#_execute" title="details" class="method-name">_execute</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$row</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rules</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$postdata</span> = <span class="var-default">NULL</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cycles</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#_reduce_array" title="details" class="method-name">_reduce_array</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$array</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">null</span>
+										<a href="#_reset_post_array" title="details" class="method-name">_reset_post_array</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_translate_fieldname" title="details" class="method-name">_translate_fieldname</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$fieldname</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$CI" id="$CI"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$CI</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$error_string" id="$error_string"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$error_string</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_config_rules" id="$_config_rules"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_config_rules</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_error_array" id="$_error_array"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_error_array</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_error_messages" id="$_error_messages"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_error_messages</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_error_prefix" id="$_error_prefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_error_prefix</span>
+			 = <span class="var-default"> '&lt;p&gt;'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_error_suffix" id="$_error_suffix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_error_suffix</span>
+			 = <span class="var-default"> '&lt;/p&gt;'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_field_data" id="$_field_data"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_field_data</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_safe_form_data" id="$_safe_form_data"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_safe_form_data</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a42">42</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">CI_Form_validation</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$rules</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rules</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodalpha" id="alpha"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">alpha</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1099">1099</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alpha</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			alpha
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodalpha_dash" id="alpha_dash"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">alpha_dash</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1127">1127</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alpha-numeric with underscores and dashes</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			alpha_dash
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodalpha_numeric" id="alpha_numeric"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">alpha_numeric</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1113">1113</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alpha-numeric</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			alpha_numeric
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddecimal" id="decimal"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">decimal</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1184">1184</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decimal number</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			decimal
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodencode_php_tags" id="encode_php_tags"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">encode_php_tags</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1373">1373</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert PHP tags to entities</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			encode_php_tags
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoderror" id="error"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">error</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Error Message</p>
+<p class="description"><p>Gets the error message associated with a particular field</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			error
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field</span><span class="var-description">: the field name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$prefix</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$suffix</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoderror_string" id="error_string"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">error_string</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a240">240</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error String</p>
+<p class="description"><p>Returns the error messages as a string, wrapped in the error delimiters</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">str</span>
+		<span class="method-name">
+			error_string
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$suffix</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexact_length" id="exact_length"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">exact_length</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1019">1019</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Exact Length</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			exact_length
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">value</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">value</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgreater_than" id="greater_than"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">greater_than</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1198">1198</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Greather than</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			greater_than
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$min</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$min</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinteger" id="integer"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">integer</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1170">1170</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Integer</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			integer
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_natural" id="is_natural"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_natural</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1234">1234</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is a Natural number  (0,1,2,3, etc.)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_natural
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_natural_no_zero" id="is_natural_no_zero"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_natural_no_zero</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1248">1248</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is a Natural number, but not a zero  (1,2,3, etc.)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_natural_no_zero
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_numeric" id="is_numeric"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_numeric</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1156">1156</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is Numeric</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_numeric
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_unique" id="is_unique"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_unique</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a951">951</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Match one field to another</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			is_unique
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">field</span>&nbsp;<span class="var-name">$field</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">field</span>
+				<span class="var-name">$field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodless_than" id="less_than"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">less_than</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1216">1216</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Less than</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			less_than
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$max</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmatches" id="matches"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">matches</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a929">929</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Match one field to another</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			matches
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">field</span>&nbsp;<span class="var-name">$field</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">field</span>
+				<span class="var-name">$field</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmax_length" id="max_length"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">max_length</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a994">994</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Max Length</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			max_length
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">value</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">value</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmin_length" id="min_length"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">min_length</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a969">969</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Minimum Length</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			min_length
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">value</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">value</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnumeric" id="numeric"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">numeric</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1141">1141</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Numeric</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			numeric
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprep_for_form" id="prep_for_form"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">prep_for_form</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1292">1292</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prep data for form</p>
+<p class="description"><p>This function allows HTML to be safely shown in a form.  Special characters are converted.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			prep_for_form
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodprep_url" id="prep_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">prep_url</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1321">1321</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prep URL</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			prep_url
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodregex_match" id="regex_match"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">regex_match</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a909">909</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Performs a Regular Expression match test.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			regex_match
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">regex</span>&nbsp;<span class="var-name">$regex</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">regex</span>
+				<span class="var-name">$regex</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrequired" id="required"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">required</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a887">887</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Required</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			required
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrun" id="run"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">run</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a281">281</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Run the Validator</p>
+<p class="description"><p>This function does all the work.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			run
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$group</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_checkbox" id="set_checkbox"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_checkbox</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a847">847</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Checkbox</p>
+<p class="description"><p>Enables checkboxes to be set to the value the user  selected in the event of an error</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_checkbox
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_error_delimiters" id="set_error_delimiters"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_error_delimiters</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a189">189</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set The Error Delimiter</p>
+<p class="description"><p>Permits a prefix/suffix to be added to each error message</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_error_delimiters
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'&lt;p&gt;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">'&lt;/p&gt;'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$suffix</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_message" id="set_message"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_message</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a165">165</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Error Message</p>
+<p class="description"><p>Lets users set their own error messages on the fly.  Note:  The key  name has to match the  function name that it corresponds to.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_message
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_radio" id="set_radio"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_radio</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a803">803</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Radio</p>
+<p class="description"><p>Enables radio buttons to be set to the value the user  selected in the event of an error</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_radio
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_rules" id="set_rules"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_rules</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a74">74</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Rules</p>
+<p class="description"><p>This function takes an array of field names and validation  rules as input, validates the info, and stores it</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_rules
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rules</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rules</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_select" id="set_select"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_select</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a759">759</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Select</p>
+<p class="description"><p>Enables pull-down lists to be set to the value the user  selected in the event of an error</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_select
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_value" id="set_value"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_value</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a729">729</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the value from a form</p>
+<p class="description"><p>Permits you to repopulate a form field with the value it was submitted  with, or, if that value doesn't exist, with the default</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_value
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$field</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field</span><span class="var-description">: the field name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstrip_image_tags" id="strip_image_tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">strip_image_tags</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1345">1345</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Strip Image Tags</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			strip_image_tags
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalid_base64" id="valid_base64"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">valid_base64</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1275">1275</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Valid Base64</p>
+<p class="description"><p>Tests a string for characters outside of the Base64 alphabet  as defined by RFC 2045 http://www.faqs.org/rfcs/rfc2045</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			valid_base64
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalid_email" id="valid_email"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">valid_email</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1043">1043</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Valid Email</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			valid_email
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalid_emails" id="valid_emails"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">valid_emails</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1057">1057</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Valid Emails</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			valid_emails
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalid_ip" id="valid_ip"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">valid_ip</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1085">1085</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate IP Address</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			valid_ip
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ip</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$which</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ip</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$which</span><span class="var-description">: &quot;ipv4&quot; or &quot;ipv6&quot; to validate a specific ip format</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodxss_clean" id="xss_clean"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">xss_clean</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a1359">1359</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XSS Clean</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			xss_clean
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_execute" id="_execute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_execute</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a470">470</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes the Validation routines</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_execute
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$row</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rules</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$postdata</span> = <span class="var-default">NULL</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$cycles</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$row</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rules</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$postdata</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$cycles</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_reduce_array" id="_reduce_array"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_reduce_array</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a376">376</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Traverse a multidimensional $_POST array index until the data is found</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_reduce_array
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$array</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$i</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$array</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$keys</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$i</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_reset_post_array" id="_reset_post_array"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_reset_post_array</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a408">408</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Re-populate the _POST array with our finalized and processed data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">null</span>
+		<span class="method-name">
+			_reset_post_array
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_translate_fieldname" id="_translate_fieldname"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_translate_fieldname</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesForm_validation.php.html#a697">697</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Translate a field name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_translate_fieldname
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$fieldname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fieldname</span><span class="var-description">: the field name</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:21 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

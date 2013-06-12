@@ -1,0 +1,3 @@
+#!/bin/bash
+
+phpdoc --directory ./site --target ./phpdocs --title "EasyChirp Documentation"

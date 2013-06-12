@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_DB_driver</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_DB_driver</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database Driver Class</p>
+<p class="description"><p>This is the platform-independent base DB implementation class.  This class will not be called directly. Rather, the adapter  class for the specific database will extend and instantiate it.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/database/">http://codeigniter.com/user_guide/database/</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---database---DB_driver.php.html">/system/database/DB_driver.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a31">31</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../../CodeIgniter/Drivers/CI_DB_active_record.html">CI_DB_active_record</a></td>
+					<td>
+											Active Record Class
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																																																																																																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$autoinit" title="details" class="var-name">$autoinit</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$benchmark" title="details" class="var-name">$benchmark</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$bind_marker" title="details" class="var-name">$bind_marker</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$CACHE" title="details" class="var-name">$CACHE</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$cachedir" title="details" class="var-name">$cachedir</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$cache_autodel" title="details" class="var-name">$cache_autodel</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$cache_on" title="details" class="var-name">$cache_on</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$char_set" title="details" class="var-name">$char_set</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$conn_id" title="details" class="var-name">$conn_id</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$curs_id" title="details" class="var-name">$curs_id</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$database" title="details" class="var-name">$database</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$data_cache" title="details" class="var-name">$data_cache</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$dbcollat" title="details" class="var-name">$dbcollat</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$dbdriver" title="details" class="var-name">$dbdriver</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$dbprefix" title="details" class="var-name">$dbprefix</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$db_debug" title="details" class="var-name">$db_debug</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$hostname" title="details" class="var-name">$hostname</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$limit_used" title="details" class="var-name">$limit_used</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$password" title="details" class="var-name">$password</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$pconnect" title="details" class="var-name">$pconnect</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$port" title="details" class="var-name">$port</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$queries" title="details" class="var-name">$queries</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$query_count" title="details" class="var-name">$query_count</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$query_times" title="details" class="var-name">$query_times</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$result_id" title="details" class="var-name">$result_id</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$save_queries" title="details" class="var-name">$save_queries</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$stmt_id" title="details" class="var-name">$stmt_id</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$swap_pre" title="details" class="var-name">$swap_pre</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$trans_enabled" title="details" class="var-name">$trans_enabled</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$trans_strict" title="details" class="var-name">$trans_strict</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$username" title="details" class="var-name">$username</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_protect_identifiers" title="details" class="var-name">$_protect_identifiers</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_reserved_identifiers" title="details" class="var-name">$_reserved_identifiers</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_trans_depth" title="details" class="var-name">$_trans_depth</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_trans_status" title="details" class="var-name">$_trans_status</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">CI_DB_driver</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#cache_delete" title="details" class="method-name">cache_delete</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$segment_one</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$segment_two</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#cache_delete_all" title="details" class="method-name">cache_delete_all</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#cache_off" title="details" class="method-name">cache_off</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#cache_on" title="details" class="method-name">cache_on</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#cache_set_path" title="details" class="method-name">cache_set_path</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#call_function" title="details" class="method-name">call_function</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$function</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">1</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#close" title="details" class="method-name">close</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#compile_binds" title="details" class="method-name">compile_binds</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$binds</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">resource</span>
+										<a href="#db_set_charset" title="details" class="method-name">db_set_charset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$collation</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#display_error" title="details" class="method-name">display_error</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$swap</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$native</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#elapsed_time" title="details" class="method-name">elapsed_time</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$decimals</span> = <span class="var-default">6</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#escape" title="details" class="method-name">escape</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#escape_like_str" title="details" class="method-name">escape_like_str</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#field_data" title="details" class="method-name">field_data</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#field_exists" title="details" class="method-name">field_exists</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$table_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#initialize" title="details" class="method-name">initialize</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#insert_string" title="details" class="method-name">insert_string</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#is_write_type" title="details" class="method-name">is_write_type</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#last_query" title="details" class="method-name">last_query</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#list_fields" title="details" class="method-name">list_fields</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#list_tables" title="details" class="method-name">list_tables</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$constrain_by_prefix</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#load_rdriver" title="details" class="method-name">load_rdriver</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#platform" title="details" class="method-name">platform</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#primary" title="details" class="method-name">primary</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#query" title="details" class="method-name">query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$binds</span> = <span class="var-default">FALSE</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$return_object</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#simple_query" title="details" class="method-name">simple_query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#table_exists" title="details" class="method-name">table_exists</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#total_queries" title="details" class="method-name">total_queries</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#trans_complete" title="details" class="method-name">trans_complete</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#trans_off" title="details" class="method-name">trans_off</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#trans_start" title="details" class="method-name">trans_start</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$test_mode</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#trans_status" title="details" class="method-name">trans_status</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#trans_strict" title="details" class="method-name">trans_strict</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#update_string" title="details" class="method-name">update_string</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$where</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#version" title="details" class="method-name">version</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_reset_select" title="details" class="method-name">_reset_select</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$autoinit" id="$autoinit"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$autoinit</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$benchmark" id="$benchmark"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$benchmark</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$bind_marker" id="$bind_marker"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$bind_marker</span>
+			 = <span class="var-default"> '?'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$CACHE" id="$CACHE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$CACHE</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a62">62</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$cachedir" id="$cachedir"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$cachedir</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a60">60</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$cache_autodel" id="$cache_autodel"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$cache_autodel</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a61">61</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$cache_on" id="$cache_on"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$cache_on</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a59">59</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$char_set" id="$char_set"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$char_set</span>
+			 = <span class="var-default"> 'utf8'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$conn_id" id="$conn_id"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$conn_id</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$curs_id" id="$curs_id"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$curs_id</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a70">70</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$database" id="$database"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$database</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$data_cache" id="$data_cache"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$data_cache</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a54">54</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$dbcollat" id="$dbcollat"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dbcollat</span>
+			 = <span class="var-default"> 'utf8_general_ci'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$dbdriver" id="$dbdriver"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dbdriver</span>
+			 = <span class="var-default"> 'mysql'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$dbprefix" id="$dbprefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dbprefix</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$db_debug" id="$db_debug"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$db_debug</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$hostname" id="$hostname"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$hostname</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$limit_used" id="$limit_used"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$limit_used</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a71">71</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$password" id="$password"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$password</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$pconnect" id="$pconnect"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$pconnect</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$port" id="$port"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$port</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a43">43</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$queries" id="$queries"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$queries</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$query_count" id="$query_count"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$query_count</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a49">49</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$query_times" id="$query_times"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$query_times</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a53">53</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$result_id" id="$result_id"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$result_id</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a46">46</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$save_queries" id="$save_queries"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$save_queries</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$stmt_id" id="$stmt_id"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$stmt_id</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a69">69</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$swap_pre" id="$swap_pre"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$swap_pre</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$trans_enabled" id="$trans_enabled"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$trans_enabled</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a55">55</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$trans_strict" id="$trans_strict"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$trans_strict</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a56">56</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$username" id="$username"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$username</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_protect_identifiers" id="$_protect_identifiers"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_protect_identifiers</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a65">65</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_reserved_identifiers" id="$_reserved_identifiers"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_reserved_identifiers</span>
+			 = <span class="var-default">array('*')</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a66">66</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_trans_depth" id="$_trans_depth"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_trans_depth</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_trans_status" id="$_trans_status"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_trans_status</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a58">58</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a81">81</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor.  Accepts one parameter containing the database  connection settings.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">CI_DB_driver</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcache_delete" id="cache_delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">cache_delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1080">1080</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete the cache files associated with a particular URI</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_delete
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$segment_one</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$segment_two</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$segment_one</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$segment_two</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcache_delete_all" id="cache_delete_all"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">cache_delete_all</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1097">1097</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete All cache files</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_delete_all
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcache_off" id="cache_off"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">cache_off</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1065">1065</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Disable Query Caching</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_off
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcache_on" id="cache_on"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">cache_on</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1051">1051</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable Query Caching</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_on
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcache_set_path" id="cache_set_path"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">cache_set_path</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1038">1038</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Cache Directory Path</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_set_path
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: the path to the cache directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcall_function" id="call_function"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">call_function</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a998">998</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enables a native PHP function to be run, using a platform agnostic wrapper.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			call_function
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$function</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">1</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">1</span><span class="var-description">: any parameters needed by the function</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$function</span><span class="var-description">: the function name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclose" id="close"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">close</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1142">1142</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close DB Connection</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			close
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcompile_binds" id="compile_binds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">compile_binds</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a578">578</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compile Bindings</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			compile_binds
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$binds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: the sql statement</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$binds</span><span class="var-description">: an array of bind data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddb_set_charset" id="db_set_charset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">db_set_charset</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set client character set</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			db_set_charset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$collation</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$charset</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$collation</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddisplay_error" id="display_error"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">display_error</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1162">1162</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display an error message</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> sends the application/error_db.php template</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			display_error
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$swap</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$native</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$error</span><span class="var-description">: the error message</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$swap</span><span class="var-description">: any &quot;swap&quot; values</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$native</span><span class="var-description">: whether to localize the message</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodelapsed_time" id="elapsed_time"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">elapsed_time</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a638">638</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculate the aggregate query elapsed time</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			elapsed_time
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$decimals</span> = <span class="var-default">6</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$decimals</span><span class="var-description">: The number of decimal places</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodescape" id="escape"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">escape</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a681">681</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">&quot;Smart&quot; Escape String</p>
+<p class="description"><p>Escapes data based on type  Sets boolean and null types</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			escape
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodescape_like_str" id="escape_like_str"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">escape_like_str</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a711">711</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escape LIKE String</p>
+<p class="description"><p>Calls the individual driver for platform  specific escaping for LIKE conditions</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			escape_like_str
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfield_data" id="field_data"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">field_data</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a876">876</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an object with field data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			field_data
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfield_exists" id="field_exists"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">field_exists</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a862">862</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if a particular field exists</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			field_exists
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$field_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$table_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$field_name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinitialize" id="initialize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">initialize</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a103">103</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initialize Database Settings</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			initialize
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">0</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert_string" id="insert_string"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_string</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a902">902</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate an insert string</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			insert_string
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table upon which the query will be performed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: an associative array data of key/values</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_write_type" id="is_write_type"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_write_type</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a620">620</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines if a query is a &quot;write&quot; type.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			is_write_type
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: An SQL query string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlast_query" id="last_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">last_query</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a664">664</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the last query that was executed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			last_query
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlist_fields" id="list_fields"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_fields</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a808">808</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch MySQL Field Names</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			list_fields
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlist_tables" id="list_tables"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_tables</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a748">748</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array of table names</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			list_tables
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$constrain_by_prefix</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$constrain_by_prefix</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodload_rdriver" id="load_rdriver"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">load_rdriver</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a421">421</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load the result drivers</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the name of the result class</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			load_rdriver
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodplatform" id="platform"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">platform</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a194">194</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of the platform in use (mysql, mssql, etc...)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			platform
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodprimary" id="primary"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">primary</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a728">728</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Primary</p>
+<p class="description"><p>Retrieves the primary key.  It assumes that the row in the first  position is the primary key</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			primary
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodquery" id="query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">query</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a250">250</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the query</p>
+<p class="description"><p>Accepts an SQL string as input and returns a result object upon  successful execution of a &quot;read&quot; type query.  Returns boolean TRUE  upon successful execution of a &quot;write&quot; type query. Returns boolean  FALSE upon failure, and if the $db_debug variable is set to TRUE  will raise an error.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$binds</span> = <span class="var-default">FALSE</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$return_object</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: An SQL query string</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$binds</span><span class="var-description">: An array of binding data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$return_object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsimple_query" id="simple_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">simple_query</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a446">446</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Simple Query  This is a simplified version of the query() function.  Internally  we only use it when running transaction commands since they do  not require all the features of the main query() function.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			simple_query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: the sql query</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtable_exists" id="table_exists"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">table_exists</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a794">794</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine if a particular table exists</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			table_exists
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtotal_queries" id="total_queries"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">total_queries</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a651">651</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the total number of queries</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			total_queries
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrans_complete" id="trans_complete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_complete</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a520">520</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Complete Transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			trans_complete
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrans_off" id="trans_off"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_off</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a465">465</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Disable Transactions  This permits transactions to be disabled at run-time.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			trans_off
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrans_start" id="trans_start"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_start</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a495">495</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start Transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			trans_start
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$test_mode</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$test_mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtrans_status" id="trans_status"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_status</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a563">563</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Lets you retrieve the transaction flag to determine if it has failed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			trans_status
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrans_strict" id="trans_strict"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_strict</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a482">482</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable/disable Transaction Strict Mode  When strict mode is enabled, if you are running multiple groups of  transactions, if one group fails all groups will be rolled back.</p>
+<p class="description"><p>If strict mode is disabled, each group is treated autonomously, meaning  a failure of one group will not affect any others</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			trans_strict
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_string" id="update_string"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_string</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a927">927</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate an update string</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			update_string
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$where</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table upon which the query will be performed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: an associative array data of key/values</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$where</span><span class="var-description">: the &quot;where&quot; statement</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodversion" id="version"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">version</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database Version Number.  Returns a string containing the  version of the database being used</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			version
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_reset_select" id="_reset_select"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_reset_select</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabaseDB_driver.php.html#a1403">1403</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dummy method that allows Active Record class to be disabled</p>
+<p class="description"><p>This function is used extensively by every db driver.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_reset_select
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../CodeIgniter/Drivers/CI_DB_active_record.html#method_reset_select">CI_DB_active_record::_reset_select()</a>
+								: Resets the active record values.  Called by the get() function
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:05 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

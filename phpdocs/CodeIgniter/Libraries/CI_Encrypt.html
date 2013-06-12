@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_Encrypt</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_Encrypt</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CodeIgniter Encryption Class</p>
+<p class="description"><p>Provides two-way keyed encoding using XOR Hashing and Mcrypt</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/libraries/encryption.html">http://codeigniter.com/user_guide/libraries/encryption.html</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---libraries---Encrypt.php.html">/system/libraries/Encrypt.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a29">29</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$CI" title="details" class="var-name">$CI</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$encryption_key" title="details" class="var-name">$encryption_key</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_hash_type" title="details" class="var-name">$_hash_type</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_mcrypt_cipher" title="details" class="var-name">$_mcrypt_cipher</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_mcrypt_exists" title="details" class="var-name">$_mcrypt_exists</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_mcrypt_mode" title="details" class="var-name">$_mcrypt_mode</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">CI_Encrypt</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#decode" title="details" class="method-name">decode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#encode" title="details" class="method-name">encode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#encode_from_legacy" title="details" class="method-name">encode_from_legacy</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$legacy_mode</span> = <span class="var-default">MCRYPT_MODE_ECB</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_key" title="details" class="method-name">get_key</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#hash" title="details" class="method-name">hash</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#mcrypt_decode" title="details" class="method-name">mcrypt_decode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#mcrypt_encode" title="details" class="method-name">mcrypt_encode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_cipher" title="details" class="method-name">set_cipher</a>
+											(<span class="var-type">constant</span>&nbsp;<span class="var-name">$cipher</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_hash" title="details" class="method-name">set_hash</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'sha1'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_key" title="details" class="method-name">set_key</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#set_mode" title="details" class="method-name">set_mode</a>
+											(<span class="var-type">constant</span>&nbsp;<span class="var-name">$mode</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#sha1" title="details" class="method-name">sha1</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">type</span>
+										<a href="#_remove_cipher_noise" title="details" class="method-name">_remove_cipher_noise</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$CI" id="$CI"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$CI</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$encryption_key" id="$encryption_key"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$encryption_key</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_hash_type" id="$_hash_type"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_hash_type</span>
+			 = <span class="var-default"> 'sha1'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_mcrypt_cipher" id="$_mcrypt_cipher"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_mcrypt_cipher</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_mcrypt_exists" id="$_mcrypt_exists"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_mcrypt_exists</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_mcrypt_mode" id="$_mcrypt_mode"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_mcrypt_mode</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a44">44</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+<p class="description"><p>Simply determines whether the mcrypt library exists.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">CI_Encrypt</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddecode" id="decode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">decode</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a144">144</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decode</p>
+<p class="description"><p>Reverses the above process</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			decode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodencode" id="encode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">encode</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a116">116</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encode</p>
+<p class="description"><p>Encodes the message string using bitwise XOR encoding.  The key is combined with a random hash, and then it  too gets converted using XOR. The whole thing is then run  through mcrypt (if supported) using the randomized key.  The end result is a double-encrypted message string  that is randomized with each call to this function,  even if the supplied message and key are the same.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			encode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: the string to encode</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: the key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodencode_from_legacy" id="encode_from_legacy"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">encode_from_legacy</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a188">188</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encode from Legacy</p>
+<p class="description"><p>Takes an encoded string from the original Encryption class algorithms and  returns a newly encoded string using the improved method added in 2.0.0  This allows for backwards compatibility and a method to transition to the  new encryption algorithms.</p><p>For more details, see http://codeigniter.com/user_guide/installation/upgrade_200.html#encryption</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			encode_from_legacy
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$legacy_mode</span> = <span class="var-default">MCRYPT_MODE_ECB</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$legacy_mode</span><span class="var-description">: (mcrypt mode constant)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_key" id="get_key"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_key</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a63">63</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch the encryption key</p>
+<p class="description"><p>Returns it as MD5 in order to have an exact-length 128 bit key.  Mcrypt is sensitive to keys that are not the correct length</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_key
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhash" id="hash"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">hash</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a507">507</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Hash encode a string</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			hash
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmcrypt_decode" id="mcrypt_decode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">mcrypt_decode</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a334">334</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decrypt using Mcrypt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			mcrypt_decode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmcrypt_encode" id="mcrypt_encode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">mcrypt_encode</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a317">317</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encrypt using Mcrypt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			mcrypt_encode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_cipher" id="set_cipher"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_cipher</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a429">429</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the Mcrypt Cipher</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_cipher
+		</span>
+					(<span class="var-type">constant</span>&nbsp;<span class="var-name">$cipher</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">constant</span>
+				<span class="var-name">$cipher</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_hash" id="set_hash"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_hash</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a493">493</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the Hash type</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_hash
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'sha1'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_key" id="set_key"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_key</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a93">93</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the encryption key</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_key
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_mode" id="set_mode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_mode</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a443">443</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the Mcrypt Mode</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			set_mode
+		</span>
+					(<span class="var-type">constant</span>&nbsp;<span class="var-name">$mode</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">constant</span>
+				<span class="var-name">$mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsha1" id="sha1"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">sha1</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a521">521</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate an SHA1 Hash</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			sha1
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_remove_cipher_noise" id="_remove_cipher_noise"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_remove_cipher_noise</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesEncrypt.php.html#a394">394</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removes permuted noise from the IV + encrypted data, reversing  _add_cipher_noise()</p>
+<p class="description"><p>Function description</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">type</span>
+		<span class="method-name">
+			_remove_cipher_noise
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:15 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
