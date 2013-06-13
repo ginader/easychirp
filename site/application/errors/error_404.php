@@ -36,7 +36,7 @@ h1 {
 			<ul>
 				<li>Go to previous page using the browser back button.</li>
 				<li>Report error by emailing: info [AT] Easy Chirp [DOT] com.</li>
-				<li><a href="http://www.EasyChirp.com/">Go to Easy Chirp home page</a>.</li>
+				<li><a href="/">Go to Easy Chirp home page</a>.</li>
 			</ul>
 		</div>
 
