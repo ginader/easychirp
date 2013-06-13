@@ -239,6 +239,20 @@ class Main extends EC_Controller {
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+
+		$data['profile'] = $this->twitter_lib->get('users/show', $request_param );
+
 		$this->layout->set_title('My Profile');
 		$this->layout->set_description('Details on my Twitter profile.');
 		$this->layout->view('profile', $data);
@@ -343,7 +357,6 @@ class Main extends EC_Controller {
 		$params[] = $this->config->item('tw_consumer_secret');
 		$params[] = $this->config->item('tw_access_key');
 		$params[] = $this->config->item('tw_access_secret');
-		// $params[] = base_url() . $this->config->item('tw_callback_url');
 		
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
