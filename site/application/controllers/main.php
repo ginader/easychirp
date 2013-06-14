@@ -594,8 +594,10 @@ class Main extends EC_Controller {
 
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
+		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
 
-		$data['tweets'] = $this->twitter_lib->get('statuses/home_timeline', $request_param );
+
 		$this->layout->set_title('Timeline');
 		$this->layout->set_description('Description of Timeline page');
 		$this->layout->view('timeline', $data);

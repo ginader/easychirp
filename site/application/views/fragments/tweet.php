@@ -1,8 +1,37 @@
+<?php
+$months = array();
+$months['jan'] = '01';
+$months['feb'] = '02';
+$months['mar'] = '03';
+$months['apr'] = '04';
+$months['may'] = '05';
+$months['jun'] = '06';
+$months['jul'] = '07';
+$months['aug'] = '08';
+$months['sep'] = '09';
+$months['oct'] = '10';
+$months['nov'] = '11';
+$months['dec'] = '12';
+?>
+<?php foreach($tweets AS $tweet): ?>
+<?php 
+	$date =   $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013	
+	$regex = '/(\w{3}) (\w{3}) (\d\d) (\d\d:\d\d:\d\d) ([+\-]\d\d\d\d) (\d\d\d\d)/';
+
+
+	$is_matched = preg_match($regex, $tweet->created_at, $matches);
+	if ($is_matched){
+		$month_abbr = strtolower($matches[2]);
+		$month = $months[ $month_abbr ]; 
+		
+		$date = sprintf("%s %d-%s-%s %s%s", $matches[1],  $matches[6], $month, $matches[3], $matches[4], $matches[5]);
+	}
+?>
 <div class="tweet rounded clearfix">
 	<div class="tweetAvatar" style="background-image:url(images/avatar_todd.png);"></div>
 	<h2 class="hide">Username 3</h2>
-	<q>The end of the tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweeweetthe tweet the tweetthe tweet the et the tweetthe tweet the tweet</q>
-	<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | via <a href="#">app</a></p>
+	<q><?php echo $tweet->text; ?></q>
+	<p>from <a href="#" title="fullname; followers; following"> <?php echo $tweet->user->screen_name; ?></a> | <a href="#"><?php echo $date; ?></a> | retweet/responding | via <a href="#">app</a></p>
 	<div class="btnOptions">
 		<h3><a href="#tweetOptions_3" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
 		<ul id="tweetOptions_3">
@@ -25,3 +54,4 @@
 		</ul>
 	</div>
 </div>
+<?php endforeach; ?>
