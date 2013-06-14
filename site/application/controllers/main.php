@@ -583,6 +583,19 @@ class Main extends EC_Controller {
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+
+		$data['tweets'] = $this->twitter_lib->get('statuses/home_timeline', $request_param );
 		$this->layout->set_title('Timeline');
 		$this->layout->set_description('Description of Timeline page');
 		$this->layout->view('timeline', $data);
