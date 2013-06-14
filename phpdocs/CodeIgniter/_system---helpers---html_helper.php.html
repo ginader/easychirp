@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page html_helper.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/system/helpers/html_helper.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CodeIgniter</p>
+<p class="description"><p>An open source application development framework for PHP 5.1.6 or newer</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2008 - 2011, EllisLab, Inc.</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com">http://codeigniter.com</a></li>
+				<li><span class="field">since:</span> Version 1.0</li>
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://codeigniter.com/user_guide/license.html">http://codeigniter.com/user_guide/license.html</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionbr" id="functionbr"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">br</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a181">181</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates HTML BR tags based on number supplied</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			br
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$num</span> = <span class="var-default">1</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$num</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondoctype" id="functiondoctype"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">doctype</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a260">260</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Doctype</p>
+<p class="description"><p>Generates a page document type declaration</p><p>Valid options are xhtml-11, xhtml-strict, xhtml-trans, xhtml-frame,  html4-strict, html4-trans, and html4-frame.  Values are saved in the  doctypes config file.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			doctype
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">&#039;xhtml1-strict&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type    The doctype to be generated</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionheading" id="functionheading"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">heading</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a43">43</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Heading</p>
+<p class="description"><p>Generates an HTML heading tag.  First param is the data.  Second param is the size of the heading tag.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			heading
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$h</span> = <span class="var-default">&#039;1&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$h</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$attributes</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionimg" id="functionimg"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">img</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a200">200</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Image</p>
+<p class="description"><p>Generates an &lt;img /&gt; element</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			img
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$index_page</span> = <span class="var-default">FALSE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$src</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$index_page</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlink_tag" id="functionlink_tag"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">link_tag</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a310">310</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Link</p>
+<p class="description"><p>Generates link to a CSS file</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			link_tag
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$href</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rel</span> = <span class="var-default">&#039;stylesheet&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">&#039;text/css&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$media</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$index_page</span> = <span class="var-default">FALSE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$href</span><span class="var-description">: stylesheet hrefs or an array</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rel</span><span class="var-description">: rel</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: title</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$media</span><span class="var-description">: media</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$index_page</span><span class="var-description">: should index_page be added to the css path</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionmeta" id="functionmeta"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">meta</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a385">385</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates meta tags from an array of key/values</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			meta
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$content</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">&#039;name&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$newline</span> = <span class="var-default">&amp;quot;\n&amp;quot;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$content</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$newline</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionnbs" id="functionnbs"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">nbs</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a428">428</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates non-breaking space entities based on number supplied</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			nbs
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$num</span> = <span class="var-default">1</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$num</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionol" id="functionol"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">ol</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a84">84</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ordered List</p>
+<p class="description"><p>Generates an HTML ordered list from an single or multi-dimensional array.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			ol
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$attributes</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$list</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$attributes</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionul" id="functionul"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ul</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpershtml_helper.php.html#a64">64</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Unordered List</p>
+<p class="description"><p>Generates an HTML unordered list from an single or multi-dimensional array.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			ul
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$attributes</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$list</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$attributes</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:24 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

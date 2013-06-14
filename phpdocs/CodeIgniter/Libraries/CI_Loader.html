@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_Loader</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_Loader</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loader Class</p>
+<p class="description"><p>Loads views and files</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/libraries/loader.html">http://codeigniter.com/user_guide/libraries/loader.html</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---core---Loader.php.html">/system/core/Loader.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a29">29</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_base_classes" title="details" class="var-name">$_base_classes</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_cached_vars" title="details" class="var-name">$_ci_cached_vars</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_classes" title="details" class="var-name">$_ci_classes</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_helpers" title="details" class="var-name">$_ci_helpers</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_helper_paths" title="details" class="var-name">$_ci_helper_paths</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_library_paths" title="details" class="var-name">$_ci_library_paths</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_loaded_files" title="details" class="var-name">$_ci_loaded_files</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_models" title="details" class="var-name">$_ci_models</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_model_paths" title="details" class="var-name">$_ci_model_paths</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">int</span>
+					<a href="#$_ci_ob_level" title="details" class="var-name">$_ci_ob_level</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_varmap" title="details" class="var-name">$_ci_varmap</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_ci_view_paths" title="details" class="var-name">$_ci_view_paths</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">CI_Loader</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add_package_path" title="details" class="method-name">add_package_path</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$view_cascade</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#config" title="details" class="method-name">config</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_sections</span> = <span class="var-default">FALSE</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$fail_gracefully</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#database" title="details" class="method-name">database</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$return</span> = <span class="var-default">FALSE</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$active_record</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#dbforge" title="details" class="method-name">dbforge</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#dbutil" title="details" class="method-name">dbutil</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#driver" title="details" class="method-name">driver</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$library</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#file" title="details" class="method-name">file</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$return</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_package_paths" title="details" class="method-name">get_package_paths</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$include_base</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_var" title="details" class="method-name">get_var</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#helper" title="details" class="method-name">helper</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$helpers</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#helpers" title="details" class="method-name">helpers</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$helpers</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#initialize" title="details" class="method-name">initialize</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#is_loaded" title="details" class="method-name">is_loaded</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#language" title="details" class="method-name">language</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#library" title="details" class="method-name">library</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$library</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#model" title="details" class="method-name">model</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$db_conn</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">type</span>
+										<a href="#remove_package_path" title="details" class="method-name">remove_package_path</a>
+											([<span class="var-type">type</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$remove_config_path</span> = <span class="var-default">TRUE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#vars" title="details" class="method-name">vars</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$vars</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#view" title="details" class="method-name">view</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$vars</span> = <span class="var-default">array()</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$return</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#_ci_get_component" title="details" class="method-name">&amp;_ci_get_component</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">null</span>
+										<a href="#_ci_init_class" title="details" class="method-name">_ci_init_class</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_ci_load" title="details" class="method-name">_ci_load</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$_ci_data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_ci_load_class" title="details" class="method-name">_ci_load_class</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#_ci_object_to_array" title="details" class="method-name">_ci_object_to_array</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#_ci_prep_filename" title="details" class="method-name">_ci_prep_filename</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_base_classes" id="$_base_classes"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_base_classes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a74">74</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of loaded base classes  Set by the controller class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_cached_vars" id="$_ci_cached_vars"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_cached_vars</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a81">81</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of cached variables</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_classes" id="$_ci_classes"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_classes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a88">88</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of loaded classes</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_helpers" id="$_ci_helpers"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_helpers</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a109">109</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of loaded helpers</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_helper_paths" id="$_ci_helper_paths"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_helper_paths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a66">66</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of paths to load helpers from</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_library_paths" id="$_ci_library_paths"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_library_paths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a52">52</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of paths to load libraries from</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_loaded_files" id="$_ci_loaded_files"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_loaded_files</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a95">95</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of loaded files</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_models" id="$_ci_models"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_models</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a102">102</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of loaded models</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_model_paths" id="$_ci_model_paths"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_model_paths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a59">59</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of paths to load models from</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_ob_level" id="$_ci_ob_level"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$_ci_ob_level</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Nesting level of the output buffering mechanism</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_varmap" id="$_ci_varmap"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_varmap</span>
+			 = <span class="var-default">array('unit_test' =&gt; 'unit',<br />											'user_agent' =&gt; 'agent')</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a116">116</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of class name mappings</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_ci_view_paths" id="$_ci_view_paths"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_ci_view_paths</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of paths to load views from</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a124">124</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+<p class="description"><p>Sets the path to the view files and gets the initial output buffering level</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">CI_Loader</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodadd_package_path" id="add_package_path"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">add_package_path</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a645">645</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add Package Path</p>
+<p class="description"><p>Prepends a parent path to the library, model, helper, and config path arrays</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_package_path
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$view_cascade</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$view_cascade</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconfig" id="config"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">config</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a593">593</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads a config file</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			config
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_sections</span> = <span class="var-default">FALSE</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$fail_gracefully</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_sections</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$fail_gracefully</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddatabase" id="database"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">database</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a323">323</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database Loader</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			database
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$return</span> = <span class="var-default">FALSE</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$active_record</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$params</span><span class="var-description">: the DB credentials</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$return</span><span class="var-description">: whether to return the DB object</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$active_record</span><span class="var-description">: whether to enable active record (this allows us to override the config setting)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddbforge" id="dbforge"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">dbforge</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a383">383</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load the Database Forge Class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			dbforge
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddbutil" id="dbutil"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">dbutil</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a356">356</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load the Utilities Class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			dbutil
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddriver" id="driver"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">driver</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a611">611</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Driver</p>
+<p class="description"><p>Loads a driver library</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			driver
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$library</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$library</span><span class="var-description">: the name of the class</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$params</span><span class="var-description">: the optional parameters</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$object_name</span><span class="var-description">: an optional object name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfile" id="file"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">file</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a433">433</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load File</p>
+<p class="description"><p>This is a generic file loader</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			file
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$return</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$return</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_package_paths" id="get_package_paths"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_package_paths</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a670">670</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Package Paths</p>
+<p class="description"><p>Return a list of all package paths, by default it will ignore BASEPATH.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_package_paths
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$include_base</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$include_base</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_var" id="get_var"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_var</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a478">478</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Variable</p>
+<p class="description"><p>Check if a variable is set and retrieve it.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_var
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhelper" id="helper"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">helper</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a493">493</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load Helper</p>
+<p class="description"><p>This function loads the specified helper file.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			helper
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$helpers</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$helpers</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodhelpers" id="helpers"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">helpers</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a554">554</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load Helpers</p>
+<p class="description"><p>This is simply an alias to the above function in case the  user has written the plural form of this function.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			helpers
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$helpers</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$helpers</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinitialize" id="initialize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">initialize</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a145">145</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initialize the Loader</p>
+<p class="description"><p>This method is called once in CI_Controller.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			initialize
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">0</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodis_loaded" id="is_loaded"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_loaded</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a171">171</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is Loaded</p>
+<p class="description"><p>A utility function to test if a class is in the self::$_ci_classes array.  This function returns the object name if the class tested for is loaded,  and returns FALSE if it isn't.</p><p>It is mainly used in the form_helper -&gt; _get_validation_object()</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> class object name on the CI SuperObject or FALSE</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			is_loaded
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: class being checked for</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlanguage" id="language"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">language</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a568">568</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads a language file</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			language
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlibrary" id="library"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">library</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a194">194</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class Loader</p>
+<p class="description"><p>This function lets users load and instantiate classes.  It is designed to be called from a user's app controllers.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			library
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$library</span> = <span class="var-default">''</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$library</span><span class="var-description">: the name of the class</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$params</span><span class="var-description">: the optional parameters</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$object_name</span><span class="var-description">: an optional object name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmodel" id="model"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">model</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a231">231</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Model Loader</p>
+<p class="description"><p>This function lets users load and instantiate models.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			model
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$db_conn</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$model</span><span class="var-description">: the name of the class</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: name for the model</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$db_conn</span><span class="var-description">: database connection</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremove_package_path" id="remove_package_path"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">remove_package_path</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a687">687</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove Package Path</p>
+<p class="description"><p>Remove a path from the library, model, and helper path arrays if it exists  If no path is provided, the most recently added path is removed.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">type</span>
+		<span class="method-name">
+			remove_package_path
+		</span>
+					([<span class="var-type">type</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$remove_config_path</span> = <span class="var-default">TRUE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$path</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$remove_config_path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvars" id="vars"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">vars</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a450">450</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Variables</p>
+<p class="description"><p>Once variables are set they become available within  the controller class and its &quot;view&quot; files.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			vars
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$vars</span> = <span class="var-default">array()</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$vars</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodview" id="view"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">view</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a417">417</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load View</p>
+<p class="description"><p>This function is used to load a &quot;view&quot; file.  It has three parameters:</p><p><ol><li>The name of the &quot;view&quot; file to be included.</li><li>An associative array of data to be extracted for use in the view.</li><li>TRUE/FALSE - whether to return the data or load it.  In</li></ol> some cases it's advantageous to be able to return data so that  a developer can process it in some way.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			view
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$view</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$vars</span> = <span class="var-default">array()</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$return</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$view</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$vars</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$return</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_ci_get_component" id="_ci_get_component"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_ci_get_component</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a1212">1212</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a reference to a specific library or model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			&amp;_ci_get_component
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$component</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$component</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_ci_init_class" id="_ci_init_class"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_ci_init_class</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a1007">1007</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Instantiates a class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">null</span>
+		<span class="method-name">
+			_ci_init_class
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$config</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$object_name</span><span class="var-description">: an optional object name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_ci_load" id="_ci_load"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_ci_load</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a741">741</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loader</p>
+<p class="description"><p>This function is used to load views and files.  Variables are prefixed with _ci_ to avoid symbol collision with  variables made available to view files</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_ci_load
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$_ci_data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$_ci_data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_ci_load_class" id="_ci_load_class"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_ci_load_class</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a879">879</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load class</p>
+<p class="description"><p>This function loads the requested class.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_ci_load_class
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$object_name</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: the item that is being loaded</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$params</span><span class="var-description">: any additional parameters</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$object_name</span><span class="var-description">: an optional object name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_ci_object_to_array" id="_ci_object_to_array"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_ci_object_to_array</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a1199">1199</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Object to Array</p>
+<p class="description"><p>Takes an object as input and converts the class variables to array key/vals</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_ci_object_to_array
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_ci_prep_filename" id="_ci_prep_filename"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_ci_prep_filename</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreLoader.php.html#a1229">1229</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prep filename</p>
+<p class="description"><p>This function preps the name of various items to make loading them more reliable.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_ci_prep_filename
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extension</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:37 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

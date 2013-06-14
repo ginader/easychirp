@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page file_helper.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/system/helpers/file_helper.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CodeIgniter</p>
+<p class="description"><p>An open source application development framework for PHP 5.1.6 or newer</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2008 - 2011, EllisLab, Inc.</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com">http://codeigniter.com</a></li>
+				<li><span class="field">since:</span> Version 1.0</li>
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://codeigniter.com/user_guide/license.html">http://codeigniter.com/user_guide/license.html</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functiondelete_files" id="functiondelete_files"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">delete_files</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a121">121</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete Files</p>
+<p class="description"><p>Deletes all files contained in the supplied directory path.  Files must be writable or owned by the system in order to be deleted.  If the second parameter is set to TRUE, any directories contained  within the supplied base directory will be nuked as well.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			delete_files
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$del_dir</span> = <span class="var-default">FALSE</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: path to file</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$del_dir</span><span class="var-description">: whether to delete any directories found in the path</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$level</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionget_dir_file_info" id="functionget_dir_file_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">get_dir_file_info</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a227">227</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Directory File Information</p>
+<p class="description"><p>Reads the specified directory and builds an array containing the filenames,  filesize, dates, and permissions</p><p>Any sub-folders contained within the specified path are read as well.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_dir_file_info
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$source_dir</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$top_level_only</span> = <span class="var-default">TRUE</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$_recursion</span> = <span class="var-default">FALSE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$source_dir</span><span class="var-description">: path to source</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$top_level_only</span><span class="var-description">: Look only at the top level directory specified?</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$_recursion</span><span class="var-description">: internal variable to determine recursion status - do not use in calls</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionget_filenames" id="functionget_filenames"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">get_filenames</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a176">176</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Filenames</p>
+<p class="description"><p>Reads the specified directory and builds an array containing the filenames.  Any sub-folders contained within the specified path are read as well.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_filenames
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$source_dir</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$include_path</span> = <span class="var-default">FALSE</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$_recursion</span> = <span class="var-default">FALSE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$source_dir</span><span class="var-description">: path to source</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$include_path</span><span class="var-description">: whether to include the path as part of the filename</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$_recursion</span><span class="var-description">: internal variable to determine recursion status - do not use in calls</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionget_file_info" id="functionget_file_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">get_file_info</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a281">281</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get File Info</p>
+<p class="description"><p>Given a file and path, returns the name, path, size, date modified  Second parameter allows you to explicitly declare what information you want returned  Options are: name, server_path, size, date, readable, writable, executable, fileperms  Returns FALSE if the file cannot be found.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_file_info
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$returned_values</span> = <span class="var-default">array(&#039;name&#039;, &#039;server_path&#039;, &#039;size&#039;, &#039;date&#039;)</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: path to file</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$returned_values</span><span class="var-description">: array or comma separated string of information returned</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionget_mime_by_extension" id="functionget_mime_by_extension"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">get_mime_by_extension</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a347">347</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Mime by Extension</p>
+<p class="description"><p>Translates a file extension into a mime type based on config/mimes.php.  Returns FALSE if it can't determine the type, or open the mime config file</p><p>Note: this is NOT an accurate way of determining file mime types, and is here strictly as a convenience  It should NOT be trusted, and should certainly NOT be used for security</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			get_mime_by_extension
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: path to file</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionoctal_permissions" id="functionoctal_permissions"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">octal_permissions</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a471">471</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Octal Permissions</p>
+<p class="description"><p>Takes a numeric value representing a file's permissions and returns  a three character string representing the file's octal permissions</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			octal_permissions
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$perms</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$perms</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionread_file" id="functionread_file"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">read_file</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a41">41</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Read File</p>
+<p class="description"><p>Opens the file specfied in the path and returns it as a string.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			read_file
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: path to file</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionsymbolic_permissions" id="functionsymbolic_permissions"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">symbolic_permissions</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a403">403</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Symbolic Permissions</p>
+<p class="description"><p>Takes a numeric value representing a file's permissions and returns  standard symbolic notation representing that value</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			symbolic_permissions
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$perms</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$perms</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionwrite_file" id="functionwrite_file"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">write_file</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemhelpersfile_helper.php.html#a88">88</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Write File</p>
+<p class="description"><p>Writes data to the file specified in the path.  Creates a new file if non-existent.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			write_file
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">FOPEN_WRITE_CREATE_DESTRUCTIVE</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: path to file</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: file data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mode</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:16 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,3 +1,12 @@
+<?php
+/**
+* HTML for the Articles page
+*
+* @package EasyChirp
+* @subpackage Views
+*/
+
+?>
 <h1 class="rounded"><?php echo $xliff_reader->get('articles-h1'); ?></h1>
 
 <div class="p-row-r">

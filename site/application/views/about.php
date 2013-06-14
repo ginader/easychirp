@@ -1,3 +1,11 @@
+<?php
+/**
+* HTML of the About page   
+*
+* @package EasyChirp
+* @subpackage Views
+*/ 
+?>
 <h1 class="rounded"><?php echo $xliff_reader->get('about-h1'); ?></h1>
 
 <div class="p-row-r">

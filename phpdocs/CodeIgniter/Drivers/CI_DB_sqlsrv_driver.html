@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_DB_sqlsrv_driver</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_DB_sqlsrv_driver</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SQLSRV Database Adapter Class</p>
+<p class="description"><p>Note: _DB is an extender class that the app controller  creates dynamically based on whether the active record  class is being used or not.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/database/">http://codeigniter.com/user_guide/database/</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---database---drivers---sqlsrv---sqlsrv_driver.php.html">/system/database/drivers/sqlsrv/sqlsrv_driver.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a31">31</a></span>)
+		</p>
+		
+				
+		<pre>CI_DB
+   |
+   --CI_DB_sqlsrv_driver</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$dbdriver" title="details" class="var-name">$dbdriver</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_count_string" title="details" class="var-name">$_count_string</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_escape_char" title="details" class="var-name">$_escape_char</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_like_escape_chr" title="details" class="var-name">$_like_escape_chr</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_like_escape_str" title="details" class="var-name">$_like_escape_str</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_random_keyword" title="details" class="var-name">$_random_keyword</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#affected_rows" title="details" class="method-name">affected_rows</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#count_all" title="details" class="method-name">count_all</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">resource</span>
+										<a href="#db_connect" title="details" class="method-name">db_connect</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$pooling</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">resource</span>
+										<a href="#db_pconnect" title="details" class="method-name">db_pconnect</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">resource</span>
+										<a href="#db_select" title="details" class="method-name">db_select</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">resource</span>
+										<a href="#db_set_charset" title="details" class="method-name">db_set_charset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$collation</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#escape_str" title="details" class="method-name">escape_str</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$like</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#insert_id" title="details" class="method-name">insert_id</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#reconnect" title="details" class="method-name">reconnect</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#trans_begin" title="details" class="method-name">trans_begin</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$test_mode</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#trans_commit" title="details" class="method-name">trans_commit</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#trans_rollback" title="details" class="method-name">trans_rollback</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_close" title="details" class="method-name">_close</a>
+											(<span class="var-type">resource</span>&nbsp;<span class="var-name">$conn_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_delete" title="details" class="method-name">_delete</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$where</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">2</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">resource</span>
+										<a href="#_execute" title="details" class="method-name">_execute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#_field_data" title="details" class="method-name">_field_data</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">type</span>
+										<a href="#_from_tables" title="details" class="method-name">_from_tables</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$tables</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_insert" title="details" class="method-name">_insert</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_limit" title="details" class="method-name">_limit</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_prep_query" title="details" class="method-name">_prep_query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_truncate" title="details" class="method-name">_truncate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_update" title="details" class="method-name">_update</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$where</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">3</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">4</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_version" title="details" class="method-name">_version</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$dbdriver" id="$dbdriver"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dbdriver</span>
+			 = <span class="var-default"> 'sqlsrv'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_count_string" id="$_count_string"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_count_string</span>
+			 = <span class="var-default"> &quot;SELECT COUNT(*) AS &quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a47">47</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The syntax to count rows is slightly different across different  database engines, so this string appears in each driver and is  used for the count_all() and count_all_results() functions.</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$_escape_char" id="$_escape_char"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_escape_char</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_like_escape_chr" id="$_like_escape_chr"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_like_escape_chr</span>
+			 = <span class="var-default"> '!'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_like_escape_str" id="$_like_escape_str"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_like_escape_str</span>
+			 = <span class="var-default"> &quot; ESCAPE '%s' &quot;</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$_random_keyword" id="$_random_keyword"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_random_keyword</span>
+			 = <span class="var-default"> ' ASC'</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodaffected_rows" id="affected_rows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">affected_rows</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a272">272</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Affected Rows</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			affected_rows
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcount_all" id="count_all"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">count_all</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a336">336</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">&quot;Count All&quot; query</p>
+<p class="description"><p>Generates a platform-specific query string that counts all records in  the specified database</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			count_all
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddb_connect" id="db_connect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">db_connect</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a56">56</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Non-persistent database connection</p>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			db_connect
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$pooling</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pooling</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddb_pconnect" id="db_pconnect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">db_pconnect</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a87">87</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Persistent database connection</p>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			db_pconnect
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddb_select" id="db_select"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">db_select</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a116">116</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Select the database</p>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			db_select
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddb_set_charset" id="db_set_charset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">db_set_charset</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a131">131</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set client character set</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			db_set_charset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$collation</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$charset</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$collation</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodescape_str" id="escape_str"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">escape_str</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a258">258</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escape String</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			escape_str
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$like</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$like</span><span class="var-description">: whether or not the string will be used in a LIKE condition</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert_id" id="insert_id"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_id</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a287">287</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Insert ID</p>
+<p class="description"><p>Returns the last id created in the Identity column.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			insert_id
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodreconnect" id="reconnect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">reconnect</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a103">103</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reconnect</p>
+<p class="description"><p>Keep / reestablish the db connection if no queries have been  sent for a length of time exceeding the server's idle timeout</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			reconnect
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrans_begin" id="trans_begin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_begin</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a179">179</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Begin Transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			trans_begin
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$test_mode</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$test_mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtrans_commit" id="trans_commit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_commit</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Commit Transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			trans_commit
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrans_rollback" id="trans_rollback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">trans_rollback</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a232">232</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rollback Transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			trans_rollback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_close" id="_close"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_close</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a589">589</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close DB Connection</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_close
+		</span>
+					(<span class="var-type">resource</span>&nbsp;<span class="var-name">$conn_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$conn_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_delete" id="_delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_delete</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a555">555</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete statement</p>
+<p class="description"><p>Generates a platform-specific delete string from the supplied data</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_delete
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$where</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">2</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">2</span><span class="var-description">: the limit clause</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$where</span><span class="var-description">: the where clause</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_execute" id="_execute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_execute</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a146">146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the query</p>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			_execute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: an SQL query</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_field_data" id="_field_data"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_field_data</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a394">394</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Field data query</p>
+<p class="description"><p>Generates a platform-specific query so that the column data can be retrieved</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			_field_data
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_from_tables" id="_from_tables"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_from_tables</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a471">471</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">From Tables</p>
+<p class="description"><p>This function implicitly groups FROM tables so there is no confusion  about operator precedence in harmony with SQL standards</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">type</span>
+		<span class="method-name">
+			_from_tables
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$tables</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$tables</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_insert" id="_insert"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_insert</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a494">494</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Insert statement</p>
+<p class="description"><p>Generates a platform-specific insert string from the supplied data</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_insert
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$keys</span><span class="var-description">: the insert keys</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: the insert values</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_limit" id="_limit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_limit</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a573">573</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Limit string</p>
+<p class="description"><p>Generates a platform-specific LIMIT clause</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_limit
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$limit</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: the sql query string</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$limit</span><span class="var-description">: the number of rows to limit the query to</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$offset</span><span class="var-description">: the offset value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_prep_query" id="_prep_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_prep_query</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a166">166</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prep the query</p>
+<p class="description"><p>If needed, each database adapter can prep the query string</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_prep_query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: an SQL query</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_truncate" id="_truncate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_truncate</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a537">537</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Truncate statement</p>
+<p class="description"><p>Generates a platform-specific truncate string from the supplied data  If the database does not support the truncate() command  This function maps to &quot;DELETE FROM table&quot;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_truncate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_update" id="_update"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_update</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a514">514</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update statement</p>
+<p class="description"><p>Generates a platform-specific update string from the supplied data</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_update
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$where</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">3</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">4</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">3</span><span class="var-description">: the orderby clause</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">4</span><span class="var-description">: the limit clause</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: the table name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: the update data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$where</span><span class="var-description">: the where clause</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_version" id="_version"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_version</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlsrvsqlsrv_driver.php.html#a318">318</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Version number query string</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_version
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:25:09 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

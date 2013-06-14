@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for smiley_helper.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file smiley_helper.php</h1>
+<p>Documentation is available at <a href="../CodeIgniter/_system---helpers---smiley_helper.php.html">smiley_helper.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php&nbsp;&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'BASEPATH'</span><span class="src-sym">))&nbsp;</span><span class="src-key">exit</span><span class="src-sym">(</span><span class="src-str">'No&nbsp;direct&nbsp;script&nbsp;access&nbsp;allowed'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;CodeIgniter</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;An&nbsp;open&nbsp;source&nbsp;application&nbsp;development&nbsp;framework&nbsp;for&nbsp;PHP&nbsp;5.1.6&nbsp;or&nbsp;newer</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CodeIgniter</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExpressionEngine&nbsp;Dev&nbsp;Team</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;Copyright&nbsp;(c)&nbsp;2008&nbsp;-&nbsp;2011,&nbsp;EllisLab,&nbsp;Inc.</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://codeigniter.com/user_guide/license.html</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://codeigniter.com</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@since</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version&nbsp;1.0</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@filesource</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">//&nbsp;------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*&nbsp;CodeIgniter&nbsp;Smiley&nbsp;Helpers</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CodeIgniter</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;Helpers</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@category</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;Helpers</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExpressionEngine&nbsp;Dev&nbsp;Team</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://codeigniter.com/user_guide/helpers/smiley_helper.html</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-comm">//&nbsp;------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">&nbsp;*&nbsp;Smiley&nbsp;Javascript</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;*&nbsp;Returns&nbsp;the&nbsp;javascript&nbsp;required&nbsp;for&nbsp;the&nbsp;smiley&nbsp;insertion.&nbsp;&nbsp;Optionally&nbsp;takes</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;*&nbsp;an&nbsp;array&nbsp;of&nbsp;aliases&nbsp;to&nbsp;loosely&nbsp;couple&nbsp;the&nbsp;smiley&nbsp;array&nbsp;to&nbsp;the&nbsp;view.</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@access</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;public</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;alias&nbsp;name&nbsp;or&nbsp;array&nbsp;of&nbsp;alias-&gt;field_id&nbsp;pairs</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;field_id&nbsp;if&nbsp;alias&nbsp;name&nbsp;was&nbsp;passed&nbsp;in</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-str">'smiley_js'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../CodeIgniter/_system---helpers---smiley_helper.php.html#functionsmiley_js">smiley_js</a><span class="src-sym">(</span><span class="src-var">$alias&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$field_id&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$inline&nbsp;</span>=&nbsp;<span class="src-id">TRUE</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">static&nbsp;</span><span class="src-var">$do_setup&nbsp;</span>=&nbsp;<span class="src-id">TRUE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$r&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$alias&nbsp;</span>!=&nbsp;<span class="src-str">''&nbsp;</span>&amp;&amp;&nbsp;<span class="src-sym">!&nbsp;</span><span class="src-id">is_array</span><span class="src-sym">(</span><span class="src-var">$alias</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$alias&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$alias&nbsp;</span>=&gt;&nbsp;<span class="src-var">$field_id</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$do_setup&nbsp;</span>===&nbsp;<span class="src-id">TRUE</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$do_setup&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$m&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-id">is_array</span><span class="src-sym">(</span><span class="src-var">$alias</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach&nbsp;</span><span class="src-sym">(</span><span class="src-var">$alias&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$name&nbsp;</span>=&gt;&nbsp;<span class="src-var">$id</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$m</span><span class="src-sym">[</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'&quot;'</span>.<span class="src-var">$name</span>.<span class="src-str">'&quot;&nbsp;:&nbsp;&quot;'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$m&nbsp;</span>=&nbsp;<span class="src-str">'{'</span>.<span class="src-id">implode</span><span class="src-sym">(</span><span class="src-str">','</span><span class="src-sym">,&nbsp;</span><span class="src-var">$m</span><span class="src-sym">)</span>.<span class="src-str">'}'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$r&nbsp;</span>.=&nbsp;&lt;&lt;&lt;EOF</div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;smiley_map&nbsp;=&nbsp;{<span class="src-var">$m</span><span class="src-sym">}</span>;</div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;insert_smiley(smiley,&nbsp;field_id)&nbsp;{</div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;el&nbsp;=&nbsp;document.getElementById(field_id),&nbsp;newStart;</div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a76"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(&nbsp;!&nbsp;el&nbsp;&amp;&amp;&nbsp;smiley_map[field_id])&nbsp;{</div></li>
+<li><div class="src-line"><a name="a77"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;document.getElementById(smiley_map[field_id]);</div></li>
+<li><div class="src-line"><a name="a78"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a79"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(&nbsp;!&nbsp;el)</div></li>
+<li><div class="src-line"><a name="a80"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;</div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el.focus();</div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smiley&nbsp;=&nbsp;&quot;&nbsp;&quot;&nbsp;+&nbsp;smiley;</div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a86"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;('selectionStart'&nbsp;in&nbsp;el)&nbsp;{</div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newStart&nbsp;=&nbsp;el.selectionStart&nbsp;+&nbsp;smiley.length;</div></li>
+<li><div class="src-line"><a name="a88"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a89"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el.value&nbsp;=&nbsp;el.value.substr(0,&nbsp;el.selectionStart)&nbsp;+</div></li>
+<li><div class="src-line"><a name="a90"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smiley&nbsp;+</div></li>
+<li><div class="src-line"><a name="a91"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el.value.substr(el.selectionEnd,&nbsp;el.value.length);</div></li>
+<li><div class="src-line"><a name="a92"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el.setSelectionRange(newStart,&nbsp;newStart);</div></li>
+<li><div class="src-line"><a name="a93"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a94"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;if&nbsp;(document.selection)&nbsp;{</div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.selection.createRange().text&nbsp;=&nbsp;smiley;</div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a97"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a98"></a>EOF<span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else</span></div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$alias</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach&nbsp;</span><span class="src-sym">(</span><span class="src-var">$alias&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$name&nbsp;</span>=&gt;&nbsp;<span class="src-var">$id</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a106"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$r&nbsp;</span>.=&nbsp;<span class="src-str">'smiley_map[&quot;'</span>.<span class="src-var">$name</span>.<span class="src-str">'&quot;]&nbsp;=&nbsp;&quot;'</span>.<span class="src-var">$id</span>.<span class="src-str">'&quot;;'</span>.<span class="src-str">&quot;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a107"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a110"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$inline</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a112"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a113"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-str">'&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;charset=&quot;utf-8&quot;&gt;/*&lt;![CDATA[&nbsp;*/'</span>.<span class="src-var">$r</span>.<span class="src-str">'//&nbsp;]]&gt;&lt;/script&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a114"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a115"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else</span></div></li>
+<li><div class="src-line"><a name="a116"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$r</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a118"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a119"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a121"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a122"></a><span class="src-comm">//&nbsp;------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a124"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a125"></a><span class="src-doc">&nbsp;*&nbsp;Get&nbsp;Clickable&nbsp;Smileys</span></div></li>
+<li><div class="src-line"><a name="a126"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a127"></a><span class="src-doc">&nbsp;*&nbsp;Returns&nbsp;an&nbsp;array&nbsp;of&nbsp;image&nbsp;tag&nbsp;links&nbsp;that&nbsp;can&nbsp;be&nbsp;clicked&nbsp;to&nbsp;be&nbsp;inserted</span></div></li>
+<li><div class="src-line"><a name="a128"></a><span class="src-doc">&nbsp;*&nbsp;into&nbsp;a&nbsp;form&nbsp;field.</span></div></li>
+<li><div class="src-line"><a name="a129"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a130"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@access</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;public</span></div></li>
+<li><div class="src-line"><a name="a131"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;the&nbsp;URL&nbsp;to&nbsp;the&nbsp;folder&nbsp;containing&nbsp;the&nbsp;smiley&nbsp;images</span></div></li>
+<li><div class="src-line"><a name="a132"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a133"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a134"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-str">'get_clickable_smileys'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a135"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a136"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../CodeIgniter/_system---helpers---smiley_helper.php.html#functionget_clickable_smileys">get_clickable_smileys</a><span class="src-sym">(</span><span class="src-var">$image_url</span><span class="src-sym">,&nbsp;</span><span class="src-var">$alias&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$smileys&nbsp;</span>=&nbsp;<span class="src-id">NULL</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a137"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a138"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;For&nbsp;backward&nbsp;compatibility&nbsp;with&nbsp;js_insert_smiley</span></div></li>
+<li><div class="src-line"><a name="a139"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a140"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$alias</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a141"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a142"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$smileys&nbsp;</span>=&nbsp;<span class="src-var">$alias</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a143"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a144"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a145"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$smileys</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a146"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a147"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-id">FALSE&nbsp;</span>===&nbsp;<span class="src-sym">(</span><span class="src-var">$smileys&nbsp;</span>=&nbsp;<span class="src-id">_get_smiley_array</span><span class="src-sym">(</span><span class="src-sym">)))</span></div></li>
+<li><div class="src-line"><a name="a148"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a149"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$smileys</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a150"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a151"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a152"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a153"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Add&nbsp;a&nbsp;trailing&nbsp;slash&nbsp;to&nbsp;the&nbsp;file&nbsp;path&nbsp;if&nbsp;needed</span></div></li>
+<li><div class="src-line"><a name="a154"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$image_url&nbsp;</span>=&nbsp;<a href="http://www.php.net/rtrim">rtrim</a><span class="src-sym">(</span><span class="src-var">$image_url</span><span class="src-sym">,&nbsp;</span><span class="src-str">'/'</span><span class="src-sym">)</span>.<span class="src-str">'/'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a155"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a156"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$used&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a157"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach&nbsp;</span><span class="src-sym">(</span><span class="src-var">$smileys&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$key&nbsp;</span>=&gt;&nbsp;<span class="src-var">$val</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a158"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a159"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Keep&nbsp;duplicates&nbsp;from&nbsp;being&nbsp;used,&nbsp;which&nbsp;can&nbsp;happen&nbsp;if&nbsp;the</span></div></li>
+<li><div class="src-line"><a name="a160"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;mapping&nbsp;array&nbsp;contains&nbsp;multiple&nbsp;identical&nbsp;replacements.&nbsp;&nbsp;For&nbsp;example:</span></div></li>
+<li><div class="src-line"><a name="a161"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;:-)&nbsp;and&nbsp;:)&nbsp;might&nbsp;be&nbsp;replaced&nbsp;with&nbsp;the&nbsp;same&nbsp;image&nbsp;so&nbsp;both&nbsp;smileys</span></div></li>
+<li><div class="src-line"><a name="a162"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;will&nbsp;be&nbsp;in&nbsp;the&nbsp;array.</span></div></li>
+<li><div class="src-line"><a name="a163"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$used</span><span class="src-sym">[</span><span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]]</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a164"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a165"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">continue</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a166"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a167"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a168"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$link</span><span class="src-sym">[</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;&lt;a&nbsp;href=\&quot;javascript:void(0);\&quot;&nbsp;onclick=\&quot;insert_smiley('&quot;</span>.<span class="src-var">$key</span>.<span class="src-str">&quot;',&nbsp;'&quot;</span>.<span class="src-var">$alias</span>.<span class="src-str">&quot;')\&quot;&gt;&lt;img&nbsp;src=\&quot;&quot;</span>.<span class="src-var">$image_url</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;width=\&quot;&quot;</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;height=\&quot;&quot;</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;alt=\&quot;&quot;</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;style=\&quot;border:0;\&quot;&nbsp;/&gt;&lt;/a&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a169"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a170"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$used</span><span class="src-sym">[</span><span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]]&nbsp;</span>=&nbsp;<span class="src-id">TRUE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a171"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a172"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a173"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$link</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a174"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a175"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a176"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a177"></a><span class="src-comm">//&nbsp;------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a178"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a179"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a180"></a><span class="src-doc">&nbsp;*&nbsp;Parse&nbsp;Smileys</span></div></li>
+<li><div class="src-line"><a name="a181"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a182"></a><span class="src-doc">&nbsp;*&nbsp;Takes&nbsp;a&nbsp;string&nbsp;as&nbsp;input&nbsp;and&nbsp;swaps&nbsp;any&nbsp;contained&nbsp;smileys&nbsp;for&nbsp;the&nbsp;actual&nbsp;image</span></div></li>
+<li><div class="src-line"><a name="a183"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a184"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@access</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;public</span></div></li>
+<li><div class="src-line"><a name="a185"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;the&nbsp;text&nbsp;to&nbsp;be&nbsp;parsed</span></div></li>
+<li><div class="src-line"><a name="a186"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;the&nbsp;URL&nbsp;to&nbsp;the&nbsp;folder&nbsp;containing&nbsp;the&nbsp;smiley&nbsp;images</span></div></li>
+<li><div class="src-line"><a name="a187"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a188"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a189"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-str">'parse_smileys'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a190"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a191"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../CodeIgniter/_system---helpers---smiley_helper.php.html#functionparse_smileys">parse_smileys</a><span class="src-sym">(</span><span class="src-var">$str&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$image_url&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$smileys&nbsp;</span>=&nbsp;<span class="src-id">NULL</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a192"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a193"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-var">$image_url&nbsp;</span>==&nbsp;<span class="src-str">''</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a194"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a195"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$str</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a196"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a197"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a198"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$smileys</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a199"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a200"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-id">FALSE&nbsp;</span>===&nbsp;<span class="src-sym">(</span><span class="src-var">$smileys&nbsp;</span>=&nbsp;<span class="src-id">_get_smiley_array</span><span class="src-sym">(</span><span class="src-sym">)))</span></div></li>
+<li><div class="src-line"><a name="a201"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a202"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$str</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a203"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a204"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a205"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a206"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Add&nbsp;a&nbsp;trailing&nbsp;slash&nbsp;to&nbsp;the&nbsp;file&nbsp;path&nbsp;if&nbsp;needed</span></div></li>
+<li><div class="src-line"><a name="a207"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$image_url&nbsp;</span>=&nbsp;<a href="http://www.php.net/preg_replace">preg_replace</a><span class="src-sym">(</span><span class="src-str">&quot;/(.+?)\/*$/&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;\\1/&quot;</span><span class="src-sym">,&nbsp;&nbsp;</span><span class="src-var">$image_url</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a208"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a209"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach&nbsp;</span><span class="src-sym">(</span><span class="src-var">$smileys&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$key&nbsp;</span>=&gt;&nbsp;<span class="src-var">$val</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a210"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a211"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$str&nbsp;</span>=&nbsp;<a href="http://www.php.net/str_replace">str_replace</a><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;&lt;img&nbsp;src=\&quot;&quot;</span>.<span class="src-var">$image_url</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;width=\&quot;&quot;</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;height=\&quot;&quot;</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">2</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;alt=\&quot;&quot;</span>.<span class="src-var">$smileys</span><span class="src-sym">[</span><span class="src-var">$key</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-num">3</span><span class="src-sym">]</span>.<span class="src-str">&quot;\&quot;&nbsp;style=\&quot;border:0;\&quot;&nbsp;/&gt;&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-var">$str</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a212"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a213"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a214"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$str</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a215"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a216"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a217"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a218"></a><span class="src-comm">//&nbsp;------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a219"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a220"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a221"></a><span class="src-doc">&nbsp;*&nbsp;Get&nbsp;Smiley&nbsp;Array</span></div></li>
+<li><div class="src-line"><a name="a222"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a223"></a><span class="src-doc">&nbsp;*&nbsp;Fetches&nbsp;the&nbsp;config/smiley.php&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a224"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a225"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@access</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;private</span></div></li>
+<li><div class="src-line"><a name="a226"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a227"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a228"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-str">'_get_smiley_array'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a229"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a230"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><span class="src-id">_get_smiley_array</span><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a231"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a232"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'ENVIRONMENT'</span><span class="src-sym">)&nbsp;</span><span class="src-key">AND&nbsp;</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-id"><a href="../default/_index.php.html#defineAPPPATH">APPPATH</a></span>.<span class="src-str">'config/'</span>.<span class="src-id"><a href="../default/_index.php.html#defineENVIRONMENT">ENVIRONMENT</a></span>.<span class="src-str">'/smileys.php'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a233"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a234"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include</span><span class="src-sym">(</span><span class="src-id"><a href="../default/_index.php.html#defineAPPPATH">APPPATH</a></span>.<span class="src-str">'config/'</span>.<span class="src-id"><a href="../default/_index.php.html#defineENVIRONMENT">ENVIRONMENT</a></span>.<span class="src-str">'/smileys.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a235"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a236"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">elseif&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-id"><a href="../default/_index.php.html#defineAPPPATH">APPPATH</a></span>.<span class="src-str">'config/smileys.php'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a237"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a238"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-inc">include</span><span class="src-sym">(</span><span class="src-id"><a href="../default/_index.php.html#defineAPPPATH">APPPATH</a></span>.<span class="src-str">'config/smileys.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a239"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a240"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a241"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$smileys</span><span class="src-sym">)&nbsp;</span><span class="src-key">AND&nbsp;</span><a href="http://www.php.net/is_array">is_array</a><span class="src-sym">(</span><span class="src-var">$smileys</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a242"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a243"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$smileys</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a244"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a245"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a246"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a247"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a248"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a249"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a250"></a><span class="src-comm">//&nbsp;------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a251"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a252"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a253"></a><span class="src-doc">&nbsp;*&nbsp;JS&nbsp;Insert&nbsp;Smiley</span></div></li>
+<li><div class="src-line"><a name="a254"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a255"></a><span class="src-doc">&nbsp;*&nbsp;Generates&nbsp;the&nbsp;javascript&nbsp;function&nbsp;needed&nbsp;to&nbsp;insert&nbsp;smileys&nbsp;into&nbsp;a&nbsp;form&nbsp;field</span></div></li>
+<li><div class="src-line"><a name="a256"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a257"></a><span class="src-doc">&nbsp;*&nbsp;DEPRECATED&nbsp;as&nbsp;of&nbsp;version&nbsp;1.7.2,&nbsp;use&nbsp;smiley_js&nbsp;instead</span></div></li>
+<li><div class="src-line"><a name="a258"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a259"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@access</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;public</span></div></li>
+<li><div class="src-line"><a name="a260"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;form&nbsp;name</span></div></li>
+<li><div class="src-line"><a name="a261"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;field&nbsp;name</span></div></li>
+<li><div class="src-line"><a name="a262"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a263"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a264"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/function_exists">function_exists</a><span class="src-sym">(</span><span class="src-str">'js_insert_smiley'</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a265"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a266"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../CodeIgniter/_system---helpers---smiley_helper.php.html#functionjs_insert_smiley">js_insert_smiley</a><span class="src-sym">(</span><span class="src-var">$form_name&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">,&nbsp;</span><span class="src-var">$form_field&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a267"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a268"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span>&lt;&lt;&lt;EOF</div></li>
+<li><div class="src-line"><a name="a269"></a>&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a270"></a>&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;insert_smiley(smiley)</div></li>
+<li><div class="src-line"><a name="a271"></a>&nbsp;&nbsp;&nbsp;&nbsp;{</div></li>
+<li><div class="src-line"><a name="a272"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.{<span class="src-var">$form_name</span><span class="src-sym">}</span>.{<span class="src-var">$form_field</span><span class="src-sym">}</span>.value&nbsp;+=&nbsp;&quot;&nbsp;&quot;&nbsp;+&nbsp;smiley;</div></li>
+<li><div class="src-line"><a name="a273"></a>&nbsp;&nbsp;&nbsp;&nbsp;}</div></li>
+<li><div class="src-line"><a name="a274"></a>&lt;/script&gt;</div></li>
+<li><div class="src-line"><a name="a275"></a>EOF<span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a276"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a277"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a278"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a279"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a280"></a><span class="src-comm">/*&nbsp;End&nbsp;of&nbsp;file&nbsp;smiley_helper.php&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a281"></a><span class="src-comm">/*&nbsp;Location:&nbsp;./system/helpers/smiley_helper.php&nbsp;*/</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:25:06 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

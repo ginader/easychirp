@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_DB_result</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_DB_result</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database Result Class</p>
+<p class="description"><p>This is the platform-independent result class.  This class will not be called directly. Rather, the adapter  class for the specific database will extend and instantiate it.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/database/">http://codeigniter.com/user_guide/database/</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---database---DB_result.php.html">/system/database/DB_result.php</a> (line <span class="field"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a29">29</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_cubrid_result.html">CI_DB_cubrid_result</a></td>
+					<td>
+											CUBRID Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_mssql_result.html">CI_DB_mssql_result</a></td>
+					<td>
+											MS SQL Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_mysql_result.html">CI_DB_mysql_result</a></td>
+					<td>
+											MySQL Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_mysqli_result.html">CI_DB_mysqli_result</a></td>
+					<td>
+											MySQLi Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_oci8_result.html">CI_DB_oci8_result</a></td>
+					<td>
+											oci8 Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_odbc_result.html">CI_DB_odbc_result</a></td>
+					<td>
+											ODBC Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_pdo_result.html">CI_DB_pdo_result</a></td>
+					<td>
+											PDO Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_postgre_result.html">CI_DB_postgre_result</a></td>
+					<td>
+											Postgres Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_sqlite_result.html">CI_DB_sqlite_result</a></td>
+					<td>
+											SQLite Result Class
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../CodeIgniter/CI_DB_sqlsrv_result.html">CI_DB_sqlsrv_result</a></td>
+					<td>
+											SQLSRV Result Class
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$conn_id" title="details" class="var-name">$conn_id</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$current_row" title="details" class="var-name">$current_row</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$custom_result_object" title="details" class="var-name">$custom_result_object</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$num_rows" title="details" class="var-name">$num_rows</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$result_array" title="details" class="var-name">$result_array</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$result_id" title="details" class="var-name">$result_id</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$result_object" title="details" class="var-name">$result_object</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$row_data" title="details" class="var-name">$row_data</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#custom_result_object" title="details" class="method-name">custom_result_object</a>
+											(<span class="var-type">class_name</span>&nbsp;<span class="var-name">$class_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#custom_row_object" title="details" class="method-name">custom_row_object</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$n</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#field_data" title="details" class="method-name">field_data</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#first_row" title="details" class="method-name">first_row</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#free_result" title="details" class="method-name">free_result</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#last_row" title="details" class="method-name">last_row</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#list_fields" title="details" class="method-name">list_fields</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#next_row" title="details" class="method-name">next_row</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#num_fields" title="details" class="method-name">num_fields</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#num_rows" title="details" class="method-name">num_rows</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#previous_row" title="details" class="method-name">previous_row</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#result" title="details" class="method-name">result</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#result_array" title="details" class="method-name">result_array</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#result_object" title="details" class="method-name">result_object</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#row" title="details" class="method-name">row</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#row_array" title="details" class="method-name">row_array</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#row_object" title="details" class="method-name">row_object</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#set_row" title="details" class="method-name">set_row</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_data_seek" title="details" class="method-name">_data_seek</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_fetch_assoc" title="details" class="method-name">_fetch_assoc</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_fetch_object" title="details" class="method-name">_fetch_object</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$conn_id" id="$conn_id"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$conn_id</span>
+			 = <span class="var-default"> NULL</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$current_row" id="$current_row"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$current_row</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$custom_result_object" id="$custom_result_object"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$custom_result_object</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$num_rows" id="$num_rows"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$num_rows</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_pdo_result.html#var$num_rows">CI_DB_pdo_result::$num_rows</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$result_array" id="$result_array"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$result_array</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$result_id" id="$result_id"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$result_id</span>
+			 = <span class="var-default"> NULL</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$result_object" id="$result_object"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$result_object</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$row_data" id="$row_data"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$row_data</span>
+			 = <span class="var-default"> NULL</span>			(line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodcustom_result_object" id="custom_result_object"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">custom_result_object</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a63">63</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Custom query result.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> of objects</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			custom_result_object
+		</span>
+					(<span class="var-type">class_name</span>&nbsp;<span class="var-name">$class_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">class_name</span>
+				<span class="var-name">$class_name</span><span class="var-description">: A string that represents the type of object you want back</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcustom_row_object" id="custom_row_object"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">custom_row_object</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a233">233</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a single result row - custom object version</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			custom_row_object
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$n</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$n</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfield_data" id="field_data"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">field_data</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a400">400</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			field_data
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_cubrid_result.html#methodfield_data">CI_DB_cubrid_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mssql_result.html#methodfield_data">CI_DB_mssql_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysql_result.html#methodfield_data">CI_DB_mysql_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysqli_result.html#methodfield_data">CI_DB_mysqli_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#methodfield_data">CI_DB_oci8_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_odbc_result.html#methodfield_data">CI_DB_odbc_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_pdo_result.html#methodfield_data">CI_DB_pdo_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_postgre_result.html#methodfield_data">CI_DB_postgre_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlite_result.html#methodfield_data">CI_DB_sqlite_result::field_data()</a>
+								: Field data
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlsrv_result.html#methodfield_data">CI_DB_sqlsrv_result::field_data()</a>
+								: Field data
+							</li>
+				</ul>
+	</div>
+<a name="methodfirst_row" id="first_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">first_row</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a307">307</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the &quot;first&quot; row</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			first_row
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfree_result" id="free_result"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">free_result</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a401">401</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			free_result
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_cubrid_result.html#methodfree_result">CI_DB_cubrid_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mssql_result.html#methodfree_result">CI_DB_mssql_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysql_result.html#methodfree_result">CI_DB_mysql_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysqli_result.html#methodfree_result">CI_DB_mysqli_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#methodfree_result">CI_DB_oci8_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_odbc_result.html#methodfree_result">CI_DB_odbc_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_pdo_result.html#methodfree_result">CI_DB_pdo_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_postgre_result.html#methodfree_result">CI_DB_postgre_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlite_result.html#methodfree_result">CI_DB_sqlite_result::free_result()</a>
+								: Free the result
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlsrv_result.html#methodfree_result">CI_DB_sqlsrv_result::free_result()</a>
+								: Free the result
+							</li>
+				</ul>
+	</div>
+<a name="methodlast_row" id="last_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">last_row</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a326">326</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the &quot;last&quot; row</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			last_row
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlist_fields" id="list_fields"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_fields</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a399">399</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_fields
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_cubrid_result.html#methodlist_fields">CI_DB_cubrid_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mssql_result.html#methodlist_fields">CI_DB_mssql_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysql_result.html#methodlist_fields">CI_DB_mysql_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysqli_result.html#methodlist_fields">CI_DB_mysqli_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#methodlist_fields">CI_DB_oci8_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_odbc_result.html#methodlist_fields">CI_DB_odbc_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_pdo_result.html#methodlist_fields">CI_DB_pdo_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_postgre_result.html#methodlist_fields">CI_DB_postgre_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlite_result.html#methodlist_fields">CI_DB_sqlite_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlsrv_result.html#methodlist_fields">CI_DB_sqlsrv_result::list_fields()</a>
+								: Fetch Field Names
+							</li>
+				</ul>
+	</div>
+<a name="methodnext_row" id="next_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">next_row</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a345">345</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the &quot;next&quot; row</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			next_row
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnum_fields" id="num_fields"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">num_fields</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a398">398</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			num_fields
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_cubrid_result.html#methodnum_fields">CI_DB_cubrid_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mssql_result.html#methodnum_fields">CI_DB_mssql_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysql_result.html#methodnum_fields">CI_DB_mysql_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysqli_result.html#methodnum_fields">CI_DB_mysqli_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#methodnum_fields">CI_DB_oci8_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_odbc_result.html#methodnum_fields">CI_DB_odbc_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_pdo_result.html#methodnum_fields">CI_DB_pdo_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_postgre_result.html#methodnum_fields">CI_DB_postgre_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlite_result.html#methodnum_fields">CI_DB_sqlite_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlsrv_result.html#methodnum_fields">CI_DB_sqlsrv_result::num_fields()</a>
+								: Number of fields in the result set
+							</li>
+				</ul>
+	</div>
+<a name="methodnum_rows" id="num_rows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">num_rows</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a397">397</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The following functions are normally overloaded by the identically named  methods in the platform-specific driver -- except when query caching  is used.  When caching is enabled we do not load the other driver.</p>
+<p class="description"><p>These functions are primarily here to prevent undefined function errors  when a cached result object is in use.  They are not otherwise fully  operational due to the unavailability of the database resource IDs with  cached results.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			num_rows
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_cubrid_result.html#methodnum_rows">CI_DB_cubrid_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mssql_result.html#methodnum_rows">CI_DB_mssql_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysql_result.html#methodnum_rows">CI_DB_mysql_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_mysqli_result.html#methodnum_rows">CI_DB_mysqli_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#methodnum_rows">CI_DB_oci8_result::num_rows()</a>
+								: Number of rows in the result set.
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_odbc_result.html#methodnum_rows">CI_DB_odbc_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_pdo_result.html#methodnum_rows">CI_DB_pdo_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_postgre_result.html#methodnum_rows">CI_DB_postgre_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlite_result.html#methodnum_rows">CI_DB_sqlite_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+					<li>
+				<a href="../CodeIgniter/CI_DB_sqlsrv_result.html#methodnum_rows">CI_DB_sqlsrv_result::num_rows()</a>
+								: Number of rows in the result set
+							</li>
+				</ul>
+	</div>
+<a name="methodprevious_row" id="previous_row"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">previous_row</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a370">370</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the &quot;previous&quot; row</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			previous_row
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodresult" id="result"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">result</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a48">48</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Query result.  Acts as a wrapper function for the following functions.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> either a result object or array</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			result
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: can be &quot;object&quot; or &quot;array&quot;</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodresult_array" id="result_array"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">result_array</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a135">135</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Query result.  &quot;array&quot; version.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			result_array
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#methodresult_array">CI_DB_oci8_result::result_array()</a>
+								: Query result.  &quot;array&quot; version.
+							</li>
+				</ul>
+	</div>
+<a name="methodresult_object" id="result_object"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">result_object</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a103">103</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Query result.  &quot;object&quot; version.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			result_object
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodrow" id="row"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">row</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a169">169</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Query result.  Acts as a wrapper function for the following functions.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> either a result object or array</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			row
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'object'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$n</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: can be &quot;object&quot; or &quot;array&quot;</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrow_array" id="row_array"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">row_array</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a281">281</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a single result row - array version</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			row_array
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrow_object" id="row_object"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">row_object</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a256">256</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a single result row - object version</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			row_object
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_row" id="set_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_row</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a201">201</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Assigns an item into a particular column slot</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			set_row
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_data_seek" id="_data_seek"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_data_seek</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a402">402</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_data_seek
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#method_data_seek">CI_DB_oci8_result::_data_seek()</a>
+								: Data Seek
+							</li>
+				</ul>
+	</div>
+<a name="method_fetch_assoc" id="_fetch_assoc"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_fetch_assoc</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a403">403</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_fetch_assoc
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#method_fetch_assoc">CI_DB_oci8_result::_fetch_assoc()</a>
+								: Result - associative array
+							</li>
+				</ul>
+	</div>
+<a name="method_fetch_object" id="_fetch_object"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_fetch_object</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabaseDB_result.php.html#a404">404</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_fetch_object
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../CodeIgniter/CI_DB_oci8_result.html#method_fetch_object">CI_DB_oci8_result::_fetch_object()</a>
+								: Result - object
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:24:07 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

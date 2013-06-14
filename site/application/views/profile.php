@@ -1,36 +1,45 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('profile-h1'); ?></h1>
 
 <p id="editProfileLink"><a href="/profile_edit"><?php echo $xliff_reader->get('profile-edit-link'); ?></a></p>
-
+<?php
+	$styles = 'background-color: #' . $profile->profile_background_color . ';';
+	if ( isset( $profile->profile_background_image_url ))
+	{
+		$styles .= 'background-image: url(' . $profile->profile_background_image_url . ');'
+			. ' background-repeat: no-repeat;';
+	}
+	$styles .= 'color: #' . $profile->profile_text_color . ';';
+?>
+<?php #debug_object( $profile ); ?>
 <h2 class="marginAdjustment">Details</h2>
-<div class="box1 rounded no-margin">
+<div class="box1 rounded no-margin" style="<?php echo $styles; ?>">
 	<dl id="profile" class="clearfix">
 		<dt><?php echo $xliff_reader->get('profile-dt-username'); ?></dt>
-		<dd>USERNAME</dd>
+		<dd><?php echo $profile->screen_name; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-name'); ?></dt>
-		<dd>NAME</dd>
+		<dd><?php echo $profile->name; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-location'); ?></dt>
-		<dd>LOCATION</dd>
+		<dd><?php echo $profile->location; ?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
-		<dd>DATE</dd>
+		<dd><?php echo $profile->created_at; ?></dd>
 		
 		<dt><abbr title="one-line biography">Bio</abbr></dt>
-		<dd>BIO</dd>
+		<dd><?php echo $profile->description; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
-		<dd><a href="#">URL</a></dd>
+		<dd><a href="<?php echo $profile->url; ?>"><?php echo $profile->url; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
-		<dd><a href="/mytweets" title="view my tweets">[COUNT]</a></dd>
+		<dd><a href="/mytweets" title="view my tweets"><?php echo $profile->statuses_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-following'); ?></dt>
-		<dd><a href="/following" title="view users that I'm following">[COUNT]</a></dd>
+		<dd><a href="/following" title="view users that I'm following"><?php echo $profile->friends_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-followers'); ?></dt>
-		<dd><a href="/followers" title="view users following me">[COUNT]</a></dd>
+		<dd><a href="/followers" title="view users following me"><?php echo $profile->followers_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
 		<dd><a href="/lists"><?php echo $xliff_reader->get('profile-dd-my-lists'); ?></a></dd>

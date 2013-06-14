@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_Config</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_Config</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CodeIgniter Config Class</p>
+<p class="description"><p>This class contains functions that enable config files to be managed</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/libraries/config.html">http://codeigniter.com/user_guide/libraries/config.html</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---core---Config.php.html">/system/core/Config.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a29">29</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$config" title="details" class="var-name">$config</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$is_loaded" title="details" class="var-name">$is_loaded</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_config_paths" title="details" class="var-name">$_config_paths</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																												
+												<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">1</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">2</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#base_url" title="details" class="method-name">base_url</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#item" title="details" class="method-name">item</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">''</span>], <span class="var-type">bool</span>&nbsp;<span class="var-name">2</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#load" title="details" class="method-name">load</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_sections</span> = <span class="var-default">FALSE</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$fail_gracefully</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_item" title="details" class="method-name">set_item</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#site_url" title="details" class="method-name">site_url</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#slash_item" title="details" class="method-name">slash_item</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">1</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#system_url" title="details" class="method-name">system_url</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#_uri_string" title="details" class="method-name">_uri_string</a>
+											(<span class="var-type">$uri</span>&nbsp;<span class="var-name">$uri</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$config" id="$config"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$config</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of all loaded config values</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$is_loaded" id="$is_loaded"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$is_loaded</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of all loaded config files</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$_config_paths" id="$_config_paths"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_config_paths</span>
+			 = <span class="var-default">array(APPPATH)</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a48">48</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of paths to search when trying to load a config file</p>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a61">61</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+<p class="description"><p>Sets the $config data from the primary config.php file as a class variable</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> if the file was successfully loaded or not</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">1</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">2</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">0</span><span class="var-description">: the config file name</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">1</span><span class="var-description">: if configuration values should be loaded into their own section</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">2</span><span class="var-description">: true if errors should just return false, false if an error message should be displayed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbase_url" id="base_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">base_url</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a280">280</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Base URL  Returns base_url [. uri_string]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			base_url
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoditem" id="item"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">item</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a189">189</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch a config file item</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			item
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">''</span>], <span class="var-type">bool</span>&nbsp;<span class="var-name">2</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">2</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$item</span><span class="var-description">: the config item name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$index</span><span class="var-description">: the index name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodload" id="load"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">load</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a96">96</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load Config File</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> if the file was loaded correctly</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			load
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">''</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$use_sections</span> = <span class="var-default">FALSE</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$fail_gracefully</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: the config file name</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$use_sections</span><span class="var-description">: if configuration values should be loaded into their own section</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$fail_gracefully</span><span class="var-description">: true if errors should just return false, false if an error message should be displayed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_item" id="set_item"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_item</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a346">346</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a config file item</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_item
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$item</span><span class="var-description">: the config item key</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: the config item value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsite_url" id="site_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">site_url</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a252">252</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Site URL  Returns base_url . index_page [. uri_string]</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			site_url
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$uri</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uri</span><span class="var-description">: the URI string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodslash_item" id="slash_item"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">slash_item</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a228">228</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch a config file item - adds slash after item (if item is not empty)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			slash_item
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$item</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">1</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">1</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$item</span><span class="var-description">: the config item name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsystem_url" id="system_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">system_url</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a330">330</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">System URL</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			system_url
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_uri_string" id="_uri_string"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_uri_string</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemcoreConfig.php.html#a294">294</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Build URI string for use in Config::site_url() and Config::base_url()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_uri_string
+		</span>
+					(<span class="var-type">$uri</span>&nbsp;<span class="var-name">$uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$uri</span>
+				<span class="var-name">$uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:23:51 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

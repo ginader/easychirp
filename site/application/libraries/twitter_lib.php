@@ -51,6 +51,13 @@ class Twitter_lib {
 		}
 	}
 
+	public function get($url, $params = array())
+	{
+		return $this->twitteroauth->get($url, $params);
+		
+	}
+
+	
 
 }
 

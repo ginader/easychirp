@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_Xmlrpcs</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_Xmlrpcs</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML-RPC server class</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/libraries/xmlrpc.html">http://codeigniter.com/user_guide/libraries/xmlrpc.html</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---libraries---Xmlrpcs.php.html">/system/libraries/Xmlrpcs.php</a> (line <span class="field"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a37">37</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html">CI_Xmlrpc</a>
+   |
+   --CI_Xmlrpcs</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$controller_obj" title="details" class="var-name">$controller_obj</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$debug_msg" title="details" class="var-name">$debug_msg</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$methods" title="details" class="var-name">$methods</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$object" title="details" class="var-name">$object</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$system_methods" title="details" class="var-name">$system_methods</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">CI_Xmlrpcs</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add_to_map" title="details" class="method-name">add_to_map</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$methodname</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$function</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sig</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$doc</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#do_multicall" title="details" class="method-name">do_multicall</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$call</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#initialize" title="details" class="method-name">initialize</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#listMethods" title="details" class="method-name">listMethods</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#methodHelp" title="details" class="method-name">methodHelp</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#methodSignature" title="details" class="method-name">methodSignature</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#multicall" title="details" class="method-name">multicall</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object</span>
+										<a href="#multicall_error" title="details" class="method-name">multicall_error</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$err</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">object xmlrpc</span>
+										<a href="#parseRequest" title="details" class="method-name">parseRequest</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#serve" title="details" class="method-name">serve</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_system_methods" title="details" class="method-name">set_system_methods</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#_execute" title="details" class="method-name">_execute</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$m</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$controller_obj" id="$controller_obj"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$controller_obj</span>
+						(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$debug_msg" id="$debug_msg"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$debug_msg</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$methods" id="$methods"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$methods</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$object" id="$object"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$object</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$system_methods" id="$system_methods"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$system_methods</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html">CI_Xmlrpc</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$client">CI_Xmlrpc::$client</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$data">CI_Xmlrpc::$data</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$debug">CI_Xmlrpc::$debug</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$error">CI_Xmlrpc::$error</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$message">CI_Xmlrpc::$message</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$method">CI_Xmlrpc::$method</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$response">CI_Xmlrpc::$response</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$result">CI_Xmlrpc::$result</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$valid_parents">CI_Xmlrpc::$valid_parents</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcArray">CI_Xmlrpc::$xmlrpcArray</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcBase64">CI_Xmlrpc::$xmlrpcBase64</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcBoolean">CI_Xmlrpc::$xmlrpcBoolean</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcDateTime">CI_Xmlrpc::$xmlrpcDateTime</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcDouble">CI_Xmlrpc::$xmlrpcDouble</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcerr">CI_Xmlrpc::$xmlrpcerr</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcerruser">CI_Xmlrpc::$xmlrpcerruser</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcerrxml">CI_Xmlrpc::$xmlrpcerrxml</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcI4">CI_Xmlrpc::$xmlrpcI4</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcInt">CI_Xmlrpc::$xmlrpcInt</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcName">CI_Xmlrpc::$xmlrpcName</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcstr">CI_Xmlrpc::$xmlrpcstr</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcString">CI_Xmlrpc::$xmlrpcString</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcStruct">CI_Xmlrpc::$xmlrpcStruct</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcTypes">CI_Xmlrpc::$xmlrpcTypes</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpcVersion">CI_Xmlrpc::$xmlrpcVersion</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpc_backslash">CI_Xmlrpc::$xmlrpc_backslash</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xmlrpc_defencoding">CI_Xmlrpc::$xmlrpc_defencoding</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#var$xss_clean">CI_Xmlrpc::$xss_clean</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a49">49</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">CI_Xmlrpcs</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$config</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#method__construct">CI_Xmlrpc::__construct()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodadd_to_map" id="add_to_map"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">add_to_map</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a156">156</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add Method to Class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_to_map
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$methodname</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$function</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$sig</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$doc</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$methodname</span><span class="var-description">: method name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$function</span><span class="var-description">: function</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sig</span><span class="var-description">: signature</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$doc</span><span class="var-description">: docstring</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddo_multicall" id="do_multicall"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">do_multicall</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a557">557</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Multi-call Function:  Processes method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			do_multicall
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$call</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$call</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinitialize" id="initialize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">initialize</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initialize Prefs and Serve</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			initialize
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$config</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$config</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodinitialize">CI_Xmlrpc::initialize()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodlistMethods" id="listMethods"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">listMethods</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a394">394</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Server Function:  List Methods</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			listMethods
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$m</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmethodHelp" id="methodHelp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">methodHelp</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a467">467</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Server Function:  Doc String for Method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			methodHelp
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$m</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmethodSignature" id="methodSignature"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">methodSignature</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a422">422</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Server Function:  Return Signature for Method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			methodSignature
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$m</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmulticall" id="multicall"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">multicall</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a493">493</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Server Function:  Multi-call</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			multicall
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$m</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$m</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmulticall_error" id="multicall_error"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">multicall_error</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a537">537</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Multi-call Function:  Error Handling</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			multicall_error
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$err</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$err</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseRequest" id="parseRequest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseRequest</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a174">174</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse Server Request</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> response</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object xmlrpc</span>
+		<span class="method-name">
+			parseRequest
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodserve" id="serve"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">serve</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a132">132</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main Server Function</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			serve
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_system_methods" id="set_system_methods"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_system_methods</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a102">102</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setting of System Methods</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_system_methods
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_execute" id="_execute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_execute</span> (line <span class="line-number"><a href="../../__filesource/fsource_CodeIgniter__systemlibrariesXmlrpcs.php.html#a275">275</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes the Method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_execute
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$m</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$m</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html">CI_Xmlrpc</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#method__construct">CI_Xmlrpc::__construct()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methoddisplay_error">CI_Xmlrpc::display_error()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methoddisplay_response">CI_Xmlrpc::display_response()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodinitialize">CI_Xmlrpc::initialize()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodmethod">CI_Xmlrpc::method()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodrequest">CI_Xmlrpc::request()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodsend_error_message">CI_Xmlrpc::send_error_message()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodsend_request">CI_Xmlrpc::send_request()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodsend_response">CI_Xmlrpc::send_response()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodserver">CI_Xmlrpc::server()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodset_debug">CI_Xmlrpc::set_debug()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodtimeout">CI_Xmlrpc::timeout()</a></span><br>
+													<span class="method-name"><a href="../../CodeIgniter/Libraries/CI_Xmlrpc.html#methodvalues_parsing">CI_Xmlrpc::values_parsing()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:25:26 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

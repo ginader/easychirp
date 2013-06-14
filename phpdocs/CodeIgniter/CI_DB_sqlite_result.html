@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CI_DB_sqlite_result</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CI_DB_sqlite_result</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SQLite Result Class</p>
+<p class="description"><p>This class extends the parent result class: CI_DB_result</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ExpressionEngine Dev Team</li>
+				<li><span class="field">link:</span> <a href="http://codeigniter.com/user_guide/database/">http://codeigniter.com/user_guide/database/</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_system---database---drivers---sqlite---sqlite_result.php.html">/system/database/drivers/sqlite/sqlite_result.php</a> (line <span class="field"><a href="../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlitesqlite_result.php.html#a27">27</a></span>)
+		</p>
+		
+				
+		<pre><a href="../CodeIgniter/CI_DB_result.html">CI_DB_result</a>
+   |
+   --CI_DB_sqlite_result</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																												
+												<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#field_data" title="details" class="method-name">field_data</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">null</span>
+										<a href="#free_result" title="details" class="method-name">free_result</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#list_fields" title="details" class="method-name">list_fields</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#num_fields" title="details" class="method-name">num_fields</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#num_rows" title="details" class="method-name">num_rows</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../CodeIgniter/CI_DB_result.html">CI_DB_result</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$conn_id">CI_DB_result::$conn_id</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$current_row">CI_DB_result::$current_row</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$custom_result_object">CI_DB_result::$custom_result_object</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$num_rows">CI_DB_result::$num_rows</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$result_array">CI_DB_result::$result_array</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$result_id">CI_DB_result::$result_id</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$result_object">CI_DB_result::$result_object</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../CodeIgniter/CI_DB_result.html#var$row_data">CI_DB_result::$row_data</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodfield_data" id="field_data"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">field_data</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlitesqlite_result.php.html#a84">84</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Field data</p>
+<p class="description"><p>Generates an array of objects containing field meta-data</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			field_data
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../CodeIgniter/CI_DB_result.html#methodfield_data">CI_DB_result::field_data()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodfree_result" id="free_result"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">free_result</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlitesqlite_result.php.html#a109">109</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Free the result</p>
+	
+	<div class="method-signature">
+		<span class="method-result">null</span>
+		<span class="method-name">
+			free_result
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../CodeIgniter/CI_DB_result.html#methodfree_result">CI_DB_result::free_result()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodlist_fields" id="list_fields"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_fields</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlitesqlite_result.php.html#a63">63</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetch Field Names</p>
+<p class="description"><p>Generates an array of column names</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			list_fields
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../CodeIgniter/CI_DB_result.html#methodlist_fields">CI_DB_result::list_fields()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodnum_fields" id="num_fields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">num_fields</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlitesqlite_result.php.html#a48">48</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Number of fields in the result set</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			num_fields
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../CodeIgniter/CI_DB_result.html#methodnum_fields">CI_DB_result::num_fields()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodnum_rows" id="num_rows"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">num_rows</span> (line <span class="line-number"><a href="../__filesource/fsource_CodeIgniter__systemdatabasedriverssqlitesqlite_result.php.html#a35">35</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Number of rows in the result set</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			num_rows
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../CodeIgniter/CI_DB_result.html#methodnum_rows">CI_DB_result::num_rows()</a></dt>
+						<dd>The following functions are normally overloaded by the identically named  methods in the platform-specific driver -- except when query caching  is used.  When caching is enabled we do not load the other driver.</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../CodeIgniter/CI_DB_result.html">CI_DB_result</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodcustom_result_object">CI_DB_result::custom_result_object()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodcustom_row_object">CI_DB_result::custom_row_object()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodfield_data">CI_DB_result::field_data()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodfirst_row">CI_DB_result::first_row()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodfree_result">CI_DB_result::free_result()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodlast_row">CI_DB_result::last_row()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodlist_fields">CI_DB_result::list_fields()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodnext_row">CI_DB_result::next_row()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodnum_fields">CI_DB_result::num_fields()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodnum_rows">CI_DB_result::num_rows()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodprevious_row">CI_DB_result::previous_row()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodresult">CI_DB_result::result()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodresult_array">CI_DB_result::result_array()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodresult_object">CI_DB_result::result_object()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodrow">CI_DB_result::row()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodrow_array">CI_DB_result::row_array()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodrow_object">CI_DB_result::row_object()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#methodset_row">CI_DB_result::set_row()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#method_data_seek">CI_DB_result::_data_seek()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#method_fetch_assoc">CI_DB_result::_fetch_assoc()</a></span><br>
+													<span class="method-name"><a href="../CodeIgniter/CI_DB_result.html#method_fetch_object">CI_DB_result::_fetch_object()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 11 Jun 2013 18:25:08 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

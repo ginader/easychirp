@@ -9,6 +9,7 @@
  */
 class Main extends EC_Controller {
 
+
 	/**
 	 * Manages the homepage.
 	 *
@@ -44,10 +45,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manage the about page "/about"
-	*
-	* @return void
-	*/
+	 * Manage the about page "/about"
+	 *
+	 * @return void
+	 */
 	public function about()
 	{
 		$data = array();
@@ -238,6 +239,20 @@ class Main extends EC_Controller {
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+
+		$data['profile'] = $this->twitter_lib->get('users/show', $request_param );
+
 		$this->layout->set_title('My Profile');
 		$this->layout->set_description('Details on my Twitter profile.');
 		$this->layout->view('profile', $data);
@@ -321,13 +336,13 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manage the sign in page - /sign_in
-	*
-	* Allows user to sign in to Twitter. Setup oauth tokens and send user to twitter to login
-	* Twitter will send the user to $this->oauth_callback();
-	*
-	* @return void
-	*/
+	 * Manage the sign in page - /sign_in
+	 *
+	 * Allows user to sign in to Twitter. Setup oauth tokens and send user to twitter to login
+	 * Twitter will send the user to $this->oauth_callback();
+	 *
+	 * @return void
+	 */
 	public function sign_in()
 	{
 		if ( isset($_SERVER["HTTP_REFERER"]) )
@@ -342,7 +357,6 @@ class Main extends EC_Controller {
 		$params[] = $this->config->item('tw_consumer_secret');
 		$params[] = $this->config->item('tw_access_key');
 		$params[] = $this->config->item('tw_access_secret');
-		// $params[] = base_url() . $this->config->item('tw_callback_url');
 		
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
@@ -367,7 +381,6 @@ class Main extends EC_Controller {
 		$req = OAuthRequest::from_consumer_and_token($test_consumer, NULL, "GET", $oauth_request_token);     
 		$req->sign_request($sig_method, $test_consumer, NULL); 
 		  
-		// debug_object( $reqData );
 
 		$oc = new OAuthCurl(); 
 		$reqData = $oc->fetchData($req->to_url()); 
@@ -389,29 +402,47 @@ class Main extends EC_Controller {
 		header("Location: $acc_req"); 
 	}
 
+
 	/**
-	* Handles the callback from twitter
-	*
-	* @param string $oauth_token A $_GET parameter 
-	* @param string $oauth_verifier A $_GET parameter
-	* @return void
-	*/
+	 * Manage the sign out page - /sign_out
+	 *
+	 * Allows user to sign out. Removes their user info from the session
+	 *
+	 * @return void
+	 */
+	public function sign_out()
+	{
+		$session_data = array();	
+		$session_data['oauth_token'] = ''; 
+		$session_data['oauth_token_secret'] = ''; 
+		$session_data['user_id'] = ''; 
+		$session_data['screen_name'] = ''; 
+		$session_data['logged_in'] = FALSE; 
+
+		$this->session->set_userdata($session_data);
+		
+		redirect( base_url() );
+	}
+
+
+
+
+	/**
+	 * Handles the callback from twitter
+	 *
+	 * @param string $oauth_token A $_GET parameter 
+	 * @param string $oauth_verifier A $_GET parameter
+	 * @return void
+	 */
 	public function oauth_callback()
 	{
 		$oauth_token = $this->input->get('oauth_token', FALSE);	
 		$oauth_verifier = $this->input->get('oauth_verifier', FALSE);	
 
-		error_log('oauth_token=' . $oauth_token);
-		error_log('oauth_verifier=' . $oauth_verifier);
 		$callback_url = base_url() . $this->config->item('tw_callback_url');
 		$consumer_key = $this->config->item('consumer_key'); 
 		$consumer_secret = $this->config->item('consumer_secret'); 
 
-		/*
-		http://easychirp.local/oauth_callback?
-		oauth_token=2D79LX8weSITozzHCcGDF53YG8VW6cuPVE6ObGikyY
-		&oauth_verifier=EK2kjC4I2c2qFl6lcORUzWeqpia8sR73ozQsMqrSMYw
-		*/
 
 		$this->load->library('twitter_lib');
 		$param = array();
@@ -440,14 +471,12 @@ class Main extends EC_Controller {
 	
 
 		if ( empty($accOAuthData['screen_name']) ){
-			error_log('error callback');
-			$remove = array();
-			$remove['user_oauth_token'] = ''; 
-			$remove['user_oauth_token_secret'] = '';
-			$remove['user_id'] = '';
-			$remove['screen_name'] = ''; 
+			error_log('error callback - Failed login!');
 
-			$this->sesssion->unset_userdata($remove);
+			$session_data = array();
+			$session_data['logged_in'] = false; 
+				
+			$this->session->set_userdata($session_data);
 			redirect( base_url() );
 		}
 		else
@@ -458,7 +487,8 @@ class Main extends EC_Controller {
 			$session_data['user_oauth_token_secret'] = $accOAuthData['oauth_token_secret']; 
 			$session_data['user_id'] = $accOAuthData['user_id']; 
 			$session_data['screen_name'] = $accOAuthData['screen_name']; 
-		
+			$session_data['logged_in'] = TRUE; 
+				
 			$this->session->set_userdata($session_data);
 
 			$next_page = ( isset($_SESSION['previous_page']) ) ? $_SESSION['previous_page'] : base_url();
@@ -553,6 +583,19 @@ class Main extends EC_Controller {
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+
+		$data['tweets'] = $this->twitter_lib->get('statuses/home_timeline', $request_param );
 		$this->layout->set_title('Timeline');
 		$this->layout->set_description('Description of Timeline page');
 		$this->layout->view('timeline', $data);
