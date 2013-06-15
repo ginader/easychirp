@@ -4,13 +4,7 @@
 require_once 'fragments/write_tweet.php';
 ?>
 
-<div class="box1 rounded">
-	<h2></h2>
-	<p></p>
-	<ul>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+<div id="mentions">
+<?php echo $tweets; ?>
 </div>
 
