@@ -224,6 +224,20 @@ class Main extends EC_Controller {
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
+		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+
 		$this->layout->set_title('My Tweets');
 		$this->layout->set_description('Tweets that I posted.');
 		$this->layout->view('mytweets', $data);
@@ -297,6 +311,20 @@ class Main extends EC_Controller {
 	{
 		$data = array();
 		$data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $request_param );
+		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
 
 		$this->layout->set_title('Retweets');
 		$this->layout->set_description('Links to retweet pages.');
