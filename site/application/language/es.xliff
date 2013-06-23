@@ -284,6 +284,11 @@
         <target>Registrarse con su cuenta Twitter</target>
       </trans-unit>
 
+      <trans-unit id="home-signin-signed-in-as" datatype="html">
+        <source>You are signed in as</source>
+        <target>Has iniciado sesión como</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-donate" datatype="html">
         <source>Donate to Easy Chirp</source>
         <target>Donar a Easy Chirp</target>

@@ -283,6 +283,11 @@
         <target>Sign in with Twitter</target>
       </trans-unit>
 
+      <trans-unit id="home-signin-signed-in-as" datatype="html">
+        <source>You are signed in as</source>
+        <target>You are signed in as</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-donate" datatype="html">
         <source>Donate to Easy Chirp</source>
         <target>Donate to Easy Chirp</target>
