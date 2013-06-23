@@ -37,8 +37,10 @@
 	<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-app-menu'); ?></h3>
 	<?php echo $main_menu; ?>
 
-	<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-tweet-menu'); ?></h3>
-	<?php echo $tweet_menu; ?>
+	<?php if ($screen_name): ?>
+		<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-tweet-menu'); ?></h3>
+		<?php echo $tweet_menu; ?>
+	<?php endif; ?>
 </nav>
 
 <main role="main" id="main" tabindex="-1">
