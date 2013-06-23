@@ -85,7 +85,6 @@ border-bottom:1px dotted;
 cursor:help;
 }
 
-/* tables still need 'cellspacing="0"' in the markup */
 table {
 border-collapse:collapse;
 border-spacing:0;
@@ -758,14 +757,14 @@ button:hover, button:focus,
 }
 .tweet {
 	border: 2px solid #a1d5f9;
-	padding: .5rem .5rem .5rem 64px;
+	padding: .5rem .5rem .5rem 74px;
 	margin-bottom: 1rem;
 }
 .tweet .tweetAvatar {
 	width: 64px;
 	height: 64px;
 	float: left;
-	margin-left: -64px;
+	margin-left: -74px;
 	margin-top: 3px;
 	background: no-repeat top;
 }
