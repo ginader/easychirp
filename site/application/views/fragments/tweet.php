@@ -49,12 +49,22 @@ foreach($tweets AS $tweet):
 	<q><?php echo $tweet->text; ?></q>
 	<p>from <a href="/user?id=<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> | 
 		<?php
+		// Is reply or retweet?
 		if ($isReply) {
 			echo ' <a rel="response" title="View the tweet to which this tweet is responding" href="/status?id='.$tweet->in_reply_to_status_id.'">Responding</a> | ';
 		}
 		if ($isRetweet) {
 			echo ' <a rel="retweet" title="View the original tweet (this is a retweet)" href="/status?id='.$tweet->retweeted_status->id.'">Retweet</a> | ';
 		}
+
+		// Has been retweeted?
+		if ($tweet->retweet_count == 1) {
+			echo 'Retweeted 1 time. | ';
+		}
+		else if ($tweet->retweet_count > 1) {
+			echo 'Retweeted '.$tweet->retweet_count.' times. | ';
+		}
+
 		?>
 		via <?php echo $tweet->source; ?></p>
 	<div class="btnOptions">
