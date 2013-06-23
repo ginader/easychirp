@@ -12,12 +12,13 @@ $months['sep'] = '09';
 $months['oct'] = '10';
 $months['nov'] = '11';
 $months['dec'] = '12';
-?>
-<?php foreach($tweets AS $tweet): ?>
-<?php 
+
+$index = 0;
+
+foreach($tweets AS $tweet):
+
 	$date =   $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013	
 	$regex = '/(\w{3}) (\w{3}) (\d\d) (\d\d:\d\d:\d\d) ([+\-]\d\d\d\d) (\d\d\d\d)/';
-
 
 	$is_matched = preg_match($regex, $tweet->created_at, $matches);
 	if ($is_matched){
@@ -26,18 +27,39 @@ $months['dec'] = '12';
 		
 		$date = sprintf("%s %d-%s-%s %s%s", $matches[1],  $matches[6], $month, $matches[3], $matches[4], $matches[5]);
 	}
+
+	//check if this tweet is a reply
+	$isReply = false;
+	if ($tweet->in_reply_to_status_id !== null) {
+		$isReply = true;
+	}
+
+	//check if this tweet is a retweet
+	$isRetweet = false;
+	if (isset($tweet->retweeted_status)) {
+		$isRetweet = true;
+	}
 ?>
-<div class="tweet rounded clearfix">
+<div class="tweet rounded clearfix<?
+	if ($isReply) { echo ' reply'; }
+	else if ($isRetweet) { echo ' retweet'; }
+	?>">
 	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
 	<q><?php echo $tweet->text; ?></q>
-	<p>from <a href="/user?id=<?php echo $tweet->id; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> | 
-		 Reply or Retweet? |
-		 Retweeted? | 
-		 via <?php echo $tweet->source; ?></p>
+	<p>from <a href="/user?id=<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> | 
+		<?php
+		if ($isReply) {
+			echo ' <a rel="response" title="View the tweet to which this tweet is responding" href="/status?id='.$tweet->in_reply_to_status_id.'">Responding</a> | ';
+		}
+		if ($isRetweet) {
+			echo ' <a rel="retweet" title="View the original tweet (this is a retweet)" href="/status?id='.$tweet->retweeted_status->id.'">Retweet</a> | ';
+		}
+		?>
+		via <?php echo $tweet->source; ?></p>
 	<div class="btnOptions">
-		<h3><a href="#tweetOptions_3" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
-		<ul id="tweetOptions_3">
+		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
+		<ul id="tweetOptions_<?php echo $index; ?>">
 			<li><a href="/favorite?id=<?php echo $tweet->id; ?>" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
 			<li><a href="/reply?id=<?php echo $tweet->id; ?>" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
 			<li><a href="/reply_to_all?id=<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
@@ -47,8 +69,8 @@ $months['dec'] = '12';
 		</ul>
 	</div>
 	<div class="btnOptions">
-		<h3><a href="#userOptions_3" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
-		<ul id="userOptions_3">
+		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
+		<ul id="userOptions_<?php echo $index; ?>">
 			<li><a href="/timeline?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
 			<li><a href="/direct?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
 			<li><a href="/timeline?twmess=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
@@ -57,4 +79,9 @@ $months['dec'] = '12';
 		</ul>
 	</div>
 </div>
-<?php endforeach; ?>
+<?php 
+
+$index++;
+endforeach; 
+
+?>
