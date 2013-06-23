@@ -49,11 +49,11 @@ $months['dec'] = '12';
 	<div class="btnOptions">
 		<h3><a href="#userOptions_3" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
 		<ul id="userOptions_3">
-			<li><a href="/timeline?id=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
-			<li><a href="/direct?id=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
+			<li><a href="/timeline?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
+			<li><a href="/direct?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
 			<li><a href="/timeline?twmess=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
-			<li><a href="/mute?id=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3d;" title="mute user"><span class="hide">mute user</span></a></li>
-			<li><a href="/report_spammer?id=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x33;" title="report spammer" class="spammer"><span class="hide">report spammer</span></a></li>
+			<li><a href="/mute?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3d;" title="mute user"><span class="hide">mute user</span></a></li>
+			<li><a href="/report_spammer?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x33;" title="report spammer" class="spammer"><span class="hide">report spammer</span></a></li>
 		</ul>
 	</div>
 </div>

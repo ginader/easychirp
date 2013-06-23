@@ -1,5 +1,14 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('dm-h1'); ?></h1>
 
+<?php
+
+$user = "";
+if(isset($_GET['user'])) {
+	$user = $_GET['user'];
+}
+
+?>
+
 <!-- <div class="p-row-r">
 	<div class="p-col-1-2">
  -->
@@ -9,7 +18,10 @@
 	class="clear" data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
 		<h3 class="fl"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
 		<div id="enterTweep">
-			<input type="text" size="18" id="tweep" name="tweep" class="input1" value="" />
+			<input type="text" size="18" id="tweep" name="tweep" class="input1" value="<?
+			if ($user !== "") {
+				echo $user;
+			} ?>" />
 		</div>
 		<div class="clear"></div>
 
