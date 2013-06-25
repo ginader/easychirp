@@ -306,7 +306,7 @@
 
       <trans-unit id="home-h2-follow-me" datatype="html">
         <source>Follow me on Twitter at:</source>
-        <target>Follow me on Twitter at:</target>
+        <target>Sigueme en Twitter:</target>
       </trans-unit>
 
       <trans-unit id="home-h2-share" datatype="html">
@@ -346,7 +346,7 @@
 
       <trans-unit id="home-features-shorten" datatype="html">
         <source>A built-in shorten URL tool with choice of service.</source>
-        <target>MISSING A built-in shorten URL tool with choice of service.</target>
+        <target>Una aplicación para achicar URL:</target>
       </trans-unit>
 
       <trans-unit id="home-features-lists" datatype="html">
@@ -366,7 +366,7 @@
 
       <trans-unit id="home-features-thread" datatype="html">
         <source>Inline threading of tweets; displays reply &quot;conversation&quot;.</source>
-        <target>MISSING Inline threading of tweets; displays reply &quot;conversation&quot;.</target>
+        <target>Muestra responder la conversation.</target>
       </trans-unit>
 
       <trans-unit id="home-features-devices" datatype="html">
@@ -401,7 +401,7 @@
 
       <trans-unit id="home-h2-dev-tasks" datatype="html">
         <source>Development Tasks</source>
-        <target>MISSING Development Tasks</target>
+        <target>Tareas de Desarrollo</target>
       </trans-unit>
 
       <!-- DIRECT MESSAGES (DM) -->
@@ -443,7 +443,7 @@
 
       <trans-unit id="dm-h2-page" datatype="html">
         <source>Select a page:</source>
-        <target>Select a page:</target>
+        <target>Seleccionar una página:</target>
       </trans-unit>
 
       <trans-unit id="dm-inbox" datatype="html">
@@ -755,7 +755,7 @@
 
       <trans-unit id="edit-profile-back-to" datatype="html">
         <source>back to My Profile</source>
-        <target>volver a Mi P&#233;rfil</target>
+        <target>Regreso a Mi P&#233;rfil</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-h1" datatype="html">
@@ -897,7 +897,7 @@
 
       <trans-unit id="tips-table-rt-3" datatype="html">
         <source>RT @easychirp Working on some performance enhancements with the API.</source>
-        <target>RT @easychirp Working on some performance enhancements with the API.</target>
+        <target>RT @easychirp trabajo sobre algunas mejoras de rendimiento con el API.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-mt-1" datatype="html">
@@ -1254,7 +1254,7 @@
 
       <trans-unit id="about-name-p1" datatype="html">
         <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
-        <target>El número 2 fue agregado al nombre de Easy Chirp en los mediados del 2013 después de una completa reestructura. El motivo fue los importantes cambios que eran necesitados incluyendo un cambio en el API de Twitter.</target>
+        <target>El número 2 fue agregado al nombre de Easy Chirp en los mediados del 2013 después de una completa reestructura. El motivo fue los importantes cambios que eran necesitados incluyendo un cambio en el API de Twitter. Una campaña exitosa (&lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter&lt;/a&gt;) se llevó a cabo con el fin de ayudar a la financiación para el relanzamiento.</target>
       </trans-unit>
 
       <trans-unit id="about-name-p2" datatype="html">
@@ -1441,7 +1441,7 @@
 
       <trans-unit id="search-tweets-query" datatype="html">
         <source>Enter search terms:</source>
-        <target>Enter search terms:</target>
+        <target>Inserte terminos de busqueda:</target>
       </trans-unit>
 
       <trans-unit id="search-tweets-submit" datatype="html">
@@ -1506,7 +1506,7 @@
 
       <trans-unit id="search-saved-none" datatype="html">
         <source>None found.</source>
-        <target>None found.</target>
+        <target>Sin resultados.</target>
       </trans-unit>
 
       <trans-unit id="search-h2-users" datatype="html">
@@ -1547,7 +1547,7 @@
             
       <trans-unit id="footer-select-language" datatype="html">
         <source>Select language</source>
-        <target>Select language</target>
+        <target>Seleccionar lenguaje</target>
       </trans-unit>
 
       <trans-unit id="footer-copyright" datatype="html">
@@ -1557,7 +1557,7 @@
 
       <trans-unit id="footer-h2" datatype="html">
         <source>Footer</source>
-        <target>Footer</target>
+        <target>Pie de página</target>
       </trans-unit>
 
     </body>
