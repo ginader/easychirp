@@ -1531,6 +1531,18 @@
         <target>Resultados de la Búsqueda</target>
       </trans-unit>
 
+      <!-- THE TWEETS -->
+
+      <trans-unit id="gbl-tweet-tweet-options" datatype="html">
+        <source>tweet options</source>
+        <target>tweet options</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-user-options" datatype="html">
+        <source>user options</source>
+        <target>user options</target>
+      </trans-unit>
+
       <!-- FOOTER -->
             
       <trans-unit id="footer-select-language" datatype="html">
