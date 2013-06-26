@@ -1,17 +1,20 @@
 
 /* Show/hide option buttons ***********************************/
-$(".btnOptions a").click(function(e) {
+$(".btnOptions > h3 > a").click(function(e) {
 	e.preventDefault();
-	
-	var obj = $(this).parent().next();
+
+    // set vars
+    var obj = $(this).parent().next();
 	var isDisplayed = obj.hasClass('displayOptions');
+
+	// first close both sections
+    $(".btnOptions ul").removeClass('displayOptions');
+	$(".btnOptions h3 a").attr("aria-expanded",false);
+
+	// open section clicked
 	if (isDisplayed===false) {
 		obj.addClass('displayOptions');
 		$(this).attr("aria-expanded",true);
-	}
-	else {
-		obj.removeClass('displayOptions');
-		$(this).attr("aria-expanded",false);
 	}
 });
 $(".btnOptions a").attr("role","button");
