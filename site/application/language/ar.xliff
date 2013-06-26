@@ -213,74 +213,74 @@
 
       <trans-unit id="write-tweet-h2-label" datatype="html">
         <source>Write Tweet</source>
-        <target>Write Tweet</target>
+        <target>كتابة تغريدة</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-char-limit" datatype="html">
         <source>The character limit is 140.</source>
-        <target>The character limit is 140.</target>
+        <target>الحد الأقصى ١٤٠ حرف.</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-char-remain" datatype="html">
         <source>Characters remaining:</source>
-        <target>Characters remaining:</target>
+        <target>الأحرف المتبقية</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-post" datatype="html">
         <source>Post</source>
-        <target>Post</target>
+        <target>نشر</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-h3" datatype="html">
         <source>Shorten URL</source>
-        <target>Shorten URL</target>
+        <target>الرابط المختصر</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-enter-url" datatype="html">
         <source>Enter URL:</source>
-        <target>Enter URL:</target>
+        <target>أدخل الرابط</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-service" datatype="html">
         <source>Service:</source>
-        <target>Service:</target>
+        <target>خدمة</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-shorten" datatype="html">
         <source>Shorten</source>
-        <target>Shorten</target>
+        <target>مختصرة</target>
       </trans-unit>
 
       <!-- HOME PAGE -->
 
       <trans-unit id="home" datatype="html">
         <source>Home</source>
-        <target>Home</target>
+        <target>الصفحة الرئيسية</target>
       </trans-unit>
 
       <trans-unit id="home-h2-lead" datatype="html">
         <source>Web accessibility for the Twitter website application</source>
-        <target>Web accessibility for the Twitter website application</target>
+        <target>إمكانية وصول الانترنت إلى تطبيق تويتر</target>
       </trans-unit>
 
       <trans-unit id="home-lead-p1" datatype="html">
         <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
-        <target>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</target>
+        <target>إيزي تشيرب هو تطبيق يتيح لك إمكانية التغريد بسهولة على موقع Twitter.com. لقد تم تصميمه ليكون سهل الاستخدام ومناسب للأفراد من ذوى الإعاقة.  ويعمل هذا التطبيق ايضاً مع لوحة المفاتيح فقط و المتصفحات القديمة مثل IE7، الاتصال بالإنترنت المنخفض السرعة ومن غير جافا سكريبت. تعلم المزيد حول إمكانية الوصول إلى الإنترنت.</target>
       </trans-unit>
 
       <trans-unit id="home-lead-p2" datatype="html">
         <source>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the &lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt; and &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; pages. You may also read an extensive list of user feedback and blogs/articles about this application.</source>
-        <target>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the &lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt; and &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; pages. You may also read an extensive list of user feedback and blogs/articles about this application.</target>
+        <target>تشير إلى مهام التطوير المزيد أسفل هذه الصفحة للعناصر الموجودة حاليا في التطوير. تعلم أكثر عن التغريد السهل فى صفحات المحتوى والخصائص. يمكنك أيضا قراءة قائمة واسعة من ملاحظات المستخدمين ومدونات/مقالات حول هذا التطبيق.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-signin" datatype="html">
         <source>Sign In</source>
-        <target>Sign In</target>
+        <target>تسجيل الدخول</target>
       </trans-unit>
 
       <trans-unit id="home-signin-btn-alt" datatype="html">
         <source>Sign in with Twitter</source>
-        <target>Sign in with Twitter</target>
+        <target>تسجيل الدخول باستخدام تويتر</target>
       </trans-unit>
 
       <trans-unit id="home-signin-signed-in-as" datatype="html">
@@ -290,17 +290,17 @@
 
       <trans-unit id="home-h2-donate" datatype="html">
         <source>Donate to Easy Chirp</source>
-        <target>Donate to Easy Chirp</target>
+        <target>تبرع إلى غرَّد بسهولة</target>
       </trans-unit>
 
       <trans-unit id="home-donate-btn-alt" datatype="html">
         <source>Donate with PayPal; credit cards accepted.</source>
-        <target>Donate with PayPal; credit cards accepted.</target>
+        <target>التبرع بواسطة باي بال، وتُقبل بطاقات الائتمان.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-latest-tweets" datatype="html">
         <source>Latest Tweets from Easy Chirp</source>
-        <target>Latest Tweets from Easy Chirp</target>
+        <target>أحدث التغريدات من غرِّد بسهولة</target>
       </trans-unit>
 
       <trans-unit id="home-h2-follow-me" datatype="html">
@@ -310,104 +310,104 @@
 
       <trans-unit id="home-h2-share" datatype="html">
         <source>Share</source>
-        <target>Share</target>
+        <target>مشاركة</target>
       </trans-unit>
 
       <trans-unit id="home-h2-articles" datatype="html">
         <source>Article &amp; Blog Mentions</source>
-        <target>Article &amp; Blog Mentions</target>
+        <target>تنبيهات المقال &amp; المدونة</target>
       </trans-unit>
 
       <trans-unit id="home-articles-highlights" datatype="html">
         <source>Highlights:</source>
-        <target>Highlights:</target>
+        <target>علامات التوضيح:</target>
       </trans-unit>
 
       <trans-unit id="home-articles-more" datatype="html">
         <source>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</source>
-        <target>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</target>
+        <target>عرض المزيد من المقالات وملاحظات الصفحة.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-what-tweeting" datatype="html">
         <source>What People Are Tweeting</source>
-        <target>What People Are Tweeting</target>
+        <target>بِمَ يُغرِّد الناس؟</target>
       </trans-unit>
 
       <trans-unit id="home-h2-features" datatype="html">
         <source>Notable Features</source>
-        <target>Notable Features</target>
+        <target>السمات البارزة.</target>
       </trans-unit>
 
       <trans-unit id="home-features-shorten" datatype="html">
         <source>A built-in shorten URL tool with choice of service.</source>
-        <target>A built-in shorten URL tool with choice of service.</target>
+        <target>أداة اختصار الروابط مدمجة مع اختيار الخدمة.</target>
       </trans-unit>
 
       <trans-unit id="home-features-search" datatype="html">
         <source>Search, user search, and saved searches.</source>
-        <target>Search, user search, and saved searches.</target>
+        <target>البحث، بحث المستخدم، ونتائج البحث المحفوظة.</target>
       </trans-unit>
 
       <trans-unit id="home-features-lists" datatype="html">
         <source>View, subscribe, and create Twitter Lists.</source>
-        <target>View, subscribe, and create Twitter Lists.</target>
+        <target>عرض واشتراك وإنشاء قوائم تغريد.</target>
       </trans-unit>
 
       <trans-unit id="home-features-no-js" datatype="html">
         <source>Works great with or without JavaScript.</source>
-        <target>Works great with or without JavaScript.</target>
+        <target>يعمل بكفاءة مع أو بدون جافا سكربت.</target>
       </trans-unit>
 
       <trans-unit id="home-features-keyboard" datatype="html">
         <source>Fully keyboard accessible.</source>
-        <target>Fully keyboard accessible.</target>
+        <target>إمكانية الوصول للوحة مفاتيح كاملة.</target>
       </trans-unit>
 
       <trans-unit id="home-features-thread" datatype="html">
         <source>Inline threading of tweets; displays reply &quot;conversation&quot;.</source>
-        <target>Inline threading of tweets; displays reply &quot;conversation&quot;.</target>
+        <target>مضمنة ترابط من تغريدات؛ يعرض الرد "المحادثة".</target>
       </trans-unit>
 
       <trans-unit id="home-features-devices" datatype="html">
         <source>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</source>
-        <target>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</target>
+        <target>بالإضافة إلى متصفحات سطح المكتب القديمة والجديدة، أنا أعمل تقريبا على أي أداة للمستخدم (حتى Lynx، متصفح نصي فقط)، مع قارئات الشاشة و شاشات طريقة برايل للقراءة، والأجهزة اللوحية والأجهزة النقالة.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-awards" datatype="html">
         <source>Awards!</source>
-        <target>Awards!</target>
+        <target>الجوائز!</target>
       </trans-unit>
 
       <trans-unit id="home-awards-afb" datatype="html">
         <source>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</source>
-        <target>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</target>
+        <target>الحائز على جائزة المؤسسة الأمريكية AFB) 2011) للوصول للمكفوفين.</target>
       </trans-unit>
 
       <trans-unit id="home-awards-it" datatype="html">
         <source>Recipient of the 2009 Access IT @web2.0 Award.</source>
-        <target>Recipient of the 2009 Access IT @web2.0 Award.</target>
+        <target>الحائز على جائزة  IT@web2.0 عام 2009.</target>
       </trans-unit>
 
       <trans-unit id="home-awards-rnib" datatype="html">
         <source>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</source>
-        <target>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</target>
+        <target>موقع RNIB لشهر، ديسمبر ٢٠١١.</target>
       </trans-unit>
 
       <trans-unit id="home-awards-more" datatype="html">
         <source>Read &lt;a href=&quot;/about&quot;&gt;more about Easy Chirp's awards&lt;/a&gt; on the About page.</source>
-        <target>Read &lt;a href=&quot;/about&quot;&gt;more about Easy Chirp's awards&lt;/a&gt; on the About page.</target>
+        <target>إقرأ المزيد عن جوائز التغريد السهل في صفحة المعلومات.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-dev-tasks" datatype="html">
         <source>Development Tasks</source>
-        <target>Development Tasks</target>
+        <target>مهام التطوير</target>
       </trans-unit>
 
       <!-- DIRECT MESSAGES (DM) -->
 
       <trans-unit id="dm-h1" datatype="html">
         <source>Direct Messages</source>
-        <target>Direct Messages</target>
+        <target>الرسائل المباشرة</target>
       </trans-unit>
 
       <trans-unit id="dm-h2-send" datatype="html">
@@ -417,17 +417,17 @@
 
       <trans-unit id="dm-label-tweep" datatype="html">
         <source>Send a direct message to (username):</source>
-        <target>Send a direct message to (username):</target>
+        <target>إرسال رسالة مباشرة إلى (اسم المستخدم):</target>
       </trans-unit>
 
       <trans-unit id="dm-label-txtDirectMessage" datatype="html">
         <source>Message:</source>
-        <target>Message:</target>
+        <target>رسالة:</target>
       </trans-unit>
 
       <trans-unit id="dm-note1" datatype="html">
         <source>The user to whom you're messaging must be following you.</source>
-        <target>The user to whom you're messaging must be following you.</target>
+        <target>يجب أن يتابعك المستخدم حتى تستطيع مراسلته.</target>
       </trans-unit>
 
       <trans-unit id="dm-send" datatype="html">
@@ -437,7 +437,7 @@
 
       <trans-unit id="dm-note2" datatype="html">
         <source>You can also send a Direct Message thru the regular status update box with the command: d + username + message</source>
-        <target>You can also send a Direct Message thru the regular status update box with the command: d + username + message</target>
+        <target>ملاحظة؛ يمكنك أيضاً إرسال 'رسالة خاصة' من خلال مربع تحديث الحالة بواسطة الأمر: اسم المستخدم + الرسالة +d</target>
       </trans-unit>
 
       <trans-unit id="dm-h2-page" datatype="html">
@@ -447,47 +447,47 @@
 
       <trans-unit id="dm-inbox" datatype="html">
         <source>Inbox</source>
-        <target>Inbox</target>
+        <target>صندوق الوارد</target>
       </trans-unit>
 
       <trans-unit id="dm-sent" datatype="html">
         <source>Sent</source>
-        <target>Sent</target>
+        <target>مُرسل</target>
       </trans-unit>
 
       <!-- DIRECT MESSAGES - INBOX -->
 
       <trans-unit id="dm-inbox-h1" datatype="html">
         <source>Direct Messages - Inbox</source>
-        <target>Direct Messages - Inbox</target>
+        <target>الرسائل المباشرة - صندوق الوارد</target>
       </trans-unit>
 
       <!-- DIRECT MESSAGES - SENT -->
 
       <trans-unit id="dm-sent-h1" datatype="html">
         <source>Direct Messages - Sent</source>
-        <target>Direct Messages - Sent</target>
+        <target>الرسائل المباشرة - مُرسل</target>
       </trans-unit>
 
       <!-- FAVORITES -->
 
       <trans-unit id="favorites-h1" datatype="html">
         <source>Favorites</source>
-        <target>Favorites</target>
+        <target>المفضلة</target>
       </trans-unit>
 
       <!-- FOLLOWING -->
 
       <trans-unit id="following-h1" datatype="html">
         <source>Following</source>
-        <target>Following</target>
+        <target>متابَعين</target>
       </trans-unit>
 
       <!-- FOLLOWERS -->
 
       <trans-unit id="followers-h1" datatype="html">
         <source>Followers</source>
-        <target>Followers</target>
+        <target>متابِعين</target>
       </trans-unit>
 
       <!-- GO TO USER -->
