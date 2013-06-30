@@ -20,7 +20,7 @@
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
 		<dd><?php echo $profile->created_at; ?></dd>
 		
-		<dt><abbr title="one-line biography">Bio</abbr></dt>
+		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
 		<dd><?php echo $profile->description; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
