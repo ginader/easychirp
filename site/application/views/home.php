@@ -21,7 +21,7 @@
 				<?php endif; ?>
 
 			<h2><?php echo $xliff_reader->get('home-h2-donate'); ?></h2>
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="frmDonate">
 				<input type="hidden" name="cmd" value="_s-xclick" />
 				<input type="hidden" name="hosted_button_id" value="2JSYK7TQNL5GA" />
 				<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="<?php echo $xliff_reader->get('home-donate-btn-alt'); ?>" />
@@ -59,7 +59,7 @@
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-share'); ?></h2>
-	<div>
+	<div id="shareIcons">
 		<a href="http://twitter.com/home?status=Try+this+user-friendly+%23Twitter+web+app!+http%3a%2f%2fwww.EasyChirp.com+%40EasyChirp+%23a11y+%23app"><img src="/images/share/twitter.png" width="50" height="50" alt="Twitter" /></a> &nbsp;
 		<a href="http://www.facebook.com/sharer.php?u=http://www.EasyChirp.com"><img src="/images/share/facebook.png" width="50" height="50" alt="Facebook" /></a> &nbsp;
 		<a href="https://plus.google.com/share?url=http://www.easychirp.com/"><img src="/images/share/googleplus.png" width="50" height="50" alt="Google Plus" /></a> &nbsp;
