@@ -83,9 +83,16 @@
 	<p><?php echo $xliff_reader->get('about-awards-rnib'); ?></p>
 </div>
 
-	<div class="box1 rounded">
-	<h2><span aria-hidden="true" class="icon-users"></span> <?php echo $xliff_reader->get('about-h2-authors'); ?></h2>
+<div class="box1 rounded">
+	<h2 id="kickstarter"><span aria-hidden="true" class="icon-users"></span> <?php echo $xliff_reader->get('about-h2-authors'); ?></h2>
 	<p><?php echo $xliff_reader->get('about-authors-p1'); ?></p>
+</div>
+
+<div class="box1 rounded">
+	<h2><?php echo $xliff_reader->get('about-h2-kick'); ?></h2>
+	<p><?php echo $xliff_reader->get('about-kick-p1'); ?></p>
+	<p><?php echo $xliff_reader->get('about-kick-p2'); ?></p>
+	<p><em><?php echo $xliff_reader->get('about-kick-names'); ?></em></p>
 </div>
 
 <div class="box1 rounded">

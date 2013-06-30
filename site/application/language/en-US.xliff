@@ -1252,8 +1252,8 @@
       </trans-unit>
 
       <trans-unit id="about-name-p1" datatype="html">
-        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
-        <target>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
+        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</source>
+        <target>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</target>
       </trans-unit>
 
       <trans-unit id="about-name-p2" datatype="html">
@@ -1424,6 +1424,26 @@
       <trans-unit id="about-more-p1" datatype="html">
         <source>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</source>
         <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-kick" datatype="html">
+        <source>Kickstarter</source>
+        <target>Kickstarter</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p1" datatype="html">
+        <source>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
+        <target>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p2" datatype="html">
+        <source>Big thank-you to the platinum Kickstarter backers:</source>
+        <target>Big thank-you to the platinum Kickstarter backers:</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-names" datatype="html">
+        <source>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</source>
+        <target>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</target>
       </trans-unit>
 
       <!-- SEARCH -->
