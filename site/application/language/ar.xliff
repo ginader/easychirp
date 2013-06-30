@@ -658,31 +658,31 @@
 
       <trans-unit id="mentions-h1" datatype="html">
         <source>Mentions</source>
-        <target>Mentions</target>
+        <target>إشارات</target>
       </trans-unit>
 
       <!-- MY TWEETS -->
 
       <trans-unit id="mytweets-h1" datatype="html">
         <source>My Tweets</source>
-        <target>My Tweets</target>
+        <target>تغريداتي</target>
       </trans-unit>
 
       <!-- MY PROFILE -->
 
       <trans-unit id="profile-h1" datatype="html">
         <source>My Profile</source>
-        <target>My Profile</target>
+        <target>ملفي الشخصي</target>
       </trans-unit>
 
       <trans-unit id="profile-edit-link" datatype="html">
         <source>Edit Profile</source>
-        <target>Edit Profile</target>
+        <target>تعديل الملف الشخصي</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-username" datatype="html">
         <source>Username</source>
-        <target>Username</target>
+        <target>اسم المستخدم</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-name" datatype="html">
@@ -692,42 +692,42 @@
 
       <trans-unit id="profile-dt-location" datatype="html">
         <source>Location</source>
-        <target>Location</target>
+        <target>الموقع</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-since" datatype="html">
         <source>Member Since</source>
-        <target>Member Since</target>
+        <target>عضو منذ</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-bio" datatype="html">
         <source>Bio</source>
-        <target>Bio</target>
+        <target>السيرة الذاتية</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-website" datatype="html">
         <source>Website</source>
-        <target>Website</target>
+        <target>الموقع الإلكتروني</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-tweets" datatype="html">
         <source>Tweets</source>
-        <target>Tweets</target>
+        <target>التغريدات</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-following" datatype="html">
         <source>Following</source>
-        <target>Following</target>
+        <target>متابَعين</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-followers" datatype="html">
         <source>Followers</source>
-        <target>Followers</target>
+        <target>متابِعين</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-lists" datatype="html">
         <source>Lists</source>
-        <target>Lists</target>
+        <target>قوائم</target>
       </trans-unit>
 
       <trans-unit id="profile-dd-my-lists" datatype="html">
@@ -737,17 +737,32 @@
 
       <trans-unit id="profile-dt-api-hits" datatype="html">
         <source>Remaining API hits</source>
-        <target>Remaining API hits</target>
+        <target>عدد الزيارات API المتبقية</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-bg-image" datatype="html">
         <source>Background image</source>
-        <target>Background image</target>
+        <target>صورة الخلفية</target>
+      </trans-unit>
+
+      <trans-unit id="profile-view-image" datatype="html">
+        <source>view image</source>
+        <target>عرض الصورة</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-img" datatype="html">
+        <source>No background image is found.</source>
+        <target>لم يتم العثور علي صورة</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-alt" datatype="html">
+        <source>(No alternative text is offered from Twitter.)</source>
+        <target>(لا يوجد نص بديل من تويتر.)</target>
       </trans-unit>
 
       <trans-unit id="profile-h2-latest" datatype="html">
         <source>Latest Tweet</source>
-        <target>Latest Tweet</target>
+        <target>أحدث تغريدة</target>
       </trans-unit>
 
       <!-- EDIT PROFILE -->
@@ -759,32 +774,32 @@
 
       <trans-unit id="edit-profile-h1" datatype="html">
         <source>Edit Profile</source>
-        <target>Edit Profile</target>
+        <target>تعديل الملف الشخصي</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-email" datatype="html">
         <source>Email</source>
-        <target>Email</target>
+        <target>البريد الإلكتروني</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-update" datatype="html">
         <source>Update</source>
-        <target>Update</target>
+        <target>تحديث</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-avatar-h2" datatype="html">
         <source>Change Avatar</source>
-        <target>Change Avatar</target>
+        <target>تغيير الصورة الرمزية</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-avatar-p" datatype="html">
         <source>Must be a valid GIF, JPG, or PNG image of less than 700 kilobytes in size.</source>
-        <target>Must be a valid GIF, JPG, or PNG image of less than 700 kilobytes in size.</target>
+        <target>يجب أن تكون الصورة بصيغة GIF أو JPG أو PNG بحجم أقل من 700 كيلو بايت.</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-avatar-path" datatype="html">
         <source>Path of New Avatar Image</source>
-        <target>Path of New Avatar Image</target>
+        <target>طريق الصورة الرمزية الجديدة:</target>
       </trans-unit>
 
       <!-- TIPS -->
