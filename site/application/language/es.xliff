@@ -1578,6 +1578,36 @@
         <target>user options</target>
       </trans-unit>
 
+      <trans-unit id="gbl-tweet-favorite" datatype="html">
+        <source>favorite</source>
+        <target>favoritos</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply" datatype="html">
+        <source>reply</source>
+        <target>responder</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply-all" datatype="html">
+        <source>reply to all</source>
+        <target>responder a todos</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-retweet" datatype="html">
+        <source>retweet</source>
+        <target>retweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-quote" datatype="html">
+        <source>quote tweet</source>
+        <target>citar tweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-email" datatype="html">
+        <source>email tweet</source>
+        <target>mandar tweet por correo electrónico</target>
+      </trans-unit>
+
       <!-- FOOTER -->
             
       <trans-unit id="footer-select-language" datatype="html">

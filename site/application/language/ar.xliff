@@ -1542,6 +1542,36 @@
         <target>user options</target>
       </trans-unit>
 
+      <trans-unit id="gbl-tweet-favorite" datatype="html">
+        <source>favorite</source>
+        <target>إضافة إلى المفضلة</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply" datatype="html">
+        <source>reply</source>
+        <target>رد</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply-all" datatype="html">
+        <source>reply to all</source>
+        <target>رد على الكل</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-retweet" datatype="html">
+        <source>retweet</source>
+        <target>إعادة تغريد</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-quote" datatype="html">
+        <source>quote tweet</source>
+        <target>اقتبس التغريدة</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-email" datatype="html">
+        <source>email tweet</source>
+        <target>ارسال التغريدة بالبريد الإلكتروني</target>
+      </trans-unit>
+
       <!-- FOOTER -->
 
       <trans-unit id="footer-select-language" datatype="html">
