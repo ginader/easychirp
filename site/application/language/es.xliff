@@ -11,6 +11,11 @@
         <target>Borrar</target>
       </trans-unit>
 
+      <trans-unit id="gbl-select-page" datatype="html">
+        <source>Select a page:</source>
+        <target>Seleccionar una página:</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -439,11 +444,6 @@
       <trans-unit id="dm-note2" datatype="html">
         <source>You can also send a Direct Message thru the regular status update box with the command: d + username + message</source>
         <target>Tu también puedes mandar mensajes directos por medio del cuadro de actualización usando el comando: d + nombre de usuario + mensaje</target>
-      </trans-unit>
-
-      <trans-unit id="dm-h2-page" datatype="html">
-        <source>Select a page:</source>
-        <target>Seleccionar una página:</target>
       </trans-unit>
 
       <trans-unit id="dm-inbox" datatype="html">

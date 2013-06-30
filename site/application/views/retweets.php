@@ -15,7 +15,7 @@ if(isset($_GET['type'])) {
 ?>
 
 <div class="box1 rounded">
-	<h2>Select a page:</h2>
+	<h2><?php echo $xliff_reader->get('gbl-select-page'); ?></h2>
 	<ul>
 		<li><a href="/retweets?type=by"><?php echo $xliff_reader->get('nav-retweets-by-me'); if ($type=="by") echo " (current)"; ?></a></li>
 		<li><a href="/retweets?type=of"><?php echo $xliff_reader->get('nav-retweets-of-me'); if ($type=="of") echo " (current)"; ?></a></li>
