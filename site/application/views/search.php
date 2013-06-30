@@ -6,11 +6,8 @@
 <div class="box1 rounded">
 	
 	<h2><?php echo $xliff_reader->get('search-h2-tweets'); ?></h2>
-	<form id="frmSearch" action="#" method="post">
-		<label for="query" class="hide"><?php echo $xliff_reader->get('search-tweets-query'); ?></label>
-		<input name="query" id="query" type="text" size="35" maxlength="50" class="input1" aria-required="true" />
-		<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('search-tweets-submit'); ?></button>
-	</form>
+	
+	<?php require_once 'fragments/search_quick_form.php'; ?>
 
 	<h3><?php echo $xliff_reader->get('search-h3-hints'); ?></h3>
 	<table>
@@ -71,7 +68,7 @@
 
 <div class="box1 rounded" style="padding-bottom: 1.5rem;">
 	<h2><?php echo $xliff_reader->get('search-h2-users'); ?></h2>
-	<form id="frmSearchUsers" action="#" method="post">
+	<form id="frmSearchUsers" action="/search_results" method="post">
 		<label for="queryUsers" class="hide"><?php echo $xliff_reader->get('search-users-query'); ?></label>
 		<input name="queryUsers" id="queryUsers" type="text" size="35" maxlength="50" class="input1" aria-required="true" />
 		<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('search-users-submit'); ?></button>
