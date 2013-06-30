@@ -1,0 +1,36 @@
+body {
+	direction:rtl;
+}
+
+/*h1, h2, h3, h4, p, li {
+    text-align: right;
+}*/
+
+#welcome {
+    float: left;
+}
+
+#navMain,
+#navTweet {
+	float: right;
+}
+
+/*#skip,
+#logoContainer,
+#frmDonate,
+#shareIcons,
+.tweet q {
+	text-align: right;
+}*/
+
+.content > ul li,
+.content .box1 ul li {
+    list-style: disc url(images/ico-bullet_round.gif);
+    background: none;
+}
+
+.tweet .tweetAvatar {
+	float: right;
+	margin-left: 0;
+}
+
