@@ -41,10 +41,10 @@
 		<dt><?php echo $xliff_reader->get('profile-dt-bg-image'); ?></dt>
 		<dd><?php
 			if ( isset( $profile->profile_background_image_url )) {
-				echo '<a href="' . $profile->profile_background_image_url . '">view image</a> (No alternative text is offered from Twitter.)';
+				echo '<a href="' . $profile->profile_background_image_url . '">' . $xliff_reader->get('profile-view-image') . '</a> ' . $xliff_reader->get('profile-no-alt');
 			}
 			else {
-				echo 'No background image is found.';
+				echo $xliff_reader->get('profile-no-img');
 			}
 		?></dd>
 	</dl>

@@ -745,6 +745,21 @@
         <target>Background image</target>
       </trans-unit>
 
+      <trans-unit id="profile-view-image" datatype="html">
+        <source>view image</source>
+        <target>view image</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-img" datatype="html">
+        <source>No background image is found.</source>
+        <target>No background image is found.</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-alt" datatype="html">
+        <source>(No alternative text is offered from Twitter.)</source>
+        <target>(No alternative text is offered from Twitter.)</target>
+      </trans-unit>
+
       <trans-unit id="profile-h2-latest" datatype="html">
         <source>Latest Tweet</source>
         <target>Latest Tweet</target>
