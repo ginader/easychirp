@@ -75,7 +75,7 @@ foreach($tweets AS $tweet):
 			<li><a href="/reply_to_all?id=<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
 			<li><a href="/retweet?id=<?php echo $tweet->id; ?>" data-icon="&#x3f;" title="retweet"><span class="hide">retweet</span></a></li>
 			<li><a href="/quote?id=<?php echo $tweet->id; ?>" data-icon="&#x30;" title="quote tweet"><span class="hide">quote tweet</span></a></li>
-			<li><a href="mailto:foo@bar.com?subject=Tweet from <?php echo $tweet->user->screen_name; ?>&amp;body=<?php echo $tweet->text; ?>" data-icon="&#x31;" title="email tweet"><span class="hide">email tweet</span></a></li>
+			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo urlencode($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="email tweet"><span class="hide">email tweet</span></a></li>
 		</ul>
 	</div>
 	<div class="btnOptions">
