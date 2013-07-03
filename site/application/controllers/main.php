@@ -9,6 +9,30 @@
  */
 class Main extends EC_Controller {
 
+	private $_data = array();
+
+	/**
+	* Describe your function
+	*
+	* @param String $one a necessary parameter
+	* @param String optional $two an optional value
+	* @return void
+	*/
+	public function __construct()
+	{
+		parent::__construct();
+
+		$session_data = $this->session->all_userdata();
+		if (isset($session_data['follower_count']))
+		{
+			$this->_data['follower_count']  = $session_data['follower_count']; 
+			$this->_data['following_count'] = $session_data['following_count']; 
+			$this->_data['tweet_count']     = $session_data['tweet_count']; 
+			$this->_data['real_name']       = $session_data['real_name']; 
+			$this->_data['time_zone']       = $session_data['time_zone']; 
+		}
+	
+	}
 
 	/**
 	 * Manages the homepage.
@@ -30,18 +54,18 @@ class Main extends EC_Controller {
 			$this->config->item('tw_url_home_timeline') 
 		);
 		
-		$data = array();
+		
 		if ( is_object($easychirp_statuses) && $easychirp_statuses->errors)
 		{
-			$data['error'] = $easychirp_statuses->errors[0]->message;
+			$this->_data['error'] = $easychirp_statuses->errors[0]->message;
 		}
-		$data['easychirp_statuses'] = $easychirp_statuses;
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['easychirp_statuses'] = $easychirp_statuses;
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 		
 		$this->layout->set_title( $this->xliff_reader->get('home') );
 		$this->layout->set_description('Homepage description');
 		$this->layout->set_skip_to_sign_in( TRUE );
-		$this->layout->view('home', $data);
+		$this->layout->view('home', $this->_data);
 	}
 
 	/**
@@ -51,12 +75,12 @@ class Main extends EC_Controller {
 	 */
 	public function about()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('About');
 		$this->layout->set_description('All about Easy Chirp 2');
-		$this->layout->view('about', $data);
+		$this->layout->view('about', $this->_data);
 	}
 
 	/**
@@ -66,48 +90,48 @@ class Main extends EC_Controller {
 	*/
 	public function articles()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Articles and Feedback');
 		$this->layout->set_description('Articles, user feedback, books, wikis, and awards listed here.');
-		$this->layout->view('articles', $data);
+		$this->layout->view('articles', $this->_data);
 	}
 
 	public function direct()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Direct Messages');
 		$this->layout->set_description('Send a direct message.');
-		$this->layout->view('direct', $data);
+		$this->layout->view('direct', $this->_data);
 	}
 
 	public function direct_inbox()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Inbox | Direct Messages');
 		$this->layout->set_description('Direct messages sent to user.');
-		$this->layout->view('direct_inbox', $data);
+		$this->layout->view('direct_inbox', $this->_data);
 	}
 
 	public function direct_sent()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Sent | Direct Messages');
 		$this->layout->set_description('Direct messages sent from user.');
-		$this->layout->view('direct_sent', $data);
+		$this->layout->view('direct_sent', $this->_data);
 	}
 
 	public function favorites()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -121,11 +145,11 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
-		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
 
 		$this->layout->set_title('Favorites');
 		$this->layout->set_description('Tweets that user marked as a favorite.');
-		$this->layout->view('favorites', $data);
+		$this->layout->view('favorites', $this->_data);
 	}
 
 	/**
@@ -135,12 +159,12 @@ class Main extends EC_Controller {
 	*/
 	public function features()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Features');
 		$this->layout->set_description('General and accessibility features of Easy Chirp.');
-		$this->layout->view('features', $data);
+		$this->layout->view('features', $this->_data);
 	}
 
 	/**
@@ -150,12 +174,12 @@ class Main extends EC_Controller {
 	*/
 	public function followers()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Followers');
 		$this->layout->set_description('Twitter users following me.');
-		$this->layout->view('followers', $data);
+		$this->layout->view('followers', $this->_data);
 	}
 
 	/**
@@ -165,22 +189,22 @@ class Main extends EC_Controller {
 	*/
 	public function following()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Following');
 		$this->layout->set_description('Twitter users whom I am following.');
-		$this->layout->view('following', $data);
+		$this->layout->view('following', $this->_data);
 	}
 
 	public function go_to_user()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Go To User');
 		$this->layout->set_description('Go to user');
-		$this->layout->view('go_to_user', $data);
+		$this->layout->view('go_to_user', $this->_data);
 	}
 
 	/**
@@ -190,12 +214,12 @@ class Main extends EC_Controller {
 	*/
 	public function lists()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Lists');
 		$this->layout->set_description('Description of Lists page');
-		$this->layout->view('lists', $data);
+		$this->layout->view('lists', $this->_data);
 	}
 
 	/**
@@ -205,12 +229,12 @@ class Main extends EC_Controller {
 	*/
 	public function list_edit()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Edit List');
 		$this->layout->set_description('Description of Edit List page');
-		$this->layout->view('list_edit', $data);
+		$this->layout->view('list_edit', $this->_data);
 	}
 
 	/**
@@ -220,8 +244,8 @@ class Main extends EC_Controller {
 	*/
 	public function mentions()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 
 		$params = array();
@@ -236,11 +260,11 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
-		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
 
 		$this->layout->set_title('Mentions');
 		$this->layout->set_description('Tweets that contain my user name.');
-		$this->layout->view('mentions', $data);
+		$this->layout->view('mentions', $this->_data);
 	}
 
 	/**
@@ -250,8 +274,8 @@ class Main extends EC_Controller {
 	*/
 	public function mytweets()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -265,11 +289,11 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
-		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
 
 		$this->layout->set_title('My Tweets');
 		$this->layout->set_description('Tweets that I posted.');
-		$this->layout->view('mytweets', $data);
+		$this->layout->view('mytweets', $this->_data);
 	}
 
 	/**
@@ -279,8 +303,8 @@ class Main extends EC_Controller {
 	*/
 	public function profile()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -294,11 +318,11 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 
-		$data['profile'] = $this->twitter_lib->get('users/show', $request_param );
+		$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param );
 
 		$this->layout->set_title('My Profile');
 		$this->layout->set_description('Details on my Twitter profile.');
-		$this->layout->view('profile', $data);
+		$this->layout->view('profile', $this->_data);
 	}
 
 	/**
@@ -308,12 +332,12 @@ class Main extends EC_Controller {
 	*/
 	public function profile_edit()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Edit Profile');
 		$this->layout->set_description('Edit your Twitter account profile.');
-		$this->layout->view('profile_edit', $data);
+		$this->layout->view('profile_edit', $this->_data);
 	}
 
 	/**
@@ -323,12 +347,12 @@ class Main extends EC_Controller {
 	*/
 	public function quote()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Quote');
 		$this->layout->set_description('Quote a tweet.');
-		$this->layout->view('quote', $data);
+		$this->layout->view('quote', $this->_data);
 	}
 
 	/**
@@ -338,8 +362,8 @@ class Main extends EC_Controller {
 	*/
 	public function retweets()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -353,11 +377,11 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $request_param );
-		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
 
 		$this->layout->set_title('Retweets');
 		$this->layout->set_description('Links to retweet pages.');
-		$this->layout->view('retweets', $data);
+		$this->layout->view('retweets', $this->_data);
 	}
 	
 	/**
@@ -368,12 +392,12 @@ class Main extends EC_Controller {
 	 */
 	public function search($query)
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Search');
 		$this->layout->set_description('Search tweets, saved searches, and search users.');
-		$this->layout->view('search', $data);
+		$this->layout->view('search', $this->_data);
 	}
 
 	/**
@@ -384,12 +408,12 @@ class Main extends EC_Controller {
 	 */
 	public function search_results($query)
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Search Results');
 		$this->layout->set_description('Search results.');
-		$this->layout->view('search_results', $data);
+		$this->layout->view('search_results', $this->_data);
 	}
 
 	/**
@@ -538,6 +562,23 @@ class Main extends EC_Controller {
 		}
 		else
 		{
+
+			$params = array();
+			$params[] = $this->config->item('tw_consumer_key');
+			$params[] = $this->config->item('tw_consumer_secret');
+			$params[] = $this->session->userdata('user_oauth_token');
+			$params[] = $this->session->userdata('user_oauth_token_secret');
+
+			$this->load->library('twitter_lib');
+			$this->twitter_lib->connect($params);
+
+			$request_param = array();	
+			$request_param['screen_name'] =  $this->session->userdata('screen_name');
+			$user_data = $this->twitter_lib->get('users/show', $request_param );
+
+			// debug_object( $user_data );
+
+
 			error_log('successful callback');
 			$session_data = array();
 			$session_data['user_oauth_token'] = $accOAuthData['oauth_token']; 
@@ -545,10 +586,16 @@ class Main extends EC_Controller {
 			$session_data['user_id'] = $accOAuthData['user_id']; 
 			$session_data['screen_name'] = $accOAuthData['screen_name']; 
 			$session_data['logged_in'] = TRUE; 
+
+			$session_data['follower_count'] = $user_data->followers_count; 
+			$session_data['tweet_count'] = $user_data->statuses_count; 
+			$session_data['following_count'] = $user_data->friends_count; 
+			$session_data['real_name'] = $accOAuthData['name']; 
+			$session_data['time_zone'] = $accOAuthData['time_zone']; 
 				
 			$this->session->set_userdata($session_data);
 
-			$next_page = ( isset($_SESSION['previous_page']) ) ? $_SESSION['previous_page'] : base_url();
+			$next_page = base_url() . 'timeline'; 
 
 			redirect( $next_page );
 		}
@@ -562,12 +609,12 @@ class Main extends EC_Controller {
 	*/
 	public function status()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('View Single Tweet');
 		$this->layout->set_description('View a single status/tweet.');
-		$this->layout->view('status', $data);
+		$this->layout->view('status', $this->_data);
 	}
 
 	/**
@@ -577,12 +624,12 @@ class Main extends EC_Controller {
 	*/
 	public function tips()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Tips');
 		$this->layout->set_description('Tips for this app, using Twitter, and recommended apps.');
-		$this->layout->view('tips', $data);
+		$this->layout->view('tips', $this->_data);
 	}
 
 	/**
@@ -592,12 +639,12 @@ class Main extends EC_Controller {
 	*/
 	public function tools()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Tools');
 		$this->layout->set_description('Tools including search, lists and trends.');
-		$this->layout->view('tools', $data);
+		$this->layout->view('tools', $this->_data);
 	}
 
 	/**
@@ -607,12 +654,12 @@ class Main extends EC_Controller {
 	*/
 	public function trends()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Trends');
 		$this->layout->set_description('Trending topics on Twitter.');
-		$this->layout->view('trends', $data);
+		$this->layout->view('trends', $this->_data);
 	}
 
 	/**
@@ -622,12 +669,12 @@ class Main extends EC_Controller {
 	*/
 	public function user()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('User Details');
 		$this->layout->set_description('Information for Twitter user.');
-		$this->layout->view('user', $data);
+		$this->layout->view('user', $this->_data);
 	}
 
 	/**
@@ -637,8 +684,8 @@ class Main extends EC_Controller {
 	*/
 	public function timeline()
 	{
-		$data = array();
-		$data['xliff_reader'] = $this->xliff_reader; 	
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -652,12 +699,12 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
-		$data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
 
 
 		$this->layout->set_title('Timeline');
 		$this->layout->set_description('Description of Timeline page');
-		$this->layout->view('timeline', $data);
+		$this->layout->view('timeline', $this->_data);
 	}
 }
 
