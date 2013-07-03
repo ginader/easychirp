@@ -11,6 +11,11 @@
         <target>Delete</target>
       </trans-unit>
 
+      <trans-unit id="gbl-select-page" datatype="html">
+        <source>Select a page:</source>
+        <target>Select a page:</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -440,11 +445,6 @@
         <target>You can also send a Direct Message thru the regular status update box with the command: d + username + message</target>
       </trans-unit>
 
-      <trans-unit id="dm-h2-page" datatype="html">
-        <source>Select a page:</source>
-        <target>Select a page:</target>
-      </trans-unit>
-
       <trans-unit id="dm-inbox" datatype="html">
         <source>Inbox</source>
         <target>Inbox</target>
@@ -743,6 +743,21 @@
       <trans-unit id="profile-dt-bg-image" datatype="html">
         <source>Background image</source>
         <target>Background image</target>
+      </trans-unit>
+
+      <trans-unit id="profile-view-image" datatype="html">
+        <source>view image</source>
+        <target>view image</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-img" datatype="html">
+        <source>No background image is found.</source>
+        <target>No background image is found.</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-alt" datatype="html">
+        <source>(No alternative text is offered from Twitter.)</source>
+        <target>(No alternative text is offered from Twitter.)</target>
       </trans-unit>
 
       <trans-unit id="profile-h2-latest" datatype="html">
@@ -1252,8 +1267,8 @@
       </trans-unit>
 
       <trans-unit id="about-name-p1" datatype="html">
-        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
-        <target>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
+        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</source>
+        <target>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</target>
       </trans-unit>
 
       <trans-unit id="about-name-p2" datatype="html">
@@ -1426,6 +1441,26 @@
         <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
       </trans-unit>
 
+      <trans-unit id="about-h2-kick" datatype="html">
+        <source>Kickstarter</source>
+        <target>Kickstarter</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p1" datatype="html">
+        <source>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
+        <target>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p2" datatype="html">
+        <source>Big thank-you to the platinum Kickstarter backers:</source>
+        <target>Big thank-you to the platinum Kickstarter backers:</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-names" datatype="html">
+        <source>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</source>
+        <target>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</target>
+      </trans-unit>
+
       <!-- SEARCH -->
 
       <trans-unit id="search-h1" datatype="html">
@@ -1540,6 +1575,36 @@
       <trans-unit id="gbl-tweet-user-options" datatype="html">
         <source>user options</source>
         <target>user options</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-favorite" datatype="html">
+        <source>favorite</source>
+        <target>favorite</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply" datatype="html">
+        <source>reply</source>
+        <target>reply</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply-all" datatype="html">
+        <source>reply to all</source>
+        <target>reply to all</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-retweet" datatype="html">
+        <source>retweet</source>
+        <target>retweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-quote" datatype="html">
+        <source>quote tweet</source>
+        <target>quote tweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-email" datatype="html">
+        <source>email tweet</source>
+        <target>email tweet</target>
       </trans-unit>
 
       <!-- FOOTER -->

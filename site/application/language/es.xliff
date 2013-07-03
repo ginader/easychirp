@@ -11,6 +11,11 @@
         <target>Borrar</target>
       </trans-unit>
 
+      <trans-unit id="gbl-select-page" datatype="html">
+        <source>Select a page:</source>
+        <target>Seleccionar una página:</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -441,11 +446,6 @@
         <target>Tu también puedes mandar mensajes directos por medio del cuadro de actualización usando el comando: d + nombre de usuario + mensaje</target>
       </trans-unit>
 
-      <trans-unit id="dm-h2-page" datatype="html">
-        <source>Select a page:</source>
-        <target>Seleccionar una página:</target>
-      </trans-unit>
-
       <trans-unit id="dm-inbox" datatype="html">
         <source>Inbox</source>
         <target>Entrada</target>
@@ -744,6 +744,21 @@
       <trans-unit id="profile-dt-bg-image" datatype="html">
         <source>Background image</source>
         <target>Imagen de fondo</target>
+      </trans-unit>
+
+      <trans-unit id="profile-view-image" datatype="html">
+        <source>view image</source>
+        <target>Ver imagen</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-img" datatype="html">
+        <source>No background image is found.</source>
+        <target>Imagen no encontrada.</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-alt" datatype="html">
+        <source>(No alternative text is offered from Twitter.)</source>
+        <target>(No hay alternativo de texto ofrecido por Twitter.)</target>
       </trans-unit>
 
       <trans-unit id="profile-h2-latest" datatype="html">
@@ -1253,8 +1268,8 @@
       </trans-unit>
 
       <trans-unit id="about-name-p1" datatype="html">
-        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
-        <target>El número 2 fue agregado al nombre de Easy Chirp en los mediados del 2013 después de una completa reestructura. El motivo fue los importantes cambios que eran necesitados incluyendo un cambio en el API de Twitter. Una campaña exitosa (&lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter&lt;/a&gt;) se llevó a cabo con el fin de ayudar a la financiación para el relanzamiento.</target>
+        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</source>
+        <target>El número 2 fue agregado al nombre de Easy Chirp en los mediados del 2013 después de una completa reestructura. El motivo fue los importantes cambios que eran necesitados incluyendo un cambio en el API de Twitter. Una campaña exitosa (&lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt;) se llevó a cabo con el fin de ayudar a la financiación para el relanzamiento.</target>
       </trans-unit>
 
       <trans-unit id="about-name-p2" datatype="html">
@@ -1427,6 +1442,26 @@
         <target>Para mas información, visite las páginas &lt;a href=&quot;/articles&quot;&gt;Articulos &amp; Comentarios&lt;/a&gt; y &lt;a href=&quot;/features&quot;&gt;Características&lt;/a&gt;.</target>
       </trans-unit>
 
+      <trans-unit id="about-h2-kick" datatype="html">
+        <source>Kickstarter</source>
+        <target>Kickstarter</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p1" datatype="html">
+        <source>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
+        <target>Una campaña exitosa (&lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;campaña Kickstarter&lt;/a&gt;&lt;/a&gt;) se llevó a cabo con el fin de ayudar a la financiación para el relanzamiento.</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p2" datatype="html">
+        <source>A big thank-you to the platinum Kickstarter backers:</source>
+        <target>Un gran agradecimiento a los patrocinadores de platino Kickstarter:</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-names" datatype="html">
+        <source>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</source>
+        <target>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</target>
+      </trans-unit>
+
       <!-- SEARCH -->
 
       <trans-unit id="search-h1" datatype="html">
@@ -1541,6 +1576,36 @@
       <trans-unit id="gbl-tweet-user-options" datatype="html">
         <source>user options</source>
         <target>user options</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-favorite" datatype="html">
+        <source>favorite</source>
+        <target>favoritos</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply" datatype="html">
+        <source>reply</source>
+        <target>responder</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply-all" datatype="html">
+        <source>reply to all</source>
+        <target>responder a todos</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-retweet" datatype="html">
+        <source>retweet</source>
+        <target>retweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-quote" datatype="html">
+        <source>quote tweet</source>
+        <target>citar tweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-email" datatype="html">
+        <source>email tweet</source>
+        <target>mandar tweet por correo electrónico</target>
       </trans-unit>
 
       <!-- FOOTER -->

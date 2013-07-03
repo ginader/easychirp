@@ -46,7 +46,7 @@ if(isset($_GET['user'])) {
 	<div class="p-col-1-2">
  -->
 <div class="box1 rounded">
-	<h2><?php echo $xliff_reader->get('dm-h2-page'); ?></h2>
+	<h2><?php echo $xliff_reader->get('gbl-select-page'); ?></h2>
 	<ul>
 		<li><a href="/direct_inbox"><?php echo $xliff_reader->get('dm-inbox'); ?></a></li>
 		<li><a href="/direct_sent"><?php echo $xliff_reader->get('dm-sent'); ?></a></li>
