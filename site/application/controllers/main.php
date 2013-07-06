@@ -9,7 +9,7 @@
  */
 class Main extends EC_Controller {
 
-	private $_data = array();
+	public $_data = array();
 
 	/**
 	* Describe your function
@@ -23,15 +23,28 @@ class Main extends EC_Controller {
 		parent::__construct();
 
 		$session_data = $this->session->all_userdata();
-		if (isset($session_data['follower_count']))
+		if (isset($session_data['logged_in']))
 		{
+			$this->_data['logged_in']       = $session_data['logged_in']; 
 			$this->_data['follower_count']  = $session_data['follower_count']; 
 			$this->_data['following_count'] = $session_data['following_count']; 
 			$this->_data['tweet_count']     = $session_data['tweet_count']; 
-			$this->_data['real_name']       = $session_data['real_name']; 
-			$this->_data['time_zone']       = $session_data['time_zone']; 
+			if (isset($session_data['screen_name'])){
+				$this->_data['screen_name'] =  $session_data['screen_name']; 
+			}
+			if (isset($session_data['time_zone'])) { 
+				$this->_data['time_zone'] =  $session_data['time_zone']; 
+			}
 		}
-	
+		else
+		{
+			$this->_data['logged_in']       = FALSE; 
+			$this->_data['follower_count']  = 0; 
+			$this->_data['following_count'] = 0; 
+			$this->_data['tweet_count']     = 0; 
+		}	
+
+		$this->layout->set_logged_in($session_data['logged_in']);
 	}
 
 	/**
@@ -493,14 +506,13 @@ class Main extends EC_Controller {
 	 */
 	public function sign_out()
 	{
-		$session_data = array();	
-		$session_data['oauth_token'] = ''; 
-		$session_data['oauth_token_secret'] = ''; 
-		$session_data['user_id'] = ''; 
-		$session_data['screen_name'] = ''; 
-		$session_data['logged_in'] = FALSE; 
-
-		$this->session->set_userdata($session_data);
+		$update_data = array();	
+		$update_data['logged_in'] = FALSE; 
+		$this->session->set_userdata($update_data);
+		
+		$delete_data = array();	
+		$delete_data['screen_name'] = ''; 
+		$this->session->set_userdata($delete_data);
 		
 		redirect( base_url() );
 	}
@@ -555,7 +567,7 @@ class Main extends EC_Controller {
 			error_log('error callback - Failed login!');
 
 			$session_data = array();
-			$session_data['logged_in'] = false; 
+			// $session_data['logged_in'] = FALSE; 
 				
 			$this->session->set_userdata($session_data);
 			redirect( base_url() );
@@ -573,7 +585,7 @@ class Main extends EC_Controller {
 			$this->twitter_lib->connect($params);
 
 			$request_param = array();	
-			$request_param['screen_name'] =  $this->session->userdata('screen_name');
+			$request_param['screen_name'] = $accOAuthData['screen_name'];
 			$user_data = $this->twitter_lib->get('users/show', $request_param );
 
 			// debug_object( $user_data );
@@ -581,17 +593,18 @@ class Main extends EC_Controller {
 
 			error_log('successful callback');
 			$session_data = array();
-			$session_data['user_oauth_token'] = $accOAuthData['oauth_token']; 
+			$session_data['user_oauth_token']        = $accOAuthData['oauth_token']; 
 			$session_data['user_oauth_token_secret'] = $accOAuthData['oauth_token_secret']; 
-			$session_data['user_id'] = $accOAuthData['user_id']; 
-			$session_data['screen_name'] = $accOAuthData['screen_name']; 
-			$session_data['logged_in'] = TRUE; 
+			$session_data['user_id']                 = $accOAuthData['user_id']; 
+			$session_data['screen_name']             = $accOAuthData['screen_name']; 
+			$session_data['logged_in']               = TRUE; 
 
-			$session_data['follower_count'] = $user_data->followers_count; 
-			$session_data['tweet_count'] = $user_data->statuses_count; 
+			$session_data['follower_count']  = $user_data->followers_count; 
 			$session_data['following_count'] = $user_data->friends_count; 
-			$session_data['real_name'] = $accOAuthData['name']; 
-			$session_data['time_zone'] = $accOAuthData['time_zone']; 
+			$session_data['tweet_count']     = $user_data->statuses_count; 
+			$session_data['real_name']       = $user_data->name; 
+			$session_data['time_zone']       = $user_data->time_zone; 
+			$session_data['user_id']         = $user_data->id_str; 
 				
 			$this->session->set_userdata($session_data);
 
@@ -684,7 +697,6 @@ class Main extends EC_Controller {
 	*/
 	public function timeline()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
@@ -700,7 +712,6 @@ class Main extends EC_Controller {
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
-
 
 		$this->layout->set_title('Timeline');
 		$this->layout->set_description('Description of Timeline page');

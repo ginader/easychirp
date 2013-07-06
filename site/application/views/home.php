@@ -14,8 +14,8 @@
 
 		<div class="box1 rounded">
 			<h2 id="sign_in" tabindex="-1"><?php echo $xliff_reader->get('home-h2-signin'); ?></h2>
-				<?php if ($this->layout->screen_name): ?>
-					<p><?php echo $xliff_reader->get('home-signin-signed-in-as'); ?> <?php echo $this->layout->screen_name; ?>.</p>
+				<?php if (! empty($screen_name)): ?>
+					<p><?php echo $xliff_reader->get('home-signin-signed-in-as'); ?> <?php echo $screen_name; ?>.</p>
 				<?php else: ?>
 					<div><a href="/sign_in"><img src="/images/sign-in-with-twitter.png" alt="<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>" width="151" height="24" /></a></div>
 				<?php endif; ?>

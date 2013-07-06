@@ -61,6 +61,7 @@ $route['search'] = "main/search";
 $route['search_quick'] = "main/search_quick"; // For non-JS and keyboard use cases
 $route['search_results'] = "main/search_results";
 $route['sign_in'] = "main/sign_in";
+$route['sign_out'] = "main/sign_out";
 $route['status'] = "main/status"; // View single tweet
 $route['tips'] = "main/tips";
 $route['tools'] = "main/tools"; // For non-JS and keyboard use cases
