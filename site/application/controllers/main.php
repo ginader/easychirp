@@ -44,7 +44,7 @@ class Main extends EC_Controller {
 			$this->_data['tweet_count']     = 0; 
 		}	
 
-		$this->layout->set_logged_in($session_data['logged_in']);
+		$this->layout->set_logged_in($this->_data['logged_in']);
 	}
 
 	/**
