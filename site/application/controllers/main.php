@@ -23,26 +23,56 @@ class Main extends EC_Controller {
 		parent::__construct();
 
 		$session_data = $this->session->all_userdata();
+
 		if (isset($session_data['logged_in']))
 		{
-			$this->_data['logged_in']       = $session_data['logged_in']; 
-			$this->_data['follower_count']  = $session_data['follower_count']; 
-			$this->_data['following_count'] = $session_data['following_count']; 
-			$this->_data['tweet_count']     = $session_data['tweet_count']; 
-			if (isset($session_data['screen_name'])){
-				$this->_data['screen_name'] =  $session_data['screen_name']; 
-			}
-			if (isset($session_data['time_zone'])) { 
-				$this->_data['time_zone'] =  $session_data['time_zone']; 
-			}
+			$this->_data['logged_in'] = $session_data['logged_in']; 
 		}
 		else
 		{
-			$this->_data['logged_in']       = FALSE; 
-			$this->_data['follower_count']  = 0; 
+			$this->_data['logged_in'] = FALSE; 
+		}
+
+		if (isset($session_data['follower_count']))
+		{
+			$this->_data['follower_count'] = $session_data['follower_count']; 
+		}
+		else
+		{
+			$this->_data['follower_count'] = 0; 
+		}
+
+
+		if (isset($session_data['follower_count']))
+		{
+			$this->_data['following_count'] = $session_data['following_count']; 
+		}
+		else
+		{
 			$this->_data['following_count'] = 0; 
-			$this->_data['tweet_count']     = 0; 
-		}	
+		}
+
+
+		if (isset($session_data['follower_count']))
+		{
+			$this->_data['tweet_count'] = $session_data['tweet_count']; 
+		}
+		else
+		{
+			$this->_data['tweet_count'] = 0; 
+		}
+
+
+		if (isset($session_data['screen_name']))
+		{
+			$this->_data['screen_name'] =  $session_data['screen_name']; 
+		}
+
+		if (isset($session_data['time_zone'])) 
+		{ 
+			$this->_data['time_zone'] =  $session_data['time_zone']; 
+		}
+
 
 		$this->layout->set_logged_in($this->_data['logged_in']);
 	}
@@ -559,10 +589,11 @@ class Main extends EC_Controller {
 
 		$oc = new OAuthCurl(); 
 		$reqData = $oc->fetchData("{$acc_req}&oauth_verifier={$oauth_verifier}"); 
-
+		
+		$accOAuthData = array();
 		parse_str($reqData['content'], $accOAuthData); 
 	
-
+		// debug_object( $accOAuthData );
 		if ( empty($accOAuthData['screen_name']) ){
 			error_log('error callback - Failed login!');
 
@@ -588,7 +619,14 @@ class Main extends EC_Controller {
 			$request_param['screen_name'] = $accOAuthData['screen_name'];
 			$user_data = $this->twitter_lib->get('users/show', $request_param );
 
-			// debug_object( $user_data );
+			if (isset($user_data->errors))
+			{
+				error_log('screen_name=' . $accOAuthData['screen_name'] . ' - message=' . $user_data->errors[0]->message);
+			}
+			else 
+			{
+				// debug_object( $user_data );
+			}
 
 
 			error_log('successful callback');
@@ -599,12 +637,14 @@ class Main extends EC_Controller {
 			$session_data['screen_name']             = $accOAuthData['screen_name']; 
 			$session_data['logged_in']               = TRUE; 
 
-			$session_data['follower_count']  = $user_data->followers_count; 
-			$session_data['following_count'] = $user_data->friends_count; 
-			$session_data['tweet_count']     = $user_data->statuses_count; 
-			$session_data['real_name']       = $user_data->name; 
-			$session_data['time_zone']       = $user_data->time_zone; 
-			$session_data['user_id']         = $user_data->id_str; 
+			if (isset($user_data->followers_count)){
+				$session_data['follower_count']  = $user_data->followers_count; 
+				$session_data['following_count'] = $user_data->friends_count; 
+				$session_data['tweet_count']     = $user_data->statuses_count; 
+				$session_data['real_name']       = $user_data->name; 
+				$session_data['time_zone']       = $user_data->time_zone; 
+				$session_data['user_id']         = $user_data->id_str; 
+			}
 				
 			$this->session->set_userdata($session_data);
 
