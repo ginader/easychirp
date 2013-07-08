@@ -559,6 +559,8 @@ class Main extends EC_Controller {
 	 */
 	public function oauth_callback()
 	{
+		$this->load->library('twitter_lib');
+
 		$oauth_token = $this->input->get('oauth_token', FALSE);	
 		$oauth_verifier = $this->input->get('oauth_verifier', FALSE);	
 
@@ -566,8 +568,6 @@ class Main extends EC_Controller {
 		$consumer_key = $this->config->item('consumer_key'); 
 		$consumer_secret = $this->config->item('consumer_secret'); 
 
-
-		$this->load->library('twitter_lib');
 		$param = array();
 		$param[] = $consumer_key; 
 		$param[] = $consumer_secret; 
@@ -578,7 +578,6 @@ class Main extends EC_Controller {
 		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
 		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
 		
-		// WRONG!
 		$oauth_token_secret = $oauth_verifier;
 		$acc_token = new OAuthConsumer($oauth_token, $oauth_token_secret, 1); 
 			                 
@@ -593,7 +592,6 @@ class Main extends EC_Controller {
 		$accOAuthData = array();
 		parse_str($reqData['content'], $accOAuthData); 
 	
-		// debug_object( $accOAuthData );
 		if ( empty($accOAuthData['screen_name']) ){
 			error_log('error callback - Failed login!');
 
@@ -605,7 +603,6 @@ class Main extends EC_Controller {
 		}
 		else
 		{
-
 			$params = array();
 			$params[] = $this->config->item('tw_consumer_key');
 			$params[] = $this->config->item('tw_consumer_secret');
