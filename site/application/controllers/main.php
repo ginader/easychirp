@@ -577,9 +577,9 @@ class Main extends EC_Controller {
 		 
 		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
 		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
-		    
-		$oauth_token = $this->session->userdata('oauth_token');
-		$oauth_token_secret = $this->session->userdata('oauth_token');
+		
+		// WRONG!
+		$oauth_token_secret = $oauth_verifier;
 		$acc_token = new OAuthConsumer($oauth_token, $oauth_token_secret, 1); 
 			                 
 
@@ -598,7 +598,7 @@ class Main extends EC_Controller {
 			error_log('error callback - Failed login!');
 
 			$session_data = array();
-			// $session_data['logged_in'] = FALSE; 
+			$session_data['logged_in'] = FALSE; 
 				
 			$this->session->set_userdata($session_data);
 			redirect( base_url() );
@@ -609,11 +609,12 @@ class Main extends EC_Controller {
 			$params = array();
 			$params[] = $this->config->item('tw_consumer_key');
 			$params[] = $this->config->item('tw_consumer_secret');
-			$params[] = $this->session->userdata('user_oauth_token');
-			$params[] = $this->session->userdata('user_oauth_token_secret');
+			$params[] = $accOAuthData['oauth_token']; 
+			$params[] = $accOAuthData['oauth_token_secret'];
 
 			$this->load->library('twitter_lib');
 			$this->twitter_lib->connect($params);
+			$this->twitter_lib->set_verify_peer( TRUE );
 
 			$request_param = array();	
 			$request_param['screen_name'] = $accOAuthData['screen_name'];
@@ -623,11 +624,6 @@ class Main extends EC_Controller {
 			{
 				error_log('screen_name=' . $accOAuthData['screen_name'] . ' - message=' . $user_data->errors[0]->message);
 			}
-			else 
-			{
-				// debug_object( $user_data );
-			}
-
 
 			error_log('successful callback');
 			$session_data = array();

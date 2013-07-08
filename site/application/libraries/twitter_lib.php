@@ -51,12 +51,18 @@ class Twitter_lib {
 		}
 	}
 
+
+
 	public function get($url, $params = array())
 	{
 		return $this->twitteroauth->get($url, $params);
 		
 	}
 
+	public function set_verify_peer(bool $value)
+	{
+		$this->twitteroauth->ssl_verifypeer = $value;
+	}
 	
 
 }
