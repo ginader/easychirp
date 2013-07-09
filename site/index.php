@@ -36,7 +36,10 @@ if (defined('ENVIRONMENT'))
 	{
 		case 'development':
 			error_reporting(E_ALL | E_STRICT);
-			ini_set('display_errors', 1);
+			ini_set('display_errors', 'On');
+			ini_set('display_startup_errors', 'On');
+			ini_set('log_errors', 'On');
+
 		break;
 	
 		case 'testing':

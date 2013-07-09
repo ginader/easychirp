@@ -59,7 +59,13 @@ class Twitter_lib {
 		
 	}
 
-	public function set_verify_peer(bool $value)
+	/**
+	* Turn on or off the verifypeer option for ssl;  
+	*
+	* @param boolean $verify must be true or false 
+	* @return void
+	*/
+	public function set_verify_peer($value = TRUE)
 	{
 		$this->twitteroauth->ssl_verifypeer = $value;
 	}
