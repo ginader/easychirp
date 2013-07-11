@@ -21,7 +21,7 @@
 <?php endif; ?> <a href="#main"><?php echo $xliff_reader->get('skip-main-content'); ?></a></div>
 
 <header role="banner">
-	<div id="logoContainer"><img src="images/brand/EasyChirp_Logo2_300.png" alt="Easy Chirp 2" width="300" height="109" /></div>
+	<div id="logoContainer"><img src="/images/brand/EasyChirp_Logo2_300.png" alt="Easy Chirp 2" width="300" height="109" /></div>
 	<div id="welcome">
 		<?php if ($logged_in): ?>
 			<h2 class="hide">My Info</h2>

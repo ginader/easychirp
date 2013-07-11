@@ -57,6 +57,7 @@ $route['profile'] = "main/profile";
 $route['profile_edit'] = "main/profile_edit";
 $route['quote'] = "main/quote";
 $route['retweets'] = "main/retweets"; // For non-JS and keyboard use cases
+$route['retweets/(:any)'] = "main/retweets/$1"; // For non-JS and keyboard use cases
 $route['search'] = "main/search";
 $route['search_quick'] = "main/search_quick"; // For non-JS and keyboard use cases
 $route['search_results'] = "main/search_results";

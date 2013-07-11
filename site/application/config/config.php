@@ -457,17 +457,17 @@ $config['tweet_menu'] = array(
 		'lang-id' => 'nav-retweets', 
 		'label' => 'Retweets', 
 		'parent' => '')
-	,'/retweets?type=by' => array(
+	,'/retweets/by_me' => array(
 		'id' => 'm_retweets_by_me', 
 		'lang-id' => 'nav-retweets-by-me', 
 		'label' => 'Retweets By Me', 
 		'parent' => '/retweets')
-	,'/retweets?type=of' => array(
+	,'/retweets/of_me' => array(
 		'id' => 'm_retweets_of_me', 
 		'lang-id' => 'nav-retweets-of-me', 
 		'label' => 'Retweets Of Me', 
 		'parent' => '/retweets')
-	,'/retweets?type=to' => array(
+	,'/retweets/to_me' => array(
 		'id' => 'm_retweets_to_me', 
 		'lang-id' => 'nav-retweets-to-me', 
 		'label' => 'Retweets To Me', 

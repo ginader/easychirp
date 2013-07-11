@@ -188,7 +188,8 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('Favorites');
 		$this->layout->set_description('Tweets that user marked as a favorite.');
@@ -303,7 +304,8 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('Mentions');
 		$this->layout->set_description('Tweets that contain my user name.');
@@ -332,7 +334,8 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('My Tweets');
 		$this->layout->set_description('Tweets that I posted.');
@@ -403,8 +406,11 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function retweets()
+	public function retweets($retweet_type = FALSE)
 	{
+		if ( $this->session->userdata('logged_in') !== TRUE ){
+			redirect( base_url() . 'sign_in' );
+		}
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
@@ -419,13 +425,78 @@ class Main extends EC_Controller {
 
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
-		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+
+	
+		if ($retweet_type === 'by_me')
+		{
+			$tweets = $this->retweets_of_me($request_param);
+		}
+		elseif ($retweet_type === 'of_me')
+		{
+			$tweets =  $this->retweets_of_me($request_param);
+		}
+		elseif ($retweet_type === 'to_me')
+		{
+			$tweets =  $this->retweets_to_me($request_param);
+		}
+		else
+		{
+			$tweets = array();
+		}
+
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array('type' => $retweet_type, 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('Retweets');
 		$this->layout->set_description('Links to retweet pages.');
 		$this->layout->view('retweets', $this->_data);
 	}
+
+	/**
+	* Tweets authored by Others that I retweeted  
+	*
+	* @param array $params API query parameters
+	* @return array 
+	* @todo figure out how to implement this. there is no straightforward query for this
+	* @see https://dev.twitter.com/docs/api/1.1
+	*/
+	public function retweets_by_me($params){
+		
+		$tweets = array();
+
+		return $tweets;
+	}
+
+	/**
+	* Things that I tweeted that someone else retweeted 
+	*
+	* @param array $params API query parameters
+	* @return array 
+	*/
+	public function retweets_of_me($params){
+		
+		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $params );
+
+		return $tweets;
+	}
+
+
+	/**
+	* Tweets authored by other people retweeted by peope I follow 
+	*
+	* @param array $params API query parameters
+	* @return array 
+	* @todo figure out how to implement this. there is no straightforward query for this
+	* @see https://dev.twitter.com/docs/api/1.1
+	*/
+	public function retweets_to_me($params){
+		
+		$tweets = array();
+
+		return $tweets;
+	}
+
+
 	
 	/**
 	 * Manage the search page - /search
@@ -744,7 +815,8 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', array('tweets' => $tweets), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('Timeline');
 		$this->layout->set_description('Description of Timeline page');

@@ -57,9 +57,9 @@ class EC_Controller extends CI_Controller {
 		$this->layout->add_meta_tag_name('twitter:image', 'http://www.easychirp.com/images/easy_chirp_icon_200.jpg');
 		$this->layout->add_meta_tag_name('twitter:description', 'Easy Chirp has a simple interface and is optimized for disabled users and also works on older technology. It also functions well with keyboard-only, IE6, lowband internet connection, and without JavaScript.');
 
-		$this->layout->add_link_tag('images/brand/favicon.ico', 'shortcut icon');
-		$this->layout->add_link_tag('include/css/general.css', 'stylesheet', 'text/css');
-		$this->layout->add_link_tag('include/css/ico-moon-fonts2.css', 'stylesheet');
+		$this->layout->add_link_tag('/images/brand/favicon.ico', 'shortcut icon');
+		$this->layout->add_link_tag('/include/css/general.css', 'stylesheet', 'text/css');
+		$this->layout->add_link_tag('/include/css/ico-moon-fonts2.css', 'stylesheet');
 
 		//
 		// Get Session Data
