@@ -429,7 +429,7 @@ class Main extends EC_Controller {
 	
 		if ($retweet_type === 'by_me')
 		{
-			$tweets = $this->retweets_of_me($request_param);
+			$tweets = $this->retweets_by_me($request_param);
 		}
 		elseif ($retweet_type === 'of_me')
 		{
@@ -453,16 +453,27 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Tweets authored by Others that I retweeted  
+	* Tweets authored by others that I retweeted  
 	*
 	* @param array $params API query parameters
 	* @return array 
-	* @todo figure out how to implement this. there is no straightforward query for this
 	* @see https://dev.twitter.com/docs/api/1.1
 	*/
-	public function retweets_by_me($params){
-		
+	public function retweets_by_me($params)
+	{
+		$params['include_rts'] = 'true';
+		$params['exclude_replies'] = 'true';
+
+		$results = $this->twitter_lib->get('statuses/user_timeline', $params );
 		$tweets = array();
+
+		foreach ($results as $result)
+		{
+			if ($result->retweet_count > 0 && isset($result->retweeted_status))
+			{
+				$tweets[] = $result;
+			}
+		}
 
 		return $tweets;
 	}
