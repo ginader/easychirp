@@ -42,8 +42,8 @@ foreach($tweets AS $tweet):
 	}
 ?>
 <div class="tweet rounded clearfix<?
-	if ($isReply) { echo (isset($xliff_reader)) ? $xliff_reader->get('reply') : 'reply'; }
-	else if ($isRetweet) { echo (isset($xliff_reader)) ? $xliff_reader->get('retweet') : 'retweet'; }
+	if ($isReply) { echo (isset($xliff_reader)) ? $xliff_reader->get('gbl-tweet-reply') : 'reply'; }
+	else if ($isRetweet) { echo (isset($xliff_reader)) ? $xliff_reader->get('gbl-tweet-retweet') : 'retweet'; }
 	?>">
 	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
