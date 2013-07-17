@@ -1573,11 +1573,6 @@
         <target>tweet options</target>
       </trans-unit>
 
-      <trans-unit id="gbl-tweet-user-options" datatype="html">
-        <source>user options</source>
-        <target>user options</target>
-      </trans-unit>
-
       <trans-unit id="gbl-tweet-favorite" datatype="html">
         <source>favorite</source>
         <target>favoritos</target>
@@ -1606,6 +1601,46 @@
       <trans-unit id="gbl-tweet-email" datatype="html">
         <source>email tweet</source>
         <target>mandar tweet por correo electrónico</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-user-options" datatype="html">
+        <source>user options</source>
+        <target>user options</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-timeline" datatype="html">
+        <source>timeline</source>
+        <target>timeline</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-dm" datatype="html">
+        <source>direct message</source>
+        <target>direct message</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-tweet-message" datatype="html">
+        <source>tweet message</source>
+        <target>tweet message</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-mute" datatype="html">
+        <source>mute user</source>
+        <target>mute user</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-report" datatype="html">
+        <source>report spammer</source>
+        <target>report spammer</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-responding" datatype="html">
+        <source>Responding</source>
+        <target>Responding</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-retweet" datatype="html">
+        <source>Retweet</source>
+        <target>Retweet</target>
       </trans-unit>
 
       <!-- FOOTER -->

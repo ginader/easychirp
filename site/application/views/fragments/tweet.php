@@ -42,8 +42,8 @@ foreach($tweets AS $tweet):
 	}
 ?>
 <div class="tweet rounded clearfix<?
-	if ($isReply) { echo (isset($xliff_reader)) ? $xliff_reader->get('gbl-tweet-reply') : 'reply'; }
-	else if ($isRetweet) { echo (isset($xliff_reader)) ? $xliff_reader->get('gbl-tweet-retweet') : 'retweet'; }
+	if ($isReply) { echo ' reply'; }
+	else if ($isRetweet) { echo ' retweet'; }
 	?>">
 	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
@@ -52,10 +52,10 @@ foreach($tweets AS $tweet):
 		<?php
 		// Is reply or retweet?
 		if ($isReply) {
-			echo ' <a rel="response" title="View the tweet to which this tweet is responding" href="/status?id='.$tweet->in_reply_to_status_id.'">Responding</a> | ';
+			echo ' <a rel="response" title="View the tweet to which this tweet is responding" href="/status?id='.$tweet->in_reply_to_status_id.'">' . $xliff_reader->get('gbl-tweet-responding') . '</a> | ';
 		}
 		if ($isRetweet) {
-			echo ' <a rel="retweet" title="View the original tweet (this is a retweet)" href="/status?id='.$tweet->retweeted_status->id.'">Retweet</a> | ';
+			echo ' <a rel="retweet" title="View the original tweet (this is a retweet)" href="/status?id='.$tweet->retweeted_status->id.'">' . $xliff_reader->get('gbl-tweet-retweet') . '</a> | ';
 		}
 
 		// Has been retweeted?
@@ -69,18 +69,18 @@ foreach($tweets AS $tweet):
 		?>
 		via <?php echo $tweet->source; ?></p>
 	<div class="btnOptions">
-		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
+		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?>" data-icon="&#x29;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?></span></a></h3>
 		<ul id="tweetOptions_<?php echo $index; ?>">
-			<li><a href="/favorite?id=<?php echo $tweet->id; ?>" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
-			<li><a href="/reply?id=<?php echo $tweet->id; ?>" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
-			<li><a href="/reply_to_all?id=<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
-			<li><a href="/retweet?id=<?php echo $tweet->id; ?>" data-icon="&#x3f;" title="retweet"><span class="hide">retweet</span></a></li>
-			<li><a href="/quote?id=<?php echo $tweet->id; ?>" data-icon="&#x30;" title="quote tweet"><span class="hide">quote tweet</span></a></li>
-			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo urlencode($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="email tweet"><span class="hide">email tweet</span></a></li>
+			<li><a href="/favorite?id=<?php echo $tweet->id; ?>" data-icon="&#x2a;" title="<?php echo $xliff_reader->get('gbl-tweet-favorite'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-favorite'); ?></span></a></li>
+			<li><a href="/reply?id=<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
+			<li><a href="/reply_to_all?id=<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
+			<li><a href="/retweet?id=<?php echo $tweet->id; ?>" data-icon="&#x3f;" title="<?php echo $xliff_reader->get('gbl-tweet-retweet'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-retweet'); ?></span></a></li>
+			<li><a href="/quote?id=<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
+			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo urlencode($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
 		</ul>
 	</div>
 	<div class="btnOptions">
-		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
+		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="<?php echo $xliff_reader->get('gbl-tweet-user-options'); ?>" data-icon="&#x3c;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?></span></a></h3>
 		<ul id="userOptions_<?php echo $index; ?>">
 			<li><a href="/timeline?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
 			<li><a href="/direct?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
