@@ -430,12 +430,12 @@ $config['main_menu'] = array(
 		'lang-id' => 'nav-about', 
 		'label' => 'About', 
 		'parent' => '')
-	,'/sign_in' => array(
+	/*,'/sign_in' => array(
 		'id' => 'm_sign_in', 
 		'access_key' => '0', 
 		'lang-id' => 'nav-sign-in', 
 		'label' => 'Sign In', 
-		'parent' => '')
+		'parent' => '')*/
 );
 
 $config['tweet_menu'] = array(
