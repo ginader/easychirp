@@ -117,8 +117,7 @@ class Main extends EC_Controller {
 	 * @return void
 	 */
 	public function about()
-	{
-		
+	{	
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('About');
@@ -133,7 +132,6 @@ class Main extends EC_Controller {
 	*/
 	public function articles()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Articles and Feedback');
@@ -143,7 +141,6 @@ class Main extends EC_Controller {
 
 	public function direct()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Direct Messages');
@@ -153,7 +150,6 @@ class Main extends EC_Controller {
 
 	public function direct_inbox()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Inbox | Direct Messages');
@@ -163,7 +159,6 @@ class Main extends EC_Controller {
 
 	public function direct_sent()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Sent | Direct Messages');
@@ -173,7 +168,6 @@ class Main extends EC_Controller {
 
 	public function favorites()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
@@ -203,7 +197,6 @@ class Main extends EC_Controller {
 	*/
 	public function features()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Features');
@@ -218,7 +211,6 @@ class Main extends EC_Controller {
 	*/
 	public function followers()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Followers');
@@ -233,7 +225,6 @@ class Main extends EC_Controller {
 	*/
 	public function following()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Following');
@@ -243,7 +234,6 @@ class Main extends EC_Controller {
 
 	public function go_to_user()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Go To User');
@@ -258,7 +248,6 @@ class Main extends EC_Controller {
 	*/
 	public function lists()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Lists');
@@ -273,7 +262,6 @@ class Main extends EC_Controller {
 	*/
 	public function list_edit()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Edit List');
@@ -288,9 +276,7 @@ class Main extends EC_Controller {
 	*/
 	public function mentions()
 	{
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
-
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -319,8 +305,7 @@ class Main extends EC_Controller {
 	*/
 	public function mytweets()
 	{
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -349,8 +334,7 @@ class Main extends EC_Controller {
 	*/
 	public function profile()
 	{
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -378,8 +362,7 @@ class Main extends EC_Controller {
 	*/
 	public function profile_edit()
 	{
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Edit Profile');
 		$this->layout->set_description('Edit your Twitter account profile.');
@@ -393,7 +376,6 @@ class Main extends EC_Controller {
 	*/
 	public function quote()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Quote');
@@ -491,7 +473,6 @@ class Main extends EC_Controller {
 		return $tweets;
 	}
 
-
 	/**
 	* Tweets authored by other people retweeted by peope I follow 
 	*
@@ -506,8 +487,6 @@ class Main extends EC_Controller {
 
 		return $tweets;
 	}
-
-
 	
 	/**
 	 * Manage the search page - /search
@@ -518,7 +497,7 @@ class Main extends EC_Controller {
 	public function search($query)
 	{
 		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Search');
 		$this->layout->set_description('Search tweets, saved searches, and search users.');
@@ -534,7 +513,7 @@ class Main extends EC_Controller {
 	public function search_results($query)
 	{
 		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Search Results');
 		$this->layout->set_description('Search results.');
@@ -608,7 +587,6 @@ class Main extends EC_Controller {
 		header("Location: $acc_req"); 
 	}
 
-
 	/**
 	 * Manage the sign out page - /sign_out
 	 *
@@ -628,9 +606,6 @@ class Main extends EC_Controller {
 		
 		redirect( base_url() );
 	}
-
-
-
 
 	/**
 	 * Handles the callback from twitter
@@ -729,7 +704,6 @@ class Main extends EC_Controller {
 		}
 	}
 
-
 	/**
 	* Manages the status page - /status
 	*
@@ -737,8 +711,7 @@ class Main extends EC_Controller {
 	*/
 	public function status()
 	{
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('View Single Tweet');
 		$this->layout->set_description('View a single status/tweet.');
@@ -752,8 +725,7 @@ class Main extends EC_Controller {
 	*/
 	public function tips()
 	{
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Tips');
 		$this->layout->set_description('Tips for this app, using Twitter, and recommended apps.');
@@ -782,8 +754,7 @@ class Main extends EC_Controller {
 	*/
 	public function trends()
 	{
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Trends');
 		$this->layout->set_description('Trending topics on Twitter.');
@@ -797,11 +768,10 @@ class Main extends EC_Controller {
 	*/
 	public function user()
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('User Details');
-		$this->layout->set_description('Information for Twitter user.');
+		$this->layout->set_description('Information of Twitter user.');
 		$this->layout->view('user', $this->_data);
 	}
 
