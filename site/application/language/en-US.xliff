@@ -1642,6 +1642,64 @@
         <target>Retweet</target>
       </trans-unit>
 
+      <!-- USER -->
+
+      <trans-unit id="user-h1" datatype="html">
+        <source>User Details</source>
+        <target>User Details</target>
+      </trans-unit>
+
+      <trans-unit id="user-h2-contact" datatype="html">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+
+      <trans-unit id="user-following" datatype="html">
+        <source>Following</source>
+        <target>Following</target>
+      </trans-unit>
+
+      <trans-unit id="user-unfollow" datatype="html">
+        <source>Unfollow</source>
+        <target>Unfollow</target>
+      </trans-unit>
+
+      <trans-unit id="user-not-following" datatype="html">
+        <source>Not Following</source>
+        <target>Not Following</target>
+      </trans-unit>
+
+      <trans-unit id="user-follow" datatype="html">
+        <source>Follow</source>
+        <target>Follow</target>
+      </trans-unit>
+
+      <trans-unit id="user-spammer" datatype="html">
+        <source>Report Spammer</source>
+        <target>Report Spammer</target>
+      </trans-unit>
+
+      <trans-unit id="user-block" datatype="html">
+        <source>Block User</source>
+        <target>Block User</target>
+      </trans-unit>
+
+      <trans-unit id="user-verified" datatype="html">
+        <source>Verified User</source>
+        <target>Verified User</target>
+      </trans-unit>
+
+      <trans-unit id="user-h2-details" datatype="html">
+        <source>Details</source>
+        <target>Details</target>
+      </trans-unit>
+
+      <trans-unit id="user-" datatype="html">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+
       <!-- FOOTER -->
 
       <trans-unit id="footer-select-language" datatype="html">

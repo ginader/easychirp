@@ -496,7 +496,6 @@ class Main extends EC_Controller {
 	 */
 	public function search($query)
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Search');
@@ -512,7 +511,6 @@ class Main extends EC_Controller {
 	 */
 	public function search_results($query)
 	{
-		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Search Results');
@@ -769,6 +767,20 @@ class Main extends EC_Controller {
 	public function user()
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['screen_name'] =  $_GET["id"];
+
+		$this->_data['user'] = $this->twitter_lib->get('users/show', $request_param);
 
 		$this->layout->set_title('User Details');
 		$this->layout->set_description('Information of Twitter user.');

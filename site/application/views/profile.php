@@ -4,7 +4,7 @@
 
 <p id="editProfileLink"><a href="/profile_edit"><?php echo $xliff_reader->get('profile-edit-link'); ?></a></p>
 
-<h2 class="marginAdjustment">Details</h2>
+<h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-details'); ?></h2>
 
 <div class="box1 rounded no-margin" style="background: url('<? echo $profile->profile_image_url; ?>') no-repeat 15px 5px;">
 	<dl id="profile" class="clearfix">
