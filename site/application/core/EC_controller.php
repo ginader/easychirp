@@ -138,6 +138,17 @@ class EC_Controller extends CI_Controller {
 		return str_replace($site_url, '', $current_url);
 	}
 
+	public function redirect_if_not_logged_in($page = 'home')
+	{
+		if (! $this->session->userdata('logged_in'))
+		{
+			// Send user to the homepage
+			redirect( base_url() );
+		}
+
+
+	}
+
 	
 }
 

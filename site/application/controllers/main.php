@@ -132,6 +132,8 @@ class Main extends EC_Controller {
 	*/
 	public function articles()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Articles and Feedback');
@@ -141,6 +143,8 @@ class Main extends EC_Controller {
 
 	public function direct()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Direct Messages');
@@ -150,6 +154,8 @@ class Main extends EC_Controller {
 
 	public function direct_inbox()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Inbox | Direct Messages');
@@ -159,6 +165,8 @@ class Main extends EC_Controller {
 
 	public function direct_sent()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Sent | Direct Messages');
@@ -168,6 +176,8 @@ class Main extends EC_Controller {
 
 	public function favorites()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
@@ -197,6 +207,8 @@ class Main extends EC_Controller {
 	*/
 	public function features()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Features');
@@ -211,6 +223,8 @@ class Main extends EC_Controller {
 	*/
 	public function followers()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Followers');
@@ -276,6 +290,8 @@ class Main extends EC_Controller {
 	*/
 	public function mentions()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -305,6 +321,8 @@ class Main extends EC_Controller {
 	*/
 	public function mytweets()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -334,6 +352,8 @@ class Main extends EC_Controller {
 	*/
 	public function profile()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -362,6 +382,8 @@ class Main extends EC_Controller {
 	*/
 	public function profile_edit()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Edit Profile');
@@ -376,6 +398,8 @@ class Main extends EC_Controller {
 	*/
 	public function quote()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Quote');
@@ -443,6 +467,8 @@ class Main extends EC_Controller {
 	*/
 	public function retweets_by_me($params)
 	{
+		$this->redirect_if_not_logged_in();
+
 		$params['include_rts'] = 'true';
 		$params['exclude_replies'] = 'true';
 
@@ -466,7 +492,10 @@ class Main extends EC_Controller {
 	* @param array $params API query parameters
 	* @return array 
 	*/
-	public function retweets_of_me($params){
+	public function retweets_of_me($params)
+	{
+		$this->redirect_if_not_logged_in();
+
 		
 		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $params );
 
@@ -481,7 +510,9 @@ class Main extends EC_Controller {
 	* @todo figure out how to implement this. there is no straightforward query for this
 	* @see https://dev.twitter.com/docs/api/1.1
 	*/
-	public function retweets_to_me($params){
+	public function retweets_to_me($params)
+	{
+		$this->redirect_if_not_logged_in();
 		
 		$tweets = array();
 
@@ -496,6 +527,8 @@ class Main extends EC_Controller {
 	 */
 	public function search($query)
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Search');
@@ -511,6 +544,8 @@ class Main extends EC_Controller {
 	 */
 	public function search_results($query)
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Search Results');
@@ -723,6 +758,8 @@ class Main extends EC_Controller {
 	*/
 	public function tips()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Tips');
@@ -737,6 +774,8 @@ class Main extends EC_Controller {
 	*/
 	public function tools()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
@@ -752,6 +791,8 @@ class Main extends EC_Controller {
 	*/
 	public function trends()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Trends');
@@ -766,6 +807,8 @@ class Main extends EC_Controller {
 	*/
 	public function user()
 	{
+		$this->redirect_if_not_logged_in();
+		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
@@ -794,6 +837,8 @@ class Main extends EC_Controller {
 	*/
 	public function timeline()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$params = array();
