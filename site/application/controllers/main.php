@@ -132,8 +132,6 @@ class Main extends EC_Controller {
 	*/
 	public function articles()
 	{
-		$this->redirect_if_not_logged_in();
-
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Articles and Feedback');
@@ -207,8 +205,6 @@ class Main extends EC_Controller {
 	*/
 	public function features()
 	{
-		$this->redirect_if_not_logged_in();
-
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Features');
@@ -758,8 +754,6 @@ class Main extends EC_Controller {
 	*/
 	public function tips()
 	{
-		$this->redirect_if_not_logged_in();
-
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('Tips');
