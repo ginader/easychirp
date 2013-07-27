@@ -235,6 +235,8 @@ class Main extends EC_Controller {
 	*/
 	public function following()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Following');
@@ -244,6 +246,8 @@ class Main extends EC_Controller {
 
 	public function go_to_user()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Go To User');
@@ -258,6 +262,8 @@ class Main extends EC_Controller {
 	*/
 	public function lists()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Lists');
@@ -272,6 +278,8 @@ class Main extends EC_Controller {
 	*/
 	public function list_edit()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
 		$this->layout->set_title('Edit List');
@@ -395,8 +403,27 @@ class Main extends EC_Controller {
 	public function quote()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['id'] =  $_GET["id"];
+
+		$data = $this->twitter_lib->get('statuses/show', $request_param );
+		$tweets = array();
+		$tweets[] = $data;
+
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('Quote');
 		$this->layout->set_description('Quote a tweet.');
@@ -410,9 +437,7 @@ class Main extends EC_Controller {
 	*/
 	public function retweets($retweet_type = FALSE)
 	{
-		if ( $this->session->userdata('logged_in') !== TRUE ){
-			redirect( base_url() . 'sign_in' );
-		}
+		$this->redirect_if_not_logged_in();
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
@@ -491,7 +516,6 @@ class Main extends EC_Controller {
 	public function retweets_of_me($params)
 	{
 		$this->redirect_if_not_logged_in();
-
 		
 		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $params );
 
@@ -740,6 +764,8 @@ class Main extends EC_Controller {
 	*/
 	public function status()
 	{
+		$this->redirect_if_not_logged_in();
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title('View Single Tweet');
@@ -769,7 +795,6 @@ class Main extends EC_Controller {
 	public function tools()
 	{
 		$this->redirect_if_not_logged_in();
-		
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
@@ -833,7 +858,7 @@ class Main extends EC_Controller {
 	{
 		$this->redirect_if_not_logged_in();
 
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
