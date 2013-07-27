@@ -586,6 +586,16 @@ class Main extends EC_Controller {
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+		$this->_data['saved_searches'] = $this->twitter_lib->get('saved_searches/list');
+
 		$this->layout->set_title('Search');
 		$this->layout->set_description('Search tweets, saved searches, and search users.');
 		$this->layout->view('search', $this->_data);
