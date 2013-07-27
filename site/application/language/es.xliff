@@ -1462,6 +1462,20 @@
         <target>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</target>
       </trans-unit>
 
+      <!-- QUOTE -->
+
+      <trans-unit id="quote-h1" datatype="html">
+        <source>Quote Tweet</source>
+        <target>Citar Tweet</target>
+      </trans-unit>      
+
+      <!-- REPLY -->
+
+      <trans-unit id="reply-h1" datatype="html">
+        <source>Reply</source>
+        <target>Responder</target>
+      </trans-unit>      
+
       <!-- SEARCH -->
 
       <trans-unit id="search-h1" datatype="html">
