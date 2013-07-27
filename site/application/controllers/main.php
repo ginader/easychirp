@@ -849,6 +849,21 @@ class Main extends EC_Controller {
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		//$this->_data['trends_available'] = $this->twitter_lib->get('trends/available');
+
+		$request_param = array();
+		$request_param['id'] =  1;
+		$this->_data['trends_worldwide'] = $this->twitter_lib->get('trends/place', $request_param);
+
 		$this->layout->set_title('Trends');
 		$this->layout->set_description('Trending topics on Twitter.');
 		$this->layout->view('trends', $this->_data);
