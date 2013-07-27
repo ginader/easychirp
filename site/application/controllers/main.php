@@ -431,6 +431,41 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages the reply page - /reply
+	*
+	* @return void
+	*/
+	public function reply()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['id'] =  $_GET["id"];
+
+		$data = $this->twitter_lib->get('statuses/show', $request_param );
+		$tweets = array();
+		$tweets[] = $data;
+
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
+		$this->layout->set_title('Reply');
+		$this->layout->set_description('Reply to a tweet.');
+		$this->layout->view('reply', $this->_data);
+	}
+
+	/**
 	* Manages the retweets page - /retweets
 	*
 	* @return void
