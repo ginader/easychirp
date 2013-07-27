@@ -9,9 +9,12 @@
 
 	//echo '<h3>' . $trends_worldwide[0]->locations[0]->name . '</h3>'; // Worldwide
 
+	echo '<ul>';
 	foreach($trends_worldwide[0]->trends AS $trend):
 		echo '<li><a href="/search_results?q=' . $trend->query . '">' . $trend->name . '</a></li>';
 	endforeach;
+	echo '</ul>';
+
 	?>
 
 

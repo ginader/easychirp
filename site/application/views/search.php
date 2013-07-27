@@ -71,7 +71,6 @@ else {
 	echo '</ul>';
 }
 ?>
-	</ul>
 </div>
 
 <div class="box1 rounded" style="padding-bottom: 1.5rem;">
