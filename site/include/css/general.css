@@ -804,6 +804,9 @@ button:hover, button:focus,
 .tweet.retweet {
 	padding-right: 60px;
 }
+.tweetSingle {
+	margin: 1rem 0 -1rem;
+}
 
 /* tweet/user option buttons etc */
 .btnOptions {

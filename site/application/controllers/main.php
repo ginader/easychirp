@@ -813,6 +813,28 @@ class Main extends EC_Controller {
 
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['id'] =  $_GET["id"];
+
+		// Get general data
+		$data = $this->twitter_lib->get('statuses/show', $request_param );
+		$this->_data['show'] = $data;
+
+		// Put data in array to then render in tweet fragment
+		$tweets = array();
+		$tweets[] = $data;
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
 		$this->layout->set_title('View Single Tweet');
 		$this->layout->set_description('View a single status/tweet.');
 		$this->layout->view('status', $this->_data);

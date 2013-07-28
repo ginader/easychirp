@@ -1,39 +1,20 @@
 <h1 class="rounded">View Single Tweet</h1>
 
-<div class="tweet rounded" style="margin: 1rem auto 0;">
-	<div class="tweetAvatar" style="background-image:url(images/avatar_todd.png);"></div>
-	<h2 class="hide">Username</h2>
-	<q>The end of the tweet the tweetthe tweet the tweetthe tweet the tweetthe tweet the tweeweetthe tweet the tweetthe tweet the et the tweetthe tweet the tweet</q>
-	<p>from <a href="#" title="fullname; followers; following">username</a> | <a href="#">date</a> | retweet/responding | via <a href="#">app</a></p>
-	<div class="btnOptions">
-		<h3><a href="#tweetOptions_3" class="btnOptionsTweet" title="tweet options" data-icon="&#x29;"><span class="hide">tweet options</span></a></h3>
-		<ul id="tweetOptions_3">
-			<li><a href="#" data-icon="&#x2a;" title="favorite"><span class="hide">favorite</span></a></li>
-			<li><a href="#" data-icon="&#x41;" title="reply"><span class="hide">reply</span></a></li>
-			<li><a href="#" data-icon="&#x3b;" title="reply to all"><span class="hide">reply to all</span></a></li>
-			<li><a href="#" data-icon="&#x3f;" title="retweet"><span class="hide">retweet</span></a></li>
-			<li><a href="#" data-icon="&#x30;" title="quote tweet"><span class="hide">quote tweet</span></a></li>
-			<li><a href="#" data-icon="&#x31;" title="email tweet"><span class="hide">email tweet</span></a></li>
-		</ul>
-	</div>
-	<div class="btnOptions">
-		<h3><a href="#userOptions_3" class="btnOptionsUser" title="user options" data-icon="&#x3c;"><span class="hide">user options</span></a></h3>
-		<ul id="userOptions_3">
-			<li><a href="#" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
-			<li><a href="#" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
-			<li><a href="#" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
-			<li><a href="#" data-icon="&#x3d;" title="muter user"><span class="hide">mute user</span></a></li>
-			<li><a href="#" data-icon="&#x33;" title="report spammer" class="spammer"><span class="hide">report spammer</span></a></li>
-		</ul>
-	</div>
+<div class="tweetSingle">
+<?php
+echo $tweets;
+?>
 </div>
 
 <h2>More</h2>
 
 <ul>
-	<li><span class="icon-twitter2" aria-hidden="true"></span> <a href="https://twitter.com/{username}/status/{id}" rel="external">This tweet on Twitter</a></li>
-	<li><span class="icon-list2" aria-hidden="true"></span> <a href="">Lists by {username}</a></li>
-	<li><a href="">Details on {username}</a></li>
-	<li><a href="">Tweets by {username}</a></li>
+	<li><span class="icon-twitter2" aria-hidden="true"></span> <a href="https://twitter.com/<?php echo $show->user->screen_name; ?>/status/<?php echo $show->id; ?>" rel="external">This tweet on Twitter</a></li>
+	<li><span class="icon-list2" aria-hidden="true"></span> <a href="/lists?id=<?php echo $show->user->screen_name; ?>">Lists by <?php echo $show->user->name; ?></a></li>
+	<li><a href="/user?id=<?php echo $show->user->screen_name; ?>">Details on <?php echo $show->user->name; ?></a></li>
+	<li><a href="/timeline?id=<?php echo $show->user->screen_name; ?>">Tweets by <?php echo $show->user->name; ?></a></li>
 </ul>
 
+<?php
+//echo debug_object( $show );
+?>
