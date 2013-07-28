@@ -163,5 +163,58 @@ $("#frmUrlShort").submit(function(ev) {
 	}
 });
 
+/* Modal *****************************************/
+$('a[rel=modal]').click(function(e) {
+	e.preventDefault();
+	var id = $(this).attr('href').replace("/","#");
+
+	// Get the screen height and width
+	var maskHeight = $(document).height();
+	var maskWidth = $(window).width();
+
+	// Set height and width to mask to fill up the whole screen
+	$('#mask').css('width',maskWidth);
+	$('#mask').css('height',maskHeight);
+	
+	// Transition effect - mask
+	$('#mask').fadeIn(500);
+
+	// Get the window height and width
+	var winH = $(window).height();
+	var winW = $(window).width();
+
+	// Position the popup window to center
+	$(id).css('top',  winH/2-$(id).height()/2);
+	$(id).css('left', winW/2-$(id).width()/2-20);
+
+	// Position the close button
+	var modalLeft = ( $(id).width() + 20 ) + "px";
+	$(".close").css('top',  '-.2rem');
+	$(".close").css('left', modalLeft);
+
+	// Transition effect and focus the modal
+	$(id).fadeIn(500);
+	$(id).focus();
+
+	// If close button is clicked
+	$('.modal .close').click(function (e) {
+		e.preventDefault();
+		$('#mask, .modal').hide();
+	});
+
+	// If mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.modal').hide();
+	});
+
+	// Close on Escape key
+	$(document).on('keydown', function (e) {
+	    if (e.keyCode === 27) { // ESC
+			$('#mask, .modal').hide();
+	    }
+	});
+});
+
 
 
