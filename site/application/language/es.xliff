@@ -1478,7 +1478,7 @@
 
       <!-- RETWEET -->
 
-      <trans-unit id="reply-h1" datatype="html">
+      <trans-unit id="retweet-h1" datatype="html">
         <source>Retweet</source>
         <target>Retweet</target>
       </trans-unit>

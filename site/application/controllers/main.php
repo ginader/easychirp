@@ -497,7 +497,7 @@ class Main extends EC_Controller {
 
 		$this->layout->set_title('Retweet');
 		$this->layout->set_description('Retweet a tweet.');
-		$this->layout->view('reply', $this->_data);
+		$this->layout->view('retweet', $this->_data);
 	}
 
 	/**
