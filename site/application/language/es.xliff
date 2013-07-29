@@ -1467,14 +1467,21 @@
       <trans-unit id="quote-h1" datatype="html">
         <source>Quote Tweet</source>
         <target>Citar Tweet</target>
-      </trans-unit>      
+      </trans-unit>
 
       <!-- REPLY -->
 
       <trans-unit id="reply-h1" datatype="html">
         <source>Reply</source>
         <target>Responder</target>
-      </trans-unit>      
+      </trans-unit>
+
+      <!-- RETWEET -->
+
+      <trans-unit id="reply-h1" datatype="html">
+        <source>Retweet</source>
+        <target>Retweet</target>
+      </trans-unit>
 
       <!-- SEARCH -->
 
@@ -1713,7 +1720,6 @@
         <source></source>
         <target></target>
       </trans-unit>
-
 
       <!-- FOOTER -->
             
