@@ -950,6 +950,13 @@ body.theme-inverse {
 
 /* Media queries *******************************************/
 
+@media only screen and (max-width: 1000px) {
+	.modal span {
+		display: block;
+		clear: both;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	#urlService {
 		display: block;
@@ -958,6 +965,10 @@ body.theme-inverse {
 	.tweet q {
 		font-size: 1.25rem;
 		line-height: 1.6rem;
+	}
+	#frmGoUser span {
+		display: block;
+		clear: both;
 	}
 }
 
