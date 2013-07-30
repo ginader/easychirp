@@ -164,9 +164,12 @@ $("#frmUrlShort").submit(function(ev) {
 });
 
 /* Modal *****************************************/
+var modalOpen = false;
+
 $('a[rel=modal]').click(function(e) {
 	e.preventDefault();
 	var id = $(this).attr('href').replace("/","#");
+	modalOpen = true;
 
 	// Remember what opened me to focus when closing
 	var lastFocus = document.activeElement;
@@ -204,6 +207,7 @@ $('a[rel=modal]').click(function(e) {
 		e.preventDefault();
 		$('#mask, .modal').hide();
 		lastFocus.focus();
+		modalOpen = false;
 	});
 
 	// Close - if mask is clicked
@@ -211,6 +215,7 @@ $('a[rel=modal]').click(function(e) {
 		$(this).hide();
 		$('.modal').hide();
 		lastFocus.focus();
+		modalOpen = false;
 	});
 
 	// Close - Escape key
@@ -218,9 +223,11 @@ $('a[rel=modal]').click(function(e) {
 	    if (e.keyCode === 27) { // ESC
 			$('#mask, .modal').hide();
 			lastFocus.focus();
+			modalOpen = false;
 	    }
 	});
 });
+// Resize modal when window resized
 $(window).resize(function () {
 	var id = $('.modal');
 
@@ -245,5 +252,19 @@ $(window).resize(function () {
 	$(".close").css('top',  '-.2rem');
 	$(".close").css('left', modalLeft);
 });
+// Maintain focus within modal
+document.addEventListener("focus", function(event) {
+	var modal = document.getElementById("search_quick");
+	if (modalOpen && !modal.contains(event.target)) {
+		event.stopPropagation();
+		modal.focus();
+	}
+	var modal2 = document.getElementById("go_to_user");
+	if (modalOpen && !modal2.contains(event.target)) {
+		event.stopPropagation();
+		modal2.focus();
+	}
+}, true);
+
 
 
