@@ -687,7 +687,7 @@
 
       <trans-unit id="profile-dt-name" datatype="html">
         <source>Name</source>
-        <target>Name</target>
+        <target>الاسم</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-location" datatype="html">
@@ -1461,6 +1461,27 @@
         <target>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</target>
       </trans-unit>
 
+      <!-- QUOTE -->
+
+      <trans-unit id="quote-h1" datatype="html">
+        <source>Quote Tweet</source>
+        <target>اقتبس التغريدة</target>
+      </trans-unit>
+
+      <!-- REPLY -->
+
+      <trans-unit id="reply-h1" datatype="html">
+        <source>Reply</source>
+        <target>رد</target>
+      </trans-unit>
+
+      <!-- RETWEET -->
+
+      <trans-unit id="retweet-h1" datatype="html">
+        <source>Retweet</source>
+        <target>إعادة تغريد</target>
+      </trans-unit>
+
       <!-- SEARCH -->
 
       <trans-unit id="search-h1" datatype="html">
@@ -1646,27 +1667,27 @@
 
       <trans-unit id="user-h1" datatype="html">
         <source>User Details</source>
-        <target>User Details</target>
+        <target>تفاصيل المستخدم</target>
       </trans-unit>
 
       <trans-unit id="user-h2-contact" datatype="html">
         <source>Contact</source>
-        <target>Contact</target>
+        <target>جهة الاتصال</target>
       </trans-unit>
 
       <trans-unit id="user-following" datatype="html">
         <source>Following</source>
-        <target>Following</target>
+        <target>متابَعين</target>
       </trans-unit>
 
       <trans-unit id="user-unfollow" datatype="html">
         <source>Unfollow</source>
-        <target>Unfollow</target>
+        <target>إلغاء متابعة</target>
       </trans-unit>
 
       <trans-unit id="user-not-following" datatype="html">
         <source>Not Following</source>
-        <target>Not Following</target>
+        <target>غير متابَع</target>
       </trans-unit>
 
       <trans-unit id="user-follow" datatype="html">
@@ -1686,19 +1707,18 @@
 
       <trans-unit id="user-verified" datatype="html">
         <source>Verified User</source>
-        <target>Verified User</target>
+        <target>حساب موَّثق</target>
       </trans-unit>
 
       <trans-unit id="user-h2-details" datatype="html">
         <source>Details</source>
-        <target>Details</target>
+        <target>التفاصيل</target>
       </trans-unit>
 
       <trans-unit id="user-" datatype="html">
         <source></source>
         <target></target>
       </trans-unit>
-
 
       <!-- FOOTER -->
 

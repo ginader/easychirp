@@ -1462,6 +1462,27 @@
         <target>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</target>
       </trans-unit>
 
+      <!-- QUOTE -->
+
+      <trans-unit id="quote-h1" datatype="html">
+        <source>Quote Tweet</source>
+        <target>Citar Tweet</target>
+      </trans-unit>
+
+      <!-- REPLY -->
+
+      <trans-unit id="reply-h1" datatype="html">
+        <source>Reply</source>
+        <target>Responder</target>
+      </trans-unit>
+
+      <!-- RETWEET -->
+
+      <trans-unit id="retweet-h1" datatype="html">
+        <source>Retweet</source>
+        <target>Retweet</target>
+      </trans-unit>
+
       <!-- SEARCH -->
 
       <trans-unit id="search-h1" datatype="html">
@@ -1647,59 +1668,58 @@
 
       <trans-unit id="user-h1" datatype="html">
         <source>User Details</source>
-        <target>User Details</target>
+        <target>Detalles de usuario</target>
       </trans-unit>
 
       <trans-unit id="user-h2-contact" datatype="html">
         <source>Contact</source>
-        <target>Contact</target>
+        <target>Contactar</target>
       </trans-unit>
 
       <trans-unit id="user-following" datatype="html">
         <source>Following</source>
-        <target>Following</target>
+        <target>Siguiendo</target>
       </trans-unit>
 
       <trans-unit id="user-unfollow" datatype="html">
         <source>Unfollow</source>
-        <target>Unfollow</target>
+        <target>Dejar de seguir</target>
       </trans-unit>
 
       <trans-unit id="user-not-following" datatype="html">
         <source>Not Following</source>
-        <target>Not Following</target>
+        <target>No estas siguiendo</target>
       </trans-unit>
 
       <trans-unit id="user-follow" datatype="html">
         <source>Follow</source>
-        <target>Follow</target>
+        <target>Seguir</target>
       </trans-unit>
 
       <trans-unit id="user-spammer" datatype="html">
         <source>Report Spammer</source>
-        <target>Report Spammer</target>
+        <target>Informe Spammer</target>
       </trans-unit>
 
       <trans-unit id="user-block" datatype="html">
         <source>Block User</source>
-        <target>Block User</target>
+        <target>Bloquear Usuario</target>
       </trans-unit>
 
       <trans-unit id="user-verified" datatype="html">
         <source>Verified User</source>
-        <target>Verified User</target>
+        <target>verificar Usuario</target>
       </trans-unit>
 
       <trans-unit id="user-h2-details" datatype="html">
         <source>Details</source>
-        <target>Details</target>
+        <target>Detalles</target>
       </trans-unit>
 
       <trans-unit id="user-" datatype="html">
         <source></source>
         <target></target>
       </trans-unit>
-
 
       <!-- FOOTER -->
             

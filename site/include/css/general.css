@@ -3,7 +3,7 @@ Reset
 Base
 Utilities
 Layout (2-col, menus, write tweet, alert messages, page-specific)
-Module (buttons, tweets)
+Module (buttons, tweets, modals)
 State
 Theme
 Media queries (except for 2-col)
@@ -804,6 +804,9 @@ button:hover, button:focus,
 .tweet.retweet {
 	padding-right: 60px;
 }
+.tweetSingle {
+	margin: 1rem 0 -1rem;
+}
 
 /* tweet/user option buttons etc */
 .btnOptions {
@@ -838,6 +841,37 @@ a.btnOptionsUser,
 #frmGoUser h3 {
 	margin:.2rem .3em 0 0;
 	float: left;
+}
+
+/* modals */
+#mask {
+	position: absolute;
+	z-index: 100;
+	background-color: #666;
+	display: none;
+	top: 0;
+	left: 0;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+.modal {
+	position: fixed;
+	width: 60%;
+	max-width: 700px;
+	min-width: 200px;
+	display: none;
+	z-index: 101;
+	padding: 25px;
+	background-color: #efefef;
+}
+.modal .close {
+	text-decoration: none;
+	position: absolute;
+	font-size: 2rem;
 }
 
 /* State  **************************************************/
@@ -916,6 +950,13 @@ body.theme-inverse {
 
 /* Media queries *******************************************/
 
+@media only screen and (max-width: 1000px) {
+	.modal span {
+		display: block;
+		clear: both;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	#urlService {
 		display: block;
@@ -924,6 +965,10 @@ body.theme-inverse {
 	.tweet q {
 		font-size: 1.25rem;
 		line-height: 1.6rem;
+	}
+	#frmGoUser span {
+		display: block;
+		clear: both;
 	}
 }
 

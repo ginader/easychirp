@@ -49,6 +49,17 @@
 	</div>	
 </main>
 
+<!-- modal windows -->
+<div id="go_to_user" class="modal rounded" role="dialog" aria-label="<?php echo $xliff_reader->get('nav-goto-user'); ?>" tabindex="-1">
+	<?php require('fragments/go_to_user_form.php'); ?>
+	<a href="#" class="close icon-close1"><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
+</div>
+<div id="search_quick" class="modal rounded" role="dialog" aria-label="<?php echo $xliff_reader->get('nav-quick-search'); ?>" tabindex="-1">
+	<?php require('fragments/search_quick_form.php'); ?>
+	<a href="#" class="close icon-close1"><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
+</div>
+<div id="mask"></div>
+
 <footer role="contentinfo">
 	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
 	<p><?php echo $xliff_reader->get('footer-select-language'); ?>: English (selected) | <a href="#">Arabic</a> | Espa&ntilde;ol (coming soon) | Fran&ccedil;ais (coming soon)</p>
