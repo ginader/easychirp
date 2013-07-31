@@ -35,14 +35,17 @@ class Menu_generator {
 			{
 				$css_class = ($path === $url) ? $selected_class : '';
 				$access_key = (isset($item['access_key'])) ? $item['access_key'] : '';
+				$rel = (isset($item['rel'])) ? $item['rel'] : '';
 
-				$menu .= $this->render_link($url, $item['label'], $css_class, $access_key );
+				$menu .= $this->render_link($url, $item['label'], $css_class, $access_key, $rel );
 				$menu .= "\n\t<ul class=\"submenu\">";
 				foreach ($item['children'] AS $data)
 				{
 					$css_class = ($path === $url) ? $selected_class : '';
+					$access_key = (isset($data['access_key'])) ? $data['access_key'] : '';
+					$rel = (isset($data['rel'])) ? $data['rel'] : '';
 					$menu .= "\n\t\t<li>"
-					. $this->render_link($data['url'], $data['label'], $css_class)
+					. $this->render_link($data['url'], $data['label'], $css_class, $access_key, $rel)
 					. "</li>";
 				}
 				$menu .= "\n\t</ul>\n";
@@ -52,8 +55,9 @@ class Menu_generator {
 			{
 				$css_class = ($path === $url) ? $selected_class : '';
 				$access_key = (isset($item['access_key'])) ? $item['access_key'] : '';
+				$rel = (isset($item['rel'])) ? $item['rel'] : '';
 				
-				$menu .= $this->render_link($url, $item['label'], $css_class, $access_key );
+				$menu .= $this->render_link($url, $item['label'], $css_class, $access_key, $rel );
 			}
 			$menu .= "\t</li>\n";
 		}
@@ -84,7 +88,7 @@ class Menu_generator {
 	}
 	
 
-	public function render_link($path, $label, $selected_class = '', $access_key = '')
+	public function render_link($path, $label, $selected_class = '', $access_key = '', $rel = '')
 	{
 		$link = '<a href="' . $path . '" ';
 		if ($selected_class){
@@ -92,6 +96,9 @@ class Menu_generator {
 		} 
 		if ($access_key !== ''){
 			$link .= ' accesskey="' . $access_key . '" ';
+		} 
+		if ($rel !== ''){
+			$link .= ' rel="' . $rel . '" ';
 		} 
 
 		$link .= '>' . $label . '</a>'; 
