@@ -1,5 +1,5 @@
 <form action="actions/goUser.php" method="post" id="frmGoUser">
-	<h3><label for="goUser"><?php echo $xliff_reader->get('gotouser-h1'); ?></label></h3>
+	<label id="goUserLabel" for="goUser"><?php echo $xliff_reader->get('gotouser-h1'); ?></label>
 	<input placeholder="<?php echo $xliff_reader->get('gotouser-username'); ?>" type="text" size="20" name="uid" id="goUser" /> 
 	<span>
 	<input type="radio" name="goUserAction" id="goUserTypeTimeline" value="timeline" checked="checked" />
