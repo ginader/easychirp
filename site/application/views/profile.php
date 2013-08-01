@@ -24,7 +24,7 @@
 		<dd><?php echo $profile->description; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
-		<dd><a href="<?php echo $profile->url; ?>"><?php echo $profile->url; ?></a></dd>
+		<dd><a href="<?php echo $profile->entities->url->urls[0]->expanded_url; ?>"><?php echo $profile->entities->url->urls[0]->expanded_url; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
 		<dd><a href="/mytweets" title="view my tweets"><?php echo $profile->statuses_count; ?></a></dd>
