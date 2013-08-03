@@ -200,7 +200,17 @@ $('a[rel=modal]').click(function(e) {
 
 	// Transition effect and focus the modal
 	$(id).fadeIn(500);
-	$(id).focus();
+	
+	// Focus mgmt
+	if (id=="#search_quick") {
+		$("#query").focus();
+	}
+	else if (id=="#go_to_user") {
+		$("#goUser").focus();
+	}
+	else {
+		$(id).focus();
+	}
 
 	// Close - if close button is clicked
 	$('.modal .close').click(function (e) {
