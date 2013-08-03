@@ -629,7 +629,6 @@ a.delete-link span { /* reduce size of icon a bit */
 }
 #profile dt,
 .twList dt {
-	font-weight: bold;
 	width: 30%;
 	text-align: right;
 	float: left;

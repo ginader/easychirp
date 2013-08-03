@@ -266,8 +266,20 @@ class Main extends EC_Controller {
 
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$this->_data['myLists'] = $this->twitter_lib->get('lists/ownerships');
+		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions');
+
 		$this->layout->set_title('Lists');
-		$this->layout->set_description('Description of Lists page');
+		$this->layout->set_description('Twitter lists of user');
 		$this->layout->view('lists', $this->_data);
 	}
 
