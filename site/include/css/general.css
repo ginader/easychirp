@@ -486,8 +486,11 @@ footer {
 	padding: .5rem 1rem;
 	margin: 1rem 0;
 }
-.js #enterTweetContent {
+.js #enterTweet #enterTweetContent {
 	display: none;
+}
+.js #enterTweet.single #enterTweetContent {
+	display: block;
 }
 #enterTweet h2 {
 	font-size: 1.15rem;
@@ -879,7 +882,7 @@ a.btnOptionsUser,
 .js .btnOptions ul.displayOptions {
 	display: block;
 }
-.js #enterTweetContent.displayEnterTweet {
+.js #enterTweet #enterTweetContent.displayEnterTweet {
 	display: block;
 }
 
