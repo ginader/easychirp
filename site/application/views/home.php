@@ -34,7 +34,7 @@
 
 <div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('home-h2-latest-tweets'); ?></h2>
-	<?php if ($error): ?>
+	<?php if (isset($error)): ?>
 		<p class="error">
 		<?php echo $error; ?>
 		</p>
