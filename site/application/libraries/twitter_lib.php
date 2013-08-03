@@ -59,6 +59,12 @@ class Twitter_lib {
 		
 	}
 
+	
+	public function post($url, $params = array())
+	{
+		return $this->twitteroauth->post($url, $params);
+	}
+
 	/**
 	* Turn on or off the verifypeer option for ssl;  
 	*

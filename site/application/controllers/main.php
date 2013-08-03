@@ -1010,6 +1010,43 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Description of Timeline page');
 		$this->layout->view('timeline', $this->_data);
 	}
+
+
+	/**
+	* Manages the posting of a tweet page - /write_tweet
+	*
+	* @return void
+	*/
+	public function write_tweet($ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['status'] =  $_POST["status"];
+		
+		$tweet = $this->twitter_lib->post('statuses/update', $request_param);
+		if ($ajax)
+		{
+			echo json_encode($tweet);
+		}
+		else
+		{
+			redirect( base_url() . 'timeline');
+		}
+
+	}
+
 }
 
 /* End of file main.php */

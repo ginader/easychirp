@@ -387,10 +387,10 @@ $config['proxy_ips'] = '';
 
 $config['tw_api_url'] = 'https://api.twitter.com/1.1/';
 $config['tw_user_agent'] = 'easychirp/' . EASYCHIRP_VERSION; 
-$config['tw_access_key'] = '14256894-cpNuNgxmDQKwuHb0ptpSbvUMqmPakcQnJUNJKugUz'; 
-$config['tw_access_secret'] = 'Q8k4ht449lcXUBg6A4vdWd0J32eqoBPnMh5OpZYxfs'; 
-$config['tw_consumer_key'] = 'HLnV0sg6AyT7gTOHPtgrA'; 
-$config['tw_consumer_secret'] = 'fLVBNIlhblmxsDvMvDWb1RLKwd3Fvbyadx1Hl4a85I'; 
+$config['tw_access_key'] = '14150648-iifSAz4eoMxE3aoTbYGocDtwU6H4VB4IttXBJjtXk'; 
+$config['tw_access_secret'] = 'neIu61wM8aBzPzxotMVdGOQj1cjRLVtlqrGgnujoYBg'; 
+$config['tw_consumer_key'] = 'wBPjnt6cesUdQntLlAmA'; 
+$config['tw_consumer_secret'] = 'mnnpDloTxQH5hEvYrSjDmFVMA5X7sJfHwyoBKhCLCcQ'; 
 
 $config['tw_request_token_url'] = 'https://api.twitter.com/oauth/request_token'; 
 $config['tw_authorize_url'] = 'https://api.twitter.com/oauth/authorize'; 
