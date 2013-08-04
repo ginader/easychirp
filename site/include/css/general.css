@@ -763,13 +763,20 @@ button:hover, button:focus,
 	padding: .5rem .5rem .5rem 74px;
 	margin-bottom: 1rem;
 }
-.tweet .tweetAvatar {
+.tweet .tweetAvatar,
+.follow .tweetAvatar {
 	width: 64px;
 	height: 64px;
 	float: left;
 	margin-left: -74px;
 	margin-top: 3px;
 	background: no-repeat top;
+}
+.follow {
+	padding: .5rem .5rem .5rem 74px;
+}
+.follow h2 {
+	padding: .1rem 0 .5rem;
 }
 .tweet q {
 	display: block;

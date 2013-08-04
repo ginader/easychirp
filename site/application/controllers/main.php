@@ -229,7 +229,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the following page - /following
+	* Manages the following page - /following AKA friends
 	*
 	* @return void
 	*/
@@ -237,7 +237,21 @@ class Main extends EC_Controller {
 	{
 		$this->redirect_if_not_logged_in();
 
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['skip_status'] =  true;
+
+		$this->_data['f'] = $this->twitter_lib->get('friends/list', $request_param);
 
 		$this->layout->set_title('Following');
 		$this->layout->set_description('Twitter users whom I am following.');
