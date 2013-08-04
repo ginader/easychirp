@@ -322,9 +322,11 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['list_id'] =  $_GET['id'];
 
-		$tweets = $this->twitter_lib->get('lists/statuses', $request_param );
+		$tweets = $this->twitter_lib->get('lists/statuses', $request_param);
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
+		$this->_data['list_data'] = $this->twitter_lib->get('lists/show', $request_param);
 
 		$this->layout->set_title('List Timeline');
 		$this->layout->set_description('Lists Timeline');

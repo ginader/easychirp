@@ -44,10 +44,10 @@ foreach($myLists->lists AS $lists):
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<dd><a href="#"><?php echo $lists->subscriber_count; ?></a></dd>
+	<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<dd><a href="#"><?php echo $lists->member_count; ?></a></dd>
+	<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
@@ -94,13 +94,18 @@ foreach($subLists->lists AS $lists):
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<dd><a href="#"><?php echo $lists->subscriber_count; ?></a></dd>
+	<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<dd><a href="#"><?php echo $lists->member_count; ?></a></dd>
+	<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>
 
+	<?php /*
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
+	*/ ?>
+
+	<dt>Owner</dt>
+	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>	
 
 <?php /*
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
