@@ -85,7 +85,7 @@ endforeach;
 foreach($subLists->lists AS $lists):
 ?>
 
-<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>"><?php echo $lists->name; ?></a></h3>
+<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>&subscriber=true"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
 	<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 	<dd><?php echo $lists->full_name; ?></dd>

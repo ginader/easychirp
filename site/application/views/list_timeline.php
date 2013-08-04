@@ -7,14 +7,14 @@ echo '<ul style="margin-top: .7rem;">';
 		echo '<li>You are are the owner of this list. <a href="list_edit?id='.$list_data->id.'">edit settings</a></li>';
 	}
 	else {
-
-	// 	if ($_GET['type']=='subscriber')  {
-	// 		echo '<li>You are are subscribed to this list.</li>';
-	// 	}
-
+		
+		// if ($_GET['subscriber']=='true')  {
+		// 	echo '<li>You are are subscribed to this list.</li>';
+		// }
+	 	
 	 	echo '<li>The owner of this list is <a href="/user?id='. $list_data->user->screen_name .'">'. $list_data->user->name .'</a>.</li>'; // More of <a href="userLists.php?uid='.$owner.'&type='.$type.'">owner\'s Lists</a>.';
 
-	// 	// Add link to subscribe to this list
+		// Add link to subscribe to this list if not subscribed
 	}
 
 	echo '<li>View <a href="/list_subscribers?id=' . $list_data->id . '">list subscribers</a>.</li>';
