@@ -295,6 +295,12 @@ footer {
 	margin: 1rem 0;
 }
 
+#top-pull-link {
+	text-align: right; 
+	margin: -2.1rem 0 .75rem; 
+	padding-right: 1rem;
+}
+
 /* 2-column layout (based off Yahoo's Pure) */
 .p-row {
 	letter-spacing: -0.31em;
@@ -614,11 +620,6 @@ a.delete-link span { /* reduce size of icon a bit */
 #homeECtweets li {
 	line-height: 1.25rem;
 	margin-bottom: .75rem;
-}
-#editProfileLink {
-	text-align: right; 
-	margin: -2.1rem 0 1rem 0; 
-	padding-right: 1rem;
 }
 #frmProfileEdit dt,
 .twListDtAdj {

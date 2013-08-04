@@ -2,7 +2,7 @@
 
 <?php #debug_object( $profile ); ?>
 
-<p id="editProfileLink"><a href="/profile_edit"><?php echo $xliff_reader->get('profile-edit-link'); ?></a></p>
+<p id="top-pull-link"><a href="/profile_edit"><?php echo $xliff_reader->get('profile-edit-link'); ?></a></p>
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-details'); ?></h2>
 

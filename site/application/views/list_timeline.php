@@ -1,7 +1,9 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('lists-h1')." ".$xliff_reader->get('nav-timeline'); ?>: <?php echo $list_data->name; ?></h1>
 
+<p id="top-pull-link" style="margin-bottom: 1.25rem;"><a href="/lists">Back to Lists</a></p>
+
 <?php
-echo '<ul style="margin-top: .7rem;">';
+echo '<ul>';
 
 	if ($list_data->user->screen_name == $this->session->userdata('screen_name')) {
 		echo '<li>You are are the owner of this list. <a href="list_edit?id='.$list_data->id.'">edit settings</a></li>';
