@@ -50,6 +50,7 @@ $route['following'] = "main/following";
 $route['go_to_user'] = "main/go_to_user"; // For non-JS and keyboard use cases
 $route['lists'] = "main/lists";
 $route['list_edit'] = "main/list_edit";
+$route['list_timeline'] = "main/list_timeline";
 $route['mentions'] = "main/mentions";
 $route['mytweets'] = "main/mytweets";
 $route['oauth_callback'] = "main/oauth_callback";
@@ -71,7 +72,7 @@ $route['tools'] = "main/tools"; // For non-JS and keyboard use cases
 $route['timeline'] = "main/timeline";
 $route['trends'] = "main/trends";
 $route['user'] = "main/user"; // User details
-$route['write_tweet'] = "main/write_tweet"; // User details
+$route['write_tweet'] = "main/write_tweet";
 $route['default_controller'] = "main";
 $route['404_override'] = '';
 

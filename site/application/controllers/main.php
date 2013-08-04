@@ -300,6 +300,38 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages the list_timeline page - /list_timeline
+	*
+	* @return void
+	*/
+	public function list_timeline()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['list_id'] =  $_GET['id'];
+
+		$tweets = $this->twitter_lib->get('lists/statuses', $request_param );
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
+		$this->layout->set_title('List Timeline');
+		$this->layout->set_description('Lists Timeline');
+		$this->layout->view('list_timeline', $this->_data);
+	}
+
+	/**
 	* Manages the Mentions page - /mentions
 	*
 	* @return void
@@ -1022,7 +1054,6 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Description of Timeline page');
 		$this->layout->view('timeline', $this->_data);
 	}
-
 
 	/**
 	* Manages the posting of a tweet page - /write_tweet
