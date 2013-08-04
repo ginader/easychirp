@@ -35,13 +35,13 @@
 <?php
 foreach($myLists->lists AS $lists):
 ?>
-<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#"><?php echo $lists->name; ?></a></h3>
+<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
 	<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 	<dd><?php echo $lists->full_name; ?></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-desc'); ?></dt>
-	<dd><?php echo $lists->description; ?></dd>
+	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
 	<dd><a href="#"><?php echo $lists->subscriber_count; ?></a></dd>
@@ -52,23 +52,24 @@ foreach($myLists->lists AS $lists):
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 
-	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
-	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
-</dl>
-<?php /*
-	<dt class="twListDtAdj"><label for="txt33678339"><?php echo $xliff_reader->get('lists-add-mem'); ?></label></dt>
+	<?php /*
+	<dt class="twListDtAdj"><label for="add<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-add-mem'); ?></label></dt>
 	<dd>
 		<form action="#" class="frmListAddMember">
-			<input type="hidden" name="listSlug" value="html5" />
-			<input type="hidden" name="lstid" value="33678339" />
-			<input type="text" size="12" name="userNameToAdd" value="" id="txt33678339" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
+			<input type="hidden" name="listSlug" value="<?php echo $lists->slug; ?>" />
+			<input type="hidden" name="lstid" value="<?php echo $lists->id; ?>" />
+			<input type="text" size="12" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
 			<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-add-submit'); ?></button>
 		</form>
 	</dd>
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
-	<dd><a href="list_edit?lstid=33678339"><?php echo $xliff_reader->get('lists-edit'); ?></a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?lstid=33678339"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></dd>
-*/ ?>
+	<dd><a href="list_edit?id=<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-edit'); ?></a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?id=<?php echo $lists->id; ?>"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></dd>
+	*/?>
+
+	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
+	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
+</dl>
 <?php 
 endforeach;
 ?>
@@ -84,13 +85,13 @@ endforeach;
 foreach($subLists->lists AS $lists):
 ?>
 
-<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="#"><?php echo $lists->name; ?></a></h3>
+<h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
 	<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 	<dd><?php echo $lists->full_name; ?></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-desc'); ?></dt>
-	<dd><?php echo $lists->description; ?></dd>
+	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
 	<dd><a href="#"><?php echo $lists->subscriber_count; ?></a></dd>
@@ -101,16 +102,15 @@ foreach($subLists->lists AS $lists):
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 
+<?php /*
+	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
+	<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
+*/ ?>
+
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
-/*
-	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
-	<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
-</dl>
-*/
-
 //$index++;
 endforeach;
 ?>
