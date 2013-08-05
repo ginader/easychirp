@@ -1,8 +1,13 @@
-<h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : @<?php echo $user->screen_name; ?></h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : <?php echo $user->name; ?></h1>
+
+<?php #debug_object($user); ?>
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-contact'); ?></h2>
+
 <div class="box1 rounded no-margin">
-	<h3><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="" /> <?php echo $user->screen_name; ?></h3>
+	<h3><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="" /> 
+		<?php echo $user->name . " / @" . $user->screen_name; ?>
+	</h3>
 	
 	<p><?php
 		$isFollowing = $user->following;
@@ -46,7 +51,7 @@
 		<dd><?php echo $user->description; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
-		<dd><a href="<?php echo $user->url; ?>"><?php echo $user->url; ?></a></dd>
+		<dd><a href="<?php echo $user->entities->url->urls[0]->expanded_url; ?>"><?php echo $user->entities->url->urls[0]->expanded_url; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
 		<dd><a href="timeline?id=<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>
@@ -60,8 +65,11 @@
 		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
 		<dd><a href="/favorites?id=<?php echo $user->screen_name; ?>"><?php echo $user->favourites_count; ?></a></dd>
 
-		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
-		<dd><a href="/lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
+		<dt>Listed count</dt>
+		<dd><?php echo $user->listed_count; ?></dd>
+
+		<?/*<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
+		<dd><a href="/lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>*/?>
 
 		<dt><?php echo $xliff_reader->get('nav-retweets'); ?></dt>
 		<dd><a href="#">retweets by <?php echo $user->screen_name; ?></a><?php /*; <a href="#">retweets to <?php echo $user->screen_name; ?>*/?></a></dd>
