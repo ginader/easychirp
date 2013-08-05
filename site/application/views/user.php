@@ -21,9 +21,9 @@
 	
 	<p><a href="#">Is <?php echo $user->screen_name; ?> following me?</a> YES | NO</p>
 
-	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a></p>
-	
-	<p><span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a></p>
+	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a> 
+	&nbsp; 
+	<span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a></p>
 	
 	<?php
 		$isVerified = $user->verified;
@@ -42,16 +42,31 @@
 		<dd><?php echo $user->name; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-location'); ?></dt>
-		<dd><?php echo $user->location; ?></dd>
+		<dd><?php
+		if ($user->location != '') { echo $user->location; }
+		else { echo '&nbsp;'; }
+		?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
 		<dd><?php echo $user->created_at; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
-		<dd><?php echo $user->description; ?></dd>
+		<dd><?php
+		if ($user->description != '') { echo $user->description; }
+		else { echo '&nbsp;'; }
+		?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
-		<dd><a href="<?php echo $user->entities->url->urls[0]->expanded_url; ?>"><?php echo $user->entities->url->urls[0]->expanded_url; ?></a></dd>
+		<dd>
+		<?php
+		if ($user->url != null) {
+			echo '<a href="' . $user->entities->url->urls[0]->expanded_url . '">' . $user->entities->url->urls[0]->expanded_url . '</a>';
+		}
+		else {
+			echo '&nbsp;';
+		}
+		?>
+		</dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
 		<dd><a href="timeline?id=<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>

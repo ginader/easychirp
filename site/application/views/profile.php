@@ -15,16 +15,31 @@
 		<dd><?php echo $profile->name; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-location'); ?></dt>
-		<dd><?php echo $profile->location; ?></dd>
+		<dd><?php
+		if ($profile->location != '') { echo $profile->location; }
+		else { echo '&nbsp;'; }
+		?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
 		<dd><?php echo $profile->created_at; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
-		<dd><?php echo $profile->description; ?></dd>
+		<dd><?php
+		if ($profile->description != '') { echo $profile->description; }
+		else { echo '&nbsp;'; }
+		?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
-		<dd><a href="<?php echo $profile->entities->url->urls[0]->expanded_url; ?>"><?php echo $profile->entities->url->urls[0]->expanded_url; ?></a></dd>
+		<dd>
+		<?php
+		if ($profile->url != null) {
+			echo '<a href="' . $profile->entities->url->urls[0]->expanded_url . '">' . $profile->entities->url->urls[0]->expanded_url . '</a>';
+		}
+		else {
+			echo '&nbsp;';
+		}
+		?>
+		</dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
 		<dd><a href="/mytweets" title="view my tweets"><?php echo $profile->statuses_count; ?></a></dd>
