@@ -5,7 +5,7 @@ if (count($f->users) == 0) {
 	echo '<p>You are not following anyone.</p>';
 }
 else {
-	echo '<p class="marginAdjustment">You are following '.$following_count.' Tweeps. (<a href="followers">View Followers</a>)</p>';
+	echo '<p class="marginAdjustment">You are following '.$following_count.' Tweeps. (<a href="/followers">View Followers</a>)</p>';
 }
 ?>
 
@@ -21,6 +21,12 @@ foreach ($f->users as $user):
 		<?php echo $xliff_reader->get('profile-dt-following'); ?> <a href="/following?id=<?php echo $user->screen_name; ?>" title="view users that I'm following"><?php echo $user->friends_count; ?></a> 
 		<?php echo $xliff_reader->get('profile-dt-followers'); ?> <a href="/followers?id=<?php echo $user->screen_name; ?>" title="view users following me"><?php echo $user->followers_count; ?></a>
 	</p>
+	<?php /*
+	<div class="ar">
+		<span aria-hidden="true" class="icon-close"></span> <?php echo '<a href="#">' . $xliff_reader->get('user-unfollow') . '</a> &nbsp; '; ?>
+		<span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a>
+	</div>
+	*/ ?>
 </div>
 <?php
 endforeach;
