@@ -223,13 +223,27 @@ class Main extends EC_Controller {
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['skip_status'] =  true;
+
+		$this->_data['f'] = $this->twitter_lib->get('followers/list', $request_param);
+
 		$this->layout->set_title('Followers');
 		$this->layout->set_description('Twitter users following me.');
 		$this->layout->view('followers', $this->_data);
 	}
 
 	/**
-	* Manages the following page - /following
+	* Manages the following page - /following AKA friends
 	*
 	* @return void
 	*/
@@ -237,7 +251,21 @@ class Main extends EC_Controller {
 	{
 		$this->redirect_if_not_logged_in();
 
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['skip_status'] =  true;
+
+		$this->_data['f'] = $this->twitter_lib->get('friends/list', $request_param);
 
 		$this->layout->set_title('Following');
 		$this->layout->set_description('Twitter users whom I am following.');
@@ -266,8 +294,20 @@ class Main extends EC_Controller {
 
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$this->_data['myLists'] = $this->twitter_lib->get('lists/ownerships');
+		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions');
+
 		$this->layout->set_title('Lists');
-		$this->layout->set_description('Description of Lists page');
+		$this->layout->set_description('Twitter lists of user');
 		$this->layout->view('lists', $this->_data);
 	}
 
@@ -280,11 +320,58 @@ class Main extends EC_Controller {
 	{
 		$this->redirect_if_not_logged_in();
 
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['list_id'] =  $_GET['id'];
+		$this->_data['list'] = $this->twitter_lib->get('lists/show', $request_param);
 
 		$this->layout->set_title('Edit List');
-		$this->layout->set_description('Description of Edit List page');
+		$this->layout->set_description('Edit a Twitter List');
 		$this->layout->view('list_edit', $this->_data);
+	}
+
+	/**
+	* Manages the list_timeline page - /list_timeline
+	*
+	* @return void
+	*/
+	public function list_timeline()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['list_id'] =  $_GET['id'];
+
+		$tweets = $this->twitter_lib->get('lists/statuses', $request_param);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
+		$this->_data['list_data'] = $this->twitter_lib->get('lists/show', $request_param);
+
+		$this->layout->set_title('List Timeline');
+		$this->layout->set_description('Lists Timeline');
+		$this->layout->view('list_timeline', $this->_data);
 	}
 
 	/**
@@ -1010,7 +1097,6 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Description of Timeline page');
 		$this->layout->view('timeline', $this->_data);
 	}
-
 
 
 }

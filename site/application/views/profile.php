@@ -2,7 +2,7 @@
 
 <?php #debug_object( $profile ); ?>
 
-<p id="editProfileLink"><a href="/profile_edit"><?php echo $xliff_reader->get('profile-edit-link'); ?></a></p>
+<p id="top-pull-link"><a href="/profile_edit"><?php echo $xliff_reader->get('profile-edit-link'); ?></a></p>
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-details'); ?></h2>
 
@@ -15,16 +15,31 @@
 		<dd><?php echo $profile->name; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-location'); ?></dt>
-		<dd><?php echo $profile->location; ?></dd>
+		<dd><?php
+		if ($profile->location != '') { echo $profile->location; }
+		else { echo '&nbsp;'; }
+		?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
 		<dd><?php echo $profile->created_at; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
-		<dd><?php echo $profile->description; ?></dd>
+		<dd><?php
+		if ($profile->description != '') { echo $profile->description; }
+		else { echo '&nbsp;'; }
+		?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
-		<dd><a href="<?php echo $profile->entities->url->urls[0]->expanded_url; ?>"><?php echo $profile->entities->url->urls[0]->expanded_url; ?></a></dd>
+		<dd>
+		<?php
+		if ($profile->url != null) {
+			echo '<a href="' . $profile->entities->url->urls[0]->expanded_url . '">' . $profile->entities->url->urls[0]->expanded_url . '</a>';
+		}
+		else {
+			echo '&nbsp;';
+		}
+		?>
+		</dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
 		<dd><a href="/mytweets" title="view my tweets"><?php echo $profile->statuses_count; ?></a></dd>
@@ -34,6 +49,12 @@
 
 		<dt><?php echo $xliff_reader->get('profile-dt-followers'); ?></dt>
 		<dd><a href="/followers" title="view users following me"><?php echo $profile->followers_count; ?></a></dd>
+
+		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
+		<dd><a href="/favorites"><?php echo $profile->favourites_count; ?></a></dd>
+
+		<dt>Listed count</dt>
+		<dd><?php echo $profile->listed_count; ?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
 		<dd><a href="/lists"><?php echo $xliff_reader->get('profile-dd-my-lists'); ?></a></dd>

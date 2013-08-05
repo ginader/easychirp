@@ -1,8 +1,13 @@
-<h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : @<?php echo $user->screen_name; ?></h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : <?php echo $user->name; ?></h1>
+
+<?php #debug_object($user); ?>
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-contact'); ?></h2>
+
 <div class="box1 rounded no-margin">
-	<h3><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="" /> <?php echo $user->screen_name; ?></h3>
+	<h3><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="" /> 
+		<?php echo $user->name . " / @" . $user->screen_name; ?>
+	</h3>
 	
 	<p><?php
 		$isFollowing = $user->following;
@@ -16,9 +21,9 @@
 	
 	<p><a href="#">Is <?php echo $user->screen_name; ?> following me?</a> YES | NO</p>
 
-	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a></p>
-	
-	<p><span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a></p>
+	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a> 
+	&nbsp; 
+	<span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a></p>
 	
 	<?php
 		$isVerified = $user->verified;
@@ -37,16 +42,31 @@
 		<dd><?php echo $user->name; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-location'); ?></dt>
-		<dd><?php echo $user->location; ?></dd>
+		<dd><?php
+		if ($user->location != '') { echo $user->location; }
+		else { echo '&nbsp;'; }
+		?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
 		<dd><?php echo $user->created_at; ?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
-		<dd><?php echo $user->description; ?></dd>
+		<dd><?php
+		if ($user->description != '') { echo $user->description; }
+		else { echo '&nbsp;'; }
+		?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-website'); ?></dt>
-		<dd><a href="<?php echo $user->url; ?>"><?php echo $user->url; ?></a></dd>
+		<dd>
+		<?php
+		if ($user->url != null) {
+			echo '<a href="' . $user->entities->url->urls[0]->expanded_url . '">' . $user->entities->url->urls[0]->expanded_url . '</a>';
+		}
+		else {
+			echo '&nbsp;';
+		}
+		?>
+		</dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
 		<dd><a href="timeline?id=<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>
@@ -60,8 +80,11 @@
 		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
 		<dd><a href="/favorites?id=<?php echo $user->screen_name; ?>"><?php echo $user->favourites_count; ?></a></dd>
 
-		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
-		<dd><a href="/lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
+		<dt>Listed count</dt>
+		<dd><?php echo $user->listed_count; ?></dd>
+
+		<?/*<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
+		<dd><a href="/lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>*/?>
 
 		<dt><?php echo $xliff_reader->get('nav-retweets'); ?></dt>
 		<dd><a href="#">retweets by <?php echo $user->screen_name; ?></a><?php /*; <a href="#">retweets to <?php echo $user->screen_name; ?>*/?></a></dd>

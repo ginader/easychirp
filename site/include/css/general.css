@@ -265,12 +265,12 @@ overflow: hidden;
 }
 
 header > div {
-	margin: 15px 0 5px;
+	margin: 10px 0 0;
 }
 
 #welcome {
 	float: right;
-	margin-top: -148px;
+	margin-top: -138px;
 }
 
 #welcome p {
@@ -293,6 +293,12 @@ footer {
 	border: 2px solid #a1d5f9;
 	padding: 0 1rem .5rem;
 	margin: 1rem 0;
+}
+
+#top-pull-link {
+	text-align: right; 
+	margin: -2.1rem 0 .75rem; 
+	padding-right: 1rem;
 }
 
 /* 2-column layout (based off Yahoo's Pure) */
@@ -413,7 +419,7 @@ footer {
 
 /* tweet menu */
 #navTweet {
-	padding: .5rem 0;
+	padding: .25rem 0 .5rem;
 	list-style: none;
 	clear: left;
 }
@@ -615,11 +621,6 @@ a.delete-link span { /* reduce size of icon a bit */
 	line-height: 1.25rem;
 	margin-bottom: .75rem;
 }
-#editProfileLink {
-	text-align: right; 
-	margin: -2.1rem 0 1rem 0; 
-	padding-right: 1rem;
-}
 #frmProfileEdit dt,
 .twListDtAdj {
 	padding-top: .4rem;
@@ -629,7 +630,6 @@ a.delete-link span { /* reduce size of icon a bit */
 }
 #profile dt,
 .twList dt {
-	font-weight: bold;
 	width: 30%;
 	text-align: right;
 	float: left;
@@ -763,13 +763,20 @@ button:hover, button:focus,
 	padding: .5rem .5rem .5rem 74px;
 	margin-bottom: 1rem;
 }
-.tweet .tweetAvatar {
+.tweet .tweetAvatar,
+.follow .tweetAvatar {
 	width: 64px;
 	height: 64px;
 	float: left;
 	margin-left: -74px;
 	margin-top: 3px;
 	background: no-repeat top;
+}
+.follow {
+	padding: .5rem .5rem .5rem 74px;
+}
+.follow h2 {
+	padding: .1rem 0 .5rem;
 }
 .tweet q {
 	display: block;
