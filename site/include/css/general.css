@@ -265,12 +265,12 @@ overflow: hidden;
 }
 
 header > div {
-	margin: 15px 0 5px;
+	margin: 10px 0 0;
 }
 
 #welcome {
 	float: right;
-	margin-top: -148px;
+	margin-top: -138px;
 }
 
 #welcome p {
@@ -419,7 +419,7 @@ footer {
 
 /* tweet menu */
 #navTweet {
-	padding: .5rem 0;
+	padding: .25rem 0 .5rem;
 	list-style: none;
 	clear: left;
 }
