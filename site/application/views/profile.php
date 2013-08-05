@@ -35,6 +35,12 @@
 		<dt><?php echo $xliff_reader->get('profile-dt-followers'); ?></dt>
 		<dd><a href="/followers" title="view users following me"><?php echo $profile->followers_count; ?></a></dd>
 
+		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
+		<dd><a href="/favorites"><?php echo $profile->favourites_count; ?></a></dd>
+
+		<dt>Listed count</dt>
+		<dd><?php echo $profile->listed_count; ?></dd>
+
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
 		<dd><a href="/lists"><?php echo $xliff_reader->get('profile-dd-my-lists'); ?></a></dd>
 
