@@ -1663,6 +1663,11 @@
         <target>Retweet</target>
       </trans-unit>
 
+      <trans-unit id="gbl-tweet-favorited" datatype="html">
+        <source>favorited</source>
+        <target>favorited</target>
+      </trans-unit>
+
       <!-- USER -->
 
       <trans-unit id="user-h1" datatype="html">
@@ -1713,11 +1718,6 @@
       <trans-unit id="user-h2-details" datatype="html">
         <source>Details</source>
         <target>Details</target>
-      </trans-unit>
-
-      <trans-unit id="user-" datatype="html">
-        <source></source>
-        <target></target>
       </trans-unit>
 
       <!-- FOOTER -->

@@ -71,7 +71,15 @@ foreach($tweets AS $tweet):
 	<div class="btnOptions">
 		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?>" data-icon="&#x29;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?></span></a></h3>
 		<ul id="tweetOptions_<?php echo $index; ?>">
-			<li><a href="/favorite?id=<?php echo $tweet->id; ?>" data-icon="&#x2a;" title="<?php echo $xliff_reader->get('gbl-tweet-favorite'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-favorite'); ?></span></a></li>
+			<li><?php
+			// If favorited or not
+			if ($tweet->favorited == false) {
+				echo '<a href="/favorite?id=' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorite') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorite') . '</span></a>';
+			}
+			else {
+				echo '<a href="/favorite?id=' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorited') . '" class="favorited"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorited') . '</span></a>';
+			}
+			?></li>
 			<li><a href="/reply?id=<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
 			<li><a href="/reply_to_all?id=<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
 			<li><a href="/retweet?id=<?php echo $tweet->id; ?>" data-icon="&#x3f;" title="<?php echo $xliff_reader->get('gbl-tweet-retweet'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-retweet'); ?></span></a></li>

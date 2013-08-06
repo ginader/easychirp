@@ -892,9 +892,11 @@ a.btnOptionsUser,
 .js #enterTweet #enterTweetContent.displayEnterTweet {
 	display: block;
 }
-
 .alert {
 	color: #c00;
+}
+.favorited {
+	background-color: #ff9;
 }
 
 /* Theme  **************************************************/
