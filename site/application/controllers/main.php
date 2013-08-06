@@ -1059,8 +1059,11 @@ class Main extends EC_Controller {
 
 		$request_param = array();	
 		$request_param['screen_name'] =  $_GET["id"];
-
 		$this->_data['user'] = $this->twitter_lib->get('users/show', $request_param);
+
+		$request_param['source_screen_name'] =  $this->session->userdata('screen_name');
+		$request_param['target_screen_name'] =  $_GET["id"];
+		$this->_data['friendship'] = $this->twitter_lib->get('friendships/show', $request_param);
 
 		$this->layout->set_title('User Details');
 		$this->layout->set_description('Information of Twitter user.');

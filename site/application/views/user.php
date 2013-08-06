@@ -19,7 +19,15 @@
 		}
 	?></p>
 	
-	<p><a href="#">Is <?php echo $user->screen_name; ?> following me?</a> YES | NO</p>
+	<p>Is <?php echo $user->name; ?> following me?</a> <?php
+		$isFollowed = $friendship->relationship->target->following;
+		if ($isFollowed == 1) {
+			echo 'Yes';
+		}
+		else {
+			echo 'No';
+		}
+	?></p>
 
 	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a> 
 	&nbsp; 
