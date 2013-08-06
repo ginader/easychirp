@@ -73,7 +73,7 @@
 		</dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
-		<dd><a href="timeline?id=<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>
+		<dd><a href="user_timeline?user=<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-following'); ?></dt>
 		<dd><a href="/following?id=<?php echo $user->screen_name; ?>" title="view users that I'm following"><?php echo $user->friends_count; ?></a></dd>

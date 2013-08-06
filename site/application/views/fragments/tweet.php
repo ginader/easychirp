@@ -90,7 +90,7 @@ foreach($tweets AS $tweet):
 	<div class="btnOptions">
 		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="<?php echo $xliff_reader->get('gbl-tweet-user-options'); ?>" data-icon="&#x3c;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?></span></a></h3>
 		<ul id="userOptions_<?php echo $index; ?>">
-			<li><a href="/timeline?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
+			<li><a href="/user_timeline?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="view this user's timeline"><span class="hide">timeline</span></a></li>
 			<li><a href="/direct?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="direct message this user"><span class="hide">direct message</span></a></li>
 			<li><a href="/timeline?twmess=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x38;" title="tweet message"><span class="hide">tweet message</span></a></li>
 			<li><a href="/mute?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3d;" title="mute user"><span class="hide">mute user</span></a></li>

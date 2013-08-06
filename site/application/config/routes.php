@@ -72,6 +72,7 @@ $route['tools'] = "main/tools"; // For non-JS and keyboard use cases
 $route['timeline'] = "main/timeline";
 $route['trends'] = "main/trends";
 $route['user'] = "main/user"; // User details
+$route['user_timeline'] = "main/user_timeline"; // User tweets
 $route['write_tweet'] = "main/write_tweet";
 $route['default_controller'] = "main";
 $route['404_override'] = '';
