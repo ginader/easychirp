@@ -19,8 +19,8 @@ echo '<ul>';
 		// Add link to subscribe to this list if not subscribed
 	}
 
-	echo '<li>View <a href="/list_subscribers?id=' . $list_data->id . '">list subscribers</a>.</li>';
-	echo '<li>View <a href="/list_members?id=' . $list_data->id . '">list members</a>.</li>';
+	//echo '<li>View <a href="/list_subscribers?id=' . $list_data->id . '">list subscribers</a>.</li>';
+	//echo '<li>View <a href="/list_members?id=' . $list_data->id . '">list members</a>.</li>';
 
 echo '</ul>';
 ?>
