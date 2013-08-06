@@ -1,9 +1,6 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : <?php echo $user->name; ?></h1>
 
-<?php #debug_object($user); ?>
-
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-contact'); ?></h2>
-
 <div class="box1 rounded no-margin">
 	<h3><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="" /> 
 		<?php echo $user->name . " / @" . $user->screen_name; ?>
@@ -34,8 +31,7 @@
 	<span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a></p>
 	
 	<?php
-		$isVerified = $user->verified;
-		if ($isVerified === true) { ?>
+		if ($user->verified === true) { ?>
 			<p><span aria-hidden="true" class="icon-checkmark"></span> <?php echo $xliff_reader->get('user-verified'); ?></p>
 	<?php } ?>
 </div>
