@@ -73,6 +73,7 @@ $route['timeline'] = "main/timeline";
 $route['trends'] = "main/trends";
 $route['user'] = "main/user"; // User details
 $route['user_timeline'] = "main/user_timeline"; // User tweets
+$route['user_lists'] = "main/user_lists";
 $route['write_tweet'] = "main/write_tweet";
 $route['default_controller'] = "main";
 $route['404_override'] = '';

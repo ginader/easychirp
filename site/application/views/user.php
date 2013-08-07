@@ -87,8 +87,8 @@
 		<dt>Listed count</dt>
 		<dd><?php echo $user->listed_count; ?></dd>
 
-		<?/*<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
-		<dd><a href="/lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>*/?>
+		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
+		<dd><a href="/user_lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('nav-retweets'); ?></dt>
 		<dd><a href="#">retweets by <?php echo $user->screen_name; ?></a><?php /*; <a href="#">retweets to <?php echo $user->screen_name; ?>*/?></a></dd>

@@ -1112,6 +1112,37 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages the user lists page - /user_lists
+	*
+	* @return void
+	*/
+	public function user_lists()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $_GET["id"];
+
+		$this->_data['ownedLists'] = $this->twitter_lib->get('lists/ownerships', $request_param);
+		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions', $request_param);
+
+		$this->layout->set_title('User Lists');
+		$this->layout->set_description('User lists page');
+		$this->layout->view('user_lists', $this->_data);
+	}
+
+	/**
 	* Manages the timeline page - /timeline
 	*
 	* @return void

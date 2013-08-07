@@ -10,7 +10,7 @@ echo $tweets;
 
 <ul>
 	<li><span class="icon-twitter2" aria-hidden="true"></span> <a href="https://twitter.com/<?php echo $show->user->screen_name; ?>/status/<?php echo $show->id; ?>" rel="external">This tweet on Twitter</a></li>
-	<li><span class="icon-list2" aria-hidden="true"></span> <a href="/lists?id=<?php echo $show->user->screen_name; ?>">Lists by <?php echo $show->user->name; ?></a></li>
+	<li><span class="icon-list2" aria-hidden="true"></span> <a href="/user_lists?id=<?php echo $show->user->screen_name; ?>">Lists by <?php echo $show->user->name; ?></a></li>
 </ul>
 
 <?php
