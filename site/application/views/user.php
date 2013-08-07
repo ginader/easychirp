@@ -76,10 +76,10 @@
 		<dd><a href="user_timeline?user=<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-following'); ?></dt>
-		<dd><a href="/following?id=<?php echo $user->screen_name; ?>" title="view users that I'm following"><?php echo $user->friends_count; ?></a></dd>
+		<dd><a href="/following?id=<?php echo $user->screen_name; ?>"><?php echo $user->friends_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-followers'); ?></dt>
-		<dd><a href="/followers?id=<?php echo $user->screen_name; ?>" title="view users following me"><?php echo $user->followers_count; ?></a></dd>
+		<dd><a href="/followers?id=<?php echo $user->screen_name; ?>"><?php echo $user->followers_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
 		<dd><a href="/favorites?id=<?php echo $user->screen_name; ?>"><?php echo $user->favourites_count; ?></a></dd>
