@@ -276,5 +276,27 @@ document.addEventListener("focus", function(event) {
 	}
 }, true);
 
+// Tweet message
+$('a[rel=twmess]').click(function(e) {
+	e.preventDefault();
+
+	// Open if not open already (this includes focus)
+	if (!$('#enterTweetContent').hasClass("displayEnterTweet")) {
+		$('#enterTweet h2 a').trigger('click');
+	}
+
+	// Focus
+	$('#txtEnterTweet').focus();
+
+	// Insert @username in write tweet textarea
+	u = {}
+	u.url = $(this).attr('href'); //alert(url3);
+	u.arr = u.url.split("twmess="); //alert(arUrl3);
+	u.user = u.arr[1]; //alert(usrMix3);
+	u.mess = "@" + u.user + " "; //alert(twMessTxt);
+	$("#txtEnterTweet").html(u.mess);
+
+});
+
 
 
