@@ -187,8 +187,12 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+		if ( isset($_GET["id"])) {
+			$request_param['screen_name'] = $_GET["id"];
+		}
+
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
