@@ -238,6 +238,9 @@ class Main extends EC_Controller {
 
 		$request_param = array();	
 		$request_param['skip_status'] =  true;
+		if ( isset($_GET["id"])) {
+			$request_param['screen_name'] = $_GET["id"];
+		}
 
 		$this->_data['f'] = $this->twitter_lib->get('followers/list', $request_param);
 
@@ -268,6 +271,9 @@ class Main extends EC_Controller {
 
 		$request_param = array();	
 		$request_param['skip_status'] =  true;
+		if ( isset($_GET["id"])) {
+			$request_param['screen_name'] = $_GET["id"];
+		}
 
 		$this->_data['f'] = $this->twitter_lib->get('friends/list', $request_param);
 
