@@ -73,7 +73,6 @@ class Main extends EC_Controller {
 			$this->_data['time_zone'] =  $session_data['time_zone']; 
 		}
 
-
 		$this->layout->set_logged_in($this->_data['logged_in']);
 	}
 
@@ -96,7 +95,6 @@ class Main extends EC_Controller {
 		$easychirp_statuses = $this->twitter_lib->twitteroauth->get( 
 			$this->config->item('tw_url_home_timeline') 
 		);
-		
 		
 		if ( is_object($easychirp_statuses) && $easychirp_statuses->errors)
 		{
@@ -156,6 +154,22 @@ class Main extends EC_Controller {
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['include_entities'] = false;
+
+		$dms = $this->twitter_lib->get('direct_messages', $request_param);
+		$this->_data['dms'] = $this->load->view('fragments/dm', 
+			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
 		$this->layout->set_title('Inbox | Direct Messages');
 		$this->layout->set_description('Direct messages sent to user.');
 		$this->layout->view('direct_inbox', $this->_data);
@@ -166,6 +180,22 @@ class Main extends EC_Controller {
 		$this->redirect_if_not_logged_in();
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['include_entities'] = false;
+
+		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
+		$this->_data['dms'] = $this->load->view('fragments/dm', 
+			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('Sent | Direct Messages');
 		$this->layout->set_description('Direct messages sent from user.');
