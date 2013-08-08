@@ -1284,7 +1284,7 @@
 
       <trans-unit id="about-donate-p1" datatype="html">
         <source>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</source>
-        <target>Ayude a mantener Twitter completamente accesible en la web donando a Easy Chirp!. Todas las donaciones irán al desarrollo, mantenimiento y costos del servidor de la página web.</target>
+        <target>Ayude a mantener Twitter completamente accesible en la web donando a Easy Chirp! Todas las donaciones irán al desarrollo, mantenimiento y costos del servidor de la página web.</target>
       </trans-unit>
 
       <trans-unit id="about-donate-alt" datatype="html">
@@ -1591,7 +1591,7 @@
 
       <trans-unit id="gbl-tweet-tweet-options" datatype="html">
         <source>tweet options</source>
-        <target>tweet options</target>
+        <target>opciones de tweet</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-favorite" datatype="html">
@@ -1626,37 +1626,37 @@
 
       <trans-unit id="gbl-tweet-user-options" datatype="html">
         <source>user options</source>
-        <target>user options</target>
+        <target>opciones de usuario</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-timeline" datatype="html">
         <source>timeline</source>
-        <target>timeline</target>
+        <target>línea de tiempo</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-dm" datatype="html">
         <source>direct message</source>
-        <target>direct message</target>
+        <target>mensaje directo</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-tweet-message" datatype="html">
         <source>tweet message</source>
-        <target>tweet message</target>
+        <target>mesaje tweet</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-mute" datatype="html">
         <source>mute user</source>
-        <target>mute user</target>
+        <target>silenciar a usuario</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-report" datatype="html">
         <source>report spammer</source>
-        <target>report spammer</target>
+        <target>reportar spammer</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-responding" datatype="html">
         <source>Responding</source>
-        <target>Responding</target>
+        <target>Responder</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-retweet" datatype="html">
