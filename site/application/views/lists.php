@@ -33,7 +33,8 @@
 	<h2><?php echo $xliff_reader->get('lists-h2-my'); ?></h2>
 
 <?php
-foreach($myLists->lists AS $lists):
+if (count($myLists->lists) != 0) {
+	foreach($myLists->lists AS $lists):
 ?>
 <h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
@@ -73,7 +74,11 @@ foreach($myLists->lists AS $lists):
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
-endforeach;
+	endforeach;
+}
+else {
+	echo '<p>'.$xliff_reader->get('search-saved-none').'</p>';
+}
 ?>
 </div>
 
@@ -84,7 +89,8 @@ endforeach;
 	<h2><?php echo $xliff_reader->get('lists-h2-sub'); ?></h2>
 
 <?php
-foreach($subLists->lists AS $lists):
+if (count($subLists->lists) != 0) {
+	foreach($subLists->lists AS $lists):
 ?>
 
 <h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>&subscriber=true"><?php echo $lists->name; ?></a></h3>
@@ -120,8 +126,11 @@ foreach($subLists->lists AS $lists):
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
-//$index++;
-endforeach;
+	endforeach;
+}
+else {
+	echo '<p>'.$xliff_reader->get('search-saved-none').'</p>';
+}
 ?>
 </div>
 
