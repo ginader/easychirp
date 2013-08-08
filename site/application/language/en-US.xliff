@@ -659,6 +659,11 @@
         <target>Owner</target>
       </trans-unit>
 
+      <trans-unit id="lists-you-are-owner" datatype="html">
+        <source>You are the owner of this list.</source>
+        <target>You are the owner of this list.</target>
+      </trans-unit>
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">

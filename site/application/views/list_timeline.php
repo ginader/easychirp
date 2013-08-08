@@ -6,7 +6,7 @@
 echo '<ul>';
 
 	if ($list_data->user->screen_name == $this->session->userdata('screen_name')) {
-		echo '<li>You are are the owner of this list. <a href="list_edit?id='.$list_data->id.'">edit settings</a></li>';
+		echo '<li>' . $xliff_reader->get('lists-you-are-owner') . ' <a href="list_edit?id='.$list_data->id.'">' . $xliff_reader->get('lists-edit') . '</a></li>';
 	}
 	else {
 		

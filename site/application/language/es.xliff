@@ -660,6 +660,11 @@
         <target>Dueño</target>
       </trans-unit>
 
+      <trans-unit id="lists-you-are-owner" datatype="html">
+        <source>You are the owner of this list.</source>
+        <target>Tu eres el dueño de esta lista.</target>
+      </trans-unit>
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">
