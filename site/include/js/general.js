@@ -166,32 +166,44 @@ $("#frmUrlShort").submit(function(ev) {
 /* Modal *****************************************/
 var modalOpen = false;
 
+// Function to resize and reposition the modal window
+function resizeModal(id) {
+    // Get the window height and width
+    var winH = $(window).height();
+    var winW = $(window).width();
+
+    // Position the modal window to center
+    $(id).css('top', winH / 2 - $(id).height() / 2 - 35);
+    $(id).css('left', winW / 2 - $(id).width() / 2 - 20);
+}
+
+// Function to resize mask (grey background)
+function resizeMask() {
+    // Get the screen height and width
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+
+    // Set height and width to mask to fill up the whole screen
+    $('#mask').css('width', maskWidth);
+    $('#mask').css('height', maskHeight);
+}
+
 $('a[rel=modal]').click(function(e) {
 	e.preventDefault();
 	var id = $(this).attr('href').replace("/","#");
 	modalOpen = true;
 
 	// Remember what opened me to focus when closing
-	var lastFocus = document.activeElement;
+	var lastFocus = $(this);
 
-	// Get the screen height and width
-	var maskHeight = $(document).height();
-	var maskWidth = $(window).width();
-
-	// Set height and width to mask to fill up the whole screen
-	$('#mask').css('width',maskWidth);
-	$('#mask').css('height',maskHeight);
+    // Resize the mask
+    resizeMask();
 	
 	// Transition effect - mask
 	$('#mask').fadeIn(500);
 
-	// Get the window height and width
-	var winH = $(window).height();
-	var winW = $(window).width();
-
-	// Position the popup window to center
-	$(id).css('top',  winH/2-$(id).height()/2);
-	$(id).css('left', winW/2-$(id).width()/2-20);
+    // Call function to resize and reposition modal
+    resizeModal(id);
 
 	// Position the close button
 	var modalLeft = ( $(id).width() + 20 ) + "px";
@@ -241,21 +253,11 @@ $('a[rel=modal]').click(function(e) {
 $(window).resize(function () {
 	var id = $('.modal');
 
-	//Get the screen height and width
-	var maskHeight = $(document).height();
-	var maskWidth = $(window).width();
+    // Resize the mask
+    resizeMask();
 
-	// Set height and width to mask to fill up the whole screen
-	$('#mask').css('width',maskWidth);
-	$('#mask').css('height',maskHeight);
-
-	// Get the window height and width
-	var winH = $(window).height();
-	var winW = $(window).width();
-
-	// Position the popup window to center
-	$(id).css('top',  winH/2-$(id).height()/2);
-	$(id).css('left', winW/2-$(id).width()/2-20);
+    // Call function to resize and reposition modal
+    resizeModal(id);
 
 	// Position the close button
 	var modalLeft = ( $(id).width() + 20 ) + "px";
