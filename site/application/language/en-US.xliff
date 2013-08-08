@@ -1026,6 +1026,11 @@
         <target>Trends</target>
       </trans-unit>
 
+      <trans-unit id="trends-worldwide" datatype="html">
+        <source>Worldwide</source>
+        <target>Worldwide</target>
+      </trans-unit>
+
       <!-- ARTICLES & FEEDBACK -->
 
       <trans-unit id="articles-h1" datatype="html">

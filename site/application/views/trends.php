@@ -1,7 +1,7 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('trends-h1'); ?></h1>
 
 <div class="box1 rounded">
-	<h2>Worldwide</h2>
+	<h2><?php echo $xliff_reader->get('trends-worldwide'); ?></h2>
 
 	<?php 
 
