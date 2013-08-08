@@ -655,6 +655,11 @@
         <target>Dejar Suscripción</target>
       </trans-unit>
 
+      <trans-unit id="lists-owner" datatype="html">
+        <source>Owner</source>
+        <target>Dueño</target>
+      </trans-unit>
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">

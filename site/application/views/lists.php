@@ -114,7 +114,7 @@ if (count($subLists->lists) != 0) {
 	<dd><?php echo $lists->mode; ?></dd>
 	*/ ?>
 
-	<dt>Owner</dt>
+	<dt><?php echo $xliff_reader->get('lists-owner'); ?></dt>
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>	
 
 <?php /*
