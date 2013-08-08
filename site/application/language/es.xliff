@@ -484,11 +484,21 @@
         <target>Siguiendo</target>
       </trans-unit>
 
+      <trans-unit id="following-none" datatype="html">
+        <source>You are not following anyone.</source>
+        <target>Usted no está siguiendo a nadie.</target>
+      </trans-unit>
+
       <!-- FOLLOWERS -->
 
       <trans-unit id="followers-h1" datatype="html">
         <source>Followers</source>
         <target>Seguidores</target>
+      </trans-unit>
+
+      <trans-unit id="followers-none" datatype="html">
+        <source>You are not followed by anyone.</source>
+        <target>Usted no se ha seguido por cualquier persona.</target>
       </trans-unit>
 
       <!-- GO TO USER -->

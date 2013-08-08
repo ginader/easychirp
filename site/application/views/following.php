@@ -10,7 +10,7 @@
 <?php
 if ( !isset($_GET["id"])) {
 	if (count($f->users) == 0) { 
-		echo '<p>You are not following anyone.</p>';
+		echo '<p>' . $xliff_reader->get('following-none') . '</p>';
 	}
 	else {
 		echo '<p class="marginAdjustment">You are following '.$following_count.' users. (<a href="/followers">View Followers</a>)</p>';
