@@ -3,7 +3,7 @@ Reset
 Base
 Utilities
 Layout (2-col, menus, write tweet, alert messages, page-specific)
-Module (buttons, tweets, modals)
+Module (buttons, tweets-dm-follow, modals)
 State
 Theme
 Media queries (except for 2-col)
@@ -749,7 +749,7 @@ button:hover, button:focus,
 	border-color: #fc6;
 }
 
-/* Tweets */
+/* Tweets, DMs, Follow */
 .tweet,
 .tweet h3,
 .tweet h4 {
@@ -762,6 +762,26 @@ button:hover, button:focus,
 	border: 2px solid #a1d5f9;
 	padding: .5rem .5rem .5rem 74px;
 	margin-bottom: 1rem;
+}
+.tweet.dm {
+	padding-left: 150px;
+	margin: 1rem 0;
+}
+.dm .dmAvatars {
+	height: 30px;
+	float: left;
+	margin-left: -140px;
+	margin-top: 3px;
+}
+.dm p {
+	margin-bottom: 0;
+}
+.dm .delete {
+	text-decoration: none;
+	float: right;
+	padding: .25rem;
+	margin-top: 0.3rem;
+	font-size: .8rem;
 }
 .tweet .tweetAvatar,
 .follow .tweetAvatar {
