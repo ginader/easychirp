@@ -561,60 +561,6 @@ div.msgBoxNeg {
 	margin-left: 40px;
 }
 
-.icon-cancel-circle-sprite,
-.icon-checkmark-circle-sprite,
-.icon-warning-sprite,.icon-close-sprite,
-.icon-checkmark-sprite,
-.icon-checkmark2-sprite,
-.icon-minus-sprite,
-.icon-plus-sprite {
-	display: inline-block;
-	float: left;
-	width: 24px;
-	height: 24px;
-	margin-top: 4px;
-	background-image: url(../../images/sprites.png);
-	background-repeat: no-repeat;
-	background-color: #eee;
-	padding: 3px;
-
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	-khtml-border-radius: 7px;
-	border-radius: 7px;
-}
-.icon-cancel-circle-sprite {
-	background-position: 0 3px;
-}
-.icon-checkmark-circle-sprite {
-	background-position: -48px 3px;
-}
-.icon-warning-sprite {
-	background-position: -96px 3px;
-}
-.icon-close-sprite {
-	background-position: -141px 3px;
-}
-.icon-checkmark-sprite {
-	background-position: -189px 3px;
-}
-.icon-checkmark2-sprite {
-	background-position: -240px 3px;
-}
-.icon-minus-sprite {
-	background-position: -288px 3px;
-}
-.icon-plus-sprite {
-	background-position: -336px 3px;
-}
-
-a.delete-link {
-	text-decoration: none;
-}
-a.delete-link span { /* reduce size of icon a bit */
-	font-size: .9rem;
-}
-
 /* page-specific */
 
 #homeECtweets li {
