@@ -2,6 +2,7 @@
 
 <?php
 
+// Get screen_name of user if defined in URL (probably from DM link in a tweet)
 $user = "";
 if(isset($_GET['user'])) {
 	$user = $_GET['user'];
@@ -9,9 +10,6 @@ if(isset($_GET['user'])) {
 
 ?>
 
-<!-- <div class="p-row-r">
-	<div class="p-col-1-2">
- -->
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('dm-h2-send'); ?></label></h2>
 	<form id="frmDirectMessage" action="actions/submitDirect.php" method="post" 
@@ -19,6 +17,7 @@ if(isset($_GET['user'])) {
 		<h3 class="fl"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
 		<div id="enterTweep">
 			<input type="text" size="18" id="tweep" name="tweep" class="input1" value="<?
+			// Output screen_name if defined
 			if ($user !== "") {
 				echo $user;
 			} ?>" />
@@ -42,9 +41,6 @@ if(isset($_GET['user'])) {
 	<p class="smallText notes"><?php echo $xliff_reader->get('dm-note2'); ?></p>
 </div>
 
-<!-- 	</div>
-	<div class="p-col-1-2">
- -->
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('gbl-select-page'); ?></h2>
 	<ul>
@@ -53,6 +49,11 @@ if(isset($_GET['user'])) {
 	</ul>
 </div>
 
-<!-- 	</div>
-</div>
- -->
+<?php
+
+// Set focus to textarea if user defined
+if ($user !== "") {
+	echo '<script>document.getElementById("txtDirectMessage").focus();</script>';
+}
+
+?>
