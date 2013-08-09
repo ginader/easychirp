@@ -1,5 +1,11 @@
 <?php
-foreach($dms AS $dm):
+if (count($dms) != 0) {
+	foreach($dms AS $dm):
+
+	$state = "inbox";
+	if ($dm->sender->screen_name===$this->session->userdata('screen_name')) {
+		$state = "sent";
+	}
 ?>
 <div class="tweet rounded clearfix dm">
 	<h2 class="hide"><?=$dm->sender->name?></h2>
@@ -10,20 +16,26 @@ foreach($dms AS $dm):
 	</div>
 	<q><?=$dm->text?></q>
 	<p>
-		from <a href="#"><?=$dm->sender->name?></a> to <a href="#"><?=$dm->recipient->name?></a> | 
+		from <a href="/user?id=<?=$dm->sender->screen_name?>"><?=$dm->sender->name?></a> 
+		to <a href="/user?id=<?=$dm->recipient->screen_name?>"><?=$dm->recipient->name?></a> | 
 		<?=$dm->created_at?> 
-		<a href="#" class="delete icon-close"><span class="hide"><?php echo $xliff_reader->get('global-delete'); ?></span></a>
+		<a href="#" class="delete icon-close" title="<?php echo $xliff_reader->get('global-delete'); ?>"><span class="hide"><?php echo $xliff_reader->get('global-delete'); ?></span></a>
+		<a href="/direct?user=<?php 
+			if ($state == "inbox") {
+				echo $dm->sender->screen_name;
+			}
+			else {
+				echo $dm->recipient->screen_name;
+			}
+			?>" class="icon-bubbles delete" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a>
 	</p>
-
-	<?/*<div class="btnOptions">
-	<ul style="display:block;">
-		<li><a href="/user_timeline?user=<?php echo $dm->sender->screen_name; ?>" data-icon="&#x3e;" title="<?php echo $xliff_reader->get('gbl-tweet-timeline'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-timeline'); ?></span></a></li>
-		<li><a href="/direct?user=<?php echo $dm->sender->screen_name; ?>" data-icon="&#x37;" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a></li>
-		<li><a href="/timeline?twmess=<?php echo $dm->sender->screen_name; ?>" rel="twmess" data-icon="&#x38;" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></span></a></li>
-	</ul>
-	</div>
-	*/?>
 </div>
 <?php 
-endforeach;
+	endforeach;
+}
+else {
+	echo '<div class="box1 rounded">';
+	echo '<p style="margin: 1rem 0 .5rem;">'.$xliff_reader->get('search-saved-none').'</p>';
+	echo '</div>';
+}
 ?>
