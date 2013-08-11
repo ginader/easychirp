@@ -664,18 +664,21 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 
-	
+		$this->layout->set_title('Retweets');	
 		if ($retweet_type === 'by_me')
 		{
 			$tweets = $this->retweets_by_me($request_param);
+			$this->layout->set_title('Retweets by Me');
 		}
 		elseif ($retweet_type === 'of_me')
 		{
 			$tweets =  $this->retweets_of_me($request_param);
+			$this->layout->set_title('Retweets of Me');
 		}
 		elseif ($retweet_type === 'to_me')
 		{
 			$tweets =  $this->retweets_to_me($request_param);
+			$this->layout->set_title('Retweets to Me');
 		}
 		else
 		{
@@ -685,7 +688,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array('type' => $retweet_type, 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Retweets');
+		//$this->layout->set_title('Retweets'); // See logic above
 		$this->layout->set_description('Links to retweet pages.');
 		$this->layout->view('retweets', $this->_data);
 	}
@@ -738,14 +741,28 @@ class Main extends EC_Controller {
 	*
 	* @param array $params API query parameters
 	* @return array 
-	* @todo figure out how to implement this. there is no straightforward query for this
-	* @see https://dev.twitter.com/docs/api/1.1
+	* 
+	* the method was removed in api 1.1 so instead call home_timeline and filter for RTs
+	* @see https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
 	*/
 	public function retweets_to_me($params)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
+		$params['include_rts'] = 'true';
+		$params['exclude_replies'] = 'true';
+		$params['count'] = '60';
+
+		$results = $this->twitter_lib->get('statuses/home_timeline', $params );
 		$tweets = array();
+
+		foreach ($results as $result)
+		{
+			if ($result->retweet_count > 0 && isset($result->retweeted_status))
+			{
+				$tweets[] = $result;
+			}
+		}
 
 		return $tweets;
 	}
