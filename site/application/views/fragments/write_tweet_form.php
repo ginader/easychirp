@@ -4,8 +4,8 @@
 		<strong id="displayCharCountNumber" aria-live="polite"></strong>
 	</p>
 	<form id="frmSubmitTweet" action="/write_tweet" method="post" class="clearfix" 
-		data-error-over="You must enter less than 140 characters."
-		data-error-empty="Please enter a tweet.">
+		data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
+		data-error-empty="<?php echo $xliff_reader->get('error-tweet-empty'); ?>">
 		<div>
 			<textarea id="txtEnterTweet" name="status" rows="3"></textarea>
 			<button class="btnPost" type="submit"><?php echo $xliff_reader->get('write-tweet-post'); ?></button>
