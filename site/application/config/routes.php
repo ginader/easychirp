@@ -48,6 +48,7 @@ $route['favorites'] = "main/favorites";
 $route['followers'] = "main/followers";
 $route['following'] = "main/following";
 $route['go_to_user'] = "main/go_to_user"; // For non-JS and keyboard use cases
+$route['go_user_action'] = "main/go_user_action"; // Logic for 'go to user' form
 $route['lists'] = "main/lists";
 $route['list_edit'] = "main/list_edit";
 $route['list_timeline'] = "main/list_timeline";

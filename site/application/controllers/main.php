@@ -247,7 +247,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the followers page - /followers
+	* Manages the Followers page - /followers
 	*
 	* @return void
 	*/
@@ -283,7 +283,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the following page - /following AKA friends
+	* Manages the Following page - /following AKA friends
 	*
 	* @return void
 	*/
@@ -318,6 +318,9 @@ class Main extends EC_Controller {
 		$this->layout->view('following', $this->_data);
 	}
 
+	/**
+	* Manages "go to user" page - /go_to_user
+	*/
 	public function go_to_user()
 	{
 		$this->redirect_if_not_logged_in();
@@ -327,6 +330,24 @@ class Main extends EC_Controller {
 		$this->layout->set_title( $this->xliff_reader->get('nav-goto-user') );
 		$this->layout->set_description('Go to user');
 		$this->layout->view('go_to_user', $this->_data);
+	}
+
+	/**
+	* Manages the posting of "go to user" form - /go_user_action
+	*/
+	public function go_user_action()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$screen_name =  $_POST["screen_name"];
+		$action =  $_POST["goUserAction"];
+
+		if ($action == "profile") {
+			redirect( base_url() . 'user?id=' . $screen_name );
+		}
+		else {
+			redirect( base_url() . 'user_timeline?user=' . $screen_name );
+		}
 	}
 
 	/**
