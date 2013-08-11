@@ -135,6 +135,22 @@ $('#frmSubmitTweet').submit(function() {
 	}
 });
 
+// Validate DM entry
+$('#frmDirectMessage').submit(function() {
+	var x=$("#txtDirectMessage");
+	var y = x.val();
+	if (y.length>140) {
+		alert("You must enter less than 140 characters.");
+		x.focus();
+		return false;
+	}
+	if (y.length==0) {
+		alert("Please enter a direct message.");
+		x.focus();
+		return false;
+	}
+});
+
 // Validate URL shortener
 $("#frmUrlShort").submit(function(ev) {
 	//ev.preventDefault();		
