@@ -12,8 +12,11 @@ if(isset($_GET['user'])) {
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('dm-h2-send'); ?></label></h2>
-	<form id="frmDirectMessage" action="actions/submitDirect.php" method="post" 
-	class="clear" data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
+	<form id="frmDirectMessage" action="actions/submitDirect.php" method="post" class="clear" 
+		data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>"
+		data-error-over="You must enter less than 140 characters."
+		data-error-empty="Please enter a direct message."
+		data-error-tweep-empty="Enter a user name.">
 		<h3 class="fl"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
 		<div id="enterTweep">
 			<input type="text" size="18" id="tweep" name="tweep" class="input1" value="<?

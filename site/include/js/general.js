@@ -124,12 +124,12 @@ $('#frmSubmitTweet').submit(function() {
 	var x=$("#txtEnterTweet");
 	var y = x.val();
 	if (y.length>140) {
-		alert("You must enter less than 140 characters.");
+		alert($("#frmSubmitTweet").attr("data-error-over"));
 		x.focus();
 		return false;
 	}
 	if (y.length==0) {
-		alert("Please enter a tweet.");
+		alert($("#frmSubmitTweet").attr("data-error-empty"));
 		x.focus();
 		return false;
 	}
@@ -137,15 +137,22 @@ $('#frmSubmitTweet').submit(function() {
 
 // Validate DM entry
 $('#frmDirectMessage').submit(function() {
-	var x=$("#txtDirectMessage");
+	var x=$("#tweep");
 	var y = x.val();
+	if (y.length==0) {
+		alert($("#frmDirectMessage").attr("data-error-tweep-empty"));
+		x.focus();
+		return false;
+	}
+	x=$("#txtDirectMessage");
+	y = x.val();
 	if (y.length>140) {
-		alert("You must enter less than 140 characters.");
+		alert($("#frmDirectMessage").attr("data-error-over"));
 		x.focus();
 		return false;
 	}
 	if (y.length==0) {
-		alert("Please enter a direct message.");
+		alert($("#frmDirectMessage").attr("data-error-empty"));
 		x.focus();
 		return false;
 	}
