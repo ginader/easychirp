@@ -118,7 +118,7 @@ class Main extends EC_Controller {
 	{	
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
-		$this->layout->set_title('About');
+		$this->layout->set_title( $this->xliff_reader->get('about-h1') );
 		$this->layout->set_description('All about Easy Chirp 2');
 		$this->layout->view('about', $this->_data);
 	}
@@ -132,7 +132,7 @@ class Main extends EC_Controller {
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
-		$this->layout->set_title('Articles and Feedback');
+		$this->layout->set_title( $this->xliff_reader->get('articles-h1') );
 		$this->layout->set_description('Articles, user feedback, books, wikis, and awards listed here.');
 		$this->layout->view('articles', $this->_data);
 	}
@@ -143,7 +143,7 @@ class Main extends EC_Controller {
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
-		$this->layout->set_title('Direct Messages');
+		$this->layout->set_title( $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Send a direct message.');
 		$this->layout->view('direct', $this->_data);
 	}
@@ -170,7 +170,7 @@ class Main extends EC_Controller {
 		$this->_data['dms'] = $this->load->view('fragments/dm', 
 			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Inbox | Direct Messages');
+		$this->layout->set_title( $this->xliff_reader->get('dm-inbox') .' | '. $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Direct messages sent to user.');
 		$this->layout->view('direct_inbox', $this->_data);
 	}
@@ -197,7 +197,7 @@ class Main extends EC_Controller {
 		$this->_data['dms'] = $this->load->view('fragments/dm', 
 			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Sent | Direct Messages');
+		$this->layout->set_title( $this->xliff_reader->get('dm-sent') .' | '. $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Direct messages sent from user.');
 		$this->layout->view('direct_sent', $this->_data);
 	}
@@ -227,7 +227,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Favorites');
+		$this->layout->set_title( $this->xliff_reader->get('favorites-h1') );
 		$this->layout->set_description('Tweets that user marked as a favorite.');
 		$this->layout->view('favorites', $this->_data);
 	}
@@ -241,7 +241,7 @@ class Main extends EC_Controller {
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
-		$this->layout->set_title('Features');
+		$this->layout->set_title( $this->xliff_reader->get('features-h1') );
 		$this->layout->set_description('General and accessibility features of Easy Chirp.');
 		$this->layout->view('features', $this->_data);
 	}
@@ -274,7 +274,10 @@ class Main extends EC_Controller {
 
 		$this->_data['f'] = $this->twitter_lib->get('followers/list', $request_param);
 
-		$this->layout->set_title('Followers');
+		$this->layout->set_title( $this->xliff_reader->get('followers-h1') );
+		if ( isset($_GET["id"])) {
+			$this->layout->set_title( $_GET["id"]." | ".$this->xliff_reader->get('followers-h1') );
+		}
 		$this->layout->set_description('Twitter users following me.');
 		$this->layout->view('followers', $this->_data);
 	}
@@ -307,7 +310,10 @@ class Main extends EC_Controller {
 
 		$this->_data['f'] = $this->twitter_lib->get('friends/list', $request_param);
 
-		$this->layout->set_title('Following');
+		$this->layout->set_title( $this->xliff_reader->get('following-h1') );
+		if ( isset($_GET["id"])) {
+			$this->layout->set_title( $_GET["id"]." | ".$this->xliff_reader->get('following-h1') );
+		}
 		$this->layout->set_description('Twitter users whom I am following.');
 		$this->layout->view('following', $this->_data);
 	}
@@ -318,7 +324,7 @@ class Main extends EC_Controller {
 
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
-		$this->layout->set_title('Go To User');
+		$this->layout->set_title( $this->xliff_reader->get('nav-goto-user') );
 		$this->layout->set_description('Go to user');
 		$this->layout->view('go_to_user', $this->_data);
 	}
@@ -346,7 +352,7 @@ class Main extends EC_Controller {
 		$this->_data['myLists'] = $this->twitter_lib->get('lists/ownerships');
 		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions');
 
-		$this->layout->set_title('Lists');
+		$this->layout->set_title( $this->xliff_reader->get('lists-h1') );
 		$this->layout->set_description('Twitter lists of user');
 		$this->layout->view('lists', $this->_data);
 	}
@@ -375,7 +381,7 @@ class Main extends EC_Controller {
 		$request_param['list_id'] =  $_GET['id'];
 		$this->_data['list'] = $this->twitter_lib->get('lists/show', $request_param);
 
-		$this->layout->set_title('Edit List');
+		$this->layout->set_title('Edit List'); // ****** NEED TO DO i18n ******
 		$this->layout->set_description('Edit a Twitter List');
 		$this->layout->view('list_edit', $this->_data);
 	}
@@ -409,7 +415,8 @@ class Main extends EC_Controller {
 
 		$this->_data['list_data'] = $this->twitter_lib->get('lists/show', $request_param);
 
-		$this->layout->set_title('List Timeline');
+		$x = $this->xliff_reader->get('lists-h1')." ".$this->xliff_reader->get('nav-timeline');
+		$this->layout->set_title( $x );
 		$this->layout->set_description('Lists Timeline');
 		$this->layout->view('list_timeline', $this->_data);
 	}
@@ -440,7 +447,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Mentions');
+		$this->layout->set_title( $this->xliff_reader->get('mentions-h1') );
 		$this->layout->set_description('Tweets that contain my user name.');
 		$this->layout->view('mentions', $this->_data);
 	}
@@ -471,7 +478,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('My Tweets');
+		$this->layout->set_title( $this->xliff_reader->get('mytweets-h1') );
 		$this->layout->set_description('Tweets that I posted.');
 		$this->layout->view('mytweets', $this->_data);
 	}
@@ -501,7 +508,7 @@ class Main extends EC_Controller {
 
 		$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param );
 
-		$this->layout->set_title('My Profile');
+		$this->layout->set_title($this->xliff_reader->get('profile-h1'));
 		$this->layout->set_description('Details on my Twitter profile.');
 		$this->layout->view('profile', $this->_data);
 	}
@@ -531,7 +538,7 @@ class Main extends EC_Controller {
 
 		$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param );
 
-		$this->layout->set_title('Edit Profile');
+		$this->layout->set_title( $this->xliff_reader->get('edit-profile-h1') );
 		$this->layout->set_description('Edit your Twitter account profile.');
 		$this->layout->view('profile_edit', $this->_data);
 	}
@@ -566,7 +573,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Quote');
+		$this->layout->set_title( $this->xliff_reader->get('quote-h1') );
 		$this->layout->set_description('Quote a tweet.');
 		$this->layout->view('quote', $this->_data);
 	}
@@ -601,7 +608,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Reply');
+		$this->layout->set_title( $this->xliff_reader->get('reply-h1') );
 		$this->layout->set_description('Reply to a tweet.');
 		$this->layout->view('reply', $this->_data);
 	}
@@ -636,7 +643,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Retweet');
+		$this->layout->set_title( $this->xliff_reader->get('retweet-h1') );
 		$this->layout->set_description('Retweet a tweet.');
 		$this->layout->view('retweet', $this->_data);
 	}
@@ -664,21 +671,21 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 
-		$this->layout->set_title('Retweets');	
+		$this->layout->set_title( $this->xliff_reader->get('nav-retweets') );
 		if ($retweet_type === 'by_me')
 		{
 			$tweets = $this->retweets_by_me($request_param);
-			$this->layout->set_title('Retweets by Me');
+			$this->layout->set_title( $this->xliff_reader->get('nav-retweets-by-me') );
 		}
 		elseif ($retweet_type === 'of_me')
 		{
 			$tweets =  $this->retweets_of_me($request_param);
-			$this->layout->set_title('Retweets of Me');
+			$this->layout->set_title( $this->xliff_reader->get('nav-retweets-of-me') );
 		}
 		elseif ($retweet_type === 'to_me')
 		{
 			$tweets =  $this->retweets_to_me($request_param);
-			$this->layout->set_title('Retweets to Me');
+			$this->layout->set_title( $this->xliff_reader->get('nav-retweets-to-me') );
 		}
 		else
 		{
@@ -789,7 +796,7 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 		$this->_data['saved_searches'] = $this->twitter_lib->get('saved_searches/list');
 
-		$this->layout->set_title('Search');
+		$this->layout->set_title( $this->xliff_reader->get('search-h1') );
 		$this->layout->set_description('Search tweets, saved searches, and search users.');
 		$this->layout->view('search', $this->_data);
 	}
@@ -806,7 +813,7 @@ class Main extends EC_Controller {
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
-		$this->layout->set_title('Search Results');
+		$this->layout->set_title( $this->xliff_reader->get('search-results-h1') );
 		$this->layout->set_description('Search results.');
 		$this->layout->view('search_results', $this->_data);
 	}
@@ -1028,7 +1035,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('View Single Tweet');
+		$this->layout->set_title('View Single Tweet'); // ****** NEED TO DO i18n ******
 		$this->layout->set_description('View a single status/tweet.');
 		$this->layout->view('status', $this->_data);
 	}
@@ -1042,7 +1049,7 @@ class Main extends EC_Controller {
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
-		$this->layout->set_title('Tips');
+		$this->layout->set_title( $this->xliff_reader->get('tips-h1') );
 		$this->layout->set_description('Tips for this app, using Twitter, and recommended apps.');
 		$this->layout->view('tips', $this->_data);
 	}
@@ -1058,7 +1065,7 @@ class Main extends EC_Controller {
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
-		$this->layout->set_title('Tools');
+		$this->layout->set_title($this->xliff_reader->get('nav-tools'));
 		$this->layout->set_description('Tools including search, lists and trends.');
 		$this->layout->view('tools', $this->_data);
 	}
@@ -1089,7 +1096,7 @@ class Main extends EC_Controller {
 		$request_param['id'] =  1;
 		$this->_data['trends_worldwide'] = $this->twitter_lib->get('trends/place', $request_param);
 
-		$this->layout->set_title('Trends');
+		$this->layout->set_title( $this->xliff_reader->get('trends-h1') );
 		$this->layout->set_description('Trending topics on Twitter.');
 		$this->layout->view('trends', $this->_data);
 	}
@@ -1122,7 +1129,7 @@ class Main extends EC_Controller {
 		$request_param['target_screen_name'] =  $_GET["id"];
 		$this->_data['friendship'] = $this->twitter_lib->get('friendships/show', $request_param);
 
-		$this->layout->set_title('User Details');
+		$this->layout->set_title( $this->xliff_reader->get('user-h1') );
 		$this->layout->set_description('Information of Twitter user.');
 		$this->layout->view('user', $this->_data);
 	}
@@ -1153,7 +1160,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('User Timeline');
+		$this->layout->set_title( $_GET["user"]." | ".$this->xliff_reader->get('nav-timeline') );
 		$this->layout->set_description('Timeline page');
 		$this->layout->view('user_timeline', $this->_data);
 	}
@@ -1184,7 +1191,7 @@ class Main extends EC_Controller {
 		$this->_data['ownedLists'] = $this->twitter_lib->get('lists/ownerships', $request_param);
 		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions', $request_param);
 
-		$this->layout->set_title('User Lists');
+		$this->layout->set_title($_GET["id"]." | ".$this->xliff_reader->get('lists-h1'));
 		$this->layout->set_description('User lists page');
 		$this->layout->view('user_lists', $this->_data);
 	}
@@ -1215,7 +1222,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title('Timeline');
+		$this->layout->set_title( $this->xliff_reader->get('nav-timeline') );
 		$this->layout->set_description('Timeline page');
 		$this->layout->view('timeline', $this->_data);
 	}
