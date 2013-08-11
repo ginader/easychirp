@@ -19,16 +19,18 @@ if (count($dms) != 0) {
 		from <a href="/user?id=<?=$dm->sender->screen_name?>"><?=$dm->sender->name?></a> 
 		to <a href="/user?id=<?=$dm->recipient->screen_name?>"><?=$dm->recipient->name?></a> | 
 		<?=$dm->created_at?> 
-		<a href="#" class="delete icon-close" title="<?php echo $xliff_reader->get('global-delete'); ?>"><span class="hide"><?php echo $xliff_reader->get('global-delete'); ?></span></a>
-		<a href="/direct?user=<?php 
-			if ($state == "inbox") {
-				echo $dm->sender->screen_name;
-			}
-			else {
-				echo $dm->recipient->screen_name;
-			}
-			?>" class="icon-bubbles delete" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a>
 	</p>
+	<div>
+		<a href="/direct?user=<?php 
+		if ($state == "inbox") {
+			echo $dm->sender->screen_name;
+		}
+		else {
+			echo $dm->recipient->screen_name;
+		}
+		?>" class="icon-bubbles btn" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a>
+		<a href="#" class="btn icon-close" title="<?php echo $xliff_reader->get('global-delete'); ?>"><span class="hide"><?php echo $xliff_reader->get('global-delete'); ?></span></a>
+	</div>
 </div>
 <?php 
 	endforeach;

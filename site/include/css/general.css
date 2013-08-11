@@ -722,12 +722,13 @@ button:hover, button:focus,
 .dm p {
 	margin-bottom: 0;
 }
-.dm .delete {
+.dm .btn {
 	text-decoration: none;
+	padding: .35rem;
+	margin: .2rem 0 0 .3rem;
+}
+.dm div {
 	float: right;
-	padding: .25rem;
-	margin-top: 0.3rem;
-	font-size: .8rem;
 }
 .tweet .tweetAvatar,
 .follow .tweetAvatar {
