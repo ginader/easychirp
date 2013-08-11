@@ -845,6 +845,7 @@ class Main extends EC_Controller {
 
 		$data = $this->twitter_lib->get('search/tweets', $request_param);
 		$this->_data['meta'] = $data->search_metadata;
+		$this->_data['num'] = count($data->statuses);
 
 		$tweets = $data->statuses;
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
