@@ -798,10 +798,9 @@ class Main extends EC_Controller {
 	/**
 	 * Manage the search page - /search
 	 *
-	 * @param string $_POST['query'] the query you want to search via twitter
 	 * @return void
 	 */
-	public function search($query)
+	public function search()
 	{
 		$this->redirect_if_not_logged_in();
 		
@@ -824,15 +823,32 @@ class Main extends EC_Controller {
 
 	/**
 	 * Manage the search results page - /search_results
-	 *
-	 * @param string $_POST['query'] the query you want to search via twitter
-	 * @return void
 	 */
-	public function search_results($query)
+	public function search_results()
 	{
 		$this->redirect_if_not_logged_in();
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['q'] = $_POST["query"];
+		$request_param['count'] = '25';
+
+		$data = $this->twitter_lib->get('search/tweets', $request_param);
+		$this->_data['meta'] = $data->search_metadata;
+
+		$tweets = $data->statuses;
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('search-results-h1') );
 		$this->layout->set_description('Search results.');

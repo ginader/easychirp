@@ -1,11 +1,7 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('search-results-h1'); ?></h1>
 
-<div class="box1 rounded">
-	<h2></h2>
-	<p></p>
-	<ul>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
-</div>
+<p class="marginAdjustment">Search results for: <?php echo $meta->query; ?></p>
+
+<?php
+echo $tweets;
+?>
