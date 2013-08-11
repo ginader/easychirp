@@ -1,6 +1,6 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('search-results-h1'); ?></h1>
 
-<p class="marginAdjustment">Search results for: <?php echo $meta->query; ?></p>
+<p class="marginAdjustment">Search results for: <?php echo urldecode($meta->query); ?></p>
 
 <?php
 if ($num > 0) {

@@ -840,8 +840,13 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['q'] = $_POST["query"];
 		$request_param['count'] = '25';
+		if ( isset($_POST["query"]) ) {
+			$request_param['q'] = $_POST["query"];
+		}
+		else {
+			$request_param['q'] = $_GET["query"];
+		}
 
 		$data = $this->twitter_lib->get('search/tweets', $request_param);
 		$this->_data['meta'] = $data->search_metadata;
