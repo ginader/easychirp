@@ -733,10 +733,10 @@ button:hover, button:focus,
 }
 .tweet .tweetAvatar,
 .follow .tweetAvatar {
-	width: 64px;
-	height: 64px;
+	width: 48px;
+	height: 48px;
 	float: left;
-	margin-left: -74px;
+	margin-left: -62px;
 	margin-top: 3px;
 	background: no-repeat top;
 }
