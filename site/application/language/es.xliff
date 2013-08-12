@@ -16,6 +16,16 @@
         <target>Seleccionar una página:</target>
       </trans-unit>
 
+      <trans-unit id="gbl-yes" datatype="html">
+        <source>Yes</source>
+        <target>Sí</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-no" datatype="html">
+        <source>No</source>
+        <target>No</target>
+      </trans-unit>
+
       <!-- ERROR MESSAGES -->
 
       <trans-unit id="error-over-140" datatype="html">
@@ -1771,6 +1781,11 @@
       <trans-unit id="user-h2-details" datatype="html">
         <source>Details</source>
         <target>Detalles</target>
+      </trans-unit>
+
+      <trans-unit id="user-is-following-me" datatype="html">
+        <source>Is this user following me?</source>
+        <target>¿Es este usuario me está siguiendo?</target>
       </trans-unit>
 
       <!-- FOOTER -->

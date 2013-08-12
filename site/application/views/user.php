@@ -16,14 +16,16 @@
 		}
 	?></p>
 	
-	<p>Is <?php echo $user->name; ?> following me?</a> <?php
-		$isFollowed = $friendship->relationship->target->following;
-		if ($isFollowed == 1) {
-			echo 'Yes';
-		}
-		else {
-			echo 'No';
-		}
+	<p><?php
+	echo $xliff_reader->get('user-is-following-me') . " ";
+
+	$isFollowed = $friendship->relationship->target->following;
+	if ($isFollowed == 1) {
+		echo $xliff_reader->get('gbl-yes');
+	}
+	else {
+		echo $xliff_reader->get('gbl-no');
+	}
 	?></p>
 
 	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a> 
