@@ -4,7 +4,12 @@
 <?php
 	echo '<li>Search results for: '.urldecode($meta->query);
 	echo '<li><a href="/search_quick" rel="modal">modify search</a>';
-	echo '<li><a href="save_search?query='.$meta->query.'">'.$xliff_reader->get('search-results-save-this').'</a>';
+	if ( isset($_GET["saved"]) ) {
+		echo '<li>This search is saved.</a>';
+	}
+	else {
+		echo '<li><a href="save_search?query='.$meta->query.'">'.$xliff_reader->get('search-results-save-this').'</a>';
+	}
 ?>
 </ul>
 
