@@ -363,6 +363,25 @@ footer {
 	max-width: 100%;
 }
 
+div.msgBox {
+	border: 2px solid #a1d5f9;
+	padding: .25rem .75rem;
+	margin-bottom: .5rem;
+}
+div.msgBoxPos,
+div.msgBoxNeg {
+	font-size: 1.25rem;
+	text-align: center;
+	border: 2px solid #a1d5f9;
+	/*background: #fff url(../../images/icon_check3.gif) no-repeat 5px 2px;*/
+	padding: 1rem;
+	margin-top: .5rem;
+}
+div.msgBoxNeg {
+	border-color: #c30;
+	background: #fff url(../../images/icon_x2.gif) no-repeat 9px 2px;
+}
+
 @media (max-width:480px) {
 	.p-row-r > [class ^= "p-col"] {
 		width:100%;
@@ -644,6 +663,9 @@ div.msgBoxNeg {
 
 a.delete-search {
 	margin-left: .5rem;
+	text-decoration: none;
+}
+a.delete-link {
 	text-decoration: none;
 }
 

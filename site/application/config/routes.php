@@ -52,6 +52,7 @@ $route['go_user_action'] = "main/go_user_action"; // Logic for 'go to user' form
 $route['lists'] = "main/lists";
 $route['list_edit'] = "main/list_edit";
 $route['list_timeline'] = "main/list_timeline";
+$route['list_delete'] = "main/list_delete";
 $route['mentions'] = "main/mentions";
 $route['mytweets'] = "main/mytweets";
 $route['oauth_callback'] = "main/oauth_callback";

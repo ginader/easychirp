@@ -323,5 +323,11 @@ $('a[rel=twmess]').click(function(e) {
 
 });
 
-
+// Delete list
+$('a[rel=deleteList]').click(function(e) {
+	if (!confirm("Are you sure you want to delete this item? It cannot be undone.")) {
+		 return false;
+	}
+	return true;
+});
 
