@@ -644,6 +644,7 @@ div.msgBoxNeg {
 
 a.delete-search {
 	margin-left: .5rem;
+	text-decoration: none;
 }
 
 #enterTweep {
