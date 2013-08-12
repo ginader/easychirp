@@ -11,7 +11,7 @@
 
 	echo '<ul>';
 	foreach($trends_worldwide[0]->trends AS $trend):
-		echo '<li><a href="/search_results?q=' . $trend->query . '">' . $trend->name . '</a></li>';
+		echo '<li><a href="/search_results?query=' . $trend->query . '">' . $trend->name . '</a></li>';
 	endforeach;
 	echo '</ul>';
 
