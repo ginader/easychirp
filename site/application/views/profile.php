@@ -21,8 +21,11 @@
 		?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
-		<dd><?php echo $profile->created_at; ?></dd>
-		
+		<dd><?php 
+			$date = date_create($profile->created_at);
+			echo date_format($date, 'd F Y'); 
+		?></dd>
+
 		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
 		<dd><?php
 		if ($profile->description != '') { echo $profile->description; }

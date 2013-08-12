@@ -52,7 +52,10 @@
 		?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
-		<dd><?php echo $user->created_at; ?></dd>
+		<dd><?php 
+			$date = date_create($user->created_at);
+			echo date_format($date, 'd F Y'); 
+		?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
 		<dd><?php
