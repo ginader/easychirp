@@ -1634,6 +1634,11 @@
         <target>Resultados de la Búsqueda</target>
       </trans-unit>
 
+      <trans-unit id="search-results-save-this" datatype="html">
+        <source>save this search</source>
+        <target>save this search</target>
+      </trans-unit>
+
       <!-- THE TWEETS -->
 
       <trans-unit id="gbl-tweet-tweet-options" datatype="html">

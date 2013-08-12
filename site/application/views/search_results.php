@@ -1,6 +1,12 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('search-results-h1'); ?></h1>
 
-<p class="marginAdjustment">Search results for: <?php echo urldecode($meta->query); ?></p>
+<ul style="margin-top: .5rem;">
+<?php
+	echo '<li>Search results for: '.urldecode($meta->query);
+	echo '<li><a href="/search_quick" rel="modal">modify search</a>';
+	echo '<li><a href="save_search?query='.$meta->query.'">'.$xliff_reader->get('search-results-save-this').'</a>';
+?>
+</ul>
 
 <?php
 if ($num > 0) {
