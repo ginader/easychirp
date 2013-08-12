@@ -745,6 +745,8 @@ class Main extends EC_Controller {
 			$tweets = array();
 		}
 
+		$this->_data['num'] = count($tweets);
+
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array('type' => $retweet_type, 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 

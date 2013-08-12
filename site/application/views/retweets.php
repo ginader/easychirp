@@ -13,15 +13,21 @@
 
 if ($type=="by_me") {
 	echo "<h2>".$xliff_reader->get('nav-retweets-by-me')."</h2>";
-	echo $tweets;
 }
 elseif ($type=="of_me") {
 	echo "<h2>".$xliff_reader->get('nav-retweets-of-me')."</h2>";
-	echo $tweets;
 }
 elseif ($type=="to_me") {
 	echo "<h2>".$xliff_reader->get('nav-retweets-to-me')."</h2>";
+}
+
+if ($num > 0) {
 	echo $tweets;
+}
+else {
+	echo '<div class="box1 rounded">';
+	echo '<p style="margin: 1rem 0 .5rem;">'.$xliff_reader->get('search-saved-none').'</p>';
+	echo '</div>';
 }
 
 ?>
