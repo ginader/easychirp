@@ -1,10 +1,16 @@
+<?php
+if (isset($action)) {
+	echo '<div class="msgBoxPos rounded">Your profile has been modified.</div>';
+}
+?>
+
 <h1 class="rounded"><?php echo $xliff_reader->get('edit-profile-h1'); ?></h1>
 
 <p id="top-pull-link"><a href="profile"><?php echo $xliff_reader->get('edit-profile-back-to'); ?></a></p>
 
 <div class="box1 rounded" style="margin-top: 1.65rem">
 	<h2><?php echo $xliff_reader->get('user-h2-details'); ?></h2>
-	<form id="frmProfileEdit" action="actions/doSettings.php" method="post">
+	<form id="frmProfileEdit" action="/profile_edit_action" method="post">
 		<dl id="profile" class="editProfile">
 			<dt style="padding-top: 0;"><?php echo $xliff_reader->get('profile-dt-username'); ?></dt>
 			<dd><?php echo $profile->screen_name; ?></dd>
@@ -33,7 +39,7 @@
 <div class="box1 rounded">
 	<h2><img src="<? echo $profile->profile_image_url; ?>" alt="" /> <?php echo $xliff_reader->get('edit-profile-avatar-h2'); ?></h2>
 	<p><?php echo $xliff_reader->get('edit-profile-avatar-p'); ?></p>
-	<form id="frmSettingsAvatar" action="actions/doSettingsAvatar.php" method="post" enctype="multipart/form-data">
+	<form id="frmSettingsAvatar" action="/profile_edit_action" method="post" enctype="multipart/form-data">
 		<div>
 			<label for="avatar"><?php echo $xliff_reader->get('edit-profile-avatar-path'); ?></label>: 
 			<input class="input1" type="file" id="avatar" name="avatar" />

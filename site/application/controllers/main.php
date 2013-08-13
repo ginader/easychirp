@@ -571,7 +571,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function profile_edit()
+	public function profile_edit($data = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 		
@@ -586,14 +586,50 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
-		$request_param['screen_name'] =  $this->session->userdata('screen_name');
-
-		$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param );
+		if ($data == FALSE) {
+			$request_param = array();	
+			$request_param['screen_name'] =  $this->session->userdata('screen_name');
+			$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param);
+		}
+		else {
+			$this->_data['profile'] = $data;
+			$this->_data['action'] = "modified";
+		}
 
 		$this->layout->set_title( $this->xliff_reader->get('edit-profile-h1') );
 		$this->layout->set_description('Edit your Twitter account profile.');
 		$this->layout->view('profile_edit', $this->_data);
+	}
+
+	/**
+	* Manages the form data from Edit Profile page - /profile_edit_action
+	*
+	* @return void
+	*/
+	public function profile_edit_action()
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['name'] =  $_POST["name"];
+		$request_param['location'] =  $_POST["location"];
+		$request_param['description'] =  $_POST["description"];
+		$request_param['url'] =  $_POST["url"];
+
+		$data = $this->twitter_lib->post('account/update_profile', $request_param);
+
+		$this->profile_edit($data);
 	}
 
 	/**
