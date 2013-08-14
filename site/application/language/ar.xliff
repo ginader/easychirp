@@ -16,6 +16,38 @@
         <target>Select a page:</target>
       </trans-unit>
 
+      <trans-unit id="gbl-yes" datatype="html">
+        <source>Yes</source>
+        <target>نعم</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-no" datatype="html">
+        <source>No</source>
+        <target>لا</target>
+      </trans-unit>
+
+      <!-- ERROR MESSAGES -->
+
+      <trans-unit id="error-over-140" datatype="html">
+        <source>You must enter less than 140 characters.</source>
+        <target>You must enter less than 140 characters.</target>
+      </trans-unit>
+
+      <trans-unit id="error-tweet-empty" datatype="html">
+        <source>Please enter a tweet.</source>
+        <target>Please enter a tweet.</target>
+      </trans-unit>
+
+      <trans-unit id="error-dm-empty" datatype="html">
+        <source>Please enter a direct message.</source>
+        <target>Please enter a direct message.</target>
+      </trans-unit>
+
+      <trans-unit id="error-tweep-empty" datatype="html">
+        <source>Enter a user name.</source>
+        <target>Enter a user name.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -483,11 +515,21 @@
         <target>متابَعين</target>
       </trans-unit>
 
+      <trans-unit id="following-none" datatype="html">
+        <source>You are not following anyone.</source>
+        <target>أنت لا تتابع أي شخص.</target>
+      </trans-unit>
+
       <!-- FOLLOWERS -->
 
       <trans-unit id="followers-h1" datatype="html">
         <source>Followers</source>
         <target>متابِعين</target>
+      </trans-unit>
+
+      <trans-unit id="followers-none" datatype="html">
+        <source>You are not followed by anyone.</source>
+        <target>لم يتم اتباع لك من قبل أي شخص.</target>
       </trans-unit>
 
       <!-- GO TO USER -->
@@ -652,6 +694,16 @@
       <trans-unit id="lists-unsubscribe" datatype="html">
         <source>Unsubscribe</source>
         <target>إلغاء الاشتراك</target>
+      </trans-unit>
+
+      <trans-unit id="lists-owner" datatype="html">
+        <source>Owner</source>
+        <target>مالك</target>
+      </trans-unit>
+
+      <trans-unit id="lists-you-are-owner" datatype="html">
+        <source>You are the owner of this list.</source>
+        <target>أنت صاحب هذه القائمة.</target>
       </trans-unit>
 
       <!-- MENTIONS -->
@@ -1019,6 +1071,11 @@
       <trans-unit id="trends-h1" datatype="html">
         <source>Trends</source>
         <target>Trends</target>
+      </trans-unit>
+
+      <trans-unit id="trends-worldwide" datatype="html">
+        <source>Worldwide</source>
+        <target>في جميع أنحاء العالم</target>
       </trans-unit>
 
       <!-- ARTICLES & FEEDBACK -->
@@ -1586,6 +1643,11 @@
         <target>Search Results</target>
       </trans-unit>
 
+      <trans-unit id="search-results-save-this" datatype="html">
+        <source>save this search</source>
+        <target>save this search</target>
+      </trans-unit>
+
       <!-- THE TWEETS -->
 
       <trans-unit id="gbl-tweet-tweet-options" datatype="html">
@@ -1663,6 +1725,11 @@
         <target>Retweet</target>
       </trans-unit>
 
+      <trans-unit id="gbl-tweet-favorited" datatype="html">
+        <source>favorited</source>
+        <target>تفضيله</target>
+      </trans-unit>
+
       <!-- USER -->
 
       <trans-unit id="user-h1" datatype="html">
@@ -1715,9 +1782,9 @@
         <target>التفاصيل</target>
       </trans-unit>
 
-      <trans-unit id="user-" datatype="html">
-        <source></source>
-        <target></target>
+      <trans-unit id="user-is-following-me" datatype="html">
+        <source>Is this user following me?</source>
+        <target>يتم هذا المستخدم لي بعد؟</target>
       </trans-unit>
 
       <!-- FOOTER -->

@@ -1,7 +1,7 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('trends-h1'); ?></h1>
 
 <div class="box1 rounded">
-	<h2>Worldwide</h2>
+	<h2><?php echo $xliff_reader->get('trends-worldwide'); ?></h2>
 
 	<?php 
 
@@ -11,7 +11,7 @@
 
 	echo '<ul>';
 	foreach($trends_worldwide[0]->trends AS $trend):
-		echo '<li><a href="/search_results?q=' . $trend->query . '">' . $trend->name . '</a></li>';
+		echo '<li><a href="/search_results?query=' . $trend->query . '">' . $trend->name . '</a></li>';
 	endforeach;
 	echo '</ul>';
 

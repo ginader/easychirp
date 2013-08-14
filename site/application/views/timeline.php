@@ -4,5 +4,3 @@
 require_once 'fragments/write_tweet.php';
 echo $tweets;
 ?>
-
-<p>[INCLUDE PAGINATION]</p>

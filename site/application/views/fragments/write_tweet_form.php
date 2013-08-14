@@ -3,9 +3,17 @@
 		<span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span>
 		<strong id="displayCharCountNumber" aria-live="polite"></strong>
 	</p>
-	<form id="frmSubmitTweet" action="/write_tweet" method="post" class="clearfix">
+	<form id="frmSubmitTweet" action="/write_tweet" method="post" class="clearfix" 
+		data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
+		data-error-empty="<?php echo $xliff_reader->get('error-tweet-empty'); ?>">
 		<div>
-			<textarea id="txtEnterTweet" name="status" rows="3"></textarea>
+			<textarea id="txtEnterTweet" name="status" rows="3"><?php
+			
+			if ( isset($_GET["twmess"]) ) {
+				echo "@".$_GET["twmess"]." ";
+			}
+
+			?></textarea>
 			<button class="btnPost" type="submit"><?php echo $xliff_reader->get('write-tweet-post'); ?></button>
 		</div>
 	</form>

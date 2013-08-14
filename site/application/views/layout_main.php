@@ -26,7 +26,7 @@
 		<?php if ($logged_in): ?>
 			<h2 class="hide">My Info</h2>
 			<p><?php  printf( $xliff_reader->get("nav-welcome-user"), $screen_name); ?> 
-			[<a href="/sign_out">sign out</a>]</p>
+			[<a href="/sign_out"><?php echo $xliff_reader->get('nav-sign-out'); ?></a>]</p>
 			<p id="hdUserStats"><a href="/following"><?php printf( $xliff_reader->get("nav-following"), $following_count); ?></a> | <a href="/followers"><?php printf( $xliff_reader->get("nav-followers"), $follower_count); ?></a> | <a href="/mytweets"><?php printf( $xliff_reader->get("nav-tweet-count"), $tweet_count); ?></a></p>
 		<?php endif; ?>
 	</div>
@@ -65,13 +65,13 @@
 	<p><?php echo $xliff_reader->get('footer-select-language'); ?>: English (selected) | <a href="#">Arabic</a> | Espa&ntilde;ol (coming soon) | Fran&ccedil;ais (coming soon)</p>
 	<p>&copy; <?php echo $xliff_reader->get('footer-copyright'); ?> 2009-2013 <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
 	<a href="http://www.weboverhauls.com" title="tune-up your web site! | www.weboverhauls.com">Web Overhauls</a></p>
-	<p><img src="images/powered-by-twitter-sig.gif" width="137" height="11" alt="powered by Twitter" /></p>
+	<p><img src="/images/powered-by-twitter-sig.gif" width="137" height="11" alt="powered by Twitter" /></p>
 </footer>
 
 </div><!--wrapper-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="include/js/general.js"></script>
+<script src="/include/js/general.js"></script>
 <script>
 (function(){
 	initCharacterCount();

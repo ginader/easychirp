@@ -17,7 +17,14 @@ $(".btnOptions > h3 > a").click(function(e) {
 		$(this).attr("aria-expanded",true);
 	}
 });
+// Add role of button
 $(".btnOptions a").attr("role","button");
+
+// Add aria-controls pointing to associated element
+$(".btnOptions a").each(function () {
+	var x = $(this).attr('href').split(/#/)[1];
+	$(this).attr("aria-controls", x);
+});
 
 /* Show/hide write tweet ************************************/
 $("#enterTweet h2 a").click(function(e) {
@@ -124,12 +131,35 @@ $('#frmSubmitTweet').submit(function() {
 	var x=$("#txtEnterTweet");
 	var y = x.val();
 	if (y.length>140) {
-		alert("You must enter less than 140 characters.");
+		alert($("#frmSubmitTweet").attr("data-error-over"));
 		x.focus();
 		return false;
 	}
 	if (y.length==0) {
-		alert("Please enter a tweet.");
+		alert($("#frmSubmitTweet").attr("data-error-empty"));
+		x.focus();
+		return false;
+	}
+});
+
+// Validate DM entry
+$('#frmDirectMessage').submit(function() {
+	var x=$("#tweep");
+	var y = x.val();
+	if (y.length==0) {
+		alert($("#frmDirectMessage").attr("data-error-tweep-empty"));
+		x.focus();
+		return false;
+	}
+	x=$("#txtDirectMessage");
+	y = x.val();
+	if (y.length>140) {
+		alert($("#frmDirectMessage").attr("data-error-over"));
+		x.focus();
+		return false;
+	}
+	if (y.length==0) {
+		alert($("#frmDirectMessage").attr("data-error-empty"));
 		x.focus();
 		return false;
 	}
@@ -166,32 +196,44 @@ $("#frmUrlShort").submit(function(ev) {
 /* Modal *****************************************/
 var modalOpen = false;
 
+// Function to resize and reposition the modal window
+function resizeModal(id) {
+    // Get the window height and width
+    var winH = $(window).height();
+    var winW = $(window).width();
+
+    // Position the modal window to center
+    $(id).css('top', winH / 2 - $(id).height() / 2 - 35);
+    $(id).css('left', winW / 2 - $(id).width() / 2 - 20);
+}
+
+// Function to resize mask (grey background)
+function resizeMask() {
+    // Get the screen height and width
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+
+    // Set height and width to mask to fill up the whole screen
+    $('#mask').css('width', maskWidth);
+    $('#mask').css('height', maskHeight);
+}
+
 $('a[rel=modal]').click(function(e) {
 	e.preventDefault();
 	var id = $(this).attr('href').replace("/","#");
 	modalOpen = true;
 
 	// Remember what opened me to focus when closing
-	var lastFocus = document.activeElement;
+	var lastFocus = $(this);
 
-	// Get the screen height and width
-	var maskHeight = $(document).height();
-	var maskWidth = $(window).width();
-
-	// Set height and width to mask to fill up the whole screen
-	$('#mask').css('width',maskWidth);
-	$('#mask').css('height',maskHeight);
+    // Resize the mask
+    resizeMask();
 	
 	// Transition effect - mask
 	$('#mask').fadeIn(500);
 
-	// Get the window height and width
-	var winH = $(window).height();
-	var winW = $(window).width();
-
-	// Position the popup window to center
-	$(id).css('top',  winH/2-$(id).height()/2);
-	$(id).css('left', winW/2-$(id).width()/2-20);
+    // Call function to resize and reposition modal
+    resizeModal(id);
 
 	// Position the close button
 	var modalLeft = ( $(id).width() + 20 ) + "px";
@@ -241,21 +283,11 @@ $('a[rel=modal]').click(function(e) {
 $(window).resize(function () {
 	var id = $('.modal');
 
-	//Get the screen height and width
-	var maskHeight = $(document).height();
-	var maskWidth = $(window).width();
+    // Resize the mask
+    resizeMask();
 
-	// Set height and width to mask to fill up the whole screen
-	$('#mask').css('width',maskWidth);
-	$('#mask').css('height',maskHeight);
-
-	// Get the window height and width
-	var winH = $(window).height();
-	var winW = $(window).width();
-
-	// Position the popup window to center
-	$(id).css('top',  winH/2-$(id).height()/2);
-	$(id).css('left', winW/2-$(id).width()/2-20);
+    // Call function to resize and reposition modal
+    resizeModal(id);
 
 	// Position the close button
 	var modalLeft = ( $(id).width() + 20 ) + "px";
@@ -276,5 +308,33 @@ document.addEventListener("focus", function(event) {
 	}
 }, true);
 
+// Tweet message
+$('a[rel=twmess]').click(function(e) {
+	e.preventDefault();
 
+	// Open if not open already (this includes focus)
+	if (!$('#enterTweetContent').hasClass("displayEnterTweet")) {
+		$('#enterTweet h2 a').trigger('click');
+	}
+
+	// Focus
+	$('#txtEnterTweet').focus();
+
+	// Insert @username in write tweet textarea
+	u = {}
+	u.url = $(this).attr('href'); //alert(url3);
+	u.arr = u.url.split("twmess="); //alert(arUrl3);
+	u.user = u.arr[1]; //alert(usrMix3);
+	u.mess = "@" + u.user + " "; //alert(twMessTxt);
+	$("#txtEnterTweet").html(u.mess);
+
+});
+
+// Delete list
+$('a[rel=deleteList]').click(function(e) {
+	if (!confirm("Are you sure you want to delete this item? It cannot be undone.")) {
+		 return false;
+	}
+	return true;
+});
 

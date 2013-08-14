@@ -1,3 +1,11 @@
+<?php
+if (isset($_GET["deleted"])) {
+	if ($_GET["deleted"] == "true") {
+		echo '<div class="msgBoxPos rounded">The list was deleted.</div>';
+	}
+}
+?>
+
 <h1 class="rounded"><?php echo $xliff_reader->get('lists-h1'); ?></h1>
 
 <p class="marginAdjustment"><?php echo $xliff_reader->get('lists-note1'); ?></p>
@@ -33,7 +41,8 @@
 	<h2><?php echo $xliff_reader->get('lists-h2-my'); ?></h2>
 
 <?php
-foreach($myLists->lists AS $lists):
+if (count($myLists->lists) != 0) {
+	foreach($myLists->lists AS $lists):
 ?>
 <h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
@@ -44,10 +53,12 @@ foreach($myLists->lists AS $lists):
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
+	<?php /*<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>*/?>
+	<dd><?php echo $lists->subscriber_count; ?></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>
+	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
+	<dd><?php echo $lists->member_count; ?></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
@@ -62,16 +73,23 @@ foreach($myLists->lists AS $lists):
 			<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-add-submit'); ?></button>
 		</form>
 	</dd>
+	*/?>
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
-	<dd><a href="list_edit?id=<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-edit'); ?></a> | <a rel="deleteList" class="delete-link" href="actions/doDeleteList.php?id=<?php echo $lists->id; ?>"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a></dd>
-	*/?>
+	<dd>
+		<a href="list_edit?id=<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-edit'); ?></a> | 
+		<a rel="deleteList" class="delete-link" href="list_delete?id=<?php echo $lists->id; ?>"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a>
+	</dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
-endforeach;
+	endforeach;
+}
+else {
+	echo '<p>'.$xliff_reader->get('search-saved-none').'</p>';
+}
 ?>
 </div>
 
@@ -82,7 +100,8 @@ endforeach;
 	<h2><?php echo $xliff_reader->get('lists-h2-sub'); ?></h2>
 
 <?php
-foreach($subLists->lists AS $lists):
+if (count($subLists->lists) != 0) {
+	foreach($subLists->lists AS $lists):
 ?>
 
 <h3><span aria-hidden="true" class="icon-list2"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>&subscriber=true"><?php echo $lists->name; ?></a></h3>
@@ -94,17 +113,19 @@ foreach($subLists->lists AS $lists):
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
+	<?php /*<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>*/?>
+	<dd><?php echo $lists->subscriber_count; ?></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>
+	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
+	<dd><?php echo $lists->member_count; ?></dd>
 
 	<?php /*
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 	*/ ?>
 
-	<dt>Owner</dt>
+	<dt><?php echo $xliff_reader->get('lists-owner'); ?></dt>
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>	
 
 <?php /*
@@ -116,8 +137,11 @@ foreach($subLists->lists AS $lists):
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
-//$index++;
-endforeach;
+	endforeach;
+}
+else {
+	echo '<p>'.$xliff_reader->get('search-saved-none').'</p>';
+}
 ?>
 </div>
 

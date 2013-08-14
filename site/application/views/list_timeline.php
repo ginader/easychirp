@@ -1,12 +1,12 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('lists-h1')." ".$xliff_reader->get('nav-timeline'); ?>: <?php echo $list_data->name; ?></h1>
 
-<p id="top-pull-link" style="margin-bottom: 1.25rem;"><a href="/lists">Back to Lists</a></p>
+<p id="top-pull-link" style="margin-bottom: 1.25rem;"><a href="/lists"><?php echo $xliff_reader->get('lists-h2-my'); ?></a></p>
 
 <?php
 echo '<ul>';
 
 	if ($list_data->user->screen_name == $this->session->userdata('screen_name')) {
-		echo '<li>You are are the owner of this list. <a href="list_edit?id='.$list_data->id.'">edit settings</a></li>';
+		echo '<li>' . $xliff_reader->get('lists-you-are-owner') . ' <a href="list_edit?id='.$list_data->id.'">' . $xliff_reader->get('lists-edit') . '</a></li>';
 	}
 	else {
 		
@@ -19,8 +19,8 @@ echo '<ul>';
 		// Add link to subscribe to this list if not subscribed
 	}
 
-	echo '<li>View <a href="/list_subscribers?id=' . $list_data->id . '">list subscribers</a>.</li>';
-	echo '<li>View <a href="/list_members?id=' . $list_data->id . '">list members</a>.</li>';
+	//echo '<li>View <a href="/list_subscribers?id=' . $list_data->id . '">list subscribers</a>.</li>';
+	//echo '<li>View <a href="/list_members?id=' . $list_data->id . '">list members</a>.</li>';
 
 echo '</ul>';
 ?>

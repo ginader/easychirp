@@ -3,7 +3,7 @@ Reset
 Base
 Utilities
 Layout (2-col, menus, write tweet, alert messages, page-specific)
-Module (buttons, tweets, modals)
+Module (buttons, tweets-dm-follow, modals)
 State
 Theme
 Media queries (except for 2-col)
@@ -363,6 +363,25 @@ footer {
 	max-width: 100%;
 }
 
+div.msgBox {
+	border: 2px solid #a1d5f9;
+	padding: .25rem .75rem;
+	margin-bottom: .5rem;
+}
+div.msgBoxPos,
+div.msgBoxNeg {
+	font-size: 1.25rem;
+	text-align: center;
+	border: 2px solid #a1d5f9;
+	/*background: #fff url(../../images/icon_check3.gif) no-repeat 5px 2px;*/
+	padding: 1rem;
+	margin-top: .5rem;
+}
+div.msgBoxNeg {
+	border-color: #c30;
+	background: #fff url(../../images/icon_x2.gif) no-repeat 9px 2px;
+}
+
 @media (max-width:480px) {
 	.p-row-r > [class ^= "p-col"] {
 		width:100%;
@@ -561,60 +580,6 @@ div.msgBoxNeg {
 	margin-left: 40px;
 }
 
-.icon-cancel-circle-sprite,
-.icon-checkmark-circle-sprite,
-.icon-warning-sprite,.icon-close-sprite,
-.icon-checkmark-sprite,
-.icon-checkmark2-sprite,
-.icon-minus-sprite,
-.icon-plus-sprite {
-	display: inline-block;
-	float: left;
-	width: 24px;
-	height: 24px;
-	margin-top: 4px;
-	background-image: url(../../images/sprites.png);
-	background-repeat: no-repeat;
-	background-color: #eee;
-	padding: 3px;
-
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	-khtml-border-radius: 7px;
-	border-radius: 7px;
-}
-.icon-cancel-circle-sprite {
-	background-position: 0 3px;
-}
-.icon-checkmark-circle-sprite {
-	background-position: -48px 3px;
-}
-.icon-warning-sprite {
-	background-position: -96px 3px;
-}
-.icon-close-sprite {
-	background-position: -141px 3px;
-}
-.icon-checkmark-sprite {
-	background-position: -189px 3px;
-}
-.icon-checkmark2-sprite {
-	background-position: -240px 3px;
-}
-.icon-minus-sprite {
-	background-position: -288px 3px;
-}
-.icon-plus-sprite {
-	background-position: -336px 3px;
-}
-
-a.delete-link {
-	text-decoration: none;
-}
-a.delete-link span { /* reduce size of icon a bit */
-	font-size: .9rem;
-}
-
 /* page-specific */
 
 #homeECtweets li {
@@ -698,6 +663,10 @@ a.delete-link span { /* reduce size of icon a bit */
 
 a.delete-search {
 	margin-left: .5rem;
+	text-decoration: none;
+}
+a.delete-link {
+	text-decoration: none;
 }
 
 #enterTweep {
@@ -749,7 +718,7 @@ button:hover, button:focus,
 	border-color: #fc6;
 }
 
-/* Tweets */
+/* Tweets, DMs, Follow */
 .tweet,
 .tweet h3,
 .tweet h4 {
@@ -763,12 +732,33 @@ button:hover, button:focus,
 	padding: .5rem .5rem .5rem 74px;
 	margin-bottom: 1rem;
 }
+.tweet.dm {
+	padding-left: 150px;
+	margin: 1rem 0;
+}
+.dm .dmAvatars {
+	height: 30px;
+	float: left;
+	margin-left: -140px;
+	margin-top: 3px;
+}
+.dm p {
+	margin-bottom: 0;
+}
+.dm .btn {
+	text-decoration: none;
+	padding: .35rem;
+	margin: .2rem 0 0 .3rem;
+}
+.dm div {
+	float: right;
+}
 .tweet .tweetAvatar,
 .follow .tweetAvatar {
-	width: 64px;
-	height: 64px;
+	width: 48px;
+	height: 48px;
 	float: left;
-	margin-left: -74px;
+	margin-left: -62px;
 	margin-top: 3px;
 	background: no-repeat top;
 }
@@ -892,9 +882,11 @@ a.btnOptionsUser,
 .js #enterTweet #enterTweetContent.displayEnterTweet {
 	display: block;
 }
-
 .alert {
 	color: #c00;
+}
+.favorited {
+	background-color: #ff9;
 }
 
 /* Theme  **************************************************/
