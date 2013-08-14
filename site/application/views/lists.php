@@ -1,7 +1,13 @@
 <?php
-if (isset($_GET["deleted"])) {
-	if ($_GET["deleted"] == "true") {
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "deleted") {
 		echo '<div class="msgBoxPos rounded">The list was deleted.</div>';
+	}
+	elseif ($_GET["action"] == "created") {
+		echo '<div class="msgBoxPos rounded">The list was created.</div>';
+	}
+	elseif ($_GET["action"] == "empty_name") {
+		echo '<div class="msgBoxPos rounded">Enter a name in order to create a list.</div>';
 	}
 }
 ?>
@@ -12,7 +18,7 @@ if (isset($_GET["deleted"])) {
 
 <div id="createList" class="box1 rounded" data-open="<?php echo $xliff_reader->get('lists-create-open'); ?>" data-close="<?php echo $xliff_reader->get('lists-create-close'); ?>">
 	<h2><?php echo $xliff_reader->get('lists-h2-create'); ?></h2>
-	<form action="actions/doListCreate.php" method="post" id="frmCreateList">
+	<form action="list_create" method="post" id="frmCreateList">
 	<div class="row">
 		<label id="labelName" for="txt_listName"><?php echo $xliff_reader->get('lists-create-name'); ?></label>
 		<span id="nameTip"><?php echo $xliff_reader->get('lists-create-name-tip'); ?></span>

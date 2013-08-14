@@ -408,9 +408,44 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages the creation of a list - /list_create
+	*/
+	public function list_create($ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		// Validation
+		if ($_POST["txt_listName"]=="") {
+			redirect( base_url() . 'lists?action=empty_name');
+		}
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['name'] = $_POST["txt_listName"];
+		$request_param['mode'] = $_POST["mode"];
+		$request_param['description'] = $_POST["txt_listDesc"];
+		
+		$tweet = $this->twitter_lib->post('lists/create', $request_param);
+		if ($ajax) {
+			echo json_encode($tweet);
+		}
+		else {
+			redirect( base_url() . 'lists?action=created');
+		}
+	}
+
+	/**
 	* Manages the deletion of a list - /list_delete
-	*
-	* @return void
 	*/
 	public function list_delete($ajax = FALSE)
 	{
@@ -435,7 +470,7 @@ class Main extends EC_Controller {
 			echo json_encode($tweet);
 		}
 		else {
-			redirect( base_url() . 'lists?deleted=true');
+			redirect( base_url() . 'lists?action=deleted');
 		}
 	}
 

@@ -53,6 +53,7 @@ $route['lists'] = "main/lists";
 $route['list_edit'] = "main/list_edit";
 $route['list_timeline'] = "main/list_timeline";
 $route['list_delete'] = "main/list_delete";
+$route['list_create'] = "main/list_create";
 $route['mentions'] = "main/mentions";
 $route['mytweets'] = "main/mytweets";
 $route['oauth_callback'] = "main/oauth_callback";
