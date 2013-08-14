@@ -59,6 +59,7 @@ $route['oauth_callback'] = "main/oauth_callback";
 $route['profile'] = "main/profile";
 $route['profile_edit'] = "main/profile_edit";
 $route['profile_edit_action'] = "main/profile_edit_action";
+$route['profile_avatar_action'] = "main/profile_avatar_action";
 $route['quote'] = "main/quote";
 $route['reply'] = "main/reply";
 $route['retweet'] = "main/retweet"; // For non-JS and keyboard use cases

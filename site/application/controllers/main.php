@@ -568,10 +568,8 @@ class Main extends EC_Controller {
 
 	/**
 	* Manages the profile edit page - /profile_edit
-	*
-	* @return void
 	*/
-	public function profile_edit($data = FALSE)
+	public function profile_edit()
 	{
 		$this->redirect_if_not_logged_in();
 		
@@ -586,14 +584,12 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		if ($data == FALSE) {
-			$request_param = array();	
-			$request_param['screen_name'] =  $this->session->userdata('screen_name');
-			$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param);
-		}
-		else {
-			$this->_data['profile'] = $data;
-			$this->_data['action'] = "modified";
+	 	$request_param = array();	
+	 	$request_param['screen_name'] =  $this->session->userdata('screen_name');
+	 	$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param);
+
+		if ( isset($_GET['action']) ) {
+			$this->_data['action'] = $_GET['action'];
 		}
 
 		$this->layout->set_title( $this->xliff_reader->get('edit-profile-h1') );
@@ -603,8 +599,6 @@ class Main extends EC_Controller {
 
 	/**
 	* Manages the form data from Edit Profile page - /profile_edit_action
-	*
-	* @return void
 	*/
 	public function profile_edit_action()
 	{
@@ -629,7 +623,34 @@ class Main extends EC_Controller {
 
 		$data = $this->twitter_lib->post('account/update_profile', $request_param);
 
-		$this->profile_edit($data);
+		redirect( base_url() . 'profile_edit?action=modified_text');
+	}
+
+	/**
+	* Manages the form data from Edit Profile page - /profile_avatar_action
+	*/
+	public function profile_avatar_action()
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		// $params = array();
+		// $params[] = $this->config->item('tw_consumer_key');
+		// $params[] = $this->config->item('tw_consumer_secret');
+		// $params[] = $this->session->userdata('user_oauth_token');
+		// $params[] = $this->session->userdata('user_oauth_token_secret');
+
+		// $this->load->library('twitter_lib');
+		// $this->twitter_lib->connect($params);
+
+		// $request_param = array();
+		// $request_param['image'] = $_POST["avatar"];
+		// $data = $this->twitter_lib->post('account/update_profile_image', $request_param);
+
+		// need 5 second delay after uploading: https://dev.twitter.com/docs/api/1.1/post/account/update_profile_image
+
+		redirect( base_url() . 'profile_edit?action=modified_avatar');
 	}
 
 	/**

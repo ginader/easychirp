@@ -1,6 +1,11 @@
 <?php
 if (isset($action)) {
-	echo '<div class="msgBoxPos rounded">Your profile has been modified.</div>';
+	if ($action=="modified_text") {
+		echo '<div class="msgBoxPos rounded">Your profile has been modified.</div>';
+	}
+	elseif ($action=="modified_avatar") {
+		echo '<div class="msgBoxPos rounded">Your avatar has been modified.</div>';
+	}
 }
 ?>
 
@@ -39,7 +44,7 @@ if (isset($action)) {
 <div class="box1 rounded">
 	<h2><img src="<? echo $profile->profile_image_url; ?>" alt="" /> <?php echo $xliff_reader->get('edit-profile-avatar-h2'); ?></h2>
 	<p><?php echo $xliff_reader->get('edit-profile-avatar-p'); ?></p>
-	<form id="frmSettingsAvatar" action="/profile_edit_action" method="post" enctype="multipart/form-data">
+	<form id="frmSettingsAvatar" action="/profile_avatar_action" method="post" enctype="multipart/form-data">
 		<div>
 			<label for="avatar"><?php echo $xliff_reader->get('edit-profile-avatar-path'); ?></label>: 
 			<input class="input1" type="file" id="avatar" name="avatar" />
