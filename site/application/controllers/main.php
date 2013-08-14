@@ -408,6 +408,35 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages the editing of a list - /list_edit_action
+	*/
+	public function list_edit_action()
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['list_id'] = $_POST["list_id"];
+		$request_param['name'] = $_POST["txt_listName"];
+		$request_param['mode'] = $_POST["mode"];
+		$request_param['description'] = $_POST["txt_listDesc"];
+		
+		$tweet = $this->twitter_lib->post('lists/update', $request_param);
+
+		redirect( base_url() . 'list_edit?action=edited&id='.$_POST["list_id"]);
+	}
+
+	/**
 	* Manages the creation of a list - /list_create
 	*/
 	public function list_create($ajax = FALSE)

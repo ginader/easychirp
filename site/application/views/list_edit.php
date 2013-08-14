@@ -1,18 +1,27 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "edited") {
+		echo '<div class="msgBoxPos rounded">The list was edited.</div>';
+	}
+}
+?>
+
 <h1 class="rounded">Edit List</h1>
 
 <p id="top-pull-link" style="margin-bottom: 1.5rem;"><a href="/lists">Back to Lists</a></p>
 
 <div class="box1 rounded twList">
 	<h2><?php echo $list->name; ?></h2>
-	<form action="#" method="post">
+	<form action="/list_edit_action" method="post">
+		<input type="hidden" name="list_id" value="<?php echo $list->id; ?>">
 		<dl class="clearfix">
 			<dt class="twListDtAdj"><label id="labelName" for="txt_listName">Name <span class="smallText">(required)</span></label></dt>
-			<dd><input aria-describedby="labelNameHint" type="text" id="txt_listName" name="name" maxlength="25" size="25" value="<?php echo $list->name; ?>" />
+			<dd><input aria-describedby="labelNameHint" type="text" id="txt_listName" name="txt_listName" maxlength="25" size="25" value="<?php echo $list->name; ?>" />
 				<div id="labelNameHint">(required, under 25 characters, letters and numbers only)</div>
 			</dd>
 			
 			<dt class="twListDtAdj"><label id="labelDesc" for="txt_listDesc">Description</label></dt>
-			<dd><input aria-describedby="labelDescHint" class="input1" type="text" id="txt_listDesc" name="description" maxlength="100" size="80" value="<?php echo $list->description; ?>" />
+			<dd><input aria-describedby="labelDescHint" class="input1" type="text" id="txt_listDesc" name="txt_listDesc" maxlength="100" size="80" value="<?php echo $list->description; ?>" />
 				<div id="labelDescHint">(optional, under 100 characters)</div>
 			</dd>
 			
