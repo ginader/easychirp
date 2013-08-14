@@ -28,7 +28,7 @@
 	</form>
 
 	<div class="clearfix" style="font-size: 1.25rem;">
-		<a rel="deleteList" class="delete-link fr" href="actions/doDeleteList.php?lstid=33678339"><span aria-hidden="true" class="icon-close1"></span> Delete</a>
+		<a rel="deleteList" class="delete-link fr" href="list_delete?id=<?php echo $list->id; ?>"><span aria-hidden="true" class="icon-close1"></span> Delete</a>
 	</div>
 
 </div>
