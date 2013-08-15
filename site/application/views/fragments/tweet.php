@@ -80,7 +80,7 @@ foreach($tweets AS $tweet):
 				echo '<a href="/favorite?id=' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorited') . '" class="favorited"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorited') . '</span></a>';
 			}
 			?></li>
-			<li><a href="/reply?id=<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
+			<li><a href="/reply/<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
 			<li><a href="/reply_to_all?id=<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
 			<li><a href="/retweet?id=<?php echo $tweet->id; ?>" data-icon="&#x3f;" title="<?php echo $xliff_reader->get('gbl-tweet-retweet'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-retweet'); ?></span></a></li>
 			<li><a href="/quote?id=<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>

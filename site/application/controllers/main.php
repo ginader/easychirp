@@ -744,12 +744,16 @@ class Main extends EC_Controller {
 		$tweets = array();
 		$tweets[] = $data;
 
+		$this->_data['page_heading'] = $xliff_reader->get('quote-h1');
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
+			array( 'single' => '1', 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('quote-h1') );
 		$this->layout->set_description('Quote a tweet.');
-		$this->layout->view('quote', $this->_data);
+		$this->layout->view('timeline', $this->_data);
 	}
 
 	/**
@@ -757,7 +761,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function reply()
+	public function reply($tweet_id)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -773,18 +777,26 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
-		$request_param['id'] =  $_GET["id"];
+		$request_param['id'] =  $tweet_id;
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
 		$tweets[] = $data;
+		
+		$reply_to = $data->user->screen_name;
+		$in_reply_to = $data->id_str;
+
+		$this->_data['page_heading'] = $this->xliff_reader->get('reply-h1');
+
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
+			array( 'reply_to' => $reply_to, 'in_reply_to' => $in_reply_to, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('reply-h1') );
 		$this->layout->set_description('Reply to a tweet.');
-		$this->layout->view('reply', $this->_data);
+		$this->layout->view('timeline', $this->_data);
 	}
 
 	/**
@@ -1416,6 +1428,12 @@ class Main extends EC_Controller {
 
 		$request_param = array();	
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
+
+		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline');
+
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
+			array( 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
 		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
