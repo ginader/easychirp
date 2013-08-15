@@ -32,7 +32,9 @@ if (empty($single)):
 				}
 
 				?></textarea>
-				<input type="hidden" name="in_reply_to_status_id" value="<?php echo $in_reply_to; ?>">
+				<?php if (isset($in_reply_to)): ?>
+					<input type="hidden" name="in_reply_to_status_id" value="<?php echo $in_reply_to; ?>">
+				<?php endif;  ?>
 
 				<button class="btnPost" type="submit"><?php echo $xliff_reader->get('write-tweet-post'); ?></button>
 			</div>
