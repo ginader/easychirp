@@ -9,8 +9,8 @@ if (isset($_GET["action"])) {
 	elseif ($_GET["action"] == "empty_name") {
 		echo '<div class="msgBoxPos rounded">Enter a name in order to create a list.</div>';
 	}
-	elseif ($_GET["action"] == "unsubscribe") {
-		echo '<div class="msgBoxPos rounded">You have been unsubscribed from the list.</div>';
+	elseif ($_GET["action"] == "unsubscribed") {
+		echo '<div class="msgBoxPos rounded">You have unsubscribed from the list.</div>';
 	}
 }
 ?>

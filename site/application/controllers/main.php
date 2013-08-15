@@ -504,6 +504,36 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages subscribing to a list - /list_subscribe
+	*/
+	public function list_subscribe($ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['list_id'] = $_GET["id"];
+		
+		$tweet = $this->twitter_lib->post('lists/subscribers/create', $request_param);
+		if ($ajax) {
+			echo json_encode($tweet);
+		}
+		else {
+			redirect( base_url() . 'user_lists?id=' . $_GET["user"] . '&action=subscribed');
+		}
+	}
+
+	/**
 	* Manages unsubscribing from a list - /list_unsubscribe
 	*/
 	public function list_unsubscribe($ajax = FALSE)
@@ -529,7 +559,7 @@ class Main extends EC_Controller {
 			echo json_encode($tweet);
 		}
 		else {
-			redirect( base_url() . 'lists?action=unsubscribe');
+			redirect( base_url() . 'lists?action=unsubscribed');
 		}
 	}
 

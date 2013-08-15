@@ -1,3 +1,11 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "subscribed") {
+		echo '<div class="msgBoxPos rounded">You have subscribed to the list.</div>';
+	}
+}
+?>
+
 <h1 class="rounded"><?php echo $xliff_reader->get('lists-h1')." : ".$_GET["id"]; ?></h1>
 
 <div class="p-row-r">
@@ -30,6 +38,9 @@ if (count($ownedLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 	*/ ?>
+
+	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
+	<dd><a rel="subList" href="/list_subscribe?id=<?php echo $lists->id; ?>&user=<?php echo $lists->user->screen_name; ?>">Subscribe</a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-owner'); ?></dt>
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>
@@ -77,6 +88,9 @@ if (count($subLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 	*/ ?>
+
+	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
+	<dd><a rel="subList" href="/list_subscribe?id=<?php echo $lists->id; ?>&user=<?php echo $_GET["id"]; ?>">Subscribe</a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-owner'); ?></dt>
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>
