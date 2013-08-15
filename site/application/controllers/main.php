@@ -821,7 +821,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function reply($tweet_id)
+	public function reply($tweet_id, $all = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -842,17 +842,38 @@ class Main extends EC_Controller {
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
 		$tweets[] = $data;
-		
-		$reply_to = $data->user->screen_name;
+
+		$twitter_ids = array();
+		$twitter_ids[] = $data->user->screen_name;
+		if ($all !== FALSE)
+		{
+			foreach ($data->entities->user_mentions AS $user){
+				$twitter_ids[] = $user->screen_name;	
+			}
+		}
+
+		$reply_to = '';
+		foreach ($twitter_ids AS $twitter_id)
+		{
+			$reply_to .= '@' . $twitter_id . ' ';
+		}
+
 		$in_reply_to = $data->id_str;
 
 		$this->_data['page_heading'] = $this->xliff_reader->get('reply-h1');
 
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
-			array( 'reply_to' => $reply_to, 'in_reply_to' => $in_reply_to, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 
+			'reply_to' => $reply_to, 
+			'in_reply_to' => $in_reply_to, 
+			'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 
+			'tweets' => $tweets, 
+			'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('reply-h1') );
 		$this->layout->set_description('Reply to a tweet.');

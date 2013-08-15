@@ -28,7 +28,7 @@ if (empty($single)):
 				
 				if ( isset($reply_to) ) 
 				{
-					echo '@' . $reply_to . ' ';
+					echo $reply_to;
 				}
 
 				?></textarea>
