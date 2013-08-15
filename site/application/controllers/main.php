@@ -782,7 +782,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function quote()
+	public function quote($tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -798,15 +798,15 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
-		$request_param['id'] =  $_GET["id"];
+		$request_param['id'] =  $tweet_id;
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
 		$tweets[] = $data;
-
-		$this->_data['page_heading'] = $xliff_reader->get('quote-h1');
+		$reply_to = 'RT @' . $data->user->screen_name . ': ' . $data->text;
+		$this->_data['page_heading'] = $this->xliff_reader->get('quote-h1');
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
-			array( 'single' => '1', 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 'single' => '0', 'reply_to' => $reply_to, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
