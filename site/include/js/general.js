@@ -332,9 +332,19 @@ $('a[rel=twmess]').click(function(e) {
 
 // Delete list
 $('a[rel=deleteList]').click(function(e) {
-	if (!confirm("Are you sure you want to delete this item? It cannot be undone.")) {
+	if (!confirm("Are you sure you want to delete this item? This cannot be undone.")) {
 		 return false;
 	}
 	return true;
 });
+
+// Unsubscribe list
+$('a[rel=unsubList]').click(function(e) {
+	if (!confirm("Are you sure you want to unsubscribe. This cannot be undone.")) {
+		 return false;
+	}
+	return true;
+});
+
+
 

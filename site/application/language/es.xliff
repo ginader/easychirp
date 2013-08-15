@@ -16,6 +16,11 @@
         <target>Seleccionar una página:</target>
       </trans-unit>
 
+      <trans-unit id="gbl-from" datatype="html">
+        <source>from</source>
+        <target>de</target>
+      </trans-unit>
+
       <trans-unit id="gbl-yes" datatype="html">
         <source>Yes</source>
         <target>Sí</target>
