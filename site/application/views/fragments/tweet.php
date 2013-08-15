@@ -47,7 +47,15 @@ foreach($tweets AS $tweet):
 	?>">
 	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
-	<q><?php echo $tweet->text; ?></q>
+	<q><?php 
+	$tweet_text = $tweet->text; 
+	$regex = '#\b(https?://.+)\b#';	
+	$replacement = '<a href="\1">\1</a>';
+		
+	$tweet_text = preg_replace($regex, $replacement, $tweet_text);
+
+	echo $tweet_text; 
+	?></q>
 	<p>from <a href="/user?id=<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> | 
 		<?php
 		// Is reply or retweet?
@@ -73,17 +81,17 @@ foreach($tweets AS $tweet):
 		<ul id="tweetOptions_<?php echo $index; ?>">
 			<li><?php
 			// If favorited or not
-			if ($tweet->favorited == false) {
-				echo '<a href="/favorite?id=' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorite') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorite') . '</span></a>';
+			if ($tweet->favorited === false) {
+				echo '<a href="/favorite/' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorite') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorite') . '</span></a>';
 			}
 			else {
-				echo '<a href="/favorite?id=' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorited') . '" class="favorited"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorited') . '</span></a>';
+				echo '<a href="/favorite/' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorited') . '" class="favorited"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorited') . '</span></a>';
 			}
 			?></li>
-			<li><a href="/reply?id=<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
-			<li><a href="/reply_to_all?id=<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
+			<li><a href="/reply/<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
+			<li><a href="/reply_all/<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
 			<li><a href="/retweet?id=<?php echo $tweet->id; ?>" data-icon="&#x3f;" title="<?php echo $xliff_reader->get('gbl-tweet-retweet'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-retweet'); ?></span></a></li>
-			<li><a href="/quote?id=<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
+			<li><a href="/quote/<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
 			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo urlencode($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
 		</ul>
 	</div>
