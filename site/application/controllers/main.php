@@ -504,6 +504,36 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages unsubscribing from a list - /list_unsubscribe
+	*/
+	public function list_unsubscribe($ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['list_id'] = $_GET["id"];
+		
+		$tweet = $this->twitter_lib->post('lists/subscribers/destroy', $request_param);
+		if ($ajax) {
+			echo json_encode($tweet);
+		}
+		else {
+			redirect( base_url() . 'lists?action=unsubscribe');
+		}
+	}
+
+	/**
 	* Manages the list_timeline page - /list_timeline
 	*
 	* @return void

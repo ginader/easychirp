@@ -9,6 +9,9 @@ if (isset($_GET["action"])) {
 	elseif ($_GET["action"] == "empty_name") {
 		echo '<div class="msgBoxPos rounded">Enter a name in order to create a list.</div>';
 	}
+	elseif ($_GET["action"] == "unsubscribe") {
+		echo '<div class="msgBoxPos rounded">You have been unsubscribed from the list.</div>';
+	}
 }
 ?>
 
@@ -134,10 +137,8 @@ if (count($subLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-owner'); ?></dt>
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>	
 
-<?php /*
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
-	<dd><a rel="unsubList" href="#" title="remove the list PayPal-Access-Team" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
-*/ ?>
+	<dd><a rel="unsubList" href="/list_unsubscribe?id=<?php echo $lists->id; ?>" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
