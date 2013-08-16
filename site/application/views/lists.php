@@ -12,6 +12,12 @@ if (isset($_GET["action"])) {
 	elseif ($_GET["action"] == "unsubscribed") {
 		echo '<div class="msgBoxPos rounded">You have unsubscribed from the list.</div>';
 	}
+	elseif ($_GET["action"] == "member_added") {
+		echo '<div class="msgBoxPos rounded">The user was added to the list.</div>';
+	}
+	elseif ($_GET["action"] == "empty_add_name") {
+		echo '<div class="msgBoxPos rounded">Please enter a username to add to the list.</div>';
+	}
 }
 ?>
 
@@ -72,17 +78,15 @@ if (count($myLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 
-	<?php /*
 	<dt class="twListDtAdj"><label for="add<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-add-mem'); ?></label></dt>
 	<dd>
-		<form action="#" class="frmListAddMember">
+		<form action="/list_add_member" method="post" class="frmListAddMember">
 			<input type="hidden" name="listSlug" value="<?php echo $lists->slug; ?>" />
 			<input type="hidden" name="lstid" value="<?php echo $lists->id; ?>" />
-			<input type="text" size="12" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
+			<input type="text" size="11" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
 			<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-add-submit'); ?></button>
 		</form>
 	</dd>
-	*/?>
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
 	<dd>

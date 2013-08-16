@@ -346,5 +346,20 @@ $('a[rel=unsubList]').click(function(e) {
 	return true;
 });
 
+// Validate add member to list
+$('.frmListAddMember').submit(function(e) {
+
+	var alm_val = $(this).find(":nth-child(3)").val();
+	
+	if (alm_val=="") {
+		alert("Please enter a username to add to the list.");
+		$(this).find(":nth-child(3)").focus();
+		return false;
+	}
+	else {
+		return true;
+	}
+});
+
 
 

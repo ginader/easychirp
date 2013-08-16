@@ -474,6 +474,43 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Manages the addition of a member to a list - /list_add_member
+	*/
+	public function list_add_member($ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		// Validation
+		if ($_POST["userNameToAdd"]=="") {
+			redirect( base_url() . 'lists?action=empty_add_name');
+		}
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $_POST["userNameToAdd"];
+		$request_param['list_id'] = $_POST["lstid"];
+		//$request_param[''] = $_POST[""];
+		
+		$tweet = $this->twitter_lib->post('lists/members/create', $request_param);
+		if ($ajax) {
+			echo json_encode($tweet);
+		}
+		else {
+			redirect( base_url() . 'lists?action=member_added');
+		}
+	}
+
+	/**
 	* Manages the deletion of a list - /list_delete
 	*/
 	public function list_delete($ajax = FALSE)
