@@ -233,6 +233,46 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Creates or removes a favorite from a tweet - /favoriting
+	*/
+	public function favoriting($tweet_id, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['id'] = $tweet_id;
+		
+		if ($state == "create") {
+			$post_url = "favorites/create";
+			$action = "favorite_created";
+		}
+		else {
+			$post_url = "favorites/destroy";
+			$action = "favorite_destroyed";
+		}
+
+		$fav = $this->twitter_lib->post($post_url, $request_param);
+
+		if ($ajax) {
+			echo json_encode($fav);
+		}
+		else {
+			redirect( base_url() . 'status?id='.$tweet_id.'&action='.$action);
+		}
+	}
+
+	/**
 	* Manages the features page - /features
 	*
 	* @return void
@@ -918,7 +958,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the retweet page - /retweet
+	* Manages the retweet page (for non-JS use case) - /retweet
 	*
 	* @return void
 	*/

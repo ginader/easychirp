@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "favorite_created") {
+		echo '<div class="msgBoxPos rounded">This tweet is now a favorite.</div>';
+	}
+	elseif ($_GET["action"] == "favorite_destroyed") {
+		echo '<div class="msgBoxPos rounded">This tweet is no longer a favorite.</div>';
+	}
+}
+?>
 <h1 class="rounded">View Single Tweet</h1>
 
 <div class="tweetSingle">
