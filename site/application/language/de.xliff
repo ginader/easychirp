@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="de" target-language="de" original="easychirp.local" datatype="html" 
+  <file source-language="en-US" target-language="de" original="easychirp.local" datatype="html" 
 	state="needs-translation" xml:space="preserve">
     <body>
 
@@ -367,7 +367,7 @@
 
       <trans-unit id="home-articles-more" datatype="html">
         <source>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</source>
-        <target>VLesen Sie mehr über Artikel & Rückmeldungen.</target>
+        <target>Lesen Sie mehr über Artikel &amp; Rückmeldungen.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-what-tweeting" datatype="html">
@@ -715,14 +715,14 @@
 
       <trans-unit id="mentions-h1" datatype="html">
         <source>Mentions</source>
-        <target>Mentions</target>
+        <target>Erwähnungen</target>
       </trans-unit>
 
       <!-- MY TWEETS -->
 
       <trans-unit id="mytweets-h1" datatype="html">
         <source>My Tweets</source>
-        <target>My Tweets</target>
+        <target>Meine Tweets</target>
       </trans-unit>
 
       <!-- MY PROFILE -->
@@ -734,12 +734,12 @@
 
       <trans-unit id="profile-edit-link" datatype="html">
         <source>Edit Profile</source>
-        <target>Edit Profile</target>
+        <target>Profil bearbeiten</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-username" datatype="html">
         <source>Username</source>
-        <target>Username</target>
+        <target>Nutzername</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-name" datatype="html">
@@ -749,12 +749,12 @@
 
       <trans-unit id="profile-dt-location" datatype="html">
         <source>Location</source>
-        <target>Location</target>
+        <target>Standort</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-since" datatype="html">
         <source>Member Since</source>
-        <target>Member Since</target>
+        <target>Mitglied seit</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-bio" datatype="html">
@@ -764,7 +764,7 @@
 
       <trans-unit id="profile-dt-website" datatype="html">
         <source>Website</source>
-        <target>Website</target>
+        <target>Webseite</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-tweets" datatype="html">
@@ -774,22 +774,22 @@
 
       <trans-unit id="profile-dt-following" datatype="html">
         <source>Following</source>
-        <target>Following</target>
+        <target>Folge ich</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-followers" datatype="html">
         <source>Followers</source>
-        <target>Followers</target>
+        <target>Anhänger</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-lists" datatype="html">
         <source>Lists</source>
-        <target>Lists</target>
+        <target>Listen</target>
       </trans-unit>
 
       <trans-unit id="profile-dd-my-lists" datatype="html">
         <source>My Lists</source>
-        <target>My Lists</target>
+        <target>Meine Listen</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-api-hits" datatype="html">
@@ -799,27 +799,27 @@
 
       <trans-unit id="profile-dt-bg-image" datatype="html">
         <source>Background image</source>
-        <target>Background image</target>
+        <target>Hintergrund</target>
       </trans-unit>
 
       <trans-unit id="profile-view-image" datatype="html">
         <source>view image</source>
-        <target>view image</target>
+        <target>Bild betrachten</target>
       </trans-unit>
 
       <trans-unit id="profile-no-img" datatype="html">
         <source>No background image is found.</source>
-        <target>No background image is found.</target>
+        <target>Kein Bild gefunden.</target>
       </trans-unit>
 
       <trans-unit id="profile-no-alt" datatype="html">
         <source>(No alternative text is offered from Twitter.)</source>
-        <target>(No alternative text is offered from Twitter.)</target>
+        <target>(Twitter bietet keinen Alternativtext.)</target>
       </trans-unit>
 
       <trans-unit id="profile-h2-latest" datatype="html">
         <source>Latest Tweet</source>
-        <target>Latest Tweet</target>
+        <target>Neueste Tweets</target>
       </trans-unit>
 
       <!-- EDIT PROFILE -->
@@ -831,7 +831,7 @@
 
       <trans-unit id="edit-profile-h1" datatype="html">
         <source>Edit Profile</source>
-        <target>Edit Profile</target>
+        <target>Profil bearbeiten</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-email" datatype="html">
@@ -846,69 +846,69 @@
 
       <trans-unit id="edit-profile-avatar-h2" datatype="html">
         <source>Change Avatar</source>
-        <target>Change Avatar</target>
+        <target>Nutzerbild ändern</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-avatar-p" datatype="html">
         <source>Must be a valid GIF, JPG, or PNG image of less than 700 kilobytes in size.</source>
-        <target>Must be a valid GIF, JPG, or PNG image of less than 700 kilobytes in size.</target>
+        <target>Muss ein gültiges GIF, JPG oder PNG-Bild sein; Größe 700 Kilobytes oder weniger.</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-avatar-path" datatype="html">
         <source>Path of New Avatar Image</source>
-        <target>Path of New Avatar Image</target>
+        <target>Pfad zu neuem Nutzerbild:</target>
       </trans-unit>
 
       <!-- TIPS -->
 
       <trans-unit id="tips-h1" datatype="html">
         <source>Tips</source>
-        <target>Tips</target>
+        <target>Tipps</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-spam" datatype="html">
         <source>Report Spam</source>
-        <target>Report Spam</target>
+        <target>Spam melden</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-p" datatype="html">
         <source>You can report a spammer account to Twitter three ways:</source>
-        <target>You can report a spammer account to Twitter three ways:</target>
+        <target>Sie können einen Spammer auf drei Arten an Twitter melden:</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-li-1" datatype="html">
         <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</source>
-        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</target>
+        <target>Klicken Sie auf den Link &quot;als Spam melden&quot; unter den Nutzeroptionen in einem Tweet.</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-li-2" datatype="html">
         <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</source>
-        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</target>
+        <target>Klicken Sie auf den Link &quot;als Spam melden&quot; auf der Detailseite des Nutzers.</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-li-3" datatype="html">
         <source>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</source>
-        <target>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</target>
+        <target>Senden Sie eine Direktnachricht an den Twitter-Account &quot;spam&quot;, gefolgt von dem Nutzernamen des Nutzers. Verwenden Sie die folgende Syntax: d spam @nutzername. Zum Beispiel: d spam @beispiel ist ein Spammer.</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-search" datatype="html">
         <source>Search</source>
-        <target>Search</target>
+        <target>Suche</target>
       </trans-unit>
 
       <trans-unit id="tips-search-p" datatype="html">
         <source>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</source>
-        <target>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</target>
+        <target>Tipps für die Suche finden Sie auf der Suchen-Seite.</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-table" datatype="html">
         <source>Friends, Favorites, Direct Messages</source>
-        <target>Friends, Favorites, Direct Messages</target>
+        <target>Freunde, Favoriten, Direktnachrichten</target>
       </trans-unit>
 
       <trans-unit id="tips-table-p" datatype="html">
         <source>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</source>
-        <target>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</target>
+        <target>Die folgende Tabelle enthält Tipps, wie Sie Twitter Textbefehle zur Arbeit mit Freunden, Favoriten und Direktnachrichten verwenden.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-th-1" datatype="html">
@@ -918,32 +918,32 @@
 
       <trans-unit id="tips-table-th-2" datatype="html">
         <source>Explanation</source>
-        <target>Explanation</target>
+        <target>Erklärung</target>
       </trans-unit>
 
       <trans-unit id="tips-table-th-3" datatype="html">
         <source>Example</source>
-        <target>Example</target>
+        <target>Beispiel</target>
       </trans-unit>
 
       <trans-unit id="tips-table-at-1" datatype="html">
         <source>@username + message</source>
-        <target>@username + message</target>
+        <target>@nutzername + Nachricht</target>
       </trans-unit>
 
       <trans-unit id="tips-table-at-2" datatype="html">
         <source>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</source>
-        <target>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</target>
+        <target>Schickt einen Tweet an die genannte Person und veranlasst Twitter, diesen in der "Antworten"-Zeitleiste der Person zu speichern. Nur Sie, die genannte Person und andere Nutzer, die Ihnen beiden folgen, werden diesen Tweet in ihrer Zeitleiste sehen.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-at-3" datatype="html">
         <source>@caratina I love that song too, The Cure rules!</source>
-        <target>@caratina I love that song too, The Cure rules!</target>
+        <target>@caratina Ich liebe diesen Song auch, The Cure sind klasse!</target>
       </trans-unit>
 
       <trans-unit id="tips-table-dot-at-1" datatype="html">
         <source>.@username + message</source>
-        <target>.@username + message</target>
+        <target>.@nutzername + Nachricht</target>
       </trans-unit>
 
       <trans-unit id="tips-table-dot-at-2" datatype="html">
