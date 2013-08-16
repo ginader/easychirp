@@ -72,9 +72,9 @@ $config['url_suffix'] = '';
 $config['language']	= 'english';
 $config['site_language'] = 'en-US';
 $config['supported_langs'] = array(
-	'en-GB' => 'British English', 
-	'ar-SA' => 'Saudi Arabian Arabic', 
-	'es' => 'Spanish'
+	'ar' => 'Saudi Arabian Arabic',
+	'es' => 'Spanish',
+	'de' => 'German'
 );
 
 /*
