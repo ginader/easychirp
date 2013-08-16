@@ -3,6 +3,7 @@
 <div class="tweetSingle">
 <?php
 echo $tweets;
+require_once 'fragments/write_tweet.php';
 ?>
 </div>
 
