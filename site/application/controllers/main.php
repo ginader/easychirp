@@ -959,6 +959,9 @@ class Main extends EC_Controller {
 			$tweets = array();
 		}
 
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
+			array( 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+
 		$this->_data['num'] = count($tweets);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 

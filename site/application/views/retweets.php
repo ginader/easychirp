@@ -11,6 +11,8 @@
 
 <?php
 
+echo $write_tweet_form;
+
 if ($type=="by_me") {
 	echo "<h2>".$xliff_reader->get('nav-retweets-by-me')."</h2>";
 }
