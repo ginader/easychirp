@@ -264,7 +264,7 @@ class Main extends EC_Controller {
 
 		$fav = $this->twitter_lib->post($post_url, $request_param);
 
-		if ($ajax) {
+		if ($ajax=="true") {
 			echo json_encode($fav);
 		}
 		else {

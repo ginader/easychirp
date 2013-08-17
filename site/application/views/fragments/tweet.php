@@ -82,10 +82,10 @@ foreach($tweets AS $tweet):
 			<li><?php
 			// If favorited or not
 			if ($tweet->favorited === false) {
-				echo '<a href="/favorite_create/' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorite') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorite') . '</span></a>';
+				echo '<a href="/favorite_create/' . $tweet->id . '/false" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorite') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorite') . '</span></a>';
 			}
 			else {
-				echo '<a href="/favorite_destroy/' . $tweet->id . '" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorited') . '" class="favorited"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorited') . '</span></a>';
+				echo '<a href="/favorite_destroy/' . $tweet->id . '/false" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-favorited') . '" class="favorited"><span class="hide">' . $xliff_reader->get('gbl-tweet-favorited') . '</span></a>';
 			}
 			?></li>
 			<li><a href="/reply/<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
