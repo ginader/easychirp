@@ -1665,7 +1665,7 @@
         <target>tweet options</target>
       </trans-unit>
 
-      <trans-unit id="gbl-tweet-favorite" datatype="html">
+      <trans-unit id="gbl-tweet-make-fav" datatype="html">
         <source>make favorite</source>
         <target>machen Favorit</target>
       </trans-unit>
@@ -1735,7 +1735,7 @@
         <target>Retweet</target>
       </trans-unit>
 
-      <trans-unit id="gbl-tweet-favorited" datatype="html">
+      <trans-unit id="gbl-tweet-remove-fav" datatype="html">
         <source>remove favorite</source>
         <target>favorit lösen</target>
       </trans-unit>
