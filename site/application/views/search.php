@@ -3,6 +3,9 @@ if (isset($_GET["action"])) {
 	if ($_GET["action"] == "deleted") {
 		echo '<div class="msgBoxPos rounded">The search was deleted.</div>';
 	}
+	elseif ($_GET["action"] == "saved") {
+		echo '<div class="msgBoxPos rounded">The search was saved.</div>';
+	}
 }
 ?>
 

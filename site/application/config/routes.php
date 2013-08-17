@@ -74,6 +74,7 @@ $route['retweet'] = "main/retweet"; // For non-JS and keyboard use cases
 $route['retweets'] = "main/retweets"; // For non-JS and keyboard use cases
 $route['retweets/(:any)'] = "main/retweets/$1"; // For non-JS and keyboard use cases
 $route['search'] = "main/search";
+$route['search_save'] = "main/search_save";
 $route['search_delete/(:any)'] = "main/search_delete/$1";
 $route['search_quick'] = "main/search_quick"; // For non-JS and keyboard use cases
 $route['search_results'] = "main/search_results";

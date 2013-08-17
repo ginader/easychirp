@@ -1150,6 +1150,31 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Created a saved search - /search_save
+	 */
+	public function search_save()
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['query'] = $_GET["query"];
+		$data = $this->twitter_lib->post('saved_searches/create', $request_param);
+
+		redirect( base_url() . 'search?action=saved');
+	}
+
+	/**
 	 * Delete a saved search - /search_delete
 	 */
 	public function search_delete($id)
