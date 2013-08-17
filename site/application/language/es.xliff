@@ -31,6 +31,11 @@
         <target>No</target>
       </trans-unit>
 
+      <trans-unit id="gbl-listed-count" datatype="html">
+        <source>Listed count</source>
+        <target>Recuento listado</target>
+      </trans-unit>
+
       <!-- ERROR MESSAGES -->
 
       <trans-unit id="error-over-140" datatype="html">
@@ -759,8 +764,8 @@
       </trans-unit>
 
       <trans-unit id="profile-dt-bio" datatype="html">
-        <source>Bio</source>
-        <target>Biograf&#237;a</target>
+        <source>Description</source>
+        <target>Descripción</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-website" datatype="html">

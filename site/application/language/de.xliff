@@ -13,7 +13,7 @@
 
       <trans-unit id="gbl-select-page" datatype="html">
         <source>Select a page:</source>
-        <target>Select a page:</target>
+        <target>Wählen Sie eine Seite:</target>
       </trans-unit>
 
       <trans-unit id="gbl-from" datatype="html">
@@ -29,6 +29,11 @@
       <trans-unit id="gbl-no" datatype="html">
         <source>No</source>
         <target>Nein</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-listed-count" datatype="html">
+        <source>Listed count</source>
+        <target>gelistet Zählung</target>
       </trans-unit>
 
       <!-- ERROR MESSAGES -->
@@ -758,8 +763,8 @@
       </trans-unit>
 
       <trans-unit id="profile-dt-bio" datatype="html">
-        <source>Bio</source>
-        <target>Bio</target>
+        <source>Description</source>
+        <target>Beschreibung</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-website" datatype="html">

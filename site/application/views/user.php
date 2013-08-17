@@ -89,7 +89,7 @@
 		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
 		<dd><a href="/favorites?id=<?php echo $user->screen_name; ?>"><?php echo $user->favourites_count; ?></a></dd>
 
-		<dt>Listed count</dt>
+		<dt><?php echo $xliff_reader->get('gbl-listed-count'); ?></dt>
 		<dd><?php echo $user->listed_count; ?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
