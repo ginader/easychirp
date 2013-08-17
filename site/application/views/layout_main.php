@@ -43,7 +43,9 @@
 	<?php endif; ?>
 </nav>
 
-<main role="main" id="main" tabindex="-1">
+<main role="main" id="main" tabindex="-1" 
+	data-fav-make="<?php echo $xliff_reader->get('gbl-tweet-make-fav'); ?>" data-fav-remove="<?php echo $xliff_reader->get('gbl-tweet-remove-fav'); ?>"
+	data-fav-alert-added="<?php echo $xliff_reader->get('gbl-tweet-fav-alert-added'); ?>" data-fav-alert-removed="<?php echo $xliff_reader->get('gbl-tweet-fav-alert-removed'); ?>">
 	<div class="content">
 		<?php echo $content; ?>
 	</div>	
