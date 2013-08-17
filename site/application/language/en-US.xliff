@@ -36,7 +36,7 @@
         <target>Listed count</target>
       </trans-unit>
 
-      <!-- ERROR MESSAGES -->
+      <!-- ALERTS/MESSAGES -->
 
       <trans-unit id="error-over-140" datatype="html">
         <source>You must enter less than 140 characters.</source>
@@ -56,6 +56,16 @@
       <trans-unit id="error-tweep-empty" datatype="html">
         <source>Enter a user name.</source>
         <target>Enter a user name.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-fav-alert-added" datatype="html">
+        <source>The favorite has been added.</source>
+        <target>The favorite has been added.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-fav-alert-removed" datatype="html">
+        <source>The favorite has been removed.</source>
+        <target>The favorite has been removed.</target>
       </trans-unit>
 
       <!-- SKIP LINKS -->
