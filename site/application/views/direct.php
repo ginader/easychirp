@@ -1,3 +1,11 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "deleted") {
+		echo '<div class="msgBoxPos rounded">The direct message was deleted.</div>';
+	}
+}
+?>
+
 <h1 class="rounded"><?php echo $xliff_reader->get('dm-h1'); ?></h1>
 
 <?php

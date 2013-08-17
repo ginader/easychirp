@@ -41,6 +41,7 @@
 $route['about'] = "main/about";
 $route['articles'] = "main/articles";
 $route['direct'] = "main/direct";
+$route['direct_delete'] = "main/direct_delete";
 $route['direct_inbox'] = "main/direct_inbox";
 $route['direct_sent'] = "main/direct_sent";
 $route['features'] = "main/features";
