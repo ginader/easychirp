@@ -1661,8 +1661,8 @@
       </trans-unit>
 
       <trans-unit id="gbl-tweet-favorite" datatype="html">
-        <source>favorite</source>
-        <target>إضافة إلى المفضلة</target>
+        <source>make favorite</source>
+        <target>جعل المفضلة</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-reply" datatype="html">
@@ -1731,8 +1731,8 @@
       </trans-unit>
 
       <trans-unit id="gbl-tweet-favorited" datatype="html">
-        <source>favorited</source>
-        <target>تفضيله</target>
+        <source>remove favorite</source>
+        <target>إزالة المفضلة</target>
       </trans-unit>
 
       <!-- USER -->
