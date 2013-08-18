@@ -71,6 +71,7 @@ $route['profile_avatar_action'] = "main/profile_avatar_action";
 $route['quote/(:any)'] = "main/quote/$1";
 $route['reply/(:any)'] = "main/reply/$1";
 $route['reply_all/(:any)'] = "main/reply/$1/all";
+$route['report_spam/(:any)/(:any)'] = "main/report_spam/$1/$2";
 $route['retweet'] = "main/retweet"; // For non-JS and keyboard use cases
 $route['retweets'] = "main/retweets"; // For non-JS and keyboard use cases
 $route['retweets/(:any)'] = "main/retweets/$1"; // For non-JS and keyboard use cases

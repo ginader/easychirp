@@ -1021,6 +1021,37 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Reports a user as a spammer (which also blocks the user) - /report_spam
+	*/
+	public function report_spam($screen_name, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $screen_name;
+
+		$data = $this->twitter_lib->post('users/report_spam', $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'user?id='.$screen_name.'&action=reported');
+		}
+	}
+
+	/**
 	* Manages the retweets page - /retweets
 	*
 	* @return void

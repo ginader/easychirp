@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "reported") {
+		echo '<div class="msgBoxPos rounded">The user has been reported and blocked.</div>';
+	}
+}
+
+//debug_object($friendship);
+?>
+
 <h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : <?php echo $user->name; ?></h1>
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-contact'); ?></h2>
@@ -28,9 +38,18 @@
 	}
 	?></p>
 
-	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a> 
-	&nbsp; 
-	<span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a></p>
+	<p>
+	<?php $isSpam = $friendship->relationship->source->marked_spam;
+	if ($isSpam == 1) {
+		echo 'Reported as spammer.';
+	}
+	else {
+		echo '<span aria-hidden="true" class="icon-alert"></span> <a href="/report_spam/'.$user->screen_name.'/false">'.$xliff_reader->get('user-spammer').'</a>'; 
+	}
+	?>
+		&nbsp; 
+		<span aria-hidden="true" class="icon-blocked"></span> <a href="/block/<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('user-block'); ?></a>
+	</p>
 	
 	<?php
 		if ($user->verified === true) { ?>
