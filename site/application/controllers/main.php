@@ -137,6 +137,46 @@ class Main extends EC_Controller {
 		$this->layout->view('articles', $this->_data);
 	}
 
+	/**
+	* Manage block & unblock - /blocking
+	*/
+	public function blocking($screen_name, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $screen_name;
+		
+		if ($state == "create") {
+			$post_url = "blocks/create";
+			$action = "block_created";
+		}
+		else {
+			$post_url = "blocks/destroy";
+			$action = "block_destroyed";
+		}
+
+		$fav = $this->twitter_lib->post($post_url, $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($fav);
+		}
+		else {
+			redirect( base_url() . 'user?id='.$screen_name.'&action='.$action);
+		}
+	}
+
 	public function direct()
 	{
 		$this->redirect_if_not_logged_in();

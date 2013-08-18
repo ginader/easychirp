@@ -3,6 +3,12 @@ if (isset($_GET["action"])) {
 	if ($_GET["action"] == "reported") {
 		echo '<div class="msgBoxPos rounded">The user has been reported and blocked.</div>';
 	}
+	if ($_GET["action"] == "block_created") {
+		echo '<div class="msgBoxPos rounded">The user has been blocked.</div>';
+	}
+	if ($_GET["action"] == "block_destroyed") {
+		echo '<div class="msgBoxPos rounded">The user has been unblocked.</div>';
+	}
 }
 
 //debug_object($friendship);

@@ -40,6 +40,8 @@
 
 $route['about'] = "main/about";
 $route['articles'] = "main/articles";
+$route['block_create/(:any)/(:any)'] = "main/blocking/$1/create/$2";
+$route['block_destroy/(:any)/(:any)'] = "main/blocking/$1/destroy/$2";
 $route['direct'] = "main/direct";
 $route['direct_delete'] = "main/direct_delete";
 $route['direct_inbox'] = "main/direct_inbox";
