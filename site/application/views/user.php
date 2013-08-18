@@ -39,16 +39,28 @@ if (isset($_GET["action"])) {
 	?></p>
 
 	<p>
-	<?php $isSpam = $friendship->relationship->source->marked_spam;
+	<?php 
+	
+	// Spammer?
+	$isSpam = $friendship->relationship->source->marked_spam;
 	if ($isSpam == 1) {
-		echo 'Reported as spammer.';
+		echo '<span aria-hidden="true" class="icon-alert"></span> Reported as spammer.';
 	}
 	else {
 		echo '<span aria-hidden="true" class="icon-alert"></span> <a href="/report_spam/'.$user->screen_name.'/false">'.$xliff_reader->get('user-spammer').'</a>'; 
 	}
+
+	echo ' &nbsp; ';
+
+	// Blocked?
+	$isBlock = $friendship->relationship->source->blocking;
+	if ($isBlock == 1) {
+		echo '<span aria-hidden="true" class="icon-blocked"></span> Blocked <a href="/block_destroy/'.$user->screen_name.'/false">Unblock</a>'; 
+	}
+	else {
+		echo '<span aria-hidden="true" class="icon-blocked"></span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a>'; 
+	}
 	?>
-		&nbsp; 
-		<span aria-hidden="true" class="icon-blocked"></span> <a href="/block/<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('user-block'); ?></a>
 	</p>
 	
 	<?php
