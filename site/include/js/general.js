@@ -354,6 +354,14 @@ $('a[href*="list_unsubscribe"]').click(function(e) {
 	return true;
 });
 
+// Report spammer
+$('a[href*="report_spam"]').click(function(e) {
+	if (!confirm("Are you sure you want to report this user as a spammer?")) {
+		 return false;
+	}
+	return true;
+});
+
 // Validate add member to list
 $('.frmListAddMember').submit(function(e) {
 
