@@ -322,16 +322,24 @@ $('a[rel=twmess]').click(function(e) {
 
 	// Insert @username in write tweet textarea
 	u = {}
-	u.url = $(this).attr('href'); //alert(url3);
-	u.arr = u.url.split("twmess="); //alert(arUrl3);
-	u.user = u.arr[1]; //alert(usrMix3);
-	u.mess = "@" + u.user + " "; //alert(twMessTxt);
+	u.url = $(this).attr('href');
+	u.arr = u.url.split("twmess=");
+	u.user = u.arr[1];
+	u.mess = "@" + u.user + " ";
 	$("#txtEnterTweet").html(u.mess);
 
 });
 
+// Delete DM
+$('a[href*="direct_delete"]').click(function(e) {
+	if (!confirm("Are you sure you want to delete this item? This cannot be undone.")) {
+		 return false;
+	}
+	return true;
+});
+
 // Delete list
-$('a[rel=deleteList]').click(function(e) {
+$('a[href*="list_delete"]').click(function(e) {
 	if (!confirm("Are you sure you want to delete this item? This cannot be undone.")) {
 		 return false;
 	}
@@ -339,7 +347,7 @@ $('a[rel=deleteList]').click(function(e) {
 });
 
 // Unsubscribe list
-$('a[rel=unsubList]').click(function(e) {
+$('a[href*="list_unsubscribe"]').click(function(e) {
 	if (!confirm("Are you sure you want to unsubscribe. This cannot be undone.")) {
 		 return false;
 	}

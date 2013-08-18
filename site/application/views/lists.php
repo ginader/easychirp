@@ -91,7 +91,7 @@ if (count($myLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
 	<dd>
 		<a href="list_edit?id=<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-edit'); ?></a> | 
-		<a rel="deleteList" class="delete-link" href="list_delete?id=<?php echo $lists->id; ?>"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a>
+		<a class="delete-link" href="list_delete?id=<?php echo $lists->id; ?>"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a>
 	</dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
@@ -142,7 +142,7 @@ if (count($subLists->lists) != 0) {
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>	
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
-	<dd><a rel="unsubList" href="/list_unsubscribe?id=<?php echo $lists->id; ?>" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
+	<dd><a href="/list_unsubscribe?id=<?php echo $lists->id; ?>" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
