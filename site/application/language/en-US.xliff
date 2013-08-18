@@ -68,6 +68,11 @@
         <target>The favorite has been removed.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-sure-delete" datatype="html">
+        <source>Are you sure you want to delete this item? The action cannot be undone.</source>
+        <target>Are you sure you want to delete this item? The action cannot be undone.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">

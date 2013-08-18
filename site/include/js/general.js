@@ -1,3 +1,6 @@
+/* GLOBAL VARS ********************************/
+var modalOpen = false;
+var txtAlertSureDelete = $("#main").attr("data-sure-delete"); //"Are you sure you want to delete...";
 
 /* Show/hide option buttons ***********************************/
 $(".btnOptions > h3 > a").click(function(e) {
@@ -194,7 +197,6 @@ $("#frmUrlShort").submit(function(ev) {
 });
 
 /* Modal *****************************************/
-var modalOpen = false;
 
 // Function to resize and reposition the modal window
 function resizeModal(id) {
@@ -332,7 +334,7 @@ $('a[rel=twmess]').click(function(e) {
 
 // Delete DM
 $('a[href*="direct_delete"]').click(function(e) {
-	if (!confirm("Are you sure you want to delete this item? This cannot be undone.")) {
+	if (!confirm(txtAlertSureDelete)) {
 		 return false;
 	}
 	return true;
@@ -340,7 +342,7 @@ $('a[href*="direct_delete"]').click(function(e) {
 
 // Delete list
 $('a[href*="list_delete"]').click(function(e) {
-	if (!confirm("Are you sure you want to delete this item? This cannot be undone.")) {
+	if (!confirm(txtAlertSureDelete)) {
 		 return false;
 	}
 	return true;
@@ -348,7 +350,7 @@ $('a[href*="list_delete"]').click(function(e) {
 
 // Unsubscribe list
 $('a[href*="list_unsubscribe"]').click(function(e) {
-	if (!confirm("Are you sure you want to unsubscribe. This cannot be undone.")) {
+	if (!confirm(txtAlertSureDelete)) {
 		 return false;
 	}
 	return true;
