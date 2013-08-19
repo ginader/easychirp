@@ -73,6 +73,16 @@
         <target>Are you sure you want to delete this item? The action cannot be undone.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-sure-spam" datatype="html">
+        <source>Are you sure you want to report this user as a spammer?</source>
+        <target>Are you sure you want to report this user as a spammer?</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-message-spam-reported" datatype="html">
+        <source>The user has been reported as a spammer and blocked.</source>
+        <target>The user has been reported as a spammer and blocked.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -1790,6 +1800,11 @@
       <trans-unit id="user-spammer" datatype="html">
         <source>Report Spammer</source>
         <target>Report Spammer</target>
+      </trans-unit>
+
+      <trans-unit id="user-reported-as-spammer" datatype="html">
+        <source>Reported as spammer</source>
+        <target>Reported as spammer</target>
       </trans-unit>
 
       <trans-unit id="user-block" datatype="html">

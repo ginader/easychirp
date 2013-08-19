@@ -73,6 +73,16 @@
         <target>Sind Sie sicher, dass Sie diesen Artikel wirklich löschen? Die Aktion kann nicht rückgängig gemacht werden.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-sure-spam" datatype="html">
+        <source>Are you sure you want to report this user as a spammer?</source>
+        <target>Sind Sie sicher, dass Sie diesen Benutzer als Spammer melden?</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-message-spam-reported" datatype="html">
+        <source>The user has been reported as a spammer and blocked.</source>
+        <target>Der Benutzer hat als Spammer gemeldet und blockiert.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -1790,6 +1800,11 @@
       <trans-unit id="user-spammer" datatype="html">
         <source>Report Spammer</source>
         <target>Report Spammer</target>
+      </trans-unit>
+
+      <trans-unit id="user-reported-as-spammer" datatype="html">
+        <source>Reported as spammer</source>
+        <target>Ausgewiesen als Spammer</target>
       </trans-unit>
 
       <trans-unit id="user-block" datatype="html">

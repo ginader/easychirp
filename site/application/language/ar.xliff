@@ -73,6 +73,16 @@
         <target>هل أنت متأكد أنك تريد حذف هذا البند؟ لا يمكن التراجع عن هذا الإجراء.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-sure-spam" datatype="html">
+        <source>Are you sure you want to report this user as a spammer?</source>
+        <target>هل أنت متأكد أنك تريد الإبلاغ عن هذا المستخدم بمثابة مرسلي البريد المزعج؟</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-message-spam-reported" datatype="html">
+        <source>The user has been reported as a spammer and blocked.</source>
+        <target>تم إبلاغ الإدارة عن المستخدم كما سبامر والمحظورة.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -1790,6 +1800,11 @@
       <trans-unit id="user-spammer" datatype="html">
         <source>Report Spammer</source>
         <target>Report Spammer</target>
+      </trans-unit>
+
+      <trans-unit id="user-reported-as-spammer" datatype="html">
+        <source>Reported as spammer</source>
+        <target>الإبلاغ عن مرسلي البريد المزعج</target>
       </trans-unit>
 
       <trans-unit id="user-block" datatype="html">
