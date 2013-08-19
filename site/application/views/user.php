@@ -4,10 +4,10 @@ if (isset($_GET["action"])) {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-message-spam-reported').'</div>';
 	}
 	if ($_GET["action"] == "block_created") {
-		echo '<div class="msgBoxPos rounded">The user has been blocked.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-block').'</div>';
 	}
 	if ($_GET["action"] == "block_destroyed") {
-		echo '<div class="msgBoxPos rounded">The user has been unblocked.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unblock').'</div>';
 	}
 }
 
@@ -61,7 +61,7 @@ if (isset($_GET["action"])) {
 	// Blocked?
 	$isBlock = $friendship->relationship->source->blocking;
 	if ($isBlock == 1) {
-		echo '<span aria-hidden="true" class="icon-blocked"></span> Blocked <a href="/block_destroy/'.$user->screen_name.'/false">Unblock</a>'; 
+		echo '<span aria-hidden="true" class="icon-blocked"></span> Blocked! <a href="/block_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('user-unblock').'</a>'; 
 	}
 	else {
 		echo '<span aria-hidden="true" class="icon-blocked"></span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a>'; 
