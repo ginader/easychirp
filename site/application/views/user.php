@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "reported") {
-		echo '<div class="msgBoxPos rounded">The user has been reported and blocked.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-message-spam-reported').'</div>';
 	}
 	if ($_GET["action"] == "block_created") {
 		echo '<div class="msgBoxPos rounded">The user has been blocked.</div>';
@@ -50,7 +50,7 @@ if (isset($_GET["action"])) {
 	// Spammer?
 	$isSpam = $friendship->relationship->source->marked_spam;
 	if ($isSpam == 1) {
-		echo '<span aria-hidden="true" class="icon-alert"></span> Reported as spammer.';
+		echo '<span aria-hidden="true" class="icon-alert"></span> ' . $xliff_reader->get('user-reported-as-spammer') . '.';
 	}
 	else {
 		echo '<span aria-hidden="true" class="icon-alert"></span> <a href="/report_spam/'.$user->screen_name.'/false">'.$xliff_reader->get('user-spammer').'</a>'; 

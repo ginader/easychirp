@@ -358,7 +358,8 @@ $('a[href*="list_unsubscribe"]').click(function(e) {
 
 // Report spammer
 $('a[href*="report_spam"]').click(function(e) {
-	if (!confirm("Are you sure you want to report this user as a spammer?")) {
+	var txtAlertSureSpam = $("#main").attr("data-sure-spam"); //"Are you sure you want to report...";
+	if (!confirm(txtAlertSureSpam)) {
 		 return false;
 	}
 	return true;
