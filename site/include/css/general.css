@@ -890,6 +890,9 @@ a.btnOptionsUser,
 .favorited {
 	background-color: #ff9;
 }
+#span-user-blocked {
+	background-color: #ff9;	
+}
 
 /* Theme  **************************************************/
 

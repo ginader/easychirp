@@ -61,10 +61,10 @@ if (isset($_GET["action"])) {
 	// Blocked?
 	$isBlock = $friendship->relationship->source->blocking;
 	if ($isBlock == 1) {
-		echo '<span aria-hidden="true" class="icon-blocked"></span> Blocked! <a href="/block_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('user-unblock').'</a>'; 
+		echo '<span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked">Blocked</span> <a href="/block_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('user-unblock').'</a>'; 
 	}
 	else {
-		echo '<span aria-hidden="true" class="icon-blocked"></span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a>'; 
+		echo '<span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked" style="display:none;">Blocked</span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a>'; 
 	}
 	?>
 	</p>
