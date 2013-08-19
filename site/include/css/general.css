@@ -218,6 +218,11 @@ input[type=text], textarea {
 	padding: .25rem;
 	margin: .25rem 0;
 }
+textarea:focus,
+input:focus {
+	border-color :#fc6;
+	outline: none;
+}
 
 /* Utilities ************************************************/
 
@@ -542,9 +547,6 @@ div.msgBoxNeg {
 	width: 80%;
 	font-size: 1.2rem;
 	line-height: 1.6rem;
-}
-#enterTweet textarea:focus {
-	border-color :#fc6;
 }
 #enterTweet h3 {
     font-size: 1rem;
@@ -887,6 +889,9 @@ a.btnOptionsUser,
 }
 .favorited {
 	background-color: #ff9;
+}
+#span-user-blocked {
+	background-color: #ff9;	
 }
 
 /* Theme  **************************************************/

@@ -56,7 +56,7 @@
 		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
 		<dd><a href="/favorites"><?php echo $profile->favourites_count; ?></a></dd>
 
-		<dt>Listed count</dt>
+		<dt><?php echo $xliff_reader->get('gbl-listed-count'); ?></dt>
 		<dd><?php echo $profile->listed_count; ?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>

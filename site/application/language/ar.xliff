@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="ar" target-language="ar" original="easychirp.local" datatype="html" 
+  <file source-language="en-US" target-language="ar" original="easychirp.local" datatype="html" 
 	state="needs-translation" xml:space="preserve">
     <body>
 
@@ -13,12 +13,12 @@
 
       <trans-unit id="gbl-select-page" datatype="html">
         <source>Select a page:</source>
-        <target>Select a page:</target>
+        <target>اختر الصفحة</target>
       </trans-unit>
 
       <trans-unit id="gbl-from" datatype="html">
         <source>from</source>
-        <target>from</target>
+        <target>من</target>
       </trans-unit>
 
       <trans-unit id="gbl-yes" datatype="html">
@@ -31,7 +31,12 @@
         <target>لا</target>
       </trans-unit>
 
-      <!-- ERROR MESSAGES -->
+      <trans-unit id="gbl-listed-count" datatype="html">
+        <source>Listed count</source>
+        <target>العد المدرجة</target>
+      </trans-unit>
+
+      <!-- ALERTS/MESSAGES -->
 
       <trans-unit id="error-over-140" datatype="html">
         <source>You must enter less than 140 characters.</source>
@@ -51,6 +56,41 @@
       <trans-unit id="error-tweep-empty" datatype="html">
         <source>Enter a user name.</source>
         <target>Enter a user name.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-fav-alert-added" datatype="html">
+        <source>The favorite has been added.</source>
+        <target>تمت إضافة المفضلة.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-fav-alert-removed" datatype="html">
+        <source>The favorite has been removed.</source>
+        <target>تمت إزالة المفضلة.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-sure-delete" datatype="html">
+        <source>Are you sure you want to delete this item? The action cannot be undone.</source>
+        <target>هل أنت متأكد أنك تريد حذف هذا البند؟ لا يمكن التراجع عن هذا الإجراء.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-sure-spam" datatype="html">
+        <source>Are you sure you want to report this user as a spammer?</source>
+        <target>هل أنت متأكد أنك تريد الإبلاغ عن هذا المستخدم بمثابة مرسلي البريد المزعج؟</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-message-spam-reported" datatype="html">
+        <source>The user has been reported as a spammer and blocked.</source>
+        <target>تم إبلاغ الإدارة عن المستخدم كما سبامر والمحظورة.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-block" datatype="html">
+        <source>The user has been blocked.</source>
+        <target>تم حظر المستخدم.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-unblock" datatype="html">
+        <source>The user has been unblocked.</source>
+        <target>تم إلغاء حظر المستخدم.</target>
       </trans-unit>
 
       <!-- SKIP LINKS -->
@@ -758,8 +798,8 @@
       </trans-unit>
 
       <trans-unit id="profile-dt-bio" datatype="html">
-        <source>Bio</source>
-        <target>السيرة الذاتية</target>
+        <source>Description</source>
+        <target>الوصف</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-website" datatype="html">
@@ -1660,9 +1700,9 @@
         <target>tweet options</target>
       </trans-unit>
 
-      <trans-unit id="gbl-tweet-favorite" datatype="html">
-        <source>favorite</source>
-        <target>إضافة إلى المفضلة</target>
+      <trans-unit id="gbl-tweet-make-fav" datatype="html">
+        <source>make favorite</source>
+        <target>جعل المفضلة</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-reply" datatype="html">
@@ -1730,9 +1770,9 @@
         <target>Retweet</target>
       </trans-unit>
 
-      <trans-unit id="gbl-tweet-favorited" datatype="html">
-        <source>favorited</source>
-        <target>تفضيله</target>
+      <trans-unit id="gbl-tweet-remove-fav" datatype="html">
+        <source>remove favorite</source>
+        <target>إزالة المفضلة</target>
       </trans-unit>
 
       <!-- USER -->
@@ -1772,9 +1812,19 @@
         <target>Report Spammer</target>
       </trans-unit>
 
+      <trans-unit id="user-reported-as-spammer" datatype="html">
+        <source>Reported as spammer</source>
+        <target>الإبلاغ عن مرسلي البريد المزعج</target>
+      </trans-unit>
+
       <trans-unit id="user-block" datatype="html">
         <source>Block User</source>
-        <target>Block User</target>
+        <target>حظر المستخدم</target>
+      </trans-unit>
+
+      <trans-unit id="user-unblock" datatype="html">
+        <source>Unblock User</source>
+        <target>لا تمنع المستخدم</target>
       </trans-unit>
 
       <trans-unit id="user-verified" datatype="html">

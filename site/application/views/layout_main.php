@@ -43,7 +43,13 @@
 	<?php endif; ?>
 </nav>
 
-<main role="main" id="main" tabindex="-1">
+<main role="main" id="main" tabindex="-1" 
+	data-fav-make="<?php echo $xliff_reader->get('gbl-tweet-make-fav'); ?>" data-fav-remove="<?php echo $xliff_reader->get('gbl-tweet-remove-fav'); ?>"
+	data-fav-alert-added="<?php echo $xliff_reader->get('gbl-tweet-fav-alert-added'); ?>" data-fav-alert-removed="<?php echo $xliff_reader->get('gbl-tweet-fav-alert-removed'); ?>"
+	data-sure-delete="<?php echo $xliff_reader->get('gbl-sure-delete'); ?>" data-sure-spam="<?php echo $xliff_reader->get('gbl-sure-spam'); ?>"
+	data-block="<?php echo $xliff_reader->get('user-block'); ?>" data-unblock="<?php echo $xliff_reader->get('user-unblock'); ?>"
+	data-msg-block="<?php echo $xliff_reader->get('gbl-msg-block'); ?>" data-msg-unblock="<?php echo $xliff_reader->get('gbl-msg-unblock'); ?>"
+>
 	<div class="content">
 		<?php echo $content; ?>
 	</div>	
@@ -72,6 +78,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="/include/js/general.js"></script>
+<script src="/include/js/ajax.js"></script>
 <script>
 (function(){
 	initCharacterCount();

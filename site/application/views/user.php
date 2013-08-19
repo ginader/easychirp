@@ -1,3 +1,19 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "reported") {
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-message-spam-reported').'</div>';
+	}
+	if ($_GET["action"] == "block_created") {
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-block').'</div>';
+	}
+	if ($_GET["action"] == "block_destroyed") {
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unblock').'</div>';
+	}
+}
+
+//debug_object($friendship);
+?>
+
 <h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : <?php echo $user->name; ?></h1>
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-contact'); ?></h2>
@@ -28,9 +44,30 @@
 	}
 	?></p>
 
-	<p><span aria-hidden="true" class="icon-alert"></span> <a href="#"><?php echo $xliff_reader->get('user-spammer'); ?></a> 
-	&nbsp; 
-	<span aria-hidden="true" class="icon-blocked"></span> <a href="#"><?php echo $xliff_reader->get('user-block'); ?></a></p>
+	<p>
+	<?php 
+	
+	// Spammer?
+	$isSpam = $friendship->relationship->source->marked_spam;
+	if ($isSpam == 1) {
+		echo '<span aria-hidden="true" class="icon-alert"></span> ' . $xliff_reader->get('user-reported-as-spammer') . '.';
+	}
+	else {
+		echo '<span aria-hidden="true" class="icon-alert"></span> <a href="/report_spam/'.$user->screen_name.'/false">'.$xliff_reader->get('user-spammer').'</a>'; 
+	}
+
+	echo ' &nbsp; ';
+
+	// Blocked?
+	$isBlock = $friendship->relationship->source->blocking;
+	if ($isBlock == 1) {
+		echo '<span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked">Blocked</span> <a href="/block_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('user-unblock').'</a>'; 
+	}
+	else {
+		echo '<span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked" style="display:none;">Blocked</span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a>'; 
+	}
+	?>
+	</p>
 	
 	<?php
 		if ($user->verified === true) { ?>
@@ -89,7 +126,7 @@
 		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
 		<dd><a href="/favorites?id=<?php echo $user->screen_name; ?>"><?php echo $user->favourites_count; ?></a></dd>
 
-		<dt>Listed count</dt>
+		<dt><?php echo $xliff_reader->get('gbl-listed-count'); ?></dt>
 		<dd><?php echo $user->listed_count; ?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>

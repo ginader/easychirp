@@ -137,6 +137,46 @@ class Main extends EC_Controller {
 		$this->layout->view('articles', $this->_data);
 	}
 
+	/**
+	* Manage block & unblock - /blocking
+	*/
+	public function blocking($screen_name, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $screen_name;
+		
+		if ($state == "create") {
+			$post_url = "blocks/create";
+			$action = "block_created";
+		}
+		else {
+			$post_url = "blocks/destroy";
+			$action = "block_destroyed";
+		}
+
+		$fav = $this->twitter_lib->post($post_url, $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($fav);
+		}
+		else {
+			redirect( base_url() . 'user?id='.$screen_name.'&action='.$action);
+		}
+	}
+
 	public function direct()
 	{
 		$this->redirect_if_not_logged_in();
@@ -146,6 +186,34 @@ class Main extends EC_Controller {
 		$this->layout->set_title( $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Send a direct message.');
 		$this->layout->view('direct', $this->_data);
+	}
+
+	public function direct_delete($ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();	
+		$request_param['id'] = $_GET["id"];
+		$request_param['include_entities'] = "false";
+		
+		$tweet = $this->twitter_lib->post('direct_messages/destroy', $request_param);
+		if ($ajax) {
+			echo json_encode($tweet);
+		}
+		else {
+			redirect( base_url() . 'direct?action=deleted');
+		}
 	}
 
 	public function direct_inbox()
@@ -230,6 +298,46 @@ class Main extends EC_Controller {
 		$this->layout->set_title( $this->xliff_reader->get('favorites-h1') );
 		$this->layout->set_description('Tweets that user marked as a favorite.');
 		$this->layout->view('favorites', $this->_data);
+	}
+
+	/**
+	* Creates or removes a favorite from a tweet - /favoriting
+	*/
+	public function favoriting($tweet_id, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['id'] = $tweet_id;
+		
+		if ($state == "create") {
+			$post_url = "favorites/create";
+			$action = "favorite_created";
+		}
+		else {
+			$post_url = "favorites/destroy";
+			$action = "favorite_destroyed";
+		}
+
+		$fav = $this->twitter_lib->post($post_url, $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($fav);
+		}
+		else {
+			redirect( base_url() . 'status?id='.$tweet_id.'&action='.$action);
+		}
 	}
 
 	/**
@@ -470,6 +578,43 @@ class Main extends EC_Controller {
 		}
 		else {
 			redirect( base_url() . 'lists?action=created');
+		}
+	}
+
+	/**
+	* Manages the addition of a member to a list - /list_add_member
+	*/
+	public function list_add_member($ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		// Validation
+		if ($_POST["userNameToAdd"]=="") {
+			redirect( base_url() . 'lists?action=empty_add_name');
+		}
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $_POST["userNameToAdd"];
+		$request_param['list_id'] = $_POST["lstid"];
+		//$request_param[''] = $_POST[""];
+		
+		$tweet = $this->twitter_lib->post('lists/members/create', $request_param);
+		if ($ajax) {
+			echo json_encode($tweet);
+		}
+		else {
+			redirect( base_url() . 'lists?action=member_added');
 		}
 	}
 
@@ -881,7 +1026,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the retweet page - /retweet
+	* Manages the retweet page (for non-JS use case) - /retweet
 	*
 	* @return void
 	*/
@@ -913,6 +1058,37 @@ class Main extends EC_Controller {
 		$this->layout->set_title( $this->xliff_reader->get('retweet-h1') );
 		$this->layout->set_description('Retweet a tweet.');
 		$this->layout->view('retweet', $this->_data);
+	}
+
+	/**
+	* Reports a user as a spammer (which also blocks the user) - /report_spam
+	*/
+	public function report_spam($screen_name, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $screen_name;
+
+		$data = $this->twitter_lib->post('users/report_spam', $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'user?id='.$screen_name.'&action=reported');
+		}
 	}
 
 	/**
@@ -958,6 +1134,9 @@ class Main extends EC_Controller {
 		{
 			$tweets = array();
 		}
+
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
+			array( 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->_data['num'] = count($tweets);
 
@@ -1067,6 +1246,53 @@ class Main extends EC_Controller {
 		$this->layout->set_title( $this->xliff_reader->get('search-h1') );
 		$this->layout->set_description('Search tweets, saved searches, and search users.');
 		$this->layout->view('search', $this->_data);
+	}
+
+	/**
+	 * Created a saved search - /search_save
+	 */
+	public function search_save()
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['query'] = $_GET["query"];
+		$data = $this->twitter_lib->post('saved_searches/create', $request_param);
+
+		redirect( base_url() . 'search?action=saved');
+	}
+
+	/**
+	 * Delete a saved search - /search_delete
+	 */
+	public function search_delete($id)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$del = $this->twitter_lib->post('saved_searches/destroy/'.$id);
+		redirect( base_url() . 'search?action=deleted');
 	}
 
 	/**

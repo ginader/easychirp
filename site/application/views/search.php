@@ -1,3 +1,14 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "deleted") {
+		echo '<div class="msgBoxPos rounded">The search was deleted.</div>';
+	}
+	elseif ($_GET["action"] == "saved") {
+		echo '<div class="msgBoxPos rounded">The search was saved.</div>';
+	}
+}
+?>
+
 <h1 class="rounded"><?php echo $xliff_reader->get('search-h1'); ?></h1>
 
 <div class="p-row-r">
@@ -66,7 +77,7 @@ if (count($saved_searches) == 0) {
 else {
 	echo '<ul>';
 	foreach($saved_searches AS $saved):
-		echo '<li><a href="/search_results?saved=true&amp;query=' . urlencode($saved->query) . '">' . $saved->name . '</a> <a href="#?id=' . $saved->id . '" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> ' . $xliff_reader->get('global-delete') . '</a></li>';
+		echo '<li><a href="/search_results?saved=true&amp;query=' . urlencode($saved->query) . '">' . $saved->name . '</a> <a href="/search_delete/' . $saved->id . '" class="delete-link delete-search"><span aria-hidden="true" class="icon-close1"></span> ' . $xliff_reader->get('global-delete') . '</a></li>';
 	endforeach;
 	echo '</ul>';
 }

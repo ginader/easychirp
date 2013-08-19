@@ -12,6 +12,12 @@ if (isset($_GET["action"])) {
 	elseif ($_GET["action"] == "unsubscribed") {
 		echo '<div class="msgBoxPos rounded">You have unsubscribed from the list.</div>';
 	}
+	elseif ($_GET["action"] == "member_added") {
+		echo '<div class="msgBoxPos rounded">The user was added to the list.</div>';
+	}
+	elseif ($_GET["action"] == "empty_add_name") {
+		echo '<div class="msgBoxPos rounded">Please enter a username to add to the list.</div>';
+	}
 }
 ?>
 
@@ -72,22 +78,20 @@ if (count($myLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 
-	<?php /*
 	<dt class="twListDtAdj"><label for="add<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-add-mem'); ?></label></dt>
 	<dd>
-		<form action="#" class="frmListAddMember">
+		<form action="/list_add_member" method="post" class="frmListAddMember">
 			<input type="hidden" name="listSlug" value="<?php echo $lists->slug; ?>" />
 			<input type="hidden" name="lstid" value="<?php echo $lists->id; ?>" />
-			<input type="text" size="12" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
+			<input type="text" size="11" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
 			<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-add-submit'); ?></button>
 		</form>
 	</dd>
-	*/?>
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
 	<dd>
 		<a href="list_edit?id=<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-edit'); ?></a> | 
-		<a rel="deleteList" class="delete-link" href="list_delete?id=<?php echo $lists->id; ?>"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a>
+		<a class="delete-link" href="list_delete?id=<?php echo $lists->id; ?>"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('global-delete'); ?></a>
 	</dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
@@ -138,7 +142,7 @@ if (count($subLists->lists) != 0) {
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>	
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
-	<dd><a rel="unsubList" href="/list_unsubscribe?id=<?php echo $lists->id; ?>" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
+	<dd><a href="/list_unsubscribe?id=<?php echo $lists->id; ?>" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>

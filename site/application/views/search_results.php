@@ -8,7 +8,7 @@
 		echo '<li>This search is saved.</a>';
 	}
 	else {
-		echo '<li><a href="save_search?query='.$meta->query.'">'.$xliff_reader->get('search-results-save-this').'</a>';
+		echo '<li><a href="/search_save?query='.$meta->query.'">'.$xliff_reader->get('search-results-save-this').'</a>';
 	}
 ?>
 </ul>

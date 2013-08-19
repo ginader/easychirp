@@ -1,3 +1,6 @@
+/* GLOBAL VARS ********************************/
+var modalOpen = false;
+var txtAlertSureDelete = $("#main").attr("data-sure-delete"); //"Are you sure you want to delete...";
 
 /* Show/hide option buttons ***********************************/
 $(".btnOptions > h3 > a").click(function(e) {
@@ -194,7 +197,6 @@ $("#frmUrlShort").submit(function(ev) {
 });
 
 /* Modal *****************************************/
-var modalOpen = false;
 
 // Function to resize and reposition the modal window
 function resizeModal(id) {
@@ -322,28 +324,60 @@ $('a[rel=twmess]').click(function(e) {
 
 	// Insert @username in write tweet textarea
 	u = {}
-	u.url = $(this).attr('href'); //alert(url3);
-	u.arr = u.url.split("twmess="); //alert(arUrl3);
-	u.user = u.arr[1]; //alert(usrMix3);
-	u.mess = "@" + u.user + " "; //alert(twMessTxt);
+	u.url = $(this).attr('href');
+	u.arr = u.url.split("twmess=");
+	u.user = u.arr[1];
+	u.mess = "@" + u.user + " ";
 	$("#txtEnterTweet").html(u.mess);
 
 });
 
+// Delete DM
+$('a[href*="direct_delete"]').click(function(e) {
+	if (!confirm(txtAlertSureDelete)) {
+		 return false;
+	}
+	return true;
+});
+
 // Delete list
-$('a[rel=deleteList]').click(function(e) {
-	if (!confirm("Are you sure you want to delete this item? This cannot be undone.")) {
+$('a[href*="list_delete"]').click(function(e) {
+	if (!confirm(txtAlertSureDelete)) {
 		 return false;
 	}
 	return true;
 });
 
 // Unsubscribe list
-$('a[rel=unsubList]').click(function(e) {
-	if (!confirm("Are you sure you want to unsubscribe. This cannot be undone.")) {
+$('a[href*="list_unsubscribe"]').click(function(e) {
+	if (!confirm(txtAlertSureDelete)) {
 		 return false;
 	}
 	return true;
+});
+
+// Report spammer
+$('a[href*="report_spam"]').click(function(e) {
+	var txtAlertSureSpam = $("#main").attr("data-sure-spam"); //"Are you sure you want to report...";
+	if (!confirm(txtAlertSureSpam)) {
+		 return false;
+	}
+	return true;
+});
+
+// Validate add member to list
+$('.frmListAddMember').submit(function(e) {
+
+	var alm_val = $(this).find(":nth-child(3)").val();
+	
+	if (alm_val=="") {
+		alert("Please enter a username to add to the list.");
+		$(this).find(":nth-child(3)").focus();
+		return false;
+	}
+	else {
+		return true;
+	}
 });
 
 
