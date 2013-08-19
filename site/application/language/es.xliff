@@ -83,6 +83,16 @@
         <target>El usuario ha sido reportado como un spammer y bloqueadas.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-msg-block" datatype="html">
+        <source>The user has been blocked.</source>
+        <target>El usuario ha sido bloqueado.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-unblock" datatype="html">
+        <source>The user has been unblocked.</source>
+        <target>El usuario ha sido desbloqueado.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -1811,6 +1821,11 @@
       <trans-unit id="user-block" datatype="html">
         <source>Block User</source>
         <target>Bloquear Usuario</target>
+      </trans-unit>
+
+      <trans-unit id="user-unblock" datatype="html">
+        <source>Unblock User</source>
+        <target>Desbloquear Usuario</target>
       </trans-unit>
 
       <trans-unit id="user-verified" datatype="html">
