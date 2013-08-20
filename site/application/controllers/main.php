@@ -1715,10 +1715,11 @@ class Main extends EC_Controller {
 
 	/**
 	* Manages the timeline page - /timeline
+	* @todo add ajax in the future
 	*
 	* @return void
 	*/
-	public function timeline()
+	public function timeline($tweet_id = FALSE, $place = 'append')
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1734,14 +1735,22 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
+		$request_param['count'] = 40; // the number of tweets on a page	
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
 
+		if (FALSE !== $tweet_id)
+		{
+			error_log('tweet_id=' . $tweet_id);
+			$request_param['max_id'] = $tweet_id;
+		}
+
+		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
+		
 		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline');
 
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
 			array( 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 

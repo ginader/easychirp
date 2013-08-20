@@ -382,24 +382,3 @@ $('.frmListAddMember').submit(function(e) {
 
 
 
-// Load more tweets
-$('a.load_more').click(function(e) {
-    e.preventDefault();
-    var url = this.href;
-    
-	$.ajax({
-		'url': url,
-		'data': 'ajax=1',
-		'dataType': 'json',
-		'type': 'post',
-		'success': function( data, textStatus, jqXHR  ){
-			// PlainObject data, String textStatus, jqXHR jqXHR
-			var content = '';
-			console.log( data );
-		},
-		'error': function( jqXHR, textStatus, errorThrown ){
-			//  jqXHR jqXHR, String textStatus, String errorThrown 	
-			console.log('ERROR status=' + textStatus + "\n\nerror=" + errorThrown);
-		}
-	});
-});

@@ -88,6 +88,7 @@ $route['status'] = "main/status"; // View single tweet
 $route['tips'] = "main/tips";
 $route['tools'] = "main/tools"; // For non-JS and keyboard use cases
 $route['timeline'] = "main/timeline";
+$route['timeline/(:num)'] = "main/timeline/$1";
 $route['trends'] = "main/trends";
 $route['user'] = "main/user"; // User details
 $route['user_timeline'] = "main/user_timeline"; // User tweets

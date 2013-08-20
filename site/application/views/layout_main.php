@@ -5,6 +5,16 @@
 
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if lte IE 7]><script src="include/js/lte-ie7.js"></script><![endif]-->
+	<style>
+	.load_more {
+		background-color: #F0C;
+		color: #FFF;
+		display: block;
+		padding: .5em;
+		margin: .5em 0;
+		width: 100%;
+	}
+	</style>
 </head>
 
 <body class="theme-default">

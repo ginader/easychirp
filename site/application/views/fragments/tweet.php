@@ -15,6 +15,14 @@ $months['dec'] = '12';
 
 $index = 0;
 
+?>
+<div id="timeline">
+<?php 
+
+if (isset($tweets) && sizeof($tweets) > 0):
+ 
+$i = sizeof($tweets) - 1;
+$last_id = $tweets[$i]->id; 
 
 foreach($tweets AS $tweet):
 
@@ -41,7 +49,7 @@ foreach($tweets AS $tweet):
 		$isRetweet = true;
 	}
 ?>
-<div class="tweet rounded clearfix<?
+<div id="<?php echo $tweet->id; ?>" class="tweet rounded clearfix<?php
 	if ($isReply) { echo ' reply'; }
 	else if ($isRetweet) { echo ' retweet'; }
 	?>">
@@ -110,5 +118,11 @@ foreach($tweets AS $tweet):
 
 $index++;
 endforeach; 
-
 ?>
+	<a href="/timeline/<?php echo $last_id; ?>" class="button load_more" >Get Older Tweets</a>
+<?php
+endif;
+?>
+</div>
+<?php
+
