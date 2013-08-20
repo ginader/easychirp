@@ -93,6 +93,21 @@
         <target>The user has been unblocked.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-msg-dm-error-not-followed" datatype="html">
+        <source>Not sent. You cannot send direct messages to users who are not following you.</source>
+        <target>Not sent. You cannot send direct messages to users who are not following you.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-sent" datatype="html">
+        <source>The direct message was sent.</source>
+        <target>The direct message was sent.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-deleted" datatype="html">
+        <source>The direct message was deleted.</source>
+        <target>The direct message was deleted.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">

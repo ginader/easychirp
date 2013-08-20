@@ -93,6 +93,21 @@
         <target>Der Benutzer wurde freigegeben.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-msg-dm-error-not-followed" datatype="html">
+        <source>Not sent. You cannot send direct messages to users who are not following you.</source>
+        <target>Nicht gesendet. Sie können keine direkte Nachrichten an Benutzer, die nicht nach sind Sie.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-sent" datatype="html">
+        <source>The direct message was sent.</source>
+        <target>Der direkte Nachricht wurde gesendet.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-deleted" datatype="html">
+        <source>The direct message was deleted.</source>
+        <target>Der direkte Nachricht wurde gelöscht.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">

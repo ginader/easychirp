@@ -188,7 +188,7 @@ class Main extends EC_Controller {
 		$this->layout->view('direct', $this->_data);
 	}
 
-	public function direct_delete($ajax = FALSE)
+	public function direct_send()
 	{
 		$this->redirect_if_not_logged_in();
 		
@@ -203,13 +203,48 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
-		$request_param['id'] = $_GET["id"];
+		$request_param = array();
+		$request_param['screen_name'] = $_POST['tweep'];
+		$request_param['text'] = $_POST['message'];
+		
+		$data = $this->twitter_lib->post('direct_messages/new', $request_param);
+
+		if (isset($data->errors[0]->code)) {
+			if ($data->errors[0]->code == 150) {
+				redirect( base_url() . 'direct?action=error-not-followed');
+			}
+			else {
+				redirect( base_url() . 'direct?action=error-other&msg='.$data->errors[0]->message);
+			}
+		}
+		else {
+			redirect( base_url() . 'direct?action=sent');
+		}
+	}
+
+	public function direct_delete($id, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['id'] = $id;
 		$request_param['include_entities'] = "false";
 		
-		$tweet = $this->twitter_lib->post('direct_messages/destroy', $request_param);
-		if ($ajax) {
-			echo json_encode($tweet);
+		$data = $this->twitter_lib->post('direct_messages/destroy', $request_param);
+
+		if ($ajax == "true") {
+			echo json_encode($data);
 		}
 		else {
 			redirect( base_url() . 'direct?action=deleted');

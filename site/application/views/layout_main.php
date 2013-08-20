@@ -59,6 +59,7 @@
 	data-sure-delete="<?php echo $xliff_reader->get('gbl-sure-delete'); ?>" data-sure-spam="<?php echo $xliff_reader->get('gbl-sure-spam'); ?>"
 	data-block="<?php echo $xliff_reader->get('user-block'); ?>" data-unblock="<?php echo $xliff_reader->get('user-unblock'); ?>"
 	data-msg-block="<?php echo $xliff_reader->get('gbl-msg-block'); ?>" data-msg-unblock="<?php echo $xliff_reader->get('gbl-msg-unblock'); ?>"
+	data-msg-dm-deleted="<?php echo $xliff_reader->get('gbl-msg-dm-deleted'); ?>"
 >
 	<div class="content">
 		<?php echo $content; ?>

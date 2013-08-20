@@ -101,4 +101,33 @@ $('a[href*="block_"]').click(function(e) {
 	}
 });
 
+// Ajax for deleting a DM
+$('a[href*="direct_delete"]').click(function(e) {
+
+	if (!confirm(txtAlertSureDelete)) {
+		 return false;
+	}
+
+	e.preventDefault();
+
+	var a = $(this);
+	var url_send = this.href.replace("false","true");
+	var txt = {};
+	txt.AlertDeleted = $("#main").attr("data-msg-dm-deleted");
+
+	$.ajax({
+		url: url_send,
+		success: function(response) {
+
+			$(a).parent().parent().hide('slow', function() {
+				this.remove();
+				alert(txt.AlertDeleted);
+			});
+
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		}
+	})
+});
 

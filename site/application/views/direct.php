@@ -1,7 +1,16 @@
 <?php
 if (isset($_GET["action"])) {
-	if ($_GET["action"] == "deleted") {
-		echo '<div class="msgBoxPos rounded">The direct message was deleted.</div>';
+	if ($_GET["action"] == "sent") {
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-sent').'</div>';
+	}
+	elseif ($_GET["action"] == "error-not-followed") {
+		echo '<div class="msgBoxNeg rounded">'.$xliff_reader->get('gbl-msg-dm-error-not-followed').'</div>';
+	}
+	elseif ($_GET["action"] == "error-other") {
+		echo '<div class="msgBoxNeg rounded">Error. ' . $_GET["msg"] . '</div>';
+	}
+	elseif ($_GET["action"] == "deleted") {
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-deleted').'</div>';
 	}
 }
 ?>
@@ -20,7 +29,7 @@ if(isset($_GET['user'])) {
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('dm-h2-send'); ?></label></h2>
-	<form id="frmDirectMessage" action="actions/submitDirect.php" method="post" class="clear" 
+	<form id="frmDirectMessage" action="/direct_send" method="post" class="clear" 
 		data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>"
 		data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
 		data-error-empty="<?php echo $xliff_reader->get('error-dm-empty'); ?>"
