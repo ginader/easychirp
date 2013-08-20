@@ -462,6 +462,46 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* Follows or unfollows user - /manage_follow_user
+	*/
+	public function manage_follow_user($screen_name, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $screen_name;
+		
+		if ($state == "follow") {
+			$post_url = "friendships/create";
+			$action = "followed";
+		}
+		else {
+			$post_url = "friendships/destroy";
+			$action = "unfollowed";
+		}
+
+		$data = $this->twitter_lib->post($post_url, $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'user?id='.$screen_name.'&action='.$action);
+		}
+	}
+
+	/**
 	* Manages "go to user" page - /go_to_user
 	*/
 	public function go_to_user()

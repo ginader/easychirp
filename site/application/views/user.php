@@ -1,12 +1,18 @@
 <?php
 if (isset($_GET["action"])) {
-	if ($_GET["action"] == "reported") {
+	if ($_GET["action"] == "followed") {
+		echo '<div class="msgBoxPos rounded">You are now following this user.</div>';
+	}
+	elseif ($_GET["action"] == "unfollowed") {
+		echo '<div class="msgBoxPos rounded">You are no longer following this user.</div>';
+	}
+	elseif ($_GET["action"] == "reported") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-message-spam-reported').'</div>';
 	}
-	if ($_GET["action"] == "block_created") {
+	elseif ($_GET["action"] == "block_created") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-block').'</div>';
 	}
-	if ($_GET["action"] == "block_destroyed") {
+	elseif ($_GET["action"] == "block_destroyed") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unblock').'</div>';
 	}
 }
@@ -25,10 +31,10 @@ if (isset($_GET["action"])) {
 	<p><?php
 		$isFollowing = $user->following;
 		if ($isFollowing === true) {
-			echo $xliff_reader->get('user-following') . ' (<a href="#">' . $xliff_reader->get('user-unfollow') . '</a>)';
+			echo $xliff_reader->get('user-following') . ' (<a href="unfollow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-unfollow') . '</a>)';
 		}
 		else {
-			echo $xliff_reader->get('user-not-following') . ' (<a href="#">' . $xliff_reader->get('user-follow') . '</a>)';
+			echo $xliff_reader->get('user-not-following') . ' (<a href="follow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-follow') . '</a>)';
 		}
 	?></p>
 	
