@@ -332,14 +332,6 @@ $('a[rel=twmess]').click(function(e) {
 
 });
 
-// Delete DM
-$('a[href*="direct_delete"]').click(function(e) {
-	if (!confirm(txtAlertSureDelete)) {
-		 return false;
-	}
-	return true;
-});
-
 // Delete list
 $('a[href*="list_delete"]').click(function(e) {
 	if (!confirm(txtAlertSureDelete)) {
