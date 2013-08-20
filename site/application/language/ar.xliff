@@ -93,6 +93,21 @@
         <target>تم إلغاء حظر المستخدم.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-msg-dm-error-not-followed" datatype="html">
+        <source>Not sent. You cannot send direct messages to users who are not following you.</source>
+        <target>لم ترسل. لا يمكنك إرسال رسائل مباشرة إلى المستخدمين الذين لم يقوموا بعد لك.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-sent" datatype="html">
+        <source>The direct message was sent.</source>
+        <target>تم إرسال الرسالة مباشرة.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-deleted" datatype="html">
+        <source>The direct message was deleted.</source>
+        <target>تم حذف الرسالة مباشرة.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">

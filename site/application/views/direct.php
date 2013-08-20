@@ -1,16 +1,16 @@
 <?php
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "sent") {
-		echo '<div class="msgBoxPos rounded">The direct message was sent.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-sent').'</div>';
 	}
 	elseif ($_GET["action"] == "error-not-followed") {
-		echo '<div class="msgBoxNeg rounded">Error. You cannot send messages to users who are not following you.</div>';
+		echo '<div class="msgBoxNeg rounded">'.$xliff_reader->get('gbl-msg-dm-error-not-followed').'</div>';
 	}
 	elseif ($_GET["action"] == "error-other") {
 		echo '<div class="msgBoxNeg rounded">Error. ' . $_GET["msg"] . '</div>';
 	}
 	elseif ($_GET["action"] == "deleted") {
-		echo '<div class="msgBoxPos rounded">The direct message was deleted.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-deleted').'</div>';
 	}
 }
 ?>
