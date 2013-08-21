@@ -154,7 +154,7 @@
       
       <trans-unit id="nav-following" datatype="html">
         <source>following: %d</source>
-        <target>متابَعين %d</target>
+        <target>متابَعين: %d</target>
         <note from="description">People that I follow</note>
       </trans-unit>
       
@@ -1283,102 +1283,102 @@
 
       <trans-unit id="features-main-h2" datatype="html">
         <source>Main Features</source>
-        <target>Main Features</target>
+        <target>الميزات الرئيسية</target>
       </trans-unit>
 
       <trans-unit id="features-main-shortener" datatype="html">
         <source>When writing a tweet, a character counter and a Shorten URL feature (choose bit.ly or weba.im) are available.</source>
-        <target>When writing a tweet, a character counter and a Shorten URL feature (choose bit.ly or weba.im) are available.</target>
+        <target>عند كتابة تغريدة، يوجد عداد للحروف و خاصية اختصار الروابط (اختر bit.ly أو weba.im).</target>
       </trans-unit>
 
       <trans-unit id="features-main-replytoall" datatype="html">
         <source>In addition to the basic retweet, quote tweet, and reply, user can reply to all and email tweet.</source>
-        <target>In addition to the basic retweet, quote tweet, and reply, user can reply to all and email tweet.</target>
+        <target>بالإضافة إلى خدمة إعادة التغريد، اقتباس تغريدة والرد، بإمكان المستخدم الرد على الجميع وإرسال التغريدة بالبريد الالكتروني.</target>
       </trans-unit>
 
       <trans-unit id="features-main-lists" datatype="html">
         <source>View, subscribe, and create Twitter Lists.</source>
-        <target>View, subscribe, and create Twitter Lists.</target>
+        <target>عرض واشتراك وإنشاء قوائم تغريد.</target>
       </trans-unit>
 
       <trans-unit id="features-main-search" datatype="html">
         <source>Search tweets and users (and search tips).</source>
-        <target>Search tweets and users (and search tips).</target>
+        <target>البحث في التغريدات و المستخدمين (و إرشادات البحث).</target>
       </trans-unit>
 
       <trans-unit id="features-main-saved-search" datatype="html">
         <source>Add, delete, and run saved searches.</source>
-        <target>Add, delete, and run saved searches.</target>
+        <target>إضافة، حذف، و تشغيل عمليات البحث المحفوظة.</target>
       </trans-unit>
 
       <trans-unit id="features-main-edit-profile" datatype="html">
         <source>Edit basic profile settings including updating avatar.</source>
-        <target>Edit basic profile settings including updating avatar.</target>
+        <target>تحرير الإعدادات الشخصية الأساسية بما في ذلك تحديث الصورة الرمزية.</target>
       </trans-unit>
 
       <trans-unit id="features-main-jump" datatype="html">
         <source>Easily jump to user's profile and timeline.</source>
-        <target>Easily jump to user's profile and timeline.</target>
+        <target>سهولة الانتقال إلى حساب المستخدم و صفحة العرض.</target>
       </trans-unit>
 
       <trans-unit id="features-main-thread" datatype="html">
         <source>Inline threading of tweets; displays reply &quot;conversation&quot;.</source>
-        <target>Inline threading of tweets; displays reply &quot;conversation&quot;.</target>
+        <target>مضمنة ترابط من تغريدات؛ يعرض الرد "المحادثة".</target>
       </trans-unit>
 
       <trans-unit id="features-main-linked" datatype="html">
         <source>Tweets contain linked hash tags and usernames.</source>
-        <target>Tweets contain linked hash tags and usernames.</target>
+        <target>تغريدات تحتوي على روابط وسوم وأسماء مستخدمين.</target>
       </trans-unit>
 
       <trans-unit id="features-main-review" datatype="html">
         <source>Easy to review a tweet when replying and quoting.</source>
-        <target>Easy to review a tweet when replying and quoting.</target>
+        <target>"يمكنك بسهولة عرض التغريدة عند الرد و الاقتباس"</target>
       </trans-unit>
 
       <trans-unit id="features-main-foll" datatype="html">
         <source>View details of who you're following and your followers.</source>
-        <target>View details of who you're following and your followers.</target>
+        <target>رؤية تفاصيل متابعينك ومن تتابعهم.</target>
       </trans-unit>
 
       <trans-unit id="features-main-block" datatype="html">
         <source>Blocking is supported.</source>
-        <target>Blocking is supported.</target>
+        <target>الحظر ممكن .</target>
       </trans-unit>
 
       <trans-unit id="features-main-retweets-num" datatype="html">
         <source>Number of retweets are displayed on each tweet (if 1 or more).</source>
-        <target>Number of retweets are displayed on each tweet (if 1 or more).</target>
+        <target>عدد مرات إعادة التغريدة تعرض فالتغريدة نفسها( في حال كانت واحدة أو أكثر).</target>
       </trans-unit>
 
       <trans-unit id="features-main-retweets-types" datatype="html">
         <source>View Retweets by you, of you, and to you.</source>
-        <target>View Retweets by you, of you, and to you.</target>
+        <target>مشاهدة التغريدات المعادة بواسطتك، أو المعادة إليك .</target>
       </trans-unit>
 
       <trans-unit id="features-main-isfollow" datatype="html">
         <source>Quickly find out if a user is following you from the user's profile page.</source>
-        <target>Quickly find out if a user is following you from the user's profile page.</target>
+        <target>سريعاً ، اعرف إن كان هناك من يتابعك من صفحة ملف التعريف الخاص بالمستخدم.</target>
       </trans-unit>
 
       <trans-unit id="features-main-trends" datatype="html">
         <source>View current Twitter Trends.</source>
-        <target>View current Twitter Trends.</target>
+        <target>عرض الوسوم الأكثر استخداماً.</target>
       </trans-unit>
 
       <trans-unit id="features-main-twitter-links" datatype="html">
         <source>A link to Twitter is provided for 'View Single Tweet' page and for owned and subscribed lists.</source>
-        <target>A link to Twitter is provided for 'View Single Tweet' page and for owned and subscribed lists.</target>
+        <target>يتوفر رابط "مشاهدة تغريدة واحدة" علي صفحة تويتر للقوائم الخاصة بك والمشارك بها .</target>
       </trans-unit>
 
       <trans-unit id="features-main-screens" datatype="html">
         <source>Designed for all screen resolutions, great for desktop, tablet and mobile.</source>
-        <target>Designed for all screen resolutions, great for desktop, tablet and mobile.</target>
+        <target>مصمم لجميع أنواع الشاشات، مناسب للحاسوب أو الحاسوب اللوحي أو أجهزة الهاتف المتنقل.</target>
       </trans-unit>
 
       <trans-unit id="features-main-browsers" datatype="html">
         <source>Works on all major browsers: IE7, IE8, IE9, Firefox, Safari, Opera, and Chrome.</source>
-        <target>Works on all major browsers: IE7, IE8, IE9, Firefox, Safari, Opera, and Chrome.</target>
+        <target>يعمل على جميع المتصفحات الرئيسية : IE7،IE8، IE9، فايرفوكس، سفاري، أوبرا، وكروم.</target>
       </trans-unit>
 
       <!-- ABOUT -->
