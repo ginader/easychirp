@@ -26,16 +26,14 @@ $last_id = $tweets[$i]->id;
 
 foreach($tweets AS $tweet):
 
-	$date =   $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013	
-	$regex = '/(\w{3}) (\w{3}) (\d\d) (\d\d:\d\d:\d\d) ([+\-]\d\d\d\d) (\d\d\d\d)/';
+	$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013	
 
-	$is_matched = preg_match($regex, $tweet->created_at, $matches);
-	if ($is_matched){
-		$month_abbr = strtolower($matches[2]);
-		$month = $months[ $month_abbr ]; 
-		
-		$date = sprintf("%s %d-%s-%s %s%s", $matches[1],  $matches[6], $month, $matches[3], $matches[4], $matches[5]);
-	}
+	// http://www.php.net/manual/en/datetime.createfromformat.php
+	$twitter_date_format = 'D M d H:i:s P Y';
+
+	$tweet_date = DateTime::createFromFormat($twitter_date_format, $tweet->created_at);
+	$date = $tweet_date->format('M d, h:mA'); // Jan 1, 3:50 pm
+
 
 	//check if this tweet is a reply
 	$isReply = false;
