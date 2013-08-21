@@ -1,10 +1,10 @@
 <?php
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "followed") {
-		echo '<div class="msgBoxPos rounded">You are now following this user.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('msg-followed-user').'</div>';
 	}
 	elseif ($_GET["action"] == "unfollowed") {
-		echo '<div class="msgBoxPos rounded">You are no longer following this user.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('msg-unfollowed-user').'</div>';
 	}
 	elseif ($_GET["action"] == "reported") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-message-spam-reported').'</div>';
