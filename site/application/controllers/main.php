@@ -1800,10 +1800,6 @@ class Main extends EC_Controller {
 		$this->layout->view('user_lists', $this->_data);
 	}
 
-
-
-}
-
 	/**
 	* Manages the timeline page - /timeline
 	* @todo add ajax in the future
@@ -1831,16 +1827,19 @@ class Main extends EC_Controller {
 
 		if (FALSE !== $tweet_id)
 		{
-			error_log('tweet_id=' . $tweet_id);
-			$request_param['max_id'] = $tweet_id;
+			// Most cases, the tweet_id is a numeric ID that uniquely identifies a tweet
+			// if its not a integer, it's a username. It's the user that you're writing to
+			if (! is_int($tweet_id))
+			{
+				$reply_to = '@' . $tweet_id . ' ';
+			}
+			else 
+			{
+				error_log('tweet_id=' . $tweet_id);
+				$request_param['max_id'] = $tweet_id;
+			}
 		}
 
-		// Most cases, the tweet_id is a numeric ID that uniquely identifies a tweet
-		// if its not a integer, it's a username. It's the user that you're writing to
-		if (! is_int($tweet_id))
-		{
-			$reply_to = '@' . $tweet_id . ' ';
-		}
 
 
 		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
@@ -1866,6 +1865,10 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Timeline page');
 		$this->layout->view('timeline', $this->_data);
 	}
+
+
+}
+
 
 /* End of file main.php */
 /* Location: ./application/controllers/main.php */
