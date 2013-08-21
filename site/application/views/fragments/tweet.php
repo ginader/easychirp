@@ -57,7 +57,7 @@ foreach($tweets AS $tweet):
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
 	<q><?php 
 	$tweet_text = $tweet->text; 
-	$regex = '#\b(https?://.+)\b#';	
+	$regex = '#\b(https?://[\w\d\/\.]+)\b#';
 	$replacement = '<a href="\1">\1</a>';
 		
 	$tweet_text = preg_replace($regex, $replacement, $tweet_text);
