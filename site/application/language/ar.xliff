@@ -8,7 +8,7 @@
 
       <trans-unit id="global-delete" datatype="html">
         <source>Delete</source>
-        <target>Delete</target>
+        <target>حذف</target>
       </trans-unit>
 
       <trans-unit id="gbl-select-page" datatype="html">
@@ -50,22 +50,22 @@
 
       <trans-unit id="error-over-140" datatype="html">
         <source>You must enter less than 140 characters.</source>
-        <target>You must enter less than 140 characters.</target>
+        <target>يجب عليك إدخال أقل من 140 حرفا.</target>
       </trans-unit>
 
       <trans-unit id="error-tweet-empty" datatype="html">
         <source>Please enter a tweet.</source>
-        <target>Please enter a tweet.</target>
+        <target>الرجاء إدخال سقسقة.</target>
       </trans-unit>
 
       <trans-unit id="error-dm-empty" datatype="html">
         <source>Please enter a direct message.</source>
-        <target>Please enter a direct message.</target>
+        <target>الرجاء إدخال رسالة مباشرة.</target>
       </trans-unit>
 
       <trans-unit id="error-tweep-empty" datatype="html">
         <source>Enter a user name.</source>
-        <target>Enter a user name.</target>
+        <target>ادخل اسم المستخدم.</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-fav-alert-added" datatype="html">
@@ -142,7 +142,7 @@
       
       <trans-unit id="nav-sign-in" datatype="html">
         <source>sign in</source>
-        <target>sign in</target>
+        <target>تسجيل الدخول</target>
         <note from="description"></note>
       </trans-unit>
       
@@ -392,7 +392,7 @@
 
       <trans-unit id="home-signin-signed-in-as" datatype="html">
         <source>You are signed in as</source>
-        <target>You are signed in as</target>
+        <target>قمت بتسجيل الدخول كما</target>
       </trans-unit>
 
       <trans-unit id="home-h2-donate" datatype="html">
@@ -412,7 +412,7 @@
 
       <trans-unit id="home-h2-follow-me" datatype="html">
         <source>Follow me on Twitter at:</source>
-        <target>Follow me on Twitter at:</target>
+        <target>اتبعني على تويتر على العنوان التالي:</target>
       </trans-unit>
 
       <trans-unit id="home-h2-share" datatype="html">
@@ -519,7 +519,7 @@
 
       <trans-unit id="dm-h2-send" datatype="html">
         <source>Send a DM</source>
-        <target>Send a DM</target>
+        <target>إرسال رسالة مباشرة</target>
       </trans-unit>
 
       <trans-unit id="dm-label-tweep" datatype="html">
@@ -539,7 +539,7 @@
 
       <trans-unit id="dm-send" datatype="html">
         <source>Send</source>
-        <target>Send</target>
+        <target>إرسال</target>
       </trans-unit>
 
       <trans-unit id="dm-note2" datatype="html">
@@ -611,7 +611,7 @@
 
       <trans-unit id="gotouser-username" datatype="html">
         <source>@UserName</source>
-        <target>@UserName</target>
+        <target>اسم المستخدم</target>
       </trans-unit>
 
       <trans-unit id="gotouser-timeline" datatype="html">
@@ -854,7 +854,7 @@
 
       <trans-unit id="profile-dd-my-lists" datatype="html">
         <source>My Lists</source>
-        <target>My Lists</target>
+        <target>قوائمي</target>
       </trans-unit>
 
       <trans-unit id="profile-dt-api-hits" datatype="html">
@@ -891,7 +891,7 @@
 
       <trans-unit id="edit-profile-back-to" datatype="html">
         <source>back to My Profile</source>
-        <target>back to My Profile</target>
+        <target>ملفي الشخصي</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-h1" datatype="html">
@@ -928,67 +928,67 @@
 
       <trans-unit id="tips-h1" datatype="html">
         <source>Tips</source>
-        <target>Tips</target>
+        <target>إرشادات</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-spam" datatype="html">
         <source>Report Spam</source>
-        <target>Report Spam</target>
+        <target>تبليغ عن إساءة</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-p" datatype="html">
         <source>You can report a spammer account to Twitter three ways:</source>
-        <target>You can report a spammer account to Twitter three ways:</target>
+        <target>يمكنك إبلاغ تويتر عن الحسابات المزعجة بثلاث طرق:</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-li-1" datatype="html">
         <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</source>
-        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</target>
+        <target>أنقر على رابط "الإبلاغ عن إساءة" ضمن خيارات المستخدم تحت التغريدة.</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-li-2" datatype="html">
         <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</source>
-        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</target>
+        <target>اضغط على الرابط إبلاغ عن مزعج في صفحة تفاصيل المستخدم.</target>
       </trans-unit>
 
       <trans-unit id="tips-spam-li-3" datatype="html">
         <source>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</source>
-        <target>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</target>
+        <target>إرسال رسالة مباشرة إلى حساب تويتر "سبام"، يليه أسم حساب المستخدم. أتبع هذه الجملة: d spam @username. على سبيل المثال: d spam @fake is spammer!</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-search" datatype="html">
         <source>Search</source>
-        <target>Search</target>
+        <target>بحث</target>
       </trans-unit>
 
       <trans-unit id="tips-search-p" datatype="html">
         <source>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</source>
-        <target>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</target>
+        <target>إرشادات البحث مُدرجة فى صفحة البحث.</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-table" datatype="html">
         <source>Friends, Favorites, Direct Messages</source>
-        <target>Friends, Favorites, Direct Messages</target>
+        <target>الأصدقاء، المفضلة، الرسائل المباشرة</target>
       </trans-unit>
 
       <trans-unit id="tips-table-p" datatype="html">
         <source>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</source>
-        <target>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</target>
+        <target>يقدم الجدول التالي إرشادات حول كيفية استخدام أوامر نص تويتر المتعلقة بالأصدقاء و المفضلة والرسائل المباشرة.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-th-1" datatype="html">
         <source>Syntax</source>
-        <target>Syntax</target>
+        <target>تركيب الجملة</target>
       </trans-unit>
 
       <trans-unit id="tips-table-th-2" datatype="html">
         <source>Explanation</source>
-        <target>Explanation</target>
+        <target>توضيح</target>
       </trans-unit>
 
       <trans-unit id="tips-table-th-3" datatype="html">
         <source>Example</source>
-        <target>Example</target>
+        <target>مثال</target>
       </trans-unit>
 
       <trans-unit id="tips-table-at-1" datatype="html">
@@ -1140,7 +1140,7 @@
 
       <trans-unit id="trends-h1" datatype="html">
         <source>Trends</source>
-        <target>Trends</target>
+        <target>متداول</target>
       </trans-unit>
 
       <trans-unit id="trends-worldwide" datatype="html">
@@ -1204,79 +1204,79 @@
 
       <trans-unit id="features-h1" datatype="html">
         <source>Features</source>
-        <target>Features</target>
+        <target>خصائص</target>
       </trans-unit>
 
       <!-- a11y features -->
 
       <trans-unit id="features-a11y-h2" datatype="html">
         <source>Accessibility Features</source>
-        <target>Accessibility Features</target>
+        <target>الميزات للمكفوفين</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-kybd" datatype="html">
         <source>All links and functionality is keyboard accessible.</source>
-        <target>All links and functionality is keyboard accessible.</target>
+        <target>يمكن من خلال لوحة المفاتيح الوصول إلى جميع  الروابط و الوظائف.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-layout" datatype="html">
         <source>Simple, consistent layout and navigation is provided.</source>
-        <target>Simple, consistent layout and navigation is provided.</target>
+        <target>التصميم والتصفح بسيط و متناسق.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-headings" datatype="html">
         <source>Headings and page titles are implemented carefully for optimal accessibility.</source>
-        <target>Headings and page titles are implemented carefully for optimal accessibility.</target>
+        <target>العناوين الرئيسية وعناوين الصفحات نفذت بعناية لأفضل استخدام.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-ajax" datatype="html">
         <source>Ajax actions are concluded with an alert (JS or ARIA) that notifies the user of the result of the action.</source>
-        <target>Ajax actions are concluded with an alert (JS or ARIA) that notifies the user of the result of the action.</target>
+        <target>تنتهى أوامر اجاكس بتنبيه ( js أو ARIA ) لإعلام المستخدم بنتيجة الأمر.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-contrast" datatype="html">
         <source>Large default text size and high high color contrast.</source>
-        <target>Large default text size and high high color contrast.</target>
+        <target>النص الافتراضي كبير الحجم وتبيان الألوان عال .</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-resize" datatype="html">
         <source>Text may be resized many levels without breaking layout.</source>
-        <target>Text may be resized many levels without breaking layout.</target>
+        <target>يمكن تغيير حجم النص إلى عدد من المستويات وذلك دون الخروج من مخطط الصفحة.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-keys" datatype="html">
         <source>Access keys (native keyboard shortcuts) to main menu items.</source>
-        <target>Access keys (native keyboard shortcuts) to main menu items.</target>
+        <target>استخدم مفاتيح الوصول (اختصارات لوحة المفاتيح الأصلية)  وذلك مع عناصر القائمة الرئيسية.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-forms" datatype="html">
         <source>Forms and data tables are marked up for optimal accessibility.</source>
-        <target>Forms and data tables are marked up for optimal accessibility.</target>
+        <target>لوصول أمثل، تم وضع علامة على النماذج وجداول البيانات.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-semantic" datatype="html">
         <source>Code is semantic, light, and adheres to best practices for Web Standards.</source>
-        <target>Code is semantic, light, and adheres to best practices for Web Standards.</target>
+        <target>البرمجة دلالية، وخفيفة، وتطبق أفضل الممارسات لمعايير الويب.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-aria" datatype="html">
         <source>ARIA is implemented throughout including document landmark roles, alert roles, and live region for the dynamic character counter.</source>
-        <target>ARIA is implemented throughout including document landmark roles, alert roles, and live region for the dynamic character counter.</target>
+        <target>ARIA تزود بأدوات خلال أدوار النقط الاستدلالية، وأدوار التنبيهات ، و المنطقة الحية لعداد الحروف الديناميكى.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-skip" datatype="html">
         <source>A &quot;skip to main content&quot; link is provided for keyboard users (and a &quot;skip to sign in&quot; link on the home page).</source>
-        <target>A &quot;skip to main content&quot; link is provided for keyboard users (and a &quot;skip to sign in&quot; link on the home page).</target>
+        <target>لمستخدمى لوحة المفاتيح يمكنك "التخطى إلى القائمة الرئيسية" ( بالاضافة إلى رابط "التخطى لتسجيل الدخول" المتوفر فى الصفحة الرئيسية).</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-js" datatype="html">
         <source>Works with or without JavaScript.</source>
-        <target>Works with or without JavaScript.</target>
+        <target>يعمل مع أو بدون جافا سكريبت.</target>
       </trans-unit>
 
       <trans-unit id="features-a11y-at" datatype="html">
         <source>Works with all types of assistive technology including screen readers, screen enlargers, braille-output, text-only browsers, and pretty much any web-enabled device.</source>
-        <target>Works with all types of assistive technology including screen readers, screen enlargers, braille-output, text-only browsers, and pretty much any web-enabled device.</target>
+        <target>يعمل مع جميع أنواع التكنولوجيا المساعدة، بما في ذلك قارئات الشاشة، ومكبرات الشاشة ومخرجات برايل، ومتصفحات النصوص, وأي جهاز يمكنه الاتصال بالويب.</target>
       </trans-unit>
 
       <!-- main features -->
@@ -1425,7 +1425,7 @@
 
       <trans-unit id="about-account-p1" datatype="html">
         <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
-        <target>متابعة Easy Chrip 2 على تويتر: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
+        <target>متابعة Easy Chirp 2 على تويتر: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-feedback" datatype="html">
@@ -1613,42 +1613,42 @@
 
       <trans-unit id="search-h1" datatype="html">
         <source>Search</source>
-        <target>Search</target>
+        <target>بحث</target>
       </trans-unit>
 
       <trans-unit id="search-h2-tweets" datatype="html">
         <source>Search Tweets</source>
-        <target>Search Tweets</target>
+        <target>البحث عن تغريدات</target>
       </trans-unit>
 
       <trans-unit id="search-tweets-query" datatype="html">
         <source>Enter search terms:</source>
-        <target>Enter search terms:</target>
+        <target>بحث</target>
       </trans-unit>
 
       <trans-unit id="search-tweets-submit" datatype="html">
         <source>Search Tweets</source>
-        <target>Search Tweets</target>
+        <target>البحث عن تغريدات</target>
       </trans-unit>
 
       <trans-unit id="search-h3-hints" datatype="html">
         <source>Hints for Searching Tweets</source>
-        <target>Hints for Searching Tweets</target>
+        <target>وسائل مساعدة للبحث في التغريدات</target>
       </trans-unit>
 
       <trans-unit id="search-th-operator" datatype="html">
         <source>Operator</source>
-        <target>Operator</target>
+        <target>المشغل</target>
       </trans-unit>
 
       <trans-unit id="search-th-example" datatype="html">
         <source>Example</source>
-        <target>Example</target>
+        <target>مثال</target>
       </trans-unit>
 
       <trans-unit id="search-th-result" datatype="html">
         <source>Result</source>
-        <target>Result</target>
+        <target>النتيجة</target>
       </trans-unit>
 
       <trans-unit id="search-result-space" datatype="html">
@@ -1710,19 +1710,19 @@
 
       <trans-unit id="search-results-h1" datatype="html">
         <source>Search Results</source>
-        <target>Search Results</target>
+        <target>نتائج البحث</target>
       </trans-unit>
 
       <trans-unit id="search-results-save-this" datatype="html">
         <source>save this search</source>
-        <target>save this search</target>
+        <target>حفظ هذا البحث</target>
       </trans-unit>
 
       <!-- THE TWEETS -->
 
       <trans-unit id="gbl-tweet-tweet-options" datatype="html">
         <source>tweet options</source>
-        <target>tweet options</target>
+        <target>خيارات التغريد</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-make-fav" datatype="html">
@@ -1757,42 +1757,42 @@
 
       <trans-unit id="gbl-tweet-user-options" datatype="html">
         <source>user options</source>
-        <target>user options</target>
+        <target>خيارات المستخدم</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-timeline" datatype="html">
         <source>timeline</source>
-        <target>timeline</target>
+        <target>الخط الزمني</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-dm" datatype="html">
         <source>direct message</source>
-        <target>direct message</target>
+        <target>رسالة خاصة</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-tweet-message" datatype="html">
         <source>tweet message</source>
-        <target>tweet message</target>
+        <target>غرد برسالة</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-mute" datatype="html">
         <source>mute user</source>
-        <target>mute user</target>
+        <target>كتم صوت مستخدم</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-report" datatype="html">
         <source>report spammer</source>
-        <target>report spammer</target>
+        <target>تبليغ عن إساءة</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-responding" datatype="html">
         <source>Responding</source>
-        <target>Responding</target>
+        <target>الاستجابة</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-retweet" datatype="html">
         <source>Retweet</source>
-        <target>Retweet</target>
+        <target>إعادة تغريد</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-remove-fav" datatype="html">
@@ -1829,12 +1829,12 @@
 
       <trans-unit id="user-follow" datatype="html">
         <source>Follow</source>
-        <target>Follow</target>
+        <target>تابع</target>
       </trans-unit>
 
       <trans-unit id="user-spammer" datatype="html">
         <source>Report Spammer</source>
-        <target>Report Spammer</target>
+        <target>تبليغ عن إساءة</target>
       </trans-unit>
 
       <trans-unit id="user-reported-as-spammer" datatype="html">
@@ -1871,7 +1871,7 @@
 
       <trans-unit id="footer-select-language" datatype="html">
         <source>Select language</source>
-        <target>Select language</target>
+        <target>اختر اللغة</target>
       </trans-unit>
 
       <trans-unit id="footer-copyright" datatype="html">
