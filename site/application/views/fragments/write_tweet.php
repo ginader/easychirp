@@ -6,6 +6,7 @@ if (isset($single) && $single)
 }
 
 
+
 ?>
 <div id="enterTweet" class="<?php echo $classes; ?>">
 <?php 
@@ -15,7 +16,13 @@ if (empty($single)):
 		<label for="txtEnterTweet"><a href="#enterTweetContent" aria-controls="enterTweetContent">
 			<span data-icon="&#x27;" aria-hidden="true"></span><?php echo $xliff_reader->get('write-tweet-h2-label'); ?></a></label>
 	</h2>
-	<div id="enterTweetContent" data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
+	<div id="enterTweetContent" <?php
+	if (isset($expand) && $expand)
+	{
+		echo ' class="displayEnterTweet" ';
+	}
+	?>
+	data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
 		<p id="charlimit">
 			<span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span>
 			<strong id="displayCharCountNumber" aria-live="polite"></strong>

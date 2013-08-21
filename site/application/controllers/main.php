@@ -986,7 +986,12 @@ class Main extends EC_Controller {
 		$reply_to = 'RT @' . $data->user->screen_name . ': ' . $data->text;
 		$this->_data['page_heading'] = $this->xliff_reader->get('quote-h1');
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
-			array( 'single' => '0', 'reply_to' => $reply_to, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(  
+			'expand' => 1, 
+			'single' => '0', 
+			'reply_to' => $reply_to, 
+			'xliff_reader' => $this->_data['xliff_reader']), 
+			TRUE);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
@@ -997,8 +1002,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the reply page - /reply
+	* Manages the reply pages - /reply and /reply_all
 	*
+	* @param integer $tweet_id 
+	* @param string|boolean $tweet_id the string 'all' will include the name of each user mentioned. Default is boolean false. 
 	* @return void
 	*/
 	public function reply($tweet_id, $all = FALSE)
@@ -1044,6 +1051,7 @@ class Main extends EC_Controller {
 
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
 			array( 
+			'expand' => 1, 
 			'reply_to' => $reply_to, 
 			'in_reply_to' => $in_reply_to, 
 			'xliff_reader' => $this->_data['xliff_reader']
