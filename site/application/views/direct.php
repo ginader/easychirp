@@ -36,7 +36,7 @@ if(isset($_GET['user'])) {
 		data-error-tweep-empty="<?php echo $xliff_reader->get('error-tweep-empty'); ?>">
 		<h3 class="fl"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
 		<div id="enterTweep">
-			<input type="text" size="18" id="tweep" name="tweep" class="input1" value="<?
+			<input type="text" size="18" id="tweep" name="tweep" class="input1" value="<?php
 			// Output screen_name if defined
 			if ($user !== "") {
 				echo $user;
