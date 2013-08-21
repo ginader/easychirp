@@ -841,6 +841,104 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Handles the callback from twitter
+	 *
+	 * @param string $oauth_token A $_GET parameter 
+	 * @param string $oauth_verifier A $_GET parameter
+	 * @return void
+	 */
+	public function oauth_callback()
+	{
+		$this->load->library('twitter_lib');
+
+		$oauth_token = $this->input->get('oauth_token', FALSE);	
+		$oauth_verifier = $this->input->get('oauth_verifier', FALSE);	
+
+		$callback_url = base_url() . $this->config->item('tw_callback_url');
+		$consumer_key = $this->config->item('consumer_key'); 
+		$consumer_secret = $this->config->item('consumer_secret'); 
+
+		$param = array();
+		$param[] = $consumer_key; 
+		$param[] = $consumer_secret; 
+		$this->twitter_lib->connect($param);	
+
+		$oauth_access_token = $this->twitter_lib->twitteroauth->accessTokenURL();
+		 
+		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
+		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
+		
+		$oauth_token_secret = $oauth_verifier;
+		$acc_token = new OAuthConsumer($oauth_token, $oauth_token_secret, 1); 
+			                 
+
+		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $acc_token, "GET", $oauth_access_token); 
+		$acc_req->sign_request($sig_method, $test_consumer, $acc_token); 
+							  
+
+		$oc = new OAuthCurl(); 
+		$reqData = $oc->fetchData("{$acc_req}&oauth_verifier={$oauth_verifier}"); 
+		
+		$accOAuthData = array();
+		parse_str($reqData['content'], $accOAuthData); 
+	
+		if ( empty($accOAuthData['screen_name']) ){
+			error_log('error callback - Failed login!');
+
+			$session_data = array();
+			$session_data['logged_in'] = FALSE; 
+				
+			$this->session->set_userdata($session_data);
+			redirect( base_url() );
+		}
+		else
+		{
+			$params = array();
+			$params[] = $this->config->item('tw_consumer_key');
+			$params[] = $this->config->item('tw_consumer_secret');
+			$params[] = $accOAuthData['oauth_token']; 
+			$params[] = $accOAuthData['oauth_token_secret'];
+
+			$this->load->library('twitter_lib');
+			$this->twitter_lib->connect($params);
+			$this->twitter_lib->set_verify_peer( TRUE );
+
+			$request_param = array();	
+			$request_param['screen_name'] = $accOAuthData['screen_name'];
+			$user_data = $this->twitter_lib->get('users/show', $request_param );
+
+			if (isset($user_data->errors))
+			{
+				error_log('screen_name=' . $accOAuthData['screen_name'] . ' - message=' . $user_data->errors[0]->message);
+			}
+
+			error_log('successful callback');
+			$session_data = array();
+			$session_data['user_oauth_token']        = $accOAuthData['oauth_token']; 
+			$session_data['user_oauth_token_secret'] = $accOAuthData['oauth_token_secret']; 
+			$session_data['user_id']                 = $accOAuthData['user_id']; 
+			$session_data['screen_name']             = $accOAuthData['screen_name']; 
+			$session_data['logged_in']               = TRUE; 
+
+			if (isset($user_data->followers_count)){
+				$session_data['follower_count']  = $user_data->followers_count; 
+				$session_data['following_count'] = $user_data->friends_count; 
+				$session_data['tweet_count']     = $user_data->statuses_count; 
+				$session_data['real_name']       = $user_data->name; 
+				$session_data['time_zone']       = $user_data->time_zone; 
+				$session_data['user_id']         = $user_data->id_str; 
+			}
+				
+			$this->session->set_userdata($session_data);
+
+			$next_page = base_url() . 'timeline'; 
+
+			redirect( $next_page );
+		}
+	}
+
+
+	/**
 	* Manages the profile page - /profile
 	*
 	* @return void
@@ -1465,102 +1563,6 @@ class Main extends EC_Controller {
 		redirect( base_url() );
 	}
 
-	/**
-	 * Handles the callback from twitter
-	 *
-	 * @param string $oauth_token A $_GET parameter 
-	 * @param string $oauth_verifier A $_GET parameter
-	 * @return void
-	 */
-	public function oauth_callback()
-	{
-		$this->load->library('twitter_lib');
-
-		$oauth_token = $this->input->get('oauth_token', FALSE);	
-		$oauth_verifier = $this->input->get('oauth_verifier', FALSE);	
-
-		$callback_url = base_url() . $this->config->item('tw_callback_url');
-		$consumer_key = $this->config->item('consumer_key'); 
-		$consumer_secret = $this->config->item('consumer_secret'); 
-
-		$param = array();
-		$param[] = $consumer_key; 
-		$param[] = $consumer_secret; 
-		$this->twitter_lib->connect($param);	
-
-		$oauth_access_token = $this->twitter_lib->twitteroauth->accessTokenURL();
-		 
-		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
-		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
-		
-		$oauth_token_secret = $oauth_verifier;
-		$acc_token = new OAuthConsumer($oauth_token, $oauth_token_secret, 1); 
-			                 
-
-		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $acc_token, "GET", $oauth_access_token); 
-		$acc_req->sign_request($sig_method, $test_consumer, $acc_token); 
-							  
-
-		$oc = new OAuthCurl(); 
-		$reqData = $oc->fetchData("{$acc_req}&oauth_verifier={$oauth_verifier}"); 
-		
-		$accOAuthData = array();
-		parse_str($reqData['content'], $accOAuthData); 
-	
-		if ( empty($accOAuthData['screen_name']) ){
-			error_log('error callback - Failed login!');
-
-			$session_data = array();
-			$session_data['logged_in'] = FALSE; 
-				
-			$this->session->set_userdata($session_data);
-			redirect( base_url() );
-		}
-		else
-		{
-			$params = array();
-			$params[] = $this->config->item('tw_consumer_key');
-			$params[] = $this->config->item('tw_consumer_secret');
-			$params[] = $accOAuthData['oauth_token']; 
-			$params[] = $accOAuthData['oauth_token_secret'];
-
-			$this->load->library('twitter_lib');
-			$this->twitter_lib->connect($params);
-			$this->twitter_lib->set_verify_peer( TRUE );
-
-			$request_param = array();	
-			$request_param['screen_name'] = $accOAuthData['screen_name'];
-			$user_data = $this->twitter_lib->get('users/show', $request_param );
-
-			if (isset($user_data->errors))
-			{
-				error_log('screen_name=' . $accOAuthData['screen_name'] . ' - message=' . $user_data->errors[0]->message);
-			}
-
-			error_log('successful callback');
-			$session_data = array();
-			$session_data['user_oauth_token']        = $accOAuthData['oauth_token']; 
-			$session_data['user_oauth_token_secret'] = $accOAuthData['oauth_token_secret']; 
-			$session_data['user_id']                 = $accOAuthData['user_id']; 
-			$session_data['screen_name']             = $accOAuthData['screen_name']; 
-			$session_data['logged_in']               = TRUE; 
-
-			if (isset($user_data->followers_count)){
-				$session_data['follower_count']  = $user_data->followers_count; 
-				$session_data['following_count'] = $user_data->friends_count; 
-				$session_data['tweet_count']     = $user_data->statuses_count; 
-				$session_data['real_name']       = $user_data->name; 
-				$session_data['time_zone']       = $user_data->time_zone; 
-				$session_data['user_id']         = $user_data->id_str; 
-			}
-				
-			$this->session->set_userdata($session_data);
-
-			$next_page = base_url() . 'timeline'; 
-
-			redirect( $next_page );
-		}
-	}
 
 	/**
 	* Manages the status page - /status
@@ -1599,6 +1601,8 @@ class Main extends EC_Controller {
 		$this->layout->set_description('View a single status/tweet.');
 		$this->layout->view('status', $this->_data);
 	}
+
+
 
 	/**
 	* Manages the tips page - /tips
@@ -1756,6 +1760,10 @@ class Main extends EC_Controller {
 		$this->layout->view('user_lists', $this->_data);
 	}
 
+
+
+}
+
 	/**
 	* Manages the timeline page - /timeline
 	* @todo add ajax in the future
@@ -1787,12 +1795,29 @@ class Main extends EC_Controller {
 			$request_param['max_id'] = $tweet_id;
 		}
 
+		// Most cases, the tweet_id is a numeric ID that uniquely identifies a tweet
+		// if its not a integer, it's a username. It's the user that you're writing to
+		if (! is_int($tweet_id))
+		{
+			$reply_to = '@' . $tweet_id . ' ';
+		}
+
+
 		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
 		
 		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline');
 
+
+		$tweet_form_params = array( 'xliff_reader' => $this->_data['xliff_reader']);
+		if (isset($reply_to))
+		{
+			$tweet_form_params['expand'] = 1;
+			$tweet_form_params['reply_to'] = $reply_to;
+		}
+
+
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
-			array( 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			$tweet_form_params, TRUE);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
@@ -1801,9 +1826,6 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Timeline page');
 		$this->layout->view('timeline', $this->_data);
 	}
-
-
-}
 
 /* End of file main.php */
 /* Location: ./application/controllers/main.php */

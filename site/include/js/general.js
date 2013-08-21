@@ -323,12 +323,11 @@ $('a[rel=twmess]').click(function(e) {
 	$('#txtEnterTweet').focus();
 
 	// Insert @username in write tweet textarea
-	u = {}
-	u.url = $(this).attr('href');
-	u.arr = u.url.split("twmess=");
-	u.user = u.arr[1];
-	u.mess = "@" + u.user + " ";
-	$("#txtEnterTweet").html(u.mess);
+	var linkUrl = $(this).attr('href');
+	var username = linkUrl.substring( linkUrl.lastIndexOf("/") + 1, linkUrl.length );
+	var handle = "@" + username + " ";
+
+	$("#txtEnterTweet").html(handle);
 
 });
 
