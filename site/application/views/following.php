@@ -2,7 +2,7 @@
 <?php
 	echo $xliff_reader->get('following-h1');
 	if ( isset($_GET["id"])) {
-		echo ' : ' . $_GET["id"];
+		echo ' : @' . $_GET["id"];
 	}
 ?>
 </h1>

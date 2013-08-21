@@ -6,7 +6,7 @@ if (isset($_GET["action"])) {
 }
 ?>
 
-<h1 class="rounded"><?php echo $xliff_reader->get('lists-h1')." : ".$_GET["id"]; ?></h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('lists-h1')." : @".$_GET["id"]; ?></h1>
 
 <div class="p-row-r">
 	<div class="p-col-1-2">

@@ -38,6 +38,16 @@
 
       <!-- ALERTS/MESSAGES -->
 
+      <trans-unit id="msg-followed-user" datatype="html">
+        <source>You are now following this user.</source>
+        <target>Du verfolgst nun diesen Benutzer.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-unfollowed-user" datatype="html">
+        <source>You are no longer following this user.</source>
+        <target>Sie sind nicht mehr nach diesen Benutzer.</target>
+      </trans-unit>
+
       <trans-unit id="error-over-140" datatype="html">
         <source>You must enter less than 140 characters.</source>
         <target>Sie müssen weniger als 140 Zeichen.</target>

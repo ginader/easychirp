@@ -15,6 +15,11 @@ body {
 	float: right;
 }
 
+.p-col-1-2:last-child .box1 {
+	margin-right: .75rem;
+	margin-left: 0;
+}
+
 /*#skip,
 #logoContainer,
 #frmDonate,
@@ -25,12 +30,54 @@ body {
 
 .content > ul li,
 .content .box1 ul li {
-    list-style: disc url(images/ico-bullet_round.gif);
-    background: none;
+	list-style: disc url(images/ico-bullet_round.gif);
+	background: none;
+	padding-right: 0;
+	margin-right: .5em;
 }
 
-.tweet .tweetAvatar {
+#enterTweet textarea {
 	float: right;
+}
+
+.tweet {
+	padding: 0.5rem 74px 0.5rem 0.5rem;
+}
+.tweet .tweetAvatar, 
+.follow .tweetAvatar {
+	float: right;
+	margin-right: -62px;
 	margin-left: 0;
 }
+.tweet.reply,
+.tweet.retweet {
+	background-position: left top;
+}
+
+#profile {
+	margin: .5rem 0 1rem;
+}
+#profile dt,
+.twList dt {
+	float: right;
+	clear: right;
+	text-align: left;
+	margin-left: .5rem;
+}
+#profile dt:after,
+.twList dt:after {
+	content:':';
+}
+#profile dd,
+.twList dd {
+	float: right;
+}
+#editProfileUpdateBtn {
+	margin-right: 30%;
+}
+
+#top-pull-link {
+    text-align: left;
+}
+
 
