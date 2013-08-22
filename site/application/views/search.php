@@ -86,7 +86,7 @@ else {
 
 <div class="box1 rounded" style="padding-bottom: 1.5rem;">
 	<h2><?php echo $xliff_reader->get('search-h2-users'); ?></h2>
-	<form id="frmSearchUsers" action="/search_results" method="post">
+	<form id="frmSearchUsers" action="/search_users" method="post">
 		<label for="queryUsers" class="hide"><?php echo $xliff_reader->get('search-users-query'); ?></label>
 		<input name="queryUsers" id="queryUsers" type="text" size="35" maxlength="50" class="input1" required="true" aria-required="true" />
 		<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('search-users-submit'); ?></button>
