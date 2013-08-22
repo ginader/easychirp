@@ -57,10 +57,15 @@ foreach($tweets AS $tweet):
 	<?php endif; ?>
 	<q><?php 
 	$tweet_text = $tweet->text; 
-	$regex = '#\b(https?://[\w\d\/\.]+)\b#';
-	$replacement = '<a href="\1">\1</a>';
-		
-	$tweet_text = preg_replace($regex, $replacement, $tweet_text);
+
+	// Link links
+	$tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a href="\1">\1</a>', $tweet_text);
+
+	// Link @usernames
+	$tweet_text = preg_replace('/@+([-_0-9a-zA-Z]+)/', '<a href="/user?id=$1">$0</a>', $tweet_text);
+	
+	// Link #hashtags
+	$tweet_text = preg_replace('/\B#([-_0-9a-zA-Z]+)/', '<a href="/search_results?query=%23$1" title="search this term">$0</a>', $tweet_text);
 
 	echo $tweet_text; 
 	?></q>
