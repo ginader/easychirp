@@ -993,27 +993,27 @@
 
       <trans-unit id="tips-table-at-1" datatype="html">
         <source>@username + message</source>
-        <target>@username + message</target>
+        <target>@اسم المستخدم + رسالة</target>
       </trans-unit>
 
       <trans-unit id="tips-table-at-2" datatype="html">
         <source>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</source>
-        <target>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</target>
+        <target>تغريدة مباشرة بإسم شخص, و تسمح لتغريداتك أن تحفظ في  الخط الزمني"الردود". أنت فقط , الشخص المعني, و الآخرون الذين يتابعونك, سوف يشاهدون هذه التغريدة في الخط الزمني.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-at-3" datatype="html">
         <source>@caratina I love that song too, The Cure rules!</source>
-        <target>@caratina I love that song too, The Cure rules!</target>
+        <target>@caratina أنا أحب تلك الأغنية جداً </target>
       </trans-unit>
 
       <trans-unit id="tips-table-dot-at-1" datatype="html">
         <source>.@username + message</source>
-        <target>.@username + message</target>
+        <target>.@اسم المستخدم + رسالة</target>
       </trans-unit>
 
       <trans-unit id="tips-table-dot-at-2" datatype="html">
         <source>Same as above but allows all accounts to view the tweet. (Period at beginning.)</source>
-        <target>Same as above but allows all accounts to view the tweet. (Period at beginning.)</target>
+        <target>نفس المذكور أعلاه لكن يسمح لجميع الحسابات عرض تغريدات. ( من فترة البداية.)</target>
       </trans-unit>
 
       <trans-unit id="tips-table-dot-at-3" datatype="html">
@@ -1023,12 +1023,12 @@
 
       <trans-unit id="tips-table-rt-1" datatype="html">
         <source>RT @username + their message</source>
-        <target>RT @username + their message</target>
+        <target>اعادة تغريد @اسم المستخدم + رسالته</target>
       </trans-unit>
 
       <trans-unit id="tips-table-rt-2" datatype="html">
         <source>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</source>
-        <target>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</target>
+        <target>اعادة تغريد. عند نسخ و نقل رسالة لشخص آخر. هذا هو الأسلوب القديم الذي يختلف من أن إعادة التغريد "الأصلي".</target>
       </trans-unit>
 
       <trans-unit id="tips-table-rt-3" datatype="html">
@@ -1038,27 +1038,27 @@
 
       <trans-unit id="tips-table-mt-1" datatype="html">
         <source>MT @username + their message</source>
-        <target>MT @username + their message</target>
+        <target>MT @اسم المستخدم + الرسائل الخاصة بهم</target>
       </trans-unit>
 
       <trans-unit id="tips-table-mt-2" datatype="html">
         <source>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</source>
-        <target>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</target>
+        <target>تغريدة معدلة. يشبه اعادة التغريد، لكن عندما تقوم بتعديل الرسالة لشخص آخر.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-mt-3" datatype="html">
         <source>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</source>
-        <target>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</target>
+        <target>ممتاز! MT @EasyChirp تعمل على بعض تحسينات الأداء مع API التغريد. #twitter #a11y</target>
       </trans-unit>
 
       <trans-unit id="tips-table-caret-1" datatype="html">
         <source>^ + user initials</source>
-        <target>^ + user initials</target>
+        <target>^ + اسم المستخدم الأول</target>
       </trans-unit>
 
       <trans-unit id="tips-table-caret-2" datatype="html">
         <source>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</source>
-        <target>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</target>
+        <target>للحسابات التى تتضمن أكثر من مستخدم, فإن المستخدم يضيف علامة (^) واسمه الأول فى نهاية التغريدة وذلك لتوضيح شخصه.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-caret-3" datatype="html">
@@ -1068,72 +1068,72 @@
 
       <trans-unit id="tips-table-d-1" datatype="html">
         <source>D username + message</source>
-        <target>D username + message</target>
+        <target>D المستخدم + الرسالة</target>
       </trans-unit>
 
       <trans-unit id="tips-table-d-2" datatype="html">
         <source>Sends a person a direct (private) message.</source>
-        <target>Sends a person a direct (private) message.</target>
+        <target>إرسال رسالة مباشرة (خاصة) إلى شخص.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-d-3" datatype="html">
         <source>d dennisl Want to meet at Starbucks at 4pm today?</source>
-        <target>d dennisl Want to meet at Starbucks at 4pm today?</target>
+        <target>د دينسيل يرغب بالاجتماع بك في ستاربكس عند ٤م اليوم؟</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-keys" datatype="html">
         <source>Access Keys</source>
-        <target>Access Keys</target>
+        <target>مفاتيح الوصول</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-0" datatype="html">
         <source>Home</source>
-        <target>Home</target>
+        <target>الصفحة الرئيسية</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-1" datatype="html">
         <source>Timeline</source>
-        <target>Timeline</target>
+        <target>الخط الزمني</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-2" datatype="html">
         <source>My Tweets</source>
-        <target>My Tweets</target>
+        <target>تغريداتي</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-3" datatype="html">
         <source>Mentions</source>
-        <target>Mentions</target>
+        <target>إشارات</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-4" datatype="html">
         <source>Favorites</source>
-        <target>Favorites</target>
+        <target>المفضلة</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-5" datatype="html">
         <source>Direct Message (DM)</source>
-        <target>Direct Message (DM)</target>
+        <target>الرسائل المباشرة</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-6" datatype="html">
         <source>Search</source>
-        <target>Search</target>
+        <target>بحث</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-7" datatype="html">
         <source>Lists</source>
-        <target>Lists</target>
+        <target>قوائم</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-8" datatype="html">
         <source>Trends</source>
-        <target>Trends</target>
+        <target>متادول</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-apps" datatype="html">
         <source>Web Applications</source>
-        <target>Web Applications</target>
+        <target>تطبيقات الويب</target>
       </trans-unit>
 
       <!-- TRENDS -->
@@ -1152,52 +1152,52 @@
 
       <trans-unit id="articles-h1" datatype="html">
         <source>Articles &amp; Feedback</source>
-        <target>Articles &amp; Feedback</target>
+        <target>مقالات و ملاحظات</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-books" datatype="html">
         <source>We're in Books!</source>
-        <target>We're in Books!</target>
+        <target>نحن في الكتب!</target>
       </trans-unit>
 
       <trans-unit id="articles-book-cover" datatype="html">
         <source>book cover</source>
-        <target>book cover</target>
+        <target>غلاف الكتاب</target>
       </trans-unit>
 
       <trans-unit id="articles-books-thetwitter" datatype="html">
         <source>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</source>
-        <target>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</target>
+        <target>ذُكر التغريد بسهولة  في كتاب تويتر، حالياً في النسخة الثانية! شاهد الصفحة الأولى لقسم طريقة البدء، تابع المؤلف المشارك سارة ميلستيين @SarahM.</target>
       </trans-unit>
 
       <trans-unit id="articles-books-finnish" datatype="html">
         <source>Accessible Twitter is mentioned in &lt;a href=&quot;http://www.twitterkirja.fi/kirja/&quot;&gt;N&amp;auml;in k&amp;auml;yt&amp;auml;t Twitteri&amp;auml;&lt;/a&gt; (How to Use Twitter). A book written in Finnish by author &lt;a href=&quot;http://www.fiikus.net/&quot;&gt;Maija Haavisto&lt;/a&gt; (@DiamonDie).</source>
-        <target>Accessible Twitter is mentioned in &lt;a href=&quot;http://www.twitterkirja.fi/kirja/&quot;&gt;N&amp;auml;in k&amp;auml;yt&amp;auml;t Twitteri&amp;auml;&lt;/a&gt; (How to Use Twitter). A book written in Finnish by author &lt;a href=&quot;http://www.fiikus.net/&quot;&gt;Maija Haavisto&lt;/a&gt; (@DiamonDie).</target>
+        <target>ذُكر تويتر للمكفوفين في Näin käytät Twitteriä (كيف تستخدم تويتر) (الترجمة الانجليزية)،كتاب باللغة الفنلندية للكاتب مايجا هافيستو (@DiamonDie).</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-user" datatype="html">
         <source>User Feedback</source>
-        <target>User Feedback</target>
+        <target>تعليقات المستخدم</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-wikis" datatype="html">
         <source>We're in Wikis!</source>
-        <target>We're in Wikis!</target>
+        <target>نحن في قائمة الويكي!</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-blogs" datatype="html">
         <source>Article &amp; Blog Mentions</source>
-        <target>Article &amp; Blog Mentions</target>
+        <target>تنبيهات المقال &amp; المدونة</target>
       </trans-unit>
 
       <trans-unit id="articles-h3-highlights" datatype="html">
         <source>Highlights</source>
-        <target>Highlights</target>
+        <target>أهم المواضيع</target>
       </trans-unit>
 
       <trans-unit id="articles-h3-more" datatype="html">
         <source>More, ordered by date</source>
-        <target>More, ordered by date</target>
+        <target>المزيد،رتب بالتاريخ</target>
       </trans-unit>
 
       <!-- FEATURES -->
@@ -1509,7 +1509,7 @@
       </trans-unit>
       <trans-unit id="about-awards-afb" datatype="html">
         <source>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</source>
-        <target>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</target>
+        <target>كرم تويتر  للمكفوفين من المؤسسة الأمريكية للمكفوفين 2011 جائزة الوصول. وشملت مستلمين آخرين CBS، لكسمارك، و متنزهات &amp; منتجعات والت ديزني .</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-accessit" datatype="html">
