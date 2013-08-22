@@ -891,7 +891,8 @@ a.btnOptionsUser,
 .alert {
 	color: #c00;
 }
-.favorited {
+.favorited,
+.retweeted {
 	background-color: #ff9;
 }
 #span-user-blocked {
