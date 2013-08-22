@@ -85,6 +85,7 @@ $route['search_save'] = "main/search_save";
 $route['search_delete/(:any)'] = "main/search_delete/$1";
 $route['search_quick'] = "main/search"; // For non-JS and keyboard use cases
 $route['search_results'] = "main/search_results";
+$route['search_users'] = "main/search_users";
 $route['sign_in'] = "main/sign_in";
 $route['sign_out'] = "main/sign_out";
 $route['status'] = "main/status"; // View single tweet

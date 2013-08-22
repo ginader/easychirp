@@ -1525,6 +1525,35 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Manage the search users page - /search_users
+	 */
+	public function search_users()
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['q'] = $_POST["queryUsers"];
+
+		$this->_data['users'] = $this->twitter_lib->get('users/search', $request_param);
+		$this->_data['q'] = $_POST["queryUsers"];
+
+		$this->layout->set_title( $this->xliff_reader->get('search-h2-users') );
+		$this->layout->set_description('Search user results.');
+		$this->layout->view('search_users', $this->_data);
+	}
+
+	/**
 	 * Manage the sign in page - /sign_in
 	 *
 	 * Allows user to sign in to Twitter. Setup oauth tokens and send user to twitter to login
