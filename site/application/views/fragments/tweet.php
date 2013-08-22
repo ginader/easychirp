@@ -51,8 +51,10 @@ foreach($tweets AS $tweet):
 	if ($isReply) { echo ' reply'; }
 	else if ($isRetweet) { echo ' retweet'; }
 	?>">
+	<?php if (isset($tweet->user)): ?>
 	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
+	<?php endif; ?>
 	<q><?php 
 	$tweet_text = $tweet->text; 
 	$regex = '#\b(https?://[\w\d\/\.]+)\b#';
@@ -62,7 +64,9 @@ foreach($tweets AS $tweet):
 
 	echo $tweet_text; 
 	?></q>
+	<?php if (isset($tweet->user)): ?>
 	<p><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user?id=<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> | 
+	<?php endif; ?>
 		<?php
 		// Is reply or retweet?
 		if ($isReply) {
@@ -98,9 +102,12 @@ foreach($tweets AS $tweet):
 			<li><a href="/reply_all/<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
 			<li><a href="/retweet?id=<?php echo $tweet->id; ?>" data-icon="&#x3f;" title="<?php echo $xliff_reader->get('gbl-tweet-retweet'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-retweet'); ?></span></a></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
+			<?php if (isset($tweet->user)): ?>
 			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo urlencode($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
+			<?php endif; ?>
 		</ul>
 	</div>
+	<?php if (isset($tweet->user)): ?>
 	<div class="btnOptions">
 		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="<?php echo $xliff_reader->get('gbl-tweet-user-options'); ?>" data-icon="&#x3c;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?></span></a></h3>
 		<ul id="userOptions_<?php echo $index; ?>">
@@ -111,6 +118,7 @@ foreach($tweets AS $tweet):
 			<li><a href="/report_spam/<?php echo $tweet->user->screen_name; ?>/false" data-icon="&#x33;" title="<?php echo $xliff_reader->get('gbl-tweet-report'); ?>" class="spammer"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-report'); ?></span></a></li>
 		</ul>
 	</div>
+	<?php endif; ?>
 </div>
 <?php 
 

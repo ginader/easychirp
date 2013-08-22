@@ -1001,7 +1001,15 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 
-		$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param );
+		$profile = $this->twitter_lib->get('users/show', $request_param );
+		$this->_data['profile'] = $profile;
+
+
+		$tweets = array();
+		$tweets[] = $profile->status;
+
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title($this->xliff_reader->get('profile-h1'));
 		$this->layout->set_description('Details on my Twitter profile.');

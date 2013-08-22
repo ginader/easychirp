@@ -76,6 +76,5 @@
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('profile-h2-latest'); ?></h2>
 
-<h2 class='alert'>CAN WE USE TWEET FRAGMENT HERE?!</h2>
-
+<?php echo $tweets; 
 
