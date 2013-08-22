@@ -1829,7 +1829,7 @@ class Main extends EC_Controller {
 		{
 			// Most cases, the tweet_id is a numeric ID that uniquely identifies a tweet
 			// if its not a integer, it's a username. It's the user that you're writing to
-			if (! is_int($tweet_id))
+			if (! is_numeric($tweet_id))
 			{
 				$reply_to = '@' . $tweet_id . ' ';
 			}
