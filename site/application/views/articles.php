@@ -25,11 +25,6 @@
 </div>
 
 <div class="box1 rounded">
-	<h2><?php echo $xliff_reader->get('articles-h2-user'); ?></h2>
-	<p>[UNDER DEVELOPMENT]</p>
-</div>
-
-<div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('articles-h2-wikis'); ?></h2>
 
 	<h3>Wikipedia</h3>
@@ -47,6 +42,11 @@
 
 	<h3>Emergency 2.0 Wiki</h3>
 	<p><a href="http://emergency20wiki.org/wiki/index.php/Accessibility_Toolkit">Accessibility Toolkit</a></p>
+</div>
+
+<div class="box1 rounded">
+	<h2><?php echo $xliff_reader->get('articles-h2-user'); ?></h2>
+	<p>Coming soon.</p>
 </div>
 
 	</div>
