@@ -34,7 +34,6 @@ foreach($tweets AS $tweet):
 	$tweet_date = DateTime::createFromFormat($twitter_date_format, $tweet->created_at);
 	$date = $tweet_date->format('M d, h:mA'); // Jan 1, 3:50 pm
 
-
 	//check if this tweet is a reply
 	$isReply = false;
 	if ($tweet->in_reply_to_status_id !== null) {
@@ -56,7 +55,13 @@ foreach($tweets AS $tweet):
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
 	<?php endif; ?>
 	<q><?php 
-	$tweet_text = $tweet->text; 
+	// Define the text of the tweet
+	if ($isRetweet) {
+		$tweet_text = "RT @" . $tweet->retweeted_status->user->screen_name . " " . $tweet->retweeted_status->text;
+	}
+	else {
+		$tweet_text = $tweet->text;
+	}
 
 	// Link links
 	$tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a href="\1">\1</a>', $tweet_text);
