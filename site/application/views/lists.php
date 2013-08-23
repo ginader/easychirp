@@ -83,7 +83,7 @@ if (count($myLists->lists) != 0) {
 		<form action="/list_add_member" method="post" class="frmListAddMember">
 			<input type="hidden" name="listSlug" value="<?php echo $lists->slug; ?>" />
 			<input type="hidden" name="lstid" value="<?php echo $lists->id; ?>" />
-			<input type="text" size="11" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" />
+			<input type="text" size="11" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" required aria-required="true" />
 			<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-add-submit'); ?></button>
 		</form>
 	</dd>
@@ -95,7 +95,7 @@ if (count($myLists->lists) != 0) {
 	</dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
-	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
+	<dd><a rel="external" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
 	endforeach;
@@ -145,7 +145,7 @@ if (count($subLists->lists) != 0) {
 	<dd><a href="/list_unsubscribe?id=<?php echo $lists->id; ?>" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
-	<dd><a rel="external" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
+	<dd><a rel="external" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
 	endforeach;
