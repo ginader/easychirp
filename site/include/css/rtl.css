@@ -52,6 +52,11 @@ body {
 .tweet.reply,
 .tweet.retweet {
 	background-position: left top;
+	padding-right: 74px;
+}
+/* options */
+.tweet li {
+	float: right;
 }
 
 #profile {
