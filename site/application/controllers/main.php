@@ -1743,9 +1743,16 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function user_timeline()
+	public function user_timeline($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
+
+		if ($screen_name === FALSE)
+		{
+			$screen_name = $_GET['user'];
+			$this->get_params_deprecated();
+		}
+
 
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
@@ -1759,14 +1766,24 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
-		$request_param['screen_name'] = $_GET["user"];
+		$request_param['screen_name'] = $screen_name;
+		$request_param['count'] = TWEETS_PER_PAGE;
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
+
+		// @todo create a page header for user timeline that lets the username be passed in.
+		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline') ." for @" . $screen_name;
+
+		$tweet_form_params = array( 'xliff_reader' => $this->_data['xliff_reader']);
+
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
+			$tweet_form_params, TRUE);
+
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title( $_GET["user"]." | ".$this->xliff_reader->get('nav-timeline') );
+		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('nav-timeline') );
 		$this->layout->set_description('Timeline page');
-		$this->layout->view('user_timeline', $this->_data);
+		$this->layout->view('timeline', $this->_data);
 	}
 
 	/**
@@ -1795,6 +1812,7 @@ class Main extends EC_Controller {
 		$this->_data['ownedLists'] = $this->twitter_lib->get('lists/ownerships', $request_param);
 		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions', $request_param);
 
+		$this->get_params_deprecated();
 		$this->layout->set_title($_GET["id"]." | ".$this->xliff_reader->get('lists-h1'));
 		$this->layout->set_description('User lists page');
 		$this->layout->view('user_lists', $this->_data);
@@ -1822,7 +1840,7 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
-		$request_param['count'] = 40; // the number of tweets on a page	
+		$request_param['count'] = TWEETS_PER_PAGE;
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
 
 		if (FALSE !== $tweet_id)
