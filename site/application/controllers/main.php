@@ -211,7 +211,7 @@ class Main extends EC_Controller {
 
 		if (isset($data->errors[0]->code)) {
 			if ($data->errors[0]->code == 150) {
-				redirect( base_url() . 'direct?action=error-not-followed');
+				redirect( base_url() . 'direct?action=error-not-followed&screen_name='.$request_param['screen_name']);
 			}
 			else {
 				redirect( base_url() . 'direct?action=error-other&msg='.$data->errors[0]->message);
