@@ -42,8 +42,7 @@ define('YEAR_IN_SECONDS',  365 * DAY_IN_SECONDS);
 | These control the UI/API settings for Twitter
 |
 */
-define('TWEETS_PER_PAGE', 40);
-
+define('TWEETS_PER_PAGE', 30);
 
 /*
 |--------------------------------------------------------------------------

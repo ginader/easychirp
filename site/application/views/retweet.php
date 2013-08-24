@@ -1,22 +1,15 @@
 <?php
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "retweet_created") {
-		//echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('msg-followed-user').'</div>';
-		echo '<div class="msgBoxPos rounded">The retweet has been created.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-tweet-rt-alert-added').'</div>';
 	}
 	elseif ($_GET["action"] == "retweet_destroyed") {
-		echo '<div class="msgBoxPos rounded">The retweet has been undone.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-tweet-rt-alert-removed').'</div>';
 	}
 }
 ?>
 
-<h1 class="rounded"><?php echo $xliff_reader->get('retweet-h1'); ?></h1>
-
-<div>
-	<form action="/retweet/create/<?php echo $id; ?>/false" method="get">
-		<button type="submit">Retweet Now</button>
-	</form>
-</div>
+<h1 class="rounded" style="margin-bottom: 1rem;"><?php echo $xliff_reader->get('retweet-h1'); ?></h1>
 
 <?php
 echo $tweets;

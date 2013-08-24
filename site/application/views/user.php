@@ -138,13 +138,13 @@ if (isset($_GET["action"])) {
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
 		<dd><a href="/user_lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
 
-		<dt><?php echo $xliff_reader->get('nav-retweets'); ?></dt>
-		<dd><a href="#">retweets by <?php echo $user->screen_name; ?></a><?php /*; <a href="#">retweets to <?php echo $user->screen_name; ?>*/?></a></dd>
+		<?php /* <dt><?php echo $xliff_reader->get('nav-retweets'); ?></dt>
+		<dd><a href="#">retweets by <?php echo $user->screen_name; ?></a></dd> */?>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-bg-image'); ?></dt>
 		<dd><?php
 			if ( isset( $user->profile_background_image_url )) {
-				echo '<a href="' . $user->profile_background_image_url . '" target="_blank">' . $xliff_reader->get('profile-view-image') . '</a> ' . $xliff_reader->get('profile-no-alt');
+				echo '<a href="' . $user->profile_background_image_url . '" rel="external" target="_blank">' . $xliff_reader->get('profile-view-image') . '</a> ' . $xliff_reader->get('profile-no-alt');
 			}
 			else {
 				echo $xliff_reader->get('profile-no-img');
@@ -155,5 +155,4 @@ if (isset($_GET["action"])) {
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('profile-h2-latest'); ?></h2>
 
-<h2 class='alert'>CAN WE USE TWEET FRAGMENT HERE?!</h2>
-
+<?php echo $tweets; ?>

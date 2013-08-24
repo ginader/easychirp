@@ -52,7 +52,7 @@ if (isset($_GET["action"])) {
 <div class="p-row-r">
 	<div class="p-col-1-2">
 
-<div class="box1 rounded twList" style="margin-top:0;">
+<div class="box1 rounded twList" style="margin-top: 0;" id="myLists" data-msg-list-added="The user was added to the list.">
 	<h2><?php echo $xliff_reader->get('lists-h2-my'); ?></h2>
 
 <?php
@@ -73,14 +73,14 @@ if (count($myLists->lists) != 0) {
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
 	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
-	<dd><?php echo $lists->member_count; ?></dd>
+	<dd id="memCnt"><?php echo $lists->member_count; ?></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
 
 	<dt class="twListDtAdj"><label for="add<?php echo $lists->id; ?>"><?php echo $xliff_reader->get('lists-add-mem'); ?></label></dt>
 	<dd>
-		<form action="/list_add_member" method="post" class="frmListAddMember">
+		<form action="/list_add_member/false" method="post" class="frmListAddMember">
 			<input type="hidden" name="listSlug" value="<?php echo $lists->slug; ?>" />
 			<input type="hidden" name="lstid" value="<?php echo $lists->id; ?>" />
 			<input type="text" size="11" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" required aria-required="true" />

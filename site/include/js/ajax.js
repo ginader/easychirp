@@ -131,3 +131,83 @@ $('a[href*="direct_delete"]').click(function(e) {
 	})
 });
 
+// Ajax for adding a member to a list
+$('.frmListAddMember').submit(function(e) {
+
+	e.preventDefault();
+
+	var url_send = "http://easychirp.local/list_add_member/true";
+	var data = $(this).serialize();
+	var AlertAdded = $("#myLists").attr("data-msg-list-added");
+
+	$.ajax({
+		type: "POST",
+		url: url_send,
+		data: data,
+		success: function(response) {
+			alert(AlertAdded);
+			var ddMemCnt = parseInt( $("#memCnt").html() , 10) + 1;
+			$("#memCnt").html(ddMemCnt);
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		}
+	});
+});
+
+// Ajax for creating a retweet // will do destroying later
+$('a[href*="retweet_"]').click(function(e) {
+	e.preventDefault();
+
+	var a = $(this);
+	var url_replace = this.href;
+	var url_send = this.href.replace("false","true");
+	var txt = {};
+	txt.MakeRt       = $("#main").attr("data-rt-make"); //"";
+	txt.RemoveRt     = $("#main").attr("data-rt-remove"); //"";
+	txt.AlertAdded   = $("#main").attr("data-rt-alert-added"); //"";
+	txt.AlertRemoved = $("#main").attr("data-rt-alert-removed"); //"";
+
+	//alert(txt.MakeRt + " " + txt.RemoveRt + " " + txt.AlertAdded + " " + txt.AlertRemoved);
+	//return false;
+
+	if (url_replace.indexOf("create") != -1) {
+		$.ajax({
+			url: url_send,
+			success: function(response) {
+				alert(txt.AlertAdded);
+				
+				$(a).addClass("retweeted");
+
+				//url_replace = url_replace.replace(/create/,"destroy");
+				//$(a).attr("href", url_replace);
+				$(a).removeAttr("href");
+
+				//$(a).attr("title", txt.RemoveRt);
+				$(a).attr("title", "retweeted");
+			},
+			error: function(xhr) {
+				alert('Error. Status = ' + xhr.status);
+			}
+		})
+	}
+	// else {
+	// 	$.ajax({
+	// 		url: url_send,
+	// 		success: function(response) {
+	// 			alert(txt.AlertRemoved);
+				
+	// 			$(a).removeClass("favorited");
+
+	// 			url_replace = url_replace.replace(/destroy/,"create");
+	// 			$(a).attr("href", url_replace);
+
+	// 			$(a).attr("title", txt.MakeFav);
+	// 		},
+	// 		error: function(xhr) {
+	// 			alert('Error. Status = ' + xhr.status);
+	// 		}
+	// 	})
+	// }
+});
+
