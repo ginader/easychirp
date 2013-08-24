@@ -17,22 +17,27 @@ $index = 0;
 
 ?>
 <div id="timeline">
-<?php 
+<?php
 
 if (isset($tweets) && sizeof($tweets) > 0):
- 
+
 $i = sizeof($tweets) - 1;
-$last_id = $tweets[$i]->id; 
+$last_id = $tweets[$i]->id;
+
 
 foreach($tweets AS $tweet):
 
-	$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013	
+	$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
 
 	// http://www.php.net/manual/en/datetime.createfromformat.php
-	$twitter_date_format = 'D M d H:i:s P Y';
+	$twitter_date_format = 'D M d H:i:s e Y';
+	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
+	$tweet_date->timezone = $utc_offset;
 
-	$tweet_date = DateTime::createFromFormat($twitter_date_format, $tweet->created_at);
-	$date = $tweet_date->format('M d, h:mA'); // Jan 1, 3:50 pm
+	$date_seconds = (int) $tweet_date->format('U'); // get Unix Epoch seconds
+
+	// http://www.php.net/manual/en/function.strftime.php
+	$date = strftime('%b %d, %I:%M %p %z', $date_seconds);	// Jan 1, 3:50 pm
 
 	//check if this tweet is a reply
 	$isReply = false;
@@ -54,7 +59,7 @@ foreach($tweets AS $tweet):
 	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
 	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
 	<?php endif; ?>
-	<q><?php 
+	<q><?php
 	// Define the text of the tweet
 	if ($isRetweet) {
 		$tweet_text = "RT @" . $tweet->retweeted_status->user->screen_name . " " . $tweet->retweeted_status->text;
@@ -68,14 +73,14 @@ foreach($tweets AS $tweet):
 
 	// Link @usernames
 	$tweet_text = preg_replace('/@+([-_0-9a-zA-Z]+)/', '<a href="/user?id=$1">$0</a>', $tweet_text);
-	
+
 	// Link #hashtags
 	$tweet_text = preg_replace('/\B#([-_0-9a-zA-Z]+)/', '<a href="/search_results?query=%23$1" title="search this term">$0</a>', $tweet_text);
 
-	echo $tweet_text; 
+	echo $tweet_text;
 	?></q>
 	<?php if (isset($tweet->user)): ?>
-	<p><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user?id=<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> | 
+	<p><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user?id=<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> |
 	<?php endif; ?>
 		<?php
 		// Is reply or retweet?
@@ -110,8 +115,8 @@ foreach($tweets AS $tweet):
 			?></li>
 			<li><a href="/reply/<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
 			<li><a href="/reply_all/<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
-			<li><?php 
-				if ($tweet->retweeted === false) { 
+			<li><?php
+				if ($tweet->retweeted === false) {
 					echo '<a href="/retweet?id=' . $tweet->id . '" data-icon="&#x3f;" title="' . $xliff_reader->get('gbl-tweet-retweet') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-retweet') . '</span></a>';
 				}
 				else {
@@ -137,13 +142,15 @@ foreach($tweets AS $tweet):
 	</div>
 	<?php endif; ?>
 </div>
-<?php 
+<?php
 
 $index++;
-endforeach; 
+endforeach;
+	if (isset($paginate) && $paginate):
 ?>
 	<a href="/timeline/<?php echo $last_id; ?>" class="button load_more" >Get Older Tweets</a>
 <?php
+	endif;
 endif;
 ?>
 </div>

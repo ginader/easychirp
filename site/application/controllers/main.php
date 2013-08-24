@@ -26,51 +26,51 @@ class Main extends EC_Controller {
 
 		if (isset($session_data['logged_in']))
 		{
-			$this->_data['logged_in'] = $session_data['logged_in']; 
+			$this->_data['logged_in'] = $session_data['logged_in'];
 		}
 		else
 		{
-			$this->_data['logged_in'] = FALSE; 
+			$this->_data['logged_in'] = FALSE;
 		}
 
 		if (isset($session_data['follower_count']))
 		{
-			$this->_data['follower_count'] = $session_data['follower_count']; 
+			$this->_data['follower_count'] = $session_data['follower_count'];
 		}
 		else
 		{
-			$this->_data['follower_count'] = 0; 
-		}
-
-
-		if (isset($session_data['follower_count']))
-		{
-			$this->_data['following_count'] = $session_data['following_count']; 
-		}
-		else
-		{
-			$this->_data['following_count'] = 0; 
+			$this->_data['follower_count'] = 0;
 		}
 
 
 		if (isset($session_data['follower_count']))
 		{
-			$this->_data['tweet_count'] = $session_data['tweet_count']; 
+			$this->_data['following_count'] = $session_data['following_count'];
 		}
 		else
 		{
-			$this->_data['tweet_count'] = 0; 
+			$this->_data['following_count'] = 0;
+		}
+
+
+		if (isset($session_data['follower_count']))
+		{
+			$this->_data['tweet_count'] = $session_data['tweet_count'];
+		}
+		else
+		{
+			$this->_data['tweet_count'] = 0;
 		}
 
 
 		if (isset($session_data['screen_name']))
 		{
-			$this->_data['screen_name'] =  $session_data['screen_name']; 
+			$this->_data['screen_name'] =  $session_data['screen_name'];
 		}
 
-		if (isset($session_data['time_zone'])) 
-		{ 
-			$this->_data['time_zone'] =  $session_data['time_zone']; 
+		if (isset($session_data['time_zone']))
+		{
+			$this->_data['time_zone'] =  $session_data['time_zone'];
 		}
 
 		$this->layout->set_logged_in($this->_data['logged_in']);
@@ -92,17 +92,17 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$easychirp_statuses = $this->twitter_lib->twitteroauth->get( 
-			$this->config->item('tw_url_home_timeline') 
+		$easychirp_statuses = $this->twitter_lib->twitteroauth->get(
+			$this->config->item('tw_url_home_timeline')
 		);
-		
+
 		if ( is_object($easychirp_statuses) && $easychirp_statuses->errors)
 		{
 			$this->_data['error'] = $easychirp_statuses->errors[0]->message;
 		}
 		$this->_data['easychirp_statuses'] = $easychirp_statuses;
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
-		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
 		$this->layout->set_title( $this->xliff_reader->get('home') );
 		$this->layout->set_description('Homepage description');
 		$this->layout->set_skip_to_sign_in( TRUE );
@@ -115,8 +115,8 @@ class Main extends EC_Controller {
 	 * @return void
 	 */
 	public function about()
-	{	
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+	{
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('about-h1') );
 		$this->layout->set_description('All about Easy Chirp 2');
@@ -130,7 +130,7 @@ class Main extends EC_Controller {
 	*/
 	public function articles()
 	{
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('articles-h1') );
 		$this->layout->set_description('Articles, user feedback, books, wikis, and awards listed here.');
@@ -143,7 +143,7 @@ class Main extends EC_Controller {
 	public function blocking($screen_name, $state = FALSE, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -157,7 +157,7 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['screen_name'] = $screen_name;
-		
+
 		if ($state == "create") {
 			$post_url = "blocks/create";
 			$action = "block_created";
@@ -180,8 +180,8 @@ class Main extends EC_Controller {
 	public function direct()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Send a direct message.');
@@ -191,8 +191,8 @@ class Main extends EC_Controller {
 	public function direct_send()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -206,7 +206,7 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['screen_name'] = $_POST['tweep'];
 		$request_param['text'] = $_POST['message'];
-		
+
 		$data = $this->twitter_lib->post('direct_messages/new', $request_param);
 
 		if (isset($data->errors[0]->code)) {
@@ -225,8 +225,8 @@ class Main extends EC_Controller {
 	public function direct_delete($id, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -240,7 +240,7 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['id'] = $id;
 		$request_param['include_entities'] = "false";
-		
+
 		$data = $this->twitter_lib->post('direct_messages/destroy', $request_param);
 
 		if ($ajax == "true") {
@@ -254,8 +254,8 @@ class Main extends EC_Controller {
 	public function direct_inbox()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -266,11 +266,11 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['include_entities'] = false;
 
 		$dms = $this->twitter_lib->get('direct_messages', $request_param);
-		$this->_data['dms'] = $this->load->view('fragments/dm', 
+		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-inbox') .' | '. $this->xliff_reader->get('dm-h1') );
@@ -281,8 +281,8 @@ class Main extends EC_Controller {
 	public function direct_sent()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -293,11 +293,11 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['include_entities'] = false;
 
 		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
-		$this->_data['dms'] = $this->load->view('fragments/dm', 
+		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-sent') .' | '. $this->xliff_reader->get('dm-h1') );
@@ -308,8 +308,8 @@ class Main extends EC_Controller {
 	public function favorites()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -327,7 +327,7 @@ class Main extends EC_Controller {
 		}
 
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('favorites-h1') );
@@ -341,7 +341,7 @@ class Main extends EC_Controller {
 	public function favoriting($tweet_id, $state = FALSE, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -355,7 +355,7 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['id'] = $tweet_id;
-		
+
 		if ($state == "create") {
 			$post_url = "favorites/create";
 			$action = "favorite_created";
@@ -382,7 +382,7 @@ class Main extends EC_Controller {
 	*/
 	public function features()
 	{
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('features-h1') );
 		$this->layout->set_description('General and accessibility features of Easy Chirp.');
@@ -397,8 +397,8 @@ class Main extends EC_Controller {
 	public function followers()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -409,7 +409,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['skip_status'] =  true;
 		if ( isset($_GET["id"])) {
 			$request_param['screen_name'] = $_GET["id"];
@@ -445,7 +445,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['skip_status'] =  true;
 		if ( isset($_GET["id"])) {
 			$request_param['screen_name'] = $_GET["id"];
@@ -467,7 +467,7 @@ class Main extends EC_Controller {
 	public function manage_follow_user($screen_name, $state = FALSE, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -481,7 +481,7 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['screen_name'] = $screen_name;
-		
+
 		if ($state == "follow") {
 			$post_url = "friendships/create";
 			$action = "followed";
@@ -508,7 +508,7 @@ class Main extends EC_Controller {
 	{
 		$this->redirect_if_not_logged_in();
 
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('nav-goto-user') );
 		$this->layout->set_description('Go to user');
@@ -542,7 +542,7 @@ class Main extends EC_Controller {
 	{
 		$this->redirect_if_not_logged_in();
 
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -581,7 +581,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['list_id'] =  $_GET['id'];
 		$this->_data['list'] = $this->twitter_lib->get('lists/show', $request_param);
 
@@ -596,7 +596,7 @@ class Main extends EC_Controller {
 	public function list_edit_action()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -613,7 +613,7 @@ class Main extends EC_Controller {
 		$request_param['name'] = $_POST["txt_listName"];
 		$request_param['mode'] = $_POST["mode"];
 		$request_param['description'] = $_POST["txt_listDesc"];
-		
+
 		$tweet = $this->twitter_lib->post('lists/update', $request_param);
 
 		redirect( base_url() . 'list_edit?action=edited&id='.$_POST["list_id"]);
@@ -625,7 +625,7 @@ class Main extends EC_Controller {
 	public function list_create($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		// Validation
@@ -646,7 +646,7 @@ class Main extends EC_Controller {
 		$request_param['name'] = $_POST["txt_listName"];
 		$request_param['mode'] = $_POST["mode"];
 		$request_param['description'] = $_POST["txt_listDesc"];
-		
+
 		$tweet = $this->twitter_lib->post('lists/create', $request_param);
 		if ($ajax) {
 			echo json_encode($tweet);
@@ -662,7 +662,7 @@ class Main extends EC_Controller {
 	public function list_add_member($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		// Validation
@@ -683,7 +683,7 @@ class Main extends EC_Controller {
 		$request_param['screen_name'] = $_POST["userNameToAdd"];
 		$request_param['list_id'] = $_POST["lstid"];
 		//$request_param[''] = $_POST[""];
-		
+
 		$tweet = $this->twitter_lib->post('lists/members/create', $request_param);
 		if ($ajax) {
 			echo json_encode($tweet);
@@ -699,8 +699,8 @@ class Main extends EC_Controller {
 	public function list_delete($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -711,9 +711,9 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['list_id'] = $_GET["id"];
-		
+
 		$tweet = $this->twitter_lib->post('lists/destroy', $request_param);
 		if ($ajax) {
 			echo json_encode($tweet);
@@ -729,8 +729,8 @@ class Main extends EC_Controller {
 	public function list_subscribe($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -741,9 +741,9 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['list_id'] = $_GET["id"];
-		
+
 		$tweet = $this->twitter_lib->post('lists/subscribers/create', $request_param);
 		if ($ajax) {
 			echo json_encode($tweet);
@@ -759,8 +759,8 @@ class Main extends EC_Controller {
 	public function list_unsubscribe($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -771,9 +771,9 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['list_id'] = $_GET["id"];
-		
+
 		$tweet = $this->twitter_lib->post('lists/subscribers/destroy', $request_param);
 		if ($ajax) {
 			echo json_encode($tweet);
@@ -803,11 +803,11 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['list_id'] =  $_GET['id'];
 
 		$tweets = $this->twitter_lib->get('lists/statuses', $request_param);
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->_data['list_data'] = $this->twitter_lib->get('lists/show', $request_param);
@@ -826,7 +826,7 @@ class Main extends EC_Controller {
 	public function mentions()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -838,10 +838,10 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('mentions-h1') );
@@ -869,10 +869,10 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('mytweets-h1') );
@@ -883,7 +883,7 @@ class Main extends EC_Controller {
 	/**
 	 * Handles the callback from twitter
 	 *
-	 * @param string $oauth_token A $_GET parameter 
+	 * @param string $oauth_token A $_GET parameter
 	 * @param string $oauth_verifier A $_GET parameter
 	 * @return void
 	 */
@@ -891,43 +891,43 @@ class Main extends EC_Controller {
 	{
 		$this->load->library('twitter_lib');
 
-		$oauth_token = $this->input->get('oauth_token', FALSE);	
-		$oauth_verifier = $this->input->get('oauth_verifier', FALSE);	
+		$oauth_token = $this->input->get('oauth_token', FALSE);
+		$oauth_verifier = $this->input->get('oauth_verifier', FALSE);
 
 		$callback_url = base_url() . $this->config->item('tw_callback_url');
-		$consumer_key = $this->config->item('consumer_key'); 
-		$consumer_secret = $this->config->item('consumer_secret'); 
+		$consumer_key = $this->config->item('consumer_key');
+		$consumer_secret = $this->config->item('consumer_secret');
 
 		$param = array();
-		$param[] = $consumer_key; 
-		$param[] = $consumer_secret; 
-		$this->twitter_lib->connect($param);	
+		$param[] = $consumer_key;
+		$param[] = $consumer_secret;
+		$this->twitter_lib->connect($param);
 
 		$oauth_access_token = $this->twitter_lib->twitteroauth->accessTokenURL();
-		 
-		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
-		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
-		
+
+		$sig_method = new OAuthSignatureMethod_HMAC_SHA1();
+		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url);
+
 		$oauth_token_secret = $oauth_verifier;
-		$acc_token = new OAuthConsumer($oauth_token, $oauth_token_secret, 1); 
-			                 
+		$acc_token = new OAuthConsumer($oauth_token, $oauth_token_secret, 1);
 
-		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $acc_token, "GET", $oauth_access_token); 
-		$acc_req->sign_request($sig_method, $test_consumer, $acc_token); 
-							  
 
-		$oc = new OAuthCurl(); 
-		$reqData = $oc->fetchData("{$acc_req}&oauth_verifier={$oauth_verifier}"); 
-		
+		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $acc_token, "GET", $oauth_access_token);
+		$acc_req->sign_request($sig_method, $test_consumer, $acc_token);
+
+
+		$oc = new OAuthCurl();
+		$reqData = $oc->fetchData("{$acc_req}&oauth_verifier={$oauth_verifier}");
+
 		$accOAuthData = array();
-		parse_str($reqData['content'], $accOAuthData); 
-	
+		parse_str($reqData['content'], $accOAuthData);
+
 		if ( empty($accOAuthData['screen_name']) ){
 			error_log('error callback - Failed login!');
 
 			$session_data = array();
-			$session_data['logged_in'] = FALSE; 
-				
+			$session_data['logged_in'] = FALSE;
+
 			$this->session->set_userdata($session_data);
 			redirect( base_url() );
 		}
@@ -936,14 +936,14 @@ class Main extends EC_Controller {
 			$params = array();
 			$params[] = $this->config->item('tw_consumer_key');
 			$params[] = $this->config->item('tw_consumer_secret');
-			$params[] = $accOAuthData['oauth_token']; 
+			$params[] = $accOAuthData['oauth_token'];
 			$params[] = $accOAuthData['oauth_token_secret'];
 
 			$this->load->library('twitter_lib');
 			$this->twitter_lib->connect($params);
 			$this->twitter_lib->set_verify_peer( TRUE );
 
-			$request_param = array();	
+			$request_param = array();
 			$request_param['screen_name'] = $accOAuthData['screen_name'];
 			$user_data = $this->twitter_lib->get('users/show', $request_param );
 
@@ -954,24 +954,26 @@ class Main extends EC_Controller {
 
 			error_log('successful callback');
 			$session_data = array();
-			$session_data['user_oauth_token']        = $accOAuthData['oauth_token']; 
-			$session_data['user_oauth_token_secret'] = $accOAuthData['oauth_token_secret']; 
-			$session_data['user_id']                 = $accOAuthData['user_id']; 
-			$session_data['screen_name']             = $accOAuthData['screen_name']; 
-			$session_data['logged_in']               = TRUE; 
+			$session_data['user_oauth_token']        = $accOAuthData['oauth_token'];
+			$session_data['user_oauth_token_secret'] = $accOAuthData['oauth_token_secret'];
+			$session_data['user_id']                 = $accOAuthData['user_id'];
+			$session_data['screen_name']             = $accOAuthData['screen_name'];
+			$session_data['logged_in']               = TRUE;
+			$session_data['utc_offset']              = -18000; // EST 5 hours behind UTC
 
 			if (isset($user_data->followers_count)){
-				$session_data['follower_count']  = $user_data->followers_count; 
-				$session_data['following_count'] = $user_data->friends_count; 
-				$session_data['tweet_count']     = $user_data->statuses_count; 
-				$session_data['real_name']       = $user_data->name; 
-				$session_data['time_zone']       = $user_data->time_zone; 
-				$session_data['user_id']         = $user_data->id_str; 
+				$session_data['follower_count']  = $user_data->followers_count;
+				$session_data['following_count'] = $user_data->friends_count;
+				$session_data['tweet_count']     = $user_data->statuses_count;
+				$session_data['real_name']       = $user_data->name;
+				$session_data['time_zone']       = $user_data->time_zone;
+				$session_data['utc_offset']      = $user_data->utc_offset;
+				$session_data['user_id']         = $user_data->id_str;
 			}
-				
+
 			$this->session->set_userdata($session_data);
 
-			$next_page = base_url() . 'timeline'; 
+			$next_page = base_url() . 'timeline';
 
 			redirect( $next_page );
 		}
@@ -986,7 +988,7 @@ class Main extends EC_Controller {
 	public function profile()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -998,7 +1000,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 
 		$profile = $this->twitter_lib->get('users/show', $request_param );
@@ -1007,7 +1009,7 @@ class Main extends EC_Controller {
 		$request_param['count'] = 10; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title($this->xliff_reader->get('profile-h1'));
@@ -1021,7 +1023,7 @@ class Main extends EC_Controller {
 	public function profile_edit()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1033,7 +1035,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-	 	$request_param = array();	
+	 	$request_param = array();
 	 	$request_param['screen_name'] =  $this->session->userdata('screen_name');
 	 	$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param);
 
@@ -1052,7 +1054,7 @@ class Main extends EC_Controller {
 	public function profile_edit_action()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1081,7 +1083,7 @@ class Main extends EC_Controller {
 	public function profile_avatar_action()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		// $params = array();
@@ -1122,7 +1124,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['id'] =  $tweet_id;
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
@@ -1130,16 +1132,20 @@ class Main extends EC_Controller {
 		$tweets[] = $data;
 		$reply_to = 'RT @' . $data->user->screen_name . ': ' . $data->text;
 		$this->_data['page_heading'] = $this->xliff_reader->get('quote-h1');
-		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
-			array(  
-			'expand' => 1, 
-			'single' => '0', 
-			'reply_to' => $reply_to, 
-			'xliff_reader' => $this->_data['xliff_reader']), 
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
+			array(
+			'expand' => 1,
+			'single' => '0',
+			'reply_to' => $reply_to,
+			'xliff_reader' => $this->_data['xliff_reader']),
 			TRUE);
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
+			array(
+				'tweets' => $tweets,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('quote-h1') );
 		$this->layout->set_description('Quote a tweet.');
@@ -1149,8 +1155,8 @@ class Main extends EC_Controller {
 	/**
 	* Manages the reply pages - /reply and /reply_all
 	*
-	* @param integer $tweet_id 
-	* @param string|boolean $tweet_id the string 'all' will include the name of each user mentioned. Default is boolean false. 
+	* @param integer $tweet_id
+	* @param string|boolean $tweet_id the string 'all' will include the name of each user mentioned. Default is boolean false.
 	* @return void
 	*/
 	public function reply($tweet_id, $all = FALSE)
@@ -1168,7 +1174,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['id'] =  $tweet_id;
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
@@ -1180,7 +1186,7 @@ class Main extends EC_Controller {
 		if ($all !== FALSE)
 		{
 			foreach ($data->entities->user_mentions AS $user){
-				$twitter_ids[] = $user->screen_name;	
+				$twitter_ids[] = $user->screen_name;
 			}
 		}
 
@@ -1194,17 +1200,18 @@ class Main extends EC_Controller {
 
 		$this->_data['page_heading'] = $this->xliff_reader->get('reply-h1');
 
-		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
-			array( 
-			'expand' => 1, 
-			'reply_to' => $reply_to, 
-			'in_reply_to' => $in_reply_to, 
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
+			array(
+			'expand' => 1,
+			'reply_to' => $reply_to,
+			'in_reply_to' => $in_reply_to,
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
-			array( 
-			'tweets' => $tweets, 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
+			array(
+			'tweets' => $tweets,
+			'utc_offset' => $this->session->userdata('utc_offset'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1233,14 +1240,14 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['id'] =  $_GET["id"];
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
 		$tweets[] = $data;
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 		$this->_data['id'] = $request_param['id'];
 
@@ -1255,7 +1262,7 @@ class Main extends EC_Controller {
 	public function retweet_action($tweet_id, $state = FALSE, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1266,7 +1273,7 @@ class Main extends EC_Controller {
 
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
-		
+
 		if ($state == "create") {
 			$post_url = "statuses/retweet/".$tweet_id;
 			$action = "retweet_created";
@@ -1292,7 +1299,7 @@ class Main extends EC_Controller {
 	public function report_spam($screen_name, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1325,8 +1332,8 @@ class Main extends EC_Controller {
 	public function retweets($retweet_type = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -1337,7 +1344,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 
 		$this->layout->set_title( $this->xliff_reader->get('nav-retweets') );
@@ -1361,12 +1368,12 @@ class Main extends EC_Controller {
 			$tweets = array();
 		}
 
-		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
 			array( 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->_data['num'] = count($tweets);
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array('type' => $retweet_type, 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		//$this->layout->set_title('Retweets'); // See logic above
@@ -1375,10 +1382,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Tweets authored by others that I retweeted  
+	* Tweets authored by others that I retweeted
 	*
 	* @param array $params API query parameters
-	* @return array 
+	* @return array
 	* @see https://dev.twitter.com/docs/api/1.1
 	*/
 	public function retweets_by_me($params)
@@ -1403,26 +1410,26 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Things that I tweeted that someone else retweeted 
+	* Things that I tweeted that someone else retweeted
 	*
 	* @param array $params API query parameters
-	* @return array 
+	* @return array
 	*/
 	public function retweets_of_me($params)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $params );
 
 		return $tweets;
 	}
 
 	/**
-	* Tweets authored by other people retweeted by peope I follow 
+	* Tweets authored by other people retweeted by peope I follow
 	*
 	* @param array $params API query parameters
-	* @return array 
-	* 
+	* @return array
+	*
 	* the method was removed in api 1.1 so instead call home_timeline and filter for RTs
 	* @see https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
 	*/
@@ -1447,7 +1454,7 @@ class Main extends EC_Controller {
 
 		return $tweets;
 	}
-	
+
 	/**
 	 * Manage the search page - /search
 	 *
@@ -1456,7 +1463,7 @@ class Main extends EC_Controller {
 	public function search()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1480,7 +1487,7 @@ class Main extends EC_Controller {
 	public function search_save()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1505,7 +1512,7 @@ class Main extends EC_Controller {
 	public function search_delete($id)
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1527,7 +1534,7 @@ class Main extends EC_Controller {
 	public function search_results()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1553,7 +1560,7 @@ class Main extends EC_Controller {
 		$this->_data['num'] = count($data->statuses);
 
 		$tweets = $data->statuses;
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('search-results-h1') );
@@ -1567,7 +1574,7 @@ class Main extends EC_Controller {
 	public function search_users()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1612,7 +1619,7 @@ class Main extends EC_Controller {
 		$params[] = $this->config->item('tw_consumer_secret');
 		$params[] = $this->config->item('tw_access_key');
 		$params[] = $this->config->item('tw_access_secret');
-		
+
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
@@ -1621,40 +1628,40 @@ class Main extends EC_Controller {
 
 
 		$callback_url = base_url() . $this->config->item('tw_callback_url');
-		$consumer_key =  $this->config->item('tw_consumer_key'); 
-		$consumer_secret = $this->config->item('tw_consumer_secret'); 
+		$consumer_key =  $this->config->item('tw_consumer_key');
+		$consumer_secret = $this->config->item('tw_consumer_secret');
 
-		// "http://twitter.com/oauth/request_token"; 
-		$oauth_request_token = $this->twitter_lib->twitteroauth->requestTokenURL(); 
-		$oauth_authorize = "http://twitter.com/oauth/authorize"; 
+		// "http://twitter.com/oauth/request_token";
+		$oauth_request_token = $this->twitter_lib->twitteroauth->requestTokenURL();
+		$oauth_authorize = "http://twitter.com/oauth/authorize";
 		$oauth_access_token = "http://twitter.com/oauth/access_token";
 
-		$sig_method = new OAuthSignatureMethod_HMAC_SHA1(); 
+		$sig_method = new OAuthSignatureMethod_HMAC_SHA1();
 		error_log('callback_url=' . $callback_url);
-		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url); 
-		 
-		$req = OAuthRequest::from_consumer_and_token($test_consumer, NULL, "GET", $oauth_request_token);     
-		$req->sign_request($sig_method, $test_consumer, NULL); 
-		  
+		$test_consumer = new OAuthConsumer($consumer_key, $consumer_secret, $callback_url);
 
-		$oc = new OAuthCurl(); 
-		$reqData = $oc->fetchData($req->to_url()); 
-		                   
-		parse_str($reqData['content'], $reqOAuthData); 
-							
+		$req = OAuthRequest::from_consumer_and_token($test_consumer, NULL, "GET", $oauth_request_token);
+		$req->sign_request($sig_method, $test_consumer, NULL);
+
+
+		$oc = new OAuthCurl();
+		$reqData = $oc->fetchData($req->to_url());
+
+		parse_str($reqData['content'], $reqOAuthData);
+
 		$req_token = new OAuthConsumer($reqOAuthData['oauth_token'], $reqOAuthData['oauth_token_secret'], $callback_url);
-															 
 
-		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $req_token, "GET", $oauth_authorize); 
-		$acc_req->sign_request($sig_method, $test_consumer, $req_token); 
-		
-		$session_data = array();	
-		$session_data['oauth_token'] = $reqOAuthData['oauth_token']; 
-		$session_data['oauth_token_secret'] = $reqOAuthData['oauth_token_secret']; 
-		
+
+		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $req_token, "GET", $oauth_authorize);
+		$acc_req->sign_request($sig_method, $test_consumer, $req_token);
+
+		$session_data = array();
+		$session_data['oauth_token'] = $reqOAuthData['oauth_token'];
+		$session_data['oauth_token_secret'] = $reqOAuthData['oauth_token_secret'];
+
 		$this->session->set_userdata($session_data);
-				   
-		header("Location: $acc_req"); 
+
+		header("Location: $acc_req");
 	}
 
 	/**
@@ -1666,14 +1673,14 @@ class Main extends EC_Controller {
 	 */
 	public function sign_out()
 	{
-		$update_data = array();	
-		$update_data['logged_in'] = FALSE; 
+		$update_data = array();
+		$update_data['logged_in'] = FALSE;
 		$this->session->set_userdata($update_data);
-		
-		$delete_data = array();	
-		$delete_data['screen_name'] = ''; 
+
+		$delete_data = array();
+		$delete_data['screen_name'] = '';
 		$this->session->set_userdata($delete_data);
-		
+
 		redirect( base_url() );
 	}
 
@@ -1698,7 +1705,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['id'] =  $_GET["id"];
 
 		// Get general data
@@ -1708,7 +1715,7 @@ class Main extends EC_Controller {
 		// Put data in array to then render in tweet fragment
 		$tweets = array();
 		$tweets[] = $data;
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title('View Single Tweet'); // ****** NEED TO DO i18n ******
@@ -1740,8 +1747,8 @@ class Main extends EC_Controller {
 	public function tools()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title($this->xliff_reader->get('nav-tools'));
 		$this->layout->set_description('Tools including search, lists and trends.');
@@ -1756,7 +1763,7 @@ class Main extends EC_Controller {
 	public function trends()
 	{
 		$this->redirect_if_not_logged_in();
-		
+
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
@@ -1787,8 +1794,8 @@ class Main extends EC_Controller {
 	public function user()
 	{
 		$this->redirect_if_not_logged_in();
-		
-		$this->_data['xliff_reader'] = $this->xliff_reader; 	
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -1799,7 +1806,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['screen_name'] =  $_GET["id"];
 		$this->_data['user'] = $this->twitter_lib->get('users/show', $request_param);
 
@@ -1839,7 +1846,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['screen_name'] = $screen_name;
 		$request_param['count'] = TWEETS_PER_PAGE;
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
@@ -1852,7 +1859,7 @@ class Main extends EC_Controller {
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
 			$tweet_form_params, TRUE);
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
 		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('nav-timeline') );
@@ -1913,7 +1920,7 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
+		$request_param = array();
 		$request_param['count'] = TWEETS_PER_PAGE;
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
 
@@ -1925,7 +1932,7 @@ class Main extends EC_Controller {
 			{
 				$reply_to = '@' . $tweet_id . ' ';
 			}
-			else 
+			else
 			{
 				error_log('tweet_id=' . $tweet_id);
 				$request_param['max_id'] = $tweet_id;
@@ -1935,9 +1942,8 @@ class Main extends EC_Controller {
 
 
 		$tweets = $this->twitter_lib->get('statuses/home_timeline', $request_param );
-		
-		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline');
 
+		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline');
 
 		$tweet_form_params = array( 'xliff_reader' => $this->_data['xliff_reader']);
 		if (isset($reply_to))
@@ -1947,11 +1953,17 @@ class Main extends EC_Controller {
 		}
 
 
-		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
 			$tweet_form_params, TRUE);
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+		$utc_offset = $this->session->userdata('time_zone');
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
+			array(
+				'paginate' => 1,
+				'tweets' => $tweets,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']),
+			TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('nav-timeline') );
 		$this->layout->set_description('Timeline page');
