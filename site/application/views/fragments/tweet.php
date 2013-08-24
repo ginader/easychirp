@@ -112,11 +112,11 @@ foreach($tweets AS $tweet):
 			<li><a href="/reply_all/<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
 			<li><?php 
 				if ($tweet->retweeted === false) { 
-					echo '<a href="/retweet/create/' . $tweet->id . '/false" data-icon="&#x3f;" title="' . $xliff_reader->get('gbl-tweet-make-rt') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-make-rt') . '</span></a>';
+					echo '<a href="/retweet_create/' . $tweet->id . '/false" data-icon="&#x3f;" title="' . $xliff_reader->get('gbl-tweet-make-rt') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-make-rt') . '</span></a>';
 				}
 				else {
 					echo '<a data-icon="&#x3f;" class="retweeted" title="retweeted"><span class="hide">retweeted</span></a>';
-					//echo '<a href="/retweet/destroy/' . $tweet->id . '/false" data-icon="&#x3f;" class="retweeted" title="' . $xliff_reader->get('gbl-tweet-remove-rt') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-remove-rt') . '</span></a>';
+					//echo '<a href="/retweet_destroy/' . $tweet->id . '/false" data-icon="&#x3f;" class="retweeted" title="' . $xliff_reader->get('gbl-tweet-remove-rt') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-remove-rt') . '</span></a>';
 				}
 			?></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
