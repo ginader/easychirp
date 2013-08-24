@@ -96,6 +96,7 @@ $route['timeline/(:any)'] = "main/timeline/$1";
 $route['trends'] = "main/trends";
 $route['user'] = "main/user"; // User details
 $route['user_timeline'] = "main/user_timeline"; // User tweets
+$route['user_timeline/(:any)'] = "main/user_timeline/$1"; // User tweets
 $route['user_lists'] = "main/user_lists";
 $route['default_controller'] = "main";
 $route['404_override'] = '';
