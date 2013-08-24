@@ -78,6 +78,16 @@
         <target>El favorito se ha eliminado.</target>
       </trans-unit>
 
+      <trans-unit id="gbl-tweet-rt-alert-added" datatype="html">
+        <source>The retweet has been created.</source>
+        <target>The retweet has been created.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-rt-alert-removed" datatype="html">
+        <source>The retweet has been undone.</source>
+        <target>The retweet has been undone.</target>
+      </trans-unit>
+
       <trans-unit id="gbl-sure-delete" datatype="html">
         <source>Are you sure you want to delete this item? The action cannot be undone.</source>
         <target>¿Está seguro que desea eliminar este artículo? La acción no se puede deshacer.</target>
@@ -1741,9 +1751,14 @@
         <target>responder a todos</target>
       </trans-unit>
 
-      <trans-unit id="gbl-tweet-retweet" datatype="html">
+      <trans-unit id="gbl-tweet-make-rt" datatype="html">
         <source>retweet</source>
         <target>retweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-remove-rt" datatype="html">
+        <source>remove retweet</source>
+        <target>eliminar retweet</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-quote" datatype="html">
