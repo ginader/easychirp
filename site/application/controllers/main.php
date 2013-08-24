@@ -1004,9 +1004,8 @@ class Main extends EC_Controller {
 		$profile = $this->twitter_lib->get('users/show', $request_param );
 		$this->_data['profile'] = $profile;
 
-
-		$tweets = array();
-		$tweets[] = $profile->status;
+		$request_param['count'] = 10; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
+		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
@@ -1395,7 +1394,7 @@ class Main extends EC_Controller {
 
 		$params['include_rts'] = 'true';
 		$params['exclude_replies'] = 'true';
-		$params['count'] = '60';
+		$params['count'] = TWEETS_PER_PAGE;
 
 		$results = $this->twitter_lib->get('statuses/home_timeline', $params );
 		$tweets = array();
@@ -1503,7 +1502,7 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['count'] = '25';
+		$request_param['count'] = TWEETS_PER_PAGE;
 		if ( isset($_POST["query"]) ) {
 			$request_param['q'] = $_POST["query"];
 		}
