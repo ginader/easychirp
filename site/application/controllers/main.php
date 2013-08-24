@@ -1243,10 +1243,48 @@ class Main extends EC_Controller {
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+		$this->_data['id'] = $request_param['id'];
 
 		$this->layout->set_title( $this->xliff_reader->get('retweet-h1') );
 		$this->layout->set_description('Retweet a tweet.');
 		$this->layout->view('retweet', $this->_data);
+	}
+
+	/**
+	* Creates or removes a retweet - /retweet_action
+	*/
+	public function retweet_action($tweet_id, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+		
+		if ($state == "create") {
+			$post_url = "statuses/retweet/".$tweet_id;
+			$action = "retweet_created";
+		}
+		else {
+			$post_url = "statuses/destroy/".$tweet_id;
+			$action = "retweet_destroyed";
+		}
+
+		$rt = $this->twitter_lib->post($post_url);
+
+		if ($ajax=="true") {
+			echo json_encode($rt);
+		}
+		else {
+			redirect( base_url() . 'retweet?id='.$tweet_id.'&action='.$action);
+		}
 	}
 
 	/**
