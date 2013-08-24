@@ -211,3 +211,56 @@ $('a[href*="retweet_"]').click(function(e) {
 	// }
 });
 
+// Ajax for following/unfollowing a user
+$('a[href*="follow_user"]').click(function(e) {
+	e.preventDefault();
+
+	var a = $(this);
+	var url_replace = this.href;
+	var url_send = this.href.replace("false","true");
+	var txt = {};
+	txt.follow          = $("#userDetails").attr("data-follow");
+	txt.unfollow        = $("#userDetails").attr("data-unfollow");
+	txt.following       = $("#userDetails").attr("data-following");
+	txt.notfollowing    = $("#userDetails").attr("data-not-following");
+	txt.AlertFollowed   = $("#userDetails").attr("data-msg-followed");
+	txt.AlertUnfollowed = $("#userDetails").attr("data-msg-unfollowed");
+
+	if (url_replace.indexOf("unfollow") == -1) {
+		// Follow
+		$.ajax({
+			url: url_send,
+			success: function(response) {
+				alert(txt.AlertFollowed);
+				
+				$(a).html(txt.unfollow);
+				$("#spanFollowCurrent").html(txt.following);
+
+				url_replace = url_replace.replace(/follow_user/,"unfollow_user");
+				$(a).attr("href", url_replace);
+			},
+			error: function(xhr) {
+				alert('Error. Status = ' + xhr.status);
+			}
+		})
+	}
+	else {
+		// Unfollow
+		$.ajax({
+			url: url_send,
+			success: function(response) {
+				alert(txt.AlertUnfollowed);
+				
+				$(a).html(txt.follow);
+				$("#spanFollowCurrent").html(txt.notfollowing);
+
+				url_replace = url_replace.replace(/unfollow_user/,"follow_user");
+				$(a).attr("href", url_replace);
+			},
+			error: function(xhr) {
+				alert('Error. Status = ' + xhr.status);
+			}
+		})
+	}
+});
+

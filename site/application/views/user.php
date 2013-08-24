@@ -23,7 +23,11 @@ if (isset($_GET["action"])) {
 <h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : <?php echo $user->name; ?></h1>
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('user-h2-contact'); ?></h2>
-<div class="box1 rounded no-margin">
+<div id="userDetails" class="box1 rounded no-margin" 
+	data-follow="<?php echo $xliff_reader->get('user-follow'); ?>" data-unfollow="<?php echo $xliff_reader->get('user-unfollow'); ?>" 
+	data-following="<?php echo $xliff_reader->get('user-following'); ?>" data-not-following="<?php echo $xliff_reader->get('user-not-following'); ?>" 
+	data-msg-followed="<?php echo $xliff_reader->get('msg-followed-user'); ?>" data-msg-unfollowed="<?php echo $xliff_reader->get('msg-unfollowed-user'); ?>" 
+>
 	<h3><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="" /> 
 		<?php echo $user->name . " / @" . $user->screen_name; ?>
 	</h3>
@@ -31,10 +35,10 @@ if (isset($_GET["action"])) {
 	<p><?php
 		$isFollowing = $user->following;
 		if ($isFollowing === true) {
-			echo $xliff_reader->get('user-following') . ' (<a href="unfollow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-unfollow') . '</a>)';
+			echo '<span id="spanFollowCurrent">' . $xliff_reader->get('user-following') . '</span> (<a href="unfollow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-unfollow') . '</a>)';
 		}
 		else {
-			echo $xliff_reader->get('user-not-following') . ' (<a href="follow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-follow') . '</a>)';
+			echo '<span id="spanFollowCurrent">' . $xliff_reader->get('user-not-following') . '</span> (<a href="follow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-follow') . '</a>)';
 		}
 	?></p>
 	
