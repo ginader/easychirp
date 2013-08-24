@@ -131,3 +131,28 @@ $('a[href*="direct_delete"]').click(function(e) {
 	})
 });
 
+// Ajax for adding a member to a list
+$('.frmListAddMember').submit(function(e) {
+
+	e.preventDefault();
+
+	var url_send = "http://easychirp.local/list_add_member/true";
+	var data = $(this).serialize();
+	var AlertAdded = $("#myLists").attr("data-msg-list-added");
+
+	$.ajax({
+		type: "POST",
+		url: url_send,
+		data: data,
+		success: function(response) {
+			alert(AlertAdded);
+			var ddMemCnt = parseInt( $("#memCnt").html() , 10) + 1;
+			$("#memCnt").html(ddMemCnt);
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		}
+	});
+});
+
+

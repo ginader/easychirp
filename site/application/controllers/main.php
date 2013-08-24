@@ -682,11 +682,11 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['screen_name'] = $_POST["userNameToAdd"];
 		$request_param['list_id'] = $_POST["lstid"];
-		//$request_param[''] = $_POST[""];
 		
-		$tweet = $this->twitter_lib->post('lists/members/create', $request_param);
-		if ($ajax) {
-			echo json_encode($tweet);
+		$data = $this->twitter_lib->post('lists/members/create', $request_param);
+		
+		if ($ajax=="true") {
+			echo json_encode($data);
 		}
 		else {
 			redirect( base_url() . 'lists?action=member_added');
