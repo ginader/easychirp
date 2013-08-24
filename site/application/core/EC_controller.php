@@ -149,7 +149,31 @@ class EC_Controller extends CI_Controller {
 
 	}
 
-	
+	/**
+	* Deprecated Message for $_GET parameters;
+	*
+	* @param string,boolean,integer,float,array,object,mixed,number $one a necessary parameter
+	* @param $two optional an optional value
+	* @return void
+	*/
+	public function get_params_deprecated()
+	{
+		$trace = debug_backtrace();
+		$info  = ' Called by ' . $trace[1]['class'] . '->' . $trace[1]['function'];
+		if (isset($trace[1]['line']))
+		{
+			$info .= ' line ' . $trace[1]['line'];
+		}
+
+
+		$message = 'GET parameters are deprecated. Replace with a CodeIgniter implementation.';
+		$message .= $info;
+		$message .= ' It should either be part of the URL, so it gets passed as a function param';
+		$message .= ' or as a POST value using $this->input->post("your_param") ';
+
+		error_log($message);
+	}
+
 }
 
 /* End of file EC_controller.php */

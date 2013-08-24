@@ -211,7 +211,7 @@ class Main extends EC_Controller {
 
 		if (isset($data->errors[0]->code)) {
 			if ($data->errors[0]->code == 150) {
-				redirect( base_url() . 'direct?action=error-not-followed');
+				redirect( base_url() . 'direct?action=error-not-followed&screen_name='.$request_param['screen_name']);
 			}
 			else {
 				redirect( base_url() . 'direct?action=error-other&msg='.$data->errors[0]->message);
@@ -1243,10 +1243,48 @@ class Main extends EC_Controller {
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+		$this->_data['id'] = $request_param['id'];
 
 		$this->layout->set_title( $this->xliff_reader->get('retweet-h1') );
 		$this->layout->set_description('Retweet a tweet.');
 		$this->layout->view('retweet', $this->_data);
+	}
+
+	/**
+	* Creates or removes a retweet - /retweet_action
+	*/
+	public function retweet_action($tweet_id, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+		
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+		
+		if ($state == "create") {
+			$post_url = "statuses/retweet/".$tweet_id;
+			$action = "retweet_created";
+		}
+		else {
+			$post_url = "statuses/destroy/".$tweet_id;
+			$action = "retweet_destroyed";
+		}
+
+		$rt = $this->twitter_lib->post($post_url);
+
+		if ($ajax=="true") {
+			echo json_encode($rt);
+		}
+		else {
+			redirect( base_url() . 'retweet?id='.$tweet_id.'&action='.$action);
+		}
 	}
 
 	/**
@@ -1780,9 +1818,16 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function user_timeline()
+	public function user_timeline($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
+
+		if ($screen_name === FALSE)
+		{
+			$screen_name = $_GET['user'];
+			$this->get_params_deprecated();
+		}
+
 
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
@@ -1796,14 +1841,24 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
-		$request_param['screen_name'] = $_GET["user"];
+		$request_param['screen_name'] = $screen_name;
+		$request_param['count'] = TWEETS_PER_PAGE;
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
+
+		// @todo create a page header for user timeline that lets the username be passed in.
+		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline') ." for @" . $screen_name;
+
+		$tweet_form_params = array( 'xliff_reader' => $this->_data['xliff_reader']);
+
+		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
+			$tweet_form_params, TRUE);
+
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
 			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
 
-		$this->layout->set_title( $_GET["user"]." | ".$this->xliff_reader->get('nav-timeline') );
+		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('nav-timeline') );
 		$this->layout->set_description('Timeline page');
-		$this->layout->view('user_timeline', $this->_data);
+		$this->layout->view('timeline', $this->_data);
 	}
 
 	/**
@@ -1832,6 +1887,7 @@ class Main extends EC_Controller {
 		$this->_data['ownedLists'] = $this->twitter_lib->get('lists/ownerships', $request_param);
 		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions', $request_param);
 
+		$this->get_params_deprecated();
 		$this->layout->set_title($_GET["id"]." | ".$this->xliff_reader->get('lists-h1'));
 		$this->layout->set_description('User lists page');
 		$this->layout->view('user_lists', $this->_data);
@@ -1859,7 +1915,7 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
-		$request_param['count'] = 40; // the number of tweets on a page	
+		$request_param['count'] = TWEETS_PER_PAGE;
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
 
 		if (FALSE !== $tweet_id)

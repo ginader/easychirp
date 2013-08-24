@@ -4,7 +4,9 @@ if (isset($_GET["action"])) {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-sent').'</div>';
 	}
 	elseif ($_GET["action"] == "error-not-followed") {
-		echo '<div class="msgBoxNeg rounded">'.$xliff_reader->get('gbl-msg-dm-error-not-followed').'</div>';
+		echo '<div class="msgBoxNeg rounded">'.$xliff_reader->get('gbl-msg-dm-error-not-followed');
+		echo ' <a href="/timeline/'.$_GET["screen_name"].'">'.$xliff_reader->get('gbl-tweet-tweet-message').' @'.$_GET["screen_name"].'</a>';
+		echo '</div>';
 	}
 	elseif ($_GET["action"] == "error-other") {
 		echo '<div class="msgBoxNeg rounded">Error. ' . $_GET["msg"] . '</div>';
