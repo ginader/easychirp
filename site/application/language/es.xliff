@@ -128,6 +128,36 @@
         <target>El mensaje directo ha sido eliminada.</target>
       </trans-unit>
 
+      <trans-unit id="msg-list-deleted" datatype="html">
+        <source>The list was deleted.</source>
+        <target>Se suprimió la lista.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-created" datatype="html">
+        <source>The list was created.</source>
+        <target>Se creó la lista.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-empty_name" datatype="html">
+        <source>Enter a name in order to create a list.</source>
+        <target>Escriba un nombre para crear una lista.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-unsubscribed" datatype="html">
+        <source>You have unsubscribed from the list.</source>
+        <target>Usted ha dado de baja de la lista.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-member_added" datatype="html">
+        <source>The user was added to the list.</source>
+        <target>El usuario se añade a la lista.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-empty_add_name" datatype="html">
+        <source>Please enter a username to add to the list.</source>
+        <target>Introduzca un nombre de usuario con el fin de añadir a la lista.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">

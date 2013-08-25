@@ -1,22 +1,22 @@
 <?php
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "deleted") {
-		echo '<div class="msgBoxPos rounded">The list was deleted.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get("msg-list-deleted").'</div>';
 	}
 	elseif ($_GET["action"] == "created") {
-		echo '<div class="msgBoxPos rounded">The list was created.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get("msg-list-created").'</div>';
 	}
 	elseif ($_GET["action"] == "empty_name") {
-		echo '<div class="msgBoxPos rounded">Enter a name in order to create a list.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get("msg-list-empty_name").'</div>';
 	}
 	elseif ($_GET["action"] == "unsubscribed") {
-		echo '<div class="msgBoxPos rounded">You have unsubscribed from the list.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get("msg-list-unsubscribed").'</div>';
 	}
 	elseif ($_GET["action"] == "member_added") {
-		echo '<div class="msgBoxPos rounded">The user was added to the list.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get("msg-list-member_added").'</div>';
 	}
 	elseif ($_GET["action"] == "empty_add_name") {
-		echo '<div class="msgBoxPos rounded">Please enter a username to add to the list.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get("msg-list-empty_add_name").'</div>';
 	}
 }
 ?>
@@ -52,7 +52,7 @@ if (isset($_GET["action"])) {
 <div class="p-row-r">
 	<div class="p-col-1-2">
 
-<div class="box1 rounded twList" style="margin-top: 0;" id="myLists" data-msg-list-added="The user was added to the list.">
+<div class="box1 rounded twList" style="margin-top: 0;" id="myLists" data-msg-list-added="<?php echo $xliff_reader->get("msg-list-member_added"); ?>">
 	<h2><?php echo $xliff_reader->get('lists-h2-my'); ?></h2>
 
 <?php

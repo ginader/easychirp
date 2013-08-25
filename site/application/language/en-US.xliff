@@ -128,6 +128,36 @@
         <target>The direct message was deleted.</target>
       </trans-unit>
 
+      <trans-unit id="msg-list-deleted" datatype="html">
+        <source>The list was deleted.</source>
+        <target>The list was deleted.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-created" datatype="html">
+        <source>The list was created.</source>
+        <target>The list was created.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-empty_name" datatype="html">
+        <source>Enter a name in order to create a list.</source>
+        <target>Enter a name in order to create a list.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-unsubscribed" datatype="html">
+        <source>You have unsubscribed from the list.</source>
+        <target>You have unsubscribed from the list.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-member_added" datatype="html">
+        <source>The user was added to the list.</source>
+        <target>The user was added to the list.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-empty_add_name" datatype="html">
+        <source>Please enter a username to add to the list.</source>
+        <target>Please enter a username to add to the list.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
