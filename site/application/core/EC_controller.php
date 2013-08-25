@@ -61,6 +61,11 @@ class EC_Controller extends CI_Controller {
 		$this->layout->add_link_tag('/include/css/general.css', 'stylesheet', 'text/css');
 		$this->layout->add_link_tag('/include/css/ico-moon-fonts2.css', 'stylesheet');
 
+		// Add right-to-left stylesheet when language is Arabic
+		if ($lang_code==='ar') {
+			$this->layout->add_link_tag('include/css/rtl.css', 'stylesheet');
+		}
+
 		//
 		// Get Session Data
 		//
