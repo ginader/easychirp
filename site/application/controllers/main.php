@@ -303,7 +303,7 @@ class Main extends EC_Controller {
 		$this->layout->view('direct_sent', $this->_data);
 	}
 
-	public function favorites()
+	public function favorites($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -320,13 +320,22 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+		if ($screen_name !== FALSE)
+		{
+			$request_param['screen_name'] = $screen_name;
+		}
 		if ( isset($_GET["id"])) {
 			$request_param['screen_name'] = $_GET["id"];
 		}
 
+
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+			'tweets' => $tweets,
+			'utc_offset' => $this->session->userdata('utc_offset'),
+			'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('favorites-h1') );
 		$this->layout->set_description('Tweets that user marked as a favorite.');
@@ -841,7 +850,11 @@ class Main extends EC_Controller {
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+				'tweets' => $tweets,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('mentions-h1') );
 		$this->layout->set_description('Tweets that contain my user name.');
@@ -872,7 +885,11 @@ class Main extends EC_Controller {
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array('tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+				'tweets' => $tweets,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('mytweets-h1') );
 		$this->layout->set_description('Tweets that I posted.');
@@ -1007,7 +1024,11 @@ class Main extends EC_Controller {
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+				'tweets' => $tweets,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title($this->xliff_reader->get('profile-h1'));
 		$this->layout->set_description('Details on my Twitter profile.');
@@ -1371,7 +1392,12 @@ class Main extends EC_Controller {
 		$this->_data['num'] = count($tweets);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array('type' => $retweet_type, 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+				'type' => $retweet_type,
+				'tweets' => $tweets,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		//$this->layout->set_title('Retweets'); // See logic above
 		$this->layout->set_description('Links to retweet pages.');
@@ -1528,7 +1554,7 @@ class Main extends EC_Controller {
 	/**
 	 * Manage the search results page - /search_results
 	 */
-	public function search_results()
+	public function search_results($query = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1545,11 +1571,22 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['count'] = TWEETS_PER_PAGE;
-		if ( isset($_POST["query"]) ) {
+		if ( isset($_POST["query"]) )
+		{
 			$request_param['q'] = $_POST["query"];
 		}
-		else {
-			$request_param['q'] = $_GET["query"];
+		else 
+		{
+			if ($query === FALSE )
+			{
+				$request_param['q'] = $_GET["query"];
+				$this->get_params_deprecated();
+			}
+			else
+			{
+				$request_param['q'] = $query;
+			}
+
 		}
 
 		$data = $this->twitter_lib->get('search/tweets', $request_param);
@@ -1558,7 +1595,11 @@ class Main extends EC_Controller {
 
 		$tweets = $data->statuses;
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+				'tweets' => $tweets,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('search-results-h1') );
 		$this->layout->set_description('Search results.');
@@ -1686,7 +1727,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function status()
+	public function status($tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1702,7 +1743,15 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['id'] =  $_GET["id"];
+		if ($tweet_id === FALSE)
+		{
+			$request_param['id'] = $_GET["id"];
+			$this->get_params_deprecated();
+		}
+		else
+		{
+			$request_param['id'] = $tweet_id;
+		}
 
 		// Get general data
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
@@ -1712,7 +1761,11 @@ class Main extends EC_Controller {
 		$tweets = array();
 		$tweets[] = $data;
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 
+				'tweets' => $tweets, 
+				'utc_offset' => $this->session->userdata('utc_offset'), 
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title('View Single Tweet'); // ****** NEED TO DO i18n ******
 		$this->layout->set_description('View a single status/tweet.');
