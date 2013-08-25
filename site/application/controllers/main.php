@@ -816,7 +816,11 @@ class Main extends EC_Controller {
 
 		$tweets = $this->twitter_lib->get('lists/statuses', $request_param);
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+				'tweets' => $tweets, 
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->_data['list_data'] = $this->twitter_lib->get('lists/show', $request_param);
 
@@ -1930,7 +1934,11 @@ class Main extends EC_Controller {
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array(
+				'tweets' => $tweets, 
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$request_param['source_screen_name'] =  $this->session->userdata('screen_name');
 		$request_param['target_screen_name'] =  $_GET["id"];
@@ -1981,7 +1989,10 @@ class Main extends EC_Controller {
 			$tweet_form_params, TRUE);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 'tweets' => $tweets, 
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('nav-timeline') );
 		$this->layout->set_description('Timeline page');
