@@ -37,7 +37,7 @@ foreach($tweets AS $tweet):
 	$date_seconds = (int) $tweet_date->format('U'); // get Unix Epoch seconds
 
 	// http://www.php.net/manual/en/function.strftime.php
-	$date = strftime('%b %d, %I:%M %p %z', $date_seconds);	// Jan 1, 3:50 pm
+	$date = strftime('%b %d, %I:%M %p', $date_seconds);	// Jan 1, 3:50 pm
 
 	//check if this tweet is a reply
 	$isReply = false;
