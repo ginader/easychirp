@@ -415,6 +415,15 @@ div.msgBoxNeg {
 	}
 }
 
+.load-more {
+	padding: .5rem 1rem .5rem;
+	text-align: center;
+}
+.load-more a {
+	display: block;
+	padding: .5rem .3rem .35rem;
+}
+
 /* app menu */
 #navMain {
 	list-style: none;

@@ -149,9 +149,12 @@ foreach($tweets AS $tweet):
 
 $index++;
 endforeach;
+
 	if (isset($paginate) && $paginate):
 ?>
-	<a href="/timeline/<?php echo $last_id; ?>" class="button load_more" >Get Older Tweets</a>
+	<div class="box1 rounded load-more">
+		<a href="/timeline/<?php echo $last_id; ?>" class="button load_more" >Get Older Tweets</a>
+	</div>
 <?php
 	endif;
 endif;
