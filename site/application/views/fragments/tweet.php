@@ -132,7 +132,10 @@ foreach($tweets AS $tweet):
 			<?php endif; ?>
 		</ul>
 	</div>
-	<?php if (isset($tweet->user)): ?>
+	<?php 
+	if (isset($tweet->user)): 
+		if ($tweet->user->screen_name != $this->session->userdata('screen_name')): 
+	?>
 	<div class="btnOptions">
 		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="<?php echo $xliff_reader->get('gbl-tweet-user-options'); ?>" data-icon="&#x3c;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?></span></a></h3>
 		<ul id="userOptions_<?php echo $index; ?>">
@@ -143,7 +146,10 @@ foreach($tweets AS $tweet):
 			<li><a href="/report_spam/<?php echo $tweet->user->screen_name; ?>/false" data-icon="&#x33;" title="<?php echo $xliff_reader->get('gbl-tweet-report'); ?>" class="spammer"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-report'); ?></span></a></li>
 		</ul>
 	</div>
-	<?php endif; ?>
+	<?php 
+		endif;
+	endif; 
+	?>
 </div>
 <?php
 
