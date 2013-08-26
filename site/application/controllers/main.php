@@ -1270,7 +1270,11 @@ class Main extends EC_Controller {
 		$tweets[] = $data;
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array( 'tweets' => $tweets, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 
+			'tweets' => $tweets, 
+			'utc_offset' => $this->session->userdata('utc_offset'),
+			'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 		$this->_data['id'] = $request_param['id'];
 
 		$this->layout->set_title( $this->xliff_reader->get('retweet-h1') );
@@ -1829,7 +1833,6 @@ class Main extends EC_Controller {
 
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
 			$tweet_form_params, TRUE);
-
 
 		$utc_offset = $this->session->userdata('utc_offset');
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
