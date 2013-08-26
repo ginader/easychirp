@@ -312,23 +312,27 @@ document.addEventListener("focus", function(event) {
 
 // Tweet message
 $('a[rel=twmess]').click(function(e) {
-	e.preventDefault();
-
-	// Open if not open already (this includes focus)
-	if (!$('#enterTweetContent').hasClass("displayEnterTweet")) {
-		$('#enterTweet h2 a').trigger('click');
+	if ( $('#enterTweetContent').length == 0 ) {
+		return true;
 	}
+	else {
+		e.preventDefault();
 
-	// Focus
-	$('#txtEnterTweet').focus();
+		// Open if not open already (this includes focus)
+		if (!$('#enterTweetContent').hasClass("displayEnterTweet")) {
+			$('#enterTweet h2 a').trigger('click');
+		}
 
-	// Insert @username in write tweet textarea
-	var linkUrl = $(this).attr('href');
-	var username = linkUrl.substring( linkUrl.lastIndexOf("/") + 1, linkUrl.length );
-	var handle = "@" + username + " ";
+		// Focus
+		$('#txtEnterTweet').focus();
 
-	$("#txtEnterTweet").html(handle);
+		// Insert @username in write tweet textarea
+		var linkUrl = $(this).attr('href');
+		var username = linkUrl.substring( linkUrl.lastIndexOf("/") + 1, linkUrl.length );
+		var handle = "@" + username + " ";
 
+		$("#txtEnterTweet").html(handle);
+	}
 });
 
 // Delete list
