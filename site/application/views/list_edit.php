@@ -42,5 +42,5 @@ if (isset($_GET["action"])) {
 
 </div>
 
-<p><span aria-hidden="true" class="icon-list2"></span> <a href="/list_timeline?id=<?php echo $list->id; ?>"><?php echo $list->name . " " . $xliff_reader->get('nav-timeline'); ?></a></p>
+<p><span aria-hidden="true" class="icon-list"></span> <a href="/list_timeline?id=<?php echo $list->id; ?>"><?php echo $list->name . " " . $xliff_reader->get('nav-timeline'); ?></a></p>
 
