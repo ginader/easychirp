@@ -130,6 +130,11 @@ foreach($tweets AS $tweet):
 			<?php if (isset($tweet->user)): ?>
 			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo htmlentities($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
 			<?php endif; ?>
+			<?php /*
+			if ($tweet->user->screen_name == $this->session->userdata('screen_name')): 
+				echo '<li><a href="/tweet_delete/'.$tweet->id.'/false" data-icon="&#x2e;" title="'.$xliff_reader->get('global-delete').'"><span class="hide">'.$xliff_reader->get('global-delete').'</span></a></li>';
+			endif;
+			*/ ?>
 		</ul>
 	</div>
 	<?php 
@@ -142,6 +147,7 @@ foreach($tweets AS $tweet):
 			<li><a href="/user_timeline?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="<?php echo $xliff_reader->get('gbl-tweet-timeline'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-timeline'); ?></span></a></li>
 			<li><a href="/direct?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a></li>
 			<li><a href="/timeline/<?php echo $tweet->user->screen_name; ?>" rel="twmess" data-icon="&#x38;" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></span></a></li>
+			<li><a href="/user_lists?id=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x25;" title="<?php echo $xliff_reader->get('profile-dt-lists'); ?>"><span class="hide"><?php echo $xliff_reader->get('profile-dt-lists'); ?></span></a></li>
 			<?php /* <li><a href="/mute?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3d;" title="<?php echo $xliff_reader->get('gbl-tweet-mute'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-mute'); ?></span></a></li> */ ?>
 			<li><a href="/report_spam/<?php echo $tweet->user->screen_name; ?>/false" data-icon="&#x33;" title="<?php echo $xliff_reader->get('gbl-tweet-report'); ?>" class="spammer"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-report'); ?></span></a></li>
 		</ul>
