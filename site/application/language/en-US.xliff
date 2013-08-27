@@ -38,6 +38,11 @@
 
       <!-- ALERTS/MESSAGES -->
 
+      <trans-unit id="msg-tweet-deleted" datatype="html">
+        <source>Your tweet was deleted.</source>
+        <target>Your tweet was deleted.</target>
+      </trans-unit>
+
       <trans-unit id="msg-followed-user" datatype="html">
         <source>You are now following this user.</source>
         <target>You are now following this user.</target>
