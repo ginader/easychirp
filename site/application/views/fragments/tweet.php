@@ -130,11 +130,11 @@ foreach($tweets AS $tweet):
 			<?php if (isset($tweet->user)): ?>
 			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo htmlentities($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
 			<?php endif; ?>
-			<?php /*
+			<?php 
 			if ($tweet->user->screen_name == $this->session->userdata('screen_name')): 
 				echo '<li><a href="/tweet_delete/'.$tweet->id.'/false" data-icon="&#x2e;" title="'.$xliff_reader->get('global-delete').'"><span class="hide">'.$xliff_reader->get('global-delete').'</span></a></li>';
 			endif;
-			*/ ?>
+			?>
 		</ul>
 	</div>
 	<?php 

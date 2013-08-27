@@ -1909,6 +1909,31 @@ class Main extends EC_Controller {
 		$this->layout->view('trends', $this->_data);
 	}
 
+	public function tweet_delete($id, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$data = $this->twitter_lib->post('statuses/destroy/'.$id);
+
+		if ($ajax == "true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'timeline?action=tweet_deleted');
+		}
+	}
+
 	/**
 	* Manages the useer page - /user
 	*

@@ -99,6 +99,7 @@ $route['tools'] = "main/tools"; // For non-JS and keyboard use cases
 $route['timeline'] = "main/timeline";
 $route['timeline/(:any)'] = "main/timeline/$1";
 $route['trends'] = "main/trends";
+$route['tweet_delete/(:any)/(:any)'] = "main/tweet_delete/$1/$2";
 $route['user'] = "main/user"; // User details
 $route['user_timeline'] = "main/user_timeline"; // User tweets
 $route['user_timeline/(:any)'] = "main/user_timeline/$1"; // User tweets
