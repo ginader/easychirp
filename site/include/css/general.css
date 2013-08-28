@@ -926,12 +926,26 @@ body.theme-inverse {
 	color: #fff;
 }
 
+.theme-inverse h1 {
+	background-color: #444;
+}
+
+.theme-inverse #navMain li a.current {
+	background-color: #444;
+}
+
+.theme-inverse #navTweet > li > a.current {
+	color: #333;
+	background-color: #ccc;
+}
+
 .theme-inverse .tweet {
 	border-color: #666;
 }
 
 .theme-inverse #navTweet li a {
 	border-color: #aaa;
+	background-color: #444;
 }
 
 .theme-inverse a:hover,
@@ -964,6 +978,24 @@ body.theme-inverse {
 
 .theme-inverse #enterTweet {
 	border: 2px solid #666;
+}
+
+.theme-inverse .box1 {
+	border-color:#666;
+}
+
+.theme-inverse .content .box1 ul li {
+	list-style-type: circle;
+	margin-left: 1.5rem;
+	padding-left: 0;
+}
+
+.theme-inverse .modal {
+	background-color: #333;
+}
+
+.theme-inverse .boxAccent {
+	background-color:#333;
 }
 .boxAccent {
 	background-color:#efefef;
