@@ -330,8 +330,10 @@ $('a[rel=twmess]').click(function(e) {
 		var linkUrl = $(this).attr('href');
 		var username = linkUrl.substring( linkUrl.lastIndexOf("/") + 1, linkUrl.length );
 		var handle = "@" + username + " ";
-
 		$("#txtEnterTweet").html(handle);
+
+		// Update the char counter
+		updateCharCount("txtEnterTweet");
 	}
 });
 
