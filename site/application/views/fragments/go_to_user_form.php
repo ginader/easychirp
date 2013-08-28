@@ -1,4 +1,4 @@
-<form action="go_user_action" method="post" id="frmGoUser">
+<form action="/go_user_action" method="post" id="frmGoUser">
 	<label id="goUserLabel" for="goUser"><?php echo $xliff_reader->get('gotouser-h1'); ?></label>
 	<input placeholder="<?php echo $xliff_reader->get('gotouser-username'); ?>" type="text" size="20" name="screen_name" id="goUser" /> 
 	<span>
