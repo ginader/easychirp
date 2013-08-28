@@ -943,6 +943,11 @@ body.theme-inverse {
 	border-color: #666;
 }
 
+.theme-inverse .favorited, 
+.theme-inverse .retweeted {
+	background-color: #777;
+}
+
 .theme-inverse #navTweet li a {
 	border-color: #aaa;
 	background-color: #444;
