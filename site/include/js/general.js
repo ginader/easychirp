@@ -24,7 +24,7 @@ $(".btnOptions > h3 > a").click(function(e) {
 $(".btnOptions h3 a").attr("role","button");
 
 // Add aria-controls pointing to associated element
-$(".btnOptions a").each(function () {
+$(".btnOptions > a").each(function () {
 	var x = $(this).attr('href').split(/#/)[1];
 	$(this).attr("aria-controls", x);
 });
