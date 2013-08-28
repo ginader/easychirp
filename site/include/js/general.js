@@ -377,5 +377,18 @@ $('.frmListAddMember').submit(function(e) {
 	}
 });
 
+// If reply or quote tweet (first character in tweet textarea on page load is "@" or "R") then set focus
+if ($('#txtEnterTweet').length != 0) {
+	input = {};
+	input.obj = $('#txtEnterTweet');
+	input.txt = input.obj.val();
+	input.first = input.obj.val().substring(0, 1);
+	if (input.first === "@" || input.first === "R") {
+		input.obj.focus();
+		input.obj.val('');
+		input.obj.val(input.txt);
+	}
+}
+
 
 
