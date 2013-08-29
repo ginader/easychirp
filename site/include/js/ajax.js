@@ -264,3 +264,39 @@ $('a[href*="follow_user"]').click(function(e) {
 	}
 });
 
+
+// Ajax for deleting a tweet
+$('a[href*="tweet_delete"]').click(function(e) {
+
+	if (!confirm(txtAlertSureDelete)) {
+		 return false;
+	}
+
+	//e.preventDefault();
+
+	//alert("ACTION HERE"); return false;
+
+	return true;
+
+	// var a = $(this);
+	// var url_send = this.href.replace("false","true");
+	// var txt = {};
+	// txt.AlertDeleted = $("#main").attr("data-msg-dm-deleted");
+
+	// $.ajax({
+	// 	url: url_send,
+	// 	success: function(response) {
+
+	// 		$(a).parent().parent().hide('slow', function() {
+	// 			this.remove();
+	// 			alert(txt.AlertDeleted);
+	// 		});
+
+	// 	},
+	// 	error: function(xhr) {
+	// 		alert('Error. Status = ' + xhr.status);
+	// 	}
+	// })
+});
+
+
