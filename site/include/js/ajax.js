@@ -272,31 +272,27 @@ $('a[href*="tweet_delete"]').click(function(e) {
 		 return false;
 	}
 
-	//e.preventDefault();
+	e.preventDefault();
 
-	//alert("ACTION HERE"); return false;
+	var a = $(this);
+	var url_send = this.href.replace("false","true");
+	var txt = {};
+	txt.AlertDeleted = $("#main").attr("data-msg-tweet-deleted");
 
-	return true;
+	$.ajax({
+		url: url_send,
+		success: function(response) {
 
-	// var a = $(this);
-	// var url_send = this.href.replace("false","true");
-	// var txt = {};
-	// txt.AlertDeleted = $("#main").attr("data-msg-dm-deleted");
+			$(a).closest("div.tweet").hide('slow', function() {
+				this.remove();
+				alert(txt.AlertDeleted);
+			});
 
-	// $.ajax({
-	// 	url: url_send,
-	// 	success: function(response) {
-
-	// 		$(a).parent().parent().hide('slow', function() {
-	// 			this.remove();
-	// 			alert(txt.AlertDeleted);
-	// 		});
-
-	// 	},
-	// 	error: function(xhr) {
-	// 		alert('Error. Status = ' + xhr.status);
-	// 	}
-	// })
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		}
+	})
 });
 
 
