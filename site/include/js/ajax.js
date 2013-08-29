@@ -295,4 +295,34 @@ $('a[href*="tweet_delete"]').click(function(e) {
 	})
 });
 
+// Ajax for tweet threads/conversation via reply
+function theRespGuts(e) {
+	e.preventDefault();
+	
+	// Set variables in obj
+	data = {};
+	data.respParent = $(this).parent().parent();
+	data.url = this.href;
+	data.url = data.url.replace("status","getResponse");
+
+	// Deactivate link clicked
+	$("a[rel='response']").unbind('click', theRespGuts);
+	$(this).removeAttr("href");
+	$(this).removeAttr("rel");
+	$(this).removeAttr("title");
+
+	$.ajax({
+		url: data.url,
+		success: function(response) {
+			data.respParent.after(response);
+			$("a[rel='response']").bind('click', theRespGuts);
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		}
+	});
+}
+
+$('a[rel="response"]').bind('click', theRespGuts);
+
 

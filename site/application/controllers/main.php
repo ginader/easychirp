@@ -509,6 +509,42 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	* gets tweet to make thread/conversation - /getResponse
+	*/
+	public function getResponse()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['id'] = $_GET["id"];
+
+		$data = $this->twitter_lib->get('statuses/show', $request_param);
+		$tweets = array();
+		$tweets[] = $data;
+
+		$theTweet = $this->load->view('fragments/tweet',
+			array( 
+			'tweets' => $tweets, 
+			'utc_offset' => $this->session->userdata('utc_offset'),
+			'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
+
+		// Add ARIA and send back
+		echo str_replace('class="tweet', 'aria-live="assertive" class="respond tweet', $theTweet);
+	}
+
+	/**
 	* Manages "go to user" page - /go_to_user
 	*/
 	public function go_to_user()
