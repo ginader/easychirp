@@ -401,7 +401,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function followers()
+	public function followers($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -418,16 +418,16 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['skip_status'] =  true;
-		if ( isset($_GET["id"])) {
-			$request_param['screen_name'] = $_GET["id"];
+		if (FALSE === $screen_name) 
+		{
+			$screen_name = $this->session->userdata('screen_name');
 		}
+		$request_param['screen_name'] = $screen_name;
 
 		$this->_data['f'] = $this->twitter_lib->get('followers/list', $request_param);
 
-		$this->layout->set_title( $this->xliff_reader->get('followers-h1') );
-		if ( isset($_GET["id"])) {
-			$this->layout->set_title( $_GET["id"]." | ".$this->xliff_reader->get('followers-h1') );
-		}
+		$this->layout->set_title( $screen_name . " | " 
+			. $this->xliff_reader->get('followers-h1') );
 		$this->layout->set_description('Twitter users following me.');
 		$this->layout->view('followers', $this->_data);
 	}
@@ -1211,12 +1211,12 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the reply pages - /reply and /reply_all
-	*
-	* @param integer $tweet_id
-	* @param string|boolean $tweet_id the string 'all' will include the name of each user mentioned. Default is boolean false.
-	* @return void
-	*/
+	 * Manages the reply pages - /reply and /reply_all
+	 *
+	 * @param integer $tweet_id
+	 * @param string|boolean $tweet_id the string 'all' will include the name of each user mentioned. Default is boolean false.
+	 * @return void
+	 */
 	public function reply($tweet_id, $all = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
