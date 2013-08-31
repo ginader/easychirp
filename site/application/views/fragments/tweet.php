@@ -72,23 +72,23 @@ foreach($tweets AS $tweet):
 	$tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a href="\1">\1</a>', $tweet_text);
 
 	// Link @usernames
-	$tweet_text = preg_replace('/@+([-_0-9a-zA-Z]+)/', '<a href="/user?id=$1">$0</a>', $tweet_text);
+	$tweet_text = preg_replace('/@+([-_0-9a-zA-Z]+)/', '<a href="/user/$1">$0</a>', $tweet_text);
 
 	// Link #hashtags
-	$tweet_text = preg_replace('/\B#([-_0-9a-zA-Z]+)/', '<a href="/search_results?query=%23$1" title="search this term">$0</a>', $tweet_text);
+	$tweet_text = preg_replace('/\B#([-_0-9a-zA-Z]+)/', '<a href="/search_results/%23$1" title="search this term">$0</a>', $tweet_text);
 
 	echo $tweet_text;
 	?></q>
 	<?php if (isset($tweet->user)): ?>
-	<p><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user?id=<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status?id=<?php echo $tweet->id; ?>"><?php echo $date; ?></a> |
+	<p><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a> |
 	<?php endif; ?>
 		<?php
 		// Is reply or retweet?
 		if ($isReply) {
-			echo ' <a rel="response" title="View the tweet to which this tweet is responding" href="/status?id='.$tweet->in_reply_to_status_id.'">' . $xliff_reader->get('gbl-tweet-responding') . '</a> | ';
+			echo ' <a rel="response" title="View the tweet to which this tweet is responding" href="/status/'.$tweet->in_reply_to_status_id.'">' . $xliff_reader->get('gbl-tweet-responding') . '</a> | ';
 		}
 		if ($isRetweet) {
-			echo ' <a rel="retweet" title="View the original tweet (this is a retweet)" href="/status?id='.$tweet->retweeted_status->id.'">' . $xliff_reader->get('gbl-tweet-retweet') . '</a> | ';
+			echo ' <a rel="retweet" title="View the original tweet (this is a retweet)" href="/status/'.$tweet->retweeted_status->id.'">' . $xliff_reader->get('gbl-tweet-retweet') . '</a> | ';
 		}
 
 		// Has been retweeted?
@@ -123,7 +123,6 @@ foreach($tweets AS $tweet):
 				else 
 				{
 					echo '<a data-icon="&#x3f;" class="retweeted" title="retweeted"><span class="hide">retweeted</span></a>';
-					//echo '<a href="/retweet_destroy/' . $tweet->id . '/false" data-icon="&#x3f;" class="retweeted" title="' . $xliff_reader->get('gbl-tweet-remove-rt') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-remove-rt') . '</span></a>';
 				}
 			?></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
@@ -144,11 +143,10 @@ foreach($tweets AS $tweet):
 	<div class="btnOptions">
 		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="<?php echo $xliff_reader->get('gbl-tweet-user-options'); ?>" data-icon="&#x3c;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?></span></a></h3>
 		<ul id="userOptions_<?php echo $index; ?>">
-			<li><a href="/user_timeline?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="<?php echo $xliff_reader->get('gbl-tweet-timeline'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-timeline'); ?></span></a></li>
-			<li><a href="/direct?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a></li>
+			<li><a href="/user_timeline/<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="<?php echo $xliff_reader->get('gbl-tweet-timeline'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-timeline'); ?></span></a></li>
+			<li><a href="/direct/<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a></li>
 			<li><a href="/timeline/<?php echo $tweet->user->screen_name; ?>" rel="twmess" data-icon="&#x38;" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></span></a></li>
-			<li><a href="/user_lists?id=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x25;" title="<?php echo $xliff_reader->get('profile-dt-lists'); ?>"><span class="hide"><?php echo $xliff_reader->get('profile-dt-lists'); ?></span></a></li>
-			<?php /* <li><a href="/mute?user=<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3d;" title="<?php echo $xliff_reader->get('gbl-tweet-mute'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-mute'); ?></span></a></li> */ ?>
+			<li><a href="/user_lists/<?php echo $tweet->user->screen_name; ?>" data-icon="&#x25;" title="<?php echo $xliff_reader->get('profile-dt-lists'); ?>"><span class="hide"><?php echo $xliff_reader->get('profile-dt-lists'); ?></span></a></li>
 			<li><a href="/report_spam/<?php echo $tweet->user->screen_name; ?>/false" data-icon="&#x33;" title="<?php echo $xliff_reader->get('gbl-tweet-report'); ?>" class="spammer"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-report'); ?></span></a></li>
 		</ul>
 	</div>
