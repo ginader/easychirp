@@ -437,7 +437,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function following()
+	public function following($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -454,16 +454,16 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['skip_status'] =  true;
-		if ( isset($_GET["id"])) {
-			$request_param['screen_name'] = $_GET["id"];
+		if (FALSE === $screen_name) 
+		{
+			$screen_name = $_GET["id"];
+			$this->get_params_deprecated();
 		}
+		$request_param['screen_name'] = $screen_name;
 
 		$this->_data['f'] = $this->twitter_lib->get('friends/list', $request_param);
 
-		$this->layout->set_title( $this->xliff_reader->get('following-h1') );
-		if ( isset($_GET["id"])) {
-			$this->layout->set_title( $_GET["id"]." | ".$this->xliff_reader->get('following-h1') );
-		}
+		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('following-h1') );
 		$this->layout->set_description('Twitter users whom I am following.');
 		$this->layout->view('following', $this->_data);
 	}
@@ -1975,7 +1975,7 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function user()
+	public function user($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1991,7 +1991,12 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['screen_name'] =  $_GET["id"];
+		if (FALSE === $screen_name)
+		{
+			$screen_name = $_GET["id"];
+		}
+		$request_param['screen_name'] =  $screen_name;
+
 		$this->_data['user'] = $this->twitter_lib->get('users/show', $request_param);
 
 		$request_param['count'] = 1; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
@@ -2005,7 +2010,7 @@ class Main extends EC_Controller {
 			), TRUE);
 
 		$request_param['source_screen_name'] =  $this->session->userdata('screen_name');
-		$request_param['target_screen_name'] =  $_GET["id"];
+		$request_param['target_screen_name'] =  $screen_name;
 		$this->_data['friendship'] = $this->twitter_lib->get('friendships/show', $request_param);
 
 		$this->layout->set_title( $this->xliff_reader->get('user-h1') );
