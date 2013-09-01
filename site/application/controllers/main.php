@@ -2097,11 +2097,17 @@ class Main extends EC_Controller {
 	*
 	* @return void
 	*/
-	public function user_lists()
+	public function user_lists($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
 		$this->_data['xliff_reader'] = $this->xliff_reader;
+		// $this->_data['screen_name'] is already set to the logged in user.
+		// the $screen_name parameter overrides the default.
+		if (FALSE !== $screen_name)
+		{
+			$this->_data['screen_name'] = $screen_name;
+		}
 
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
@@ -2113,13 +2119,13 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['screen_name'] = $_GET["id"];
+		$request_param['screen_name'] = $this->_data['screen_name'];
 
 		$this->_data['ownedLists'] = $this->twitter_lib->get('lists/ownerships', $request_param);
 		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions', $request_param);
 
 		$this->get_params_deprecated();
-		$this->layout->set_title($_GET["id"]." | ".$this->xliff_reader->get('lists-h1'));
+		$this->layout->set_title($this->_data['screen_name'] . " | " . $this->xliff_reader->get('lists-h1'));
 		$this->layout->set_description('User lists page');
 		$this->layout->view('user_lists', $this->_data);
 	}

@@ -110,6 +110,7 @@ $route['user/(:any)'] = "main/user/$1"; // User details
 $route['user_timeline'] = "main/user_timeline"; // User tweets
 $route['user_timeline/(:any)'] = "main/user_timeline/$1"; // User tweets
 $route['user_lists'] = "main/user_lists";
+$route['user_lists/(:any)'] = "main/user_lists/$1";
 $route['default_controller'] = "main";
 $route['404_override'] = '';
 

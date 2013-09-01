@@ -6,7 +6,7 @@ if (isset($_GET["action"])) {
 }
 ?>
 
-<h1 class="rounded"><?php echo $xliff_reader->get('lists-h1')." : @".$_GET["id"]; ?></h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('lists-h1') . " : @" . $screen_name; ?></h1>
 
 <div class="p-row-r">
 	<div class="p-col-1-2">
@@ -27,17 +27,12 @@ if (count($ownedLists->lists) != 0) {
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<?php /*<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>*/?>
 	<dd><?php echo $lists->subscriber_count; ?></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
 	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
 	<dd><?php echo $lists->member_count; ?></dd>
 
-	<?php /*
-	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
-	<dd><?php echo $lists->mode; ?></dd>
-	*/ ?>
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
 	<dd><a rel="subList" href="/list_subscribe?id=<?php echo $lists->id; ?>&user=<?php echo $lists->user->screen_name; ?>">Subscribe</a></dd>
@@ -77,20 +72,14 @@ if (count($subLists->lists) != 0) {
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<?php /*<dd><a href="/list_subscribers?id=<?php echo $lists->id; ?>"><?php echo $lists->subscriber_count; ?></a></dd>*/?>
 	<dd><?php echo $lists->subscriber_count; ?></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
 	<dd><?php echo $lists->member_count; ?></dd>
 
-	<?php /*
-	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
-	<dd><?php echo $lists->mode; ?></dd>
-	*/ ?>
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
-	<dd><a rel="subList" href="/list_subscribe?id=<?php echo $lists->id; ?>&user=<?php echo $_GET["id"]; ?>">Subscribe</a></dd>
+	<dd><a rel="subList" href="/list_subscribe?id=<?php echo $lists->id; ?>&user=<?php echo $screen_name; ?>">Subscribe</a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-owner'); ?></dt>
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>
