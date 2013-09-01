@@ -84,11 +84,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="/include/js/general.js"></script>
 <script src="/include/js/ajax.js"></script>
-<script>
-(function(){
-	initCharacterCount();
-})();
-</script>
 
 <!-- analytics (start) -->
 <!--<script>

@@ -69,7 +69,7 @@ function updateCharCount(charCountField) {
 	}
 }
 // Initialize char counter widget
-function initCharacterCount() {
+(function(){
 	var charCountField = "txtEnterTweet";
 	
 	// Modify default text
@@ -91,7 +91,7 @@ function initCharacterCount() {
 	theField.onkeyup = function() {
 		updateCharCount(charCountField);
 	}
-}
+})();
 
 /*** show/hide for create list content ***/
 //hide create list form
