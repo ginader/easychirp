@@ -106,7 +106,7 @@ vertical-align:middle;
 /* Base   **************************************************/
 
 body {
-	/* text-align:center; Required for pesky IE */
+	text-align:center; /* Required for pesky IE */
 	margin-top: 6px;
 	font-size: 1em;
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -266,7 +266,7 @@ overflow: hidden;
 	margin: 0 auto 2rem;
 	width: 99%;
 	max-width: 1100px;
-	/* text-align:left; Overrides the previously set center alignment that older IE versions reqd */
+	text-align:left; /* Overrides the previously set center alignment that older IE versions reqd */
 }
 
 #skip {
@@ -350,7 +350,7 @@ footer {
 }
 
 .p-col-1-2:last-child .box1 {
-	margin-left: .75rem;
+	margin-left: .75em;
 }
 
 .p-offset-1-2 {
@@ -395,7 +395,6 @@ div.msgBoxNeg {
 	.p-row-r > [class ^= "p-col"] {
 		width:100%;
 	}
-
 	.p-col-1-2:last-child .box1 {
 		margin-left: 0;
 	}

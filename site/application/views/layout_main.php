@@ -3,6 +3,7 @@
 <head>
 	<?php echo $head_codes; ?>
 
+	<!--[if lte IE 8]><link rel="stylesheet" href="/include/css/ie8.css" type="text/css"/><![endif]-->
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if lte IE 7]><script src="include/js/lte-ie7.js"></script><![endif]-->
 </head>
