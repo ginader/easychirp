@@ -175,15 +175,34 @@ class Main extends EC_Controller {
 		}
 	}
 
-	public function direct()
+	public function direct($screen_name = FALSE, $action = FALSE, $message = '')
 	{
 		$this->redirect_if_not_logged_in();
 
+		$this->_data['screen_name'] = $screen_name;
+		$this->_data['action'] = $action;
+		$this->_data['msg'] = $message;
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Send a direct message.');
 		$this->layout->view('direct', $this->_data);
+	}
+
+	public function direct_action($action, $message = '', $screen_name = '')
+	{
+		switch ($action)
+		{
+		case "deleted":
+		case "error-not-followed":
+		case "error-other":
+		case "sent":
+			$this->direct($screen_name, $action, $message);
+			break;
+
+		default:
+			throw new Exception('Invalid action provided');
+		}
 	}
 
 	public function direct_send()
@@ -202,21 +221,26 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['screen_name'] = $_POST['tweep'];
-		$request_param['text'] = $_POST['message'];
+		$request_param['screen_name'] = $this->input->post('tweep');
+		$request_param['text'] = $this->input->post('message');
 
 		$data = $this->twitter_lib->post('direct_messages/new', $request_param);
 
-		if (isset($data->errors[0]->code)) {
-			if ($data->errors[0]->code == 150) {
-				redirect( base_url() . 'direct?action=error-not-followed&screen_name='.$request_param['screen_name']);
+		if (isset($data->errors[0]->code)) 
+		{
+			if ($data->errors[0]->code == 150) 
+			{
+				redirect(base_url('direct_action/error-not-followed/-/' . $request_param['screen_name']));
 			}
-			else {
-				redirect( base_url() . 'direct?action=error-other&msg='.$data->errors[0]->message);
+			else 
+			{
+				$error_message = urlencode($data->errors[0]->message);
+				redirect(base_url('direct_action/error-other/' .  $error_message));
 			}
 		}
-		else {
-			redirect( base_url() . 'direct?action=sent');
+		else 
+		{
+			redirect( base_url() . 'direct_action/sent/-/' . $request_param['screen_name']);
 		}
 	}
 

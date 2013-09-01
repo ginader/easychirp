@@ -1,33 +1,23 @@
 <?php
-if (isset($_GET["action"])) {
-	if ($_GET["action"] == "sent") {
+if (isset($action)) {
+	if ($action == "sent") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-sent').'</div>';
 	}
-	elseif ($_GET["action"] == "error-not-followed") {
+	elseif ($action == "error-not-followed") {
 		echo '<div class="msgBoxNeg rounded">'.$xliff_reader->get('gbl-msg-dm-error-not-followed');
-		echo ' <a href="/timeline/'.$_GET["screen_name"].'">'.$xliff_reader->get('gbl-tweet-tweet-message').' @'.$_GET["screen_name"].'</a>';
+		echo anchor('/timeline/' . $screen_name, $xliff_reader->get('gbl-tweet-tweet-message') . ' @' . $screen_name);
 		echo '</div>';
 	}
-	elseif ($_GET["action"] == "error-other") {
+	elseif ($action == "error-other") {
 		echo '<div class="msgBoxNeg rounded">Error. ' . $_GET["msg"] . '</div>';
 	}
-	elseif ($_GET["action"] == "deleted") {
+	elseif ($action == "deleted") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-deleted').'</div>';
 	}
 }
 ?>
 
 <h1 class="rounded"><?php echo $xliff_reader->get('dm-h1'); ?></h1>
-
-<?php
-
-// Get screen_name of user if defined in URL (probably from DM link in a tweet)
-$user = "";
-if(isset($_GET['user'])) {
-	$user = $_GET['user'];
-}
-
-?>
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('dm-h2-send'); ?></label></h2>
@@ -40,9 +30,9 @@ if(isset($_GET['user'])) {
 		<div id="enterTweep">
 			<input type="text" size="18" id="tweep" name="tweep" class="input1" value="<?php
 			// Output screen_name if defined
-			if ($user !== "") {
-				echo $user;
-			} ?>" />
+			if ($screen_name !== FALSE):
+				echo $screen_name;
+			endif; ?>" />
 		</div>
 		<div class="clear"></div>
 
@@ -74,8 +64,7 @@ if(isset($_GET['user'])) {
 <?php
 
 // Set focus to textarea if user defined
-if ($user !== "") {
+if ($screen_name !== FALSE) {
 	echo '<script>document.getElementById("txtDirectMessage").focus();</script>';
 }
 
-?>
