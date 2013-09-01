@@ -535,7 +535,7 @@ class Main extends EC_Controller {
 	/**
 	* gets tweet to make thread/conversation - /getResponse
 	*/
-	public function getResponse()
+	public function getResponse($id)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -551,7 +551,7 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['id'] = $_GET["id"];
+		$request_param['id'] = $id;
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param);
 		$tweets = array();
