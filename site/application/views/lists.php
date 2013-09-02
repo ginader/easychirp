@@ -31,7 +31,7 @@ if (isset($_GET["action"])) {
 	<div class="row">
 		<label id="labelName" for="txt_listName"><?php echo $xliff_reader->get('lists-create-name'); ?></label>
 		<span id="nameTip"><?php echo $xliff_reader->get('lists-create-name-tip'); ?></span>
-		<input class="input1" aria-describedby="nameTip" required="required" id="txt_listName" name="txt_listName" type="text" size="25" maxlength="25" />
+		<input class="input1" aria-describedby="nameTip" required aria-required="true" id="txt_listName" name="txt_listName" type="text" size="25" maxlength="25" />
 	</div>
 	<div class="row">
 		<label id="labelDesc" for="txt_listDesc"><?php echo $xliff_reader->get('lists-create-desc'); ?></label>

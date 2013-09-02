@@ -44,7 +44,7 @@ if (isset($action)) {
 		</p>
 
 		<div class="clearfix">
-			<textarea id="txtDirectMessage" name="message" rows="2" cols="40" aria-required="true"></textarea>
+			<textarea id="txtDirectMessage" name="message" rows="2" cols="40" required aria-required="true"></textarea>
 			<button class="btnPost" type="submit"><?php echo $xliff_reader->get('dm-send'); ?></button>
 		</div>
 	</form>
