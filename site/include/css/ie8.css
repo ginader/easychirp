@@ -1,7 +1,7 @@
 
 h1 {
     margin-top: 0.5em;
-    padding: .5em 1em;
+    padding: .5em 1em .5em .5em;
 	font-size: 1.8em;
 }
 h2 {
@@ -39,13 +39,16 @@ h2 + ul {
 	margin-top: .3em;
 }
 
+div.box1 h2  {
+	margin-top: -.35em;
+}
+
 .smallText {
 	font-size: .85em;
 }
 .notes {
 	line-height: 1.2em;
 }
-
 
 #wrapper {
 	margin: 0 auto 2em;
@@ -240,7 +243,6 @@ a.delete-link {
 	line-height: 1.6em;
 }
 
-
 button {
 	font-size: 1em;
 	margin: .5em .5em .5em 0;
@@ -309,9 +311,6 @@ a.btnOptionsUser,
 .theme-inverse .content .box1 ul li {
 	margin-left: 1.5em;
 }
-
-
-
 
 
 
