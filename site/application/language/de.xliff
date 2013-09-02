@@ -416,8 +416,8 @@
       </trans-unit>
 
       <trans-unit id="home-lead-p1" datatype="html">
-        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
-        <target>Easy Chirp ist eine barrierefreie Alternative zur Twitter.com Website. Es ist einfach zu benutzen und optimiert für Menschen mit Behinderung. Easy Chirp ist vollständig tastaturbedienbar, unterstützt ältere Browser wie den IE7, funktioniert problemlos mit langsamen Internetverbindungen und ohne JavaScript. Lernen Sie mehr über barrierefreies Internet.</target>
+        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE8, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
+        <target>Easy Chirp ist eine barrierefreie Alternative zur Twitter.com Website. Es ist einfach zu benutzen und optimiert für Menschen mit Behinderung. Easy Chirp ist vollständig tastaturbedienbar, unterstützt ältere Browser wie den IE8, funktioniert problemlos mit langsamen Internetverbindungen und ohne JavaScript. Lernen Sie mehr über barrierefreies Internet.</target>
       </trans-unit>
 
       <trans-unit id="home-lead-p2" datatype="html">

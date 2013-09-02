@@ -416,8 +416,8 @@
       </trans-unit>
 
       <trans-unit id="home-lead-p1" datatype="html">
-        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE7, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
-        <target>إيزي تشيرب هو تطبيق يتيح لك إمكانية التغريد بسهولة على موقع Twitter.com. لقد تم تصميمه ليكون سهل الاستخدام ومناسب للأفراد من ذوى الإعاقة.  ويعمل هذا التطبيق ايضاً مع لوحة المفاتيح فقط و المتصفحات القديمة مثل IE7، الاتصال بالإنترنت المنخفض السرعة ومن غير جافا سكريبت. تعلم المزيد حول إمكانية الوصول إلى الإنترنت.</target>
+        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE8, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
+        <target>إيزي تشيرب هو تطبيق يتيح لك إمكانية التغريد بسهولة على موقع Twitter.com. لقد تم تصميمه ليكون سهل الاستخدام ومناسب للأفراد من ذوى الإعاقة.  ويعمل هذا التطبيق ايضاً مع لوحة المفاتيح فقط و المتصفحات القديمة مثل IE8، الاتصال بالإنترنت المنخفض السرعة ومن غير جافا سكريبت. تعلم المزيد حول إمكانية الوصول إلى الإنترنت.</target>
       </trans-unit>
 
       <trans-unit id="home-lead-p2" datatype="html">
