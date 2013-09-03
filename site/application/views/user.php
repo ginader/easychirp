@@ -140,7 +140,7 @@ if (isset($_GET["action"])) {
 		<dd><?php echo $user->listed_count; ?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
-		<dd><a href="/user_lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
+		<dd><a href="/user_lists/<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
 
 		<?php /* <dt><?php echo $xliff_reader->get('nav-retweets'); ?></dt>
 		<dd><a href="#">retweets by <?php echo $user->screen_name; ?></a></dd> */?>
