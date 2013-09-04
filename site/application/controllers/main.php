@@ -12,12 +12,10 @@ class Main extends EC_Controller {
 	public $_data = array();
 
 	/**
-	* Describe your function
-	*
-	* @param String $one a necessary parameter
-	* @param String optional $two an optional value
-	* @return void
-	*/
+	 * Constructor. Retrieves session data and populates class data
+	 *
+	 * @return void
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -122,10 +120,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the articles page - /articles
-	*
-	* @return void
-	*/
+	 * Manages the articles page - /articles
+	 *
+	 * @return void
+	 */
 	public function articles()
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader;
@@ -136,8 +134,13 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manage block & unblock - /blocking
-	*/
+	 * /blocking -  Manage block & unblock.
+	 *
+	 * @param string $screen_name their twitter username
+	 * @param string|bool $state Default is FALSE.
+	 * @param string|bool $ajax Default is FALSE. when true data will be returned to browser as JSON
+	 * @return void
+	 */
 	public function blocking($screen_name, $state = FALSE, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -175,7 +178,15 @@ class Main extends EC_Controller {
 		}
 	}
 
-	public function direct($screen_name = FALSE, $action = FALSE, $message = '')
+	/**
+	 * Send a direct message to a user
+	 *
+	 * @param string $screen_name the twitter username of the recipient.
+	 * @param string $action optional. can be one of error-not-followed, sent, error-other, deleted
+	 * @param string $message optional. the content of the message
+	 * @return void
+	 */
+	public function direct($screen_name, $action = FALSE, $message = '')
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -189,6 +200,14 @@ class Main extends EC_Controller {
 		$this->layout->view('direct', $this->_data);
 	}
 
+	/**
+	 * Send a direct message to a user
+	 *
+	 * @param string $action required. can be one of error-not-followed,sent,error-other,deleted
+	 * @param string $message optional. the content of the message
+	 * @param string $screen_name the twitter username of the recipient.
+	 * @return void
+	 */
 	public function direct_action($action, $message = '', $screen_name = '')
 	{
 		switch ($action)
@@ -205,6 +224,13 @@ class Main extends EC_Controller {
 		}
 	}
 
+	/**
+	 * Actually sends the Direct Message(DM).
+	 *
+	 * @param string $_POST['tweep'] the username of the recipient
+	 * @param string $_POST['message'] the content of the message
+	 * @return void
+	 */
 	public function direct_send()
 	{
 		$this->redirect_if_not_logged_in();
@@ -244,6 +270,13 @@ class Main extends EC_Controller {
 		}
 	}
 
+	/**
+	 * Delete a Direct Message(DM)
+	 *
+	 * @param integer $id the unique ID of the DM you want to delete
+	 * @param string $ajax optional. Default is FALSE. if true, data will be returned as JSON.
+	 * @return void|json
+	 */
 	public function direct_delete($id, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -273,6 +306,11 @@ class Main extends EC_Controller {
 		}
 	}
 
+	/**
+	 * Render the current users dm_inbox
+	 *
+	 * @return void
+	 */
 	public function direct_inbox()
 	{
 		$this->redirect_if_not_logged_in();
@@ -300,6 +338,11 @@ class Main extends EC_Controller {
 		$this->layout->view('direct_inbox', $this->_data);
 	}
 
+	/**
+	 * The 'outbox' of the current user. a list of all the message they sent.
+	 *
+	 * @return void
+	 */
 	public function direct_sent()
 	{
 		$this->redirect_if_not_logged_in();
@@ -327,6 +370,12 @@ class Main extends EC_Controller {
 		$this->layout->view('direct_sent', $this->_data);
 	}
 
+	/**
+	 * Display the favorite tweets for a user. Assumes current user if not specified.
+	 *
+	 * @param string $screen_name the twitter username
+	 * @return void
+	 */
 	public function favorites($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -368,6 +417,11 @@ class Main extends EC_Controller {
 
 	/**
 	* Creates or removes a favorite from a tweet - /favoriting
+	*
+	* @param integer $tweet_id the ID of the status "tweet"
+	* @param string $state
+	* @param string $ajax if true, a json encoded result will be echoed to browser. otherwise sent to new url
+	* @return json|void
 	*/
 	public function favoriting($tweet_id, $state = FALSE, $ajax = FALSE)
 	{
@@ -407,10 +461,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the features page - /features
-	*
-	* @return void
-	*/
+	 * Manages the features page - /features
+	 *
+	 * @return void
+	 */
 	public function features()
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader;
@@ -421,10 +475,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the Followers page - /followers
-	*
-	* @return void
-	*/
+	 * Manages the Followers page - /followers
+	 *
+	 * @param string $screen_name. if not specified, the current user will be used.
+	 * @return void
+	 */
 	public function followers($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -457,10 +512,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the Following page - /following AKA friends
-	*
-	* @return void
-	*/
+	 * Manages the Following page - /following AKA friends
+	 *
+	 * @param string $screen_name. if not specified, the current user will be used.
+	 * @return void
+	 */
 	public function following($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -493,8 +549,13 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Follows or unfollows user - /manage_follow_user
-	*/
+	 * Follows or unfollows user - /manage_follow_user
+	 *
+	 * @param string $screen_name twitter username of the desired user.
+	 * @param string $state
+	 * @param string $ajax if true, data will be returned as json. other will be sent to a new URL
+	 * @return json|void
+	 */
 	public function manage_follow_user($screen_name, $state = FALSE, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -533,8 +594,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* gets tweet to make thread/conversation - /getResponse
-	*/
+	 * gets tweet to make thread/conversation - /getResponse
+	 * 
+	 * @param integer $id the ID of the tweet
+	 * @return void
+	 */
 	public function getResponse($id)
 	{
 		$this->redirect_if_not_logged_in();
@@ -564,13 +628,17 @@ class Main extends EC_Controller {
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
-		// Add ARIA and send back
+		/**
+		 * Add ARIA and send back
+		 *
+		 * @todo move this to the tweet fragment.
+		 */
 		echo str_replace('class="tweet', 'aria-live="assertive" class="respond tweet', $theTweet);
 	}
 
 	/**
-	* Manages "go to user" page - /go_to_user
-	*/
+	 * Manages "go to user" page - /go_to_user
+	 */
 	public function go_to_user()
 	{
 		$this->redirect_if_not_logged_in();
@@ -583,8 +651,8 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the posting of "go to user" form - /go_user_action
-	*/
+	 * Manages the posting of "go to user" form - /go_user_action
+	 */
 	public function go_user_action()
 	{
 		$this->redirect_if_not_logged_in();
@@ -601,10 +669,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the lists page - /lists
-	*
-	* @return void
-	*/
+	 * Manages the lists page - /lists
+	 *
+	 * @return void
+	 */
 	public function lists()
 	{
 		$this->redirect_if_not_logged_in();
@@ -629,10 +697,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the list_edit page - /list_edit
-	*
-	* @return void
-	*/
+	 * Manages the list_edit page - /list_edit
+	 *
+	 * @return void
+	 */
 	public function list_edit()
 	{
 		$this->redirect_if_not_logged_in();
@@ -658,8 +726,8 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the editing of a list - /list_edit_action
-	*/
+	 * Manages the editing of a list - /list_edit_action
+	 */
 	public function list_edit_action()
 	{
 		$this->redirect_if_not_logged_in();
@@ -687,8 +755,14 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the creation of a list - /list_create
-	*/
+	 * Manages the creation of a list - /list_create
+	 *
+	 * @param $ajax if true, content is returned to the browser as JSON.
+	 * @param $_POST['txt_listName'] the name of the list to create
+	 * @param $_POST['txt_listDesc'] the description of the new list
+	 * @param $_POST['mode']
+	 * @return json|void
+	 */
 	public function list_create($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -724,8 +798,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the addition of a member to a list - /list_add_member
-	*/
+	 * Manages the addition of a member to a list - /list_add_member
+	 *
+	 * @param $ajax if true, content is returned to the browser as JSON.
+	 */
 	public function list_add_member($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -762,8 +838,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the deletion of a list - /list_delete
-	*/
+	 * Manages the deletion of a list - /list_delete
+	 *
+	 * @param $ajax if true, content is returned to the browser as JSON.
+	 */
 	public function list_delete($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -792,8 +870,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages subscribing to a list - /list_subscribe
-	*/
+	 * Manages subscribing to a list - /list_subscribe
+	 *
+	 * @param $ajax if true, content is returned to the browser as JSON.
+	 */
 	public function list_subscribe($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -822,8 +902,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages unsubscribing from a list - /list_unsubscribe
-	*/
+	 * Manages unsubscribing from a list - /list_unsubscribe
+	 *
+	 * @param $ajax if true, content is returned to the browser as JSON.
+	 */
 	public function list_unsubscribe($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -852,10 +934,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the list_timeline page - /list_timeline
-	*
-	* @return void
-	*/
+	 * Manages the list_timeline page - /list_timeline
+	 *
+	 * @return void
+	 */
 	public function list_timeline()
 	{
 		$this->redirect_if_not_logged_in();
@@ -891,10 +973,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the Mentions page - /mentions
-	*
-	* @return void
-	*/
+	 * Manages the Mentions page - /mentions
+	 *
+	 * @return void
+	 */
 	public function mentions()
 	{
 		$this->redirect_if_not_logged_in();
@@ -926,10 +1008,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the My Tweets page - /mytweets
-	*
-	* @return void
-	*/
+	 * Manages the My Tweets page - /mytweets
+	 *
+	 * @return void
+	 */
 	public function mytweets()
 	{
 		$this->redirect_if_not_logged_in();
@@ -1059,10 +1141,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the profile page - /profile
-	*
-	* @return void
-	*/
+	 * Manages the profile page - /profile
+	 *
+	 * @return void
+	 */
 	public function profile()
 	{
 		$this->redirect_if_not_logged_in();
@@ -1100,8 +1182,8 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the profile edit page - /profile_edit
-	*/
+	 * Manages the profile edit page - /profile_edit
+	 */
 	public function profile_edit()
 	{
 		$this->redirect_if_not_logged_in();
@@ -1131,8 +1213,8 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the form data from Edit Profile page - /profile_edit_action
-	*/
+	 * Manages the form data from Edit Profile page - /profile_edit_action
+	 */
 	public function profile_edit_action()
 	{
 		$this->redirect_if_not_logged_in();
@@ -1160,8 +1242,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the form data from Edit Profile page - /profile_avatar_action
-	*/
+	 * Manages the form data from Edit Profile page - /profile_avatar_action
+	 *
+	 * @todo PLEASE REVIEW - Why is this all commented out?
+	 */
 	public function profile_avatar_action()
 	{
 		$this->redirect_if_not_logged_in();
@@ -1187,10 +1271,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the quote page - /quote
-	*
-	* @return void
-	*/
+	 * Manages the quote page - /quote
+	 *
+	 * @param int $tweet_id the ID of the status "tweet" you want to quote
+	 * @return void
+	 */
 	public function quote($tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1305,6 +1390,7 @@ class Main extends EC_Controller {
 	/**
 	* Manages the retweet page (for non-JS use case) - /retweet
 	*
+	* @todo REMOVE the GET parameter. Instead pass it through the URL as a parameter
 	* @return void
 	*/
 	public function retweet()
@@ -1343,8 +1429,13 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Creates or removes a retweet - /retweet_action
-	*/
+	 * Creates or removes a retweet - /retweet_action
+	 *
+	 * @param integer $tweet_id
+	 * @param string $state
+	 * @param string $ajax
+	 * @return json|void
+	 */
 	public function retweet_action($tweet_id, $state = FALSE, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1380,8 +1471,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Reports a user as a spammer (which also blocks the user) - /report_spam
-	*/
+	 * Reports a user as a spammer (which also blocks the user) - /report_spam
+	 *
+	 * @param string $screen_name
+	 * @param string $ajax if true, data will be returned to browser as JSON
+	 */
 	public function report_spam($screen_name, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1411,10 +1505,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the retweets page - /retweets
-	*
-	* @return void
-	*/
+	 * Manages the retweets page - /retweets
+	 *
+	 * @return void
+	 */
 	public function retweets($retweet_type = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1473,12 +1567,12 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Tweets authored by others that I retweeted
-	*
-	* @param array $params API query parameters
-	* @return array
-	* @see https://dev.twitter.com/docs/api/1.1
-	*/
+	 * Tweets authored by others that I retweeted
+	 *
+	 * @param array $params API query parameters
+	 * @return array
+	 * @see https://dev.twitter.com/docs/api/1.1
+	 */
 	public function retweets_by_me($params)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1501,11 +1595,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Things that I tweeted that someone else retweeted
-	*
-	* @param array $params API query parameters
-	* @return array
-	*/
+	 * Things that I tweeted that someone else retweeted
+	 *
+	 * @param array $params API query parameters
+	 * @return array
+	 */
 	public function retweets_of_me($params)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1516,14 +1610,14 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Tweets authored by other people retweeted by peope I follow
-	*
-	* @param array $params API query parameters
-	* @return array
-	*
-	* the method was removed in api 1.1 so instead call home_timeline and filter for RTs
-	* @see https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
-	*/
+	 * Tweets authored by other people retweeted by peope I follow
+	 *
+	 * @param array $params API query parameters
+	 * @return array
+	 *
+	 * the method was removed in api 1.1 so instead call home_timeline and filter for RTs
+	 * @see https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
+	 */
 	public function retweets_to_me($params)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1599,6 +1693,8 @@ class Main extends EC_Controller {
 
 	/**
 	 * Delete a saved search - /search_delete
+	 *
+	 * @param integer $id the ID of the tweet
 	 */
 	public function search_delete($id)
 	{
@@ -1620,7 +1716,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Manage the search results page - /search_results
+	 * Display the search results page - /search_results
+	 *
+	 * @todo MODIFY items that call this to NOT USE GET parameters
+	 * @param string $query
+	 * @return void
 	 */
 	public function search_results($query = FALSE)
 	{
@@ -1676,6 +1776,8 @@ class Main extends EC_Controller {
 
 	/**
 	 * Manage the search users page - /search_users
+	 *
+	 * @return void
 	 */
 	public function search_users()
 	{
@@ -1729,15 +1831,10 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		#--------
-		# http://www.jondev.net/articles/Using_OAuth_with_Twitter_-_PHP_Example
-
-
 		$callback_url = base_url() . $this->config->item('tw_callback_url');
 		$consumer_key =  $this->config->item('tw_consumer_key');
 		$consumer_secret = $this->config->item('tw_consumer_secret');
 
-		// "http://twitter.com/oauth/request_token";
 		$oauth_request_token = $this->twitter_lib->twitteroauth->requestTokenURL();
 		$oauth_authorize = "http://twitter.com/oauth/authorize";
 		$oauth_access_token = "http://twitter.com/oauth/access_token";
@@ -1752,7 +1849,6 @@ class Main extends EC_Controller {
 
 		$oc = new OAuthCurl();
 		$reqData = $oc->fetchData($req->to_url());
-
 		parse_str($reqData['content'], $reqOAuthData);
 
 		$req_token = new OAuthConsumer($reqOAuthData['oauth_token'], $reqOAuthData['oauth_token_secret'], $callback_url);
@@ -1773,7 +1869,7 @@ class Main extends EC_Controller {
 	/**
 	 * Manage the sign out page - /sign_out
 	 *
-	 * Allows user to sign out. Removes their user info from the session
+	 * Allows user to sign out. Removes their user info from the session. Sends user back to homepage
 	 *
 	 * @return void
 	 */
@@ -1791,10 +1887,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the status page - /status
-	*
-	* @return void
-	*/
+	 * Manages the status page - /status
+	 *
+	 * @todo change items the call this to remove GET parameters
+	 * @return void
+	 */
 	public function status($tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1841,11 +1938,13 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the timeline page - /timeline
-	* @todo add ajax in the future
-	*
-	* @return void
-	*/
+	 * Manages the timeline page - /timeline
+	 * @todo add ajax in the future. Update to retrieve new tweets since page has been loaded.
+	 *
+	 * @param integer $tweet_id
+	 * @param string $place where on the current timeline should be injected - use this for ajax
+	 * @return void
+	 */
 	public function timeline($tweet_id = FALSE, $place = 'append')
 	{
 		$this->redirect_if_not_logged_in();
@@ -1909,10 +2008,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the tips page - /tips
-	*
-	* @return void
-	*/
+	 * Manages the tips page - /tips
+	 *
+	 * @return void
+	 */
 	public function tips()
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader;
@@ -1923,10 +2022,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the tools page - /tools
-	*
-	* @return void
-	*/
+	 * Manages the tools page - /tools
+	 *
+	 * @return void
+	 */
 	public function tools()
 	{
 		$this->redirect_if_not_logged_in();
@@ -1939,10 +2038,10 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the trends page - /trends
-	*
-	* @return void
-	*/
+	 * Manages the trends page - /trends
+	 *
+	 * @return void
+	 */
 	public function trends()
 	{
 		$this->redirect_if_not_logged_in();
@@ -1969,6 +2068,13 @@ class Main extends EC_Controller {
 		$this->layout->view('trends', $this->_data);
 	}
 
+	/**
+	 * Delete a tweet
+	 *
+	 * @param integer $id the id of the status "tweet" that you want to delete
+	 * @param string $ajax optional. if true, content will be returned to the browser as JSON.
+	 * @return json|void
+	 */
 	public function tweet_delete($id, $ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -1995,10 +2101,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the useer page - /user
-	*
-	* @return void
-	*/
+	 * Manages the useer page - /user
+	 *
+	 * @param $screen_name
+	 * @return void
+	 */
 	public function user($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -2017,6 +2124,7 @@ class Main extends EC_Controller {
 		$request_param = array();
 		if (FALSE === $screen_name)
 		{
+			$this->get_params_deprecated();
 			$screen_name = $_GET["id"];
 		}
 		$request_param['screen_name'] =  $screen_name;
@@ -2043,10 +2151,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the user timeline page - /user_timeline
-	*
-	* @return void
-	*/
+	 * Manages the user timeline page - /user_timeline
+	 *
+	 * @param string $screen_name
+	 * @return void
+	 */
 	public function user_timeline($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
@@ -2093,10 +2202,11 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	* Manages the user lists page - /user_lists
-	*
-	* @return void
-	*/
+	 * Manages the user lists page - /user_lists
+	 *
+	 * @param string $screen_name
+	 * @return void
+	 */
 	public function user_lists($screen_name = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
