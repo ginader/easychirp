@@ -3,6 +3,11 @@
 <head>
 	<?php echo $head_codes; ?>
 
+	<link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/brand/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/brand/touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/images/brand/touch-icon-ipad-retina.png" />
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!--[if lte IE 8]><link rel="stylesheet" href="/include/css/ie8.css" type="text/css"/><![endif]-->
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
