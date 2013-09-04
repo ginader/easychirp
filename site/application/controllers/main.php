@@ -511,6 +511,7 @@ class Main extends EC_Controller {
 			$screen_name = $this->session->userdata('screen_name');
 		}
 		$request_param['screen_name'] = $screen_name;
+		$this->_data['screen_name'] = $screen_name;
 
 		$this->_data['f'] = $this->twitter_lib->get('followers/list', $request_param);
 
@@ -545,10 +546,10 @@ class Main extends EC_Controller {
 		$request_param['skip_status'] =  true;
 		if (FALSE === $screen_name) 
 		{
-			$screen_name = $_GET["id"];
-			$this->get_params_deprecated();
+			$screen_name = $this->session->userdata('screen_name');
 		}
 		$request_param['screen_name'] = $screen_name;
+		$this->_data['screen_name'] = $screen_name;
 
 		$this->_data['f'] = $this->twitter_lib->get('friends/list', $request_param);
 
