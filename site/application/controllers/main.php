@@ -407,6 +407,7 @@ class Main extends EC_Controller {
 			array(
 			'tweets' => $tweets,
 			'utc_offset' => $this->session->userdata('utc_offset'),
+			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -625,6 +626,7 @@ class Main extends EC_Controller {
 			array( 
 			'tweets' => $tweets, 
 			'utc_offset' => $this->session->userdata('utc_offset'),
+			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -961,6 +963,7 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets, 
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -999,6 +1002,7 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1034,6 +1038,7 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1173,6 +1178,7 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1311,6 +1317,7 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1379,6 +1386,7 @@ class Main extends EC_Controller {
 			array(
 			'tweets' => $tweets,
 			'utc_offset' => $this->session->userdata('utc_offset'),
+			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1419,6 +1427,7 @@ class Main extends EC_Controller {
 			array( 
 			'tweets' => $tweets, 
 			'utc_offset' => $this->session->userdata('utc_offset'),
+			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 		$this->_data['id'] = $request_param['id'];
@@ -1558,6 +1567,7 @@ class Main extends EC_Controller {
 				'type' => $retweet_type,
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1766,6 +1776,7 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1929,6 +1940,7 @@ class Main extends EC_Controller {
 			array( 
 				'tweets' => $tweets, 
 				'utc_offset' => $this->session->userdata('utc_offset'), 
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1999,6 +2011,7 @@ class Main extends EC_Controller {
 				'paginate' => 1,
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']),
 			TRUE);
 
@@ -2138,6 +2151,7 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets, 
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -2193,6 +2207,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 'tweets' => $tweets, 
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 

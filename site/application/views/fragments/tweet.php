@@ -32,12 +32,18 @@ foreach($tweets AS $tweet):
 	// http://www.php.net/manual/en/datetime.createfromformat.php
 	$twitter_date_format = 'D M d H:i:s e Y';
 	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
-	$tweet_date->timezone = $utc_offset;
+	try
+	{
+		$display_tz = new DateTimeZone($time_zone);
+	}
+	catch (Exception $e)
+	{
+		$display_tz = new DateTimeZone('America/Los_Angeles');
+	}
 
-	$date_seconds = (int) $tweet_date->format('U'); // get Unix Epoch seconds
+	$tweet_date->setTimeZone($display_tz);
 
-	// http://www.php.net/manual/en/function.strftime.php
-	$date = strftime('%b %d, %I:%M %p', $date_seconds);	// Jan 1, 3:50 pm
+	$date = date_format($tweet_date, DISPLAY_DATETIME_FORMAT);
 
 	//check if this tweet is a reply
 	$isReply = false;

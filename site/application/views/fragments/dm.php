@@ -8,17 +8,17 @@ if (count($dms) != 0) {
 	}
 ?>
 <div class="tweet rounded clearfix dm">
-	<h2 class="hide"><?=$dm->sender->name?></h2>
+	<h2 class="hide"><?php echo $dm->sender->name?></h2>
 	<div class="dmAvatars">
-		<a href="/user/<?=$dm->sender->screen_name?>"><img src="<?=$dm->sender->profile_image_url; ?>" width="48" height="48" alt="<?=$dm->sender->screen_name?>" /></a>
+		<a href="/user/<?php echo $dm->sender->screen_name?>"><img src="<?php echo $dm->sender->profile_image_url; ?>" width="48" height="48" alt="<?php echo $dm->sender->screen_name?>" /></a>
 		<img src="/images/arrowDm.png" width="12" height="24" alt="sent to" />
-		<a href="/user/<?=$dm->recipient->screen_name?>"><img src="<?=$dm->recipient->profile_image_url; ?>" width="48" height="48" alt="<?=$dm->recipient->screen_name?>" /></a>
+		<a href="/user/<?php echo $dm->recipient->screen_name?>"><img src="<?php echo $dm->recipient->profile_image_url; ?>" width="48" height="48" alt="<?php echo $dm->recipient->screen_name?>" /></a>
 	</div>
-	<q><?=$dm->text?></q>
+	<q><?php echo $dm->text?></q>
 	<p>
-		from <a href="/user/<?=$dm->sender->screen_name?>"><?=$dm->sender->name?></a> 
-		to <a href="/user/<?=$dm->recipient->screen_name?>"><?=$dm->recipient->name?></a> | 
-		<?=$dm->created_at?> 
+		from <a href="/user/<?php echo $dm->sender->screen_name?>"><?php echo $dm->sender->name?></a> 
+		to <a href="/user/<?php echo $dm->recipient->screen_name?>"><?php echo $dm->recipient->name?></a> | 
+		<?php echo $dm->created_at?> 
 	</p>
 	<div>
 		<a href="/direct/<?php 

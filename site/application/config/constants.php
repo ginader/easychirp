@@ -21,7 +21,7 @@ define('DIR_WRITE_MODE', 0777);
 
 /*
 |--------------------------------------------------------------------------
-| Time Constants 
+| Time and Date Constants
 |--------------------------------------------------------------------------
 |
 | Use these constants for expressing human-readable intervals in their 
@@ -33,6 +33,10 @@ define('HOUR_IN_SECONDS',   60 * MINUTE_IN_SECONDS);
 define('DAY_IN_SECONDS',    24 * HOUR_IN_SECONDS);
 define('WEEK_IN_SECONDS',    7 * DAY_IN_SECONDS);  
 define('YEAR_IN_SECONDS',  365 * DAY_IN_SECONDS);  
+
+// http://www.php.net/manual/en/function.date.php
+define('DISPLAY_DATE_FORMAT', 'd F Y'); // 01 January 2013
+define('DISPLAY_DATETIME_FORMAT', 'M d h:i a'); // Jan 1, 3:50 pm
 
 /*
 |--------------------------------------------------------------------------

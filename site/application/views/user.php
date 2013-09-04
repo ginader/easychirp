@@ -103,7 +103,7 @@ if (isset($_GET["action"])) {
 		<dt><?php echo $xliff_reader->get('profile-dt-since'); ?></dt>
 		<dd><?php 
 			$date = date_create($user->created_at);
-			echo date_format($date, 'd F Y'); 
+			echo date_format($date, DISPLAY_DATE_FORMAT);
 		?></dd>
 		
 		<dt><?php echo $xliff_reader->get('profile-dt-bio'); ?></dt>
