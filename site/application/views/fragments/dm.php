@@ -10,18 +10,18 @@ if (count($dms) != 0) {
 <div class="tweet rounded clearfix dm">
 	<h2 class="hide"><?=$dm->sender->name?></h2>
 	<div class="dmAvatars">
-		<a href="/user?id=<?=$dm->sender->screen_name?>"><img src="<?=$dm->sender->profile_image_url; ?>" width="48" height="48" alt="<?=$dm->sender->screen_name?>" /></a>
+		<a href="/user/<?=$dm->sender->screen_name?>"><img src="<?=$dm->sender->profile_image_url; ?>" width="48" height="48" alt="<?=$dm->sender->screen_name?>" /></a>
 		<img src="/images/arrowDm.png" width="12" height="24" alt="sent to" />
-		<a href="/user?id=<?=$dm->recipient->screen_name?>"><img src="<?=$dm->recipient->profile_image_url; ?>" width="48" height="48" alt="<?=$dm->recipient->screen_name?>" /></a>
+		<a href="/user/<?=$dm->recipient->screen_name?>"><img src="<?=$dm->recipient->profile_image_url; ?>" width="48" height="48" alt="<?=$dm->recipient->screen_name?>" /></a>
 	</div>
 	<q><?=$dm->text?></q>
 	<p>
-		from <a href="/user?id=<?=$dm->sender->screen_name?>"><?=$dm->sender->name?></a> 
-		to <a href="/user?id=<?=$dm->recipient->screen_name?>"><?=$dm->recipient->name?></a> | 
+		from <a href="/user/<?=$dm->sender->screen_name?>"><?=$dm->sender->name?></a> 
+		to <a href="/user/<?=$dm->recipient->screen_name?>"><?=$dm->recipient->name?></a> | 
 		<?=$dm->created_at?> 
 	</p>
 	<div>
-		<a href="/direct?user=<?php 
+		<a href="/direct/<?php 
 		if ($state == "inbox") {
 			echo $dm->sender->screen_name;
 		}

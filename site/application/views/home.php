@@ -69,7 +69,7 @@
 		<a href="http://www.stumbleupon.com/submit?url=http://www.EasyChirp.com/"><img src="/images/share/stumbleupon.png" width="50" height="50" alt="stumbleupon" /></a> &nbsp; 
 		<!--<a href="http://digg.com/"><img src="/images/share/digg.png" width="50" height="50" alt="digg" /></a> &nbsp;--> 
 		<a href="http://www.reddit.com/submit?url=http://www.EasyChirp.com/&amp;t=Easy+Chirp"><img src="/images/share/reddit.png" width="50" height="50" alt="reddit" /></a> &nbsp; 
-		<a href="mailto:?subject=Easy Chirp&amp;body=Check out this awesome, user-friendly Twitter web app! http://www.easychirp.com"><img src="/images/share/email.png" width="50" height="50" alt="email" /></a> &nbsp;
+		<a href="mailto:?subject=Easy%20Chirp&amp;body=Check%20out%20this%20awesome,%20user-friendly%20Twitter%20web%20app!%20http://www.EasyChirp.com"><img src="/images/share/email.png" width="50" height="50" alt="email" /></a> &nbsp;
 	</div>
 </div>
 

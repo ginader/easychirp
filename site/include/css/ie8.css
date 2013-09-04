@@ -1,0 +1,316 @@
+
+h1 {
+    margin-top: 0.5em;
+    padding: .5em 1em .5em .5em;
+	font-size: 1.8em;
+}
+h2 {
+	font-size: 1.75em;
+	padding: 1em 0 .5em;
+}
+h2.marginAdjustment {
+	margin-left: 1em;
+}
+p.marginAdjustment {
+	margin: .5em 0 0 1em;
+}
+h3 {
+	font-size: 1.15em;
+	padding: 1em 0 .5em;
+}
+h4 {
+	font-size: 1em;
+	padding: 1em 0 .5em;
+}
+p, td, dd, li, q {
+	line-height: 1.45em;
+	margin-bottom: .5em;
+}
+dd, li {
+	margin-left: 1.5em;
+}
+
+.content ul li {
+	padding-left: 1em;
+	margin-left: .5em;
+	background: url(/images/bullet1.gif) no-repeat 0 .45em;
+}
+h2 + ul {
+	margin-top: .3em;
+}
+
+div.box1 h2  {
+	margin-top: -.35em;
+}
+
+.smallText {
+	font-size: .85em;
+}
+.notes {
+	line-height: 1.2em;
+}
+
+#wrapper {
+	margin: 0 auto 2em;
+}
+#welcome p {
+	line-height: 1.4em;
+}
+
+.content {
+	padding-top: .1em;
+}
+
+footer {
+	padding-top: 3em;
+}
+
+.box1 {
+	padding: 0 1em .5em;
+	margin: 1em 0;
+}
+
+#top-pull-link {
+	margin: -2.1em 0 .75em; 
+	padding-right: 1em;
+}
+
+input[type=text], textarea {
+	font-size: 1.1em;
+	padding: .25em;
+	margin: .25em 0;
+}
+
+
+div.msgBox {
+	padding: .25em .75em;
+	margin-bottom: .5em;
+}
+div.msgBoxPos,
+div.msgBoxNeg {
+	font-size: 1.25em;
+	padding: 1em;
+	margin-top: .5em;
+}
+
+.load-more {
+	padding: .5em 1em .5em;
+	text-align: center;
+}
+.load-more a {
+	display: block;
+	padding: .5em .3em .35em;
+}
+
+#navMain li {
+	margin: .1em 0;
+}
+#navMain li a {
+	padding: .15em .5em;
+	margin-right: .25em;
+}
+
+#navTweet {
+	padding: .25em 0 .5em;
+}
+#navTweet li {
+	margin: .15em 0;
+}
+#navTweet li a {
+	padding: .5em .5em .3em;
+	margin-right: .75em;
+}
+
+#m_tools span {
+	padding-right: .2em;
+}
+
+.submenu {
+	top: 2.25em;
+	width: 10em;
+}
+.submenu li:first-child {
+    padding-top: 0.5em;
+}
+
+#enterTweet {
+	padding: .5em 1em;
+	margin: 1em 0;
+}
+
+#enterTweet h2 {
+	font-size: 1.15em;
+}
+
+#enterTweet h2 span {
+	padding-right: .5em;
+}
+#enterTweet textarea {
+	margin-right: 1em;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+#enterTweet h3 {
+    font-size: 1em;
+    padding: .8em 0 .3em;
+}
+#charlimit {
+	margin: .5em 0;
+}
+#frmUrlShort {
+	margin-bottom: .8em;
+}
+#urlService {
+	margin: 0 .75em;
+}
+
+div.msgBoxPos,
+div.msgBoxNeg {
+	padding: .5em;
+	margin-bottom: .5em;
+}
+.msgBoxPos h2,
+.msgBoxNeg h2 {
+	padding: .3em 0 .3em 40px;
+}
+
+#homeECtweets li {
+	line-height: 1.25em;
+	margin-bottom: .75em;
+}
+#frmProfileEdit dt,
+.twListDtAdj {
+	padding-top: .4em;
+}
+#profile {
+	margin: .5em 0 1em;
+}
+#profile dt,
+.twList dt {
+	margin-top: .5em;
+	margin-right: .5em;
+	line-height: 1.2em;
+}
+#profile dd,
+.twList dd {
+	margin-top: .5em;
+	line-height: 1.2em;
+}
+
+.article_mentions dt {
+	margin: 1.2em 0 .5em 0;
+	line-height: 1.5em;
+}
+.article_mentions dd {
+	line-height: 1em;
+}
+
+#userAvatar a {
+	padding: .25em;
+	margin-top: .5em;
+}
+
+#createList {
+	margin-top: .5em;
+}
+#createList legend { 
+	padding: .2em 0 .5em;
+}
+#createList div.row {
+	margin: .5em 0;
+}
+#createList div.row span {
+	margin: .25em 0;
+	font-size: .9em;
+}
+
+a.delete-search {
+	margin-left: .5em;
+}
+a.delete-link {
+	text-decoration: none;
+}
+
+#enterTweep {
+	padding: .5em 0 0 .5em;
+}
+
+#txtEnterTweet, 
+#txtDirectMessage {
+	height: 3.3em;
+	min-height: 3.3em;
+	margin-right: .7em;
+	line-height: 1.6em;
+}
+
+button {
+	font-size: 1em;
+	margin: .5em .5em .5em 0;
+	padding: .4em .9em;
+}
+.btnPost {
+	font-size: 1.5em;
+	padding: .9em .7em .7em;
+	margin-top: .2em;
+}
+.btnSmall {
+	padding: .2em .4em;
+}
+
+.tweet {
+	padding: .5em .5em .5em 74px;
+	margin-bottom: 1em;
+}
+.tweet.dm {
+	margin: 1em 0;
+}
+.tweet.respond {
+	margin-left: 2em;
+}
+.dm .btn {
+	padding: .35em;
+	margin: .2em 0 0 .3em;
+}
+.follow {
+	padding: .5em .5em .5em 74px;
+}
+.follow h2 {
+	padding: .1em 0 .5em;
+}
+.tweet q {
+	font-size: 1.35em;
+	line-height: 1.7em;
+	margin: 0 0 .5em;
+}
+.no-js .btnOptions {
+	margin-top: .5em;
+}
+.tweet li {
+	margin: 0 .5em .5em 0;
+}
+.js .tweet li {
+	margin: .5em .5em 0 0;
+}
+.tweetSingle {
+	margin: 1em 0 -1em;
+}
+
+.btnOptions h3 {
+	padding: .5em .5em .5em 0;
+}
+a.btnOptionsTweet,
+a.btnOptionsUser,
+.btnOptions a {
+	padding: .5em .6em .1em;	
+}
+
+.modal .close {
+	font-size: 2em;
+}
+
+.theme-inverse .content .box1 ul li {
+	margin-left: 1.5em;
+}
+
+
+

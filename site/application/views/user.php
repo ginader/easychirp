@@ -125,7 +125,7 @@ if (isset($_GET["action"])) {
 		</dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-tweets'); ?></dt>
-		<dd><a href="user_timeline?user=<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>
+		<dd><a href="/user_timeline/<?php echo $user->screen_name; ?>"><?php echo $user->statuses_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-following'); ?></dt>
 		<dd><a href="/following?id=<?php echo $user->screen_name; ?>"><?php echo $user->friends_count; ?></a></dd>
@@ -140,7 +140,7 @@ if (isset($_GET["action"])) {
 		<dd><?php echo $user->listed_count; ?></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
-		<dd><a href="/user_lists?id=<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
+		<dd><a href="/user_lists/<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></dd>
 
 		<?php /* <dt><?php echo $xliff_reader->get('nav-retweets'); ?></dt>
 		<dd><a href="#">retweets by <?php echo $user->screen_name; ?></a></dd> */?>
