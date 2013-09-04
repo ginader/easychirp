@@ -186,7 +186,7 @@ class Main extends EC_Controller {
 	 * @param string $message optional. the content of the message
 	 * @return void
 	 */
-	public function direct($screen_name, $action = FALSE, $message = '')
+	public function direct($screen_name = '', $action = FALSE, $message = '')
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -331,7 +331,11 @@ class Main extends EC_Controller {
 
 		$dms = $this->twitter_lib->get('direct_messages', $request_param);
 		$this->_data['dms'] = $this->load->view('fragments/dm',
-			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 
+				'dms' => $dms,
+				'time_zone' => $this->session->userdata('time_zone'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-inbox') .' | '. $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Direct messages sent to user.');
@@ -363,7 +367,11 @@ class Main extends EC_Controller {
 
 		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
 		$this->_data['dms'] = $this->load->view('fragments/dm',
-			array( 'dms' => $dms, 'xliff_reader' => $this->_data['xliff_reader']), TRUE);
+			array( 
+				'dms' => $dms, 
+				'time_zone' => $this->session->userdata('time_zone'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-sent') .' | '. $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Direct messages sent from user.');

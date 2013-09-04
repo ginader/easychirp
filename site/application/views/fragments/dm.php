@@ -18,7 +18,24 @@ if (count($dms) != 0) {
 	<p>
 		from <a href="/user/<?php echo $dm->sender->screen_name?>"><?php echo $dm->sender->name?></a> 
 		to <a href="/user/<?php echo $dm->recipient->screen_name?>"><?php echo $dm->recipient->name?></a> | 
-		<?php echo $dm->created_at?> 
+		<?php
+		$date = $dm->created_at;
+		$twitter_date_format = 'D M d H:i:s e Y';
+		$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
+		try
+		{
+			$display_tz = new DateTimeZone($time_zone);
+		}
+		catch (Exception $e)
+		{
+			$display_tz = new DateTimeZone('America/Los_Angeles');
+		}
+
+		$tweet_date->setTimeZone($display_tz);
+
+		$date = date_format($tweet_date, DISPLAY_DATETIME_FORMAT);
+		echo $date;
+		?> 
 	</p>
 	<div>
 		<a href="/direct/<?php 
