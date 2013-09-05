@@ -2214,7 +2214,7 @@ class Main extends EC_Controller {
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 
 		// @todo create a page header for user timeline that lets the username be passed in.
-		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline') ." for @" . $screen_name;
+		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline') ." : @" . $screen_name;
 
 		$tweet_form_params = array( 'xliff_reader' => $this->_data['xliff_reader']);
 
