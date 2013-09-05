@@ -1,6 +1,10 @@
 <h1 class="rounded">
 <?php
-	echo $xliff_reader->get('following-h1') . ' : @' . $screen_name;
+echo $xliff_reader->get('following-h1');
+if ($screen_name !== $this->session->userdata('screen_name')) 
+{
+	echo ' : @' . $screen_name;
+}
 ?>
 </h1>
 

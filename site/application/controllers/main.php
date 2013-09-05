@@ -409,7 +409,6 @@ class Main extends EC_Controller {
 			$request_param['screen_name'] = $_GET["id"];
 		}
 
-
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array(
@@ -515,8 +514,12 @@ class Main extends EC_Controller {
 
 		$this->_data['f'] = $this->twitter_lib->get('followers/list', $request_param);
 
-		$this->layout->set_title( $screen_name . " | " 
-			. $this->xliff_reader->get('followers-h1') );
+		$page_title = $this->xliff_reader->get('followers-h1');
+		if ($screen_name !== $this->session->userdata('screen_name')) 
+		{
+			$page_title = $screen_name . " | " . $this->xliff_reader->get('followers-h1');
+		}
+		$this->layout->set_title( $page_title );
 		$this->layout->set_description('Twitter users following me.');
 		$this->layout->view('followers', $this->_data);
 	}
@@ -553,7 +556,12 @@ class Main extends EC_Controller {
 
 		$this->_data['f'] = $this->twitter_lib->get('friends/list', $request_param);
 
-		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('following-h1') );
+		$page_title = $this->xliff_reader->get('following-h1');
+		if ($screen_name !== $this->session->userdata('screen_name')) 
+		{
+			$page_title = $screen_name . " | " . $this->xliff_reader->get('following-h1');
+		}
+		$this->layout->set_title( $page_title );
 		$this->layout->set_description('Twitter users whom I am following.');
 		$this->layout->view('following', $this->_data);
 	}
