@@ -400,7 +400,7 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+		$request_param['screen_name'] = $this->session->userdata('screen_name');
 		if ($screen_name !== FALSE)
 		{
 			$request_param['screen_name'] = $screen_name;
@@ -418,7 +418,12 @@ class Main extends EC_Controller {
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
-		$this->layout->set_title( $this->xliff_reader->get('favorites-h1') );
+		$page_title = $this->xliff_reader->get('favorites-h1');
+		if ($request_param['screen_name'] !== $this->session->userdata('screen_name')) 
+		{
+			$page_title = $request_param['screen_name'] . " | " . $this->xliff_reader->get('favorites-h1');
+		}
+		$this->layout->set_title( $page_title );
 		$this->layout->set_description('Tweets that user marked as a favorite.');
 		$this->layout->view('favorites', $this->_data);
 	}
