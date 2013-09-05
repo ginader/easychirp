@@ -1,10 +1,10 @@
 <?php
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "deleted") {
-		echo '<div class="msgBoxPos rounded">The search was deleted.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('msg-search-deleted').'</div>';
 	}
 	elseif ($_GET["action"] == "saved") {
-		echo '<div class="msgBoxPos rounded">The search was saved.</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('msg-search-saved').'</div>';
 	}
 }
 ?>
