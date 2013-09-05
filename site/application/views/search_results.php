@@ -2,13 +2,13 @@
 
 <ul style="margin-top: .5rem;">
 <?php
-	echo '<li>Search results for: '.urldecode($meta->query);
-	echo '<li><a href="/search_quick" rel="modal">modify search</a>';
+	echo '<li>Search results for: '.urldecode($meta->query).'</li>';
+	echo '<li><a href="/search_quick" rel="modal">modify search</a></li>';
 	if ( isset($_GET["saved"]) ) {
-		echo '<li>This search is saved.</a>';
+		echo '<li>This search is saved.</li>';
 	}
 	else {
-		echo '<li><a href="/search_save?query='.$meta->query.'">'.$xliff_reader->get('search-results-save-this').'</a>';
+		echo '<li><a href="/search_save/false?query='.$meta->query.'">'.$xliff_reader->get('search-results-save-this').'</a></li>';
 	}
 ?>
 </ul>
@@ -28,3 +28,5 @@ else {
 //debug_object($meta);
 
 ?>
+
+<div data-msg-search-saved="<?php echo $xliff_reader->get('msg-search-saved'); ?>" data-msg-search-deleted="<?php echo $xliff_reader->get('msg-search-deleted'); ?>"></div>

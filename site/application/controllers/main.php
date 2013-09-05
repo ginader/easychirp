@@ -1701,7 +1701,7 @@ class Main extends EC_Controller {
 	/**
 	 * Created a saved search - /search_save
 	 */
-	public function search_save()
+	public function search_save($ajax = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1720,7 +1720,12 @@ class Main extends EC_Controller {
 		$request_param['query'] = $_GET["query"];
 		$data = $this->twitter_lib->post('saved_searches/create', $request_param);
 
-		redirect( base_url() . 'search?action=saved');
+		if ($ajax == "true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'search?action=saved');
+		}
 	}
 
 	/**
