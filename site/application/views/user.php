@@ -35,10 +35,10 @@ if (isset($_GET["action"])) {
 	<p><?php
 		$isFollowing = $user->following;
 		if ($isFollowing === true) {
-			echo '<span id="spanFollowCurrent">' . $xliff_reader->get('user-following') . '</span> (<a href="unfollow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-unfollow') . '</a>)';
+			echo '<span id="spanFollowCurrent">' . $xliff_reader->get('user-following') . '</span> (<a href="/unfollow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-unfollow') . '</a>)';
 		}
 		else {
-			echo '<span id="spanFollowCurrent">' . $xliff_reader->get('user-not-following') . '</span> (<a href="follow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-follow') . '</a>)';
+			echo '<span id="spanFollowCurrent">' . $xliff_reader->get('user-not-following') . '</span> (<a href="/follow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-follow') . '</a>)';
 		}
 	?></p>
 	
