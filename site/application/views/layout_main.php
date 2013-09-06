@@ -14,7 +14,7 @@
 	<!--[if lte IE 7]><script src="include/js/lte-ie7.js"></script><![endif]-->
 </head>
 
-<body class="theme-default">
+<body class="<?php echo $active_theme; ?>">
 
 <script>
 	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
@@ -79,8 +79,24 @@
 
 <footer role="contentinfo">
 	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
-	<p><?php echo $xliff_reader->get('footer-select-language'); ?>: English (selected) | <a href="#">Arabic</a> | Espa&ntilde;ol (coming soon) | Fran&ccedil;ais (coming soon)</p>
-	<p>&copy; <?php echo $xliff_reader->get('footer-copyright'); ?> 2009-2013 <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
+	<p><?php echo $xliff_reader->get('footer-select-language'); ?>:
+	<?php $link = '';   ?>
+	<?php foreach($lang_menu AS $code => $name): ?>
+		<?php echo ($link) ? ' | ' : ''; ?>
+		<?php $link = anchor('/switch_lang/' . $code, $name); ?>
+		<?php echo $link; ?>
+	<?php endforeach; ?>
+	 -- <a href="/phpinfo">PHP Info</a>
+	</p>
+	<p>Select a Theme: 
+	<?php $link = ''; ?>
+	<?php foreach($theme_menu AS $theme_code => $theme_name): ?>
+		<?php echo ($link) ? ' | ' : ''; ?>
+		<?php $link = anchor('/switch_theme/' . $theme_code, $theme_name); ?>
+		<?php echo $link; ?>
+	<?php endforeach; ?>
+	</p>
+	<p>&copy; <?php echo $xliff_reader->get('footer-copyright'); ?> 2009-<?php echo date('Y'); ?> <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
 	<a href="http://www.weboverhauls.com" title="tune-up your web site! | www.weboverhauls.com">Web Overhauls</a></p>
 	<p><img src="/images/powered-by-twitter-sig.gif" width="137" height="11" alt="powered by Twitter" /></p>
 </footer>

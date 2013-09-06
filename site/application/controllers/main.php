@@ -1959,6 +1959,26 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Change user interface langauges
+	 *
+	 * @param string,boolean,integer,float,array,object,mixed,number $one a necessary parameter
+	 * @param $two optional an optional value
+	 * @return void
+	 */
+	public function switch_lang($lang_code)
+	{
+		$this->_data['lang_code'] = $lang_code;
+		$this->session->set_userdata('lang_code', $lang_code);
+
+		redirect($_SERVER['HTTP_REFERER']); // _SERVER["HTTP_REFERER"]
+	}
+
+	public function info()
+	{
+		phpinfo();
+	}
+
+	/**
 	 * Manages the timeline page - /timeline
 	 * @todo add ajax in the future. Update to retrieve new tweets since page has been loaded.
 	 *

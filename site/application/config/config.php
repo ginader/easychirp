@@ -72,10 +72,29 @@ $config['url_suffix'] = '';
 $config['language']	= 'english';
 $config['site_language'] = 'en-US';
 $config['supported_langs'] = array(
+	'en-US' => 'English',
 	'ar' => 'Saudi Arabian Arabic',
 	'es' => 'Spanish',
 	'de' => 'German'
 );
+
+/*
+|--------------------------------------------------------------------------
+| Theme Selection
+|--------------------------------------------------------------------------
+|
+| This determines which set of language files should be used. Make sure
+| there is an available translation if you intend to use something other
+| than english.
+|
+*/
+$config['active_theme'] = 'theme-default';
+$config['supported_themes'] = array(
+	'theme-default' => 'Standard Theme',
+	'theme-inverse' => 'High Contrast',
+);
+
+
 
 /*
 |--------------------------------------------------------------------------

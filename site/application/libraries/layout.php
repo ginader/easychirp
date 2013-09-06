@@ -26,6 +26,7 @@ class Layout
 	public $skip_to_sign_in = FALSE;
 	public $title = '';
 	public $lang_code = '';
+	public $lang_menu = "";
 	public $sign_in_url = '';
 	public $base_url = '';
 	public $description = "";
@@ -33,6 +34,8 @@ class Layout
 	public $main_menu = "";
 	public $screen_name = "";
 	public $tweet_menu = "";
+	public $active_theme = "theme-inverse";
+	public $theme_menu = "";
 
 	public $meta_name_tags = array();
 	public $meta_http_equiv_tags = array();
@@ -372,6 +375,9 @@ class Layout
 		$loaded_data['screen_name'] = $this->screen_name;
 		$loaded_data['tweet_menu'] = $this->tweet_menu;
 		$loaded_data['lang_code'] = $this->lang_code;
+		$loaded_data['lang_menu'] = $this->lang_menu;
+		$loaded_data['theme_menu'] = $this->theme_menu;
+		$loaded_data['active_theme'] = $this->active_theme;
 
 		if($return)
 		{
