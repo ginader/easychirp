@@ -1961,8 +1961,7 @@ class Main extends EC_Controller {
 	/**
 	 * Change user interface langauges
 	 *
-	 * @param string,boolean,integer,float,array,object,mixed,number $one a necessary parameter
-	 * @param $two optional an optional value
+	 * @param string $lang_code the desired language code.
 	 * @return void
 	 */
 	public function switch_lang($lang_code)
@@ -1970,8 +1969,24 @@ class Main extends EC_Controller {
 		$this->_data['lang_code'] = $lang_code;
 		$this->session->set_userdata('lang_code', $lang_code);
 
-		redirect($_SERVER['HTTP_REFERER']); // _SERVER["HTTP_REFERER"]
+		redirect($_SERVER['HTTP_REFERER']);
 	}
+
+
+	/**
+	 * Change themes
+	 *
+	 * @param string $theme the desired theme id
+	 * @return void
+	 */
+	public function switch_theme($theme)
+	{
+		$this->_data['active_theme'] = $theme;
+		$this->session->set_userdata('active_theme', $theme);
+
+		redirect($_SERVER['HTTP_REFERER']);
+	}
+
 
 	public function info()
 	{

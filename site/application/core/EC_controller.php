@@ -184,7 +184,6 @@ class EC_Controller extends CI_Controller {
 			$info .= ' line ' . $trace[1]['line'];
 		}
 
-
 		$message = 'GET parameters are deprecated. Replace with a CodeIgniter implementation.';
 		$message .= $info;
 		$message .= ' It should either be part of the URL, so it gets passed as a function param';

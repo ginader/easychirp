@@ -86,7 +86,6 @@
 		<?php $link = anchor('/switch_lang/' . $code, $name); ?>
 		<?php echo $link; ?>
 	<?php endforeach; ?>
-	 -- <a href="/phpinfo">PHP Info</a>
 	</p>
 	<p>Select a Theme: 
 	<?php $link = ''; ?>
