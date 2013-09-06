@@ -22,27 +22,39 @@ class EC_Controller extends CI_Controller {
 		$this->load->library('menu_generator');
 		$this->load->library('xliff_reader');
 
-		$lang_code = $this->config->item('site_language');
 		$supported = $this->config->item('supported_langs');
-		foreach ($this->get_user_languages() AS $lang)
+
+		$active_theme = $this->session->userdata('active_theme');
+		if ( ! $active_theme)
+		{
+			$active_theme = $this->config->item('active_theme');
+		}
+
+		$lang_code = $this->session->userdata('lang_code');
+		if ( ! $lang_code)
+		{
+			$lang_code = $this->config->item('site_language');
+		}
+
+		$user_languages = $this->get_user_languages();
+		foreach ($user_languages AS $lang)
 		{
 			if ( isset(  $supported[ $lang ]  ) )
 			{
 				$lang_code = $lang ;
 				break;
 			}
-
 		}
-		$lang_code = 'en-US';
-		error_log('lang_code=' . $lang_code);
+
 		$this->xliff_reader->load( $lang_code );
-		
+
 		$this->layout->set_site_name('EasyChirp');
 		$this->layout->set_tagline('web accessibility for the Twitter.com website application');
 		$this->layout->set_description('Easy Chirp. Web accessibility for the Twitter web site application. The Twitter.com website redone with strict web standards and web accessibility. Great for screen readers, low-vision, beginners, older browsers, text-only browsers, and non-JavaScript.');
 
-		// META TAGS
 		$this->layout->lang_code = $lang_code;
+
+		// META TAGS
 		$this->layout->add_meta_tag_name('charset', 'utf-8');
 		$this->layout->add_meta_tag_name('author', 'Dennis E Lembree, Web Overhauls');
 		$this->layout->add_meta_tag_name('viewport', 'width=device-width, initial-scale=1.0');
@@ -76,7 +88,6 @@ class EC_Controller extends CI_Controller {
 		// 
 		$main_menu = array();
 		foreach ($this->config->item('main_menu') AS $path => $data){
-			
 			// Remove the '/profile' link if the user is not logged in
 			if ($this->session->userdata('logged_in') === FALSE && $path == '/profile')
 			{
@@ -100,6 +111,9 @@ class EC_Controller extends CI_Controller {
 
 		$this->menu_generator->load( $tweet_menu );
 		$this->layout->tweet_menu = $this->menu_generator->generate('navTweet');
+		$this->layout->lang_menu = $this->config->item('supported_langs');
+		$this->layout->theme_menu = $this->config->item('supported_themes');
+		$this->layout->active_theme = $active_theme;
 	}
 
 	/**
@@ -169,7 +183,6 @@ class EC_Controller extends CI_Controller {
 		{
 			$info .= ' line ' . $trace[1]['line'];
 		}
-
 
 		$message = 'GET parameters are deprecated. Replace with a CodeIgniter implementation.';
 		$message .= $info;
