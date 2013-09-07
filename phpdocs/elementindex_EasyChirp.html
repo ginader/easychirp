@@ -53,14 +53,27 @@
 						<span class="var-title">$_data</span>
 					</dt>
 		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Tweet.html#var$_data">Tweet::$_data</a> in tweet.php</div>
+					</dd>
+			<dt class="field">
+						<span class="var-title">$_data</span>
+					</dt>
+		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#var$_data">Main::$_data</a> in main.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">__construct</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#method__construct">Main::__construct()</a> in main.php</div>
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Tweet.html#method__construct">Tweet::__construct()</a> in tweet.php</div>
 							<div class="index-item-description">Describe your function</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">__construct</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#method__construct">Main::__construct()</a> in main.php</div>
+							<div class="index-item-description">Constructor. Retrieves session data and populates class data</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">__construct</span>
@@ -117,6 +130,12 @@
 							<div class="index-item-description">Manages the articles page - /articles</div>
 					</dd>
 			<dt class="field">
+						<span class="var-title">$active_theme</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Libraries/Layout.html#var$active_theme">Layout::$active_theme</a> in layout.php</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">add_link_tag</span>
 					</dt>
 		<dd class="index-item-body">
@@ -165,6 +184,13 @@
 	</div>
 	<dl>
 			<dt class="field">
+						<span class="method-title">blocking</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodblocking">Main::blocking()</a> in main.php</div>
+							<div class="index-item-description">/blocking -  Manage block &amp; unblock.</div>
+					</dd>
+			<dt class="field">
 						<span class="var-title">$base_url</span>
 					</dt>
 		<dd class="index-item-body">
@@ -197,18 +223,42 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoddirect">Main::direct()</a> in main.php</div>
+							<div class="index-item-description">Send a direct message to a user</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">direct_action</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoddirect_action">Main::direct_action()</a> in main.php</div>
+							<div class="index-item-description">Send a direct message to a user</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">direct_delete</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoddirect_delete">Main::direct_delete()</a> in main.php</div>
+							<div class="index-item-description">Delete a Direct Message(DM)</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">direct_inbox</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoddirect_inbox">Main::direct_inbox()</a> in main.php</div>
+							<div class="index-item-description">Render the current users dm_inbox</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">direct_send</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoddirect_send">Main::direct_send()</a> in main.php</div>
+							<div class="index-item-description">Actually sends the Direct Message(DM).</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">direct_sent</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoddirect_sent">Main::direct_sent()</a> in main.php</div>
+							<div class="index-item-description">The 'outbox' of the current user. a list of all the message they sent.</div>
 					</dd>
 			<dt class="field">
 						<span class="include-title">debug_helper.php</span>
@@ -269,6 +319,14 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodfavorites">Main::favorites()</a> in main.php</div>
+							<div class="index-item-description">Display the favorite tweets for a user. Assumes current user if not specified.</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">favoriting</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodfavoriting">Main::favoriting()</a> in main.php</div>
+							<div class="index-item-description">Creates or removes a favorite from a tweet - /favoriting</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">features</span>
@@ -282,14 +340,14 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodfollowers">Main::followers()</a> in main.php</div>
-							<div class="index-item-description">Manages the followers page - /followers</div>
+							<div class="index-item-description">Manages the Followers page - /followers</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">following</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodfollowing">Main::following()</a> in main.php</div>
-							<div class="index-item-description">Manages the following page - /following</div>
+							<div class="index-item-description">Manages the Following page - /following AKA friends</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$file</span>
@@ -312,16 +370,38 @@
 	</div>
 	<dl>
 			<dt class="field">
+						<span class="method-title">getResponse</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodgetResponse">Main::getResponse()</a> in main.php</div>
+							<div class="index-item-description">gets tweet to make thread/conversation - /getResponse</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">go_to_user</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodgo_to_user">Main::go_to_user()</a> in main.php</div>
+							<div class="index-item-description">Manages &quot;go to user&quot; page - /go_to_user</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">go_user_action</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodgo_user_action">Main::go_user_action()</a> in main.php</div>
+							<div class="index-item-description">Manages the posting of &quot;go to user&quot; form - /go_user_action</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">get_current_url</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/core/EC_Controller.html#methodget_current_url">EC_Controller::get_current_url()</a> in EC_controller.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">get_params_deprecated</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/core/EC_Controller.html#methodget_params_deprecated">EC_Controller::get_params_deprecated()</a> in EC_controller.php</div>
+							<div class="index-item-description">Deprecated Message for $_GET parameters;</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">get_user_languages</span>
@@ -406,6 +486,12 @@
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodindex">Main::index()</a> in main.php</div>
 							<div class="index-item-description">Manages the homepage.</div>
 					</dd>
+			<dt class="field">
+						<span class="method-title">info</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodinfo">Main::info()</a> in main.php</div>
+					</dd>
 		</dl>
 	<a name="l"></a>
 	<div class="index-letter-section">
@@ -422,6 +508,27 @@
 							<div class="index-item-description">Manages the lists page - /lists</div>
 					</dd>
 			<dt class="field">
+						<span class="method-title">list_add_member</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodlist_add_member">Main::list_add_member()</a> in main.php</div>
+							<div class="index-item-description">Manages the addition of a member to a list - /list_add_member</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">list_create</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodlist_create">Main::list_create()</a> in main.php</div>
+							<div class="index-item-description">Manages the creation of a list - /list_create</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">list_delete</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodlist_delete">Main::list_delete()</a> in main.php</div>
+							<div class="index-item-description">Manages the deletion of a list - /list_delete</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">list_edit</span>
 					</dt>
 		<dd class="index-item-body">
@@ -429,10 +536,44 @@
 							<div class="index-item-description">Manages the list_edit page - /list_edit</div>
 					</dd>
 			<dt class="field">
+						<span class="method-title">list_edit_action</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodlist_edit_action">Main::list_edit_action()</a> in main.php</div>
+							<div class="index-item-description">Manages the editing of a list - /list_edit_action</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">list_subscribe</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodlist_subscribe">Main::list_subscribe()</a> in main.php</div>
+							<div class="index-item-description">Manages subscribing to a list - /list_subscribe</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">list_timeline</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodlist_timeline">Main::list_timeline()</a> in main.php</div>
+							<div class="index-item-description">Manages the list_timeline page - /list_timeline</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">list_unsubscribe</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodlist_unsubscribe">Main::list_unsubscribe()</a> in main.php</div>
+							<div class="index-item-description">Manages unsubscribing from a list - /list_unsubscribe</div>
+					</dd>
+			<dt class="field">
 						<span class="var-title">$lang_code</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Libraries/Layout.html#var$lang_code">Layout::$lang_code</a> in layout.php</div>
+					</dd>
+			<dt class="field">
+						<span class="var-title">$lang_menu</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Libraries/Layout.html#var$lang_menu">Layout::$lang_menu</a> in layout.php</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$layout</span>
@@ -491,6 +632,13 @@
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html">Main</a> in main.php</div>
 							<div class="index-item-description">Main Controller for EasyChirp</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">manage_follow_user</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodmanage_follow_user">Main::manage_follow_user()</a> in main.php</div>
+							<div class="index-item-description">Follows or unfollows user - /manage_follow_user</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">mentions</span>
@@ -561,11 +709,31 @@
 							<div class="index-item-description">Manages the profile page - /profile</div>
 					</dd>
 			<dt class="field">
+						<span class="method-title">profile_avatar_action</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodprofile_avatar_action">Main::profile_avatar_action()</a> in main.php</div>
+							<div class="index-item-description">Manages the form data from Edit Profile page - /profile_avatar_action</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">profile_edit</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodprofile_edit">Main::profile_edit()</a> in main.php</div>
 							<div class="index-item-description">Manages the profile edit page - /profile_edit</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">profile_edit_action</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodprofile_edit_action">Main::profile_edit_action()</a> in main.php</div>
+							<div class="index-item-description">Manages the form data from Edit Profile page - /profile_edit_action</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">post</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Libraries/Twitter_lib.html#methodpost">Twitter_lib::post()</a> in twitter_lib.php</div>
 					</dd>
 		</dl>
 	<a name="q"></a>
@@ -590,6 +758,33 @@
 		<div style="clear: both"></div>
 	</div>
 	<dl>
+			<dt class="field">
+						<span class="method-title">reply</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodreply">Main::reply()</a> in main.php</div>
+							<div class="index-item-description">Manages the reply pages - /reply and /reply_all</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">reply</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Tweet.html#methodreply">Tweet::reply()</a> in tweet.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">report_spam</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodreport_spam">Main::report_spam()</a> in main.php</div>
+							<div class="index-item-description">Reports a user as a spammer (which also blocks the user) - /report_spam</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">retweet</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodretweet">Main::retweet()</a> in main.php</div>
+							<div class="index-item-description">Manages the retweet page (for non-JS use case) - /retweet</div>
+					</dd>
 			<dt class="field">
 						<span class="method-title">retweets</span>
 					</dt>
@@ -618,6 +813,19 @@
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodretweets_to_me">Main::retweets_to_me()</a> in main.php</div>
 							<div class="index-item-description">Tweets authored by other people retweeted by peope I follow</div>
 					</dd>
+			<dt class="field">
+						<span class="method-title">retweet_action</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodretweet_action">Main::retweet_action()</a> in main.php</div>
+							<div class="index-item-description">Creates or removes a retweet - /retweet_action</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">redirect_if_not_logged_in</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/core/EC_Controller.html#methodredirect_if_not_logged_in">EC_Controller::redirect_if_not_logged_in()</a> in EC_controller.php</div>
+					</dd>
 		</dl>
 	<a name="s"></a>
 	<div class="index-letter-section">
@@ -634,11 +842,32 @@
 							<div class="index-item-description">Manage the search page - /search</div>
 					</dd>
 			<dt class="field">
+						<span class="method-title">search_delete</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodsearch_delete">Main::search_delete()</a> in main.php</div>
+							<div class="index-item-description">Delete a saved search - /search_delete</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">search_results</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodsearch_results">Main::search_results()</a> in main.php</div>
-							<div class="index-item-description">Manage the search results page - /search_results</div>
+							<div class="index-item-description">Display the search results page - /search_results</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">search_save</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodsearch_save">Main::search_save()</a> in main.php</div>
+							<div class="index-item-description">Created a saved search - /search_save</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">search_users</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodsearch_users">Main::search_users()</a> in main.php</div>
+							<div class="index-item-description">Manage the search users page - /search_users</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">sign_in</span>
@@ -660,6 +889,20 @@
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodstatus">Main::status()</a> in main.php</div>
 							<div class="index-item-description">Manages the status page - /status</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">switch_lang</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodswitch_lang">Main::switch_lang()</a> in main.php</div>
+							<div class="index-item-description">Change user interface langauges</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">switch_theme</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodswitch_theme">Main::switch_theme()</a> in main.php</div>
+							<div class="index-item-description">Change themes</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$screen_name</span>
@@ -749,6 +992,12 @@
 	</div>
 	<dl>
 			<dt class="field">
+						<span class="include-title">tweet.php</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/_application---controllers---tweet.php.html">tweet.php</a> in tweet.php</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">timeline</span>
 					</dt>
 		<dd class="index-item-body">
@@ -777,10 +1026,30 @@
 							<div class="index-item-description">Manages the trends page - /trends</div>
 					</dd>
 			<dt class="field">
+						Tweet
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Tweet.html">Tweet</a> in tweet.php</div>
+							<div class="index-item-description">Main Controller for EasyChirp</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">tweet_delete</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methodtweet_delete">Main::tweet_delete()</a> in main.php</div>
+							<div class="index-item-description">Delete a tweet</div>
+					</dd>
+			<dt class="field">
 						<span class="var-title">$target_lang</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="EasyChirp/Libraries/Xliff_reader.html#var$target_lang">Xliff_reader::$target_lang</a> in xliff_reader.php</div>
+					</dd>
+			<dt class="field">
+						<span class="var-title">$theme_menu</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Libraries/Layout.html#var$theme_menu">Layout::$theme_menu</a> in layout.php</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$title</span>
@@ -833,6 +1102,20 @@
 			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoduser">Main::user()</a> in main.php</div>
 							<div class="index-item-description">Manages the useer page - /user</div>
 					</dd>
+			<dt class="field">
+						<span class="method-title">user_lists</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoduser_lists">Main::user_lists()</a> in main.php</div>
+							<div class="index-item-description">Manages the user lists page - /user_lists</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">user_timeline</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Main.html#methoduser_timeline">Main::user_timeline()</a> in main.php</div>
+							<div class="index-item-description">Manages the user timeline page - /user_timeline</div>
+					</dd>
 		</dl>
 	<a name="v"></a>
 	<div class="index-letter-section">
@@ -856,6 +1139,13 @@
 		<div style="clear: both"></div>
 	</div>
 	<dl>
+			<dt class="field">
+						<span class="method-title">write</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="EasyChirp/Controllers/Tweet.html#methodwrite">Tweet::write()</a> in tweet.php</div>
+							<div class="index-item-description">Manages the posting of a tweet page - /write_tweet</div>
+					</dd>
 			<dt class="field">
 						<span class="method-title">write_link_tags</span>
 					</dt>

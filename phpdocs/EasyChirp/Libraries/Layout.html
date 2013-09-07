@@ -48,7 +48,11 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																																																																																																																<div class="var-title">
+																																																																																																																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$active_theme" title="details" class="var-name">$active_theme</a>
+				</div>
+																<div class="var-title">
 					<span class="var-type">mixed</span>
 					<a href="#$base_url" title="details" class="var-name">$base_url</a>
 				</div>
@@ -63,6 +67,10 @@
 																<div class="var-title">
 					<span class="var-type">mixed</span>
 					<a href="#$lang_code" title="details" class="var-name">$lang_code</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$lang_menu" title="details" class="var-name">$lang_menu</a>
 				</div>
 																<div class="var-title">
 					<span class="var-type">mixed</span>
@@ -95,6 +103,10 @@
 																<div class="var-title">
 					<span class="var-type">mixed</span>
 					<a href="#$skip_to_sign_in" title="details" class="var-name">$skip_to_sign_in</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$theme_menu" title="details" class="var-name">$theme_menu</a>
 				</div>
 																<div class="var-title">
 					<span class="var-type">mixed</span>
@@ -243,14 +255,35 @@
 							
 					</div>
 		<div class="info-box-body">
-			<a name="var$base_url" id="$base_url"><!-- --></A>
+			<a name="var$active_theme" id="$active_theme"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$active_theme</span>
+			 = <span class="var-default"> &quot;theme-inverse&quot;</span>			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$base_url" id="$base_url"><!-- --></A>
 <div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$base_url</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">30</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">31</span>)
 		</span>
 	</div>
 
@@ -271,7 +304,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$description</span>
-			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">31</span>)
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">32</span>)
 		</span>
 	</div>
 
@@ -292,7 +325,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$head_codes</span>
-			 = <span class="var-default">array(<br />		'meta' =&gt; array(),'meta_equiv'=&gt;array(),'links'=&gt;array(),'scripts'=&gt;array(),)</span>			(line <span class="line-number">39</span>)
+			 = <span class="var-default">array(<br />		'meta' =&gt; array(),'meta_equiv'=&gt;array(),'links'=&gt;array(),'scripts'=&gt;array(),)</span>			(line <span class="line-number">42</span>)
 		</span>
 	</div>
 
@@ -327,8 +360,29 @@
 		
 
 </div>
-<a name="var$layout" id="$layout"><!-- --></A>
+<a name="var$lang_menu" id="$lang_menu"><!-- --></A>
 <div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$lang_menu</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">29</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$layout" id="$layout"><!-- --></A>
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -349,33 +403,12 @@
 
 </div>
 <a name="var$logged_in" id="$logged_in"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$logged_in</span>
-			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">32</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$main_menu" id="$main_menu"><!-- --></A>
 <div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">mixed</span>
-			<span class="var-name">$main_menu</span>
+			<span class="var-name">$logged_in</span>
 			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">33</span>)
 		</span>
 	</div>
@@ -390,55 +423,13 @@
 		
 
 </div>
-<a name="var$meta_http_equiv_tags" id="$meta_http_equiv_tags"><!-- --></A>
+<a name="var$main_menu" id="$main_menu"><!-- --></A>
 <div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">mixed</span>
-			<span class="var-name">$meta_http_equiv_tags</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">38</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$meta_name_tags" id="$meta_name_tags"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$meta_name_tags</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">37</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$screen_name" id="$screen_name"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$screen_name</span>
+			<span class="var-name">$main_menu</span>
 			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">34</span>)
 		</span>
 	</div>
@@ -453,14 +444,77 @@
 		
 
 </div>
-<a name="var$sign_in_url" id="$sign_in_url"><!-- --></A>
+<a name="var$meta_http_equiv_tags" id="$meta_http_equiv_tags"><!-- --></A>
 <div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">mixed</span>
+			<span class="var-name">$meta_http_equiv_tags</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$meta_name_tags" id="$meta_name_tags"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$meta_name_tags</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">40</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$screen_name" id="$screen_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$screen_name</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$sign_in_url" id="$sign_in_url"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
 			<span class="var-name">$sign_in_url</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">29</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">30</span>)
 		</span>
 	</div>
 
@@ -475,13 +529,34 @@
 
 </div>
 <a name="var$skip_to_sign_in" id="$skip_to_sign_in"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$skip_to_sign_in</span>
 			 = <span class="var-default"> FALSE</span>			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$theme_menu" id="$theme_menu"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$theme_menu</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">38</span>)
 		</span>
 	</div>
 
@@ -523,7 +598,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$tweet_menu</span>
-			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">35</span>)
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">36</span>)
 		</span>
 	</div>
 
@@ -557,7 +632,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">53</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">56</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -583,7 +658,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">add_link_tag</span> (line <span class="line-number">272</span>)
+		<span class="method-title">add_link_tag</span> (line <span class="line-number">275</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -621,7 +696,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">add_meta_tag_equiv</span> (line <span class="line-number">226</span>)
+		<span class="method-title">add_meta_tag_equiv</span> (line <span class="line-number">229</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -653,7 +728,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">add_meta_tag_name</span> (line <span class="line-number">214</span>)
+		<span class="method-title">add_meta_tag_name</span> (line <span class="line-number">217</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -682,7 +757,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">add_script_tag</span> (line <span class="line-number">310</span>)
+		<span class="method-title">add_script_tag</span> (line <span class="line-number">313</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -717,7 +792,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">get_head_codes</span> (line <span class="line-number">342</span>)
+		<span class="method-title">get_head_codes</span> (line <span class="line-number">345</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -740,7 +815,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">get_logged_in</span> (line <span class="line-number">189</span>)
+		<span class="method-title">get_logged_in</span> (line <span class="line-number">192</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -761,7 +836,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">get_site_name</span> (line <span class="line-number">138</span>)
+		<span class="method-title">get_site_name</span> (line <span class="line-number">141</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -782,7 +857,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">get_tagline</span> (line <span class="line-number">159</span>)
+		<span class="method-title">get_tagline</span> (line <span class="line-number">162</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -803,7 +878,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">get_title</span> (line <span class="line-number">99</span>)
+		<span class="method-title">get_title</span> (line <span class="line-number">102</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -824,7 +899,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_description</span> (line <span class="line-number">179</span>)
+		<span class="method-title">set_description</span> (line <span class="line-number">182</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -849,7 +924,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_layout</span> (line <span class="line-number">89</span>)
+		<span class="method-title">set_layout</span> (line <span class="line-number">92</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -875,7 +950,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_logged_in</span> (line <span class="line-number">200</span>)
+		<span class="method-title">set_logged_in</span> (line <span class="line-number">203</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -901,7 +976,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_site_name</span> (line <span class="line-number">149</span>)
+		<span class="method-title">set_site_name</span> (line <span class="line-number">152</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -927,7 +1002,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_skip_to_sign_in</span> (line <span class="line-number">73</span>)
+		<span class="method-title">set_skip_to_sign_in</span> (line <span class="line-number">76</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -956,7 +1031,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_tagline</span> (line <span class="line-number">170</span>)
+		<span class="method-title">set_tagline</span> (line <span class="line-number">173</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -982,7 +1057,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_title</span> (line <span class="line-number">128</span>)
+		<span class="method-title">set_title</span> (line <span class="line-number">131</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1008,7 +1083,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">view</span> (line <span class="line-number">361</span>)
+		<span class="method-title">view</span> (line <span class="line-number">364</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1040,7 +1115,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">write_link_tags</span> (line <span class="line-number">285</span>)
+		<span class="method-title">write_link_tags</span> (line <span class="line-number">288</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1063,7 +1138,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">write_meta_tags</span> (line <span class="line-number">235</span>)
+		<span class="method-title">write_meta_tags</span> (line <span class="line-number">238</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1088,7 +1163,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">write_script_tags</span> (line <span class="line-number">323</span>)
+		<span class="method-title">write_script_tags</span> (line <span class="line-number">326</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1113,7 +1188,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 18 Jul 2013 16:45:30 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Sat, 07 Sep 2013 09:57:58 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>

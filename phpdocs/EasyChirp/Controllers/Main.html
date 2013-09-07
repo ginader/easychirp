@@ -74,11 +74,11 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 												<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type">String</span>&nbsp;<span class="var-name">$one</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">1</span>)
+										()
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
@@ -92,13 +92,33 @@
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
+										<a href="#blocking" title="details" class="method-name">blocking</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span>, [<span class="var-type">string|bool</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string|bool</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
 										<a href="#direct" title="details" class="method-name">direct</a>
-										()
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#direct_action" title="details" class="method-name">direct_action</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void|json</span>
+										<a href="#direct_delete" title="details" class="method-name">direct_delete</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#direct_inbox" title="details" class="method-name">direct_inbox</a>
 										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#direct_send" title="details" class="method-name">direct_send</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['tweep']</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['message']</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
@@ -108,7 +128,12 @@
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#favorites" title="details" class="method-name">favorites</a>
-										()
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">json|void</span>
+										<a href="#favoriting" title="details" class="method-name">favoriting</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$tweet_id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
@@ -118,16 +143,26 @@
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#followers" title="details" class="method-name">followers</a>
-										()
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name.</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#following" title="details" class="method-name">following</a>
-										()
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name.</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getResponse" title="details" class="method-name">getResponse</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#go_to_user" title="details" class="method-name">go_to_user</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#go_user_action" title="details" class="method-name">go_user_action</a>
 										()
 									</div>
 																<div class="method-definition">
@@ -137,13 +172,58 @@
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
+										<a href="#info" title="details" class="method-name">info</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
 										<a href="#lists" title="details" class="method-name">lists</a>
 										()
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
+										<a href="#list_add_member" title="details" class="method-name">list_add_member</a>
+											([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">json|void</span>
+										<a href="#list_create" title="details" class="method-name">list_create</a>
+											([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>], <span class="var-type">$_POST['txt_listName']</span>&nbsp;<span class="var-name">1</span>, <span class="var-type">$_POST['txt_listDesc']</span>&nbsp;<span class="var-name">2</span>, <span class="var-type">$_POST['mode']</span>&nbsp;<span class="var-name">3</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#list_delete" title="details" class="method-name">list_delete</a>
+											([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
 										<a href="#list_edit" title="details" class="method-name">list_edit</a>
 										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#list_edit_action" title="details" class="method-name">list_edit_action</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#list_subscribe" title="details" class="method-name">list_subscribe</a>
+											([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#list_timeline" title="details" class="method-name">list_timeline</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#list_unsubscribe" title="details" class="method-name">list_unsubscribe</a>
+											([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">json|void</span>
+										<a href="#manage_follow_user" title="details" class="method-name">manage_follow_user</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
@@ -167,12 +247,37 @@
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
+										<a href="#profile_avatar_action" title="details" class="method-name">profile_avatar_action</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
 										<a href="#profile_edit" title="details" class="method-name">profile_edit</a>
 										()
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
+										<a href="#profile_edit_action" title="details" class="method-name">profile_edit_action</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
 										<a href="#quote" title="details" class="method-name">quote</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$tweet_id</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#reply" title="details" class="method-name">reply</a>
+											(<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$tweet_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$all</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#report_spam" title="details" class="method-name">report_spam</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#retweet" title="details" class="method-name">retweet</a>
 										()
 									</div>
 																<div class="method-definition">
@@ -196,14 +301,34 @@
 											(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
 									</div>
 																<div class="method-definition">
+											<span class="method-result">json|void</span>
+										<a href="#retweet_action" title="details" class="method-name">retweet_action</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$tweet_id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#search" title="details" class="method-name">search</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['query']</span>)
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#search_delete" title="details" class="method-name">search_delete</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#search_results" title="details" class="method-name">search_results</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['query']</span>)
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#search_save" title="details" class="method-name">search_save</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#search_users" title="details" class="method-name">search_users</a>
+										()
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
@@ -218,12 +343,22 @@
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#status" title="details" class="method-name">status</a>
-										()
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$tweet_id</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#switch_lang" title="details" class="method-name">switch_lang</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang_code</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#switch_theme" title="details" class="method-name">switch_theme</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$theme</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#timeline" title="details" class="method-name">timeline</a>
-										()
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$tweet_id</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$place</span> = <span class="var-default">'append'</span>])
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
@@ -241,9 +376,24 @@
 										()
 									</div>
 																<div class="method-definition">
+											<span class="method-result">json|void</span>
+										<a href="#tweet_delete" title="details" class="method-name">tweet_delete</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#user" title="details" class="method-name">user</a>
-										()
+											([<span class="var-type">$screen_name</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#user_lists" title="details" class="method-name">user_lists</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#user_timeline" title="details" class="method-name">user_timeline</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
 									</div>
 								</div>
 		</div>
@@ -303,11 +453,11 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">21</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">19</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Describe your function</p>
+<p class="short-description">Constructor. Retrieves session data and populates class data</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -317,17 +467,9 @@
 		<span class="method-name">
 			__construct
 		</span>
-					(<span class="var-type">String</span>&nbsp;<span class="var-name">$one</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">1</span>)
+				()
 			</div>
 	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">String</span>
-				<span class="var-name">$one</span><span class="var-description">: a necessary parameter</span>			</li>
-					<li>
-				<span class="var-type">String</span>
-				<span class="var-name">1</span><span class="var-description">: optional $two an optional value</span>			</li>
-				</ul>
 		
 			<hr class="separator" />
 		<div class="notes">Redefinition of:</div>
@@ -341,7 +483,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">about</span> (line <span class="line-number">119</span>)
+		<span class="method-title">about</span> (line <span class="line-number">113</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -365,7 +507,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">articles</span> (line <span class="line-number">134</span>)
+		<span class="method-title">articles</span> (line <span class="line-number">127</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -385,14 +527,50 @@
 		
 			
 	</div>
-<a name="methoddirect" id="direct"><!-- --></a>
+<a name="methodblocking" id="blocking"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">direct</span> (line <span class="line-number">144</span>)
+		<span class="method-title">blocking</span> (line <span class="line-number">144</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">/blocking -  Manage block &amp; unblock.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			blocking
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span>, [<span class="var-type">string|bool</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string|bool</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span><span class="var-description">: their twitter username</span>			</li>
+					<li>
+				<span class="var-type">string|bool</span>
+				<span class="var-name">$state</span><span class="var-description">: Default is FALSE.</span>			</li>
+					<li>
+				<span class="var-type">string|bool</span>
+				<span class="var-name">$ajax</span><span class="var-description">: Default is FALSE. when true data will be returned to browser as JSON</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddirect" id="direct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">direct</span> (line <span class="line-number">189</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Send a direct message to a user</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -402,20 +580,99 @@
 		<span class="method-name">
 			direct
 		</span>
-				()
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span> = <span class="var-default">''</span>])
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span><span class="var-description">: the twitter username of the recipient.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: optional. can be one of error-not-followed, sent, error-other, deleted</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: optional. the content of the message</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddirect_action" id="direct_action"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">direct_action</span> (line <span class="line-number">211</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Send a direct message to a user</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			direct_action
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: required. can be one of error-not-followed,sent,error-other,deleted</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: optional. the content of the message</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span><span class="var-description">: the twitter username of the recipient.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddirect_delete" id="direct_delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">direct_delete</span> (line <span class="line-number">280</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a Direct Message(DM)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void|json</span>
+		<span class="method-name">
+			direct_delete
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: the unique ID of the DM you want to delete</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ajax</span><span class="var-description">: optional. Default is FALSE. if true, data will be returned as JSON.</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methoddirect_inbox" id="direct_inbox"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">direct_inbox</span> (line <span class="line-number">154</span>)
+		<span class="method-title">direct_inbox</span> (line <span class="line-number">314</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Render the current users dm_inbox</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -431,14 +688,47 @@
 		
 			
 	</div>
+<a name="methoddirect_send" id="direct_send"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">direct_send</span> (line <span class="line-number">234</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Actually sends the Direct Message(DM).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			direct_send
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['tweep']</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['message']</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$_POST['tweep']</span><span class="var-description">: the username of the recipient</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$_POST['message']</span><span class="var-description">: the content of the message</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methoddirect_sent" id="direct_sent"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">direct_sent</span> (line <span class="line-number">164</span>)
+		<span class="method-title">direct_sent</span> (line <span class="line-number">350</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The 'outbox' of the current user. a list of all the message they sent.</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -458,10 +748,11 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">favorites</span> (line <span class="line-number">174</span>)
+		<span class="method-title">favorites</span> (line <span class="line-number">387</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display the favorite tweets for a user. Assumes current user if not specified.</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -471,17 +762,57 @@
 		<span class="method-name">
 			favorites
 		</span>
-				()
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span><span class="var-description">: the twitter username</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfavoriting" id="favoriting"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">favoriting</span> (line <span class="line-number">439</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates or removes a favorite from a tweet - /favoriting</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">json|void</span>
+		<span class="method-name">
+			favoriting
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$tweet_id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tweet_id</span><span class="var-description">: the ID of the status &quot;tweet&quot;</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$state</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, a json encoded result will be echoed to browser. otherwise sent to new url</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methodfeatures" id="features"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">features</span> (line <span class="line-number">204</span>)
+		<span class="method-title">features</span> (line <span class="line-number">481</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -502,14 +833,14 @@
 			
 	</div>
 <a name="methodfollowers" id="followers"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">followers</span> (line <span class="line-number">219</span>)
+		<span class="method-title">followers</span> (line <span class="line-number">496</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Manages the followers page - /followers</p>
+<p class="short-description">Manages the Followers page - /followers</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -519,21 +850,29 @@
 		<span class="method-name">
 			followers
 		</span>
-				()
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name.</span>)
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name.</span><span class="var-description">: if not specified, the current user will be used.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$screen_name</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methodfollowing" id="following"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">following</span> (line <span class="line-number">234</span>)
+		<span class="method-title">following</span> (line <span class="line-number">538</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Manages the following page - /following</p>
+<p class="short-description">Manages the Following page - /following AKA friends</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -543,9 +882,46 @@
 		<span class="method-name">
 			following
 		</span>
-				()
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name.</span>)
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name.</span><span class="var-description">: if not specified, the current user will be used.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$screen_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetResponse" id="getResponse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getResponse</span> (line <span class="line-number">625</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gets tweet to make thread/conversation - /getResponse</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getResponse
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: the ID of the tweet</span>			</li>
+				</ul>
 		
 			
 	</div>
@@ -553,10 +929,11 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">go_to_user</span> (line <span class="line-number">244</span>)
+		<span class="method-title">go_to_user</span> (line <span class="line-number">666</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages &quot;go to user&quot; page - /go_to_user</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -572,11 +949,35 @@
 		
 			
 	</div>
-<a name="methodindex" id="index"><!-- --></a>
+<a name="methodgo_user_action" id="go_user_action"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">index</span> (line <span class="line-number">85</span>)
+		<span class="method-title">go_user_action</span> (line <span class="line-number">680</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the posting of &quot;go to user&quot; form - /go_user_action</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			go_user_action
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodindex" id="index"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">index</span> (line <span class="line-number">80</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -596,11 +997,34 @@
 		
 			
 	</div>
+<a name="methodinfo" id="info"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">info</span> (line <span class="line-number">2009</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			info
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
 <a name="methodlists" id="lists"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">lists</span> (line <span class="line-number">259</span>)
+		<span class="method-title">lists</span> (line <span class="line-number">700</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -620,11 +1044,107 @@
 		
 			
 	</div>
-<a name="methodlist_edit" id="list_edit"><!-- --></a>
+<a name="methodlist_add_member" id="list_add_member"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">list_edit</span> (line <span class="line-number">274</span>)
+		<span class="method-title">list_add_member</span> (line <span class="line-number">829</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the addition of a member to a list - /list_add_member</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_add_member
+		</span>
+					([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$ajax</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, content is returned to the browser as JSON.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlist_create" id="list_create"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_create</span> (line <span class="line-number">790</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the creation of a list - /list_create</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">json|void</span>
+		<span class="method-name">
+			list_create
+		</span>
+					([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>], <span class="var-type">$_POST['txt_listName']</span>&nbsp;<span class="var-name">1</span>, <span class="var-type">$_POST['txt_listDesc']</span>&nbsp;<span class="var-name">2</span>, <span class="var-type">$_POST['mode']</span>&nbsp;<span class="var-name">3</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$_POST['txt_listName']</span>
+				<span class="var-name">1</span><span class="var-description">: the name of the list to create</span>			</li>
+					<li>
+				<span class="var-type">$_POST['txt_listDesc']</span>
+				<span class="var-name">2</span><span class="var-description">: the description of the new list</span>			</li>
+					<li>
+				<span class="var-type">$_POST['mode']</span>
+				<span class="var-name">3</span>			</li>
+					<li>
+				<span class="var-type">$ajax</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, content is returned to the browser as JSON.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlist_delete" id="list_delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_delete</span> (line <span class="line-number">869</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the deletion of a list - /list_delete</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_delete
+		</span>
+					([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$ajax</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, content is returned to the browser as JSON.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlist_edit" id="list_edit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_edit</span> (line <span class="line-number">728</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -644,11 +1164,152 @@
 		
 			
 	</div>
+<a name="methodlist_edit_action" id="list_edit_action"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_edit_action</span> (line <span class="line-number">755</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the editing of a list - /list_edit_action</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_edit_action
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlist_subscribe" id="list_subscribe"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_subscribe</span> (line <span class="line-number">901</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages subscribing to a list - /list_subscribe</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_subscribe
+		</span>
+					([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$ajax</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, content is returned to the browser as JSON.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlist_timeline" id="list_timeline"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_timeline</span> (line <span class="line-number">965</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the list_timeline page - /list_timeline</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_timeline
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodlist_unsubscribe" id="list_unsubscribe"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">list_unsubscribe</span> (line <span class="line-number">933</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages unsubscribing from a list - /list_unsubscribe</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_unsubscribe
+		</span>
+					([<span class="var-type">$ajax</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$ajax</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, content is returned to the browser as JSON.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmanage_follow_user" id="manage_follow_user"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">manage_follow_user</span> (line <span class="line-number">582</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Follows or unfollows user - /manage_follow_user</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">json|void</span>
+		<span class="method-name">
+			manage_follow_user
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span><span class="var-description">: twitter username of the desired user.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$state</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, data will be returned as json. other will be sent to a new URL</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodmentions" id="mentions"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">mentions</span> (line <span class="line-number">289</span>)
+		<span class="method-title">mentions</span> (line <span class="line-number">1005</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -672,7 +1333,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">mytweets</span> (line <span class="line-number">320</span>)
+		<span class="method-title">mytweets</span> (line <span class="line-number">1041</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -696,7 +1357,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">oauth_callback</span> (line <span class="line-number">642</span>)
+		<span class="method-title">oauth_callback</span> (line <span class="line-number">1079</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -728,7 +1389,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">profile</span> (line <span class="line-number">350</span>)
+		<span class="method-title">profile</span> (line <span class="line-number">1175</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -748,11 +1409,36 @@
 		
 			
 	</div>
-<a name="methodprofile_edit" id="profile_edit"><!-- --></a>
+<a name="methodprofile_avatar_action" id="profile_avatar_action"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">profile_edit</span> (line <span class="line-number">379</span>)
+		<span class="method-title">profile_avatar_action</span> (line <span class="line-number">1277</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the form data from Edit Profile page - /profile_avatar_action</p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> PLEASE REVIEW - Why is this all commented out?</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			profile_avatar_action
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodprofile_edit" id="profile_edit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">profile_edit</span> (line <span class="line-number">1215</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -772,11 +1458,35 @@
 		
 			
 	</div>
+<a name="methodprofile_edit_action" id="profile_edit_action"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">profile_edit_action</span> (line <span class="line-number">1246</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the form data from Edit Profile page - /profile_edit_action</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			profile_edit_action
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
 <a name="methodquote" id="quote"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">quote</span> (line <span class="line-number">394</span>)
+		<span class="method-title">quote</span> (line <span class="line-number">1307</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -790,6 +1500,100 @@
 		<span class="method-name">
 			quote
 		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$tweet_id</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$tweet_id</span><span class="var-description">: the ID of the status &quot;tweet&quot; you want to quote</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreply" id="reply"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">reply</span> (line <span class="line-number">1358</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the reply pages - /reply and /reply_all</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			reply
+		</span>
+					(<span class="var-type">string|boolean</span>&nbsp;<span class="var-name">$tweet_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$all</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|boolean</span>
+				<span class="var-name">$tweet_id</span><span class="var-description">: the string 'all' will include the name of each user mentioned. Default is boolean false.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$all</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreport_spam" id="report_spam"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">report_spam</span> (line <span class="line-number">1510</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reports a user as a spammer (which also blocks the user) - /report_spam</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			report_spam
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ajax</span><span class="var-description">: if true, data will be returned to browser as JSON</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodretweet" id="retweet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">retweet</span> (line <span class="line-number">1426</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the retweet page (for non-JS use case) - /retweet</p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> REMOVE the GET parameter. Instead pass it through the URL as a parameter</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			retweet
+		</span>
 				()
 			</div>
 	
@@ -797,10 +1601,10 @@
 			
 	</div>
 <a name="methodretweets" id="retweets"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">retweets</span> (line <span class="line-number">409</span>)
+		<span class="method-title">retweets</span> (line <span class="line-number">1543</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -826,10 +1630,10 @@
 			
 	</div>
 <a name="methodretweets_by_me" id="retweets_by_me"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">retweets_by_me</span> (line <span class="line-number">462</span>)
+		<span class="method-title">retweets_by_me</span> (line <span class="line-number">1608</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -856,10 +1660,10 @@
 			
 	</div>
 <a name="methodretweets_of_me" id="retweets_of_me"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">retweets_of_me</span> (line <span class="line-number">487</span>)
+		<span class="method-title">retweets_of_me</span> (line <span class="line-number">1635</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -885,17 +1689,17 @@
 			
 	</div>
 <a name="methodretweets_to_me" id="retweets_to_me"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">retweets_to_me</span> (line <span class="line-number">503</span>)
+		<span class="method-title">retweets_to_me</span> (line <span class="line-number">1653</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Tweets authored by other people retweeted by peope I follow</p>
 	<ul class="tags">
-				<li><span class="field">see:</span> <a href="https://dev.twitter.com/docs/api/1.1">https://dev.twitter.com/docs/api/1.1</a></li>
-				<li><span class="field">todo:</span> figure out how to implement this. there is no straightforward query for this</li>
+				<li><span class="field">return:</span> the method was removed in api 1.1 so instead call home_timeline and filter for RTs</li>
+				<li><span class="field">see:</span> <a href="https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline">https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline</a></li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -915,11 +1719,46 @@
 		
 			
 	</div>
+<a name="methodretweet_action" id="retweet_action"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">retweet_action</span> (line <span class="line-number">1470</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates or removes a retweet - /retweet_action</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">json|void</span>
+		<span class="method-name">
+			retweet_action
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$tweet_id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tweet_id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$state</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ajax</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodsearch" id="search"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">search</span> (line <span class="line-number">518</span>)
+		<span class="method-title">search</span> (line <span class="line-number">1680</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -933,30 +1772,52 @@
 		<span class="method-name">
 			search
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['query']</span>)
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsearch_delete" id="search_delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">search_delete</span> (line <span class="line-number">1736</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a saved search - /search_delete</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			search_delete
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$_POST['query']</span><span class="var-description">: the query you want to search via twitter</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$query</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: the ID of the tweet</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodsearch_results" id="search_results"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">search_results</span> (line <span class="line-number">534</span>)
+		<span class="method-title">search_results</span> (line <span class="line-number">1762</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Manage the search results page - /search_results</p>
+<p class="short-description">Display the search results page - /search_results</p>
 	<ul class="tags">
+				<li><span class="field">todo:</span> MODIFY items that call this to NOT USE GET parameters</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -965,25 +1826,75 @@
 		<span class="method-name">
 			search_results
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$_POST['query']</span>)
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">FALSE</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$_POST['query']</span><span class="var-description">: the query you want to search via twitter</span>			</li>
-					<li>
-				<span class="var-type"></span>
 				<span class="var-name">$query</span>			</li>
 				</ul>
 		
 			
 	</div>
-<a name="methodsign_in" id="sign_in"><!-- --></a>
+<a name="methodsearch_save" id="search_save"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">search_save</span> (line <span class="line-number">1704</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Created a saved search - /search_save</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			search_save
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ajax</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsearch_users" id="search_users"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">sign_in</span> (line <span class="line-number">552</span>)
+		<span class="method-title">search_users</span> (line <span class="line-number">1820</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manage the search users page - /search_users</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			search_users
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsign_in" id="sign_in"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">sign_in</span> (line <span class="line-number">1854</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1005,15 +1916,15 @@
 			
 	</div>
 <a name="methodsign_out" id="sign_out"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">sign_out</span> (line <span class="line-number">619</span>)
+		<span class="method-title">sign_out</span> (line <span class="line-number">1914</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Manage the sign out page - /sign_out</p>
-<p class="description"><p>Allows user to sign out. Removes their user info from the session</p></p>
+<p class="description"><p>Allows user to sign out. Removes their user info from the session. Sends user back to homepage</p></p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -1030,15 +1941,16 @@
 			
 	</div>
 <a name="methodstatus" id="status"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">status</span> (line <span class="line-number">738</span>)
+		<span class="method-title">status</span> (line <span class="line-number">1933</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Manages the status page - /status</p>
 	<ul class="tags">
+				<li><span class="field">todo:</span> change items the call this to remove GET parameters</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -1047,22 +1959,86 @@
 		<span class="method-name">
 			status
 		</span>
-				()
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$tweet_id</span> = <span class="var-default">FALSE</span>])
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tweet_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodswitch_lang" id="switch_lang"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">switch_lang</span> (line <span class="line-number">1985</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change user interface langauges</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			switch_lang
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lang_code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lang_code</span><span class="var-description">: the desired language code.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodswitch_theme" id="switch_theme"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">switch_theme</span> (line <span class="line-number">2000</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change themes</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			switch_theme
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$theme</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$theme</span><span class="var-description">: the desired theme id</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methodtimeline" id="timeline"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">timeline</span> (line <span class="line-number">813</span>)
+		<span class="method-title">timeline</span> (line <span class="line-number">2022</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Manages the timeline page - /timeline</p>
 	<ul class="tags">
+				<li><span class="field">todo:</span> add ajax in the future. Update to retrieve new tweets since page has been loaded.</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -1071,17 +2047,25 @@
 		<span class="method-name">
 			timeline
 		</span>
-				()
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$tweet_id</span> = <span class="var-default">FALSE</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$place</span> = <span class="var-default">'append'</span>])
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$tweet_id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$place</span><span class="var-description">: where on the current timeline should be injected - use this for ajax</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methodtips" id="tips"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">tips</span> (line <span class="line-number">753</span>)
+		<span class="method-title">tips</span> (line <span class="line-number">2090</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1102,10 +2086,10 @@
 			
 	</div>
 <a name="methodtools" id="tools"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">tools</span> (line <span class="line-number">768</span>)
+		<span class="method-title">tools</span> (line <span class="line-number">2104</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1126,10 +2110,10 @@
 			
 	</div>
 <a name="methodtrends" id="trends"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">trends</span> (line <span class="line-number">783</span>)
+		<span class="method-title">trends</span> (line <span class="line-number">2120</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1149,11 +2133,43 @@
 		
 			
 	</div>
+<a name="methodtweet_delete" id="tweet_delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">tweet_delete</span> (line <span class="line-number">2153</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete a tweet</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">json|void</span>
+		<span class="method-name">
+			tweet_delete
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ajax</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$id</span><span class="var-description">: the id of the status &quot;tweet&quot; that you want to delete</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ajax</span><span class="var-description">: optional. if true, content will be returned to the browser as JSON.</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methoduser" id="user"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">user</span> (line <span class="line-number">798</span>)
+		<span class="method-title">user</span> (line <span class="line-number">2184</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1167,9 +2183,72 @@
 		<span class="method-name">
 			user
 		</span>
-				()
+					([<span class="var-type">$screen_name</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$screen_name</span>
+				<span class="var-name">$screen_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduser_lists" id="user_lists"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">user_lists</span> (line <span class="line-number">2287</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the user lists page - /user_lists</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			user_lists
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoduser_timeline" id="user_timeline"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">user_timeline</span> (line <span class="line-number">2235</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Manages the user timeline page - /user_timeline</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			user_timeline
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$screen_name</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$screen_name</span>			</li>
+				</ul>
 		
 			
 	</div>
@@ -1180,7 +2259,9 @@
 					<blockquote>
 													<span class="method-name"><a href="../../EasyChirp/core/EC_Controller.html#method__construct">EC_Controller::__construct()</a></span><br>
 													<span class="method-name"><a href="../../EasyChirp/core/EC_Controller.html#methodget_current_url">EC_Controller::get_current_url()</a></span><br>
+													<span class="method-name"><a href="../../EasyChirp/core/EC_Controller.html#methodget_params_deprecated">EC_Controller::get_params_deprecated()</a></span><br>
 													<span class="method-name"><a href="../../EasyChirp/core/EC_Controller.html#methodget_user_languages">EC_Controller::get_user_languages()</a></span><br>
+													<span class="method-name"><a href="../../EasyChirp/core/EC_Controller.html#methodredirect_if_not_logged_in">EC_Controller::redirect_if_not_logged_in()</a></span><br>
 											</blockquote>
 									<!-- =========== Summary =========== -->
 					<p>Inherited From <span class="classname"><a href="../../CodeIgniter/Libraries/CI_Controller.html">CI_Controller</a></span></p>
@@ -1194,7 +2275,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 18 Jul 2013 16:45:32 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Sat, 07 Sep 2013 09:58:00 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>
