@@ -29,4 +29,4 @@ else {
 
 ?>
 
-<div data-msg-search-saved="<?php echo $xliff_reader->get('msg-search-saved'); ?>" data-msg-search-deleted="<?php echo $xliff_reader->get('msg-search-deleted'); ?>"></div>
+<div id="srch-msgs" data-msg-search-saved="<?php echo $xliff_reader->get('msg-search-saved'); ?>" data-msg-search-deleted="<?php echo $xliff_reader->get('msg-search-deleted'); ?>"></div>

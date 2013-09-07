@@ -264,7 +264,6 @@ $('a[href*="follow_user"]').click(function(e) {
 	}
 });
 
-
 // Ajax for deleting a tweet
 $('a[href*="tweet_delete"]').click(function(e) {
 
@@ -322,7 +321,32 @@ function theRespGuts(e) {
 		}
 	});
 }
-
 $('a[rel="response"]').bind('click', theRespGuts);
+
+// Ajax for adding a saved search
+$('a[href*="search_save"]').click(function(e) {
+
+	e.preventDefault();
+
+	data = {};
+	data.anchorParent = $(this).parent();
+	data.url_send = this.href.replace("false","true");
+	data.AlertAdded = $("#srch-msgs").attr("data-msg-search-saved");
+
+	$.ajax({
+		url: data.url_send,
+		success: function(response) {
+
+			$(data.anchorParent).html(data.AlertAdded);
+			$(data.anchorParent).attr('tabindex','-1');
+			$(data.anchorParent).attr('aria-role','alert');
+			$(data.anchorParent).focus();
+
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		}
+	})
+});
 
 
