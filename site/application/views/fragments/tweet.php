@@ -1,4 +1,15 @@
 <?php
+/**
+* Fragment - Displays the contents of tweets and their controls  
+*
+* @package EasyChirp
+* @subpackage Views
+* @author EasyChirp Dev Team
+* @see http://www.php.net/manual/en/function.date-format.php
+* @see http://www.php.net/manual/en/class.datetimezone.php
+* @see http://www.php.net/manual/en/class.datetime.php
+*/
+
 $months = array();
 $months['jan'] = '01';
 $months['feb'] = '02';

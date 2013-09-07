@@ -1,3 +1,12 @@
+<?php
+/**
+* Display the tweets for a user list 
+*
+* @package EasyChirp
+* @subpackage Views
+* @author EasyChirp Dev Team
+*/
+?>
 <h1 class="rounded"><?php echo $xliff_reader->get('lists-h1')." ".$xliff_reader->get('nav-timeline'); ?>: <?php echo $list_data->name; ?></h1>
 
 <p id="top-pull-link" style="margin-bottom: 1.25rem;"><a href="/lists"><?php echo $xliff_reader->get('lists-h2-my'); ?></a></p>

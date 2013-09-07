@@ -1,4 +1,13 @@
 <?php
+/**
+* Display the tweets from the members of a list
+*
+* @package EasyChirp
+* @subpackage Views
+* @author EasyChirp Dev Team
+* @todo Remove the uses of $_GET parameters
+*/
+
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "subscribed") {
 		echo '<div class="msgBoxPos rounded">You have subscribed to the list.</div>';

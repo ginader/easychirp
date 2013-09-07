@@ -1,4 +1,14 @@
 <?php
+/**
+ * Display the contents of Direct Messages(DM) 
+ *
+ * @package EasyChirp
+ * @subpackage Views
+ * @author EasyChirp Dev Team
+ * @see http://php.net/manual/en/class.datetime.php
+ * @see http://www.php.net/manual/en/class.datetimezone.php
+ * @see http://www.php.net/manual/en/function.date-format.php
+ */
 if (count($dms) != 0) {
 	foreach($dms AS $dm):
 

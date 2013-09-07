@@ -1,4 +1,12 @@
 <?php
+/**
+* Display the retweet page 
+*
+* @package EasyChirp
+* @subpackage Views
+* @author EasyChirp Dev Team
+*/
+
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "retweet_created") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-tweet-rt-alert-added').'</div>';

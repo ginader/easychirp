@@ -32,7 +32,6 @@
 <a href="#direct.php">direct.php</a><br>
 <a href="#direct_inbox.php">direct_inbox.php</a><br>
 <a href="#direct_sent.php">direct_sent.php</a><br>
-<a href="#dm.php">dm.php</a><br>
 <a href="#doctypes.php">doctypes.php</a><br>
 <a href="#EC_controller.php">EC_controller.php</a><br>
 <a href="#email_lang.php">email_lang.php</a><br>
@@ -59,7 +58,6 @@
 <a href="#layout_main.php">layout_main.php</a><br>
 <a href="#lists.php">lists.php</a><br>
 <a href="#list_edit.php">list_edit.php</a><br>
-<a href="#list_timeline.php">list_timeline.php</a><br>
 <a href="#log-2013-09-06.php">log-2013-09-06.php</a><br>
 <a href="#log-2013-09-07.php">log-2013-09-07.php</a><br>
 <a href="#main.php">main.php</a><br>
@@ -108,9 +106,7 @@
 <a href="#retweets.php">retweets.php</a><br>
 <a href="#routes.php">routes.php</a><br>
 <a href="#search.php">search.php</a><br>
-<a href="#search_quick_form.php">search_quick_form.php</a><br>
 <a href="#search_results.php">search_results.php</a><br>
-<a href="#search_users.php">search_users.php</a><br>
 <a href="#Session.php">Session.php</a><br>
 <a href="#smileys.php">smileys.php</a><br>
 <a href="#sqlite_driver.php">sqlite_driver.php</a><br>
@@ -135,7 +131,6 @@
 <a href="#upload_lang.php">upload_lang.php</a><br>
 <a href="#user.php">user.php</a><br>
 <a href="#user_agents.php">user_agents.php</a><br>
-<a href="#user_lists.php">user_lists.php</a><br>
 <a href="#write_tweet.php">write_tweet.php</a><br>
 <a href="#x.php">x.php</a><br>
 <a href="#xliff.php">xliff.php</a><br>
@@ -144,20 +139,20 @@
 <a name="Post-parsing"></a>
 <h1>Post-parsing</h1>
 <h2>Warnings:</h2><br>
-<b>Warning</b> - Class CI_DB_postgre_driver parent CI_DB not found<br>
-<b>Warning</b> - Class CI_DB_sqlite_driver parent CI_DB not found<br>
-<b>Warning</b> - Class CI_DB_sqlsrv_driver parent CI_DB not found<br>
-<b>Warning</b> - class CI_DB_odbc_driver in package CodeIgniter parent not found in @see parent::__construct()<br>
-<b>Warning</b> - Class CI_DB_pdo_driver parent CI_DB not found<br>
-<b>Warning</b> - Class CI_DB_odbc_driver parent CI_DB not found<br>
-<b>Warning</b> - Class CI_DB_mssql_driver parent CI_DB not found<br>
-<b>Warning</b> - Class CI_DB_mysql_driver parent CI_DB not found<br>
-<b>Warning</b> - Class CI_DB_mysqli_driver parent CI_DB not found<br>
-<b>Warning</b> - Class CI_DB_oci8_driver parent CI_DB not found<br>
-<b>Warning</b> - class CI_DB_odbc_driver in package CodeIgniter parent not found in @see parent::__construct()<br>
+<b>Warning</b> - class CI_DB_pdo_driver in package CodeIgniter parent not found in @see parent::__construct()<br>
 <b>Warning</b> - Class CI_DB_cubrid_driver parent CI_DB not found<br>
 <b>Warning</b> - class CI_DB_pdo_driver in package CodeIgniter parent not found in @see parent::__construct()<br>
-<b>Warning</b> - class CI_DB_pdo_driver in package CodeIgniter parent not found in @see parent::__construct()<br>
+<b>Warning</b> - class CI_DB_odbc_driver in package CodeIgniter parent not found in @see parent::__construct()<br>
+<b>Warning</b> - class CI_DB_odbc_driver in package CodeIgniter parent not found in @see parent::__construct()<br>
+<b>Warning</b> - Class CI_DB_sqlite_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_sqlsrv_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_mssql_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_pdo_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_odbc_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_postgre_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_oci8_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_mysql_driver parent CI_DB not found<br>
+<b>Warning</b> - Class CI_DB_mysqli_driver parent CI_DB not found<br>
 <a name="autoload.php"></a>
 <h1>autoload.php</h1>
 <h2>Warnings:</h2><br>
@@ -260,10 +255,6 @@
 <h1>direct_sent.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 12</b> - File "/www/sites/easychirp/site/application/views/direct_sent.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
-<a name="dm.php"></a>
-<h1>dm.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 59</b> - File "/www/sites/easychirp/site/application/views/fragments/dm.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="doctypes.php"></a>
 <h1>doctypes.php</h1>
 <h2>Warnings:</h2><br>
@@ -328,6 +319,7 @@
 <a name="go_to_user.php"></a>
 <h1>go_to_user.php</h1>
 <h2>Warnings:</h2><br>
+<b>Warning on line 5</b> - Page-level DocBlock precedes "require_once 'fragments/go_to_user_form.php'", use another DocBlock to document the source element<br>
 <b>Warning on line 8</b> - File "/www/sites/easychirp/site/application/views/go_to_user.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="go_to_user_form.php"></a>
 <h1>go_to_user_form.php</h1>
@@ -352,6 +344,7 @@
 <a name="index.php"></a>
 <h1>index.php</h1>
 <h2>Warnings:</h2><br>
+<b>Warning on line 2</b> - Page-level DocBlock precedes "define EASYCHIRP_VERSION", use another DocBlock to document the source element<br>
 <b>Warning on line 6</b> - Unknown tag "@file" used<br>
 <b>Warning on line 32</b> - File "/www/sites/easychirp/site/application/third_party/twitteroauth/index.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <b>Warning on line 198</b> - 
@@ -375,10 +368,6 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>list_edit.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 44</b> - File "/www/sites/easychirp/site/application/views/list_edit.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
-<a name="list_timeline.php"></a>
-<h1>list_timeline.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 31</b> - File "/www/sites/easychirp/site/application/views/list_timeline.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="log-2013-09-06.php"></a>
 <h1>log-2013-09-06.php</h1>
 <h2>Warnings:</h2><br>
@@ -386,7 +375,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="log-2013-09-07.php"></a>
 <h1>log-2013-09-07.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 30</b> - File "/www/sites/easychirp/site/application/logs/log-2013-09-07.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 60</b> - File "/www/sites/easychirp/site/application/logs/log-2013-09-07.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="main.php"></a>
 <h1>main.php</h1>
 <h2>Warnings:</h2><br>
@@ -394,6 +383,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="mentions.php"></a>
 <h1>mentions.php</h1>
 <h2>Warnings:</h2><br>
+<b>Warning on line 3</b> - Page-level DocBlock precedes "require_once 'fragments/write_tweet.php'", use another DocBlock to document the source element<br>
 <b>Warning on line 8</b> - File "/www/sites/easychirp/site/application/views/mentions.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="menu_generator.php"></a>
 <h1>menu_generator.php</h1>
@@ -552,7 +542,10 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="retweet.php"></a>
 <h1>retweet.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 16</b> - File "/www/sites/easychirp/site/application/views/retweet.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 23</b> - Page-level DocBlock precedes "require_once 'fragments/write_tweet.php'", use another DocBlock to document the source element<br>
+<h2>Errors:</h2><br>
+<b>Error on line 23</b> - require_once include's DocBlock has @package tag, illegal. ignoring tag "@package EasyChirp"<br>
+<b>Error on line 23</b> - "include" require_once's DocBlock has @subpackage tags, illegal. ignoring tag "@subpackage Views"<br>
 <a name="retweets.php"></a>
 <h1>retweets.php</h1>
 <h2>Warnings:</h2><br>
@@ -565,18 +558,10 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>search.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 96</b> - File "/www/sites/easychirp/site/application/views/search.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
-<a name="search_quick_form.php"></a>
-<h1>search_quick_form.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 8</b> - File "/www/sites/easychirp/site/application/views/fragments/search_quick_form.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="search_results.php"></a>
 <h1>search_results.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 31</b> - File "/www/sites/easychirp/site/application/views/search_results.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
-<a name="search_users.php"></a>
-<h1>search_users.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 18</b> - File "/www/sites/easychirp/site/application/views/search_users.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="smileys.php"></a>
 <h1>smileys.php</h1>
 <h2>Warnings:</h2><br>
@@ -608,6 +593,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="status.php"></a>
 <h1>status.php</h1>
 <h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Page-level DocBlock precedes "require_once 'fragments/write_tweet.php'", use another DocBlock to document the source element<br>
 <b>Warning on line 28</b> - File "/www/sites/easychirp/site/application/views/status.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="test.php"></a>
 <h1>test.php</h1>
@@ -634,7 +620,6 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>tweet.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 9</b> - DocBlock would be page-level, but precedes class "Tweet", use another DocBlock to document the file<br>
-<b>Warning on line 178</b> - File "/www/sites/easychirp/site/application/views/fragments/tweet.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="twitteroauth.php"></a>
 <h1>twitteroauth.php</h1>
 <h2>Warnings:</h2><br>
@@ -665,10 +650,6 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>user_agents.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 177</b> - File "/www/sites/easychirp/site/application/config/user_agents.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
-<a name="user_lists.php"></a>
-<h1>user_lists.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 99</b> - File "/www/sites/easychirp/site/application/views/user_lists.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="write_tweet.php"></a>
 <h1>write_tweet.php</h1>
 <h2>Warnings:</h2><br>
@@ -766,7 +747,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Error on line 145</b> - @access was passed neither "public" nor "private."  Was passed: "private called by the base class"<br>
 <b>Error on line 165</b> - @access was passed neither "public" nor "private."  Was passed: "private called by execute()"<br>
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 07 Sep 2013 09:58:39 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Sat, 07 Sep 2013 16:19:07 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</body>
 </html>

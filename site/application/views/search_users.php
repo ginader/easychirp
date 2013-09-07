@@ -1,3 +1,12 @@
+<?php
+/**
+* Display the results of a User Search
+*
+* @package EasyChirp
+* @subpackage Views
+* @author EasyChirp Dev Team
+*/
+?>
 <h1 class="rounded"><?php echo $xliff_reader->get('search-h2-users'); ?></h1>
 
 <?php
