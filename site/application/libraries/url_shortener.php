@@ -1,12 +1,12 @@
 <?php  
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 /**
-* Provides a factory to shorten url 
+* Provides a factory to shorten url
 *
 * @package EasyChirp
 * @subpackage Libraries
 * @author Andrew Woods <atwoods1@gmail.com>
-* @version 0.1 
+* @version 0.1
 * 
 */
 class Url_shortener
@@ -38,9 +38,10 @@ class Url_shortener
  * @subpackage Interfaces
  * @author EasyChirp Dev Team
  */
-interface Iurl_service 
+interface Iurl_service
 {
 	public function shorten($url);
+	public function expand($url);
 }
 
 /**
@@ -57,6 +58,14 @@ class Webaim implements Iurl_service
 
 	public function __construct() { }
 
+	/**
+	 * Create a short URL from a long URL
+	 *
+	 * @param string $one a necessary parameter
+	 * @return array
+	 *
+	 * @see http://weba.im/api.php
+	 */
 	public function shorten($url)
 	{
 		$params = array();
@@ -69,9 +78,7 @@ class Webaim implements Iurl_service
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $request_url);
-		// curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		// curl_setopt($ch, CURLOPT_VERBOSE, 1);
 
 		$response = json_decode(curl_exec($ch));
 
@@ -94,13 +101,52 @@ class Webaim implements Iurl_service
 		) ;
 	}
 
-	// @todo url expand function goes here
+	/**
+	 * Expand a short URL to a long URL
+	 *
+	 * @param string $url a short url
+	 * @return array
+	 *
+	 * @see http://weba.im/api.php
+	 */
+	public function expand($url)
+	{
+		$params = array();
+		$params['action'] = 'expand';
+		$params['shorturl'] = $url;
+		$params['format'] = 'json';
+		$params['key'] = $this->key;
+		$request_url = $this->service_url . '?' . http_build_query($params);
+		log_message('info', 'webaim expand request_url=' . $request_url);
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $request_url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+		$response = json_decode(curl_exec($ch));
+		log_message('info', 'webaim expand response=' . print_r($response, TRUE));
+
+		if(isset($response->errorCode))
+		{
+			$message = $response->errorCode . ': ' .  $response->message;
+			log_message('error', 'Error from WEBAIM: ' . $message);
+			log_message('error', 'Curl error: ' . curl_error($ch));
+			curl_close($ch);
+			return array(
+				'status' => 'error',
+				'message' => $message
+			);
+		}
+
+		curl_close($ch);
+		return array(
+			'status' => 'success',
+			'message' => 'URL retrieved for ' . $response->shorturl,
+			'url' => urldecode($response->longurl)
+		) ;
+	}
+
 }
-
-
-
-
-
 
 /* End of file url_shortener.php */ 
 /* Location: ./application/libraries/url_shortener.php */

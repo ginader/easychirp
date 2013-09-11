@@ -2175,6 +2175,37 @@ class Main extends EC_Controller {
 		}
 	}
 
+	/**
+	 * Use a service to expand a short url
+	 *
+	 * @param string $service_id the ID of the Service e.g. bitly, webaim;
+	 * @param string $_POST['url'] the URL you want to shorten
+	 * @param string|bool $_POST['ajax'] Default is FALSE.
+	 * @return void
+	 *
+	 * @see http://weba.im/api.php
+	 */
+	public function url_expand($type)
+	{
+		$this->load->library('url_shortener');
+
+		$url  = $this->input->post('url');
+		$ajax = $this->input->post('ajax', 0);
+		log_message('debug', 'main url_expand type=' . $type . " ajax=" . $ajax . " url=" . $url);
+
+		$service = Url_shortener::get($type);	
+		$result = $service->expand($url);
+		log_message('debug', 'main url_expand result=' . print_r($result, TRUE));
+
+		if ($ajax)
+		{
+			echo json_encode($result);
+		}
+		else
+		{
+			return $result;
+		}
+	}
 
 	/**
 	 * Use a service to shorten a long url
@@ -2196,6 +2227,7 @@ class Main extends EC_Controller {
 
 		$service = Url_shortener::get($type);	
 		$result = $service->shorten($url);
+		log_message('debug', 'main url_shorten result=' . print_r($result, TRUE));
 
 		if ($ajax)
 		{
