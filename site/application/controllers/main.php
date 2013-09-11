@@ -2179,58 +2179,32 @@ class Main extends EC_Controller {
 	/**
 	 * Use a service to shorten a long url
 	 *
-	 * @param string $url a url-encoded url
-	 * @param string $_POST['service'];
+	 * @param string $service_id the ID of the Service e.g. bitly, webaim;
+	 * @param string $_POST['url'] the URL you want to shorten
 	 * @param string|bool $_POST['ajax'] Default is FALSE.
 	 * @return void
 	 *
 	 * @see http://weba.im/api.php
-	 * @see http://www.php.net/manual/en/function.urlencode.php
 	 */
-	public function url_shorten($service)
+	public function url_shorten($type)
 	{
+		$this->load->library('url_shortener');
+
 		$url  = $this->input->post('url');
-		$ajax = $this->input->post('ajax', FALSE);
+		$ajax = $this->input->post('ajax', 0);
+		log_message('debug', 'main url_shorten type=' . $type . " ajax=" . $ajax . " url=" . $url);
 
-		$service_url = $this->config->item('webaim_api_url');
+		$service = Url_shortener::get($type);	
+		$result = $service->shorten($url);
 
-		$params = array();
-		$params['action'] = 'shorturl';
-		$params['url'] = $url;
-		$params['format'] = 'json';
-		$params['key'] = $this->config->item('webaim_api_key');
-		$request_url = $service_url . '?' . http_build_query($params);
-
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $request_url);
-		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_VERBOSE, 1);
-
-		$response = json_decode(curl_exec($ch));
-
-		if($response->status === 'fail')
+		if ($ajax)
 		{
-			log_message('error', 'Error from WEBAIM: ' .  $response->message);
-			log_message('error', 'Curl error: ' . curl_error($ch));
-			curl_close($ch);
-			echo json_encode(
-				array(
-					'status' => 'error',
-					'message' => $response->message
-				)
-			);
-			return;
+			echo json_encode($result);
 		}
-
-		curl_close($ch);
-		echo json_encode(
-			array(
-				'status' => 'success',
-				'message' => $response->message,
-				'short_url' => $response->shorturl
-			)
-		);
+		else
+		{
+			return $result;
+		}
 	}
 
 	/**

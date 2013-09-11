@@ -382,15 +382,6 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
-/*
-|--------------------------------------------------------------------------
-| URL Shortener Settings
-|--------------------------------------------------------------------------
-|
-*/
-
-$config['webaim_api_key'] = 'a11y';
-$config['webaim_api_url'] = 'http://weba.im/api.php';
 
 
 /*
