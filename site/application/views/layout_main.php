@@ -69,11 +69,11 @@
 <!-- modal windows -->
 <div id="go_to_user" class="modal rounded" role="dialog" aria-label="<?php echo $xliff_reader->get('nav-goto-user'); ?>" tabindex="-1">
 	<?php require('fragments/go_to_user_form.php'); ?>
-	<a href="#" class="close icon-close1"><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
+	<a href="#" class="close"><span aria-hidden="true" class="icon-close1"></span><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
 </div>
 <div id="search_quick" class="modal rounded" role="dialog" aria-label="<?php echo $xliff_reader->get('nav-quick-search'); ?>" tabindex="-1">
 	<?php require('fragments/search_quick_form.php'); ?>
-	<a href="#" class="close icon-close1"><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
+	<a href="#" class="close"><span aria-hidden="true" class="icon-close1"></span><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
 </div>
 <div id="mask"></div>
 

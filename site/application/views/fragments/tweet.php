@@ -119,36 +119,37 @@ foreach($tweets AS $tweet):
 		?>
 		via <?php echo $tweet->source; ?></p>
 	<div class="btnOptions">
-		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?>" data-icon="&#x29;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?></span></a></h3>
+		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?>"><span aria-hidden="true" class="icon-gear"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?></span></a></h3>
 		<ul id="tweetOptions_<?php echo $index; ?>">
 			<li><?php
 			// If favorited or not
 			if ($tweet->favorited === false) {
-				echo '<a href="/favorite_create/' . $tweet->id . '/false" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-make-fav') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-make-fav') . '</span></a>';
+				echo '<a href="/favorite_create/' . $tweet->id . '/false" title="' . $xliff_reader->get('gbl-tweet-make-fav') . '"><span aria-hidden="true" class="icon-star"></span><span class="hide">' . $xliff_reader->get('gbl-tweet-make-fav') . '</span></a>';
 			}
 			else {
-				echo '<a href="/favorite_destroy/' . $tweet->id . '/false" data-icon="&#x2a;" title="' . $xliff_reader->get('gbl-tweet-remove-fav') . '" class="favorited"><span class="hide">' . $xliff_reader->get('gbl-tweet-remove-fav') . '</span></a>';
+				echo '<a href="/favorite_destroy/' . $tweet->id . '/false" title="' . $xliff_reader->get('gbl-tweet-remove-fav') . '" class="favorited"><span aria-hidden="true" class="icon-star"></span><span class="hide">' . $xliff_reader->get('gbl-tweet-remove-fav') . '</span></a>';
 			}
 			?></li>
-			<li><a href="/reply/<?php echo $tweet->id; ?>" data-icon="&#x41;" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
-			<li><a href="/reply_all/<?php echo $tweet->id; ?>" data-icon="&#x3b;" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
+			<li><a href="/reply/<?php echo $tweet->id; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-reply'); ?>"><span aria-hidden="true" class="icon-arrow3"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply'); ?></span></a></li>
+			<li><a href="/reply_all/<?php echo $tweet->id; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?>"><span aria-hidden="true" class="icon-users"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-reply-all'); ?></span></a></li>
 			<li><?php 
 				if ($tweet->retweeted === false) 
 				{ 
-					echo '<a href="/retweet_create/' . $tweet->id . '/false" data-icon="&#x3f;" title="' . $xliff_reader->get('gbl-tweet-make-rt') . '"><span class="hide">' . $xliff_reader->get('gbl-tweet-make-rt') . '</span></a>';
+					echo '<a href="/retweet_create/' . $tweet->id . '/false" title="' . $xliff_reader->get('gbl-tweet-make-rt') . '"><span aria-hidden="true" class="icon-twitter2"></span><span class="hide">' . $xliff_reader->get('gbl-tweet-make-rt') . '</span></a>';
 				}
 				else 
 				{
-					echo '<a data-icon="&#x3f;" class="retweeted" title="retweeted"><span class="hide">retweeted</span></a>';
+					echo '<a class="retweeted" title="retweeted"><span aria-hidden="true" class="icon-twitter2"></span><span class="hide">retweeted</span></a>';
 				}
 			?></li>
-			<li><a href="/quote/<?php echo $tweet->id; ?>" data-icon="&#x30;" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
+			<li><a href="/quote/<?php echo $tweet->id; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span aria-hidden="true" class="icon-quote"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
 			<?php if (isset($tweet->user)): ?>
-			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo htmlentities($tweet->text); ?> [via EasyChirp.com]" data-icon="&#x31;" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
+			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo htmlentities($tweet->text); ?> [via EasyChirp.com]" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>">
+				<span aria-hidden="true" class="icon-mail"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
 			<?php endif; ?>
 			<?php 
 			if ($tweet->user->screen_name == $this->session->userdata('screen_name')): 
-				echo '<li><a href="/tweet_delete/'.$tweet->id.'/false" data-icon="&#x2e;" title="'.$xliff_reader->get('global-delete').'"><span class="hide">'.$xliff_reader->get('global-delete').'</span></a></li>';
+				echo '<li><a href="/tweet_delete/'.$tweet->id.'/false" title="'.$xliff_reader->get('global-delete').'"><span aria-hidden="true" class="icon-close"></span><span class="hide">'.$xliff_reader->get('global-delete').'</span></a></li>';
 			endif;
 			?>
 		</ul>
@@ -158,13 +159,13 @@ foreach($tweets AS $tweet):
 		if ($tweet->user->screen_name != $this->session->userdata('screen_name')): 
 	?>
 	<div class="btnOptions">
-		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="<?php echo $xliff_reader->get('gbl-tweet-user-options'); ?>" data-icon="&#x3c;"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?></span></a></h3>
+		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser" title="<?php echo $xliff_reader->get('gbl-tweet-user-options'); ?>"><span aria-hidden="true" class="icon-user"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?></span></a></h3>
 		<ul id="userOptions_<?php echo $index; ?>">
-			<li><a href="/user_timeline/<?php echo $tweet->user->screen_name; ?>" data-icon="&#x3e;" title="<?php echo $xliff_reader->get('gbl-tweet-timeline'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-timeline'); ?></span></a></li>
-			<li><a href="/direct/<?php echo $tweet->user->screen_name; ?>" data-icon="&#x37;" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a></li>
-			<li><a href="/timeline/<?php echo $tweet->user->screen_name; ?>" rel="twmess" data-icon="&#x38;" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?>"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></span></a></li>
-			<li><a href="/user_lists/<?php echo $tweet->user->screen_name; ?>" data-icon="&#x25;" title="<?php echo $xliff_reader->get('profile-dt-lists'); ?>"><span class="hide"><?php echo $xliff_reader->get('profile-dt-lists'); ?></span></a></li>
-			<li><a href="/report_spam/<?php echo $tweet->user->screen_name; ?>/false" data-icon="&#x33;" title="<?php echo $xliff_reader->get('gbl-tweet-report'); ?>" class="spammer"><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-report'); ?></span></a></li>
+			<li><a href="/user_timeline/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-timeline'); ?>"><span aria-hidden="true" class="icon-list2"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-timeline'); ?></span></a></li>
+			<li><a href="/direct/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>"><span aria-hidden="true" class="icon-bubbles"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span></a></li>
+			<li><a href="/timeline/<?php echo $tweet->user->screen_name; ?>" rel="twmess" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?>"><span aria-hidden="true" class="icon-at"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></span></a></li>
+			<li><a href="/user_lists/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $xliff_reader->get('profile-dt-lists'); ?>"><span aria-hidden="true" class="icon-list"></span><span class="hide"><?php echo $xliff_reader->get('profile-dt-lists'); ?></span></a></li>
+			<li><a href="/report_spam/<?php echo $tweet->user->screen_name; ?>/false" title="<?php echo $xliff_reader->get('gbl-tweet-report'); ?>" class="spammer"><span aria-hidden="true" class="icon-alert"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-report'); ?></span></a></li>
 		</ul>
 	</div>
 	<?php 
