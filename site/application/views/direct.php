@@ -64,7 +64,7 @@ if (isset($action)) {
 <?php
 
 // Set focus to textarea if user defined
-if ($screen_name !== FALSE) {
+if ($screen_name != FALSE) {
 	echo '<script>document.getElementById("txtDirectMessage").focus();</script>';
 }
 
