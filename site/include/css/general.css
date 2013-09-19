@@ -443,6 +443,16 @@ div.msgBoxNeg {
 	-khtml-border-radius: 10px;
 	border-radius: 10px;
 }
+#navMain li a:hover,
+#navMain li a:focus {
+	background-color:#a1d5f9;
+
+	-moz-transition: all .15s ease-out;
+	-o-transition: all .15s ease-out;
+	-webkit-transition: all .15s ease-out;
+	-ms-transition: all .15s ease-out;
+	transition: all .15s ease-out;
+}
 #navMain li a.current {
 	background-color: #a1d5f9;
 	text-decoration: none;
@@ -484,6 +494,12 @@ div.msgBoxNeg {
 	color: #333;
 	border-color:#a1d5f9;
 	background-color:#a1d5f9;
+
+	-moz-transition: all .15s ease-out;
+	-o-transition: all .15s ease-out;
+	-webkit-transition: all .15s ease-out;
+	-ms-transition: all .15s ease-out;
+	transition: all .15s ease-out;
 }
 #navTweet > li > a.current {
 	color: #333;
