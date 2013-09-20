@@ -72,38 +72,6 @@ class Main extends EC_Controller {
 		$this->layout->set_logged_in($this->_data['logged_in']);
 	}
 
-	/**
-	 * Manages the homepage.
-	 *
-	 * @return void
-	 */
-	public function index()
-	{
-		$params = array();
-		$params[] = $this->config->item('tw_consumer_key');
-		$params[] = $this->config->item('tw_consumer_secret');
-		$params[] = $this->config->item('tw_access_key');
-		$params[] = $this->config->item('tw_access_secret');
-
-		$this->load->library('twitter_lib');
-		$this->twitter_lib->connect($params);
-
-		$easychirp_statuses = $this->twitter_lib->twitteroauth->get(
-			$this->config->item('tw_url_home_timeline')
-		);
-
-		if ( is_object($easychirp_statuses) && $easychirp_statuses->errors)
-		{
-			$this->_data['error'] = $easychirp_statuses->errors[0]->message;
-		}
-		$this->_data['easychirp_statuses'] = $easychirp_statuses;
-		$this->_data['xliff_reader'] = $this->xliff_reader;
-
-		$this->layout->set_title( $this->xliff_reader->get('home') );
-		$this->layout->set_description('Homepage description');
-		$this->layout->set_skip_to_sign_in( TRUE );
-		$this->layout->view('home', $this->_data);
-	}
 
 	/**
 	 * Manage the about page "/about"
@@ -571,50 +539,6 @@ class Main extends EC_Controller {
 		$this->layout->view('following', $this->_data);
 	}
 
-	/**
-	 * Follows or unfollows user - /manage_follow_user
-	 *
-	 * @param string $screen_name twitter username of the desired user.
-	 * @param string $state
-	 * @param string $ajax if true, data will be returned as json. other will be sent to a new URL
-	 * @return json|void
-	 */
-	public function manage_follow_user($screen_name, $state = FALSE, $ajax = FALSE)
-	{
-		$this->redirect_if_not_logged_in();
-
-		$this->_data['xliff_reader'] = $this->xliff_reader;
-
-		$params = array();
-		$params[] = $this->config->item('tw_consumer_key');
-		$params[] = $this->config->item('tw_consumer_secret');
-		$params[] = $this->session->userdata('user_oauth_token');
-		$params[] = $this->session->userdata('user_oauth_token_secret');
-
-		$this->load->library('twitter_lib');
-		$this->twitter_lib->connect($params);
-
-		$request_param = array();
-		$request_param['screen_name'] = $screen_name;
-
-		if ($state == "follow") {
-			$post_url = "friendships/create";
-			$action = "followed";
-		}
-		else {
-			$post_url = "friendships/destroy";
-			$action = "unfollowed";
-		}
-
-		$data = $this->twitter_lib->post($post_url, $request_param);
-
-		if ($ajax=="true") {
-			echo json_encode($data);
-		}
-		else {
-			redirect( base_url() . 'user?id='.$screen_name.'&action='.$action);
-		}
-	}
 
 	/**
 	 * gets tweet to make thread/conversation - /getResponse
@@ -693,32 +617,44 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Manages the lists page - /lists
+	 * Manages the homepage.
 	 *
 	 * @return void
 	 */
-	public function lists()
+	public function index()
 	{
-		$this->redirect_if_not_logged_in();
-
-		$this->_data['xliff_reader'] = $this->xliff_reader;
-
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
 		$params[] = $this->config->item('tw_consumer_secret');
-		$params[] = $this->session->userdata('user_oauth_token');
-		$params[] = $this->session->userdata('user_oauth_token_secret');
+		$params[] = $this->config->item('tw_access_key');
+		$params[] = $this->config->item('tw_access_secret');
 
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$this->_data['myLists'] = $this->twitter_lib->get('lists/ownerships');
-		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions');
+		$easychirp_statuses = $this->twitter_lib->twitteroauth->get(
+			$this->config->item('tw_url_home_timeline')
+		);
 
-		$this->layout->set_title( $this->xliff_reader->get('lists-h1') );
-		$this->layout->set_description('Twitter lists of user');
-		$this->layout->view('lists', $this->_data);
+		if ( is_object($easychirp_statuses) && $easychirp_statuses->errors)
+		{
+			$this->_data['error'] = $easychirp_statuses->errors[0]->message;
+		}
+		$this->_data['easychirp_statuses'] = $easychirp_statuses;
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$this->layout->set_title( $this->xliff_reader->get('home') );
+		$this->layout->set_description('Homepage description');
+		$this->layout->set_skip_to_sign_in( TRUE );
+		$this->layout->view('home', $this->_data);
 	}
+
+	public function info()
+	{
+		phpinfo();
+	}
+
+
 
 	/**
 	 * Manages the list_edit page - /list_edit
@@ -998,6 +934,80 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Manages the lists page - /lists
+	 *
+	 * @return void
+	 */
+	public function lists()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$this->_data['myLists'] = $this->twitter_lib->get('lists/ownerships');
+		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions');
+
+		$this->layout->set_title( $this->xliff_reader->get('lists-h1') );
+		$this->layout->set_description('Twitter lists of user');
+		$this->layout->view('lists', $this->_data);
+	}
+
+
+	/**
+	 * Follows or unfollows user - /manage_follow_user
+	 *
+	 * @param string $screen_name twitter username of the desired user.
+	 * @param string $state
+	 * @param string $ajax if true, data will be returned as json. other will be sent to a new URL
+	 * @return json|void
+	 */
+	public function manage_follow_user($screen_name, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $screen_name;
+
+		if ($state == "follow") {
+			$post_url = "friendships/create";
+			$action = "followed";
+		}
+		else {
+			$post_url = "friendships/destroy";
+			$action = "unfollowed";
+		}
+
+		$data = $this->twitter_lib->post($post_url, $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'user?id='.$screen_name.'&action='.$action);
+		}
+	}
+
+	/**
 	 * Manages the Mentions page - /mentions
 	 *
 	 * @return void
@@ -1259,10 +1269,10 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['name'] =  $_POST["name"];
-		$request_param['location'] =  $_POST["location"];
-		$request_param['description'] =  $_POST["description"];
-		$request_param['url'] =  $_POST["url"];
+		$request_param['name'] =  $this->input->post('name');
+		$request_param['location'] =  $this->input->post('location');
+		$request_param['description'] =  $this->input->post('description');
+		$request_param['url'] =  $this->input->post('url');
 
 		$data = $this->twitter_lib->post('account/update_profile', $request_param);
 
@@ -1290,7 +1300,7 @@ class Main extends EC_Controller {
 		// $this->twitter_lib->connect($params);
 
 		// $request_param = array();
-		// $request_param['image'] = $_POST["avatar"];
+		// $request_param['image'] = base64_encode($_FILES['avatar']['tmp_name']);
 		// $data = $this->twitter_lib->post('account/update_profile_image', $request_param);
 
 		// need 5 second delay after uploading: https://dev.twitter.com/docs/api/1.1/post/account/update_profile_image
@@ -2005,11 +2015,6 @@ class Main extends EC_Controller {
 		redirect($_SERVER['HTTP_REFERER']);
 	}
 
-
-	public function info()
-	{
-		phpinfo();
-	}
 
 	/**
 	 * Manages the timeline page - /timeline
