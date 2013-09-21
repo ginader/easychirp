@@ -1220,9 +1220,46 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Manages the form data from Edit Profile page - /profile_avatar_action
+	 *
+	 * @see https://dev.twitter.com/docs/api/1.1/post/account/update_profile_image
+	 */
+	public function profile_avatar_action()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		echo "tmp_name=";
+		echo $_FILES['avatar']['tmp_name'];
+		
+		$fh = fopen($_FILES['avatar']['tmp_name'], FOPEN_READ);
+		$content = fgets($fh);
+		fclose($fh);
+
+		$request_param['image'] = base64_encode($content);
+
+		$data = $this->twitter_lib->post('account/update_profile_image', $request_param);
+		log_message('info', print_r($data, TRUE));
+		sleep(5);
+
+		redirect( base_url() . 'profile_edit?action=modified_avatar');
+	}
+
+	/**
 	 * Manages the profile edit page - /profile_edit
 	 */
-	public function profile_edit()
+	public function profile_edit($action = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1241,8 +1278,9 @@ class Main extends EC_Controller {
 	 	$request_param['screen_name'] =  $this->session->userdata('screen_name');
 	 	$this->_data['profile'] = $this->twitter_lib->get('users/show', $request_param);
 
-		if ( isset($_GET['action']) ) {
-			$this->_data['action'] = $_GET['action'];
+		if ($action)
+		{
+			$this->_data['action'] = $action;
 		}
 
 		$this->layout->set_title( $this->xliff_reader->get('edit-profile-h1') );
@@ -1277,35 +1315,6 @@ class Main extends EC_Controller {
 		$data = $this->twitter_lib->post('account/update_profile', $request_param);
 
 		redirect( base_url() . 'profile_edit?action=modified_text');
-	}
-
-	/**
-	 * Manages the form data from Edit Profile page - /profile_avatar_action
-	 *
-	 * @todo PLEASE REVIEW - Why is this all commented out?
-	 */
-	public function profile_avatar_action()
-	{
-		$this->redirect_if_not_logged_in();
-
-		$this->_data['xliff_reader'] = $this->xliff_reader;
-
-		// $params = array();
-		// $params[] = $this->config->item('tw_consumer_key');
-		// $params[] = $this->config->item('tw_consumer_secret');
-		// $params[] = $this->session->userdata('user_oauth_token');
-		// $params[] = $this->session->userdata('user_oauth_token_secret');
-
-		// $this->load->library('twitter_lib');
-		// $this->twitter_lib->connect($params);
-
-		// $request_param = array();
-		// $request_param['image'] = base64_encode($_FILES['avatar']['tmp_name']);
-		// $data = $this->twitter_lib->post('account/update_profile_image', $request_param);
-
-		// need 5 second delay after uploading: https://dev.twitter.com/docs/api/1.1/post/account/update_profile_image
-
-		redirect( base_url() . 'profile_edit?action=modified_avatar');
 	}
 
 	/**
