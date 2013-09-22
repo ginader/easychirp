@@ -1040,15 +1040,15 @@ body.theme-inverse {
 	background:url(../../images/bg_rt_big_inverse.gif) top right no-repeat;
 }
 
-input[type=text], textarea {
+.theme-inverse input[type=text], 
+.theme-inverse textarea {
 	border: 1px solid #666;
 }
-button:focus,
-textarea:focus,
-input:focus {
+.theme-inverse button:focus,
+.theme-inverse textarea:focus,
+.theme-inverse input:focus {
 	border-color: #999;
 }
-
 
 /* Media queries *******************************************/
 
