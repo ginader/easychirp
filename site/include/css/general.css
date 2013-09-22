@@ -1027,6 +1027,29 @@ body.theme-inverse {
 	background-color:#efefef;
 }
 
+.theme-inverse .box1 blockquote {
+	background: url(/images/blockquote_inverse.png) no-repeat 0 10px;
+}
+
+.theme-inverse .reply {
+	border-color:#333;
+	background:url(../../images/bg_reply_big_inverse.gif) top right no-repeat;
+}
+.theme-inverse .retweet {
+	border-color:#333;
+	background:url(../../images/bg_rt_big_inverse.gif) top right no-repeat;
+}
+
+input[type=text], textarea {
+	border: 1px solid #666;
+}
+button:focus,
+textarea:focus,
+input:focus {
+	border-color: #999;
+}
+
+
 /* Media queries *******************************************/
 
 @media only screen and (max-width: 1000px) {
