@@ -2214,16 +2214,29 @@ class Main extends EC_Controller {
 	 * @param string $_POST['url'] the URL you want to shorten
 	 * @param string|bool $_POST['ajax'] Default is FALSE.
 	 * @return void
-	 *
-	 * @see http://weba.im/api.php
 	 */
 	public function url_shorten($type)
 	{
 		$this->load->library('url_shortener');
 
 		$url  = $this->input->post('url');
-		$ajax = $this->input->post('ajax', 0);
+		$ajax = $this->input->post('ajax');
 		log_message('debug', 'main url_shorten type=' . $type . " ajax=" . $ajax . " url=" . $url);
+
+		if (empty($url))
+		{
+			log_message('info', 'The URL is EMPTY');
+			$error = array('status' => 'error', 'message' => 'URL is empty');
+			if ($ajax)
+			{
+				echo json_encode($error);
+				exit(0);
+			}
+			else
+			{
+				return $error;
+			}
+		}
 
 		$service = Url_shortener::get($type);	
 		$result = $service->shorten($url);

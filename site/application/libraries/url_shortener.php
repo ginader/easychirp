@@ -20,6 +20,10 @@ class Url_shortener
 	{
 		switch ($service)
 		{
+		case 'bitly':
+			return new Bitly();
+			break;
+
 		case 'webaim':
 			return new Webaim();
 			break;
@@ -147,6 +151,159 @@ class Webaim implements Iurl_service
 	}
 
 }
+
+
+class Bitly implements Iurl_service
+{
+	/** Top level URL of the service */
+	private $service_url = 'https://api-ssl.bitly.com';
+
+	/** the username you login with at bitly.com  */
+	private $username = 'accessibletwitter';
+
+	/** the password you login with on bitly.com */
+	private $password = '';
+
+	/** the fields referred to as client_secret in Bitly's API documentation */
+	private $secret = 'R_f2c18f9ba07c92ab49bc229777ad9282';
+
+	/** the token returned from the authenticate method */
+	private $access_token = NULL;
+
+
+	public function __construct() { }
+
+
+	/**
+	 * Provide your credentials to obtain an access token
+	 *
+	 * @param string $username a necessary parameter
+	 * @param string $password optional an optional value
+	 * @return bool
+	 */
+	public function authenticate()
+	{
+		$post_data = array();
+		$post_data['client_id'] = $this->username;
+		$post_data['client_secret'] = $this->secret;
+		$post_data['format'] = 'json';
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $this->service_url . '/oauth/access_token');
+		curl_setopt($ch, CURLOPT_USERPWD, $this->username . ':' . $this->password);
+		curl_setopt($ch, CURLOPT_POST, TRUE);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		$response = curl_exec($ch);
+		curl_close($ch);
+
+		$result = array();
+		switch ($response)
+		{
+		case 'INVALID_CLIENT_ID':
+			$result['status'] = 'error';
+			$result['message'] = $response;
+			break;
+
+		default:
+			$result['status'] = 'success';
+			$result['content'] = $response;
+		}
+
+		return $result;
+	}
+
+
+	/**
+	 * Expand a short URL to a long URL
+	 *
+	 * @param string $url a short url
+	 * @return array
+	 *
+	 * @see http://dev.bitly.com/links.html#v3_expand
+	 */
+	public function expand($url)
+	{
+		if ( ! $this->access_token)
+		{
+			$auth_result = $this->authenticate();
+			if ($auth_result['status'] == 'success')
+			{
+				$this->access_token = $auth_result['content'];
+			}
+		}
+
+		$query = array();
+		$query['access_token'] = $this->access_token;
+		$query['shortUrl'] = $url;
+
+		$get_url = $this->service_url . '/v3/expand?' . http_build_query($query);
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $get_url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$result = curl_exec($ch);
+		curl_close($ch);
+
+		$result = json_decode($result);
+
+		$response = array();
+		$response['message'] = $result->status_txt;
+		$response['status'] = $result->status_code;
+		if ($result->status_code == 200)
+		{
+			$response['long_url'] = $result->data->expand[0]->long_url;
+		}
+
+		return $response;
+	}
+
+
+	/**
+	 * Create a short URL from a long URL
+	 *
+	 * @param string $url a long URL that you want to shorten
+	 * @return array
+	 *
+	 * @see http://dev.bitly.com/links.html#v3_shorten
+	 */
+	public function shorten($url)
+	{
+		if ( ! $this->access_token)
+		{
+			$auth_result = $this->authenticate();
+			if ($auth_result['status'] == 'success')
+			{
+				$this->access_token = $auth_result['content'];
+			}
+		}
+
+		$query = array();
+		$query['access_token'] = $this->access_token;
+		$query['longUrl'] = $url;
+
+		$get_url = $this->service_url . '/v3/shorten?' . http_build_query($query);
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $get_url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$result = curl_exec($ch);
+		curl_close($ch);
+
+		$result = json_decode($result);
+
+		$response = array();
+		$response['message'] = $result->status_txt;
+		$response['status'] = $result->status_code;
+		if ($result->status_code == 200)
+		{
+			$response['short_url'] = $result->data->url;
+		}
+
+		return $response;
+	}
+
+}
+
 
 /* End of file url_shortener.php */ 
 /* Location: ./application/libraries/url_shortener.php */
