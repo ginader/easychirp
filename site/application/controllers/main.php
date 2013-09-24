@@ -1240,18 +1240,18 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		echo "tmp_name=";
-		echo $_FILES['avatar']['tmp_name'];
-		
-		$fh = fopen($_FILES['avatar']['tmp_name'], FOPEN_READ);
-		$content = fgets($fh);
-		fclose($fh);
+		$file = $_FILES['avatar']['tmp_name'];
+		$fh = fopen($file, "r");
+		if ( ! $fh) {
+			echo 'could not open file';
+		}
+		$imgbinary = fread($fh, filesize($file));
+		$b64_image = base64_encode($imgbinary);
 
-		$request_param['image'] = base64_encode($content);
+		$request_param['image'] =  $b64_image . ';type=image/jpg;filename=profile.jpg';
 
 		$data = $this->twitter_lib->post('account/update_profile_image', $request_param);
-		log_message('info', print_r($data, TRUE));
-		sleep(5);
+		sleep(5); // wait 5 seconds. The twitter API method says so.
 
 		redirect( base_url() . 'profile_edit?action=modified_avatar');
 	}
