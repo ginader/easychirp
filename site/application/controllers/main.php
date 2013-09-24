@@ -2225,7 +2225,7 @@ class Main extends EC_Controller {
 	 * Use a service to shorten a long url
 	 *
 	 * @param string $service_id the ID of the Service e.g. bitly, webaim;
-	 * @param string $_POST['url'] the URL you want to shorten
+	 * @param string $_POST['url_long'] the URL you want to shorten
 	 * @param string|bool $_POST['ajax'] Default is FALSE.
 	 * @return void
 	 */
@@ -2233,7 +2233,7 @@ class Main extends EC_Controller {
 	{
 		$this->load->library('url_shortener');
 
-		$url  = $this->input->post('url');
+		$url  = $this->input->post('url_long');
 		$ajax = $this->input->post('ajax');
 		log_message('debug', 'main url_shorten type=' . $type . " ajax=" . $ajax . " url=" . $url);
 
@@ -2256,13 +2256,15 @@ class Main extends EC_Controller {
 		$result = $service->shorten($url);
 		log_message('debug', 'main url_shorten result=' . print_r($result, TRUE));
 
-		if ($ajax)
+		if ($ajax !== "false")
 		{
-			echo json_encode($result);
+			//echo json_encode($result);
+			echo $result["short_url"];
 		}
 		else
 		{
-			return $result;
+			//return $result;
+			redirect( base_url() . "timeline?url_short=" . $result["short_url"] );
 		}
 	}
 

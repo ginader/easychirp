@@ -349,4 +349,101 @@ $('a[href*="search_save"]').click(function(e) {
 	})
 });
 
+// Ajax for shortening a URL
+
+// Clear shortened URL
+$('<a href="#" id="urlClear">Clear</a>').insertAfter('#btnShorten');
+$('#urlClear').click(function() {
+	$('#urlLong').val("");
+	$('#urlLong').focus();
+	$('#urlShortResult').remove();
+	$('#urlLongResult').remove();
+	return false;
+});
+
+// Get shortened URL
+$("#frmUrlShort").submit(function(ev) {
+	
+	ev.preventDefault();		
+	
+	var frmAction  = $(this).attr('action');
+	var objLongURL = $('#urlLong');
+	var txtLongURL = $('#urlLong').val();
+
+	//var txtUrlService = $('input:radio[name=urlService]:checked').val();
+	//alert(txtUrlService + txtLongURL); return false;
+	
+	//validate for completed input
+	if (txtLongURL == "") {
+		alert("URL input is blank. Please enter a URL.");
+		objLongURL.focus();
+		return false;
+	}
+	//validate for non bit.ly
+	var pos = txtLongURL.indexOf("http://bit.ly");
+	if (pos != -1) {
+		alert("URL cannot be a bit.ly link. Please enter a different URL.");
+		objLongURL.focus();
+		return false;
+	}
+	//validate for valid URL
+	var emailReg = /^(ht|f)tps?:\/\/[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/;
+	if ( (!emailReg.test(txtLongURL)) || (txtLongURL.length <=7) ) {
+		alert("You must provide a valid URL.");
+		objLongURL.focus();
+		return false;
+	}
+
+	render = function(short,long) {
+		//add short URL to Tweet input
+		txtInput = $('#txtEnterTweet');
+		if ( document.getElementById("txtDirectMessage") ) { 
+			txtInput = $('#txtDirectMessage');
+		}
+		txtInput.val(txtInput.val() + short + " ");
+		
+		//update counter
+		if ( document.getElementById("txtEnterTweet") ) { 
+			updateCharCount("txtEnterTweet");
+		}
+		else {
+			updateCharCount("txtDirectMessage");
+		}
+		
+		//delete existing on page
+		$('#urlShortResult').remove();
+		$('#urlLongResult').remove();
+		
+		//output on page
+		$('<p id=\'urlShortResult\'>Shortenend URL: <a rel=\'external\' href="' + short + '">' + short + '</a></p>').insertBefore('#frmUrlShort');
+		$('<p id=\'urlLongResult\'>Original URL: <a rel=\'external\' href="' + long + '">' + long + '</a></p>').insertAfter('#urlShortResult');
+		alert("Success! The shortened URL has been added to the input field.");
+
+		//focus tweet/dm input
+		if ( document.getElementById("txtEnterTweet") ) { 
+			$("#txtEnterTweet").focus();
+		}
+		else {
+			$("#txtDirectMessage").focus();
+		}
+	}
+
+	$.ajax({
+		url: frmAction,
+		type: "POST",
+		data: { 
+			ajax: "true",
+			url_long: txtLongURL
+		},
+		success: function(data) {
+			render(data, txtLongURL); // short URL, long URL
+		},
+		error: function(data) {
+			alert("error");
+		}
+	});
+
+});
+
+
 
