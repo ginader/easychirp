@@ -405,9 +405,12 @@ $config['proxy_ips'] = '';
 */
 
 $config['bitly_service_url'] = 'https://api-ssl.bitly.com';
-$config['bitly_username'] = 'atwoods';
-$config['bitly_password'] = '#bitly';
+$config['bitly_username'] = 'o_42rtvbhinu';
+$config['bitly_password'] = 'cure9292';
 $config['bitly_secret'] = 'R_49e8fdd586d1bbc9894e7f1c3b32296c';
+$config['bitly_api_key'] = 'R_e0641d85bf9c1d59f5c3a5458a4febdf';
+$config['bitly_access_token'] = '90c2df2a25979b55f14594580eb47d7e32ece1c7';
+
 
 $config['tw_api_url'] = 'https://api.twitter.com/1.1/';
 $config['tw_user_agent'] = 'easychirp/' . EASYCHIRP_VERSION; 

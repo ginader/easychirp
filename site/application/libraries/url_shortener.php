@@ -169,6 +169,8 @@ class Bitly implements Iurl_service
 	/** the fields referred to as client_secret in Bitly's API documentation */
 	private $secret = '';
 
+	/** API KEY: R_e0641d85bf9c1d59f5c3a5458a4febdf */
+
 	/** the token returned from the authenticate method */
 	private $access_token = NULL;
 
@@ -179,7 +181,8 @@ class Bitly implements Iurl_service
 		$this->service_url = $CI->config->item('bitly_service_url');
 		$this->username    = $CI->config->item('bitly_username');
 		$this->password    = $CI->config->item('bitly_password');
-		$this->secret      = $CI->config->item('bitly_secret');
+		$this->secret      = $CI->config->item('bitly_api_key');
+		$this->access_token = $CI->config->item('bitly_access_token');
 	}
 
 

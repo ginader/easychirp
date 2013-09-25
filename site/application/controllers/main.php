@@ -2233,6 +2233,8 @@ class Main extends EC_Controller {
 	 */
 	public function url_shorten()
 	{
+		$type = $this->input->post('urlService');
+
 		$this->load->library('url_shortener');
 
 		$type = $this->input->post('service');
@@ -2255,7 +2257,7 @@ class Main extends EC_Controller {
 			}
 		}
 
-		$service = Url_shortener::get($type);	
+		$service = Url_shortener::get($type);
 		$result = $service->shorten($url);
 		log_message('debug', 'main url_shorten result=' . print_r($result, TRUE));
 
