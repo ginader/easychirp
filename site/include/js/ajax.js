@@ -364,7 +364,7 @@ $('#urlClear').click(function() {
 // Get shortened URL
 $("#frmUrlShort").submit(function(ev) {
 	
-	ev.preventDefault();		
+	ev.preventDefault();
 	
 	var frmAction  = $(this).attr('action');
 	var objLongURL = $('#urlLong');
@@ -430,13 +430,14 @@ $("#frmUrlShort").submit(function(ev) {
 	$.ajax({
 		url: frmAction,
 		type: "POST",
+		dataType: 'json',
 		data: { 
 			ajax: "true",
 			url_long: txtLongURL,
 			urlService: txtUrlService
 		},
 		success: function(data) {
-			render(data, txtLongURL); // short URL, long URL
+			render(data.short_url, txtLongURL); // short URL, long URL
 		},
 		error: function(data) {
 			alert("error");

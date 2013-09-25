@@ -2202,7 +2202,7 @@ class Main extends EC_Controller {
 	{
 		$this->load->library('url_shortener');
 
-		$type = $this->input->post('service');
+		$type = $this->input->post('urlService');
 		$url  = $this->input->post('url');
 		$ajax = $this->input->post('ajax');
 		log_message('debug', 'main url_expand type=' . $type . " ajax=" . $ajax . " url=" . $url);
@@ -2233,9 +2233,13 @@ class Main extends EC_Controller {
 	{
 		$this->load->library('url_shortener');
 
-		$type = $this->input->post('service');
+		$type = $this->input->post('urlService');
 		$url  = $this->input->post('url_long');
 		$ajax = $this->input->post('ajax');
+		if (ctype_digit($ajax))
+		{
+			$ajax = (int) $ajax;
+		}
 		log_message('debug', 'main url_shorten type=' . $type . " ajax=" . $ajax . " url=" . $url);
 
 		if (empty($url))
@@ -2259,10 +2263,12 @@ class Main extends EC_Controller {
 
 		if ($ajax)
 		{
+			log_message('info', 'ajax response ' . print_r($result, true));
 			echo json_encode($result);
 		}
 		else
 		{
+			log_message('info', 'redirect to timeline with short url=' . $result['short_url']);
 			redirect( base_url() . "timeline?url_short=" . $result["short_url"] );
 		}
 	}

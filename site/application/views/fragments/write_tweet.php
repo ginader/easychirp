@@ -52,7 +52,7 @@ if (empty($single)):
 
 		<h3><?php echo $xliff_reader->get('write-tweet-h3'); ?></h3>
 		<form id="frmUrlShort" method="post" action="/url_shorten">
-			<input type="hidden" name="ajax" value="false" />
+			<input type="hidden" name="ajax" value="0" />
 			<label for="urlLong"><?php echo $xliff_reader->get('write-tweet-enter-url'); ?></label>
 			<input type="text" name="url_long" id="urlLong" size="50" class="input1" placeholder="http://" required aria-required="true" />
 			<span id="urlService">
