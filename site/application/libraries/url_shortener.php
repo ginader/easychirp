@@ -159,13 +159,15 @@ class Bitly implements Iurl_service
 	private $service_url = 'https://api-ssl.bitly.com';
 
 	/** the username you login with at bitly.com  */
-	private $username = 'accessibletwitter';
+	private $username = 'o_42rtvbhinu';
 
 	/** the password you login with on bitly.com */
-	private $password = '';
+	private $password = 'cure9292';
 
 	/** the fields referred to as client_secret in Bitly's API documentation */
-	private $secret = 'R_f2c18f9ba07c92ab49bc229777ad9282';
+	private $secret = '';
+
+	/** API KEY: R_e0641d85bf9c1d59f5c3a5458a4febdf */
 
 	/** the token returned from the authenticate method */
 	private $access_token = NULL;
