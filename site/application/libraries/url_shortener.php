@@ -18,6 +18,7 @@ class Url_shortener
 
 	public static function get($service)
 	{
+		log_message('info', 'Url_shortener service=' . $service);
 		switch ($service)
 		{
 		case 'bitly':
@@ -155,23 +156,31 @@ class Webaim implements Iurl_service
 
 class Bitly implements Iurl_service
 {
+
 	/** Top level URL of the service */
-	private $service_url = 'https://api-ssl.bitly.com';
+	private $service_url = '';
 
 	/** the username you login with at bitly.com  */
-	private $username = 'accessibletwitter';
+	private $username = '';
 
 	/** the password you login with on bitly.com */
 	private $password = '';
 
 	/** the fields referred to as client_secret in Bitly's API documentation */
-	private $secret = 'R_f2c18f9ba07c92ab49bc229777ad9282';
+	private $secret = '';
 
 	/** the token returned from the authenticate method */
 	private $access_token = NULL;
 
 
-	public function __construct() { }
+	public function __construct() { 
+		$CI =& get_instance();
+			
+		$this->service_url = $CI->config->item('bitly_service_url');
+		$this->username    = $CI->config->item('bitly_username');
+		$this->password    = $CI->config->item('bitly_password');
+		$this->secret      = $CI->config->item('bitly_secret');
+	}
 
 
 	/**
@@ -188,10 +197,12 @@ class Bitly implements Iurl_service
 		$post_data['client_secret'] = $this->secret;
 		$post_data['format'] = 'json';
 
+		log_message('info', 'username=' . $this->username . ' secret=' . $this->secret . ' password=' . $this->password);
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $this->service_url . '/oauth/access_token');
 		curl_setopt($ch, CURLOPT_USERPWD, $this->username . ':' . $this->password);
 		curl_setopt($ch, CURLOPT_POST, TRUE);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		$response = curl_exec($ch);
 		curl_close($ch);
@@ -200,6 +211,7 @@ class Bitly implements Iurl_service
 		switch ($response)
 		{
 		case 'INVALID_CLIENT_ID':
+		case 'INVALID_LOGIN':
 			$result['status'] = 'error';
 			$result['message'] = $response;
 			break;
@@ -268,14 +280,23 @@ class Bitly implements Iurl_service
 	 */
 	public function shorten($url)
 	{
+		log_message('info', 'shorten url=' . $url);
 		if ( ! $this->access_token)
 		{
 			$auth_result = $this->authenticate();
 			if ($auth_result['status'] == 'success')
 			{
 				$this->access_token = $auth_result['content'];
+				$this->session->set_userdata('bitly_access_token', $this->access_token);
+				log_message('info', 'shorten successfully authenticated. access_token=' . $this->access_token);
+			}
+			else
+			{
+				log_message('error', 'shorten not authenticated');
+				return json_encode( $auth_result );
 			}
 		}
+		log_message('info', 'shorten access_token=' . $this->access_token);
 
 		$query = array();
 		$query['access_token'] = $this->access_token;

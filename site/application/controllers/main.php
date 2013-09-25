@@ -2199,10 +2199,12 @@ class Main extends EC_Controller {
 	 *
 	 * @see http://weba.im/api.php
 	 */
-	public function url_expand($type)
+	public function url_expand()
 	{
+
 		$this->load->library('url_shortener');
 
+		$type = $this->input->post('urlService');
 		$url  = $this->input->post('url');
 		$ajax = $this->input->post('ajax', 0);
 		log_message('debug', 'main url_expand type=' . $type . " ajax=" . $ajax . " url=" . $url);
@@ -2227,12 +2229,13 @@ class Main extends EC_Controller {
 	 * @param string $service_id the ID of the Service e.g. bitly, webaim;
 	 * @param string $_POST['url_long'] the URL you want to shorten
 	 * @param string|bool $_POST['ajax'] Default is FALSE.
-	 * @return void
+	 * @return json|void JSON is returned when AJAX is used. otherwise redirected to a URL
 	 */
-	public function url_shorten($type)
+	public function url_shorten()
 	{
 		$this->load->library('url_shortener');
 
+		$type = $this->input->post('service');
 		$url  = $this->input->post('url_long');
 		$ajax = $this->input->post('ajax');
 		log_message('debug', 'main url_shorten type=' . $type . " ajax=" . $ajax . " url=" . $url);
@@ -2256,14 +2259,12 @@ class Main extends EC_Controller {
 		$result = $service->shorten($url);
 		log_message('debug', 'main url_shorten result=' . print_r($result, TRUE));
 
-		if ($ajax !== "false")
+		if ($ajax)
 		{
-			//echo json_encode($result);
-			echo $result["short_url"];
+			echo json_encode($result);
 		}
 		else
 		{
-			//return $result;
 			redirect( base_url() . "timeline?url_short=" . $result["short_url"] );
 		}
 	}

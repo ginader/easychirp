@@ -404,6 +404,10 @@ $config['proxy_ips'] = '';
 |
 */
 
+$config['bitly_service_url'] = 'https://api-ssl.bitly.com';
+$config['bitly_username'] = 'atwoods';
+$config['bitly_password'] = '#bitly';
+$config['bitly_secret'] = 'R_49e8fdd586d1bbc9894e7f1c3b32296c';
 
 $config['tw_api_url'] = 'https://api.twitter.com/1.1/';
 $config['tw_user_agent'] = 'easychirp/' . EASYCHIRP_VERSION; 
