@@ -96,6 +96,29 @@ class Main extends EC_Controller {
 	{
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = 'easychirp';
+		$request_param['count'] = 25;
+
+		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
+		$this->_data['tweets'] = $this->load->view('fragments/tweet',
+			array(
+			'tweets' => $tweets,
+			'utc_offset' => $this->session->userdata('utc_offset'),
+			'time_zone' => $this->session->userdata('time_zone'),
+			'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
+
+
 		$this->layout->set_title( $this->xliff_reader->get('articles-h1') );
 		$this->layout->set_description('Articles, user feedback, books, wikis, and awards listed here.');
 		$this->layout->view('articles', $this->_data);
