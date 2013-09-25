@@ -2192,21 +2192,19 @@ class Main extends EC_Controller {
 	/**
 	 * Use a service to expand a short url
 	 *
-	 * @param string $service_id the ID of the Service e.g. bitly, webaim;
+	 * @param string $_POST['service'] the ID of the Service e.g. bitly, webaim;
 	 * @param string $_POST['url'] the URL you want to shorten
-	 * @param string|bool $_POST['ajax'] Default is FALSE.
-	 * @return void
+	 * @param string $_POST['ajax'] Default is FALSE.
+	 * @return json|array JSON is returned when AJAX is used. otherwise returns an array 
 	 *
-	 * @see http://weba.im/api.php
 	 */
 	public function url_expand()
 	{
-
 		$this->load->library('url_shortener');
 
-		$type = $this->input->post('urlService');
+		$type = $this->input->post('service');
 		$url  = $this->input->post('url');
-		$ajax = $this->input->post('ajax', 0);
+		$ajax = $this->input->post('ajax');
 		log_message('debug', 'main url_expand type=' . $type . " ajax=" . $ajax . " url=" . $url);
 
 		$service = Url_shortener::get($type);	
@@ -2226,15 +2224,13 @@ class Main extends EC_Controller {
 	/**
 	 * Use a service to shorten a long url
 	 *
-	 * @param string $service_id the ID of the Service e.g. bitly, webaim;
+	 * @param string $_POST['service'] the ID of the Service e.g. bitly, webaim;
 	 * @param string $_POST['url_long'] the URL you want to shorten
-	 * @param string|bool $_POST['ajax'] Default is FALSE.
+	 * @param string|bool $_POST['ajax'] Optional. Default is FALSE.
 	 * @return json|void JSON is returned when AJAX is used. otherwise redirected to a URL
 	 */
 	public function url_shorten()
 	{
-		$type = $this->input->post('urlService');
-
 		$this->load->library('url_shortener');
 
 		$type = $this->input->post('service');
