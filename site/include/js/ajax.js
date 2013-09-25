@@ -369,9 +369,8 @@ $("#frmUrlShort").submit(function(ev) {
 	var frmAction  = $(this).attr('action');
 	var objLongURL = $('#urlLong');
 	var txtLongURL = $('#urlLong').val();
-
-	//var txtUrlService = $('input:radio[name=urlService]:checked').val();
-	//alert(txtUrlService + txtLongURL); return false;
+	var txtUrlService = $('input:radio[name=urlService]:checked').val();
+	//alert(txtUrlService + " " + txtLongURL); //return false;
 	
 	//validate for completed input
 	if (txtLongURL == "") {
@@ -433,7 +432,8 @@ $("#frmUrlShort").submit(function(ev) {
 		type: "POST",
 		data: { 
 			ajax: "true",
-			url_long: txtLongURL
+			url_long: txtLongURL,
+			urlService: txtUrlService
 		},
 		success: function(data) {
 			render(data, txtLongURL); // short URL, long URL

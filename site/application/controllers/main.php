@@ -2229,8 +2229,10 @@ class Main extends EC_Controller {
 	 * @param string|bool $_POST['ajax'] Default is FALSE.
 	 * @return void
 	 */
-	public function url_shorten($type)
+	public function url_shorten()
 	{
+		$type = $this->input->post('urlService');
+
 		$this->load->library('url_shortener');
 
 		$url  = $this->input->post('url_long');
@@ -2252,7 +2254,7 @@ class Main extends EC_Controller {
 			}
 		}
 
-		$service = Url_shortener::get($type);	
+		$service = Url_shortener::get($type);
 		$result = $service->shorten($url);
 		log_message('debug', 'main url_shorten result=' . print_r($result, TRUE));
 

@@ -51,14 +51,14 @@ if (empty($single)):
 		</form>
 
 		<h3><?php echo $xliff_reader->get('write-tweet-h3'); ?></h3>
-		<form id="frmUrlShort" method="post" action="/url_shorten/webaim">
+		<form id="frmUrlShort" method="post" action="/url_shorten">
 			<input type="hidden" name="ajax" value="false" />
 			<label for="urlLong"><?php echo $xliff_reader->get('write-tweet-enter-url'); ?></label>
 			<input type="text" name="url_long" id="urlLong" size="50" class="input1" placeholder="http://" required aria-required="true" />
 			<span id="urlService">
 				<span id="urlServiceLabel"><?php echo $xliff_reader->get('write-tweet-service'); ?></span>
-				<!--<input type="radio" name="urlService" id="bitly" value="bitly" checked="checked" aria-describedby="urlServiceLabel" />
-				<label for="bitly">bit.ly</label>-->
+				<input type="radio" name="urlService" id="bitly" value="bitly" aria-describedby="urlServiceLabel" />
+				<label for="bitly">bit.ly</label>
 				<input type="radio" name="urlService" id="webaim" value="webaim" checked="checked" aria-describedby="urlServiceLabel" />
 				<label for="webaim">weba.im</label>
 			</span>
