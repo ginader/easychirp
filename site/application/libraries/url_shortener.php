@@ -75,7 +75,7 @@ class Webaim implements Iurl_service
 	{
 		$params = array();
 		$params['action'] = 'shorturl';
-		$params['url'] = urlencode($url);
+		$params['url'] = urldecode($url);
 		$params['format'] = 'json';
 		$params['key'] = $this->key;
 		$request_url = $this->service_url . '?' . http_build_query($params);
