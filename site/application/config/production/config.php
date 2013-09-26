@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://ec2.local';
+$config['base_url'] = 'http://easychirp.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -37,14 +37,14 @@ $config['index_page'] = '';
 | URI string.  The default setting of 'AUTO' works for most servers.
 | If your links do not seem to work, try one of the other delicious flavors:
 |
-| 'AUTO'			Default - auto detects
-| 'PATH_INFO'		Uses the PATH_INFO
-| 'QUERY_STRING'	Uses the QUERY_STRING
-| 'REQUEST_URI'		Uses the REQUEST_URI
-| 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
+| 'AUTO'            Default - auto detects
+| 'PATH_INFO'       Uses the PATH_INFO
+| 'QUERY_STRING'    Uses the QUERY_STRING
+| 'REQUEST_URI'     Uses the REQUEST_URI
+| 'ORIG_PATH_INFO'  Uses the ORIG_PATH_INFO
 |
 */
-$config['uri_protocol']	= 'AUTO';
+$config['uri_protocol'] = 'AUTO';
 
 /*
 |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language'] = 'english';
 $config['site_language'] = 'en-US';
 $config['supported_langs'] = array(
 	'en-US' => 'English',
@@ -179,11 +179,11 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 | use segment based URLs.
 |
 */
-$config['allow_get_array']		= TRUE;
+$config['allow_get_array'] = TRUE;
 $config['enable_query_strings'] = FALSE;
-$config['controller_trigger']	= 'c';
-$config['function_trigger']		= 'm';
-$config['directory_trigger']	= 'd'; // experimental not currently in use
+$config['controller_trigger'] = 'c';
+$config['function_trigger'] = 'm';
+$config['directory_trigger'] = 'd'; // experimental not currently in use
 
 /*
 |--------------------------------------------------------------------------
@@ -205,7 +205,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 4;
+$config['log_threshold'] = 1;
 
 /*
 |--------------------------------------------------------------------------
@@ -256,28 +256,28 @@ $config['encryption_key'] = 'q1z0s2e@9c1f9t7b3h$u^m&k*ol.p;/!';
 | Session Variables
 |--------------------------------------------------------------------------
 |
-| 'sess_cookie_name'		= the name you want for the cookie
-| 'sess_expiration'			= the number of SECONDS you want the session to last.
-|   by default sessions last 7200 seconds (two hours).  Set to zero for no expiration.
-| 'sess_expire_on_close'	= Whether to cause the session to expire automatically
-|   when the browser window is closed
-| 'sess_encrypt_cookie'		= Whether to encrypt the cookie
-| 'sess_use_database'		= Whether to save the session data to a database
-| 'sess_table_name'			= The name of the session database table
-| 'sess_match_ip'			= Whether to match the user's IP address when reading the session data
-| 'sess_match_useragent'	= Whether to match the User Agent when reading the session data
-| 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
+| 'sess_cookie_name' = the name you want for the cookie
+| 'sess_expiration' = the number of SECONDS you want the session to last.
+|    by default sessions last 7200 seconds (two hours).  Set to zero for no expiration.
+| 'sess_expire_on_close' = Whether to cause the session to expire automatically
+|    when the browser window is closed
+| 'sess_encrypt_cookie' = Whether to encrypt the cookie
+| 'sess_use_database' = Whether to save the session data to a database
+| 'sess_table_name' = The name of the session database table
+| 'sess_match_ip' = Whether to match the user's IP address when reading the session data
+| 'sess_match_useragent' = Whether to match the User Agent when reading the session data
+| 'sess_time_to_update' = how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'cisession';
-$config['sess_expiration']		= 12 * HOUR_IN_SECONDS;
-$config['sess_expire_on_close']	= FALSE;
-$config['sess_encrypt_cookie']	= TRUE;
-$config['sess_use_database']	= TRUE;
-$config['sess_table_name']		= 'ci_sessions';
-$config['sess_match_ip']		= FALSE;
-$config['sess_match_useragent']	= TRUE;
-$config['sess_time_to_update']	= 5 * MINUTE_IN_SECONDS;
+$config['sess_cookie_name'] = 'easychirp2';
+$config['sess_expiration'] = 12 * DAY_IN_SECONDS;
+$config['sess_expire_on_close'] = FALSE;
+$config['sess_encrypt_cookie'] = TRUE;
+$config['sess_use_database'] = TRUE;
+$config['sess_table_name'] = 'ci_sessions';
+$config['sess_match_ip'] = FALSE;
+$config['sess_match_useragent'] = TRUE;
+$config['sess_time_to_update'] = 5 * MINUTE_IN_SECONDS;
 
 /*
 |--------------------------------------------------------------------------
@@ -290,10 +290,10 @@ $config['sess_time_to_update']	= 5 * MINUTE_IN_SECONDS;
 | 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
 |
 */
-$config['cookie_prefix']	= "";
-$config['cookie_domain']	= "";
-$config['cookie_path']		= "/";
-$config['cookie_secure']	= FALSE;
+$config['cookie_prefix'] = "";
+$config['cookie_domain'] = "";
+$config['cookie_path']   = "/";
+$config['cookie_secure'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -318,10 +318,10 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_cookie_name' = The cookie name
 | 'csrf_expire' = The number in seconds the token should expire.
 */
-$config['csrf_protection'] = FALSE;
-$config['csrf_token_name'] = 'csrf_test_name';
+$config['csrf_protection']  = FALSE;
+$config['csrf_token_name']  = 'csrf_test_name';
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
-$config['csrf_expire'] = 7200;
+$config['csrf_expire']      = 7200;
 
 /*
 |--------------------------------------------------------------------------
@@ -383,6 +383,21 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+|--------------------------------------------------------------------------
+| URL Shortening Services
+|--------------------------------------------------------------------------
+|
+*/
+
+$config['bitly_service_url']  = 'https://api-ssl.bitly.com';
+$config['bitly_username']     = 'o_42rtvbhinu';
+$config['bitly_password']     = 'cure9292';
+$config['bitly_secret']       = 'R_49e8fdd586d1bbc9894e7f1c3b32296c';
+$config['bitly_api_key']      = 'R_e0641d85bf9c1d59f5c3a5458a4febdf';
+$config['bitly_access_token'] = '90c2df2a25979b55f14594580eb47d7e32ece1c7';
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -392,7 +407,7 @@ $config['proxy_ips'] = '';
 | Settings for connecting to the Twitter 1.1 API   
 |	Consumer key       9Y5dW1jWkxL6px9626yHEg
 |	Consumer secret    pXpxNT4MNQEelSCfoZ7u7m0Dc0MhNgvx2Lmksi1jnj0
-
+|
 |	Request token URL  https://api.twitter.com/oauth/request_token
 |	Authorize URL      https://api.twitter.com/oauth/authorize
 |	Access token URL   https://api.twitter.com/oauth/access_token
@@ -404,26 +419,26 @@ $config['proxy_ips'] = '';
 |
 */
 
-$config['bitly_service_url'] = 'https://api-ssl.bitly.com';
-$config['bitly_username'] = 'o_42rtvbhinu';
-$config['bitly_password'] = 'cure9292';
-$config['bitly_secret'] = 'R_49e8fdd586d1bbc9894e7f1c3b32296c';
-$config['bitly_api_key'] = 'R_e0641d85bf9c1d59f5c3a5458a4febdf';
-$config['bitly_access_token'] = '90c2df2a25979b55f14594580eb47d7e32ece1c7';
-
-
-$config['tw_api_url'] = 'https://api.twitter.com/1.1/';
-$config['tw_user_agent'] = 'easychirp/' . EASYCHIRP_VERSION; 
-$config['tw_access_key'] = '14150648-iifSAz4eoMxE3aoTbYGocDtwU6H4VB4IttXBJjtXk'; 
-$config['tw_access_secret'] = 'neIu61wM8aBzPzxotMVdGOQj1cjRLVtlqrGgnujoYBg'; 
-$config['tw_consumer_key'] = 'wBPjnt6cesUdQntLlAmA'; 
+$config['tw_api_url']         = 'https://api.twitter.com/1.1/';
+$config['tw_user_agent']      = 'easychirp/' . EASYCHIRP_VERSION; 
+$config['tw_access_key']      = '14150648-iifSAz4eoMxE3aoTbYGocDtwU6H4VB4IttXBJjtXk'; 
+$config['tw_access_secret']   = 'neIu61wM8aBzPzxotMVdGOQj1cjRLVtlqrGgnujoYBg'; 
+$config['tw_consumer_key']    = 'wBPjnt6cesUdQntLlAmA'; 
 $config['tw_consumer_secret'] = 'mnnpDloTxQH5hEvYrSjDmFVMA5X7sJfHwyoBKhCLCcQ'; 
 
 $config['tw_request_token_url'] = 'https://api.twitter.com/oauth/request_token'; 
-$config['tw_authorize_url'] = 'https://api.twitter.com/oauth/authorize'; 
-$config['tw_access_token_url'] = 'https://api.twitter.com/oauth/access_token'; 
-$config['tw_callback_url'] = 'oauth_callback'; 
+$config['tw_authorize_url']     = 'https://api.twitter.com/oauth/authorize'; 
+$config['tw_access_token_url']  = 'https://api.twitter.com/oauth/access_token'; 
+$config['tw_callback_url']      = 'oauth_callback'; 
 $config['tw_url_home_timeline'] = 'https://api.twitter.com/1.1/statuses/home_timeline.json';
+
+
+/*
+|--------------------------------------------------------------------------
+| Menus
+|--------------------------------------------------------------------------
+|
+*/
 
 $config['main_menu'] = array(
 	'/' => array(
@@ -566,4 +581,4 @@ $config['tweet_menu'] = array(
 
 
 /* End of file config.php */
-/* Location: ./application/config/config.php */
+/* Location: ./application/config/production/config.php */
