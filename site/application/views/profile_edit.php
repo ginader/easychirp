@@ -1,9 +1,9 @@
 <?php
-if (isset($action)) {
-	if ($action=="modified_text") {
+if (isset($_GET["action"])) {
+	if ($_GET["action"]=="modified_text") {
 		echo '<div class="msgBoxPos rounded">Your profile has been modified.</div>';
 	}
-	elseif ($action=="modified_avatar") {
+	elseif ($_GET["action"]=="modified_avatar") {
 		echo '<div class="msgBoxPos rounded">Your avatar has been modified.</div>';
 	}
 }
