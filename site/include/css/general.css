@@ -980,6 +980,8 @@ body.theme-inverse {
 	background-color: #666;
 }
 
+.theme-inverse #navMain li a:hover,
+.theme-inverse #navMain li a:focus,
 .theme-inverse #navTweet li a:hover,
 .theme-inverse #navTweet li a:focus {
 	color: #fff;
