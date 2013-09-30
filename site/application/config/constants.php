@@ -47,6 +47,7 @@ define('DISPLAY_DATETIME_FORMAT', 'M d h:i a'); // Jan 1, 3:50 pm
 |
 */
 define('TWEETS_PER_PAGE', 30);
+define('TWEETS_PER_PAGE_BRIEF', 5);
 
 /*
 |--------------------------------------------------------------------------

@@ -85,21 +85,7 @@
 </div>
 
 <div class="box1 rounded">
-	<h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
-	<p class="alert">[UNDER DEVELOPMENT, MOCKUP]</p>
-	
-	<blockquote>
-		<p>I would not B on Twitter 'tall, if not 4 Twitter app: @EasyChirp, makes Twitter simple even rock in space can understand. #SavePlanetPluto</p>
-		<div><cite><a rel="nofollow" href="http://twitter.com/plutosgems/status/323641393530695680">from Pluto Major Planet</a> (plutosgems)</cite></div>
-	</blockquote>
-	<blockquote>
-		<p>I would not B on Twitter 'tall, if not 4 Twitter app: @EasyChirp, makes Twitter simple even rock in space can understand. #SavePlanetPluto</p>
-		<div><cite><a rel="nofollow" href="http://twitter.com/plutosgems/status/323641393530695680">from Pluto Major Planet</a> (plutosgems)</cite></div>
-	</blockquote>
-	<blockquote>
-		<p>I would not B on Twitter 'tall, if not 4 Twitter app: @EasyChirp, makes Twitter simple even rock in space can understand. #SavePlanetPluto</p>
-		<div><cite><a rel="nofollow" href="http://twitter.com/plutosgems/status/323641393530695680">from Pluto Major Planet</a> (plutosgems)</cite></div>
-	</blockquote>
+<?php echo $favorites; ?>
 </div>
 
 <div class="box1 rounded">
