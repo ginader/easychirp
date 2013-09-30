@@ -37,6 +37,9 @@ if (empty($single)):
 				{
 					echo $reply_to;
 				}
+				else if ( isset($_GET["url_short"]) ) {
+					echo $_GET["url_short"];
+				}
 
 				?></textarea>
 				<?php if (isset($in_reply_to)): ?>
@@ -48,14 +51,15 @@ if (empty($single)):
 		</form>
 
 		<h3><?php echo $xliff_reader->get('write-tweet-h3'); ?></h3>
-		<form id="frmUrlShort" method="post" action="actions/doUrlShorten.php">
+		<form id="frmUrlShort" method="post" action="/url_shorten">
+			<input type="hidden" name="ajax" value="0" />
 			<label for="urlLong"><?php echo $xliff_reader->get('write-tweet-enter-url'); ?></label>
-			<input type="text" name="urlLong" id="urlLong" size="50" class="input1" placeholder="http://" />
+			<input type="text" name="url_long" id="urlLong" size="50" class="input1" placeholder="http://" required aria-required="true" />
 			<span id="urlService">
 				<span id="urlServiceLabel"><?php echo $xliff_reader->get('write-tweet-service'); ?></span>
-				<input type="radio" name="urlService" id="bitly" value="bitly" checked="checked" aria-describedby="urlServiceLabel" />
+				<input type="radio" name="urlService" id="bitly" value="bitly" aria-describedby="urlServiceLabel" />
 				<label for="bitly">bit.ly</label>
-				<input type="radio" name="urlService" id="webaim" value="webaim" aria-describedby="urlServiceLabel" />
+				<input type="radio" name="urlService" id="webaim" value="webaim" checked="checked" aria-describedby="urlServiceLabel" />
 				<label for="webaim">weba.im</label>
 			</span>
 			<button type="submit" id="btnShorten" class="btn3"><?php echo $xliff_reader->get('write-tweet-shorten'); ?></button>

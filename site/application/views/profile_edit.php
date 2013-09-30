@@ -1,9 +1,9 @@
 <?php
-if (isset($action)) {
-	if ($action=="modified_text") {
+if (isset($_GET["action"])) {
+	if ($_GET["action"]=="modified_text") {
 		echo '<div class="msgBoxPos rounded">Your profile has been modified.</div>';
 	}
-	elseif ($action=="modified_avatar") {
+	elseif ($_GET["action"]=="modified_avatar") {
 		echo '<div class="msgBoxPos rounded">Your avatar has been modified.</div>';
 	}
 }
@@ -23,9 +23,6 @@ if (isset($action)) {
 			<dt><label for="name"><?php echo $xliff_reader->get('profile-dt-name'); ?> <span class="smallText">(required)</span></label></dt>
 			<dd><input class="input1" type="text" id="name" name="name" maxlength="20" size="30" value="<?php echo $profile->name; ?>" /></dd>
 			
-			<?php /*<dt><label for="email"><?php echo $xliff_reader->get('edit-profile-email'); ?></label></dt>
-			<dd><input class="input1" type="text" id="email" name="email" maxlength="40" size="30" value="" /></dd> */ ?>
-				
 			<dt><label for="location"><?php echo $xliff_reader->get('profile-dt-location'); ?></label></dt>
 			<dd><input class="input1" type="text" id="location" name="location" maxlength="30" size="30" value="<?php echo $profile->location; ?>" /></dd>
 			
@@ -42,7 +39,7 @@ if (isset($action)) {
 </div>
 
 <div class="box1 rounded">
-	<h2><img src="<? echo $profile->profile_image_url; ?>" alt="" /> <?php echo $xliff_reader->get('edit-profile-avatar-h2'); ?></h2>
+	<h2><img src="<?php echo $profile->profile_image_url; ?>" alt="" /> <?php echo $xliff_reader->get('edit-profile-avatar-h2'); ?></h2>
 	<p><?php echo $xliff_reader->get('edit-profile-avatar-p'); ?></p>
 	<form id="frmSettingsAvatar" action="/profile_avatar_action" method="post" enctype="multipart/form-data">
 		<div>
