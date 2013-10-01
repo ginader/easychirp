@@ -51,10 +51,10 @@ $active_record = TRUE;
 /*
 	Change the fields to match the production values
 */
-$db['default']['hostname'] = 'HOSTNAME GOES HERE';
-$db['default']['username'] = 'USERNAME GOES HERE';
-$db['default']['password'] = 'PASSWORD GOES HERE';
-$db['default']['database'] = 'DATABASE GOES HERE';
+$db['default']['hostname'] = 'mysql.webaxe.org';
+$db['default']['username'] = 'easychirp';
+$db['default']['password'] = 'Cure311';
+$db['default']['database'] = 'easychirp';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
