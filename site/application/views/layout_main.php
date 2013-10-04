@@ -92,7 +92,7 @@
 	<?php foreach($theme_menu AS $theme_code => $theme_name): ?>
 		<?php echo ($items) ? ' | ' : ''; ?>
 		<?php if ($active_theme === $theme_code): ?>
-			<?php echo $theme_name; ?>(current)
+			<?php echo $theme_name; ?> (current)
 		<?php else: ?>
 			<?php $link = anchor('/switch_theme/' . $theme_code, $theme_name); ?>
 			<?php echo $link; ?>
