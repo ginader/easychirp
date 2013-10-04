@@ -83,16 +83,21 @@
 	<?php $link = '';   ?>
 	<?php foreach($lang_menu AS $code => $name): ?>
 		<?php echo ($link) ? ' | ' : ''; ?>
-		<?php $link = anchor('/switch_lang/' . $code, $name); ?>
-		<?php echo $link; ?>
+			<?php $link = anchor('/switch_lang/' . $code, $name); ?>
+			<?php echo $link; ?>
 	<?php endforeach; ?>
 	</p>
 	<p>Select a Theme: 
-	<?php $link = ''; ?>
+	<?php $items = 0; ?>
 	<?php foreach($theme_menu AS $theme_code => $theme_name): ?>
-		<?php echo ($link) ? ' | ' : ''; ?>
-		<?php $link = anchor('/switch_theme/' . $theme_code, $theme_name); ?>
-		<?php echo $link; ?>
+		<?php echo ($items) ? ' | ' : ''; ?>
+		<?php if ($active_theme === $theme_code): ?>
+			<?php echo $theme_name; ?>(current)
+		<?php else: ?>
+			<?php $link = anchor('/switch_theme/' . $theme_code, $theme_name); ?>
+			<?php echo $link; ?>
+		<?php endif; ?>
+		<?php $items++; ?>
 	<?php endforeach; ?>
 	</p>
 	<p>&copy; <?php echo $xliff_reader->get('footer-copyright'); ?> 2009-<?php echo date('Y'); ?> <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
