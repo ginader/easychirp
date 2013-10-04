@@ -1152,38 +1152,33 @@
       </trans-unit>
 
       <trans-unit id="tips-keys-2" datatype="html">
-        <source>My Tweets</source>
-        <target>تغريداتي</target>
-      </trans-unit>
-
-      <trans-unit id="tips-keys-3" datatype="html">
         <source>Mentions</source>
         <target>إشارات</target>
       </trans-unit>
 
-      <trans-unit id="tips-keys-4" datatype="html">
+      <trans-unit id="tips-keys-3" datatype="html">
         <source>Favorites</source>
         <target>المفضلة</target>
       </trans-unit>
 
+      <trans-unit id="tips-keys-4" datatype="html">
+        <source>Retweets</source>
+        <target>إعادة التغريد</target>
+      </trans-unit>
+
       <trans-unit id="tips-keys-5" datatype="html">
-        <source>Direct Message (DM)</source>
-        <target>الرسائل المباشرة</target>
-      </trans-unit>
-
-      <trans-unit id="tips-keys-6" datatype="html">
-        <source>Search</source>
-        <target>بحث</target>
-      </trans-unit>
-
-      <trans-unit id="tips-keys-7" datatype="html">
         <source>Lists</source>
         <target>قوائم</target>
       </trans-unit>
 
-      <trans-unit id="tips-keys-8" datatype="html">
-        <source>Trends</source>
-        <target>متادول</target>
+      <trans-unit id="tips-keys-6" datatype="html">
+        <source>Direct Message (DM)</source>
+        <target>الرسائل المباشرة</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-7" datatype="html">
+        <source>Tools</source>
+        <target>الأدوات</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-apps" datatype="html">

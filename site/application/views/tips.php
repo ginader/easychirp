@@ -75,7 +75,6 @@
 		<li>5 <?php echo $xliff_reader->get('tips-keys-5'); ?></li>
 		<li>6 <?php echo $xliff_reader->get('tips-keys-6'); ?></li>
 		<li>7 <?php echo $xliff_reader->get('tips-keys-7'); ?></li>
-		<li>8 <?php echo $xliff_reader->get('tips-keys-8'); ?></li>
 	</ul>
 </div>
 
