@@ -20,7 +20,13 @@ define('EASYCHIRP_VERSION', '1.9.0502'); // last 4 digits are MMDD
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
+if ($_SERVER['HTTP_HOST'] == 'www.easychirp.org' || $_SERVER['HTTP_HOST'] == 'www.easychirp.com') {
+	define('ENVIRONMENT', 'production');
+}
+else {
 	define('ENVIRONMENT', 'development');
+}
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
