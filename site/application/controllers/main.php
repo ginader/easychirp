@@ -682,7 +682,7 @@ class Main extends EC_Controller {
 
 
 
-		$ec_params['count'] = TWEETS_PER_PAGE_BRIEF;
+		$ec_params['count'] = TWEETS_PER_PAGE;
 		$ec_tweets = $this->twitter_lib->get('statuses/home_timeline', $ec_params);
 
 		if ( is_object($ec_tweets) && $ec_tweets->errors)
@@ -1227,6 +1227,7 @@ class Main extends EC_Controller {
 		}
 	}
 
+
 	/**
 	 * Manages the profile page - /profile
 	 *
@@ -1252,6 +1253,11 @@ class Main extends EC_Controller {
 
 		$profile = $this->twitter_lib->get('users/show', $request_param );
 		$this->_data['profile'] = $profile;
+
+		$this->_data['follower_count']  = $profile->followers_count;
+		$this->_data['following_count'] = $profile->friends_count;
+		$this->_data['tweet_count']     = $profile->statuses_count;
+
 
 		$request_param['count'] = 1; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
