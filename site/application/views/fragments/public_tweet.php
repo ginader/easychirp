@@ -7,6 +7,8 @@
  * @author firstname lastname <user@host.com>
  */ 
 ?>
+
+<?php if($tweets): ?>
 <h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
 <?php 
 	foreach ($tweets AS $tweet): 
@@ -24,5 +26,6 @@
 <?php 
 	endforeach;	
 ?>
+<?php endif; ?>
 
 

@@ -32,6 +32,7 @@
 	</div>
 </div>
 
+<?php if($easychirp_statuses): ?>
 <div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('home-h2-latest-tweets'); ?></h2>
 	<?php if (isset($error)): ?>
@@ -56,7 +57,7 @@
 	<?php endif; ?>
 	<p><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
 </div>
-
+<?php endif; ?>
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-share'); ?></h2>
 	<div id="shareIcons">
@@ -84,9 +85,11 @@
 	<p><?php echo $xliff_reader->get('home-articles-more'); ?></p>
 </div>
 
-<div class="box1 rounded">
-<?php echo $favorites; ?>
-</div>
+<?php if ($favorites): ?>
+	<div class="box1 rounded">
+		<?php echo $favorites; ?>
+	</div>
+<?php endif; ?>
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-features'); ?></h2>
@@ -112,17 +115,5 @@
 	<p><?php echo $xliff_reader->get('home-awards-more'); ?></p>
 </div>
 
-<div class="box1 rounded">
-	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
-
-	<h3>Known Issues</h3>
-	<p>TBD</p>
-
-	<h3>Current Tasks</h3>
-	<p>TBD</p>
-
-	<h3>Wish List</h3>
-	<p>TBD</p>
-</div>
 
 
