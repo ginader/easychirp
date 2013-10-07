@@ -660,8 +660,12 @@ class Main extends EC_Controller {
 
 		$params[] = $this->config->item('tw_consumer_key');
 		$params[] = $this->config->item('tw_consumer_secret');
-		$params[] = $this->session->userdata('user_oauth_token');
-		$params[] = $this->session->userdata('user_oauth_token_secret');
+		if ($this->session->userdata('logged_in'))
+		{
+			// do something;
+			$params[] = $this->session->userdata('user_oauth_token');
+			$params[] = $this->session->userdata('user_oauth_token_secret');
+		}
 
 
 		$this->load->library('twitter_lib');
@@ -670,26 +674,33 @@ class Main extends EC_Controller {
 		$ec_params = array();
 		$ec_params['screen_name'] = 'easychirp';
 		$ec_params['count'] = TWEETS_PER_PAGE_BRIEF;
-		
-		$favorites = $this->twitter_lib->get('favorites/list', $ec_params );
-		$this->_data['favorites'] = $this->load->view('fragments/public_tweet',
-			array(
-			'tweets' => $favorites,
-			'utc_offset' => $this->session->userdata('utc_offset'),
-			'time_zone' => $this->session->userdata('time_zone'),
-			'xliff_reader' => $this->_data['xliff_reader']
-			), TRUE);
 
+		$favorites = array();
+		$this->_data['favorites'] = $favorites;
 
-
-		$ec_params['count'] = TWEETS_PER_PAGE;
-		$ec_tweets = $this->twitter_lib->get('statuses/home_timeline', $ec_params);
-
-		if ( is_object($ec_tweets) && $ec_tweets->errors)
+		if ($this->session->userdata('logged_in'))
 		{
-			$this->_data['error'] = $ec_tweets->errors[0]->message;
+			$favorites = $this->twitter_lib->get('favorites/list', $ec_params );
+			$this->_data['favorites'] = $this->load->view('fragments/public_tweet',
+				array(
+				'tweets' => $favorites,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
+				'xliff_reader' => $this->_data['xliff_reader']
+				), TRUE);
 		}
 
+
+		$ec_tweets = array();
+		if ($this->session->userdata('logged_in'))
+		{
+			$ec_params['count'] = TWEETS_PER_PAGE;
+			$ec_tweets = $this->twitter_lib->get('statuses/home_timeline', $ec_params);
+			if ( is_object($ec_tweets) && $ec_tweets->errors)
+			{
+				$this->_data['error'] = $ec_tweets->errors[0]->message;
+			}
+		}
 
 		$this->_data['easychirp_statuses'] = $ec_tweets;
 
