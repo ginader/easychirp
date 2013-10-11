@@ -58,7 +58,8 @@
 	<p><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
 </div>
 <?php endif; ?>
-<div class="box1 rounded">
+
+<div class="box1 rounded" <?php if(!$easychirp_statuses) { echo 'style="margin-top:0;"'; } ?>>
 	<h2><?php echo $xliff_reader->get('home-h2-share'); ?></h2>
 	<div id="shareIcons">
 		<a href="http://twitter.com/home?status=Try+this+user-friendly+%23Twitter+web+app!+http%3a%2f%2fwww.EasyChirp.com+%40EasyChirp+%23a11y+%23app"><img src="/images/share/twitter.png" width="50" height="50" alt="Twitter" /></a> &nbsp;
