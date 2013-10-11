@@ -667,7 +667,6 @@ class Main extends EC_Controller {
 			$params[] = $this->session->userdata('user_oauth_token_secret');
 		}
 
-
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
@@ -690,12 +689,12 @@ class Main extends EC_Controller {
 				), TRUE);
 		}
 
-
 		$ec_tweets = array();
 		if ($this->session->userdata('logged_in'))
 		{
 			$ec_params['count'] = TWEETS_PER_PAGE;
-			$ec_tweets = $this->twitter_lib->get('statuses/home_timeline', $ec_params);
+			$ec_params['screen_name'] = "easychirp";
+			$ec_tweets = $this->twitter_lib->get('statuses/user_timeline', $ec_params);
 			if ( is_object($ec_tweets) && $ec_tweets->errors)
 			{
 				$this->_data['error'] = $ec_tweets->errors[0]->message;
