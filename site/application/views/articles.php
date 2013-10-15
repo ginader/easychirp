@@ -46,8 +46,13 @@
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('articles-h2-user'); ?></h2>
-	<!-- user feedback timeline -->
-	<?php echo $tweets; ?>
+
+	<?php 
+	if ($favorites) {
+		echo $favorites;
+	}
+	?>
+
 	<p>Tweets about Easy Chirp are archived via <a href="https://twitter.com/EasyChirp/favorites" rel="external" target="_blank">Easy Chirp's Twitter favorites</a>.</p>
 </div>
 

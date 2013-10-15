@@ -88,6 +88,7 @@
 
 <?php if ($favorites): ?>
 	<div class="box1 rounded">
+		<h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
 		<?php echo $favorites; ?>
 	</div>
 <?php endif; ?>

@@ -105,28 +105,24 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();
-		$request_param['screen_name'] = 'easychirp';
-		$request_param['count'] = 25;
-	
+		$ec_params = array();
+		$ec_params['screen_name'] = 'easychirp';
+		$ec_params['count'] = 40; //TWEETS_PER_PAGE_BRIEF;
+
+		$favorites = array();
+		$this->_data['favorites'] = $favorites;
+
 		if ($this->session->userdata('logged_in'))
 		{
-			$tweets = $this->twitter_lib->get('favorites/list', $request_param );
+			$favorites = $this->twitter_lib->get('favorites/list', $ec_params );
+			$this->_data['favorites'] = $this->load->view('fragments/public_tweet',
+				array(
+				'tweets' => $favorites,
+				'utc_offset' => $this->session->userdata('utc_offset'),
+				'time_zone' => $this->session->userdata('time_zone'),
+				'xliff_reader' => $this->_data['xliff_reader']
+				), TRUE);
 		}
-		else
-		{
-			$tweets = array();
-		}
-
-
-		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array(
-			'tweets' => $tweets,
-			'utc_offset' => $this->session->userdata('utc_offset'),
-			'time_zone' => $this->session->userdata('time_zone'),
-			'xliff_reader' => $this->_data['xliff_reader']
-			), TRUE);
-
 
 		$this->layout->set_title( $this->xliff_reader->get('articles-h1') );
 		$this->layout->set_description('Articles, user feedback, books, wikis, and awards listed here.');

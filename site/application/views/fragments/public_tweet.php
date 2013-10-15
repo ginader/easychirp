@@ -9,7 +9,6 @@
 ?>
 
 <?php if($tweets): ?>
-<h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
 <?php 
 	foreach ($tweets AS $tweet): 
 		$tweet_path = array('status', $tweet->id);	
@@ -27,5 +26,4 @@
 	endforeach;	
 ?>
 <?php endif; ?>
-
 
