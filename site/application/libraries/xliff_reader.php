@@ -32,7 +32,6 @@ class Xliff_reader
 	*/
 	public function lang_to_file($lang)
 	{
-		$lang = strtolower( $lang );
 		return APPPATH . 'language/' . $lang . '.xliff';
 	}
 
@@ -42,6 +41,7 @@ class Xliff_reader
 	public function load( $lang )
 	{
 		$file = $this->lang_to_file( $lang );
+		log_message('info', 'xliff load file=' . $file);
 		if ( file_exists( $file ) ){
 			
 			$this->doc = simplexml_load_file( $file );	
@@ -53,7 +53,7 @@ class Xliff_reader
 			{
 				$this->source_lang = 'en-US';
 			}
-			
+
 			if ( empty($this->target_lang) )
 			{
 				$this->target_lang = $lang;

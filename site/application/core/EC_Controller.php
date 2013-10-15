@@ -30,13 +30,23 @@ class EC_Controller extends CI_Controller {
 			$active_theme = $this->config->item('active_theme');
 		}
 
-		$lang_code = $this->session->userdata('lang_code');
+		if ( ! $this->session->userdata('lang_code'))
+		{
+			$lang_code = $this->config->item('site_language');
+			$this->session->set_userdata('lang_code', $lang_code);
+		}
+		else
+		{
+			$lang_code = $this->session->userdata('lang_code');
+		}
+
 		if ( ! $lang_code)
 		{
 			$lang_code = $this->config->item('site_language');
 		}
 
-		$user_languages = $this->get_user_languages();
+
+		$user_languages = ( function_exists('getallheaders')) ?  $this->get_user_languages() : array('en-US');
 		foreach ($user_languages AS $lang)
 		{
 			if ( isset(  $supported[ $lang ]  ) )
@@ -46,6 +56,7 @@ class EC_Controller extends CI_Controller {
 			}
 		}
 
+		log_message('info', 'Before xliff->load lang_code=' . $lang_code);
 		$this->xliff_reader->load( $lang_code );
 
 		$this->layout->set_site_name('EasyChirp');
