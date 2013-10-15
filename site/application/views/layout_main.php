@@ -79,6 +79,8 @@
 
 <footer role="contentinfo">
 	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
+	
+	<?php /* ?>
 	<p><?php echo $xliff_reader->get('footer-select-language'); ?>:
 	<?php $link = '';   ?>
 	<?php foreach($lang_menu AS $code => $name): ?>
@@ -87,6 +89,8 @@
 			<?php echo $link; ?>
 	<?php endforeach; ?>
 	</p>
+	<?php */ ?>
+
 	<p>Select a Theme: 
 	<?php $items = 0; ?>
 	<?php foreach($theme_menu AS $theme_code => $theme_name): ?>
