@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url'] = 'http://easychirp.com';
+$config['base_url'] = 'http://www.easychirp.org/';
 
 /*
 |--------------------------------------------------------------------------
@@ -421,10 +421,10 @@ $config['bitly_access_token'] = '90c2df2a25979b55f14594580eb47d7e32ece1c7';
 
 $config['tw_api_url']         = 'https://api.twitter.com/1.1/';
 $config['tw_user_agent']      = 'easychirp/' . EASYCHIRP_VERSION; 
-$config['tw_access_key']      = '14150648-iifSAz4eoMxE3aoTbYGocDtwU6H4VB4IttXBJjtXk'; 
-$config['tw_access_secret']   = 'neIu61wM8aBzPzxotMVdGOQj1cjRLVtlqrGgnujoYBg'; 
-$config['tw_consumer_key']    = 'wBPjnt6cesUdQntLlAmA'; 
-$config['tw_consumer_secret'] = 'mnnpDloTxQH5hEvYrSjDmFVMA5X7sJfHwyoBKhCLCcQ'; 
+$config['tw_access_key']      = '14150648-sxt1aIAVNwS0K54uaUaLpSS29U3KV5hViQd1I7w'; 
+$config['tw_access_secret']   = 'WrYjGiC48LpQ6vBxs17D5UgckYBuafPvv2rjAV9Cg'; 
+$config['tw_consumer_key']    = 'FQXaXk4wWxEQEg0x5pcw'; 
+$config['tw_consumer_secret'] = 'PVhfL3jFPoZBl1TVUHWGZ3Kx9Fpuoyx66akhyxTbpnc'; 
 
 $config['tw_request_token_url'] = 'https://api.twitter.com/oauth/request_token'; 
 $config['tw_authorize_url']     = 'https://api.twitter.com/oauth/authorize'; 
