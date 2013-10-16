@@ -66,6 +66,9 @@
 	</div>	
 </main>
 
+<?php
+if ($this->session->userdata('logged_in')) {
+?>
 <!-- modal windows -->
 <div id="go_to_user" class="modal rounded" role="dialog" aria-label="<?php echo $xliff_reader->get('nav-goto-user'); ?>" tabindex="-1">
 	<?php require('fragments/go_to_user_form.php'); ?>
@@ -76,6 +79,9 @@
 	<a href="#" class="close"><span aria-hidden="true" class="icon-close1"></span><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
 </div>
 <div id="mask"></div>
+<?php
+}
+?>
 
 <footer role="contentinfo">
 	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
