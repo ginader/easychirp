@@ -86,12 +86,17 @@
 	<p><?php echo $xliff_reader->get('home-articles-more'); ?></p>
 </div>
 
-<?php if ($favorites): ?>
-	<div class="box1 rounded">
-		<h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
-		<?php echo $favorites; ?>
-	</div>
-<?php endif; ?>
+<div class="box1 rounded">
+	<h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
+
+	<?php 
+	if ($favorites) {
+		echo $favorites;
+	}
+	?>
+
+	<p>Tweets about Easy Chirp are archived via <a href="https://twitter.com/EasyChirp/favorites" rel="external" target="_blank">Easy Chirp's Twitter favorites</a>.</p>
+</div>
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-features'); ?></h2>
