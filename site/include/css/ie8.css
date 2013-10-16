@@ -303,6 +303,10 @@ a.btnOptionsUser,
 .btnOptions a {
 	padding: .5em .6em .1em;	
 }
+.content .btnOptions ul li {
+	background-image: none;
+	padding-left: 0;
+}
 
 .modal .close {
 	font-size: 2em;
