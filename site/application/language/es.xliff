@@ -1428,8 +1428,8 @@
       </trans-unit>
 
       <trans-unit id="features-main-browsers" datatype="html">
-        <source>Works on all major browsers: IE7, IE8, IE9, Firefox, Safari, Opera, and Chrome.</source>
-        <target>Funciona en los navegadores mas usuados: IE7, IE8, IE9, Firefox, Safari, Opera y Chrome.</target>
+        <source>Works on all major browsers: IE8+, Firefox, Safari, Opera, and Chrome.</source>
+        <target>Funciona en los navegadores mas usuados: IE8+, Firefox, Safari, Opera y Chrome.</target>
       </trans-unit>
 
       <!-- ABOUT -->
