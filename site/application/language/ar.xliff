@@ -1604,8 +1604,8 @@
       </trans-unit>
 
       <trans-unit id="about-authors-p1" datatype="html">
-        <source>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis, &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;, and &lt;a href=&quot;http://ginader.com/&quot;&gt;Dirk Ginader&lt;/a&gt;.</source>
-        <target>دنيس ليمبري هو المالك والمطور الأصلي لـ التغريد السهل / تويتر للمكفوفين. طُور  التغريد السهل 2 بواسطة دينيس و  أندرو وودز و وديرك جيندر.</target>
+        <source>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis and &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;.</source>
+        <target>دنيس ليمبري هو المالك والمطور الأصلي لـ التغريد السهل / من السهل غرد 2 تم تطويرها من قبل دينيس وأندرو وودز.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-more" datatype="html">
