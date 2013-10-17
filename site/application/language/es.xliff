@@ -1286,7 +1286,7 @@
       </trans-unit>
 
       <trans-unit id="features-a11y-contrast" datatype="html">
-        <source>Large default text size and high high color contrast.</source>
+        <source>Large default text size and high color contrast.</source>
         <target>Tama&#241;o de texto grande y alto contraste de color.</target>
       </trans-unit>
 
