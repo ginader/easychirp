@@ -18,6 +18,7 @@ $(".btnOptions > h3 > a").click(function(e) {
 	if (isDisplayed===false) {
 		obj.addClass('displayOptions');
 		$(this).attr("aria-expanded",true);
+		$(this).parent().next().find("li:first a").focus();
 	}
 });
 // Add role of button
