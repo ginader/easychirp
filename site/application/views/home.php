@@ -32,32 +32,32 @@
 	</div>
 </div>
 
-<?php if($easychirp_statuses): ?>
 <div class="box1 rounded" style="margin-top:0;">
-	<h2><?php echo $xliff_reader->get('home-h2-latest-tweets'); ?></h2>
-	<?php if (isset($error)): ?>
-		<p class="error">
-		<?php echo $error; ?>
-		</p>
-	<?php else: ?>
-		<ul id="homeECtweets">
-		<?php $count = 0; ?>
-		<?php foreach($easychirp_statuses AS $tweet): ?>
-			<?php $count++; ?>
-			<?php if ($count > 7){ break; }  ?>
-		<?php /*?><?php $tweet_url = 'http://twitter.com/' . $tweet->user->screen_name 
-			. '/status/' . $tweet->id_str; ?><?php */?>
-			<li>
-				<?php echo $tweet->text; ?><?php /*?><br />
-				<a href="<?php echo $tweet_url; ?>"><?php echo $tweet->user->name; ?></a> 
-				(<?php echo $tweet->user->screen_name; ?>)<?php */?>
-			</li>
-		<?php endforeach; ?>
-		</ul>
+	<?php if($easychirp_statuses): ?>
+		<?php if (isset($error)): ?>
+			<p class="error">
+			<?php echo $error; ?>
+			</p>
+		<?php else: ?>
+			<h2><?php echo $xliff_reader->get('home-h2-latest-tweets'); ?></h2>
+			<ul id="homeECtweets">
+			<?php $count = 0; ?>
+			<?php foreach($easychirp_statuses AS $tweet): ?>
+				<?php $count++; ?>
+				<?php if ($count > 7){ break; }  ?>
+			<?php /*?><?php $tweet_url = 'http://twitter.com/' . $tweet->user->screen_name 
+				. '/status/' . $tweet->id_str; ?><?php */?>
+				<li>
+					<?php echo $tweet->text; ?><?php /*?><br />
+					<a href="<?php echo $tweet_url; ?>"><?php echo $tweet->user->name; ?></a> 
+					(<?php echo $tweet->user->screen_name; ?>)<?php */?>
+				</li>
+			<?php endforeach; ?>
+			</ul>
+		<?php endif; ?>
 	<?php endif; ?>
-	<p><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
+	<p<?php if (!$easychirp_statuses) echo ' style="margin: .5em 0 0;"' ?>><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
 </div>
-<?php endif; ?>
 
 <div class="box1 rounded" <?php if(!$easychirp_statuses) { echo 'style="margin-top:0;"'; } ?>>
 	<h2><?php echo $xliff_reader->get('home-h2-share'); ?></h2>
