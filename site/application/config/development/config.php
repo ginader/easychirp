@@ -90,11 +90,9 @@ $config['supported_langs'] = array(
 */
 $config['active_theme'] = 'theme-default';
 $config['supported_themes'] = array(
-	'theme-default' => 'Standard Theme',
-	'theme-inverse' => 'High Contrast',
+	'theme-default' => 'Light Theme',
+	'theme-inverse' => 'Dark Theme',
 );
-
-
 
 /*
 |--------------------------------------------------------------------------
