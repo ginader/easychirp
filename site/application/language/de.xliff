@@ -36,6 +36,28 @@
         <target>gelistet Zählung</target>
       </trans-unit>
 
+      <!-- SELECT THEME -->
+
+      <trans-unit id="gbl-theme-select" datatype="html">
+        <source>Select a Theme</source>
+        <target>Wählen Sie ein Thema</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-light" datatype="html">
+        <source>Light Theme</source>
+        <target>Licht Theme</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-dark" datatype="html">
+        <source>Dark Theme</source>
+        <target>Dunkel Theme</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-current" datatype="html">
+        <source>current</source>
+        <target>aktuell</target>
+      </trans-unit>
+
       <!-- ALERTS/MESSAGES -->
 
       <trans-unit id="msg-search-saved" datatype="html">
