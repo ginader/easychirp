@@ -938,8 +938,8 @@
       </trans-unit>
 
       <trans-unit id="profile-h2-latest" datatype="html">
-        <source>Latest Tweet</source>
-        <target>Latest Tweet</target>
+        <source>Latest Tweets</source>
+        <target>Latest Tweets</target>
       </trans-unit>
 
       <!-- EDIT PROFILE -->

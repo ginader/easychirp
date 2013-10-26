@@ -2366,7 +2366,7 @@ class Main extends EC_Controller {
 
 		$this->_data['user'] = $this->twitter_lib->get('users/show', $request_param);
 
-		$request_param['count'] = 1; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
+		$request_param['count'] = 3; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet', 

@@ -938,7 +938,7 @@
       </trans-unit>
 
       <trans-unit id="profile-h2-latest" datatype="html">
-        <source>Latest Tweet</source>
+        <source>Latest Tweets</source>
         <target>Neueste Tweets</target>
       </trans-unit>
 
