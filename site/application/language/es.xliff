@@ -36,6 +36,28 @@
         <target>Recuento listado</target>
       </trans-unit>
 
+      <!-- SELECT THEME -->
+
+      <trans-unit id="gbl-theme-select" datatype="html">
+        <source>Select a Theme</source>
+        <target>Seleccione un Tema</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-light" datatype="html">
+        <source>Light Theme</source>
+        <target>Tema Luz</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-dark" datatype="html">
+        <source>Dark Theme</source>
+        <target>Tema Oscuro</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-current" datatype="html">
+        <source>current</source>
+        <target>presente</target>
+      </trans-unit>
+
       <!-- ALERTS/MESSAGES -->
 
       <trans-unit id="msg-search-saved" datatype="html">
@@ -939,8 +961,8 @@
       </trans-unit>
 
       <trans-unit id="profile-h2-latest" datatype="html">
-        <source>Latest Tweet</source>
-        <target>Ultimos Tweet</target>
+        <source>Latest Tweets</source>
+        <target>Ultimos Tweets</target>
       </trans-unit>
 
       <!-- EDIT PROFILE -->

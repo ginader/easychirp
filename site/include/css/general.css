@@ -1077,16 +1077,37 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 640px) {
+	body {
+		font-size: .95em;
+	}
 	#skip,
 	#hdUserStats {
 		display: none;
 	}
 	#welcome {
-		margin-top: -130px;
+		margin-top: -85px;
 	}
 	header img {
 		width: 210px;
 		height: 76px;
+	}
+	h1 {
+		font-size: 1.6rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+		padding: .75rem 0 .4rem;
+	}
+	h3 {
+		font-size: 1.1rem;
+		padding: .75rem 0 .4rem;
+	}
+	#enterTweet {
+		margin: .85rem 0;
+		padding: 0.4rem 1rem;
+	}
+	#enterTweet h2 {
+		font-size: 1.05rem;
 	}
 	.tweet q {
 		font-size: 1.15rem;
@@ -1098,12 +1119,17 @@ body.theme-inverse {
 	}
 	#navTweet li a {
 		margin-right: .25rem;
+		padding: 0.4rem 0.5rem 0.2rem;
+	}
+	a.btnOptionsTweet,
+	a.btnOptionsUser,
+	.btnOptions a {
+		font-size: 1.2em;
 	}
 	button,
 	button.btnPost {
 		padding: .2rem;
 	}
-
 	#profile dt,
 	.twList dt {
 		width: 35%;

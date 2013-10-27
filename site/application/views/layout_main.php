@@ -97,7 +97,7 @@ if ($this->session->userdata('logged_in')) {
 	</p>
 	<?php */ ?>
 
-	<p>Select a Theme: 
+	<p><?php echo $xliff_reader->get('gbl-theme-select'); ?>: 
 	<?php $items = 0; ?>
 	<?php foreach($theme_menu AS $theme_code => $theme_name): ?>
 		<?php echo ($items) ? ' | ' : ''; ?>
