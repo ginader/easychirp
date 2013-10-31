@@ -2140,6 +2140,14 @@ class Main extends EC_Controller {
 			$tweet_form_params['reply_to'] = $reply_to;
 		}
 
+		if (isset($_GET["url_short"]))
+		{
+			if ($_GET["url_short"] != "")
+			{
+				$tweet_form_params['expand'] = 1;
+			}
+		}
+
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet', 
 			$tweet_form_params, TRUE);
 
