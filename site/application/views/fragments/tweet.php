@@ -135,11 +135,11 @@ foreach($tweets AS $tweet):
 			<li><?php 
 				if ($tweet->retweeted === false) 
 				{ 
-					echo '<a href="/retweet_create/' . $tweet->id . '/false" title="' . $xliff_reader->get('gbl-tweet-make-rt') . '"><span aria-hidden="true" class="icon-twitter2"></span><span class="hide">' . $xliff_reader->get('gbl-tweet-make-rt') . '</span></a>';
+					echo '<a href="/retweet_create/' . $tweet->id . '/false" title="' . $xliff_reader->get('gbl-tweet-make-rt') . '"><span aria-hidden="true" class="icon-reload1"></span><span class="hide">' . $xliff_reader->get('gbl-tweet-make-rt') . '</span></a>';
 				}
 				else 
 				{
-					echo '<a class="retweeted" title="retweeted"><span aria-hidden="true" class="icon-twitter2"></span><span class="hide">retweeted</span></a>';
+					echo '<a class="retweeted" title="retweeted"><span aria-hidden="true" class="icon-reload1"></span><span class="hide">retweeted</span></a>';
 				}
 			?></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span aria-hidden="true" class="icon-quote"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
