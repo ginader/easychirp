@@ -63,6 +63,10 @@
 	<h2><?php echo $xliff_reader->get('articles-h2-blogs'); ?></h2>
 	<h3><?php echo $xliff_reader->get('articles-h3-highlights'); ?></h3>
 	<dl>
+	<dt><a href="http://accessibleinsights.info/blog/2013/10/29/easy-chirp-returns-with-new-sporty-features-and-more-power-under-the-hood/">Easy Chirp returns with new sporty features and more power under the hood</a></dt>
+		<dd>Accessible Insights Blog </dd>
+		<dd>2013 Oct 29</dd>
+	</dt>
 	<dt><a href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a></dt>
 		<dd>Nomensa, L&eacute;onie Watson</dd>
 		<dd>2010 Feb 10</dd>
@@ -78,7 +82,11 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
-	<dt><a href="http://www.webable.tv/Events/m_enabling_summit_130606.aspx?VID=/webable/130604_SMD_EasyChirp.flv&Cap=/WebAble/130604_SMD_EasyChirp.xml#anchor">Social Media and Disability Pilot Program Featuring Easy Chirp</a> (video)</dt>
+	<dt><a href="http://poslepu.blogspot.cz/2013/10/easy-chirp-pristupna-alternativa.html">Easy Chirp: web-accessible alternative interface for Twitter [in Czech]</a></dt>
+		<dd>Blindly, The blind users - web accessibility, assistive technology for disabled users</dd>
+		<dd>2013 Oct 31</dd>
+	</dt>
+	<dt><a href="http://www.webable.tv/Events/m_enabling_summit_130606.aspx?VID=/webable/130604_SMD_EasyChirp.flv&amp;Cap=/WebAble/130604_SMD_EasyChirp.xml#anchor">Social Media and Disability Pilot Program Featuring Easy Chirp</a> (video)</dt>
 		<dd>WebAble.tv</dd>
 		<dd>2013 Jun 05</dd>
 	<dt><a href="http://manuel.a12x.net/2013/04/21/easy-chirp-web-accesible-para-manejo-de-twitter-multiplataforma/">EASY CHIRP: Web accesible para manejo de Twitter multiplataforma</a></dt>
