@@ -126,6 +126,7 @@
 	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
 	<ul>
 		<li>Add "Get Older Tweets" to rest of pages; only on main timeline.</li>
+		<li>Timestamps on tweets may be incorrect.</li>
 		<li>Make main menu more keyboard/touch accessible.</li>
 		<li>Add language selection; Spanish probably first.</li>
 	</ul>
