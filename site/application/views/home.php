@@ -79,9 +79,9 @@
 	<h2><?php echo $xliff_reader->get('home-h2-articles'); ?></h2>
 	<p><?php echo $xliff_reader->get('home-articles-highlights'); ?></p>
 	<ul>
-		<li><a rel="nofollow" href="http://preparednessforall.wordpress.com/2012/06/04/report-sociability-social-media-for-people-with-a-disability/">Report: Sociability, Social Media for People with a Disability</a> (Preparedness For All)</li>
-		<li><a rel="nofollow" href="http://www.lessfussdesign.com/blog/2009/07/accessible-twitter/">Accessible Twitter: how it should have been done to start with</a> (Less Fuss Design)</li>
-		<li><a rel="nofollow" href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a> (Nomensa)</li>
+		<li><a rel="nofollow" href="http://accessibleinsights.info/blog/2013/10/29/easy-chirp-returns-with-new-sporty-features-and-more-power-under-the-hood/">Easy Chirp returns with new sporty features and more power under the hood</a> (Accessible Insights Blog)</li>
+		<li><a rel="nofollow" href="http://poslepu.blogspot.cz/2013/10/easy-chirp-pristupna-alternativa.html">Easy Chirp: web-accessible alternative interface for Twitter [in Czech]</a> (Blindly)</li>
+		<li><a rel="nofollow" href="http://www.webaxe.org/easy-chirp-2-soft-beta-launched/">Easy Chirp 2 soft beta launched!</a> (Web Axe)</li>
 	</ul>
 	<p><?php echo $xliff_reader->get('home-articles-more'); ?></p>
 </div>
