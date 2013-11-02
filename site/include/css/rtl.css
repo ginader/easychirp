@@ -2,15 +2,25 @@ body {
 	direction:rtl;
 }
 
-/*h1, h2, h3, h4, p, li {
+h1, h2, h3, h4, p, li {
+	text-align: right;
+}
+
+th, td {
+	text-align: right;
+}
+
+#wrapper {
     text-align: right;
-}*/
+}
 
 #welcome {
     float: left;
 }
 
 #navMain,
+#navMain li,
+#navTweet li,
 #navTweet {
 	float: right;
 }

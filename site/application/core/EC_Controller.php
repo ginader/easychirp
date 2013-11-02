@@ -51,7 +51,7 @@ class EC_Controller extends CI_Controller {
 		{
 			if ( isset(  $supported[ $lang ]  ) )
 			{
-				$lang_code = $lang ;
+				$lang_code = $lang;
 				break;
 			}
 		}
@@ -86,7 +86,7 @@ class EC_Controller extends CI_Controller {
 
 		// Add right-to-left stylesheet when language is Arabic
 		if ($lang_code==='ar') {
-			$this->layout->add_link_tag('include/css/rtl.css', 'stylesheet');
+			$this->layout->add_link_tag('/include/css/rtl.css', 'stylesheet');
 		}
 
 		//

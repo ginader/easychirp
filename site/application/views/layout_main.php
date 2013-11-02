@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="<?php echo $lang_code; ?>" class="no-js">
+<html lang="<?php echo $lang_code; ?>" <?php
+if ($this->layout->lang_code === "ar") {
+	echo 'dir="rtl" ';
+}
+?>class="no-js">
 <head>
 	<?php echo $head_codes; ?>
 
