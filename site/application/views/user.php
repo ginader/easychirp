@@ -18,6 +18,14 @@ if (isset($_GET["action"])) {
 }
 
 //debug_object($friendship);
+
+if (isset($error)) {
+	if ($error === "not_found") {
+		echo '<h1 class="rounded">' . $xliff_reader->get('user-h1') . '</h1>';
+		echo '<h2 class="marginAdjustment">Error. Did not find "' . $user . '".</h2>';
+	}
+}
+else {
 ?>
 
 <h1 class="rounded"><?php echo $xliff_reader->get('user-h1'); ?> : <?php echo $user->name; ?></h1>
@@ -159,4 +167,7 @@ if (isset($_GET["action"])) {
 
 <h2 class="marginAdjustment"><?php echo $xliff_reader->get('profile-h2-latest'); ?></h2>
 
-<?php echo $tweets; ?>
+<?php 
+echo $tweets;
+}
+?>
