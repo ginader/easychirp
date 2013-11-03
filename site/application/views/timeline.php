@@ -9,6 +9,13 @@ if (isset($_GET["action"])) {
 <h1 class="rounded"><?php echo $page_heading; ?></h1>
 
 <?php
-echo $write_tweet_form;
-echo $tweets;
 
+if (isset($error)) {
+	if ($error === "not_found") {
+		echo '<h2 class="marginAdjustment">Error. Did not find "' . $user . '".</h2>';
+	}
+}
+else {
+	echo $write_tweet_form;
+	echo $tweets;
+}

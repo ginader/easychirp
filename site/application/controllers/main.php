@@ -2441,12 +2441,19 @@ class Main extends EC_Controller {
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
 			$tweet_form_params, TRUE);
 
-		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array( 'tweets' => $tweets, 
-				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
-				'xliff_reader' => $this->_data['xliff_reader']
-			), TRUE);
+		// Error handling
+		if (isset($tweets->errors[0]->code)) {
+			$this->_data['error'] = "not_found";
+			$this->_data['user'] = $screen_name;
+		}
+		else {
+			$this->_data['tweets'] = $this->load->view('fragments/tweet',
+				array( 'tweets' => $tweets, 
+					'utc_offset' => $this->session->userdata('utc_offset'),
+					'time_zone' => $this->session->userdata('time_zone'),
+					'xliff_reader' => $this->_data['xliff_reader']
+				), TRUE);
+		}
 
 		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('nav-timeline') );
 		$this->layout->set_description('Timeline page');
