@@ -36,7 +36,11 @@ else {
 	data-following="<?php echo $xliff_reader->get('user-following'); ?>" data-not-following="<?php echo $xliff_reader->get('user-not-following'); ?>" 
 	data-msg-followed="<?php echo $xliff_reader->get('msg-followed-user'); ?>" data-msg-unfollowed="<?php echo $xliff_reader->get('msg-unfollowed-user'); ?>" 
 >
-	<h3><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="" /> 
+
+	<?php
+		$profileImageLongURL = str_replace("_normal", "" ,$user->profile_image_url);
+	?>
+	<h3><a target="_blank" href="<?php echo $profileImageLongURL; ?>" title="<?php echo $xliff_reader->get('user-pic-open-orig'); ?>"><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="<?php echo $xliff_reader->get('user-pic-alt'); ?>" /></a>
 		<?php echo $user->name . " / @" . $user->screen_name; ?>
 	</h3>
 	

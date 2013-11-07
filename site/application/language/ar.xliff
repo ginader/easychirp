@@ -1884,6 +1884,16 @@
         <target>تفاصيل المستخدم</target>
       </trans-unit>
 
+      <trans-unit id="user-pic-open-orig" datatype="html">
+        <source>click to open original image in new window</source>
+        <target>انقر لفتح الصورة الأصلية في نافذة جديدة</target>
+      </trans-unit>
+
+      <trans-unit id="user-pic-alt" datatype="html">
+        <source>avatar</source>
+        <target>avatar</target>
+      </trans-unit>
+
       <trans-unit id="user-h2-contact" datatype="html">
         <source>Contact</source>
         <target>جهة الاتصال</target>

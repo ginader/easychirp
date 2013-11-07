@@ -687,6 +687,16 @@
         <target>Ir A Usuario</target>
       </trans-unit>
 
+      <trans-unit id="user-pic-open-orig" datatype="html">
+        <source>click to open original image in new window</source>
+        <target>haga clic para abrir la imagen original en una nueva ventana</target>
+      </trans-unit>
+
+      <trans-unit id="user-pic-alt" datatype="html">
+        <source>avatar</source>
+        <target>avatar</target>
+      </trans-unit>
+
       <trans-unit id="gotouser-username" datatype="html">
         <source>@UserName</source>
         <target>@NombreDeUsuario</target>
