@@ -52,6 +52,7 @@ $route['direct_sent'] = "main/direct_sent";
 $route['features'] = "main/features";
 $route['favorites'] = "main/favorites";
 $route['favorites/(:any)'] = "main/favorites/$1";
+$route['favorites/(:any)/(:any)'] = "main/favorites/$1/$2";
 $route['favorite_create/(:any)/(:any)'] = "main/favoriting/$1/create/$2";
 $route['favorite_destroy/(:any)/(:any)'] = "main/favoriting/$1/destroy/$2";
 $route['followers'] = "main/followers";
