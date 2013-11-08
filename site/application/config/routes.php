@@ -74,6 +74,7 @@ $route['list_add_member/(:any)'] = "main/list_add_member/$1";
 $route['list_subscribe'] = "main/list_subscribe";
 $route['list_unsubscribe'] = "main/list_unsubscribe";
 $route['mentions'] = "main/mentions";
+$route['mentions/(:any)'] = "main/mentions/$1";
 $route['mytweets'] = "main/mytweets";
 $route['oauth_callback'] = "main/oauth_callback";
 $route['profile'] = "main/profile";

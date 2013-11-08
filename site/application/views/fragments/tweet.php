@@ -177,11 +177,13 @@ foreach($tweets AS $tweet):
 
 $index++;
 endforeach;
-
+	if (empty($pagination_path)):
+		$pagination_path = '/timeline/';
+	endif;
 	if (isset($paginate) && $paginate):
 ?>
 	<div class="box1 rounded load-more">
-		<a href="/timeline/<?php echo $last_id; ?>" class="button load_more" >Get Older Tweets</a>
+		<a href="<?php echo $pagination_path . $last_id; ?>" class="button load_more" >Get Older Tweets</a>
 	</div>
 <?php
 	endif;
