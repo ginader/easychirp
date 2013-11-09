@@ -381,7 +381,7 @@ class Main extends EC_Controller {
 	 * @param string $screen_name the twitter username
 	 * @return void
 	 */
-	public function favorites($screen_name = FALSE)
+	public function favorites($screen_name = FALSE, $tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -398,17 +398,22 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
+		$request_param['count'] = TWEETS_PER_PAGE;
 		if ($screen_name !== FALSE)
 		{
 			$request_param['screen_name'] = $screen_name;
 		}
-		if ( isset($_GET["id"])) {
-			$request_param['screen_name'] = $_GET["id"];
+		if ( $tweet_id) {
+			$request_param['max_id'] = $tweet_id;
 		}
+
+		$pagination_path = '/favorites/' . $request_param['screen_name'] . '/';
 
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array(
+			'paginate' => 1,
+			'pagination_path' => $pagination_path,
 			'tweets' => $tweets,
 			'utc_offset' => $this->session->userdata('utc_offset'),
 			'time_zone' => $this->session->userdata('time_zone'),
@@ -1068,7 +1073,7 @@ class Main extends EC_Controller {
 	 *
 	 * @return void
 	 */
-	public function mentions()
+	public function mentions($tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1085,14 +1090,28 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['screen_name'] =  $this->session->userdata('screen_name');
+		$request_param['count'] =  TWEETS_PER_PAGE;
+		if ($tweet_id) {
+			$request_param['max_id'] =  $tweet_id;
+		}
+
+
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
-		$this->_data['tweets'] = $this->load->view('fragments/tweet',
-			array(
-				'tweets' => $tweets,
-				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
-				'xliff_reader' => $this->_data['xliff_reader']
-			), TRUE);
+		$tweets_data = array(
+			'paginate' => 1,
+			'pagination_path' => '/mentions/',
+			'tweets' => $tweets,
+			'utc_offset' => $this->session->userdata('utc_offset'),
+			'time_zone' => $this->session->userdata('time_zone'),
+			'xliff_reader' => $this->_data['xliff_reader']
+		);
+
+		if ($tweet_id) 
+		{
+			$tweets_data['last_id'] = $tweet_id; 
+		}
+		
+		$this->_data['tweets'] = $this->load->view('fragments/tweet', $tweets_data , TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('mentions-h1') );
 		$this->layout->set_description('Tweets that contain my user name.');
