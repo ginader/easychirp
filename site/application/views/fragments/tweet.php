@@ -74,7 +74,7 @@ foreach($tweets AS $tweet):
 	?>">
 	<?php if (isset($tweet->user)): ?>
 	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
-	<h2 class="hide"><?php echo $tweet->user->screen_name; ?></h2>
+	<h2 class="hide"><?php echo $tweet->user->name; ?></h2>
 	<?php endif; ?>
 	<q><?php
 	// Define the text of the tweet
