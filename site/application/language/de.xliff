@@ -469,7 +469,7 @@
 
       <trans-unit id="home-signin-signed-in-as" datatype="html">
         <source>You are signed in as</source>
-        <target>You are signed in as</target>
+        <target>Sie sind angemeldet als</target>
       </trans-unit>
 
       <trans-unit id="home-h2-donate" datatype="html">
@@ -489,7 +489,7 @@
 
       <trans-unit id="home-h2-follow-me" datatype="html">
         <source>Follow me on Twitter at:</source>
-        <target>Follow me on Twitter at:</target>
+        <target>Folgen Sie mir auf Twitter unter:</target>
       </trans-unit>
 
       <trans-unit id="home-h2-share" datatype="html">
@@ -596,7 +596,7 @@
 
       <trans-unit id="dm-h2-send" datatype="html">
         <source>Send a DM</source>
-        <target>Send a DM</target>
+        <target>Senden Sie eine direkte Nachricht:</target>
       </trans-unit>
 
       <trans-unit id="dm-label-tweep" datatype="html">
@@ -616,7 +616,7 @@
 
       <trans-unit id="dm-send" datatype="html">
         <source>Send</source>
-        <target>Send</target>
+        <target>Senden</target>
       </trans-unit>
 
       <trans-unit id="dm-note2" datatype="html">
@@ -664,7 +664,7 @@
 
       <trans-unit id="following-none" datatype="html">
         <source>You are not following anyone.</source>
-        <target>You are not following anyone.</target>
+        <target>Sie haben noch keine Freunde.</target>
       </trans-unit>
 
       <!-- FOLLOWERS -->
@@ -676,7 +676,7 @@
 
       <trans-unit id="followers-none" datatype="html">
         <source>You are not followed by anyone.</source>
-        <target>You are not followed by anyone.</target>
+        <target>Sie sind nicht von jedermann befolgt.</target>
       </trans-unit>
 
       <!-- GO TO USER -->
@@ -978,7 +978,7 @@
 
       <trans-unit id="edit-profile-back-to" datatype="html">
         <source>back to My Profile</source>
-        <target>back to My Profile</target>
+        <target>Zurück zu meiner Profil</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-h1" datatype="html">
@@ -993,7 +993,7 @@
 
       <trans-unit id="edit-profile-update" datatype="html">
         <source>Update</source>
-        <target>Update</target>
+        <target>Aktualisieren</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-avatar-h2" datatype="html">
@@ -1834,47 +1834,47 @@
 
       <trans-unit id="gbl-tweet-quote" datatype="html">
         <source>quote tweet</source>
-        <target>quote tweet</target>
+        <target>Tweet zitieren</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-email" datatype="html">
         <source>email tweet</source>
-        <target>email tweet</target>
+        <target>Tweet e-mailen</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-user-options" datatype="html">
         <source>user options</source>
-        <target>user options</target>
+        <target>Nutzer Optionen</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-timeline" datatype="html">
         <source>timeline</source>
-        <target>timeline</target>
+        <target>Zeitleiste</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-dm" datatype="html">
         <source>direct message</source>
-        <target>direct message</target>
+        <target>Direktnachricht</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-tweet-message" datatype="html">
         <source>tweet message</source>
-        <target>tweet message</target>
+        <target>Tweet Nachricht</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-mute" datatype="html">
         <source>mute user</source>
-        <target>mute user</target>
+        <target>Nutzer blockieren</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-report" datatype="html">
         <source>report spammer</source>
-        <target>report spammer</target>
+        <target>Nutzer als Spam melden</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-responding" datatype="html">
         <source>Responding</source>
-        <target>Responding</target>
+        <target>Antwortet</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-retweet" datatype="html">
@@ -1891,37 +1891,37 @@
 
       <trans-unit id="user-h1" datatype="html">
         <source>User Details</source>
-        <target>User Details</target>
+        <target>Nutzerdetails</target>
       </trans-unit>
 
       <trans-unit id="user-h2-contact" datatype="html">
         <source>Contact</source>
-        <target>Contact</target>
+        <target>Kontakt</target>
       </trans-unit>
 
       <trans-unit id="user-following" datatype="html">
         <source>Following</source>
-        <target>Following</target>
+        <target>Anschluss</target>
       </trans-unit>
 
       <trans-unit id="user-unfollow" datatype="html">
         <source>Unfollow</source>
-        <target>Unfollow</target>
+        <target>Entfolgen</target>
       </trans-unit>
 
       <trans-unit id="user-not-following" datatype="html">
         <source>Not Following</source>
-        <target>Not Following</target>
+        <target>Nicht Nach</target>
       </trans-unit>
 
       <trans-unit id="user-follow" datatype="html">
         <source>Follow</source>
-        <target>Follow</target>
+        <target>Folgen</target>
       </trans-unit>
 
       <trans-unit id="user-spammer" datatype="html">
         <source>Report Spammer</source>
-        <target>Report Spammer</target>
+        <target>Nutzer als Spam melden</target>
       </trans-unit>
 
       <trans-unit id="user-reported-as-spammer" datatype="html">
@@ -1941,7 +1941,7 @@
 
       <trans-unit id="user-verified" datatype="html">
         <source>Verified User</source>
-        <target>Verified User</target>
+        <target>Geprüftes Mitglied</target>
       </trans-unit>
 
       <trans-unit id="user-h2-details" datatype="html">
@@ -1951,14 +1951,14 @@
 
       <trans-unit id="user-is-following-me" datatype="html">
         <source>Is this user following me?</source>
-        <target>Is this user following me?</target>
+        <target>Ist dieser Benutzer, mir zu folgen?</target>
       </trans-unit>
 
       <!-- FOOTER -->
 
       <trans-unit id="footer-select-language" datatype="html">
         <source>Select language</source>
-        <target>Select language</target>
+        <target>Sprache auswählen</target>
       </trans-unit>
 
       <trans-unit id="footer-copyright" datatype="html">
@@ -1968,7 +1968,7 @@
 
       <trans-unit id="footer-h2" datatype="html">
         <source>Footer</source>
-        <target>Footer</target>
+        <target>Fußzeile</target>
       </trans-unit>
 
     </body>
