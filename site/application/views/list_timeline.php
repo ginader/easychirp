@@ -15,15 +15,14 @@
 echo '<ul>';
 
 	if ($list_data->user->screen_name == $this->session->userdata('screen_name')) {
-		echo '<li>' . $xliff_reader->get('lists-you-are-owner') . ' <a href="list_edit?id='.$list_data->id.'">' . $xliff_reader->get('lists-edit') . '</a></li>';
+		echo '<li>' . $xliff_reader->get('lists-you-are-owner') . ' <a href="/list_edit?id='.$list_data->id.'">' . $xliff_reader->get('lists-edit') . '</a></li>';
 	}
 	else {
 		
-		// if ($_GET['subscriber']=='true')  {
-		// 	echo '<li>You are are subscribed to this list.</li>';
-		// }
-	 	
-	 	echo '<li>The owner of this list is <a href="/user?id='. $list_data->user->screen_name .'">'. $list_data->user->name .'</a>.</li>'; // More of <a href="userLists.php?uid='.$owner.'&type='.$type.'">owner\'s Lists</a>.';
+		if ($subscribed == TRUE)  {
+			echo '<li>You are subscribed to this list.</li>';
+		}
+		echo '<li>The owner of this list is <a href="/user?id='. $list_data->user->screen_name .'">'. $list_data->user->name .'</a>.</li>'; // More of <a href="userLists.php?uid='.$owner.'&type='.$type.'">owner\'s Lists</a>.';
 
 		// Add link to subscribe to this list if not subscribed
 	}

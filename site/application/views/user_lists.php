@@ -27,7 +27,7 @@ if (isset($_GET["action"])) {
 if (count($ownedLists->lists) != 0) {
 	foreach($ownedLists->lists AS $lists):
 ?>
-<h3><span aria-hidden="true" class="icon-list"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>"><?php echo $lists->name; ?></a></h3>
+<h3><span aria-hidden="true" class="icon-list"></span> <a title="view tweets from members of this list" href="/list_timeline/<?php echo $lists->id; ?>/false"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
 	<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 	<dd><?php echo $lists->full_name; ?></dd>
@@ -72,7 +72,7 @@ if (count($subLists->lists) != 0) {
 	foreach($subLists->lists AS $lists):
 ?>
 
-<h3><span aria-hidden="true" class="icon-list"></span> <a title="view tweets from members of this list" href="/list_timeline?id=<?php echo $lists->id; ?>&subscriber=true"><?php echo $lists->name; ?></a></h3>
+<h3><span aria-hidden="true" class="icon-list"></span> <a title="view tweets from members of this list" href="/list_timeline/<?php echo $lists->id; ?>/false"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
 	<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 	<dd><?php echo $lists->full_name; ?></dd>
@@ -85,7 +85,6 @@ if (count($subLists->lists) != 0) {
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
 	<dd><?php echo $lists->member_count; ?></dd>
-
 
 	<dt><?php echo $xliff_reader->get('lists-actions'); ?></dt>
 	<dd><a rel="subList" href="/list_subscribe?id=<?php echo $lists->id; ?>&user=<?php echo $screen_name; ?>">Subscribe</a></dd>

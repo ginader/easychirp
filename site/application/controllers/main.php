@@ -959,7 +959,7 @@ class Main extends EC_Controller {
 	 *
 	 * @return void
 	 */
-	public function list_timeline()
+	public function list_timeline($list_id, $subscribed = FALSE, $tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -975,11 +975,19 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['list_id'] =  $_GET['id'];
+		$request_param['list_id'] = $list_id;
+		$request_param['count'] = TWEETS_PER_PAGE;
+		if ($tweet_id !== FALSE && $tweet_id !== "false") {
+			$request_param['max_id'] = $tweet_id;
+		}
+
+		$pagination_path = '/list_timeline/'.$list_id.'/'.$subscribed.'/';
 
 		$tweets = $this->twitter_lib->get('lists/statuses', $request_param);
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array(
+				'paginate' => 1,
+				'pagination_path' => $pagination_path,
 				'tweets' => $tweets, 
 				'utc_offset' => $this->session->userdata('utc_offset'),
 				'time_zone' => $this->session->userdata('time_zone'),
@@ -987,6 +995,11 @@ class Main extends EC_Controller {
 			), TRUE);
 
 		$this->_data['list_data'] = $this->twitter_lib->get('lists/show', $request_param);
+
+		$this->_data['subscribed'] = FALSE;
+		if ($subscribed !== FALSE && $subscribed !== "false") {
+			$this->_data['subscribed'] = TRUE;
+		}
 
 		$x = $this->xliff_reader->get('lists-h1')." ".$this->xliff_reader->get('nav-timeline');
 		$this->layout->set_title( $x );
