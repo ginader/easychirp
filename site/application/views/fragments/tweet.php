@@ -96,8 +96,12 @@ foreach($tweets AS $tweet):
 
 	echo $tweet_text;
 	?></q>
-	<?php if (isset($tweet->user)): ?>
-	<p><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet->user->name; ?>; followers <?php echo $tweet->user->followers_count; ?>; following <?php echo $tweet->user->friends_count; ?>"> <?php echo $tweet->user->screen_name; ?></a> | <a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a> |
+	<?php if (isset($tweet->user)):
+		$tweet_title = $tweet->user->name . '; followers ' . $tweet->user->followers_count . '; following ' . $tweet->user->friends_count;
+	?>
+	<p><?php echo $xliff_reader->get('gbl-from'); ?>
+	<a href="/user/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet_title; ?>"> <?php echo $tweet->user->screen_name; ?></a>
+		| <a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a> |
 	<?php endif; ?>
 		<?php
 		// Is reply or retweet?

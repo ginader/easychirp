@@ -46,7 +46,7 @@ class EC_Controller extends CI_Controller {
 		}
 
 
-		$user_languages = ( function_exists('getallheaders')) ?  $this->get_user_languages() : array('en-US');
+		$user_languages = $this->get_user_languages();
 		foreach ($user_languages AS $lang)
 		{
 			if ( isset(  $supported[ $lang ]  ) )
@@ -131,6 +131,10 @@ class EC_Controller extends CI_Controller {
 	* Determine which languages the user's browser can understand
 	*/
 	public function get_user_languages(){
+		if ( ! function_exists('getallheaders')){
+			return array('en-US');
+		}
+
 		$http_headers = getallheaders();
 		
 		if ( isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) )

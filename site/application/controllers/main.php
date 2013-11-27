@@ -2136,6 +2136,28 @@ class Main extends EC_Controller {
 		redirect($_SERVER['HTTP_REFERER']);
 	}
 
+	/**
+	 * Manages the tips page - /test
+	 *
+	 * @return void
+	 */
+	public function test()
+	{
+		$utc_offset = $this->session->userdata('utc_offset');
+		$time_zone = $this->session->userdata('time_zone');
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+		$this->_data['user_langs'] = $this->get_user_languages();
+		$this->_data['utc_offset'] = (empty($utc_offset)) ? 'No UTC offset' : $utc_offset; 
+		$this->_data['time_zone'] = (empty($time_zone)) ? 'No Time Zone' : $time_zone;
+
+
+
+		$this->layout->set_title( 'Test Page' );
+		$this->layout->set_description('This is a Test Page');
+		$this->layout->view('test', $this->_data);
+	}
+
 
 	/**
 	 * Manages the timeline page - /timeline
