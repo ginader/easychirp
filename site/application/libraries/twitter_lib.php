@@ -111,5 +111,38 @@ class OAuthCurl {
 	} 
 } 
 
+
+/**
+* Reformat the date of a tweet
+*
+* @since version 1.9.20131127
+* @see http://www.php.net/manual/en/datetime.createfromformat.php
+* @param  string $date the original date of the tweet
+* @return string $date the newly formatted date of the tweet
+*/
+function reformat_date($date, $time_zone)
+{
+
+	$twitter_date_format = 'D M d H:i:s e Y';
+	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
+	try
+	{
+		$display_tz = new DateTimeZone($time_zone);
+	}
+	catch (Exception $e)
+	{
+		log_message('error', 'Tried to create oboject for the ' . $time_zone . ' time zone. ' . $e->getMessage() );
+		$display_tz = new DateTimeZone('America/Los_Angeles');
+	}
+
+	$tweet_date->setTimeZone($display_tz);
+
+	$date = date_format($tweet_date, DISPLAY_DATETIME_FORMAT);
+
+	return $date;
+}
+
+
+
 /* End of file twitter_lib.php */ 
 /* Location: ./application/libraries/twitter_lib.php */

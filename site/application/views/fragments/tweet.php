@@ -40,21 +40,7 @@ foreach($tweets AS $tweet):
 
 	$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
 
-	// http://www.php.net/manual/en/datetime.createfromformat.php
-	$twitter_date_format = 'D M d H:i:s e Y';
-	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
-	try
-	{
-		$display_tz = new DateTimeZone($time_zone);
-	}
-	catch (Exception $e)
-	{
-		$display_tz = new DateTimeZone('America/Los_Angeles');
-	}
-
-	$tweet_date->setTimeZone($display_tz);
-
-	$date = date_format($tweet_date, DISPLAY_DATETIME_FORMAT);
+	$date = reformat_date($tweet->created_at, $time_zone);
 
 	//check if this tweet is a reply
 	$isReply = false;
