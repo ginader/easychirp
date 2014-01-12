@@ -42,8 +42,7 @@
 			$this->_data['follower_count'] = 0; 
 		}
 
-
-		if (isset($session_data['follower_count']))
+		if (isset($session_data['following_count']))
 		{
 			$this->_data['following_count'] = $session_data['following_count']; 
 		}
@@ -52,8 +51,7 @@
 			$this->_data['following_count'] = 0; 
 		}
 
-
-		if (isset($session_data['follower_count']))
+		if (isset($session_data['tweet_count']))
 		{
 			$this->_data['tweet_count'] = $session_data['tweet_count']; 
 		}
@@ -61,7 +59,6 @@
 		{
 			$this->_data['tweet_count'] = 0; 
 		}
-
 
 		if (isset($session_data['screen_name']))
 		{
