@@ -14,8 +14,12 @@
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('articles-h2-books'); ?></h2>
+
+	<h3>A Web For Everyone</h3>
+	<p><img src="/images/a-web-for-everyone.png" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" width="80" height="120" class="fl" style="margin-right:.35em;" /> 
+		<?php echo $xliff_reader->get('articles-books-webforeveryone'); ?></p>
 	
-	<h3>The Twitter Book</h3>
+	<h3 class="clear">The Twitter Book</h3>
 	<p><img src="/images/the_twitter_book.jpg" alt="<?php echo $xliff_reader->get('articles-book-cover'); ?>" width="100" height="75" class="fl" style="margin-right:.35em;" /> 
 		<?php echo $xliff_reader->get('articles-books-thetwitter'); ?></p>
 	

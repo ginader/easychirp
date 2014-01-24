@@ -1237,6 +1237,11 @@
         <target>غلاف الكتاب</target>
       </trans-unit>
 
+      <trans-unit id="articles-books-webforeveryone" datatype="html">
+        <source>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</source>
+        <target>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</target>
+      </trans-unit>
+
       <trans-unit id="articles-books-thetwitter" datatype="html">
         <source>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</source>
         <target>ذُكر التغريد بسهولة  في كتاب تويتر، حالياً في النسخة الثانية! شاهد الصفحة الأولى لقسم طريقة البدء، تابع المؤلف المشارك سارة ميلستيين @SarahM.</target>
