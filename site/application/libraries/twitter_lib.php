@@ -122,22 +122,12 @@ class OAuthCurl {
 */
 function reformat_date($date, $time_zone)
 {
-
 	$twitter_date_format = 'D M d H:i:s e Y';
 	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
-	try
-	{
-		$display_tz = new DateTimeZone($time_zone);
-	}
-	catch (Exception $e)
-	{
-		log_message('error', 'Tried to create oboject for the ' . $time_zone . ' time zone. ' . $e->getMessage() );
-		$display_tz = new DateTimeZone('America/Los_Angeles');
-	}
+	$tweet_time = strtotime($tweet_date->format('Y-m-d h:i:s'));
+	$tweet_time = $tweet_time + $time_zone;
 
-	$tweet_date->setTimeZone($display_tz);
-
-	$date = date_format($tweet_date, DISPLAY_DATETIME_FORMAT);
+	$date = strftime(DISPLAY_DATETIME_STRFTIME_FORMAT, $tweet_time);
 
 	return $date;
 }

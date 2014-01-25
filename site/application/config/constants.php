@@ -37,6 +37,7 @@ define('YEAR_IN_SECONDS',  365 * DAY_IN_SECONDS);
 // http://www.php.net/manual/en/function.date.php
 define('DISPLAY_DATE_FORMAT', 'd F Y'); // 01 January 2013
 define('DISPLAY_DATETIME_FORMAT', 'M d h:i a'); // Jan 1, 3:50 pm
+define('DISPLAY_DATETIME_STRFTIME_FORMAT', "%b %e %l:%M"); // Jan 1, 3:50
 
 /*
 |--------------------------------------------------------------------------

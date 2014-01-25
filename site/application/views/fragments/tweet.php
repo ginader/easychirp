@@ -39,8 +39,7 @@ $last_id = $tweets[$i]->id;
 foreach($tweets AS $tweet):
 
 	$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
-
-	$date = reformat_date($tweet->created_at, $time_zone);
+	$date = reformat_date($tweet->created_at, $utc_offset);
 
 	//check if this tweet is a reply
 	$isReply = false;
