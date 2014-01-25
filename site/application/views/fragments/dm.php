@@ -47,8 +47,7 @@ if (count($dms) != 0) {
 		echo $date;
 		?> 
 	</p>
-	<div>
-		<a href="/direct/<?php 
+	<p class="dmActions"><a href="/direct/<?php 
 		if ($state == "inbox") {
 			echo $dm->sender->screen_name;
 		}
@@ -62,8 +61,7 @@ if (count($dms) != 0) {
 		<a href="/direct_delete/<?php echo $dm->id; ?>/false" class="btn" title="<?php echo $xliff_reader->get('global-delete'); ?>">
 			<span aria-hidden="true" class="icon-close"></span>
 			<span class="hide"><?php echo $xliff_reader->get('global-delete'); ?></span>
-		</a>
-	</div>
+		</a></p>
 </div>
 <?php 
 	endforeach;

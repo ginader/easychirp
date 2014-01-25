@@ -778,16 +778,13 @@ button:hover, button:focus,
 	margin-left: -140px;
 	margin-top: 3px;
 }
-.dm p {
-	margin-bottom: 0;
-}
 .dm .btn {
 	text-decoration: none;
 	padding: .35rem;
-	margin: .2rem 0 0 .3rem;
+	margin: .25rem .35rem 0 0;
 }
-.dm div {
-	float: right;
+.dm .dmActions {
+	margin-bottom: -.15rem;
 }
 .tweet .tweetAvatar,
 .follow .tweetAvatar {
