@@ -73,10 +73,11 @@ $config['language'] = 'english';
 $config['site_language'] = 'en-US';
 $config['supported_langs'] = array(
 	'en-US' => 'English',
-	'ar' => 'Saudi Arabian Arabic',
-	'es' => 'Spanish',
-	'de' => 'German'
+	'ar' => 'العربية',
+	'es' => 'Español',
+	'de' => 'Deutsch'
 );
+
 
 /*
 |--------------------------------------------------------------------------
