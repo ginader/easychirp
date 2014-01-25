@@ -63,7 +63,6 @@ class EC_Controller extends CI_Controller {
 		$this->layout->set_tagline('web accessibility for the Twitter.com website application');
 		$this->layout->set_description('Easy Chirp. Web accessibility for the Twitter web site application. The Twitter.com website redone with strict web standards and web accessibility. Great for screen readers, low-vision, beginners, older browsers, text-only browsers, and non-JavaScript.');
 
-		$this->layout->lang_code = $lang_code;
 
 		// META TAGS
 		$this->layout->add_meta_tag_name('charset', 'utf-8');
@@ -125,6 +124,7 @@ class EC_Controller extends CI_Controller {
 		$this->layout->lang_menu = $this->config->item('supported_langs');
 		$this->layout->theme_menu = $this->config->item('supported_themes');
 		$this->layout->active_theme = $active_theme;
+		$this->layout->lang_code = $lang_code;
 	}
 
 	/**

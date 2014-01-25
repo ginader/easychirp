@@ -25,7 +25,7 @@ class Layout
 	public $layout;
 	public $skip_to_sign_in = FALSE;
 	public $title = '';
-	public $lang_code = '';
+	public $lang_code = 'en-US';
 	public $lang_menu = "";
 	public $sign_in_url = '';
 	public $base_url = '';

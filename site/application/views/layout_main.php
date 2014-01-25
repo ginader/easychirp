@@ -89,24 +89,29 @@ if ($this->session->userdata('logged_in')) {
 
 <footer role="contentinfo">
 	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
-	
-	<?php /* ?>
+
+	<?php ?>
 	<p><?php echo $xliff_reader->get('footer-select-language'); ?>:
-	<?php $link = '';   ?>
-	<?php foreach($lang_menu AS $code => $name): ?>
-		<?php echo ($link) ? ' | ' : ''; ?>
-			<?php $link = anchor('/switch_lang/' . $code, $name); ?>
+	<?php $langs = 0;   ?>
+	<?php foreach($lang_menu AS $lang_id => $lang_name): ?>
+		<?php echo ($langs) ? ' | ' : ''; ?>
+		<?php if ($lang_id === $lang_code): ?>
+			<?php echo $lang_name; ?>
+		<?php else: ?>
+			<?php $link = anchor('/switch_lang/' . $lang_id, $lang_name); ?>
 			<?php echo $link; ?>
+		<?php endif; ?>
+		<?php $langs++; ?>
 	<?php endforeach; ?>
 	</p>
-	<?php */ ?>
+	<?php ?>
 
 	<p><?php echo $xliff_reader->get('gbl-theme-select'); ?>: 
 	<?php $items = 0; ?>
 	<?php foreach($theme_menu AS $theme_code => $theme_name): ?>
 		<?php echo ($items) ? ' | ' : ''; ?>
 		<?php if ($active_theme === $theme_code): ?>
-			<?php echo $theme_name; ?> (current)
+			<?php echo $theme_name; ?>
 		<?php else: ?>
 			<?php $link = anchor('/switch_theme/' . $theme_code, $theme_name); ?>
 			<?php echo $link; ?>

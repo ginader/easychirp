@@ -1256,6 +1256,14 @@ class Main extends EC_Controller {
 			$session_data['logged_in']               = TRUE;
 			$session_data['utc_offset']              = -18000; // EST 5 hours behind UTC
 
+
+			$user_lang = substr($user_data->lang, 0, 2);
+			if ( isset($config['supported_langs'][$user_lang]) ){
+				$session_data['lang_code'] = $user_lang;
+			} else {
+				$session_data['lang_code'] = $this->config->item('site_language');
+			}
+
 			if (isset($user_data->followers_count)){
 				$session_data['follower_count']  = $user_data->followers_count;
 				$session_data['following_count'] = $user_data->friends_count;
