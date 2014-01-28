@@ -4,12 +4,15 @@ echo $xliff_reader->get('lists-h1') . " : ". $list_name . " : " . $xliff_reader-
 ?>
 </h1>
 
+<p class="marginAdjustment"><a href="/list_timeline/<?php echo $list_id; ?>/false">View list timeline</a>. The owner of this list is <a href="/user/<?php echo $list_owner; ?>"><?php echo $list_owner; ?></a>.</p>
+
 <?php
 if (count($f->users) == 0): 
-	echo '<p>' . $xliff_reader->get('followers-none') . '</p>';
+	echo '<div class="box1 rounded">';
+	echo '<p style="margin-top: 1em;">' . $xliff_reader->get('search-saved-none') . '</p>';
+	echo '</div>';
 endif;
 ?>
-<p class="marginAdjustment"><a href="/list_timeline/<?php echo $list_id; ?>/false">View list timeline</a>. The owner of this list is <a href="/user/<?php echo $list_owner; ?>"><?php echo $list_owner; ?></a>.</p>
 
 <?php
 foreach ($f->users as $user):
@@ -22,11 +25,9 @@ foreach ($f->users as $user):
 		<?php echo $xliff_reader->get('profile-dt-tweets'); ?> 
 		<?php echo anchor('/user_timeline/' . $user->screen_name, $user->statuses_count); ?> 
 		<?php echo $xliff_reader->get('profile-dt-following'); ?> 
-		<?php echo anchor('/following/' . $user->screen_name, $user->friends_count, 
-			'title="view users that I\'m following"'); ?> 
+		<?php echo anchor('/following/' . $user->screen_name, $user->friends_count); ?> 
 		<?php echo $xliff_reader->get('profile-dt-followers'); ?> 
-		<?php echo anchor('/followers/' . $user->screen_name, $user->followers_count, 
-			'title="view the users that follow me"'); ?> 
+		<?php echo anchor('/followers/' . $user->screen_name, $user->followers_count); ?> 
 	</p>
 </div>
 <?php
