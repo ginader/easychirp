@@ -715,8 +715,6 @@ class Main extends EC_Controller {
 		phpinfo();
 	}
 
-
-
 	/**
 	 * Manages the list_edit page - /list_edit
 	 *
@@ -952,6 +950,44 @@ class Main extends EC_Controller {
 		else {
 			redirect( base_url() . 'lists?action=unsubscribed');
 		}
+	}
+
+	/**
+	 * Manages the Subscribers page - /list_subscribers
+	 *
+	 * @param $list_owner, $list_id, $list_name
+	 * @return void
+	 */
+	public function list_subscribers($list_owner, $list_id = FALSE, $list_name)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['skip_status'] =  true;
+		$request_param['list_id'] = $list_id;
+
+		$this->_data['f'] = $this->twitter_lib->get('lists/subscribers', $request_param);
+
+		$this->_data['list_owner'] = $list_owner;
+		$this->_data['list_id'] = $list_id;
+		$this->_data['list_name'] = $list_name;
+
+		$page_title = $this->xliff_reader->get('lists-subs');
+
+		$this->layout->set_title( $page_title );
+		$this->layout->set_description('Twitter users subscribed to a list.');
+		$this->layout->view('list_subscribers', $this->_data);
 	}
 
 	/**
@@ -1281,7 +1317,6 @@ class Main extends EC_Controller {
 			redirect( $next_page );
 		}
 	}
-
 
 	/**
 	 * Manages the profile page - /profile
