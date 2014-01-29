@@ -1,6 +1,6 @@
 <h1 class="rounded">
 <?php
-echo $xliff_reader->get('lists-h1') . " : ". $list_name . " : " . $xliff_reader->get('lists-subs');
+echo $xliff_reader->get('lists-h1') . " : ". rawurldecode($list_name) . " : " . $xliff_reader->get('lists-subs');
 ?>
 </h1>
 
