@@ -22,7 +22,8 @@ echo '<ul>';
 		if ($subscribed == TRUE)  {
 			echo '<li>You are subscribed to this list.</li>';
 		}
-		echo '<li>The owner of this list is <a href="/user?id='. $list_data->user->screen_name .'">'. $list_data->user->name .'</a>.</li>'; // More of <a href="userLists.php?uid='.$owner.'&type='.$type.'">owner\'s Lists</a>.';
+		echo '<li>The owner of this list is <a href="/user/'.$list_data->user->screen_name.'">'.$list_data->user->name.'</a>.</li>';
+		echo '<li><a href="/user_lists/'.$list_data->user->screen_name.'">More lists by '.$list_data->user->name.'</a>.</li>';
 
 		// Add link to subscribe to this list if not subscribed
 	}
