@@ -36,7 +36,7 @@ if (count($ownedLists->lists) != 0) {
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<dd><?php echo $lists->subscriber_count; ?></dd>
+	<dd><a href="/list_subscribers/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
 	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
@@ -81,7 +81,7 @@ if (count($subLists->lists) != 0) {
 	<dd><?php echo $lists->description; ?>&nbsp;</dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-subs'); ?></dt>
-	<dd><?php echo $lists->subscriber_count; ?></dd>
+	<dd><a href="/list_subscribers/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
 	<dd><?php echo $lists->member_count; ?></dd>
