@@ -89,7 +89,6 @@ if ($this->session->userdata('logged_in')) {
 <footer role="contentinfo">
 	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
 
-	<?php /* ?>
 	<p><?php echo $xliff_reader->get('footer-select-language'); ?>:
 	<?php $langs = 0;   ?>
 	<?php foreach($lang_menu AS $lang_id => $lang_name): ?>
@@ -103,7 +102,6 @@ if ($this->session->userdata('logged_in')) {
 		<?php $langs++; ?>
 	<?php endforeach; ?>
 	</p>
-	<?php */ ?>
 
 	<p><?php echo $xliff_reader->get('gbl-theme-select'); ?>: 
 	<?php $items = 0; ?>
