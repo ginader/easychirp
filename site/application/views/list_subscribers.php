@@ -4,7 +4,10 @@ echo $xliff_reader->get('lists-h1') . " : ". rawurldecode($list_name) . " : " . 
 ?>
 </h1>
 
-<p class="marginAdjustment"><a href="/list_timeline/<?php echo $list_id; ?>/false">View list timeline</a>. The owner of this list is <a href="/user/<?php echo $list_owner; ?>"><?php echo $list_owner; ?></a>.</p>
+<p class="marginAdjustment"><a href="/list_timeline/<?php echo $list_id; ?>/false">View list timeline</a>. 
+	The owner of this list is <a href="/user/<?php echo $list_owner; ?>"><?php echo $list_owner; ?></a>. 
+	View <a href="/list_members/<?php echo $list_owner; ?>/<?php echo $list_id; ?>/<?php echo $list_name; ?>">members of this list</a>. 
+</p>
 
 <?php
 if (count($f->users) == 0): 
