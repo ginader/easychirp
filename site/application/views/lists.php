@@ -71,8 +71,7 @@ if (count($myLists->lists) != 0) {
 	<dd><a href="/list_subscribers/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
-	<dd id="memCnt"><?php echo $lists->member_count; ?></dd>
+	<dd><a href="/list_members/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->member_count; ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
@@ -128,8 +127,7 @@ if (count($subLists->lists) != 0) {
 	<dd><a href="/list_subscribers/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<?php /*<dd><a href="/list_members?id=<?php echo $lists->id; ?>"><?php echo $lists->member_count; ?></a></dd>*/?>
-	<dd><?php echo $lists->member_count; ?></dd>
+	<dd><a href="/list_members/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->member_count; ?></a></dd>
 
 	<?php /*
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>

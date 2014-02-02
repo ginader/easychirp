@@ -991,6 +991,44 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Manages the Members page - /list_members
+	 *
+	 * @param $list_owner, $list_id, $list_name
+	 * @return void
+	 */
+	public function list_members($list_owner, $list_id = FALSE, $list_name)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['skip_status'] =  true;
+		$request_param['list_id'] = $list_id;
+
+		$this->_data['f'] = $this->twitter_lib->get('lists/members', $request_param);
+
+		$this->_data['list_owner'] = $list_owner;
+		$this->_data['list_id'] = $list_id;
+		$this->_data['list_name'] = $list_name;
+
+		$page_title = $this->xliff_reader->get('lists-mems');
+
+		$this->layout->set_title( $page_title );
+		$this->layout->set_description('Users who are on a Twitter list.');
+		$this->layout->view('list_members', $this->_data);
+	}
+
+	/**
 	 * Manages the list_timeline page - /list_timeline
 	 *
 	 * @return void
