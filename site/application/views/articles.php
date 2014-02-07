@@ -93,9 +93,6 @@
 	<dt><a href="http://www.webable.tv/Events/m_enabling_summit_130606.aspx?VID=/webable/130604_SMD_EasyChirp.flv&amp;Cap=/WebAble/130604_SMD_EasyChirp.xml#anchor">Social Media and Disability Pilot Program Featuring Easy Chirp</a> (video)</dt>
 		<dd>WebAble.tv</dd>
 		<dd>2013 Jun 05</dd>
-	<dt><a href="http://manuel.a12x.net/2013/04/21/easy-chirp-web-accesible-para-manejo-de-twitter-multiplataforma/">EASY CHIRP: Web accesible para manejo de Twitter multiplataforma</a></dt>
-		<dd>Blog de Manuel Cortez</dd>
-		<dd>2013 Apr 21</dd>
 	<dt><a href="http://www.mediaaccess.org.au/latest_news/general/easy-chirp-seeks-funding-for-update">Easy Chirp seeks funding for update</a></dt>
 		<dd>Media Access Australia</dd>
 		<dd>2013 Apr 05</dd>
@@ -132,12 +129,6 @@
 	<dt><a href="http://davebanesaccess.jigsy.com/entries/general/happy-birthday-twitter">Happy Birthday Twitter</a></dt>
 		<dd>Dave Banes Access</dd>
 		<dd>2011 Apr 08</dd>
-	<dt><a href="http://thinkvitamin.com/design/around-the-web-jquery-markup-accessible-twitter/">Around the Web: jQuery, Markup, Accessible Twitter</a></dt>
-		<dd>ThinkVitamin, Chrissie Brodigan</dd>
-		<dd>2010 Oct 19</dd>
-	<dt><a href="http://www.tauscher.org/2010/09/using-accessible-twitter-with-jaws.html">Using Accessible Twitter With JAWS Screen Reader</a></dt>
-		<dd>Linda Tauscher's Blog</dd>
-		<dd>2010 Sep 23</dd>
 	<dt><a href="http://www.uta.edu/huma/agger/fastcapitalism/7_1/elliskent7_1.html">Tweeters Take Responsibility for an Accessible Web 2.0</a></dt>
 		<dd>Fast Capitalism</dd>
 		<dd>2010 Jul 01</dd>
@@ -150,9 +141,6 @@
 	<dt><a href="http://www.blacktelephone.com/2010/02/contribute-to-twitter-presentation-at-csun10/">Contribute to Twitter Presentation at CSUN10</a></dt>
 		<dd>Joseph Karr O'Connor</dd>
 		<dd>2010 Feb 24</dd>
-	<dt><a href="http://social-networking-tagging.suite101.com/article.cfm/best_web_interfaces_for_twitter">Best Web Interfaces for Twitter</a></dt>
-		<dd>Suite101, Maija Haavisto</dd>
-		<dd>2010 Jan 25</dd>
 	<dt><a href="http://www.practicalecommerce.com/articles/1581-Accessibility-and-Social-Media">Accessibility and Social Media</a></dt>
 		<dd>practical ecommerce, Joe Dolson</dd>
 		<dd>2010 Jan 21</dd>
@@ -166,7 +154,7 @@
 		<dd><a href="http://translate.google.com/translate?js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=1&amp;eotf=1&amp;u=http%3A%2F%2Fwww.webkrauts.de%2F2009%2F12%2F05%2Fzugaenglich-und-bequem-twittern%2F&amp;sl=auto&amp;tl=en">German to English translation</a> by Google</dd>
 		<dd>webkrauts.de</dd>
 		<dd>2009 Dec 05</dd>
-	<dt><a href="http://newmatilda.com/2009/12/01/wakeup-call-twitter">A Wake-Up Call For Twitter</a></dt>
+	<dt><a href="https://newmatilda.com/2009/12/01/wake-call-twitter">A Wake-Up Call For Twitter</a></dt>
 		<dd>New Matilda</dd>
 		<dd>2009 Dec 01</dd>
 	<dt><a href="http://www.ideose.com/accessibilite-20-bien-plus-quun-slogan/">Accessibilit&eacute; 2.0, bien plus qu'un slogan</a></dt>
@@ -176,7 +164,7 @@
 	<dt><a href="http://blog.eastersealstech.com/review-twitters-alter-ego-accessible-twitter/">Review: Twitter's Alter Ego, "Accessible Twitter"</a></dt>
 		<dd>2009 Oct 29</dd>
 		<dd><abbr title="Indiana Assistive Technology Act">INDATA</abbr></dd>
-	<dt><a href="http://www.murraynewlands.com/index.php/2009/07/twitter-apps-accessible-twitter-optimized-for-disabled-twitter-users/">Accessible Twitter optimized for disabled Twitter users</a></dt>
+	<dt><a href="http://www.murraynewlands.com/2009/07/twitter-apps-accessible-twitter-optimized-for-disabled-twitter-users/">Accessible Twitter optimized for disabled Twitter users</a></dt>
 		<dd>Murray Newlands</dd>
 		<dd>2009 Sep 00</dd>
 	<dt><a href="http://www.evengrounds.com/blog/accessible-experts-dennis-lembree">Accessible Experts: Dennis Lembree Talks About Accessible Twitter</a></dt>
@@ -198,34 +186,21 @@
 	<dt><a href="http://udmlti.edublogs.org/2009/07/07/accessible-twitter/">Accessible Twitter (from UD in ME)</a></dt>
 		<dd><abbr title="Universal Design in the MLTI">UD in ME</abbr>, Cynthia Curry</dd>
 		<dd>2009 Jul 09</dd>
-	<dt><a href="http://ma.ttevans.co.uk/twitter-accessibility.html">On Twitter &amp; Acessibility</a> [see bottom of page]</dt>
-		<dd>Matt Evans</dd>
-		<dd>2009 Jul 06</dd>
+	<dt><a href="http://www.twitip.com/twitter-remaking-the-persona-of-the-physically-challenged/">Twitter: Remaking the Persona of the Physically Challenged</a></dt>
+		<dd>TwitTip, Carmen R. Gonzalez</dd>
+		<dd>2009 Jul 03</dd>
 	<dt><a href="http://www.evengrounds.com/blog/mainstream-sites-or-accessible-solutions">Mainstream Sites Or Accessible Solutions</a></dt>
 		<dd>Even Grounds, Tom Babinszki</dd>
 		<dd>2009 Jun 11</dd>
-	<dt><a href="http://universallydesigned.net/general/twitter-chatter/">Twitter Chatter</a></dt>
-		<dd>Knowbility blog</dd>
-		<dd>2009 Jun 03</dd>
 	<dt><a href="http://tink.co.uk/2009/05/accessible-twitter-applications/">Accessible Twitter Applications</a></dt>
 		<dd>Tink, L&eacute;onie Watson</dd>
 		<dd>2009 May 21</dd>
-	<dt><a href="http://www.access2info.org.uk/news.asp?itemid=539&amp;itemTitle=Accessible+Twitter+has+been+launched&amp;section=000100010003">Accessible Twitter has been launched</a></dt>
-		<dd>Access2Info</dd>
-		<dd>2009 May 26</dd>
-	<dt><a href="http://p2pt0.wetpaint.com/page/Twitter">Getting started on Twitter</a></dt>
-		<dd>#p2</dd>
-		<dd>2009 May 25</dd>
 	<dt><a href="http://everythingtwitter.com/2009/05/08/accessible-twitter-web-accessibility-for-the-twitter-website/">Accessible Twitter – web accessibility for the Twitter website</a></dt>
 		<dd>EverythingTwitter</dd>
 		<dd>2009 May 08</dd>
 	<dt><a href="http://www.freedomscientific.com/FSCast/episodes/fscast030-may2009.asp">FSCast Episode 30, May 2009</a> (using Twitter with JAWS screen reader)</dt>
 		<dd>Freedom Scientific</dd>
 		<dd>2009 May 00</dd>
-	<dt><a href="http://www.wired.it/news/archivio/2009-04/29/con-accessible-twitter-arriva-il-social-network-piu-accessibile.aspx">Accessible Twitter rende il social network più accessibile</a></dt>
-		<dd><a href="http://translate.google.com/translate?js=n&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;u=http%3A%2F%2Fwww.wired.it%2Fnews%2Farchivio%2F2009-04%2F29%2Fcon-accessible-twitter-arriva-il-social-network-piu-accessibile.aspx&amp;sl=it&amp;tl=en&amp;history_state0=">Italian to English translation</a> by Google</dd>
-		<dd>Wired Italy</dd>
-		<dd>2009 Apr 29</dd>
 	<dt><a href="http://accessify.com/news/2009/04/interview-with-accessible-twitter-creator-dennis-lembree/">Interview with Accessible Twitter creator Dennis Lembree</a></dt>
 		<dd>Accessify</dd>
 		<dd>2009 Apr 23</dd>
@@ -262,14 +237,14 @@
 	<dt><a href="http://anikto.com/wordpress/2009/02/08/accessible-twitter/">Accessible Twitter (from AniktoBlog)</a></dt>
 		<dd>Anikto Blog</dd>
 		<dd>2009 Feb 08</dd>
-	<dt><a href="http://www.saifscotland.org.uk/socialnetworks.php">What about Social Networks and Accessibility?</a></dt>
+	<dt><a href="http://www.saifscotland.org.uk/information-and-advice/what-about-social-networks-and-accessibility/">What about Social Networks and Accessibility?</a></dt>
 		<dd>Scottish Accessible Information Forum</dd>
-		<dd>date not available</dd>
-	<dt><a href="http://www.twitip.com/twitter-remaking-the-persona-of-the-physically-challenged/">Twitter: Remaking the Persona of the Physically Challenged</a></dt>
-		<dd>TwitTip, Carmen R. Gonzalez</dd>
 		<dd>date not available</dd>
 	<dt><a href="http://www.mediaaccess.org.au/online-media/social-media/twitter">Twitter Social Media Guide</a></dt>
 		<dd>Media Access Australia</dd>
+		<dd>date not available</dd>
+	<dt><a href="http://accesstechnology.org.uk/">Suite of accessible web applications</a></dt>
+		<dd>ACCESS: Technology</dd>
 		<dd>date not available</dd>
 	</dl>
 </div>
