@@ -57,9 +57,9 @@ if (empty($single)):
 			<input type="text" name="url_long" id="urlLong" size="50" class="input1" placeholder="http://" required aria-required="true" />
 			<span id="urlService">
 				<span id="urlServiceLabel"><?php echo $xliff_reader->get('write-tweet-service'); ?></span>
-				<input type="radio" name="urlService" id="bitly" value="bitly" aria-describedby="urlServiceLabel" />
+				<input type="radio" name="urlService" id="bitly" value="bitly" aria-describedby="urlServiceLabel" checked="checked" />
 				<label for="bitly">bit.ly</label>
-				<input type="radio" name="urlService" id="webaim" value="webaim" checked="checked" aria-describedby="urlServiceLabel" />
+				<input type="radio" name="urlService" id="webaim" value="webaim" aria-describedby="urlServiceLabel" />
 				<label for="webaim">weba.im</label>
 			</span>
 			<button type="submit" id="btnShorten" class="btn3"><?php echo $xliff_reader->get('write-tweet-shorten'); ?></button>
