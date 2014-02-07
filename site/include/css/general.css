@@ -220,7 +220,7 @@ input[type=text], textarea {
 }
 button:focus,
 textarea:focus,
-input:focus {
+input[type='text']:focus {
 	border-color: #fc6;
 	outline: none;
 }
