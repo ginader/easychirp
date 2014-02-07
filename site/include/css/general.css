@@ -218,9 +218,6 @@ input[type=text], textarea {
 	padding: .25rem;
 	margin: .25rem 0;
 }
-a:focus {
-	outline: 1px dotted #666; 
-}
 button:focus,
 textarea:focus,
 input:focus {
@@ -919,7 +916,11 @@ a.btnOptionsUser,
 	color: #c00;
 }
 .favorited,
-.retweeted {
+.retweeted,
+a.favorited:hover,
+a.retweeted:hover,
+a.favorited:focus,
+a.retweeted:focus {
 	background-color: #ff9;
 }
 #span-user-blocked {
