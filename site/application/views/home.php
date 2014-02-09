@@ -125,10 +125,10 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
 	<ul>
-		<li>Add "Get Older Tweets" to rest of pages; only on main timeline.</li>
-		<li>Timestamps on tweets may be incorrect.</li>
+		<li>Pagination missing in some areas such as search results.</li>
+		<li>Tweets times missing AM/PM.</li>
 		<li>Make main menu more keyboard/touch accessible.</li>
-		<li>Add language selection; Spanish probably first.</li>
+		<li>Shorten URL feature may report invalid URL when it is not invalid.</li>
 	</ul>
 </div>
 
