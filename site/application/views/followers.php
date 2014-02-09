@@ -13,7 +13,8 @@ if (count($f->users) == 0):
 	echo '<p>' . $xliff_reader->get('followers-none') . '</p>';
 endif;
 ?>
-<p class="marginAdjustment"><?php echo anchor('/user/' . $screen_name, $screen_name ); ?>  is followed by these users. (<?php echo anchor('/following/' . $screen_name, 'View Following'); ?>)</p>
+<p class="marginAdjustment"><?php echo anchor('/user/' . $screen_name, $screen_name ); ?>  is followed by these users. 
+	(<?php echo anchor('/following/' . $screen_name, $xliff_reader->get('followers-view-following')); ?>)</p>
 
 <?php
 foreach ($f->users as $user):

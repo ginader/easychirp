@@ -12,7 +12,7 @@ if ($screen_name !== $this->session->userdata('screen_name'))
 	<p><?php echo $xliff_reader->get('following-none'); ?></p>
 <?php else: ?>
 	<p class="marginAdjustment"><?php echo anchor('/user/' . $screen_name, $screen_name); ?> is following these users. 
-	(<?php echo anchor('/followers/' . $screen_name, 'View Followers'); ?>)
+	(<?php echo anchor('/followers/' . $screen_name, $xliff_reader->get('followers-view-followers')); ?>)
 <?php endif; ?>
 
 <?php

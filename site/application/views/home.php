@@ -88,14 +88,12 @@
 
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-what-tweeting'); ?></h2>
-
 	<?php 
 	if ($favorites) {
 		echo $favorites;
 	}
 	?>
-
-	<p>Tweets about Easy Chirp are archived via <a href="https://twitter.com/EasyChirp/favorites" rel="external" target="_blank">Easy Chirp's Twitter favorites</a>.</p>
+	<p><?php echo $xliff_reader->get('home-easychirp-fav-link'); ?></p>
 </div>
 
 <div class="box1 rounded">
@@ -109,7 +107,7 @@
         <li><?php echo $xliff_reader->get('home-features-thread'); ?></li>
         <li><?php echo $xliff_reader->get('home-features-devices'); ?></li>
       </ul>
-      <p><a href="/features">More Features</a></p>
+      <p><a href="/features"><?php echo $xliff_reader->get('features-more'); ?></a></p>
 </div>
 
 <div class="box1 rounded">

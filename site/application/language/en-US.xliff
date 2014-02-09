@@ -517,6 +517,11 @@
         <target>What People Are Tweeting</target>
       </trans-unit>
 
+      <trans-unit id="home-easychirp-fav-link" datatype="html">
+        <source>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</source>
+        <target>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-features" datatype="html">
         <source>Notable Features</source>
         <target>Notable Features</target>
@@ -667,6 +672,11 @@
         <target>You are not following anyone.</target>
       </trans-unit>
 
+      <trans-unit id="followers-view-followers" datatype="html">
+        <source>View Followers</source>
+        <target>View Followers</target>
+      </trans-unit>
+
       <!-- FOLLOWERS -->
 
       <trans-unit id="followers-h1" datatype="html">
@@ -677,6 +687,11 @@
       <trans-unit id="followers-none" datatype="html">
         <source>You are not followed by anyone.</source>
         <target>You are not followed by anyone.</target>
+      </trans-unit>
+
+      <trans-unit id="followers-view-following" datatype="html">
+        <source>View Following</source>
+        <target>View Following</target>
       </trans-unit>
 
       <!-- GO TO USER -->
@@ -1284,6 +1299,11 @@
         <target>Features</target>
       </trans-unit>
 
+      <trans-unit id="features-more" datatype="html">
+        <source>More Features</source>
+        <target>More Features</target>
+      </trans-unit>
+
       <!-- a11y features -->
 
       <trans-unit id="features-a11y-h2" datatype="html">
@@ -1880,6 +1900,11 @@
       <trans-unit id="gbl-tweet-remove-fav" datatype="html">
         <source>remove favorite</source>
         <target>remove favorite</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-times" datatype="html">
+        <source>times</source>
+        <target>times</target>
       </trans-unit>
 
       <!-- USER -->

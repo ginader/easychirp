@@ -509,12 +509,17 @@
 
       <trans-unit id="home-articles-more" datatype="html">
         <source>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</source>
-        <target>Lesen Sie mehr über Artikel &amp; Rückmeldungen.</target>
+        <target>Lesen Sie mehr über &lt;a href=&quot;/articles&quot;&gt;Artikel &amp; Rückmeldungen&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-what-tweeting" datatype="html">
         <source>What People Are Tweeting</source>
         <target>Was andere Leute tweeten</target>
+      </trans-unit>
+
+      <trans-unit id="home-easychirp-fav-link" datatype="html">
+        <source>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</source>
+        <target>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="home-h2-features" datatype="html">
@@ -667,6 +672,11 @@
         <target>Sie haben noch keine Freunde.</target>
       </trans-unit>
 
+      <trans-unit id="followers-view-followers" datatype="html">
+        <source>View Followers</source>
+        <target>View Followers</target>
+      </trans-unit>
+
       <!-- FOLLOWERS -->
 
       <trans-unit id="followers-h1" datatype="html">
@@ -677,6 +687,11 @@
       <trans-unit id="followers-none" datatype="html">
         <source>You are not followed by anyone.</source>
         <target>Sie sind nicht von jedermann befolgt.</target>
+      </trans-unit>
+
+      <trans-unit id="followers-view-following" datatype="html">
+        <source>View Following</source>
+        <target>View Following</target>
       </trans-unit>
 
       <!-- GO TO USER -->
@@ -1249,7 +1264,7 @@
 
       <trans-unit id="articles-books-webforeveryone" datatype="html">
         <source>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</source>
-        <target>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</target>
+        <target>Einfach Chirp in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;Ein Web für alle: Entwerfen Barrierebenutzererlebnis&lt;/a&gt; von Sarah Horton und Whitney Quesenbery. Veröffentlicht von Rosenfeld Medien.</target>
       </trans-unit>
 
       <trans-unit id="articles-books-thetwitter" datatype="html">
@@ -1292,6 +1307,11 @@
       <trans-unit id="features-h1" datatype="html">
         <source>Features</source>
         <target>Funktionen</target>
+      </trans-unit>
+
+      <trans-unit id="features-more" datatype="html">
+        <source>More Features</source>
+        <target>Weitere Funktionen</target>
       </trans-unit>
 
       <!-- a11y features -->
@@ -1890,6 +1910,11 @@
       <trans-unit id="gbl-tweet-remove-fav" datatype="html">
         <source>remove favorite</source>
         <target>favorit lösen</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-times" datatype="html">
+        <source>times</source>
+        <target>mal</target>
       </trans-unit>
 
       <!-- USER -->

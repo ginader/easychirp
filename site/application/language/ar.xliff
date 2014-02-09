@@ -40,22 +40,22 @@
 
       <trans-unit id="gbl-theme-select" datatype="html">
         <source>Select a Theme</source>
-        <target>Select a Theme</target>
+        <target>اختيار الموضوع</target>
       </trans-unit>
 
       <trans-unit id="gbl-theme-light" datatype="html">
         <source>Light Theme</source>
-        <target>Light Theme</target>
+        <target>الموضوع ذات الألوان الفاتحة</target>
       </trans-unit>
 
       <trans-unit id="gbl-theme-dark" datatype="html">
         <source>Dark Theme</source>
-        <target>Dark Theme</target>
+        <target>موضوع داكنة اللون</target>
       </trans-unit>
 
       <trans-unit id="gbl-theme-current" datatype="html">
         <source>current</source>
-        <target>current</target>
+        <target>حالي</target>
       </trans-unit>
 
       <!-- ALERTS/MESSAGES -->
@@ -517,6 +517,11 @@
         <target>بِمَ يُغرِّد الناس؟</target>
       </trans-unit>
 
+      <trans-unit id="home-easychirp-fav-link" datatype="html">
+        <source>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</source>
+        <target>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-features" datatype="html">
         <source>Notable Features</source>
         <target>السمات البارزة.</target>
@@ -667,6 +672,11 @@
         <target>أنت لا تتابع أي شخص.</target>
       </trans-unit>
 
+      <trans-unit id="followers-view-followers" datatype="html">
+        <source>View Followers</source>
+        <target>عرض المتابعون</target>
+      </trans-unit>
+
       <!-- FOLLOWERS -->
 
       <trans-unit id="followers-h1" datatype="html">
@@ -677,6 +687,11 @@
       <trans-unit id="followers-none" datatype="html">
         <source>You are not followed by anyone.</source>
         <target>لم يتم اتباع لك من قبل أي شخص.</target>
+      </trans-unit>
+
+      <trans-unit id="followers-view-following" datatype="html">
+        <source>View Following</source>
+        <target>العرض التالي</target>
       </trans-unit>
 
       <!-- GO TO USER -->
@@ -1284,6 +1299,11 @@
         <target>خصائص</target>
       </trans-unit>
 
+      <trans-unit id="features-more" datatype="html">
+        <source>More Features</source>
+        <target>مزيد من الميزات</target>
+      </trans-unit>
+
       <!-- a11y features -->
 
       <trans-unit id="features-a11y-h2" datatype="html">
@@ -1880,6 +1900,11 @@
       <trans-unit id="gbl-tweet-remove-fav" datatype="html">
         <source>remove favorite</source>
         <target>إزالة المفضلة</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-times" datatype="html">
+        <source>times</source>
+        <target>مرات</target>
       </trans-unit>
 
       <!-- USER -->

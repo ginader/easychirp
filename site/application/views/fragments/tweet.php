@@ -102,7 +102,7 @@ foreach($tweets AS $tweet):
 			echo 'Retweeted 1 time. | ';
 		}
 		else if ($tweet->retweet_count > 1) {
-			echo 'Retweeted '.$tweet->retweet_count.' times. | ';
+			echo 'Retweeted '.$tweet->retweet_count.' '.$xliff_reader->get('gbl-tweet-times').'. | ';
 		}
 
 		?>

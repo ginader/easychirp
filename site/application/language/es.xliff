@@ -518,6 +518,11 @@
         <target>Lo que la gente esta tweetiando</target>
       </trans-unit>
 
+      <trans-unit id="home-easychirp-fav-link" datatype="html">
+        <source>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</source>
+        <target>Tweets sobre Easy Chirp se archivan a través de &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;favoritos de Twitter de Easy Chirp&lt;/a&gt;.</target>
+      </trans-unit>
+
       <trans-unit id="home-h2-features" datatype="html">
         <source>Notable Features</source>
         <target>Caracteristicas Notables</target>
@@ -668,6 +673,11 @@
         <target>Usted no está siguiendo a nadie.</target>
       </trans-unit>
 
+      <trans-unit id="followers-view-followers" datatype="html">
+        <source>View Followers</source>
+        <target>Ver Seguidores</target>
+      </trans-unit>
+
       <!-- FOLLOWERS -->
 
       <trans-unit id="followers-h1" datatype="html">
@@ -678,6 +688,11 @@
       <trans-unit id="followers-none" datatype="html">
         <source>You are not followed by anyone.</source>
         <target>Usted no se ha seguido por cualquier persona.</target>
+      </trans-unit>
+
+      <trans-unit id="followers-view-following" datatype="html">
+        <source>View Following</source>
+        <target>Ver Siguiendo</target>
       </trans-unit>
 
       <!-- GO TO USER -->
@@ -1250,17 +1265,17 @@
 
       <trans-unit id="articles-books-webforeveryone" datatype="html">
         <source>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</source>
-        <target>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</target>
+        <target>Easy Chirp se menciona en &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;Una Web para todos: Diseñando Experiencias de usuarios con acceso para&lt;/a&gt; para por Sarah Horton y Whitney Quesenbery. Publicado por Rosenfeld Media.</target>
       </trans-unit>
 
       <trans-unit id="articles-books-thetwitter" datatype="html">
         <source>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</source>
-        <target>Easy Chirp esta mencionado en &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;El Libro de Twitter&lt;/em&gt;&lt;/a&gt;, ahora en la segunda edicion! Vea la primera pagina de la sección "Vamos a Empezar". Sigue a la coautora Sarah Milstein (@SarahM).</target>
+        <target>Easy Chirp se menciona en &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;El Libro de Twitter&lt;/em&gt;&lt;/a&gt;, ahora en la segunda edicion! Vea la primera pagina de la sección "Vamos a Empezar". Sigue a la coautora Sarah Milstein (@SarahM).</target>
       </trans-unit>
 
       <trans-unit id="articles-books-finnish" datatype="html">
         <source>Accessible Twitter is mentioned in &lt;a href=&quot;http://www.twitterkirja.fi/kirja/&quot;&gt;N&amp;auml;in k&amp;auml;yt&amp;auml;t Twitteri&amp;auml;&lt;/a&gt; (How to Use Twitter). A book written in Finnish by author &lt;a href=&quot;http://www.fiikus.net/&quot;&gt;Maija Haavisto&lt;/a&gt; (@DiamonDie).</source>
-        <target>Twitter Accesible es mencionado en Näin käytät Twitteriä (Como Usar Twitter). Un libro escrito en Finnish por el autor Maija Haavisto (@DiamonDie).</target>
+        <target>Twitter Accesible se menciona en Näin käytät Twitteriä (Como Usar Twitter). Un libro escrito en Finnish por el autor Maija Haavisto (@DiamonDie).</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-user" datatype="html">
@@ -1293,6 +1308,11 @@
       <trans-unit id="features-h1" datatype="html">
         <source>Features</source>
         <target>Caracter&#237;sticas</target>
+      </trans-unit>
+
+      <trans-unit id="features-more" datatype="html">
+        <source>More Features</source>
+        <target>Más funciones</target>
       </trans-unit>
 
       <!-- a11y features -->
@@ -1891,6 +1911,11 @@
       <trans-unit id="gbl-tweet-remove-fav" datatype="html">
         <source>remove favorite</source>
         <target>eliminar favorito</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-times" datatype="html">
+        <source>times</source>
+        <target>veces</target>
       </trans-unit>
 
       <!-- USER -->
