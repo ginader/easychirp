@@ -30,31 +30,12 @@ class EC_Controller extends CI_Controller {
 			$active_theme = $this->config->item('active_theme');
 		}
 
-		if ( ! $this->session->userdata('lang_code'))
-		{
-			$lang_code = $this->config->item('site_language');
-			$this->session->set_userdata('lang_code', $lang_code);
-		}
-		else
-		{
-			$lang_code = $this->session->userdata('lang_code');
-		}
-
+		$lang_code = $this->session->userdata('lang_code');
 		if ( ! $lang_code)
 		{
 			$lang_code = $this->config->item('site_language');
 		}
 
-
-		$user_languages = $this->get_user_languages();
-		foreach ($user_languages AS $lang)
-		{
-			if ( isset(  $supported[ $lang ]  ) )
-			{
-				$lang_code = $lang;
-				break;
-			}
-		}
 
 		log_message('info', 'Before xliff->load lang_code=' . $lang_code);
 		$this->xliff_reader->load( $lang_code );
