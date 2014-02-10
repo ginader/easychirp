@@ -248,7 +248,7 @@ $('a[rel=modal]').click(function(e) {
 	
 	// Focus mgmt
 	if (id=="#search_quick") {
-		$("#query").focus();
+		$("#query2").focus();
 	}
 	else if (id=="#go_to_user") {
 		$("#goUser").focus();
@@ -282,6 +282,10 @@ $('a[rel=modal]').click(function(e) {
 	    }
 	});
 });
+// Rename id/label in modal to avoid collision on Search page
+$(".modal #frmSearch label").attr('for','query2');
+$(".modal #frmSearch input").attr('id','query2');
+
 // Resize modal when window resized
 $(window).resize(function () {
 	var id = $('.modal');
