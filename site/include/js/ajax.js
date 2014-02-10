@@ -136,7 +136,7 @@ $('.frmListAddMember').submit(function(e) {
 
 	e.preventDefault();
 
-	var url_send = "http://easychirp.local/list_add_member/true";
+	var url_send = "/list_add_member/true";
 	var data = $(this).serialize();
 	var AlertAdded = $("#myLists").attr("data-msg-list-added");
 
