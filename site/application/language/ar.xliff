@@ -36,6 +36,16 @@
         <target>العد المدرجة</target>
       </trans-unit>
 
+      <trans-unit id="gbl-required" datatype="html">
+        <source>(required)</source>
+        <target>مطلوب</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-at-username" datatype="html">
+        <source>@UserName</source>
+        <target>@اسم المستخدم</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">
@@ -701,11 +711,6 @@
         <target>انتقل إلى مستخدم</target>
       </trans-unit>
 
-      <trans-unit id="gotouser-username" datatype="html">
-        <source>@UserName</source>
-        <target>اسم المستخدم</target>
-      </trans-unit>
-
       <trans-unit id="gotouser-timeline" datatype="html">
         <source>Timeline</source>
         <target>الخط الزمني</target>
@@ -821,11 +826,6 @@
       <trans-unit id="lists-add-mem" datatype="html">
         <source>Add Member</source>
         <target>إضافة عضو</target>
-      </trans-unit>
-
-      <trans-unit id="lists-add-placeholder" datatype="html">
-        <source>@UserName</source>
-        <target>@UserName</target>
       </trans-unit>
 
       <trans-unit id="lists-add-submit" datatype="html">

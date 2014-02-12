@@ -40,7 +40,7 @@ if (isset($_GET["action"])) {
 	</div>
 	<div class="row">
 		<fieldset>
-			<legend><?php echo $xliff_reader->get('lists-create-privacy'); ?> <span class="normalText">(required)</span></legend>
+			<legend><?php echo $xliff_reader->get('lists-create-privacy'); ?> <span class="normalText"><?php echo $xliff_reader->get('gbl-required'); ?></span></legend>
 			<input value="public" id="modePublic" name="mode" type="radio" /> <label for="modePublic"><?php echo $xliff_reader->get('lists-create-privacy-public'); ?></label> &nbsp;  
 			<input value="private" id="modePrivate" name="mode" type="radio" checked="checked" /> <label for="modePrivate"><?php echo $xliff_reader->get('lists-create-privacy-private'); ?></label>
 		</fieldset>
@@ -71,7 +71,7 @@ if (count($myLists->lists) != 0) {
 	<dd><a href="/list_subscribers/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->subscriber_count; ?></a></dd>
 	
 	<dt><?php echo $xliff_reader->get('lists-mems'); ?></dt>
-	<dd><a href="/list_members/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->member_count; ?></a></dd>
+	<dd class="memCnt"><a href="/list_members/<?php echo $lists->user->screen_name; ?>/<?php echo $lists->id; ?>/<?php echo $lists->name; ?>"><?php echo $lists->member_count; ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-mode'); ?></dt>
 	<dd><?php echo $lists->mode; ?></dd>
@@ -81,7 +81,7 @@ if (count($myLists->lists) != 0) {
 		<form action="/list_add_member/false" method="post" class="frmListAddMember">
 			<input type="hidden" name="listSlug" value="<?php echo $lists->slug; ?>" />
 			<input type="hidden" name="lstid" value="<?php echo $lists->id; ?>" />
-			<input type="text" size="11" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('lists-add-placeholder'); ?>" required aria-required="true" />
+			<input type="text" size="11" name="userNameToAdd" value="" id="add<?php echo $lists->id; ?>" placeholder="<?php echo $xliff_reader->get('gbl-at-username'); ?>" required aria-required="true" />
 			<button type="submit" class="btnSmall"><?php echo $xliff_reader->get('lists-add-submit'); ?></button>
 		</form>
 	</dd>
