@@ -55,7 +55,8 @@ th, td {
     padding-right: 0;
 }
 
-.tweet {
+.tweet,
+.follow {
 	padding: 0.5rem 74px 0.5rem 0.5rem;
 }
 .tweet .tweetAvatar, 
