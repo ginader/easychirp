@@ -26,7 +26,7 @@ if (isset($action)) {
 		data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
 		data-error-empty="<?php echo $xliff_reader->get('error-dm-empty'); ?>"
 		data-error-tweep-empty="<?php echo $xliff_reader->get('error-tweep-empty'); ?>">
-		<h3 class="fl"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
+		<h3 id="dm-label-tweep"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
 		<div id="enterTweep">
 			<input type="text" size="18" id="tweep" name="tweep" class="input1" required aria-required="true" value="<?php
 			// Output screen_name if defined

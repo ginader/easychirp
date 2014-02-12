@@ -783,6 +783,9 @@ button:hover, button:focus,
 .dm .dmActions {
 	margin-bottom: -.15rem;
 }
+#dm-label-tweep {
+	float: left;
+}
 .tweet .tweetAvatar,
 .follow .tweetAvatar {
 	width: 48px;

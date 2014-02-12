@@ -46,8 +46,13 @@ th, td {
 	margin-right: .5em;
 }
 
-#enterTweet textarea {
+#enterTweet textarea,
+#frmDirectMessage textarea {
 	float: right;
+}
+#enterTweet h2 span {
+    padding-left: 0.5rem;
+    padding-right: 0;
 }
 
 .tweet {
@@ -66,6 +71,14 @@ th, td {
 }
 /* options */
 .tweet li {
+	float: right;
+}
+
+#enterTweep {
+	float: right;
+	padding: .5em .5em 0 0;
+}
+#dm-label-tweep {
 	float: right;
 }
 
