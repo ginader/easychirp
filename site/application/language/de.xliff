@@ -1790,39 +1790,39 @@
 
       <trans-unit id="search-h2-saved" datatype="html">
         <source>Saved Searches</source>
-        <target>Saved Searches</target>
+        <target>gespeicherte Suchen</target>
       </trans-unit>
 
       <trans-unit id="search-saved-none" datatype="html">
         <source>None found.</source>
-        <target>None found.</target>
+        <target>Keine gefunden.</target>
       </trans-unit>
 
       <trans-unit id="search-h2-users" datatype="html">
         <source>Search Users</source>
-        <target>Search Users</target>
+        <target>Suche Mitglieder</target>
       </trans-unit>
 
       <trans-unit id="search-users-query" datatype="html">
         <source>Enter search user term:</source>
-        <target>Enter search user term:</target>
+        <target>Geben Sie Such Benutzer tige:</target>
       </trans-unit>
 
       <trans-unit id="search-users-submit" datatype="html">
         <source>Search Users</source>
-        <target>Search Users</target>
+        <target>Suche Mitglieder</target>
       </trans-unit>
 
       <!-- SEARCH RESULTS -->
 
       <trans-unit id="search-results-h1" datatype="html">
         <source>Search Results</source>
-        <target>Search Results</target>
+        <target>Suchergebnisse</target>
       </trans-unit>
 
       <trans-unit id="search-results-save-this" datatype="html">
         <source>save this search</source>
-        <target>save this search</target>
+        <target>Diese Suche speichern</target>
       </trans-unit>
 
       <!-- THE TWEETS -->

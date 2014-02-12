@@ -1806,7 +1806,7 @@
 
       <trans-unit id="search-users-query" datatype="html">
         <source>Enter search user term:</source>
-        <target>Enter search user term:</target>
+        <target>Introduzca términos de búsqueda del usuario:</target>
       </trans-unit>
 
       <trans-unit id="search-users-submit" datatype="html">
@@ -1823,7 +1823,7 @@
 
       <trans-unit id="search-results-save-this" datatype="html">
         <source>save this search</source>
-        <target>save this search</target>
+        <target>guardar esta búsqueda</target>
       </trans-unit>
 
       <!-- THE TWEETS -->
