@@ -1,10 +1,10 @@
 <?php
 if (isset($_GET["action"])) {
 	if ($_GET["action"] == "favorite_created") {
-		echo '<div class="msgBoxPos rounded">This tweet is now a favorite.</div>';
+		echo '<div class="msgBoxPos rounded">' . $xliff_reader->get('gbl-tweet-fav-alert-added') . '</div>';
 	}
 	elseif ($_GET["action"] == "favorite_destroyed") {
-		echo '<div class="msgBoxPos rounded">This tweet is no longer a favorite.</div>';
+		echo '<div class="msgBoxPos rounded">' . $xliff_reader->get('gbl-tweet-fav-alert-removed') . '</div>';
 	}
 }
 ?>
