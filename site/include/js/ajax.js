@@ -352,7 +352,8 @@ $('a[href*="search_save"]').click(function(e) {
 // Ajax for shortening a URL
 
 // Clear shortened URL
-$('<a href="#" id="urlClear">Clear</a>').insertAfter('#btnShorten');
+var txtClear = $("#frmUrlShort").attr("data-clear");
+$('<a href="#" id="urlClear">'+txtClear+'</a>').insertAfter('#btnShorten');
 $('#urlClear').click(function() {
 	$('#urlLong').val("");
 	$('#urlLong').focus();

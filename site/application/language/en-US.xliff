@@ -46,6 +46,11 @@
         <target>@UserName</target>
       </trans-unit>
 
+      <trans-unit id="gbl-clear" datatype="html">
+        <source>Clear</source>
+        <target>Clear</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">
