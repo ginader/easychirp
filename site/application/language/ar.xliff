@@ -654,6 +654,18 @@
         <target>مُرسل</target>
       </trans-unit>
 
+      <!-- STATUS/SINGLE TWEET -->
+
+      <trans-unit id="status-h1" datatype="html">
+        <source>View Single Tweet</source>
+        <target>View Single Tweet</target>
+      </trans-unit>
+
+      <trans-unit id="status-on-twitter" datatype="html">
+        <source>This tweet on Twitter</source>
+        <target>This tweet on Twitter</target>
+      </trans-unit>
+
       <!-- DIRECT MESSAGES - INBOX -->
 
       <trans-unit id="dm-inbox-h1" datatype="html">
