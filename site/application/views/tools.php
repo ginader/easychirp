@@ -1,7 +1,7 @@
 <h1 class="rounded"><?php echo $xliff_reader->get('nav-tools'); ?></h1>
 
 <div class="box1 rounded">
-	<h2>Select a page:</h2>
+	<h2><?php echo $xliff_reader->get('gbl-select-page'); ?></h2>
 	<ul>
 		<li><a href="/go_to_user" rel="modal"><?php echo $xliff_reader->get('nav-goto-user'); ?></a></li>
 		<li><a href="/search"><?php echo $xliff_reader->get('nav-search'); ?></a></li>
