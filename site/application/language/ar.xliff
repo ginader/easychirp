@@ -48,24 +48,24 @@
 
       <trans-unit id="gbl-clear" datatype="html">
         <source>Clear</source>
-        <target>Clear</target>
+        <target>إمسح</target>
       </trans-unit>
 
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">
         <source>Select a Theme</source>
-        <target>اختيار الموضوع</target>
+        <target>Select a Theme</target>
       </trans-unit>
 
       <trans-unit id="gbl-theme-light" datatype="html">
         <source>Light Theme</source>
-        <target>الموضوع ذات الألوان الفاتحة</target>
+        <target>إعدادات فاتحة</target>
       </trans-unit>
 
       <trans-unit id="gbl-theme-dark" datatype="html">
         <source>Dark Theme</source>
-        <target>موضوع داكنة اللون</target>
+        <target>إعدادات غامقة</target>
       </trans-unit>
 
       <trans-unit id="gbl-theme-current" datatype="html">
@@ -663,7 +663,7 @@
 
       <trans-unit id="status-on-twitter" datatype="html">
         <source>This tweet on Twitter</source>
-        <target>This tweet on Twitter</target>
+        <target>هذه التغريدة على تويتر</target>
       </trans-unit>
 
       <!-- DIRECT MESSAGES - INBOX -->
@@ -1797,27 +1797,27 @@
 
       <trans-unit id="search-h2-saved" datatype="html">
         <source>Saved Searches</source>
-        <target>Saved Searches</target>
+        <target>كلمات البحث المحفوضة</target>
       </trans-unit>
 
       <trans-unit id="search-saved-none" datatype="html">
         <source>None found.</source>
-        <target>None found.</target>
+        <target>لم يطابق أي مستندات</target>
       </trans-unit>
 
       <trans-unit id="search-h2-users" datatype="html">
         <source>Search Users</source>
-        <target>Search Users</target>
+        <target>ابحث عن مستخدم</target>
       </trans-unit>
 
       <trans-unit id="search-users-query" datatype="html">
         <source>Enter search user term:</source>
-        <target>Enter search user term:</target>
+        <target>أدخل مصطلح البحث</target>
       </trans-unit>
 
       <trans-unit id="search-users-submit" datatype="html">
         <source>Search Users</source>
-        <target>Search Users</target>
+        <target>ابحث عن مستخدم</target>
       </trans-unit>
 
       <!-- SEARCH RESULTS -->
@@ -1938,7 +1938,7 @@
 
       <trans-unit id="user-pic-alt" datatype="html">
         <source>avatar</source>
-        <target>avatar</target>
+        <target>صورة رمزية</target>
       </trans-unit>
 
       <trans-unit id="user-h2-contact" datatype="html">
@@ -2015,7 +2015,7 @@
 
       <trans-unit id="footer-h2" datatype="html">
         <source>Footer</source>
-        <target>Footer</target>
+        <target>مؤخرة</target>
       </trans-unit>
 
     </body>
