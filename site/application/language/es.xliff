@@ -48,7 +48,12 @@
 
       <trans-unit id="gbl-clear" datatype="html">
         <source>Clear</source>
-        <target>Clear</target>
+        <target>borrar</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-pag-tweets" datatype="html">
+        <source>Get Older Tweets</source>
+        <target>Obtenga Más</target>
       </trans-unit>
 
       <!-- SELECT THEME -->

@@ -51,6 +51,11 @@
         <target>Clear</target>
       </trans-unit>
 
+      <trans-unit id="gbl-pag-tweets" datatype="html">
+        <source>Get Older Tweets</source>
+        <target>Get Older Tweets</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">

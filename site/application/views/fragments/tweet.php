@@ -172,7 +172,7 @@ endforeach;
 	if (isset($paginate) && $paginate):
 ?>
 	<div class="box1 rounded load-more">
-		<a href="<?php echo $pagination_path . $last_id; ?>" class="button load_more" >Get Older Tweets</a>
+		<a href="<?php echo $pagination_path . $last_id; ?>" class="button load_more"><?php echo $xliff_reader->get('gbl-pag-tweets'); ?></a>
 	</div>
 <?php
 	endif;
