@@ -840,6 +840,13 @@ button:hover, button:focus,
 .tweetSingle {
 	margin: 1rem 0 -1rem;
 }
+.content .twtInfo li {
+	background-image: none;
+	margin: 0 0 1em;
+}
+/*.content .twtInfo li:not(:last-child):after {
+	content: " | ";
+}*/
 
 /* tweet/user option buttons etc */
 .btnOptions {

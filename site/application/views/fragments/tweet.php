@@ -81,25 +81,29 @@ foreach($tweets AS $tweet):
 
 	echo $tweet_text;
 	?></q>
-	<?php if (isset($tweet->user)):
+
+	<?php 
+	if ($this->session->userdata('lang_code') != 'ar') { 
 		$tweet_title = $tweet->user->name . '; followers ' . $tweet->user->followers_count . '; following ' . $tweet->user->friends_count;
 	?>
-	<p><?php echo $xliff_reader->get('gbl-from'); ?>
-	<a href="/user/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet_title; ?>"> <?php echo $tweet->user->screen_name; ?></a>
+		<p><?php echo $xliff_reader->get('gbl-from'); ?>
+		<a href="/user/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet_title; ?>"><?php echo $tweet->user->screen_name; ?></a>
 		| <a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a> |
-	<?php endif; ?>
+	
 		<?php
 		// Is reply or retweet?
 		if ($isReply) {
-			echo ' <a rel="response" title="View the tweet to which this tweet is responding" href="/status/'.$tweet->in_reply_to_status_id.'">' . $xliff_reader->get('gbl-tweet-responding') . '</a> | ';
+			echo ' <a rel="response" href="/status/'.$tweet->in_reply_to_status_id.'">' . $xliff_reader->get('gbl-tweet-responding') . '</a> | ';
 		}
 		if ($isRetweet) {
-			echo ' <a rel="retweet" title="View the original tweet (this is a retweet)" href="/status/'.$tweet->retweeted_status->id.'">' . $xliff_reader->get('gbl-tweet-retweet') . '</a> | ';
+			echo ' <a rel="retweet" href="/status/'.$tweet->retweeted_status->id.'">' . $xliff_reader->get('gbl-tweet-retweet') . '</a> | ';
 		}
+		// title="View the tweet to which this tweet is responding"
+		// title="View the original tweet (this is a retweet)"
 
 		// Has been retweeted?
 		if ($tweet->retweet_count == 1) {
-			echo 'Retweeted 1 time. | ';
+			echo '1 Retweet | ';
 		}
 		else if ($tweet->retweet_count > 1) {
 			echo 'Retweeted '.$tweet->retweet_count.' '.$xliff_reader->get('gbl-tweet-times').'. | ';
@@ -107,6 +111,29 @@ foreach($tweets AS $tweet):
 
 		?>
 		via <?php echo $tweet->source; ?></p>
+	<?php 
+	}
+	// ARABIC VERSION
+	else { ?>
+
+		<ul class="twtInfo clearfix">
+			<li><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user/<?php echo $tweet->user->screen_name; ?>"><?php echo $tweet->user->screen_name; ?></a></li>
+			<li><a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a></li>
+			<?
+			if ($isReply) {
+				echo '<li><a rel="response" href="/status/'.$tweet->in_reply_to_status_id.'">' . $xliff_reader->get('gbl-tweet-responding') . '</a></li>';
+			}
+			if ($isRetweet) {
+				echo '<li><a rel="retweet" href="/status/'.$tweet->retweeted_status->id.'">' . $xliff_reader->get('gbl-tweet-retweet') . '</a></li>';
+			}
+			?>
+			<li><?php echo $tweet->source; ?></li>
+		</ul>
+
+	<?php
+	}
+	?>
+
 	<div class="btnOptions">
 		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?>"><span aria-hidden="true" class="icon-gear"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?></span></a></h3>
 		<ul id="tweetOptions_<?php echo $index; ?>">

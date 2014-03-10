@@ -74,6 +74,14 @@ th, td {
 .tweet li {
 	float: right;
 }
+.btnOptions h3 {
+	padding-right: 0;
+	padding-left: .5rem;
+}
+.js .tweet .btnOptions li {
+	margin-right: 0;
+	margin-left: .5rem;
+}
 
 #enterTweep {
 	float: right;
