@@ -663,7 +663,7 @@
 
       <trans-unit id="status-h1" datatype="html">
         <source>View Single Tweet</source>
-        <target>View Single Tweet</target>
+        <target>عرض واحدة تويت</target>
       </trans-unit>
 
       <trans-unit id="status-on-twitter" datatype="html">
