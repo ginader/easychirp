@@ -4,9 +4,6 @@ if (isset($single) && $single)
 {
 	$classes .= ' single';
 }
-
-
-
 ?>
 <div id="enterTweet" class="<?php echo $classes; ?>">
 <?php 
@@ -25,7 +22,7 @@ if (empty($single)):
 	data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
 		<p id="charlimit">
 			<span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span>
-			<strong id="displayCharCountNumber" aria-live="polite"></strong>
+			<strong id="displayCharCountNumber" aria-live="polite" aria-atomic="true"></strong>
 		</p>
 		<form id="frmSubmitTweet" action="/tweet/write" method="post" class="clearfix" 
 			data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
