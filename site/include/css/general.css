@@ -1156,6 +1156,10 @@ body.theme-inverse {
 	#editProfileUpdateBtn {
 		margin-left: 35%;
 	}
+	#query, 
+	#query2 { /* search input */
+		width: 75%;
+	}
 }
 
 @media only screen and (max-width: 480px) {
