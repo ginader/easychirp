@@ -712,6 +712,10 @@ a.delete-link {
 	float: left;
 }
 
+#urlLong {
+	width: 40%;
+}
+
 /* Module **************************************************/
 
 /* Buttons */
@@ -1074,6 +1078,9 @@ body.theme-inverse {
 		display: block;
 		margin: .5rem 0;
 	}
+	#urlLong {
+		width: 65%;
+	}
 	.tweet q {
 		font-size: 1.25rem;
 		line-height: 1.6rem;
@@ -1136,7 +1143,7 @@ body.theme-inverse {
 	}
 	button,
 	button.btnPost {
-		padding: .2rem;
+		padding: .3rem;
 	}
 	#profile dt,
 	.twList dt {
