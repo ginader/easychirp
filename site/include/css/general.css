@@ -1160,6 +1160,9 @@ body.theme-inverse {
 	#query2 { /* search input */
 		width: 75%;
 	}
+	#txt_listDesc {
+		width: 90%;
+	}
 }
 
 @media only screen and (max-width: 480px) {
