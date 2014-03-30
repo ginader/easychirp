@@ -23,7 +23,12 @@ foreach ($f->users as $user):
 <div class="box1 rounded follow">
 	<div class="tweetAvatar" style="background-image:url(<?php echo $user->profile_image_url; ?>)"></div>
 	<h2><?php echo anchor('/user/'.$user->screen_name, $user->name); ?> @<?php echo $user->screen_name; ?></h2>
-	<p><?php echo $user->location . ". " . $user->description; ?></p>
+	<?php
+		if ($user->location != '') { 
+			echo '<p>' . $user->location . '</p>';
+		}
+	?>
+	<p><?php echo $user->description; ?></p>
 	<p>
 		<?php echo $xliff_reader->get('profile-dt-tweets'); ?> 
 		<?php echo anchor('/user_timeline/' . $user->screen_name, $user->statuses_count); ?> 
