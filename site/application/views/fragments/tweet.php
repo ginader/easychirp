@@ -35,7 +35,6 @@ if (isset($tweets) && sizeof($tweets) > 0):
 $i = sizeof($tweets) - 1;
 $last_id = $tweets[$i]->id;
 
-
 foreach($tweets AS $tweet):
 
 	$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
@@ -115,7 +114,6 @@ foreach($tweets AS $tweet):
 	}
 	// ARABIC VERSION
 	else { ?>
-
 		<ul class="twtInfo clearfix">
 			<li><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user/<?php echo $tweet->user->screen_name; ?>"><?php echo $tweet->user->screen_name; ?></a></li>
 			<li><a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a></li>
@@ -129,7 +127,6 @@ foreach($tweets AS $tweet):
 			?>
 			<li><?php echo $tweet->source; ?></li>
 		</ul>
-
 	<?php
 	}
 	?>
@@ -203,6 +200,10 @@ endforeach;
 	</div>
 <?php
 	endif;
+else:
+	echo '<div class="box1 rounded">';
+	echo '<p style="margin: 1rem 0 .5rem;">' . $xliff_reader->get('search-saved-none') . '</p>';
+	echo '</div>';
 endif;
 ?>
 </div>
