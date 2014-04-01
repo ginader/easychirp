@@ -146,8 +146,13 @@ $('.frmListAddMember').submit(function(e) {
 		data: data,
 		success: function(response) {
 			alert(AlertAdded);
-			var ddMemCnt = parseInt( $("#memCnt").html() , 10) + 1;
-			$("#memCnt").html(ddMemCnt);
+
+			var et = e.target;
+			var ea = $(et).parent().parent().find(".memCnt a");
+			var ct = ea.html();
+			var ddMemCnt = parseInt(ct, 10) + 1;
+			$(ea).parent().parent().find(".memCnt a").html(ddMemCnt);
+
 		},
 		error: function(xhr) {
 			alert('Error. Status = ' + xhr.status);
