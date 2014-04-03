@@ -176,7 +176,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Send a direct message to a user
+	 * DM home/menu page
 	 *
 	 * @param string $screen_name the twitter username of the recipient.
 	 * @param string $action optional. can be one of error-not-followed, sent, error-other, deleted
@@ -193,10 +193,31 @@ class Main extends EC_Controller {
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-h1') );
-		$this->layout->set_description('Send a direct message.');
+		$this->layout->set_description('Direct message menu.');
 		$this->layout->view('direct', $this->_data);
 	}
 
+	/**
+	 * Send a direct message to a user
+	 *
+	 * @param string $screen_name the twitter username of the recipient.
+	 * @param string $action optional. can be one of error-not-followed, sent, error-other, deleted
+	 * @param string $message optional. the content of the message
+	 * @return void
+	 */
+	public function direct_send_page($screen_name = '', $action = FALSE, $message = '')
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['screen_name'] = $screen_name;
+		$this->_data['action'] = $action;
+		$this->_data['msg'] = $message;
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$this->layout->set_title( $this->xliff_reader->get('dm-h2-send') );
+		$this->layout->set_description('Send a direct message.');
+		$this->layout->view('direct_send_page', $this->_data);
+	}
 	/**
 	 * Send a direct message to a user
 	 *
@@ -213,7 +234,7 @@ class Main extends EC_Controller {
 		case "error-not-followed":
 		case "error-other":
 		case "sent":
-			$this->direct($screen_name, $action, $message);
+			$this->direct_send_page($screen_name, $action, $message);
 			break;
 
 		default:

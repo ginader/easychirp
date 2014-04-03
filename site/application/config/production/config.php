@@ -530,6 +530,11 @@ $config['tweet_menu'] = array(
 		'lang-id' => 'nav-direct-messages', 
 		'label' => '<abbr title="Direct Messages">DM</abbr>', 
 		'parent' => '')
+	,'/direct_send_page' => array(
+		'id' => 'm_direct_send', 
+		'lang-id' => 'dm-h2-send', 
+		'label' => 'Send a DM', 
+		'parent' => '/direct')
 	,'/direct_inbox' => array(
 		'id' => 'm_direct_inbox', 
 		'lang-id' => 'nav-direct-inbox', 

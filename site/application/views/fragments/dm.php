@@ -47,7 +47,7 @@ if (count($dms) != 0) {
 		echo $date;
 		?> 
 	</p>
-	<p class="dmActions"><a href="/direct/<?php 
+	<p class="dmActions"><a href="/direct_send_page/<?php 
 		if ($state == "inbox") {
 			echo $dm->sender->screen_name;
 		}
