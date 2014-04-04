@@ -27,10 +27,10 @@ class Menu_generator {
 
 	public function render_menu ($menu_id, $path, $selected_class = 'current') 
 	{
-		$menu = "<ul id=\"{$menu_id}\">\n";
+		$menu = "<ul class=\"nav-menu\" id=\"{$menu_id}\">\n";
 		foreach ($this->nodes AS $url => $item)
 		{
-			$menu .= "\t<li>";
+			$menu .= "\t<li class=\"nav-item\">";
 			if ( isset($item['children']) )
 			{
 				$css_class = ($path === $url) ? $selected_class : '';
@@ -38,7 +38,7 @@ class Menu_generator {
 				$rel = (isset($item['rel'])) ? $item['rel'] : '';
 
 				$menu .= $this->render_link($url, $item['label'], $css_class, $access_key, $rel );
-				$menu .= "\n\t<ul class=\"submenu\">";
+				$menu .= "\n\t<ul class=\"sub-nav-group\">";
 				foreach ($item['children'] AS $data)
 				{
 					$css_class = ($path === $url) ? $selected_class : '';

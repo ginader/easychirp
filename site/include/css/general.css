@@ -443,12 +443,6 @@ div.msgBoxNeg {
 #navMain li a:hover,
 #navMain li a:focus {
 	background-color:#a1d5f9;
-
-	-moz-transition: all .15s ease-out;
-	-o-transition: all .15s ease-out;
-	-webkit-transition: all .15s ease-out;
-	-ms-transition: all .15s ease-out;
-	transition: all .15s ease-out;
 }
 #navMain li a.current {
 	background-color: #a1d5f9;
@@ -489,14 +483,8 @@ div.msgBoxNeg {
 #navTweet li a:hover,
 #navTweet li a:focus {
 	color: #333;
-	border-color:#a1d5f9;
-	background-color:#a1d5f9;
-
-	-moz-transition: all .15s ease-out;
-	-o-transition: all .15s ease-out;
-	-webkit-transition: all .15s ease-out;
-	-ms-transition: all .15s ease-out;
-	transition: all .15s ease-out;
+	border-color: #a1d5f9;
+	background-color: #a1d5f9;
 }
 #navTweet > li > a.current {
 	color: #333;
@@ -513,7 +501,8 @@ div.msgBoxNeg {
 	padding-right: .2rem;
 }
 
-.submenu {
+/* MEGA MENU by Adobe **********************************************/
+.sub-nav-group {
 	display: none;
 	position: absolute;
 	clear: left;
@@ -521,18 +510,72 @@ div.msgBoxNeg {
 	width: 10rem;
 	z-index: 1;
 }
-.submenu li {
+.sub-nav-group li {
 	clear: left;
 	float: left;
 }
-.submenu li:first-child {
+.sub-nav-group li:first-child {
     padding-top: 0.5rem;
 }
-
-/* magic */
-#navTweet li:hover ul,
-#navTweet li.focused ul {
-    display: block;
+/* mega menu list */
+.nav-menu {
+	display: block;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 15;
+}
+/* a top level navigation item in the mega menu */
+.nav-item {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+/* first descendant link within a top level navigation item */
+.nav-item > a {
+	position: relative;
+	display: inline-block;
+	padding: 0.5em;
+	margin: 0 0 -1px 0;
+	border: 1px solid transparent;
+}
+/* focus/open states of first descendant link within a top level navigation item */
+.nav-item > a:focus,
+.nav-item > a.open {
+	border: 1px solid #dedede;
+}
+/* open state of first descendant link within a top level navigation item */
+.nav-item > a.open {
+	background-color: #fff;
+	border-bottom: none;
+	z-index: 1;
+}
+/* sub-navigation panel */
+.sub-nav {
+	position: absolute;
+	display: none;
+	top: 2.6em;
+	margin-top: -1px;
+}
+/* sub-navigation panel open state */
+.sub-nav.open {
+	display: block;
+}
+/* list of items within sub-navigation panel */
+.sub-nav ul {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 1em 0 0;
+	padding: 0;
+}
+/* list item within sub-navigation panel */
+.sub-nav li {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* write tweet */

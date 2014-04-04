@@ -49,7 +49,9 @@ if ($this->layout->lang_code === "ar") {
 
 	<?php if ($screen_name): ?>
 		<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-tweet-menu'); ?></h3>
+		<div id="tweet_menu_wrapper">
 		<?php echo $tweet_menu; ?>
+		</div>
 	<?php endif; ?>
 </nav>
 
@@ -126,6 +128,7 @@ if ($this->session->userdata('logged_in')) {
 </div><!--wrapper-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="/include/js/megamenu.js"></script>
 <script src="/include/js/general.js"></script>
 <script src="/include/js/ajax.js"></script>
 
