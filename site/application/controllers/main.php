@@ -664,10 +664,10 @@ class Main extends EC_Controller {
 		$action =  $_POST["goUserAction"];
 
 		if ($action == "profile") {
-			redirect( base_url() . 'user?id=' . $screen_name );
+			redirect( base_url() . 'user/' . $screen_name );
 		}
 		else {
-			redirect( base_url() . 'user_timeline?user=' . $screen_name );
+			redirect( base_url() . 'user_timeline/' . $screen_name );
 		}
 	}
 
