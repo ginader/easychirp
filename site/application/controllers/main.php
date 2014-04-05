@@ -428,6 +428,8 @@ class Main extends EC_Controller {
 			$request_param['max_id'] = $tweet_id;
 		}
 
+		$this->_data['screen_name'] = $screen_name;
+
 		$pagination_path = '/favorites/' . $request_param['screen_name'] . '/';
 
 		$tweets = $this->twitter_lib->get('favorites/list', $request_param );

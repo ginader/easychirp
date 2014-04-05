@@ -1,8 +1,9 @@
 <h1 class="rounded">
 <?php 
 echo $xliff_reader->get('favorites-h1');
-if ( isset($_GET["id"])) {
-	echo ' : ' . $_GET["id"];
+if ($screen_name !== $this->session->userdata('screen_name')) 
+{
+	echo ' : @' . $screen_name;
 }
 ?>
 </h1>

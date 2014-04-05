@@ -146,7 +146,7 @@ else {
 		<dd><a href="/followers/<?php echo $user->screen_name; ?>"><?php echo $user->followers_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('nav-favorites'); ?></dt>
-		<dd><a href="/favorites?id=<?php echo $user->screen_name; ?>"><?php echo $user->favourites_count; ?></a></dd>
+		<dd><a href="/favorites/<?php echo $user->screen_name; ?>"><?php echo $user->favourites_count; ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('gbl-listed-count'); ?></dt>
 		<dd><?php echo $user->listed_count; ?></dd>
