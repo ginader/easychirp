@@ -423,12 +423,11 @@ class Main extends EC_Controller {
 		if ($screen_name !== FALSE)
 		{
 			$request_param['screen_name'] = $screen_name;
+			$this->_data['screen_name'] = $screen_name;
 		}
 		if ( $tweet_id) {
 			$request_param['max_id'] = $tweet_id;
 		}
-
-		$this->_data['screen_name'] = $screen_name;
 
 		$pagination_path = '/favorites/' . $request_param['screen_name'] . '/';
 
