@@ -1708,8 +1708,8 @@
       </trans-unit>
 
       <trans-unit id="about-kick-p2" datatype="html">
-        <source>Big thank-you to the platinum Kickstarter backers:</source>
-        <target>Big thank-you to the platinum Kickstarter backers:</target>
+        <source>A big thank-you to the platinum Kickstarter backers:</source>
+        <target>A big thank-you to the platinum Kickstarter backers:</target>
       </trans-unit>
 
       <trans-unit id="about-kick-names" datatype="html">
