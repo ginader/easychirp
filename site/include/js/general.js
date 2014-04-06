@@ -30,7 +30,7 @@ $(".btnOptions > a").each(function () {
 	$(this).attr("aria-controls", x);
 });
 
-/* Show/hide write tweet ************************************/
+/* Show/hide write tweet ********************************/
 $("#enterTweet h2 a").click(function(e) {
 	e.preventDefault();
 	var obj = $("#enterTweetContent");
@@ -47,7 +47,7 @@ $("#enterTweet h2 a").click(function(e) {
 });
 $("#enterTweet h2 a").attr("role","button").attr("aria-expanded",false);
 
-/* Character counter ***************************************/
+/* Character counter ***********************************/
 // Update the count
 var charCntNum = $('#displayCharCountNumber');
 function updateCharCount(charCountField) {
@@ -94,16 +94,17 @@ function updateCharCount(charCountField) {
 	}
 })();
 
-/*** show/hide for create list content ***/
+/*** show/hide for create list content ***************/
 //hide create list form
 $('#frmCreateList').hide();
 
 // Get open & close text values
-var txtOpen = $("#createList").attr("data-open");
-var txtClose = $("#createList").attr("data-close");
+var txtList = {};
+txtList.Open = $("#createList").attr("data-open");
+txtList.Close = $("#createList").attr("data-close");
 
 // Create link to show content
-$('<p id="showCreateList"><a href="#" id="showCreateAnchor">' + txtOpen + ' &#187;<\/a><\/p>').insertBefore('#frmCreateList');
+$('<p id="showCreateList"><a href="#" id="showCreateAnchor">' + txtList.Open + ' &#187;<\/a><\/p>').insertBefore('#frmCreateList');
 
 // Behavior to show/hide content
 $('#showCreateAnchor').click(function() {
@@ -111,7 +112,7 @@ $('#showCreateAnchor').click(function() {
 	$('#frmCreateList').show();
 	
 	// Create link to close content
-	$('<p id="hideCreateList"><a href="#" id="hideCreateAnchor">&#171; ' + txtClose + '<\/a><\/p>').insertAfter('#frmCreateList');
+	$('<p id="hideCreateList"><a href="#" id="hideCreateAnchor">&#171; ' + txtList.Close + '<\/a><\/p>').insertAfter('#frmCreateList');
 	$('#txt_listName').focus();
 	
 	// Behavior to hide content
@@ -125,7 +126,7 @@ $('#showCreateAnchor').click(function() {
 	return false;
 });
 
-// Browser batch (such as Chrome) for anchor links, such as skip to feature ****************/
+// Browser patch (such as Chrome) for anchor links focus **************/
 $("a[href^='#']").click(function() {
 	$("#"+$(this).attr("href").slice(1)+"").focus()
 });
@@ -345,7 +346,7 @@ $('a[rel=twmess]').click(function(e) {
 // Delete list
 $('a[href*="list_delete"]').click(function(e) {
 	if (!confirm(txtAlertSureDelete)) {
-		 return false;
+		return false;
 	}
 	return true;
 });
@@ -353,7 +354,7 @@ $('a[href*="list_delete"]').click(function(e) {
 // Unsubscribe list
 $('a[href*="list_unsubscribe"]').click(function(e) {
 	if (!confirm(txtAlertSureDelete)) {
-		 return false;
+		return false;
 	}
 	return true;
 });
@@ -384,7 +385,7 @@ $('.frmListAddMember').submit(function(e) {
 
 // If reply or quote tweet (first character in tweet textarea on page load is "@" or "R") then set focus
 if ($('#txtEnterTweet').length != 0) {
-	input = {};
+	var input = {};
 	input.obj = $('#txtEnterTweet');
 	input.txt = input.obj.val();
 	input.first = input.obj.val().substring(0, 1);
@@ -395,9 +396,9 @@ if ($('#txtEnterTweet').length != 0) {
 	}
 }
 
+/* Adobe Mega Menu init *****************************/
 $("#tweet_menu_wrapper").accessibleMegaMenu({
-	/* prefix for generated unique id attributes, which are required 
-	to indicate aria-owns, aria-controls and aria-labelledby */
+	/* prefix for generated unique id attributes (for aria) */
 	uuidPrefix: "megamenu",
 
 	/* css class used to define the megamenu styling */
@@ -421,6 +422,5 @@ $("#tweet_menu_wrapper").accessibleMegaMenu({
 	/* css class for the open state */
 	openClass: "open"
 });
-
 
 
