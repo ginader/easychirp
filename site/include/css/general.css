@@ -1200,11 +1200,13 @@ body.theme-inverse {
 		margin-left: 35%;
 	}
 	#query, 
-	#query2 { /* search input */
+	#query2,
+	#queryUsers { /* search inputs */
 		width: 75%;
 	}
+	#txt_listName,
 	#txt_listDesc {
-		width: 90%;
+		width: 85%;
 	}
 }
 
