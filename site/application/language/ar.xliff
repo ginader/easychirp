@@ -1703,8 +1703,8 @@
       </trans-unit>
 
       <trans-unit id="about-kick-names" datatype="html">
-        <source>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</source>
-        <target>Sharron Rush, George Zamfir, John F Croston III, Pratik Patel, Frank M. Palinkas, Mike Paciello.</target>
+        <source>Sharron Rush (@sharrush), George Zamfir (@good_wally), John F Croston III (@jfc3), Pratik Patel (@ppatel), Frank M. Palinkas (@fmpalinkas), Mike Paciello (@mpaciello).</source>
+        <target>Sharron Rush (@sharrush), George Zamfir (@good_wally), John F Croston III (@jfc3), Pratik Patel (@ppatel), Frank M. Palinkas (@fmpalinkas), Mike Paciello (@mpaciello).</target>
       </trans-unit>
 
       <!-- QUOTE -->
