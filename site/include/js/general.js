@@ -170,34 +170,6 @@ $('#frmDirectMessage').submit(function() {
 	}
 });
 
-// Validate URL shortener
-$("#frmUrlShort").submit(function(ev) {
-	//ev.preventDefault();		
-	var objLongURL = $('#urlLong');
-	var txtLongURL = $('#urlLong').val();
-	//var txtUrlService = $('input:radio[name=urlService]:checked').val();
-	
-	//validate for completed field
-	if (txtLongURL == "") {
-		alert("URL field is blank. Please enter a URL.");
-		objLongURL.focus();
-		return false;
-	}
-	//validate for non bit.ly
-	if (txtLongURL.toLowerCase().indexOf("http://bit.ly") >= 0) {
-		alert("URL cannot be a bit.ly link. Please enter a different URL.");
-		objLongURL.focus();
-		return false;
-	}
-	//validate for valid URL
-	var v = new RegExp();
-	v.compile("^(http)(s?)\:\/\/((www\.)+[a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;=:%\$#_]*)?");
-	if ( (!v.test(txtLongURL)) || (txtLongURL.length <=7) ) {
-		alert("You must provide a valid URL.");
-		return false;
-	}
-});
-
 /* Modal *****************************************/
 
 // Function to resize and reposition the modal window
