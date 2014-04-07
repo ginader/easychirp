@@ -168,13 +168,10 @@ $('a[href*="retweet_"]').click(function(e) {
 	var url_replace = this.href;
 	var url_send = this.href.replace("false","true");
 	var txt = {};
-	txt.MakeRt       = $("#main").attr("data-rt-make"); //"";
-	txt.RemoveRt     = $("#main").attr("data-rt-remove"); //"";
-	txt.AlertAdded   = $("#main").attr("data-rt-alert-added"); //"";
-	txt.AlertRemoved = $("#main").attr("data-rt-alert-removed"); //"";
-
-	//alert(txt.MakeRt + " " + txt.RemoveRt + " " + txt.AlertAdded + " " + txt.AlertRemoved);
-	//return false;
+	txt.MakeRt       = $("#main").attr("data-rt-make");
+	txt.RemoveRt     = $("#main").attr("data-rt-remove");
+	txt.AlertAdded   = $("#main").attr("data-rt-alert-added");
+	txt.AlertRemoved = $("#main").attr("data-rt-alert-removed");
 
 	if (url_replace.indexOf("create") != -1) {
 		$.ajax({
@@ -376,7 +373,6 @@ $("#frmUrlShort").submit(function(ev) {
 	var objLongURL = $('#urlLong');
 	var txtLongURL = $('#urlLong').val();
 	var txtUrlService = $('input:radio[name=urlService]:checked').val();
-	//alert(txtUrlService + " " + txtLongURL); //return false;
 	
 	//validate for completed input
 	if (txtLongURL == "") {
@@ -392,8 +388,8 @@ $("#frmUrlShort").submit(function(ev) {
 		return false;
 	}
 	//validate for valid URL
-	var emailReg = /^(ht|f)tps?:\/\/[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/;
-	if ( (!emailReg.test(txtLongURL)) || (txtLongURL.length <=7) ) {
+	var urlReg = /^(ht|f)tps?:\/\/[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/;
+	if ( (!urlReg.test(txtLongURL)) || (txtLongURL.length <=7) ) {
 		alert("You must provide a valid URL.");
 		objLongURL.focus();
 		return false;
@@ -451,6 +447,5 @@ $("#frmUrlShort").submit(function(ev) {
 	});
 
 });
-
 
 
