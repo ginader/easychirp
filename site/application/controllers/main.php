@@ -650,7 +650,7 @@ class Main extends EC_Controller {
 		$this->_data['xliff_reader'] = $this->xliff_reader;
 
 		$this->layout->set_title( $this->xliff_reader->get('nav-goto-user') );
-		$this->layout->set_description('Go to user');
+		$this->layout->set_description('Go to user; enter user name.');
 		$this->layout->view('go_to_user', $this->_data);
 	}
 
@@ -727,7 +727,7 @@ class Main extends EC_Controller {
 		$this->_data['easychirp_statuses'] = $ec_tweets;
 
 		$this->layout->set_title( $this->xliff_reader->get('home') );
-		$this->layout->set_description('Homepage description');
+		//$this->layout->set_description('Homepage description'); //use default in EC_Controller.php
 		$this->layout->set_skip_to_sign_in( TRUE );
 		$this->layout->view('home', $this->_data);
 	}
@@ -1099,7 +1099,7 @@ class Main extends EC_Controller {
 
 		$x = $this->xliff_reader->get('lists-h1')." ".$this->xliff_reader->get('nav-timeline');
 		$this->layout->set_title( $x );
-		$this->layout->set_description('Lists Timeline');
+		$this->layout->set_description('Timeline of specified List');
 		$this->layout->view('list_timeline', $this->_data);
 	}
 
@@ -1127,7 +1127,7 @@ class Main extends EC_Controller {
 		$this->_data['subLists'] = $this->twitter_lib->get('lists/subscriptions');
 
 		$this->layout->set_title( $this->xliff_reader->get('lists-h1') );
-		$this->layout->set_description('Twitter lists of user');
+		$this->layout->set_description('Twitter lists - subscribed and owned');
 		$this->layout->view('lists', $this->_data);
 	}
 
