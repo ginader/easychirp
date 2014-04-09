@@ -497,8 +497,26 @@ div.msgBoxNeg {
 	background-color: #fc6;
 }
 
-#m_tools span {
-	padding-right: .2rem;
+#navTweet li a[aria-haspopup=true] {
+	position: relative;
+	padding-right: 1rem;
+}
+
+#navTweet li a[aria-haspopup=true]:after {
+	content: ' ';
+	height: 0;
+	width: 0;
+	position: absolute;
+	font-size: 0;
+	line-height: 0;
+
+	right: 2px;
+	bottom: 2px;
+
+	border: 10px solid transparent; /* arrow size */
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #222;
 }
 
 /* MEGA MENU by Adobe **********************************************/
@@ -1044,6 +1062,10 @@ body.theme-inverse {
 	background-color: #666;
 }
 
+.theme-inverse #navTweet li a[aria-haspopup=true]:after {
+	border-top: 5px solid #eee;
+}
+
 .theme-inverse #enterTweet h2 a:hover,
 .theme-inverse #enterTweet h2 a:focus {
 	background-color: #555;	
@@ -1200,15 +1222,14 @@ body.theme-inverse {
 		margin-left: 35%;
 	}
 	#query, 
-	#query2 { /* search input */
+	#query2,
+	#queryUsers { /* search inputs */
 		width: 75%;
 	}
+	#txt_listName,
 	#txt_listDesc {
-		width: 90%;
+		width: 85%;
 	}
-}
-
-@media only screen and (max-width: 480px) {
 }
 
 
