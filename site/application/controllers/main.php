@@ -2334,7 +2334,7 @@ class Main extends EC_Controller {
 			array(
 				'paginate' => 1,
 				'tweets' => $tweets,
-				'utc_offset' => $this->session->userdata('utc_offset'),
+				'utc_offset' => $utc_offset,
 				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']),
 			TRUE);

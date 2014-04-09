@@ -1,6 +1,6 @@
 <?php
 
-define('EASYCHIRP_VERSION', '1.9.0502'); // last 4 digits are MMDD
+define('EASYCHIRP_VERSION', '2.0.20140406'); // last 8 digits are YYYYMMDD
 
 /*
  *---------------------------------------------------------------
@@ -26,6 +26,7 @@ if ($_SERVER['HTTP_HOST'] == 'www.easychirp.org' || $_SERVER['HTTP_HOST'] == 'ww
 else {
 	define('ENVIRONMENT', 'development');
 }
+
 
 /*
  *---------------------------------------------------------------

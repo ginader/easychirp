@@ -120,12 +120,48 @@ class OAuthCurl {
 * @param  string $date the original date of the tweet
 * @return string $date the newly formatted date of the tweet
 */
-function reformat_date($date, $time_zone)
+function reformat_date($date, $offset)
 {
+	$utc_offset =  $offset / 3600;	
+
+	$timezone_name = 'UTC';
+	if (is_int($utc_offset))
+	{
+		if (-4 === $utc_offset)
+		{
+			$timezone_name = 'America/New_York';
+		}
+		elseif (-5 === $utc_offset)
+		{
+			$timezone_name = 'America/Chicago';
+		}
+		elseif (-6 === $utc_offset)
+		{
+			$timezone_name = 'America/Denver';
+		}
+		elseif (-7 === $utc_offset)
+		{
+			$timezone_name = 'America/Los_Angeles';
+		}
+
+	}
+
+
+	if (! ini_get('date.timezone'))
+	{
+		ini_set('date.timezone', $timezone_name);
+	}
 	$twitter_date_format = 'D M d H:i:s e Y';
-	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
+	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date, new DateTimeZone($timezone_name));
 	$tweet_time = strtotime($tweet_date->format('Y-m-d h:i:s'));
-	$tweet_time = $tweet_time + $time_zone;
+
+	
+	;
+	if (0 > $offset){
+		$tweet_time = $tweet_time - abs($offset);
+	} else {
+		$tweet_time = $tweet_time + abs($offset);
+	}
 
 	$date = strftime(DISPLAY_DATETIME_STRFTIME_FORMAT, $tweet_time);
 
