@@ -1647,7 +1647,7 @@
         <target>Ganador del El Premio Acceso IT @web2.0 2009</target>
       </trans-unit>
       <trans-unit id="about-awards-accessit" datatype="html">
-        <source>The &lt;a href=&quot;http://access-it-events.org/2009_access_it_winners.php&quot;&gt;Access IT @web2.0 Award&lt;/a&gt; is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
+        <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
         <target>El Premio Acceso IT @web2.0 es un reconocimiento a un proyecto, producto o servicio que avanza la accesibilidad en la web 2.0. Avalado por la &lt;a href=&quot;http://www.iwa.it/&quot;&gt;Asociación Internacional de Webmasters&lt;/a&gt; (IWA). El proceso de selección se evalúa la pertinencia para el premio, su impacto, su accesibilidad y la apertura, y su nivel de validación.</target>
       </trans-unit>
 

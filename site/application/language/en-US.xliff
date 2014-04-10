@@ -1636,8 +1636,8 @@
         <target>Recipient of the 2009 Access IT @web2.0 Award</target>
       </trans-unit>
       <trans-unit id="about-awards-accessit" datatype="html">
-        <source>The &lt;a href=&quot;http://access-it-events.org/2009_access_it_winners.php&quot;&gt;Access IT @web2.0 Award&lt;/a&gt; is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
-        <target>The &lt;a href=&quot;http://access-it-events.org/2009_access_it_winners.php&quot;&gt;Access IT @web2.0 Award&lt;/a&gt; is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</target>
+        <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
+        <target>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-bestweb" datatype="html">
