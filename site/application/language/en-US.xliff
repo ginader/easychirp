@@ -1543,8 +1543,8 @@
       </trans-unit>
 
       <trans-unit id="about-account-p1" datatype="html">
-        <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
-        <target>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
+        <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
+        <target>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-feedback" datatype="html">
@@ -1598,8 +1598,8 @@
       </trans-unit>
 
       <trans-unit id="about-tech-p1" datatype="html">
-        <source>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;http://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</source>
-        <target>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;http://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</target>
+        <source>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;https://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</source>
+        <target>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;https://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-disclaimer" datatype="html">
@@ -1645,8 +1645,8 @@
         <target>Nominated in the 2010 Best of the Web Awards</target>
       </trans-unit>
       <trans-unit id="about-awards-bestweb" datatype="html">
-        <source>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;http://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</source>
-        <target>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;http://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</target>
+        <source>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;https://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</source>
+        <target>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;https://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-bb" datatype="html">
@@ -1693,8 +1693,8 @@
       </trans-unit>
 
       <trans-unit id="about-kick-p1" datatype="html">
-        <source>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
-        <target>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
+        <source>A successful &lt;a href=&quot;https://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
+        <target>A successful &lt;a href=&quot;https://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
       </trans-unit>
 
       <trans-unit id="about-kick-p2" datatype="html">

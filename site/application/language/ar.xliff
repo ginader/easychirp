@@ -1543,8 +1543,8 @@
       </trans-unit>
 
       <trans-unit id="about-account-p1" datatype="html">
-        <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
-        <target>متابعة Easy Chirp 2 على تويتر: &lt;a href=&quot;http://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
+        <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
+        <target>متابعة Easy Chirp 2 على تويتر: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-feedback" datatype="html">
@@ -1598,7 +1598,7 @@
       </trans-unit>
 
       <trans-unit id="about-tech-p1" datatype="html">
-        <source>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;http://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</source>
+        <source>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;https://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</source>
         <target>التغريد السهل2 تم انشاؤها  بـPHP (مع Codeigniter إطار MVC)، HTML5، وجافا سكريبت (و jQuery)، وAPI تويتر.</target>
       </trans-unit>
 
@@ -1645,7 +1645,7 @@
         <target>رشح في 2010 لجائزة أفضل موقع إلكتروني</target>
       </trans-unit>
       <trans-unit id="about-awards-bestweb" datatype="html">
-        <source>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;http://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</source>
+        <source>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;https://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</source>
         <target>تم ترشيح تويتر للمكفوفين كأفضل تطبيق مستخدم في 2010 من قِبل مجلة net. لجائزة أفضل موقع إلكتروني.</target>
       </trans-unit>
 
@@ -1693,8 +1693,8 @@
       </trans-unit>
 
       <trans-unit id="about-kick-p1" datatype="html">
-        <source>A successful &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
-        <target> وكان من المقرر استئناف التحديثات الرئيسية اللازمة بما في ذلك تغيير في API تويتر. تم تشغيل &lt;a href=&quot;http://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;حملة Kickstarter&lt;/a&gt; ناجحة من أجل المساعدة في تمويل إعادة الإطلاق.</target>
+        <source>A successful &lt;a href=&quot;https://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
+        <target> وكان من المقرر استئناف التحديثات الرئيسية اللازمة بما في ذلك تغيير في API تويتر. تم تشغيل &lt;a href=&quot;https://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;حملة Kickstarter&lt;/a&gt; ناجحة من أجل المساعدة في تمويل إعادة الإطلاق.</target>
       </trans-unit>
 
       <trans-unit id="about-kick-p2" datatype="html">
