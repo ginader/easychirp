@@ -1674,8 +1674,8 @@
         <target>Destacado en la página web del RNIB, Diciembre 2011</target>
       </trans-unit>
       <trans-unit id="about-awards-rnib" datatype="html">
-        <source>Easy Chirp was the &lt;a href=&quot;http://www.rnib.org.uk/livingwithsightloss/computersphones/updates/techknowmore/Lists/Posts/Post.aspx?id=64&quot;&gt;&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website&lt;/a&gt;, December 2011.</source>
-        <target>Easy Chirp fue destacado en la &lt;a href=&quot;http://www.rnib.org.uk/livingwithsightloss/computersphones/updates/techknowmore/Lists/Posts/Post.aspx?id=64&quot;&gt;página web del RNIB en Diciembre 2011&lt;/a&gt;.</target>
+        <source>Easy Chirp was the &lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website, December 2011.</source>
+        <target>Easy Chirp fue destacado en la página web del &lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; en Diciembre 2011.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-authors" datatype="html">
