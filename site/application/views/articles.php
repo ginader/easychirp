@@ -74,9 +74,6 @@
 	<dt><a href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a></dt>
 		<dd>Nomensa, L&eacute;onie Watson</dd>
 		<dd>2010 Feb 10</dd>
-	<dt><a href="http://www.lessfussdesign.com/blog/2009/07/accessible-twitter/">Accessible Twitter: how it should have been done to start with</a></dt>
-		<dd>LessFuss Design, Andy Bryant</dd>
-		<dd>2009 Jul 31</dd>
 	<dt><a href="http://preparednessforall.wordpress.com/2012/06/04/report-sociability-social-media-for-people-with-a-disability/">Report: Sociability, Social Media for People with a Disability</a></dt>
 		<dd>Preparedness For All</dd>
 		<dd>2012 Jun 04</dd>
