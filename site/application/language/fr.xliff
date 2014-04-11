@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" target-language="fr" original="easychirp.local" datatype="html" 
+	state="needs-translation" xml:space="preserve">
+    <body>
+
+      <!-- GLOBAL -->
+
+      <trans-unit id="global-delete" datatype="html">
+        <source>Delete</source>
+        <target>Détruire</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-select-page" datatype="html">
+        <source>Select a page:</source>
+        <target>Sélectionnez une page:</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-from" datatype="html">
+        <source>from</source>
+        <target>de</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-yes" datatype="html">
+        <source>Yes</source>
+        <target>Oui</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-no" datatype="html">
+        <source>No</source>
+        <target>Non</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-listed-count" datatype="html">
+        <source>Listed count</source>
+        <target>Listed count</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-required" datatype="html">
+        <source>(required)</source>
+        <target>(requis)</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-at-username" datatype="html">
+        <source>@UserName</source>
+        <target>@utilisateur</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-clear" datatype="html">
+        <source>Clear</source>
+        <target>Clear</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-pag-tweets" datatype="html">
+        <source>Get Older Tweets</source>
+        <target>Get Older Tweets</target>
+      </trans-unit>
+
+      <!-- SELECT THEME -->
+
+      <trans-unit id="gbl-theme-select" datatype="html">
+        <source>Select a Theme</source>
+        <target>Select a Theme</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-light" datatype="html">
+        <source>Light Theme</source>
+        <target>Light Theme</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-dark" datatype="html">
+        <source>Dark Theme</source>
+        <target>Dark Theme</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-theme-current" datatype="html">
+        <source>current</source>
+        <target>current</target>
+      </trans-unit>
+
+      <!-- ALERTS/MESSAGES -->
+
+      <trans-unit id="msg-search-saved" datatype="html">
+        <source>The search was saved.</source>
+        <target>The search was saved.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-search-deleted" datatype="html">
+        <source>The search was deleted.</source>
+        <target>The search was deleted.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-tweet-deleted" datatype="html">
+        <source>Your tweet was deleted.</source>
+        <target>Your tweet was deleted.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-followed-user" datatype="html">
+        <source>You are now following this user.</source>
+        <target>You are now following this user.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-unfollowed-user" datatype="html">
+        <source>You are no longer following this user.</source>
+        <target>You are no longer following this user.</target>
+      </trans-unit>
+
+      <trans-unit id="error-over-140" datatype="html">
+        <source>You must enter less than 140 characters.</source>
+        <target>You must enter less than 140 characters.</target>
+      </trans-unit>
+
+      <trans-unit id="error-tweet-empty" datatype="html">
+        <source>Please enter a tweet.</source>
+        <target>Please enter a tweet.</target>
+      </trans-unit>
+
+      <trans-unit id="error-dm-empty" datatype="html">
+        <source>Please enter a direct message.</source>
+        <target>Please enter a direct message.</target>
+      </trans-unit>
+
+      <trans-unit id="error-tweep-empty" datatype="html">
+        <source>Enter a user name.</source>
+        <target>Enter a user name.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-fav-alert-added" datatype="html">
+        <source>The favorite has been added.</source>
+        <target>The favorite has been added.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-fav-alert-removed" datatype="html">
+        <source>The favorite has been removed.</source>
+        <target>The favorite has been removed.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-rt-alert-added" datatype="html">
+        <source>The retweet has been created.</source>
+        <target>The retweet has been created.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-rt-alert-removed" datatype="html">
+        <source>The retweet has been undone.</source>
+        <target>The retweet has been undone.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-sure-delete" datatype="html">
+        <source>Are you sure you want to delete this item? The action cannot be undone.</source>
+        <target>Are you sure you want to delete this item? The action cannot be undone.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-sure-spam" datatype="html">
+        <source>Are you sure you want to report this user as a spammer?</source>
+        <target>Are you sure you want to report this user as a spammer?</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-message-spam-reported" datatype="html">
+        <source>The user has been reported as a spammer and blocked.</source>
+        <target>The user has been reported as a spammer and blocked.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-block" datatype="html">
+        <source>The user has been blocked.</source>
+        <target>The user has been blocked.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-unblock" datatype="html">
+        <source>The user has been unblocked.</source>
+        <target>The user has been unblocked.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-error-not-followed" datatype="html">
+        <source>Not sent. You cannot send direct messages to users who are not following you.</source>
+        <target>Not sent. You cannot send direct messages to users who are not following you.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-sent" datatype="html">
+        <source>The direct message was sent.</source>
+        <target>The direct message was sent.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-dm-deleted" datatype="html">
+        <source>The direct message was deleted.</source>
+        <target>The direct message was deleted.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-deleted" datatype="html">
+        <source>The list was deleted.</source>
+        <target>The list was deleted.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-created" datatype="html">
+        <source>The list was created.</source>
+        <target>The list was created.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-empty_name" datatype="html">
+        <source>Enter a name in order to create a list.</source>
+        <target>Enter a name in order to create a list.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-unsubscribed" datatype="html">
+        <source>You have unsubscribed from the list.</source>
+        <target>You have unsubscribed from the list.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-member_added" datatype="html">
+        <source>The user was added to the list.</source>
+        <target>The user was added to the list.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-empty_add_name" datatype="html">
+        <source>Please enter a username to add to the list.</source>
+        <target>Please enter a username to add to the list.</target>
+      </trans-unit>
+
+      <!-- SKIP LINKS -->
+
+      <trans-unit id="skip-sign-in" datatype="html">
+        <source>skip to sign in</source>
+        <target>skip to sign in</target>
+        <note from="description">Skip nav link for accessibility</note>
+      </trans-unit>
+
+      <trans-unit id="skip-main-content" datatype="html">
+        <source>skip to main content</source>
+        <target>skip to main content</target>
+        <note from="description">Skip nav link for accessibility</note>
+      </trans-unit>
+
+      <!-- NAVIGATION -->
+
+      <trans-unit id="nav-welcome-user" datatype="html">
+        <source>welcome %s</source>
+        <target>welcome %s</target>
+        <note from="description">%s represents the username</note>
+      </trans-unit>
+      
+      <trans-unit id="nav-sign-in" datatype="html">
+        <source>sign in</source>
+        <target>se connecter</target>
+        <note from="description"></note>
+      </trans-unit>
+      
+      <trans-unit id="nav-sign-out" datatype="html">
+        <source>sign out</source>
+        <target>sign out</target>
+        <note from="description"></note>
+      </trans-unit>
+      
+      <trans-unit id="nav-following" datatype="html">
+        <source>following: %d</source>
+        <target>following: %d</target>
+        <note from="description">People that I follow</note>
+      </trans-unit>
+      
+      <trans-unit id="nav-followers" datatype="html">
+        <source>followers: %d</source>
+        <target>followers: %d</target>
+        <note from="description">People that follow me</note>
+      </trans-unit>
+      
+      <trans-unit id="nav-tweet-count" datatype="html">
+        <source>tweets: %d</source>
+        <target>tweets: %d</target>
+        <note from="description"></note>
+      </trans-unit>
+    
+      <!-- app menu -->
+
+      <trans-unit id="nav-heading-menu" datatype="html">
+        <source>Menu</source>
+        <target>Menu</target>
+      </trans-unit>
+
+      <trans-unit id="nav-heading-app-menu" datatype="html">
+        <source>App Menu</source>
+        <target>App Menu</target>
+      </trans-unit>
+
+      <trans-unit id="nav-heading-tweet-menu" datatype="html">
+        <source>Tweet Menu</source>
+        <target>Tweet Menu</target>
+      </trans-unit>
+
+      <trans-unit id="nav-home" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+        <note from="description"></note>
+      </trans-unit>
+      
+      <trans-unit id="nav-profile" datatype="html">
+        <source>My Profile</source>
+        <target>My Profile</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-tips" datatype="html">
+        <source>Tips</source>
+        <target>Tips</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-articles" datatype="html">
+        <source>Articles &amp; Feedback</source>
+        <target>Articles &amp; Feedback</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-features" datatype="html">
+        <source>Features</source>
+        <target>Features</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-about" datatype="html">
+        <source>About</source>
+        <target>About</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <!-- tweet menu -->
+
+      <trans-unit id="nav-mentions" datatype="html">
+        <source>Mentions</source>
+        <target>Mentions</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-favorites" datatype="html">
+        <source>Favorites</source>
+        <target>Favorites</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-lists" datatype="html">
+        <source>Lists</source>
+        <target>Lists</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-messages" datatype="html">
+        <source>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</source>
+        <target>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-inbox" datatype="html">
+        <source>Inbox</source>
+        <target>Inbox</target>
+      </trans-unit>
+
+      <trans-unit id="nav-direct-sent" datatype="html">
+        <source>Sent</source>
+        <target>Sent</target>
+      </trans-unit>
+
+      <trans-unit id="nav-timeline" datatype="html">
+        <source>Timeline</source>
+        <target>Ligne de temps</target>
+      </trans-unit>
+
+      <trans-unit id="nav-my-tweets" datatype="html">
+        <source>My Tweets</source>
+        <target>My Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets" datatype="html">
+        <source>Retweets</source>
+        <target>Retweets</target>
+        <note from="description"></note>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets-of-me" datatype="html">
+        <source>Retweets Of Me</source>
+        <target>Retweets Of Me</target>
+        <note from="description">Tweets by me that other people retweeted.</note>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets-by-me" datatype="html">
+        <source>Retweets By Me</source>
+        <target>Retweets By Me</target>
+        <note from="description">Tweets that I retweeted.</note>
+      </trans-unit>
+
+      <trans-unit id="nav-retweets-to-me" datatype="html">
+        <source>Retweets To Me</source>
+        <target>Retweets To Me</target>
+        <note from="description">Retweets by people that I'm following.</note>
+      </trans-unit>
+
+      <trans-unit id="nav-goto-user" datatype="html">
+        <source>Go To User</source>
+        <target>Go To User</target>
+      </trans-unit>
+
+      <trans-unit id="nav-search" datatype="html">
+        <source>Search</source>
+        <target>Recherche</target>
+      </trans-unit>
+
+      <trans-unit id="nav-quick-search" datatype="html">
+        <source>Quick Search</source>
+        <target>Quick Search</target>
+      </trans-unit>
+
+      <trans-unit id="nav-tools" datatype="html">
+        <source>Tools</source>
+        <target>Tools</target>
+      </trans-unit>
+
+      <trans-unit id="nav-trends" datatype="html">
+        <source>Trends</source>
+        <target>Trends</target>
+      </trans-unit>
+
+      <!-- WRITE TWEET -->
+
+      <trans-unit id="write-tweet-h2-label" datatype="html">
+        <source>Write Tweet</source>
+        <target>Rédiger un tweet</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-char-limit" datatype="html">
+        <source>The character limit is 140.</source>
+        <target>La limite de caractères est de 140.</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-char-remain" datatype="html">
+        <source>Characters remaining:</source>
+        <target>Nombre de caractères restants:</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-post" datatype="html">
+        <source>Post</source>
+        <target>Publier</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-h3" datatype="html">
+        <source>Shorten URL</source>
+        <target>Raccourcir l'URL</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-enter-url" datatype="html">
+        <source>Enter URL:</source>
+        <target>Saisir l'URL:</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-service" datatype="html">
+        <source>Service:</source>
+        <target>Service:</target>
+      </trans-unit>
+
+      <trans-unit id="write-tweet-shorten" datatype="html">
+        <source>Shorten</source>
+        <target>Raccourcir</target>
+      </trans-unit>
+
+      <!-- HOME PAGE -->
+
+      <trans-unit id="home" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-lead" datatype="html">
+        <source>Web accessibility for the Twitter website application</source>
+        <target>Web accessibility for the Twitter website application</target>
+      </trans-unit>
+
+      <trans-unit id="home-lead-p1" datatype="html">
+        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE8, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
+        <target>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE8, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="home-lead-p2" datatype="html">
+        <source>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the &lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt; and &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; pages. You may also read an extensive list of user feedback and blogs/articles about this application.</source>
+        <target>Refer to the development tasks further down this page for items currently in progress. Learn more about Easy Chirp on the &lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt; and &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; pages. You may also read an extensive list of user feedback and blogs/articles about this application.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-signin" datatype="html">
+        <source>Sign In</source>
+        <target>Sign In</target>
+      </trans-unit>
+
+      <trans-unit id="home-signin-btn-alt" datatype="html">
+        <source>Sign in with Twitter</source>
+        <target>Se connecter avec Twitter</target>
+      </trans-unit>
+
+      <trans-unit id="home-signin-signed-in-as" datatype="html">
+        <source>You are signed in as</source>
+        <target>You are signed in as</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-donate" datatype="html">
+        <source>Donate to Easy Chirp</source>
+        <target>Faire un don à Easy Chirp</target>
+      </trans-unit>
+
+      <trans-unit id="home-donate-btn-alt" datatype="html">
+        <source>Donate with PayPal; credit cards accepted.</source>
+        <target>Faire un don avec Paypal, carte de crédit requise.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-latest-tweets" datatype="html">
+        <source>Latest Tweets from Easy Chirp</source>
+        <target>Les plus récents tweets de Easy Chirp</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-follow-me" datatype="html">
+        <source>Follow me on Twitter at:</source>
+        <target>Follow me on Twitter at:</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-share" datatype="html">
+        <source>Share</source>
+        <target>Partager</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-articles" datatype="html">
+        <source>Article &amp; Blog Mentions</source>
+        <target>Article &amp; Blog Mentions</target>
+      </trans-unit>
+
+      <trans-unit id="home-articles-highlights" datatype="html">
+        <source>Highlights:</source>
+        <target>Highlights:</target>
+      </trans-unit>
+
+      <trans-unit id="home-articles-more" datatype="html">
+        <source>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</source>
+        <target>View more on the &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; page.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-what-tweeting" datatype="html">
+        <source>What People Are Tweeting</source>
+        <target>What People Are Tweeting</target>
+      </trans-unit>
+
+      <trans-unit id="home-easychirp-fav-link" datatype="html">
+        <source>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</source>
+        <target>Tweets about Easy Chirp are archived via &lt;a href=&quot;https://twitter.com/EasyChirp/favorites&quot; rel=&quot;external&quot; target=&quot;_blank&quot;&gt;Easy Chirp's Twitter favorites&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-features" datatype="html">
+        <source>Notable Features</source>
+        <target>Notable Features</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-shorten" datatype="html">
+        <source>A built-in shorten URL tool with choice of service.</source>
+        <target>A built-in shorten URL tool with choice of service.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-search" datatype="html">
+        <source>Search, user search, and saved searches.</source>
+        <target>Search, user search, and saved searches.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-lists" datatype="html">
+        <source>View, subscribe, and create Twitter Lists.</source>
+        <target>View, subscribe, and create Twitter Lists.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-no-js" datatype="html">
+        <source>Works great with or without JavaScript.</source>
+        <target>Works great with or without JavaScript.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-keyboard" datatype="html">
+        <source>Fully keyboard accessible.</source>
+        <target>Fully keyboard accessible.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-thread" datatype="html">
+        <source>Inline threading of tweets; displays reply &quot;conversation&quot;.</source>
+        <target>Inline threading of tweets; displays reply &quot;conversation&quot;.</target>
+      </trans-unit>
+
+      <trans-unit id="home-features-devices" datatype="html">
+        <source>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</source>
+        <target>In addition to old and new desktop browsers, I work on virtually any user-agent (even Lynx, a text-only browser), with screen readers and Braille displays, and tablets and mobile devices.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-awards" datatype="html">
+        <source>Awards!</source>
+        <target>Awards!</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-afb" datatype="html">
+        <source>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</source>
+        <target>Recipient of the American Foundation for the Blind (AFB) 2011 Access Award.</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-it" datatype="html">
+        <source>Recipient of the 2009 Access IT @web2.0 Award.</source>
+        <target>Recipient of the 2009 Access IT @web2.0 Award.</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-rnib" datatype="html">
+        <source>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</source>
+        <target>&lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Website of the Month, December 2011.</target>
+      </trans-unit>
+
+      <trans-unit id="home-awards-more" datatype="html">
+        <source>Read &lt;a href=&quot;/about&quot;&gt;more about Easy Chirp's awards&lt;/a&gt; on the About page.</source>
+        <target>Read &lt;a href=&quot;/about&quot;&gt;more about Easy Chirp's awards&lt;/a&gt; on the About page.</target>
+      </trans-unit>
+
+      <trans-unit id="home-h2-dev-tasks" datatype="html">
+        <source>Development Tasks</source>
+        <target>Development Tasks</target>
+      </trans-unit>
+
+      <!-- DIRECT MESSAGES (DM) -->
+
+      <trans-unit id="dm-h1" datatype="html">
+        <source>Direct Messages</source>
+        <target>Message Privé</target>
+      </trans-unit>
+
+      <trans-unit id="dm-h2-send" datatype="html">
+        <source>Send a DM</source>
+        <target>Send a DM</target>
+      </trans-unit>
+
+      <trans-unit id="dm-label-tweep" datatype="html">
+        <source>Send a direct message to (username):</source>
+        <target>Envoyé un message privé à (utilisateur):</target>
+      </trans-unit>
+
+      <trans-unit id="dm-label-txtDirectMessage" datatype="html">
+        <source>Message:</source>
+        <target>Message:</target>
+      </trans-unit>
+
+      <trans-unit id="dm-note1" datatype="html">
+        <source>The user to whom you're messaging must be following you.</source>
+        <target>The user to whom you're messaging must be following you.</target>
+      </trans-unit>
+
+      <trans-unit id="dm-send" datatype="html">
+        <source>Send</source>
+        <target>Send</target>
+      </trans-unit>
+
+      <trans-unit id="dm-note2" datatype="html">
+        <source>You can also send a Direct Message thru the regular status update box with the command: d + username + message</source>
+        <target>You can also send a Direct Message thru the regular status update box with the command: d + username + message</target>
+      </trans-unit>
+
+      <trans-unit id="dm-inbox" datatype="html">
+        <source>Inbox</source>
+        <target>Inbox</target>
+      </trans-unit>
+
+      <trans-unit id="dm-sent" datatype="html">
+        <source>Sent</source>
+        <target>Sent</target>
+      </trans-unit>
+
+      <!-- STATUS/SINGLE TWEET -->
+
+      <trans-unit id="status-h1" datatype="html">
+        <source>View Single Tweet</source>
+        <target>Voir un Seul Tweet</target>
+      </trans-unit>
+
+      <trans-unit id="status-on-twitter" datatype="html">
+        <source>This tweet on Twitter</source>
+        <target>Ce tweet sur Twitter</target>
+      </trans-unit>
+
+      <!-- DIRECT MESSAGES - INBOX -->
+
+      <trans-unit id="dm-inbox-h1" datatype="html">
+        <source>Direct Messages - Inbox</source>
+        <target>Message Privé - Inbox</target>
+      </trans-unit>
+
+      <!-- DIRECT MESSAGES - SENT -->
+
+      <trans-unit id="dm-sent-h1" datatype="html">
+        <source>Direct Messages - Sent</source>
+        <target>Message Privé - Sent</target>
+      </trans-unit>
+
+      <!-- FAVORITES -->
+
+      <trans-unit id="favorites-h1" datatype="html">
+        <source>Favorites</source>
+        <target>Favorites</target>
+      </trans-unit>
+
+      <!-- FOLLOWING -->
+
+      <trans-unit id="following-h1" datatype="html">
+        <source>Following</source>
+        <target>Following</target>
+      </trans-unit>
+
+      <trans-unit id="following-none" datatype="html">
+        <source>You are not following anyone.</source>
+        <target>You are not following anyone.</target>
+      </trans-unit>
+
+      <trans-unit id="followers-view-followers" datatype="html">
+        <source>View Followers</source>
+        <target>View Followers</target>
+      </trans-unit>
+
+      <!-- FOLLOWERS -->
+
+      <trans-unit id="followers-h1" datatype="html">
+        <source>Followers</source>
+        <target>Followers</target>
+      </trans-unit>
+
+      <trans-unit id="followers-none" datatype="html">
+        <source>You are not followed by anyone.</source>
+        <target>You are not followed by anyone.</target>
+      </trans-unit>
+
+      <trans-unit id="followers-view-following" datatype="html">
+        <source>View Following</source>
+        <target>View Following</target>
+      </trans-unit>
+
+      <!-- GO TO USER -->
+
+      <trans-unit id="gotouser-h1" datatype="html">
+        <source>Go To User</source>
+        <target>Go To User</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-timeline" datatype="html">
+        <source>Timeline</source>
+        <target>Timeline</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-profile" datatype="html">
+        <source>Profile</source>
+        <target>Profile</target>
+      </trans-unit>
+
+      <trans-unit id="gotouser-go" datatype="html">
+        <source>Go</source>
+        <target>Go</target>
+      </trans-unit>
+
+      <!-- LISTS -->
+
+      <trans-unit id="lists-h1" datatype="html">
+        <source>Lists</source>
+        <target>Listes</target>
+      </trans-unit>
+
+      <trans-unit id="lists-note1" datatype="html">
+        <source>Note: You may subscribe to a list from the Lists page of a specific user.</source>
+        <target>Note: You may subscribe to a list from the Lists page of a specific user.</target>
+      </trans-unit>
+
+      <trans-unit id="lists-h2-create" datatype="html">
+        <source>Create List</source>
+        <target>Créer une liste</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-name" datatype="html">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-name-tip" datatype="html">
+        <source>(required, under 25 characters, letters and numbers only)</source>
+        <target>(requis, mois de 25 caractères, lettres et ciffres seulement)</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-desc" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-desc-tip" datatype="html">
+        <source>(optional, under 100 characters)</source>
+        <target>(optionnelle, moins de 100 caractères)</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-privacy" datatype="html">
+        <source>Privacy</source>
+        <target>Privé (requis)</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-privacy-public" datatype="html">
+        <source>Public</source>
+        <target>Public</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-privacy-private" datatype="html">
+        <source>Private</source>
+        <target>Privé</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-submit" datatype="html">
+        <source>Create</source>
+        <target>Créer</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-open" datatype="html">
+        <source>Open</source>
+        <target>Ouvrir</target>
+      </trans-unit>
+
+      <trans-unit id="lists-create-close" datatype="html">
+        <source>Close</source>
+        <target>Fermer</target>
+      </trans-unit>
+
+      <trans-unit id="lists-h2-my" datatype="html">
+        <source>My Lists</source>
+        <target>Mes listes</target>
+      </trans-unit>
+
+      <trans-unit id="lists-h2-sub" datatype="html">
+        <source>Subscribed Lists</source>
+        <target>Souscrire à une liste</target>
+      </trans-unit>
+
+      <trans-unit id="lists-fullname" datatype="html">
+        <source>Full name</source>
+        <target>Nom complet</target>
+      </trans-unit>
+
+      <trans-unit id="lists-desc" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+
+      <trans-unit id="lists-subs" datatype="html">
+        <source>Subscribers</source>
+        <target>Subscribers</target>
+      </trans-unit>
+
+      <trans-unit id="lists-mems" datatype="html">
+        <source>Members</source>
+        <target>Membres</target>
+      </trans-unit>
+
+      <trans-unit id="lists-add-mem" datatype="html">
+        <source>Add Member</source>
+        <target>Ajouter un membre</target>
+      </trans-unit>
+
+      <trans-unit id="lists-add-submit" datatype="html">
+        <source>Add</source>
+        <target>Ajouter</target>
+      </trans-unit>
+
+      <trans-unit id="lists-mode" datatype="html">
+        <source>Mode</source>
+        <target>Mode</target>
+      </trans-unit>
+
+      <trans-unit id="lists-actions" datatype="html">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+
+      <trans-unit id="lists-edit" datatype="html">
+        <source>Edit Settings</source>
+        <target>Modifier les paramètres</target>
+      </trans-unit>
+
+      <trans-unit id="lists-on-twitter" datatype="html">
+        <source>View on Twitter</source>
+        <target>View on Twitter</target>
+      </trans-unit>
+
+      <trans-unit id="lists-unsubscribe" datatype="html">
+        <source>Unsubscribe</source>
+        <target>Se désinscrire</target>
+      </trans-unit>
+
+      <trans-unit id="lists-owner" datatype="html">
+        <source>Owner</source>
+        <target>Propriétaire</target>
+      </trans-unit>
+
+      <trans-unit id="lists-you-are-owner" datatype="html">
+        <source>You are the owner of this list.</source>
+        <target>Vous êtes le propriétaire de cette liste.</target>
+      </trans-unit>
+
+      <!-- MENTIONS -->
+
+      <trans-unit id="mentions-h1" datatype="html">
+        <source>Mentions</source>
+        <target>Mentions</target>
+      </trans-unit>
+
+      <!-- MY TWEETS -->
+
+      <trans-unit id="mytweets-h1" datatype="html">
+        <source>My Tweets</source>
+        <target>My Tweets</target>
+      </trans-unit>
+
+      <!-- MY PROFILE -->
+
+      <trans-unit id="profile-h1" datatype="html">
+        <source>My Profile</source>
+        <target>My Profile</target>
+      </trans-unit>
+
+      <trans-unit id="profile-edit-link" datatype="html">
+        <source>Edit Profile</source>
+        <target>Modifier le profil</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-username" datatype="html">
+        <source>Username</source>
+        <target>Nom d'utilisateur</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-name" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-location" datatype="html">
+        <source>Location</source>
+        <target>Emplacement</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-since" datatype="html">
+        <source>Member Since</source>
+        <target>Membre depuis</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-bio" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-website" datatype="html">
+        <source>Website</source>
+        <target>Site Web</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-tweets" datatype="html">
+        <source>Tweets</source>
+        <target>Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-following" datatype="html">
+        <source>Following</source>
+        <target>Following</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-followers" datatype="html">
+        <source>Followers</source>
+        <target>Followers</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-lists" datatype="html">
+        <source>Lists</source>
+        <target>Listes</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dd-my-lists" datatype="html">
+        <source>My Lists</source>
+        <target>Mes Listes</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-api-hits" datatype="html">
+        <source>Remaining API hits</source>
+        <target>Remaining API hits</target>
+      </trans-unit>
+
+      <trans-unit id="profile-dt-bg-image" datatype="html">
+        <source>Background image</source>
+        <target>Image d'arrière-plan</target>
+      </trans-unit>
+
+      <trans-unit id="profile-view-image" datatype="html">
+        <source>view image</source>
+        <target>Voir l'image</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-img" datatype="html">
+        <source>No background image is found.</source>
+        <target>Aucune image trouvée.</target>
+      </trans-unit>
+
+      <trans-unit id="profile-no-alt" datatype="html">
+        <source>(No alternative text is offered from Twitter.)</source>
+        <target>(Aucun texte alternatif offert par Twitter.)</target>
+      </trans-unit>
+
+      <trans-unit id="profile-h2-latest" datatype="html">
+        <source>Latest Tweets</source>
+        <target>Plus récent tweets</target>
+      </trans-unit>
+
+      <!-- EDIT PROFILE -->
+
+      <trans-unit id="edit-profile-back-to" datatype="html">
+        <source>back to My Profile</source>
+        <target>back to My Profile</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-h1" datatype="html">
+        <source>Edit Profile</source>
+        <target>Modifier le profil</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-email" datatype="html">
+        <source>Email</source>
+        <target>Courriel</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-update" datatype="html">
+        <source>Update</source>
+        <target>Mise à jour</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-avatar-h2" datatype="html">
+        <source>Change Avatar</source>
+        <target>Changer l'avatar</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-avatar-p" datatype="html">
+        <source>Must be a valid GIF, JPG, or PNG image of less than 700 kilobytes in size.</source>
+        <target>Doit être un GIF valide, JPG ou PNG de moins de 700 kilo-octets.</target>
+      </trans-unit>
+
+      <trans-unit id="edit-profile-avatar-path" datatype="html">
+        <source>Path of New Avatar Image</source>
+        <target>Path of New Avatar Image</target>
+      </trans-unit>
+
+      <!-- TIPS -->
+
+      <trans-unit id="tips-h1" datatype="html">
+        <source>Tips</source>
+        <target>Tips</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-spam" datatype="html">
+        <source>Report Spam</source>
+        <target>Report Spam</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-p" datatype="html">
+        <source>You can report a spammer account to Twitter three ways:</source>
+        <target>You can report a spammer account to Twitter three ways:</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-li-1" datatype="html">
+        <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</source>
+        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; under the user options in a tweet.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-li-2" datatype="html">
+        <source>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</source>
+        <target>Click the Report Spammer icon link &lt;span aria-hidden=&quot;true&quot; class=&quot;icon-alert&quot;&gt;&lt;/span&gt; on the user details page.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-spam-li-3" datatype="html">
+        <source>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</source>
+        <target>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-search" datatype="html">
+        <source>Search</source>
+        <target>Recherche</target>
+      </trans-unit>
+
+      <trans-unit id="tips-search-p" datatype="html">
+        <source>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</source>
+        <target>Tips for searching are listed on the &lt;a href=&quot;/search&quot;&gt;Search&lt;/a&gt; page.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-table" datatype="html">
+        <source>Friends, Favorites, Direct Messages</source>
+        <target>Friends, Favorites, Direct Messages</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-p" datatype="html">
+        <source>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</source>
+        <target>The following table provides tips on how to use the Twitter text commands relating to friends, favorites and direct messages.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-th-1" datatype="html">
+        <source>Syntax</source>
+        <target>Syntax</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-th-2" datatype="html">
+        <source>Explanation</source>
+        <target>Explanation</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-th-3" datatype="html">
+        <source>Example</source>
+        <target>Example</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-at-1" datatype="html">
+        <source>@username + message</source>
+        <target>@username + message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-at-2" datatype="html">
+        <source>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</source>
+        <target>Directs a tweet at named person, and causes your twitter to save in their &quot;replies&quot; timeline. Only you, named person, and users following both, will see this tweet in their timeline.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-at-3" datatype="html">
+        <source>@caratina I love that song too, The Cure rules!</source>
+        <target>@caratina I love that song too, The Cure rules!</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-dot-at-1" datatype="html">
+        <source>.@username + message</source>
+        <target>.@username + message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-dot-at-2" datatype="html">
+        <source>Same as above but allows all accounts to view the tweet. (Period at beginning.)</source>
+        <target>Same as above but allows all accounts to view the tweet. (Period at beginning.)</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-dot-at-3" datatype="html">
+        <source>.@jennison I love that song too, Joy Division rules!</source>
+        <target>.@jennison I love that song too, Joy Division rules!</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-rt-1" datatype="html">
+        <source>RT @username + their message</source>
+        <target>RT @username + their message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-rt-2" datatype="html">
+        <source>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</source>
+        <target>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-rt-3" datatype="html">
+        <source>RT @easychirp Working on some performance enhancements with the API.</source>
+        <target>RT @easychirp Working on some performance enhancements with the API.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-mt-1" datatype="html">
+        <source>MT @username + their message</source>
+        <target>MT @username + their message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-mt-2" datatype="html">
+        <source>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</source>
+        <target>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-mt-3" datatype="html">
+        <source>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</source>
+        <target>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-caret-1" datatype="html">
+        <source>^ + user initials</source>
+        <target>^ + user initials</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-caret-2" datatype="html">
+        <source>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</source>
+        <target>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-caret-3" datatype="html">
+        <source>@somebody Yes, sent to email address associated with the account. ^DW</source>
+        <target>@somebody Yes, sent to email address associated with the account. ^DW</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-d-1" datatype="html">
+        <source>D username + message</source>
+        <target>D username + message</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-d-2" datatype="html">
+        <source>Sends a person a direct (private) message.</source>
+        <target>Sends a person a direct (private) message.</target>
+      </trans-unit>
+
+      <trans-unit id="tips-table-d-3" datatype="html">
+        <source>d dennisl Want to meet at Starbucks at 4pm today?</source>
+        <target>d dennisl Want to meet at Starbucks at 4pm today?</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-keys" datatype="html">
+        <source>Access Keys</source>
+        <target>Access Keys</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-0" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-1" datatype="html">
+        <source>Timeline</source>
+        <target>Timeline</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-2" datatype="html">
+        <source>Mentions</source>
+        <target>Mentions</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-3" datatype="html">
+        <source>Favorites</source>
+        <target>Favorites</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-4" datatype="html">
+        <source>Retweets</source>
+        <target>Retweets</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-5" datatype="html">
+        <source>Lists</source>
+        <target>Lists</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-6" datatype="html">
+        <source>Direct Message (DM)</source>
+        <target>Message Privé</target>
+      </trans-unit>
+
+      <trans-unit id="tips-keys-7" datatype="html">
+        <source>Tools</source>
+        <target>Tools</target>
+      </trans-unit>
+
+      <trans-unit id="tips-h2-apps" datatype="html">
+        <source>Web Applications</source>
+        <target>Web Applications</target>
+      </trans-unit>
+
+      <!-- TRENDS -->
+
+      <trans-unit id="trends-h1" datatype="html">
+        <source>Trends</source>
+        <target>Tendance</target>
+      </trans-unit>
+
+      <trans-unit id="trends-worldwide" datatype="html">
+        <source>Worldwide</source>
+        <target>Mondial</target>
+      </trans-unit>
+
+      <!-- ARTICLES & FEEDBACK -->
+
+      <trans-unit id="articles-h1" datatype="html">
+        <source>Articles &amp; Feedback</source>
+        <target>Articles &amp; Feedback</target>
+      </trans-unit>
+
+      <trans-unit id="articles-h2-books" datatype="html">
+        <source>We're in Books!</source>
+        <target>We're in Books!</target>
+      </trans-unit>
+
+      <trans-unit id="articles-book-cover" datatype="html">
+        <source>book cover</source>
+        <target>book cover</target>
+      </trans-unit>
+
+      <trans-unit id="articles-books-webforeveryone" datatype="html">
+        <source>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</source>
+        <target>Easy Chirp is mentioned in &lt;a href=&quot;http://rosenfeldmedia.com/books/a-web-for-everyone/&quot;&gt;A Web for Everyone: Designing Accessible User Experiences&lt;/a&gt; by Sarah Horton and Whitney Quesenbery. Published by Rosenfeld Media.</target>
+      </trans-unit>
+
+      <trans-unit id="articles-books-thetwitter" datatype="html">
+        <source>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</source>
+        <target>Easy Chirp is mentioned in &lt;a href=&quot;http://www.amazon.com/Twitter-Book-Otx-Tim-OReilly/dp/1449314201&quot;&gt;&lt;em&gt;The Twitter Book&lt;/em&gt;&lt;/a&gt;, now in the second edition! See the first page of the Get Started section. Follow co-author Sarah Milstein @SarahM.</target>
+      </trans-unit>
+
+      <trans-unit id="articles-books-finnish" datatype="html">
+        <source>Accessible Twitter is mentioned in &lt;a href=&quot;http://www.twitterkirja.fi/kirja/&quot;&gt;N&amp;auml;in k&amp;auml;yt&amp;auml;t Twitteri&amp;auml;&lt;/a&gt; (How to Use Twitter). A book written in Finnish by author &lt;a href=&quot;http://www.fiikus.net/&quot;&gt;Maija Haavisto&lt;/a&gt; (@DiamonDie).</source>
+        <target>Accessible Twitter is mentioned in &lt;a href=&quot;http://www.twitterkirja.fi/kirja/&quot;&gt;N&amp;auml;in k&amp;auml;yt&amp;auml;t Twitteri&amp;auml;&lt;/a&gt; (How to Use Twitter). A book written in Finnish by author &lt;a href=&quot;http://www.fiikus.net/&quot;&gt;Maija Haavisto&lt;/a&gt; (@DiamonDie).</target>
+      </trans-unit>
+
+      <trans-unit id="articles-h2-user" datatype="html">
+        <source>User Feedback</source>
+        <target>User Feedback</target>
+      </trans-unit>
+
+      <trans-unit id="articles-h2-wikis" datatype="html">
+        <source>We're in Wikis!</source>
+        <target>We're in Wikis!</target>
+      </trans-unit>
+
+      <trans-unit id="articles-h2-blogs" datatype="html">
+        <source>Article &amp; Blog Mentions</source>
+        <target>Article &amp; Blog Mentions</target>
+      </trans-unit>
+
+      <trans-unit id="articles-h3-highlights" datatype="html">
+        <source>Highlights</source>
+        <target>Highlights</target>
+      </trans-unit>
+
+      <trans-unit id="articles-h3-more" datatype="html">
+        <source>More, ordered by date</source>
+        <target>More, ordered by date</target>
+      </trans-unit>
+
+      <!-- FEATURES -->
+
+      <trans-unit id="features-h1" datatype="html">
+        <source>Features</source>
+        <target>Features</target>
+      </trans-unit>
+
+      <trans-unit id="features-more" datatype="html">
+        <source>More Features</source>
+        <target>More Features</target>
+      </trans-unit>
+
+      <!-- a11y features -->
+
+      <trans-unit id="features-a11y-h2" datatype="html">
+        <source>Accessibility Features</source>
+        <target>Accessibility Features</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-kybd" datatype="html">
+        <source>All links and functionality is keyboard accessible.</source>
+        <target>All links and functionality is keyboard accessible.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-layout" datatype="html">
+        <source>Simple, consistent layout and navigation is provided.</source>
+        <target>Simple, consistent layout and navigation is provided.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-headings" datatype="html">
+        <source>Headings and page titles are implemented carefully for optimal accessibility.</source>
+        <target>Headings and page titles are implemented carefully for optimal accessibility.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-ajax" datatype="html">
+        <source>Ajax actions are concluded with an alert (JS or ARIA) that notifies the user of the result of the action.</source>
+        <target>Ajax actions are concluded with an alert (JS or ARIA) that notifies the user of the result of the action.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-contrast" datatype="html">
+        <source>Large default text size and high color contrast.</source>
+        <target>Large default text size and high color contrast.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-resize" datatype="html">
+        <source>Text may be resized many levels without breaking layout.</source>
+        <target>Text may be resized many levels without breaking layout.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-keys" datatype="html">
+        <source>Access keys (native keyboard shortcuts) to main menu items.</source>
+        <target>Access keys (native keyboard shortcuts) to main menu items.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-forms" datatype="html">
+        <source>Forms and data tables are marked up for optimal accessibility.</source>
+        <target>Forms and data tables are marked up for optimal accessibility.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-semantic" datatype="html">
+        <source>Code is semantic, light, and adheres to best practices for Web Standards.</source>
+        <target>Code is semantic, light, and adheres to best practices for Web Standards.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-aria" datatype="html">
+        <source>ARIA is implemented throughout including document landmark roles, alert roles, and live region for the dynamic character counter.</source>
+        <target>ARIA is implemented throughout including document landmark roles, alert roles, and live region for the dynamic character counter.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-skip" datatype="html">
+        <source>A &quot;skip to main content&quot; link is provided for keyboard users (and a &quot;skip to sign in&quot; link on the home page).</source>
+        <target>A &quot;skip to main content&quot; link is provided for keyboard users (and a &quot;skip to sign in&quot; link on the home page).</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-js" datatype="html">
+        <source>Works with or without JavaScript.</source>
+        <target>Works with or without JavaScript.</target>
+      </trans-unit>
+
+      <trans-unit id="features-a11y-at" datatype="html">
+        <source>Works with all types of assistive technology including screen readers, screen enlargers, braille-output, text-only browsers, and pretty much any web-enabled device.</source>
+        <target>Works with all types of assistive technology including screen readers, screen enlargers, braille-output, text-only browsers, and pretty much any web-enabled device.</target>
+      </trans-unit>
+
+      <!-- main features -->
+
+      <trans-unit id="features-main-h2" datatype="html">
+        <source>Main Features</source>
+        <target>Main Features</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-shortener" datatype="html">
+        <source>When writing a tweet, a character counter and a Shorten URL feature (choose bit.ly or weba.im) are available.</source>
+        <target>When writing a tweet, a character counter and a Shorten URL feature (choose bit.ly or weba.im) are available.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-replytoall" datatype="html">
+        <source>In addition to the basic retweet, quote tweet, and reply, user can reply to all and email tweet.</source>
+        <target>In addition to the basic retweet, quote tweet, and reply, user can reply to all and email tweet.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-lists" datatype="html">
+        <source>View, subscribe, and create Twitter Lists.</source>
+        <target>View, subscribe, and create Twitter Lists.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-search" datatype="html">
+        <source>Search tweets and users (and search tips).</source>
+        <target>Search tweets and users (and search tips).</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-saved-search" datatype="html">
+        <source>Add, delete, and run saved searches.</source>
+        <target>Add, delete, and run saved searches.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-edit-profile" datatype="html">
+        <source>Edit basic profile settings including updating avatar.</source>
+        <target>Edit basic profile settings including updating avatar.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-jump" datatype="html">
+        <source>Easily jump to user's profile and timeline.</source>
+        <target>Easily jump to user's profile and timeline.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-thread" datatype="html">
+        <source>Inline threading of tweets; displays reply &quot;conversation&quot;.</source>
+        <target>Inline threading of tweets; displays reply &quot;conversation&quot;.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-linked" datatype="html">
+        <source>Tweets contain linked hash tags and usernames.</source>
+        <target>Tweets contain linked hash tags and usernames.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-review" datatype="html">
+        <source>Easy to review a tweet when replying and quoting.</source>
+        <target>Easy to review a tweet when replying and quoting.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-foll" datatype="html">
+        <source>View details of who you're following and your followers.</source>
+        <target>View details of who you're following and your followers.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-block" datatype="html">
+        <source>Blocking is supported.</source>
+        <target>Blocking is supported.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-retweets-num" datatype="html">
+        <source>Number of retweets are displayed on each tweet (if 1 or more).</source>
+        <target>Number of retweets are displayed on each tweet (if 1 or more).</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-retweets-types" datatype="html">
+        <source>View Retweets by you, of you, and to you.</source>
+        <target>View Retweets by you, of you, and to you.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-isfollow" datatype="html">
+        <source>Quickly find out if a user is following you from the user's profile page.</source>
+        <target>Quickly find out if a user is following you from the user's profile page.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-trends" datatype="html">
+        <source>View current Twitter Trends.</source>
+        <target>View current Twitter Trends.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-twitter-links" datatype="html">
+        <source>A link to Twitter is provided for 'View Single Tweet' page and for owned and subscribed lists.</source>
+        <target>A link to Twitter is provided for 'View Single Tweet' page and for owned and subscribed lists.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-screens" datatype="html">
+        <source>Designed for all screen resolutions, great for desktop, tablet and mobile.</source>
+        <target>Designed for all screen resolutions, great for desktop, tablet and mobile.</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-browsers" datatype="html">
+        <source>Works on all major browsers: IE8+, Firefox, Safari, Opera, and Chrome.</source>
+        <target>Works on all major browsers: IE8+, Firefox, Safari, Opera, and Chrome.</target>
+      </trans-unit>
+
+      <!-- ABOUT -->
+
+      <trans-unit id="about-h1" datatype="html">
+        <source>About</source>
+        <target>About</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-name" datatype="html">
+        <source>The Name</source>
+        <target>The Name</target>
+      </trans-unit>
+
+      <trans-unit id="about-name-p1" datatype="html">
+        <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</source>
+        <target>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</target>
+      </trans-unit>
+
+      <trans-unit id="about-name-p2" datatype="html">
+        <source>Originally, the app was named &amp;quot;Accessible Twitter&amp;quot;. Many of the articles and awards cited on this website use this name. Learn more &lt;a href=&quot;http://www.weboverhauls.com/ce/pressreleases/pr_2011_06_01.htm&quot;&gt;about the name change&lt;/a&gt;.</source>
+        <target>Originally, the app was named &amp;quot;Accessible Twitter&amp;quot;. Many of the articles and awards cited on this website use this name. Learn more &lt;a href=&quot;http://www.weboverhauls.com/ce/pressreleases/pr_2011_06_01.htm&quot;&gt;about the name change&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-donate" datatype="html">
+        <source>Donate</source>
+        <target>Donate</target>
+      </trans-unit>
+
+      <trans-unit id="about-donate-p1" datatype="html">
+        <source>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</source>
+        <target>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</target>
+      </trans-unit>
+
+      <trans-unit id="about-donate-alt" datatype="html">
+        <source>Donate with PayPal; credit cards accepted.</source>
+        <target>Donate with PayPal; credit cards accepted.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-account" datatype="html">
+        <source>Our Twitter Account</source>
+        <target>Our Twitter Account</target>
+      </trans-unit>
+
+      <trans-unit id="about-account-p1" datatype="html">
+        <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
+        <target>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-feedback" datatype="html">
+        <source>Feedback &amp; Email</source>
+        <target>Feedback &amp; Email</target>
+      </trans-unit>
+
+      <trans-unit id="about-feedback-p1" datatype="html">
+        <source>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</source>
+        <target>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-promote" datatype="html">
+        <source>Promote Easy Chirp!</source>
+        <target>Promote Easy Chirp!</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-p1" datatype="html">
+        <source>Show your support for web accessibility by promoting Easy Chirp! Or just because you like it (smiley). Here are some ideas on how:</source>
+        <target>Show your support for web accessibility by promoting Easy Chirp! Or just because you like it (smiley). Here are some ideas on how:</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-use" datatype="html">
+        <source>Use the Easy Chirp application.</source>
+        <target>Use the Easy Chirp application.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-tweet" datatype="html">
+        <source>Write a tweet about us.</source>
+        <target>Write a tweet about us.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-mention" datatype="html">
+        <source>Mention us on Facebook or Google Plus.</source>
+        <target>Mention us on Facebook or Google Plus.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-email" datatype="html">
+        <source>Email your friends.</source>
+        <target>Email your friends.</target>
+      </trans-unit>
+
+      <trans-unit id="about-promote-li-write" datatype="html">
+        <source>Write a blog about it.</source>
+        <target>Write a blog about it.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-tech" datatype="html">
+        <source>Technical</source>
+        <target>Technical</target>
+      </trans-unit>
+
+      <trans-unit id="about-tech-p1" datatype="html">
+        <source>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;https://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</source>
+        <target>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;https://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-disclaimer" datatype="html">
+        <source>Disclaimer</source>
+        <target>Disclaimer</target>
+      </trans-unit>
+
+      <trans-unit id="about-disclaimer-p1" datatype="html">
+        <source>This site is not affiliated in any way to &lt;a rel=&quot;nofollow&quot; href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt;.</source>
+        <target>This site is not affiliated in any way to &lt;a rel=&quot;nofollow&quot; href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="about-disclaimer-p2" datatype="html">
+        <source>Your information is safe with us! The information in your profile, tweets, etc., will not used in any way outside of this web application. Use of this web site is voluntary. This site is not responsible for any data which may be changed or lost.</source>
+        <target>Your information is safe with us! The information in your profile, tweets, etc., will not used in any way outside of this web application. Use of this web site is voluntary. This site is not responsible for any data which may be changed or lost.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-awards" datatype="html">
+        <source>Awards!</source>
+        <target>Awards!</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-afb" datatype="html">
+        <source>Recipient of the AFB 2011 Access Award</source>
+        <target>Recipient of the AFB 2011 Access Award</target>
+      </trans-unit>
+      <trans-unit id="about-awards-afb" datatype="html">
+        <source>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</source>
+        <target>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-accessit" datatype="html">
+        <source>Recipient of the 2009 Access IT @web2.0 Award</source>
+        <target>Recipient of the 2009 Access IT @web2.0 Award</target>
+      </trans-unit>
+      <trans-unit id="about-awards-accessit" datatype="html">
+        <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
+        <target>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-bestweb" datatype="html">
+        <source>Nominated in the 2010 Best of the Web Awards</source>
+        <target>Nominated in the 2010 Best of the Web Awards</target>
+      </trans-unit>
+      <trans-unit id="about-awards-bestweb" datatype="html">
+        <source>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;https://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</source>
+        <target>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;https://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-bb" datatype="html">
+        <source>Nominated in the Blind Bargains: 2009 &amp; 2010 Access Awards</source>
+        <target>Nominated in the Blind Bargains: 2009 &amp; 2010 Access Awards</target>
+      </trans-unit>
+      <trans-unit id="about-awards-bb" datatype="html">
+        <source>Accessible Twitter was a nominee for &amp;quot;Best Blindness-related Website&amp;quot; in the &lt;a href=&quot;http://www.blindbargains.com/awardlist09.php&quot;&gt;Blind Bargains: 2009 Access Awards&lt;/a&gt; and the &lt;a href=&quot;http://www.blindbargains.com/awardlist10.php&quot;&gt;Blind Bargains: 2010 Access Awards&lt;/a&gt; (category 7).</source>
+        <target>Accessible Twitter was a nominee for &amp;quot;Best Blindness-related Website&amp;quot; in the &lt;a href=&quot;http://www.blindbargains.com/awardlist09.php&quot;&gt;Blind Bargains: 2009 Access Awards&lt;/a&gt; and the &lt;a href=&quot;http://www.blindbargains.com/awardlist10.php&quot;&gt;Blind Bargains: 2010 Access Awards&lt;/a&gt; (category 7).</target>
+      </trans-unit>
+
+      <trans-unit id="about-awards-h3-rnib" datatype="html">
+        <source>RNIB Featured Website, December 2011</source>
+        <target>RNIB Featured Website, December 2011</target>
+      </trans-unit>
+      <trans-unit id="about-awards-rnib" datatype="html">
+        <source>Easy Chirp was the &lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website, December 2011.</source>
+        <target>Easy Chirp was the &lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website, December 2011.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-authors" datatype="html">
+        <source>Authors</source>
+        <target>Authors</target>
+      </trans-unit>
+
+      <trans-unit id="about-authors-p1" datatype="html">
+        <source>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis and &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;.</source>
+        <target>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis and &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-more" datatype="html">
+        <source>More Info</source>
+        <target>More Info</target>
+      </trans-unit>
+
+      <trans-unit id="about-more-p1" datatype="html">
+        <source>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</source>
+        <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
+      </trans-unit>
+
+      <trans-unit id="about-h2-kick" datatype="html">
+        <source>Kickstarter</source>
+        <target>Kickstarter</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p1" datatype="html">
+        <source>A successful &lt;a href=&quot;https://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</source>
+        <target>A successful &lt;a href=&quot;https://www.kickstarter.com/projects/dlembree/easy-chirp-2-contribute-to-an-inclusive-twittersph&quot;&gt;Kickstarter campaign&lt;/a&gt; was run in order to help funding for the relaunch.</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-p2" datatype="html">
+        <source>A big thank-you to the platinum Kickstarter backers:</source>
+        <target>A big thank-you to the platinum Kickstarter backers:</target>
+      </trans-unit>
+
+      <trans-unit id="about-kick-names" datatype="html">
+        <source>Sharron Rush (@sharrush), George Zamfir (@good_wally), John F Croston III (@jfc3), Pratik Patel (@ppatel), Frank M. Palinkas (@fmpalinkas), Mike Paciello (@mpaciello).</source>
+        <target>Sharron Rush (@sharrush), George Zamfir (@good_wally), John F Croston III (@jfc3), Pratik Patel (@ppatel), Frank M. Palinkas (@fmpalinkas), Mike Paciello (@mpaciello).</target>
+      </trans-unit>
+
+      <!-- QUOTE -->
+
+      <trans-unit id="quote-h1" datatype="html">
+        <source>Quote Tweet</source>
+        <target>Quote Tweet</target>
+      </trans-unit>
+
+      <!-- REPLY -->
+
+      <trans-unit id="reply-h1" datatype="html">
+        <source>Reply</source>
+        <target>Reply</target>
+      </trans-unit>
+
+      <!-- RETWEET -->
+
+      <trans-unit id="retweet-h1" datatype="html">
+        <source>Retweet</source>
+        <target>Retweet</target>
+      </trans-unit>
+
+      <!-- SEARCH -->
+
+      <trans-unit id="search-h1" datatype="html">
+        <source>Search</source>
+        <target>Recherche</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-tweets" datatype="html">
+        <source>Search Tweets</source>
+        <target>Search Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-tweets-query" datatype="html">
+        <source>Enter search terms:</source>
+        <target>Enter search terms:</target>
+      </trans-unit>
+
+      <trans-unit id="search-tweets-submit" datatype="html">
+        <source>Search Tweets</source>
+        <target>Search Tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-h3-hints" datatype="html">
+        <source>Hints for Searching Tweets</source>
+        <target>Indices pour rechercher parmi les tweets</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-operator" datatype="html">
+        <source>Operator</source>
+        <target>Espace</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-example" datatype="html">
+        <source>Example</source>
+        <target>Exemple</target>
+      </trans-unit>
+
+      <trans-unit id="search-th-result" datatype="html">
+        <source>Result</source>
+        <target>Résultats</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-space" datatype="html">
+        <source>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</source>
+        <target>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-or" datatype="html">
+        <source>containing either &quot;love&quot; or &quot;hate&quot; (or both)</source>
+        <target>containing either &quot;love&quot; or &quot;hate&quot; (or both)</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-hyphen" datatype="html">
+        <source>containing &quot;beer&quot; but not &quot;root&quot;</source>
+        <target>containing &quot;beer&quot; but not &quot;root&quot;</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-hash" datatype="html">
+        <source>containing the hashtag &quot;haiku&quot;</source>
+        <target>containing the hashtag &quot;haiku&quot;</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-from" datatype="html">
+        <source>sent from person &quot;alexiskold&quot;</source>
+        <target>sent from person &quot;alexiskold&quot;</target>
+      </trans-unit>
+
+      <trans-unit id="search-result-to" datatype="html">
+        <source>sent to person &quot;techcrunch&quot;</source>
+        <target>sent to person &quot;techcrunch&quot;</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-saved" datatype="html">
+        <source>Saved Searches</source>
+        <target>Recherches sauvegardées</target>
+      </trans-unit>
+
+      <trans-unit id="search-saved-none" datatype="html">
+        <source>None found.</source>
+        <target>None found.</target>
+      </trans-unit>
+
+      <trans-unit id="search-h2-users" datatype="html">
+        <source>Search Users</source>
+        <target>Rechercher un utilisateur</target>
+      </trans-unit>
+
+      <trans-unit id="search-users-query" datatype="html">
+        <source>Enter search user term:</source>
+        <target>Enter search user term:</target>
+      </trans-unit>
+
+      <trans-unit id="search-users-submit" datatype="html">
+        <source>Search Users</source>
+        <target>Rechercher un utilisateur</target>
+      </trans-unit>
+
+      <!-- SEARCH RESULTS -->
+
+      <trans-unit id="search-results-h1" datatype="html">
+        <source>Search Results</source>
+        <target>Search Results</target>
+      </trans-unit>
+
+      <trans-unit id="search-results-save-this" datatype="html">
+        <source>save this search</source>
+        <target>save this search</target>
+      </trans-unit>
+
+      <!-- THE TWEETS -->
+
+      <trans-unit id="gbl-tweet-tweet-options" datatype="html">
+        <source>tweet options</source>
+        <target>tweet options</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-make-fav" datatype="html">
+        <source>make favorite</source>
+        <target>make favorite</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply" datatype="html">
+        <source>reply</source>
+        <target>reply</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-reply-all" datatype="html">
+        <source>reply to all</source>
+        <target>reply to all</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-make-rt" datatype="html">
+        <source>retweet</source>
+        <target>retweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-remove-rt" datatype="html">
+        <source>remove retweet</source>
+        <target>remove retweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-quote" datatype="html">
+        <source>quote tweet</source>
+        <target>quote tweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-email" datatype="html">
+        <source>email tweet</source>
+        <target>email tweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-user-options" datatype="html">
+        <source>user options</source>
+        <target>options d'utilisateurs</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-timeline" datatype="html">
+        <source>timeline</source>
+        <target>ligne de temps</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-dm" datatype="html">
+        <source>direct message</source>
+        <target>message privé</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-tweet-message" datatype="html">
+        <source>tweet message</source>
+        <target>tweet message</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-mute" datatype="html">
+        <source>mute user</source>
+        <target>mute user</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-report" datatype="html">
+        <source>report spammer</source>
+        <target>report spammer</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-responding" datatype="html">
+        <source>Responding</source>
+        <target>Répondre</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-retweet" datatype="html">
+        <source>Retweet</source>
+        <target>Retweet</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-remove-fav" datatype="html">
+        <source>remove favorite</source>
+        <target>remove favorite</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-tweet-times" datatype="html">
+        <source>times</source>
+        <target>fois</target>
+      </trans-unit>
+
+      <!-- USER -->
+
+      <trans-unit id="user-h1" datatype="html">
+        <source>User Details</source>
+        <target>Détails sur l'utilisateur</target>
+      </trans-unit>
+
+      <trans-unit id="user-pic-open-orig" datatype="html">
+        <source>click to open original image in new window</source>
+        <target>click to open original image in new window</target>
+      </trans-unit>
+
+      <trans-unit id="user-pic-alt" datatype="html">
+        <source>avatar</source>
+        <target>avatar</target>
+      </trans-unit>
+
+      <trans-unit id="user-h2-contact" datatype="html">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+
+      <trans-unit id="user-following" datatype="html">
+        <source>Following</source>
+        <target>Following</target>
+      </trans-unit>
+
+      <trans-unit id="user-unfollow" datatype="html">
+        <source>Unfollow</source>
+        <target>Ne plus suivre</target>
+      </trans-unit>
+
+      <trans-unit id="user-not-following" datatype="html">
+        <source>Not Following</source>
+        <target>Not Following</target>
+      </trans-unit>
+
+      <trans-unit id="user-follow" datatype="html">
+        <source>Follow</source>
+        <target>Follow</target>
+      </trans-unit>
+
+      <trans-unit id="user-spammer" datatype="html">
+        <source>Report Spammer</source>
+        <target>Report Spammer</target>
+      </trans-unit>
+
+      <trans-unit id="user-reported-as-spammer" datatype="html">
+        <source>Reported as spammer</source>
+        <target>Reported as spammer</target>
+      </trans-unit>
+
+      <trans-unit id="user-block" datatype="html">
+        <source>Block User</source>
+        <target>Block User</target>
+      </trans-unit>
+
+      <trans-unit id="user-unblock" datatype="html">
+        <source>Unblock User</source>
+        <target>Unblock User</target>
+      </trans-unit>
+
+      <trans-unit id="user-verified" datatype="html">
+        <source>Verified User</source>
+        <target>Utilisateur Validé</target>
+      </trans-unit>
+
+      <trans-unit id="user-h2-details" datatype="html">
+        <source>Details</source>
+        <target>Détails</target>
+      </trans-unit>
+
+      <trans-unit id="user-is-following-me" datatype="html">
+        <source>Is this user following me?</source>
+        <target>Is this user following me?</target>
+      </trans-unit>
+
+      <!-- FOOTER -->
+
+      <trans-unit id="footer-select-language" datatype="html">
+        <source>Select language</source>
+        <target>Select language</target>
+      </trans-unit>
+
+      <trans-unit id="footer-copyright" datatype="html">
+        <source>Copyright</source>
+        <target>Copyright</target>
+      </trans-unit>
+
+      <trans-unit id="footer-h2" datatype="html">
+        <source>Footer</source>
+        <target>Footer</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>
+
