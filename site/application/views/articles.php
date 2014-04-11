@@ -36,7 +36,7 @@
 	<p><a href="http://en.wikipedia.org/wiki/List_of_Twitter_services_and_applications">List of Twitter Services and Applications</a></p>
 
 	<h3>Twitter Fan Wiki</h3>
-	<p><a href="http://twitter.pbworks.com/MultiPlatformApps">Apps/MultiPlatformApps</a></p>
+	<p><a href="http://twitter.pbworks.com/w/page/1779855/MultiPlatformApps">Apps/MultiPlatformApps</a></p>
 
 	<h3>MozillaWiki</h3>
 	<p><a href="https://wiki.mozilla.org/Accessibility/Social#Alternative_Options_and_Info_for_Users">Accessibility/Social</a></p>
@@ -105,9 +105,6 @@
 	<dt><a href="https://www-304.ibm.com/connections/blogs/socialbusiness/entry/march_7_2012_3_03_pm3">Making Social Media More Accessible</a></dt>
 		<dd>IBM Social Business Insights Blog</dd>
 		<dd>2012 Mar 7</dd>
-	<dt><a href="http://mqas.org/blog/2012/02/18/easy-chirp-accessible-twitter/">Easy Chirp - Accessible Twitter</a></dt>
-		<dd>Macquarie University Sydney (MQAS)</dd>
-		<dd>2012 Feb 18</dd>
 	<dt><a href="http://lowvisionbureau.com/blog/lvbpodcast/twitter-accessible-for-visually-impaired-people/">Twitter accessible for visually impaired people [podcast]</a></dt>
 		<dd>LowVisionBureau</dd>
 		<dd>2012 Jan 29</dd>
@@ -150,8 +147,8 @@
 	<dt><a href="http://www.acljohn.com/inclusion/accessible-twitter">Accessible Twitter (from aclJohn's Inclusion Finds)</a></dt>
 		<dd>aclJohn's Inclusion Finds</dd>
 		<dd>2009 Dec 23</dd>
-	<dt><a href="http://www.webkrauts.de/2009/12/05/zugaenglich-und-bequem-twittern/">Zugänglich – und bequem – twittern</a></dt>
-		<dd><a href="http://translate.google.com/translate?js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=1&amp;eotf=1&amp;u=http%3A%2F%2Fwww.webkrauts.de%2F2009%2F12%2F05%2Fzugaenglich-und-bequem-twittern%2F&amp;sl=auto&amp;tl=en">German to English translation</a> by Google</dd>
+	<dt><a href="http://webkrauts.de/2009/12/05/zugaenglich-und-bequem-twittern/">Zugänglich – und bequem – twittern</a></dt>
+		<dd><a href="http://translate.google.com/translate?js=y&amp;prev=_t&amp;hl=en&amp;ie=UTF-8&amp;layout=1&amp;eotf=1&amp;u=http%3A%2F%2Fwebkrauts.de%2F2009%2F12%2F05%2Fzugaenglich-und-bequem-twittern%2F&amp;sl=auto&amp;tl=en">German to English translation</a> by Google</dd>
 		<dd>webkrauts.de</dd>
 		<dd>2009 Dec 05</dd>
 	<dt><a href="https://newmatilda.com/2009/12/01/wake-call-twitter">A Wake-Up Call For Twitter</a></dt>
@@ -161,10 +158,10 @@
 		<dd>translated title: "Accessibility 2.0, more than a slogan"</dd>
 		<dd>presentation by Pierre Guillou of IDEOSE</dd>
 		<dd>2009 Nov 25</dd>
-	<dt><a href="http://blog.eastersealstech.com/review-twitters-alter-ego-accessible-twitter/">Review: Twitter's Alter Ego, "Accessible Twitter"</a></dt>
+	<dt><a href="http://www.eastersealstech.com/2009/10/29/review-twitters-alter-ego-accessible-twitter/">Review: Twitter's Alter Ego, "Accessible Twitter"</a></dt>
 		<dd>2009 Oct 29</dd>
 		<dd><abbr title="Indiana Assistive Technology Act">INDATA</abbr></dd>
-	<dt><a href="http://www.murraynewlands.com/2009/07/twitter-apps-accessible-twitter-optimized-for-disabled-twitter-users/">Accessible Twitter optimized for disabled Twitter users</a></dt>
+	<dt><a href="http://murraynewlands.com/2009/07/twitter-apps-accessible-twitter-optimized-for-disabled-twitter-users/">Accessible Twitter optimized for disabled Twitter users</a></dt>
 		<dd>Murray Newlands</dd>
 		<dd>2009 Sep 00</dd>
 	<dt><a href="http://www.evengrounds.com/blog/accessible-experts-dennis-lembree">Accessible Experts: Dennis Lembree Talks About Accessible Twitter</a></dt>
@@ -177,7 +174,7 @@
 	<dt><a href="http://www.web2access.org.uk/product/160/">[Test] Results for Accessible Twitter</a></dt>
 		<dd>Web2Access</dd>
 		<dd>2009 August 10</dd>
-	<dt><a href="http://www.blacktelephone.com/2009/08/02/for-fun-and-for-free/">For Fun And For Free</a></dt>
+	<dt><a href="http://www.blacktelephone.com/2009/08/for-fun-and-for-free/">For Fun And For Free</a></dt>
 		<dd>Black Telephone; Joseph Karr O'Connor</dd>
 		<dd>2009 Aug 02</dd>
 	<dt><a href="http://webaccessibilityrambles.blogspot.com/2009/07/accessible-twitter.html">Accessible Twitter (from Web Accessibility Rambles)</a></dt>
@@ -210,7 +207,7 @@
 	<dt><a href="http://bub.blicio.us/tag/accessible-twitter/">Accessible Social Media</a></dt>
 		<dd>bub.blicio.us</dd>
 		<dd>2009 Apr 07</dd>
-	<dt><a href="http://www.smiffysplace.com/accessible-twitter-accessible-tweets">Accessible Twitter, Accessible Tweets</a></dt>
+	<dt><a href="http://www.smiffysplace.com/accessible-twitter-accessible-tweets/">Accessible Twitter, Accessible Tweets</a></dt>
 		<dd>Smiffy's Place, Matthew Smith</dd>
 		<dd>2009 Apr 03</dd>
 	<dt><a href="http://www.slideshare.net/jared_w_smith/twitter-accessibility">Twitter Accessibility (CSUN Tweetup 2009)</a> (see slide 14)</dt>
