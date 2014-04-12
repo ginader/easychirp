@@ -125,8 +125,8 @@
 	<ul>
 		<li>Pagination missing in some areas such as search results.</li>
 		<li>Tweets times missing AM/PM.</li>
-		<li>Shorten URL feature may report invalid URL when it is not invalid.</li>
-		<li>User stats in header only update upon login.</li>
+		<li>When using reply-to-all, the user's Twitter handle may mistakenly be copied in the tweet.</li>
+		<li>The user stats in the header only update upon login.</li>
 	</ul>
 </div>
 
