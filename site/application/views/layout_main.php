@@ -13,16 +13,13 @@ if ($this->layout->lang_code === "ar") {
 	<link rel="apple-touch-icon" sizes="144x144" href="/images/brand/touch-icon-ipad-retina.png" />
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	
+
 	<script src="/include/js/modernizr.js"></script>
 
 	<!--[if lte IE 8]><link rel="stylesheet" href="/include/css/ie8.css" type="text/css"/><![endif]-->
 	<!--[if lte IE 7]><script src="/include/js/lte-ie7.js"></script><![endif]-->
 </head>
-
-
 <body class="<?php echo $active_theme; ?>">
-
 <div id="wrapper">
 
 <div id="skip">
@@ -144,6 +141,5 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 })();
 </script>
 <!-- analytics (end) -->
-
 </body>
 </html>
