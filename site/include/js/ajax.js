@@ -388,7 +388,7 @@ $("#frmUrlShort").submit(function(ev) {
 		return false;
 	}
 	//validate for valid URL
-	var urlReg = /^(ht|f)tps?:\/\/[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/;
+	var urlReg = /^HTTP|HTTP|http(s)?:\/\/(www\.)?[A-Za-z0-9]+([\-\.]{1}[A-Za-z0-9]+)*\.[A-Za-z]{2,40}(:[0-9]{1,40})?(\/.*)?$/;
 	if ( (!urlReg.test(txtLongURL)) || (txtLongURL.length <=7) ) {
 		alert("You must provide a valid URL.");
 		objLongURL.focus();
