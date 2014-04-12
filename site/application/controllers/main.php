@@ -72,7 +72,6 @@ class Main extends EC_Controller {
 		$this->layout->set_logged_in($this->_data['logged_in']);
 	}
 
-
 	/**
 	 * Manage the about page "/about"
 	 *
@@ -594,7 +593,6 @@ class Main extends EC_Controller {
 		$this->layout->set_description('Twitter users whom I am following.');
 		$this->layout->view('following', $this->_data);
 	}
-
 
 	/**
 	 * gets tweet to make thread/conversation - /getResponse
@@ -1131,7 +1129,6 @@ class Main extends EC_Controller {
 		$this->layout->view('lists', $this->_data);
 	}
 
-
 	/**
 	 * Follows or unfollows user - /manage_follow_user
 	 *
@@ -1203,7 +1200,6 @@ class Main extends EC_Controller {
 		if ($tweet_id) {
 			$request_param['max_id'] =  $tweet_id;
 		}
-
 
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
 		$tweets_data = array(
@@ -1351,7 +1347,6 @@ class Main extends EC_Controller {
 			$session_data['screen_name']             = $accOAuthData['screen_name'];
 			$session_data['logged_in']               = TRUE;
 			$session_data['utc_offset']              = -18000; // EST 5 hours behind UTC
-
 
 			$lang_code = $this->session->userdata('lang_code');
 			if (empty($lang_code)){
@@ -2028,7 +2023,6 @@ class Main extends EC_Controller {
 			{
 				$request_param['q'] = $query;
 			}
-
 		}
 
 		$data = $this->twitter_lib->get('search/tweets', $request_param);
@@ -2227,7 +2221,6 @@ class Main extends EC_Controller {
 		redirect($_SERVER['HTTP_REFERER']);
 	}
 
-
 	/**
 	 * Change themes
 	 *
@@ -2257,13 +2250,10 @@ class Main extends EC_Controller {
 		$this->_data['utc_offset'] = (empty($utc_offset)) ? 'No UTC offset' : $utc_offset; 
 		$this->_data['time_zone'] = (empty($time_zone)) ? 'No Time Zone' : $time_zone;
 
-
-
 		$this->layout->set_title( 'Test Page' );
 		$this->layout->set_description('This is a Test Page');
 		$this->layout->view('test', $this->_data);
 	}
-
 
 	/**
 	 * Manages the timeline page - /timeline
