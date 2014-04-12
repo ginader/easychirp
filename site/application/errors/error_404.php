@@ -11,6 +11,7 @@
 #container {
 	width: 50%; 
 	margin: 2rem auto;
+	text-align: left;
 }
 h1 {
 	margin-bottom: .75rem;
