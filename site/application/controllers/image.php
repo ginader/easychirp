@@ -24,7 +24,7 @@ class Image extends CI_Controller {
 		// Dummy/fake data (would come from API)
 		$url = "http://www.webaxe.org/wp-content/uploads/2013/08/tl-horizontal_main1.jpg";
 		$title = "Coffee Cup Caffeine Infographic";
-		$longdesc = "<p>9 kinds of coffee, each with a coffee mug that displays an amount of coffee relative to the level of caffeine. Each amount below is in milligrams of caffeine per fluid ounce.</p><ol reversed><li>McDonald&rsquo;s: 9.1</li><li>Seattle&rsquo;s Best: 10.4</li><li>Biggby Coffee: 12.5</li><li>Dunkin&rsquo;Donuts: 12.7</li><li>Dutch Bros. Coffee: 12.8</li><li>Caribou Coffee: 15</li><li>Peet&rsquo;s: 16.7</li><li>Starbucks: 20.6</li><li>Deathwish coffee: 54.2</li></ol>";
+		$longdesc = "<p>9 kinds of coffee, each with a coffee mug that displays an amount of coffee relative to the level of caffeine. Each amount below is in milligrams of caffeine per fluid ounce.</p><ol reversed><li>McDonald&rsquo;s: 9.1</li><li>Seattle&rsquo;s Best: 10.4</li><li>Biggby Coffee: 12.5</li><li>Dunkin&rsquo;Donuts: 12.7</li><li>Dutch Bros. Coffee: 12.8</li><li>Caribou Coffee: 15</li><li>Peet&rsquo;s: 16.7</li><li>Starbucks: 20.6</li><li>Deathwish coffee: 54.2</li></ol>";
 		
 		// Set page data vars
 		$_data["url"] = $url;

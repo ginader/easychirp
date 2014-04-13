@@ -6,7 +6,7 @@
      
      <meta name="description" content="Image view including long description; provided by Easy Chirp." />
      <meta name="author" content="Easy Chirp | http://www.EasyChirp.com | @EasyChirp" />
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
      <link rel="shortcut icon" href="/images/brand/favicon.ico"/>
@@ -25,14 +25,10 @@
           margin-bottom: .25em;
           border-top: 3px solid #ccc;
      }
-     /*footer p,
-     footer div {
-          text-align: right;
-     }*/
      </style>
 </head>
 
-<body>
+<body class="theme-default">
 
 <div id="wrapper">
 
