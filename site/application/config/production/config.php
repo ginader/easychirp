@@ -395,7 +395,24 @@ $config['bitly_secret']       = 'R_49e8fdd586d1bbc9894e7f1c3b32296c';
 $config['bitly_api_key']      = 'R_e0641d85bf9c1d59f5c3a5458a4febdf';
 $config['bitly_access_token'] = '90c2df2a25979b55f14594580eb47d7e32ece1c7';
 
+/*
+|--------------------------------------------------------------------------
+| Image Hosting Services
+|--------------------------------------------------------------------------
+|
+| https://api.imgur.com/
+| The base URL for APIv3 is https://api.imgur.com/3/
+|
+| client_id 8ad419cacdc4c52
+| client_secret 7e98f2992105f6656d1d75c88414b4bdd146e037
+|
+*/
 
+$config['imgur_client_id']           = '8ad419cacdc4c52';
+$config['imgur_client_secret']       = '7e98f2992105f6656d1d75c88414b4bdd146e037';
+$config['imgur_access_token']        = '';
+$config['imgur_refresh_token']       = '';
+$config['imgur_authorization_code']  = '';
 
 /*
 |--------------------------------------------------------------------------
