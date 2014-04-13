@@ -137,12 +137,12 @@
 
       <trans-unit id="gbl-tweet-rt-alert-added" datatype="html">
         <source>The retweet has been created.</source>
-        <target>The retweet has been created.</target>
+        <target>Die retweet wurde erstellt.</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-rt-alert-removed" datatype="html">
         <source>The retweet has been undone.</source>
-        <target>The retweet has been undone.</target>
+        <target>Die retweet wurde rückgängig gemacht.</target>
       </trans-unit>
 
       <trans-unit id="gbl-sure-delete" datatype="html">
@@ -366,7 +366,7 @@
 
       <trans-unit id="nav-retweets" datatype="html">
         <source>Retweets</source>
-        <target>Retweets</target>
+        <target>ReTweets</target>
         <note from="description"></note>
       </trans-unit>
 
@@ -524,7 +524,7 @@
 
       <trans-unit id="home-articles-highlights" datatype="html">
         <source>Highlights:</source>
-        <target>Highlights:</target>
+        <target>Höhepunkte:</target>
       </trans-unit>
 
       <trans-unit id="home-articles-more" datatype="html">
@@ -706,7 +706,7 @@
 
       <trans-unit id="followers-view-followers" datatype="html">
         <source>View Followers</source>
-        <target>View Followers</target>
+        <target>Follower anzeigen</target>
       </trans-unit>
 
       <!-- FOLLOWERS -->
@@ -723,7 +723,7 @@
 
       <trans-unit id="followers-view-following" datatype="html">
         <source>View Following</source>
-        <target>View Following</target>
+        <target>Nach Ansicht</target>
       </trans-unit>
 
       <!-- GO TO USER -->
@@ -1025,7 +1025,7 @@
 
       <trans-unit id="edit-profile-email" datatype="html">
         <source>Email</source>
-        <target>Email</target>
+        <target>E-mail</target>
       </trans-unit>
 
       <trans-unit id="edit-profile-update" datatype="html">
@@ -1227,17 +1227,17 @@
 
       <trans-unit id="tips-keys-3" datatype="html">
         <source>Favorites</source>
-        <target>Favorites</target>
+        <target>Favoriten</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-4" datatype="html">
         <source>Retweets</source>
-        <target>Retweets</target>
+        <target>ReTweets</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-5" datatype="html">
         <source>Lists</source>
-        <target>Lists</target>
+        <target>Listen</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-6" datatype="html">
@@ -1247,7 +1247,7 @@
 
       <trans-unit id="tips-keys-7" datatype="html">
         <source>Tools</source>
-        <target>Tools</target>
+        <target>Werkzeuge</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-apps" datatype="html">
@@ -1264,7 +1264,7 @@
 
       <trans-unit id="trends-worldwide" datatype="html">
         <source>Worldwide</source>
-        <target>Worldwide</target>
+        <target>weltweit</target>
       </trans-unit>
 
       <!-- ARTICLES & FEEDBACK -->
@@ -1772,42 +1772,42 @@
 
       <trans-unit id="search-th-example" datatype="html">
         <source>Example</source>
-        <target>Example</target>
+        <target>Beispiel</target>
       </trans-unit>
 
       <trans-unit id="search-th-result" datatype="html">
         <source>Result</source>
-        <target>Result</target>
+        <target>Ergebnis</target>
       </trans-unit>
 
       <trans-unit id="search-result-space" datatype="html">
         <source>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</source>
-        <target>containing both &quot;twitter&quot; and &quot;search&quot; this is the default operator</target>
+        <target>enthält "Twitter" und "Suche"; das ist der Standardoperator</target>
       </trans-unit>
 
       <trans-unit id="search-result-or" datatype="html">
         <source>containing either &quot;love&quot; or &quot;hate&quot; (or both)</source>
-        <target>containing either &quot;love&quot; or &quot;hate&quot; (or both)</target>
+        <target>enthält entweder "liebe" oder "hass" (oder beide Ausdrücke)</target>
       </trans-unit>
 
       <trans-unit id="search-result-hyphen" datatype="html">
         <source>containing &quot;beer&quot; but not &quot;root&quot;</source>
-        <target>containing &quot;beer&quot; but not &quot;root&quot;</target>
+        <target>enhält "politik", aber nicht "europa"</target>
       </trans-unit>
 
       <trans-unit id="search-result-hash" datatype="html">
         <source>containing the hashtag &quot;haiku&quot;</source>
-        <target>containing the hashtag &quot;haiku&quot;</target>
+        <target>enthält den Hashtag "haiku"</target>
       </trans-unit>
 
       <trans-unit id="search-result-from" datatype="html">
         <source>sent from person &quot;alexiskold&quot;</source>
-        <target>sent from person &quot;alexiskold&quot;</target>
+        <target>gesendet von der Person "alexiskold"</target>
       </trans-unit>
 
       <trans-unit id="search-result-to" datatype="html">
         <source>sent to person &quot;techcrunch&quot;</source>
-        <target>sent to person &quot;techcrunch&quot;</target>
+        <target>gesendet an die Person "techcrunch"</target>
       </trans-unit>
 
       <trans-unit id="search-h2-saved" datatype="html">
