@@ -75,8 +75,8 @@ $config['supported_langs'] = array(
 	'en-US' => 'English',
 	'es' => 'Español',
 	//'fr' => 'Français',
-	'ar' => 'العربية'
-	//'de' => 'Deutsch'
+	'ar' => 'العربية',
+	'de' => 'Deutsch'
 );
 
 /*
