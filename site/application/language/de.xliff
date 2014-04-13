@@ -1137,22 +1137,22 @@
 
       <trans-unit id="tips-table-dot-at-2" datatype="html">
         <source>Same as above but allows all accounts to view the tweet. (Period at beginning.)</source>
-        <target>Same as above but allows all accounts to view the tweet. (Period at beginning.)</target>
+        <target>Bewirkt das Gleiche wie oben, mit dem Unterschied, das alle Nutzer den Tweet lesen können. (Punkt am Anfang.)</target>
       </trans-unit>
 
       <trans-unit id="tips-table-dot-at-3" datatype="html">
         <source>.@jennison I love that song too, Joy Division rules!</source>
-        <target>.@jennison I love that song too, Joy Division rules!</target>
+        <target>.@jennison Ich liebe diesen Song auch, Joy Division ist klasse!</target>
       </trans-unit>
 
       <trans-unit id="tips-table-rt-1" datatype="html">
         <source>RT @username + their message</source>
-        <target>RT @username + their message</target>
+        <target>RT @nutzername + dessen Nachricht</target>
       </trans-unit>
 
       <trans-unit id="tips-table-rt-2" datatype="html">
         <source>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</source>
-        <target>Retweet. When you copy and pass along someone else's message. This is the old method which is different that Twitter's "native" retweet.</target>
+        <target>Retweet. Damit kopieren Sie einen Tweet einer anderen Person und schicken diesen weiter. Dies ist die alte Methode und weicht von Twitters nativem Retweet ab.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-rt-3" datatype="html">
@@ -1162,52 +1162,52 @@
 
       <trans-unit id="tips-table-mt-1" datatype="html">
         <source>MT @username + their message</source>
-        <target>MT @username + their message</target>
+        <target>MT @nutzername + dessen Nachricht</target>
       </trans-unit>
 
       <trans-unit id="tips-table-mt-2" datatype="html">
         <source>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</source>
-        <target>Modified tweet. Similar to a Retweet, but when you modify someone else's message.</target>
+        <target>Veränderter Tweet. Vergleichbar mit einem Retweet, aber Sie können die Nachricht eines anderen verändert weiterschicken.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-mt-3" datatype="html">
         <source>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</source>
-        <target>Cool! MT @EasyChirp is working on some performance enhancements with the Twitter API. #twitter #a11y</target>
+        <target>Super! MT @EasyChirp arbeitet an Verbesserungen mit Hilfe der Twitter-API. #twitter #a11y</target>
       </trans-unit>
 
       <trans-unit id="tips-table-caret-1" datatype="html">
         <source>^ + user initials</source>
-        <target>^ + user initials</target>
+        <target>^ + Nutzerinitialen</target>
       </trans-unit>
 
       <trans-unit id="tips-table-caret-2" datatype="html">
         <source>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</source>
-        <target>For accounts with more than one author, the author adds a carat (^) and his initials to the end of the tweet to clarify who he is.</target>
+        <target>Bei der gemeinsamen Nutzung eines Twitterkontos durch mehrere Autoren kann der Autor ein Zirkumflex (^) und seine Initialen am Ende angeben, um zu verdeutlichen, wer den Tweet verfasst hat.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-caret-3" datatype="html">
         <source>@somebody Yes, sent to email address associated with the account. ^DW</source>
-        <target>@somebody Yes, sent to email address associated with the account. ^DW</target>
+        <target>@irgendjemand Ja, schicken Sie die Infos an die Mailadresse dieses Kontos. ^DW</target>
       </trans-unit>
 
       <trans-unit id="tips-table-d-1" datatype="html">
         <source>D username + message</source>
-        <target>D username + message</target>
+        <target>D nutzername + Nachricht</target>
       </trans-unit>
 
       <trans-unit id="tips-table-d-2" datatype="html">
         <source>Sends a person a direct (private) message.</source>
-        <target>Sends a person a direct (private) message.</target>
+        <target>Schickt einer Person eine private Direktnachricht.</target>
       </trans-unit>
 
       <trans-unit id="tips-table-d-3" datatype="html">
         <source>d dennisl Want to meet at Starbucks at 4pm today?</source>
-        <target>d dennisl Want to meet at Starbucks at 4pm today?</target>
+        <target>d dennis! Treffen wir uns heute um 16 Uhr im Café?</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-keys" datatype="html">
         <source>Access Keys</source>
-        <target>Access Keys</target>
+        <target>Zugangstasten</target>
       </trans-unit>
 
       <trans-unit id="tips-keys-0" datatype="html">
@@ -1252,7 +1252,7 @@
 
       <trans-unit id="tips-h2-apps" datatype="html">
         <source>Web Applications</source>
-        <target>Web Applications</target>
+        <target>Web-Anwendungen</target>
       </trans-unit>
 
       <!-- TRENDS -->
@@ -1271,17 +1271,17 @@
 
       <trans-unit id="articles-h1" datatype="html">
         <source>Articles &amp; Feedback</source>
-        <target>Articles &amp; Feedback</target>
+        <target>Artikel &amp; Feedback</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-books" datatype="html">
         <source>We're in Books!</source>
-        <target>We're in Books!</target>
+        <target>Wir werden in Büchern erwähnt!</target>
       </trans-unit>
 
       <trans-unit id="articles-book-cover" datatype="html">
         <source>book cover</source>
-        <target>book cover</target>
+        <target>Buchumschlag</target>
       </trans-unit>
 
       <trans-unit id="articles-books-webforeveryone" datatype="html">
@@ -1301,17 +1301,17 @@
 
       <trans-unit id="articles-h2-user" datatype="html">
         <source>User Feedback</source>
-        <target>User Feedback</target>
+        <target>Rückmeldungen von Nutzerinnen und Nutzern</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-wikis" datatype="html">
         <source>We're in Wikis!</source>
-        <target>We're in Wikis!</target>
+        <target>Wir werden in Wikis erwähnt!</target>
       </trans-unit>
 
       <trans-unit id="articles-h2-blogs" datatype="html">
         <source>Article &amp; Blog Mentions</source>
-        <target>Article &amp; Blog Mentions</target>
+        <target>Artikel &amp; Blogeinträge</target>
       </trans-unit>
 
       <trans-unit id="articles-h3-highlights" datatype="html">
@@ -1321,7 +1321,7 @@
 
       <trans-unit id="articles-h3-more" datatype="html">
         <source>More, ordered by date</source>
-        <target>More, ordered by date</target>
+        <target>Noch mehr, nach Datum sortiert</target>
       </trans-unit>
 
       <!-- FEATURES -->
@@ -1514,32 +1514,32 @@
 
       <trans-unit id="about-h1" datatype="html">
         <source>About</source>
-        <target>About</target>
+        <target>Über</target>
       </trans-unit>
 
       <trans-unit id="about-h2-name" datatype="html">
         <source>The Name</source>
-        <target>The Name</target>
+        <target>Der Name</target>
       </trans-unit>
 
       <trans-unit id="about-name-p1" datatype="html">
         <source>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</source>
-        <target>A &quot;2&quot; was added to the Easy Chirp name in mid-2013 after a full relaunch (and rewrite). The relaunch was due to major updates needed including a change in the Twitter API. A successful &lt;a href=&quot;#kickstarter&quot;&gt;Kickstarter&lt;/a&gt; campaign was run in order to help funding for the relaunch.</target>
+        <target>Die "2" wurde zum Namen "Easy Chirp" nach dem vollständigen Neustart (und der Neuentwicklung) Mitte 2013 hinzugefügt. Der Neustart war notwendig, weil wichtige Neuerungen eingefügt wurden und sich die Twitter-API verändert hatte. Eine erfolgreiche Kampagne bei Kickstarter hat bei der Finanzierung des Neustarts geholfen.</target>
       </trans-unit>
 
       <trans-unit id="about-name-p2" datatype="html">
         <source>Originally, the app was named &amp;quot;Accessible Twitter&amp;quot;. Many of the articles and awards cited on this website use this name. Learn more &lt;a href=&quot;http://www.weboverhauls.com/ce/pressreleases/pr_2011_06_01.htm&quot;&gt;about the name change&lt;/a&gt;.</source>
-        <target>Originally, the app was named &amp;quot;Accessible Twitter&amp;quot;. Many of the articles and awards cited on this website use this name. Learn more &lt;a href=&quot;http://www.weboverhauls.com/ce/pressreleases/pr_2011_06_01.htm&quot;&gt;about the name change&lt;/a&gt;.</target>
+        <target>Ursprünglich hieß das Programm "Accessible Twitter". Viele Artikel und Auszeichnungen, die auf dieser Webseite erwähnt werden, verwenden diese Bezeichnung. Erfahren Sie mehr über den Namenswechsel.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-donate" datatype="html">
         <source>Donate</source>
-        <target>Donate</target>
+        <target>Spenden</target>
       </trans-unit>
 
       <trans-unit id="about-donate-p1" datatype="html">
         <source>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</source>
-        <target>Help keep Twitter fully web-accessible by donating to Easy Chirp! All donations will go toward site development, maintenance, and hosting fees.</target>
+        <target>Unterstützen Sie uns dabei, Twitter vollständig barrierefrei zu halten, indem Sie an Easy Chirp spenden! Alle Spenden werden vollständig für die Entwicklung, Wartung sowie die Hostinggebühren verwendet.</target>
       </trans-unit>
 
       <trans-unit id="about-donate-alt" datatype="html">
@@ -1549,152 +1549,152 @@
 
       <trans-unit id="about-h2-account" datatype="html">
         <source>Our Twitter Account</source>
-        <target>Our Twitter Account</target>
+        <target>Unser Twitter-Konto</target>
       </trans-unit>
 
       <trans-unit id="about-account-p1" datatype="html">
         <source>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</source>
-        <target>Follow Easy Chirp 2 on Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
+        <target>Folgen Sie Easy Chirp 2 auf Twitter: &lt;a href=&quot;https://twitter.com/EasyChirp&quot;&gt;@EasyChirp&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-feedback" datatype="html">
         <source>Feedback &amp; Email</source>
-        <target>Feedback &amp; Email</target>
+        <target>Rückmeldung &amp; E-mail</target>
       </trans-unit>
 
       <trans-unit id="about-feedback-p1" datatype="html">
         <source>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</source>
-        <target>Feedback and suggestions are always welcome. In addition to Twitter, you may contact Easy Chirp by emailing info AT easy chirp dot com.</target>
+        <target>Rückmeldungen und Vorschläge sind immer willkommen. Neben Twitter können Sie Easy Chirp auch per Mail erreichen unter info AT easy chirp dot com.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-promote" datatype="html">
         <source>Promote Easy Chirp!</source>
-        <target>Promote Easy Chirp!</target>
+        <target>Unterstützen Sie Easy Chirp!</target>
       </trans-unit>
 
       <trans-unit id="about-promote-p1" datatype="html">
         <source>Show your support for web accessibility by promoting Easy Chirp! Or just because you like it (smiley). Here are some ideas on how:</source>
-        <target>Show your support for web accessibility by promoting Easy Chirp! Or just because you like it (smiley). Here are some ideas on how:</target>
+        <target>Unterstützen Sie die Barrierefreiheit im Internet, indem Sie Easy Chirp unterstützen! Oder einfach, weil Sie es mögen (smiley). Hier sind ein paar Vorschläge:</target>
       </trans-unit>
 
       <trans-unit id="about-promote-li-use" datatype="html">
         <source>Use the Easy Chirp application.</source>
-        <target>Use the Easy Chirp application.</target>
+        <target>Verwenden Sie Easy Chirp.</target>
       </trans-unit>
 
       <trans-unit id="about-promote-li-tweet" datatype="html">
         <source>Write a tweet about us.</source>
-        <target>Write a tweet about us.</target>
+        <target>Schreiben Sie einen Tweet über uns.</target>
       </trans-unit>
 
       <trans-unit id="about-promote-li-mention" datatype="html">
         <source>Mention us on Facebook or Google Plus.</source>
-        <target>Mention us on Facebook or Google Plus.</target>
+        <target>Erwähnen Sie uns auf Facebook oder Google Plus.</target>
       </trans-unit>
 
       <trans-unit id="about-promote-li-email" datatype="html">
         <source>Email your friends.</source>
-        <target>Email your friends.</target>
+        <target>Schreiben Sie Ihren Freunden darüber.</target>
       </trans-unit>
 
       <trans-unit id="about-promote-li-write" datatype="html">
         <source>Write a blog about it.</source>
-        <target>Write a blog about it.</target>
+        <target>Schreiben Sie einen Blogeintrag darüber.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-tech" datatype="html">
         <source>Technical</source>
-        <target>Technical</target>
+        <target>Technik</target>
       </trans-unit>
 
       <trans-unit id="about-tech-p1" datatype="html">
         <source>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;https://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</source>
-        <target>Easy Chirp 2 is built with PHP (with Codeigniter MVC framework), HTML5, JavaScript (and jQuery), and the &lt;a rel=&quot;nofollow&quot; href=&quot;https://dev.twitter.com/&quot;&gt;Twitter API&lt;/a&gt;.</target>
+        <target>Easy Chirp 2 nutzt PHP (mit dem Codeigniter MVC Framework), HTML5, JavaScript (und jQuery) sowie das Twitter-API.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-disclaimer" datatype="html">
         <source>Disclaimer</source>
-        <target>Disclaimer</target>
+        <target>Haftungsausschluss</target>
       </trans-unit>
 
       <trans-unit id="about-disclaimer-p1" datatype="html">
         <source>This site is not affiliated in any way to &lt;a rel=&quot;nofollow&quot; href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt;.</source>
-        <target>This site is not affiliated in any way to &lt;a rel=&quot;nofollow&quot; href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt;.</target>
+        <target>Diese Site ist in keiner Weise mit Twitter verbunden.</target>
       </trans-unit>
 
       <trans-unit id="about-disclaimer-p2" datatype="html">
         <source>Your information is safe with us! The information in your profile, tweets, etc., will not used in any way outside of this web application. Use of this web site is voluntary. This site is not responsible for any data which may be changed or lost.</source>
-        <target>Your information is safe with us! The information in your profile, tweets, etc., will not used in any way outside of this web application. Use of this web site is voluntary. This site is not responsible for any data which may be changed or lost.</target>
+        <target>Ihre Informationen sind bei uns sicher! Die Informationen in Ihrem Profil, den Tweets etc. werden nicht außerhalb dieser Webanwendung genutzt. Die Nutzung dieser Website ist freiwillig. Diese Website ist nicht verantwortlich jedwede Daten, die verändert werden oder verloren gehen können.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-awards" datatype="html">
         <source>Awards!</source>
-        <target>Awards!</target>
+        <target>Ehrungen!</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-afb" datatype="html">
         <source>Recipient of the AFB 2011 Access Award</source>
-        <target>Recipient of the AFB 2011 Access Award</target>
+        <target>Gewinner des AFB 2011 Access Award</target>
       </trans-unit>
       <trans-unit id="about-awards-afb" datatype="html">
         <source>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</source>
-        <target>Accessible Twitter was honored with the &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt;. Other recipients included CBS, Lexmark, and Walt Disney Parks &amp; Resorts.</target>
+        <target>Accessible Twitter wurde mit dem &lt;a href=&quot;http://www.afb.org/Section.asp?DocumentID=5410&quot;&gt;American Foundation for the Blind 2011 Access Award&lt;/a&gt; ausgezeichnet. Andere Preisträger waren CBS, Lexmark und die Walt Disney Parks &amp; Resorts.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-accessit" datatype="html">
         <source>Recipient of the 2009 Access IT @web2.0 Award</source>
-        <target>Recipient of the 2009 Access IT @web2.0 Award</target>
+        <target>Gewinner des 2009 Access IT @web2.0 Award</target>
       </trans-unit>
       <trans-unit id="about-awards-accessit" datatype="html">
         <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
-        <target>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</target>
+        <target>Der Access IT @web2.0 Award ehrt Projekte, Produkte oder Dienstleistungen, welche die Barrierefreiheit des Web2.0 voranbringen. Empfehlung der International Webmasters Association (IWA). Das Auswahlverfahren beurteilt die Bedeutung für die Auszeichnung, die Auswirkungen, Erschwinglichkeit und Offenheit sowie die Validierungsebene.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-bestweb" datatype="html">
         <source>Nominated in the 2010 Best of the Web Awards</source>
-        <target>Nominated in the 2010 Best of the Web Awards</target>
+        <target>Nominiert für die 2010 Best of the Web Awards</target>
       </trans-unit>
       <trans-unit id="about-awards-bestweb" datatype="html">
         <source>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;https://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</source>
-        <target>Accessible Twitter was a nominee for &amp;quot;Best API Use&amp;quot; in the 2010 &lt;a href=&quot;https://www.thenetawards.com/&quot;&gt;.net Magazine's Best of the Web&lt;/a&gt; awards.</target>
+        <target>Accessible Twitter war nominiert für "Best API Use" bei den .net Magazine's Best of the Web Awards im Jahr 2010.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-bb" datatype="html">
         <source>Nominated in the Blind Bargains: 2009 &amp; 2010 Access Awards</source>
-        <target>Nominated in the Blind Bargains: 2009 &amp; 2010 Access Awards</target>
+        <target>Nominiert für die Blind Bargains: 2009 &amp; 2010 Access Awards</target>
       </trans-unit>
       <trans-unit id="about-awards-bb" datatype="html">
         <source>Accessible Twitter was a nominee for &amp;quot;Best Blindness-related Website&amp;quot; in the &lt;a href=&quot;http://www.blindbargains.com/awardlist09.php&quot;&gt;Blind Bargains: 2009 Access Awards&lt;/a&gt; and the &lt;a href=&quot;http://www.blindbargains.com/awardlist10.php&quot;&gt;Blind Bargains: 2010 Access Awards&lt;/a&gt; (category 7).</source>
-        <target>Accessible Twitter was a nominee for &amp;quot;Best Blindness-related Website&amp;quot; in the &lt;a href=&quot;http://www.blindbargains.com/awardlist09.php&quot;&gt;Blind Bargains: 2009 Access Awards&lt;/a&gt; and the &lt;a href=&quot;http://www.blindbargains.com/awardlist10.php&quot;&gt;Blind Bargains: 2010 Access Awards&lt;/a&gt; (category 7).</target>
+        <target>Accessible Twitter war nominiert für "Best Blindness-related Website" bei den Blind Bargains: 2009 Access Awards und den Blind Bargains: 2010 Access Awards (Kategorie 7).</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-rnib" datatype="html">
         <source>RNIB Featured Website, December 2011</source>
-        <target>RNIB Featured Website, December 2011</target>
+        <target>RNIB Featured Website, Dezember 2011</target>
       </trans-unit>
       <trans-unit id="about-awards-rnib" datatype="html">
         <source>Easy Chirp was the &lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website, December 2011.</source>
-        <target>Easy Chirp was the &lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website, December 2011.</target>
+        <target>Easy Chirp war die &lt;abbr title=&quot;Royal National Institute of Blind People&quot;&gt;RNIB&lt;/abbr&gt; Featured Website im Dezember 2011.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-authors" datatype="html">
         <source>Authors</source>
-        <target>Authors</target>
+        <target>Entwickler</target>
       </trans-unit>
 
       <trans-unit id="about-authors-p1" datatype="html">
         <source>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis and &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;.</source>
-        <target>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; is the owner and original developer of Easy Chirp/Accessible Twitter. Easy Chirp 2 is developed by Dennis and &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt;.</target>
+        <target>&lt;a href=&quot;http://www.dennislembree.com/&quot;&gt;Dennis Lembree&lt;/a&gt; ist der Eigentüber und ursprüngliche Entwickler von Easy Chirp/Accessible Twitter. Easy Chirp 2 wird von Dennis und &lt;a href=&quot;http://andrewwoods.net/&quot;&gt;Andrew Woods&lt;/a&gt; entwickelt.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-more" datatype="html">
         <source>More Info</source>
-        <target>More Info</target>
+        <target>Mehr Informationen</target>
       </trans-unit>
 
       <trans-unit id="about-more-p1" datatype="html">
         <source>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</source>
-        <target>For more information, visit the &lt;a href=&quot;/features&quot;&gt;Features&lt;/a&gt; and &lt;a href=&quot;/articles&quot;&gt;Articles &amp;amp; Feedback&lt;/a&gt; pages.</target>
+        <target>Für mehr Informationen rufen Sie bitte die Seiten zu Funktionen sowie Artikel &amp; Feedback auf.</target>
       </trans-unit>
 
       <trans-unit id="about-h2-kick" datatype="html">
@@ -1721,33 +1721,33 @@
 
       <trans-unit id="quote-h1" datatype="html">
         <source>Quote Tweet</source>
-        <target>Quote Tweet</target>
+        <target>Tweet zitieren</target>
       </trans-unit>
 
       <!-- REPLY -->
 
       <trans-unit id="reply-h1" datatype="html">
         <source>Reply</source>
-        <target>Reply</target>
+        <target>Antworten</target>
       </trans-unit>
 
       <!-- RETWEET -->
 
       <trans-unit id="retweet-h1" datatype="html">
         <source>Retweet</source>
-        <target>Retweet</target>
+        <target>Retweeten</target>
       </trans-unit>
 
       <!-- SEARCH -->
 
       <trans-unit id="search-h1" datatype="html">
         <source>Search</source>
-        <target>Search</target>
+        <target>Suche</target>
       </trans-unit>
 
       <trans-unit id="search-h2-tweets" datatype="html">
         <source>Search Tweets</source>
-        <target>Search Tweets</target>
+        <target>Tweets suchen</target>
       </trans-unit>
 
       <trans-unit id="search-tweets-query" datatype="html">
@@ -1757,12 +1757,12 @@
 
       <trans-unit id="search-tweets-submit" datatype="html">
         <source>Search Tweets</source>
-        <target>Search Tweets</target>
+        <target>Tweets suchen</target>
       </trans-unit>
 
       <trans-unit id="search-h3-hints" datatype="html">
         <source>Hints for Searching Tweets</source>
-        <target>Hints for Searching Tweets</target>
+        <target>Tipps für die Tweets-Suche</target>
       </trans-unit>
 
       <trans-unit id="search-th-operator" datatype="html">
@@ -1851,7 +1851,7 @@
 
       <trans-unit id="gbl-tweet-tweet-options" datatype="html">
         <source>tweet options</source>
-        <target>tweet options</target>
+        <target>Tweet Optionen</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-make-fav" datatype="html">
@@ -1861,17 +1861,17 @@
 
       <trans-unit id="gbl-tweet-reply" datatype="html">
         <source>reply</source>
-        <target>reply</target>
+        <target>Antworten</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-reply-all" datatype="html">
         <source>reply to all</source>
-        <target>reply to all</target>
+        <target>Allen antworten</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-make-rt" datatype="html">
         <source>retweet</source>
-        <target>retweet</target>
+        <target>Retweeten</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-remove-rt" datatype="html">
@@ -1926,7 +1926,7 @@
 
       <trans-unit id="gbl-tweet-retweet" datatype="html">
         <source>Retweet</source>
-        <target>Retweet</target>
+        <target>Retweeten</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-remove-fav" datatype="html">
