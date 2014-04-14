@@ -40,7 +40,6 @@ class Main extends EC_Controller {
 			$this->_data['follower_count'] = 0;
 		}
 
-
 		if (isset($session_data['follower_count']))
 		{
 			$this->_data['following_count'] = $session_data['following_count'];
@@ -1402,10 +1401,12 @@ class Main extends EC_Controller {
 		$profile = $this->twitter_lib->get('users/show', $request_param );
 		$this->_data['profile'] = $profile;
 
-		$this->_data['follower_count']  = $profile->followers_count;
-		$this->_data['following_count'] = $profile->friends_count;
-		$this->_data['tweet_count']     = $profile->statuses_count;
-
+		// Reset some session data
+		$session_data = array();
+		$session_data['follower_count']  = $profile->followers_count;
+		$session_data['following_count'] = $profile->friends_count;
+		$session_data['tweet_count']     = $profile->statuses_count;
+		$this->session->set_userdata($session_data);
 
 		$request_param['count'] = 3; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
@@ -2115,13 +2116,11 @@ class Main extends EC_Controller {
 		$req = OAuthRequest::from_consumer_and_token($test_consumer, NULL, "GET", $oauth_request_token);
 		$req->sign_request($sig_method, $test_consumer, NULL);
 
-
 		$oc = new OAuthCurl();
 		$reqData = $oc->fetchData($req->to_url());
 		parse_str($reqData['content'], $reqOAuthData);
 
 		$req_token = new OAuthConsumer($reqOAuthData['oauth_token'], $reqOAuthData['oauth_token_secret'], $callback_url);
-
 
 		$acc_req = OAuthRequest::from_consumer_and_token($test_consumer, $req_token, "GET", $oauth_authorize);
 		$acc_req->sign_request($sig_method, $test_consumer, $req_token);
@@ -2548,7 +2547,7 @@ class Main extends EC_Controller {
 			$this->_data['user'] = $screen_name;
 		}
 		else {
-			$request_param['count'] = 3; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
+			$request_param['count'] = 3; // Overriding TWEETS_PER_PAGE because it should only show a subset
 			$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
 
 			$this->_data['tweets'] = $this->load->view('fragments/tweet', 
