@@ -68,9 +68,8 @@
 	<h3><?php echo $xliff_reader->get('articles-h3-highlights'); ?></h3>
 	<dl>
 	<dt><a href="http://accessibleinsights.info/blog/2013/10/29/easy-chirp-returns-with-new-sporty-features-and-more-power-under-the-hood/">Easy Chirp returns with new sporty features and more power under the hood</a></dt>
-		<dd>Accessible Insights Blog </dd>
+		<dd>Accessible Insights Blog</dd>
 		<dd>2013 Oct 29</dd>
-	</dt>
 	<dt><a href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a></dt>
 		<dd>Nomensa, L&eacute;onie Watson</dd>
 		<dd>2010 Feb 10</dd>
@@ -80,6 +79,9 @@
 	<dt><a href="http://www.marcozehe.de/2011/12/08/social-networks-and-accessibility-a-rather-sad-picture/">Social networks and accessibility: A rather sad picture</a></dt>
 		<dd>Marco Zehe</dd>
 		<dd>2011 Dec 08</dd>
+	<dt><a href="http://rivendellbrewery.wordpress.com/2009/07/31/accessible-twitter/">Accessible Twitter: how it should have been done to start with</a></dt>
+		<dd>Andy Bryant</dd>
+		<dd>2009 Jul 31</dd>
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
