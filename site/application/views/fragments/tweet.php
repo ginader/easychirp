@@ -70,13 +70,13 @@ foreach($tweets AS $tweet):
 	}
 
 	// Link links
-	$tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a target="_window" href="\1">\1</a>', $tweet_text);
+	$tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a target="_blank" href="\1">\1</a>', $tweet_text);
 
 	// Link @usernames
 	$tweet_text = preg_replace('/@+([-_0-9a-zA-Z]+)/', '<a href="/user/$1">$0</a>', $tweet_text);
 
 	// Link #hashtags
-	$tweet_text = preg_replace('/\B#([-_0-9a-zA-Z]+)/', '<a href="/search_results/%23$1" title="search this term">$0</a>', $tweet_text);
+	$tweet_text = preg_replace('/\B#([-_0-9a-zA-Z]+)/', '<a href="/search_results/%23$1">$0</a>', $tweet_text);
 
 	echo $tweet_text;
 	?></q>
