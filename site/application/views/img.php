@@ -15,13 +15,12 @@
      h1 {
           margin-bottom: .5em;
      }
-     img {
+     img[longdesc] {
           margin-left: .75em;
           max-width: 1000px;
           height: auto;
      }
      footer p {
-          margin-left: .75em;
           margin-bottom: .25em;
           border-top: 3px solid #ccc;
      }
