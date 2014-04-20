@@ -36,12 +36,10 @@
      </header>
 
      <main role="main">
-          <div><img src="<?php echo $url; ?>" alt="<?php echo $title; ?>" longdesc="<?php echo $longdescUri; ?>" /></div>
-          <!-- <div>
-               <p><?php echo $title; ?></p>
-               <p><?php echo $longdesc; ?></p>
-               <a href="<?php echo $longdescUri; ?>">KDLKF</a>
-          </div> -->
+          <div><img src="<?php echo $url; ?>" 
+               alt="<?php echo $title; ?>" longdesc="<?php echo $longdescUri; ?>" 
+               width="<?php echo $width; ?>" height="<?php echo $height; ?>"
+               /></div>
      </main>
 
      <footer role="contentinfo">
