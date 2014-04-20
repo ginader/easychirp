@@ -78,10 +78,17 @@ foreach($tweets AS $tweet):
 	// Link #hashtags
 	$tweet_text = preg_replace('/\B#([-_0-9a-zA-Z]+)/', '<a href="/search_results/%23$1">$0</a>', $tweet_text);
 
+	// Output tweet text;
 	echo $tweet_text;
 	?></q>
 
 	<?php 
+	// Insert image if it exists
+	if (isset($tweet->entities->media[0]->media_url)) {
+		echo '<div><img src="' . $tweet->entities->media[0]->media_url . ':thumb" width="150" height="150" alt="" /></div>';
+	}
+
+	// Output tweet details
 	if ($this->session->userdata('lang_code') != 'ar') { 
 		$tweet_title = $tweet->user->name . '; followers ' . $tweet->user->followers_count . '; following ' . $tweet->user->friends_count;
 	?>
@@ -112,7 +119,7 @@ foreach($tweets AS $tweet):
 		via <?php echo $tweet->source; ?></p>
 	<?php 
 	}
-	// ARABIC VERSION
+	// Arabic version of tweet details
 	else { ?>
 		<ul class="twtInfo clearfix">
 			<li><?php echo $xliff_reader->get('gbl-from'); ?> <a href="/user/<?php echo $tweet->user->screen_name; ?>"><?php echo $tweet->user->screen_name; ?></a></li>
@@ -130,7 +137,6 @@ foreach($tweets AS $tweet):
 	<?php
 	}
 	?>
-
 	<div class="btnOptions">
 		<h3><a href="#tweetOptions_<?php echo $index; ?>" class="btnOptionsTweet" title="<?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?>"><span aria-hidden="true" class="icon-gear"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-tweet-options'); ?></span></a></h3>
 		<ul id="tweetOptions_<?php echo $index; ?>">
