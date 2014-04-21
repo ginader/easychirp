@@ -1766,6 +1766,8 @@ class Main extends EC_Controller {
 	 */
 	public function retweets($retweet_type = FALSE, $tweet_id = FALSE)
 	{
+		$this->set_default_timezone();
+
 		$this->redirect_if_not_logged_in();
 
 		$this->_data['xliff_reader'] = $this->xliff_reader;

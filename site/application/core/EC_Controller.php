@@ -159,6 +159,21 @@ class EC_Controller extends CI_Controller {
 	}
 
 	/**
+	 * Describe your function
+	 *
+	 * @param string,boolean,integer,float,array,object,mixed,number $one a necessary parameter
+	 * @param $two optional an optional value
+	 * @return void
+	 */
+	public function set_default_timezone(){
+
+		if (! ini_get('date.timezone')){
+			date_default_timezone_set('UTC');
+		}
+
+	}
+
+	/**
 	* Deprecated Message for $_GET parameters;
 	*
 	* @param string,boolean,integer,float,array,object,mixed,number $one a necessary parameter
