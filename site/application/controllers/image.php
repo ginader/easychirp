@@ -88,20 +88,32 @@ class Image extends CI_Controller {
 		$imgData = json_decode($response,false);
 		//print_r($imgData); die;
 
-		// Parse the image extension, title, and description
-		$imgExt = "jpg";//$imgData -> data -> ; // TODO use type property
+		// Set the image extension, title, and description
+		// Image
+		$imgType = $imgData->data->link;
+		$imgExt = "jpg";
+		if ($imgType == "image/gif") {
+			$imgExt = "gif";
+		}
+		else if ($imgType == "image/png") {
+			$imgExt = "png";
+		}
+		// Title
 		if (isset($imgData->data->title)) {
 			$imgTitle = $imgData->data->title;
 		}
 		else {
 			$imgTitle = "[no title available]";
 		}
+		// Description
 		if (isset($imgData->data->description)) {
 			$imgDesc = $imgData->data->description;
 		}
 		else {
 			$imgDesc = "[no description available]";
 		}
+
+		// Set the width and height
 		$_data["width"] = $imgData->data->width;
 		$_data["height"] = $imgData->data->height;
 
