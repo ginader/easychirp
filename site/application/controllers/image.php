@@ -9,6 +9,7 @@
  */
 class Image extends CI_Controller {
 
+
 	public $_data = array();
 
 
@@ -47,24 +48,21 @@ class Image extends CI_Controller {
 		$imgData = json_decode($response,false);
 
 		if (isset($imgData->data->link)) {
-			//echo "<h2>Upload Complete</h2>";
-			//echo "<img src='".$imgData->data->link."'/>";
 			if ($ajax)
 			{
-				log_message('info', 'ajax response ' . print_r($result, true));
-				echo json_encode($result);
+				//log_message('info', 'ajax response ' . print_r($result, true));
+				echo $imgData;
 			}
 			else
 			{
-				log_message('info', 'redirect to timeline with short url=' . $imgData->data->link);
-				redirect(base_url() . "timeline?img_url=" . $imgData->data->link);
+				//log_message('info', 'redirect to timeline with image');
+				redirect(base_url() . "timeline?img_url=http://easychirp.com/img/" . $imgData->data->id);
 			}
 		}
 		else {
 			echo "<h2>Sorry, there's an error.</h2>";
 			echo $imgData->data->error;  
-		} 
-
+		}
 	}
 
 

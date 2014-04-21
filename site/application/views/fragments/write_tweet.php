@@ -37,6 +37,9 @@ if (empty($single)):
 				else if ( isset($_GET["url_short"]) ) {
 					echo $_GET["url_short"];
 				}
+				else if ( isset($_GET["img_url"]) ) {
+					echo $_GET["img_url"];
+				}
 
 				?></textarea>
 				<?php if (isset($in_reply_to)): ?>
@@ -61,6 +64,24 @@ if (empty($single)):
 			</span>
 			<button type="submit" id="btnShorten" class="btn3"><?php echo $xliff_reader->get('write-tweet-shorten'); ?></button>
 		</form>
+
+		<?php /* <h3>Add Image</h3>
+		<form id="frmTweetImage" method="post" enctype="multipart/form-data" action="/img_post" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>">
+			<input type="hidden" name="ajax" value="0" />
+			<div>
+				<label for="imagePath">Local path to image</label>
+				<input type="file" name="imagePath" id="imagePath" size="50" class="input1" required aria-required="true" />
+			</div>
+			<div>
+				<label for="imageTitle">Title of image (alt)</label>
+				<input type="text" name="imageTitle" id="imageTitle" size="30" class="input1" required aria-required="true" />
+			</div>
+			<div>
+				<label for="imageDesc">Description of image (longdesc)</label>
+				<input type="text" name="imageDesc" id="imageDesc" size="60" class="input1" required aria-required="true" />
+			</div>
+			<div><button type="submit" id="btnSubmitImage" class="btn3">Submit</button></div>
+		</form>*/ ?>
 	</div>
 
 <?php

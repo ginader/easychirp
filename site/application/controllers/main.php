@@ -2303,15 +2303,23 @@ class Main extends EC_Controller {
 		$this->_data['page_heading'] = $this->xliff_reader->get('nav-timeline');
 
 		$tweet_form_params = array( 'xliff_reader' => $this->_data['xliff_reader']);
+
+		// Set param to expand the "write tweet" area (when using server-side for reply, url shortener, image posting)
 		if (isset($reply_to))
 		{
 			$tweet_form_params['expand'] = 1;
 			$tweet_form_params['reply_to'] = $reply_to;
 		}
-
 		if (isset($_GET["url_short"]))
 		{
 			if ($_GET["url_short"] != "")
+			{
+				$tweet_form_params['expand'] = 1;
+			}
+		}
+		if (isset($_GET["img_url"]))
+		{
+			if ($_GET["img_url"] != "")
 			{
 				$tweet_form_params['expand'] = 1;
 			}
