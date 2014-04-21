@@ -91,8 +91,8 @@ $config['supported_langs'] = array(
 */
 $config['active_theme'] = 'theme-default';
 $config['supported_themes'] = array(
-	'theme-default' => 'Light Theme',
-	'theme-inverse' => 'Dark Theme',
+	'theme-default' => 'gbl-theme-light',
+	'theme-inverse' => 'gbl-theme-dark',
 );
 
 /*
