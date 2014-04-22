@@ -211,7 +211,7 @@ th {
 	text-align: left;
 }
 
-input[type=text], textarea {
+input[type=text],input[type=file],textarea {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	border: 1px solid #0487E0;
 	font-size: 1.1rem;
