@@ -627,7 +627,7 @@ div.msgBoxNeg {
 #enterTweet h2 a:focus {
 	background-color: #A1D5F9;	
 }
-#enterTweet textarea {
+#frmSubmitTweet textarea {
 	float: left;
 	margin-right: 1rem;
 	width: 80%;
@@ -775,6 +775,15 @@ a.delete-link {
 
 #urlLong {
 	width: 40%;
+}
+
+#frmTweetImage label {
+	display: block;
+	margin-top: .5em;
+}
+#frmTweetImage input,
+#frmTweetImage textarea {
+	width: 70%;
 }
 
 /* Module **************************************************/
@@ -1229,6 +1238,11 @@ body.theme-inverse {
 	#txt_listName,
 	#txt_listDesc {
 		width: 85%;
+	}
+	#frmTweetImage input,
+	#frmTweetImage textarea,
+	#enterTweet textarea {
+		width: 90%;
 	}
 }
 
