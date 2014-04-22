@@ -23,16 +23,37 @@ class Image extends CI_Controller {
 
 		$ajax = $this->input->post('ajax');
 
-		// Convert image
+		//Check if blank
+		if ($_FILES['imagePath']['tmp_name'] == '') {
+			echo "No filename found.";
+			exit;
+		}
+
+		// Open image
 		$file = $_FILES['imagePath']['tmp_name'];
 		$fh = fopen($file, "r");
 		if ( ! $fh) {
-			echo 'could not open file';
+			echo 'Could not open file.';
 		}
+
+		// Check image type
+		// Ref: http://www.php.net/manual/en/function.exif-imagetype.php
+		$numType = exif_imagetype($file);
+		if ($numType!==1 && $numType!==2 && $numType!==3 ) {
+			echo "file must be GIF, JPG, or PNG";
+			die;
+		}
+
+		// Check image size
+		$maxsize = 2097152; // 2 Megs
+		if($_FILES['imagePath']['size'] >= $maxsize) {
+			echo 'The file size too large. The limit is 2 MB.';
+			die;
+		}
+
+		// Convert image
 		$imgbinary = fread($fh, filesize($file));
 		$b64_image = base64_encode($imgbinary);
-
-		$img = $b64_image . ';type=image/jpg;filename=profile.jpg';
 
 		// Push image, title, and description to API
 		$client_id = "8ad419cacdc4c52";
@@ -40,7 +61,7 @@ class Image extends CI_Controller {
 		curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image');
 		curl_setopt($curl, CURLOPT_TIMEOUT, 30);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Client-ID ' . $client_id));
-		curl_setopt($curl, CURLOPT_POSTFIELDS, array( 'image' => $img, 'title' => $_POST['imageTitle'], 'description' => $_POST['imageDesc'] ));
+		curl_setopt($curl, CURLOPT_POSTFIELDS, array( 'image' => $b64_image, 'title' => $_POST['imageTitle'], 'description' => $_POST['imageDesc'] ));
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 		$response = curl_exec($curl);
 		curl_close ($curl);
