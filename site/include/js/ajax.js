@@ -160,6 +160,82 @@ $('.frmListAddMember').submit(function(e) {
 	});
 });
 
+// Ajax for uploading image
+$('#frmTweetImage').submit(function(e, files) {
+
+	e.preventDefault();
+
+	var url_send = $(this).attr("action");
+	//alert(url_send); return false;
+
+	var image_path = $("#imagePath").val();
+	//alert(image_path); //return false;
+
+	//var image_title = $("#imageTitle").val();
+
+	//check length of description
+	var image_desc = $("#imageDesc").val();
+	if (image_desc.length <= 15) {
+		alert("Please provide a longer description for this image.");
+		$("#imageDesc").focus();
+		return false;
+	}
+
+	//validate image size
+	var image_size = ($("#imagePath")[0].files[0].size);// / 1024);
+	if (image_size > 2097152) { // 2 Megs
+		alert("The file size too large. The limit is 2 MB.");
+		imagePath.focus();
+		return false;
+	}
+	//alert("Pass file size.")
+
+	//validate image type
+	var v = new RegExp();
+	v.compile("(.gif|.GIF|.jpeg|.JPEG|.jpg|.JPG|.png|.PNG)$");
+	if (!v.test(image_path)) {
+		alert("Invalid file type. Only GIF, JPG, and PNG formats are allowed.");
+		imagePath.focus();
+		return false;
+	}
+	//alert("Pass file type.")
+
+	onsuccess = function(data, textStatus, jqXHR){
+		var txtInput = $('#txtEnterTweet');
+		var imgLink = "http://easychirp.com/img/" + data + " ";
+		//var imgLinkImgur = "http://i.imgur.com/" + data + ".jpg");
+
+		alert("Success! The image link has been added to the input field.\nThe URL is: " + imgLink);
+
+		// Delete existing on page
+		$('#imgLinkContainer').remove();
+		
+		// Output on page
+		$('<p id="imgLinkContainer">The image link is: <a target="_blank" href="' + imgLink + '">' + imgLink + '</a></p>').insertAfter('#frmTweetImage fieldset div:last-child');
+
+		// Insert in tweet input and focus it
+		txtInput.val(txtInput.val() + imgLink);
+		txtInput.focus();
+	}
+
+	var options = {
+		url: url_send,
+		beforeSerialize: function (form, options) {
+			options.data = {
+				ajax: true
+			};
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		},
+		success: onsuccess
+	};
+
+	$(this).ajaxSubmit(options);
+	return false;
+
+});
+
 // Ajax for creating a retweet // will do destroying later
 $('a[href*="retweet_"]').click(function(e) {
 	e.preventDefault();
@@ -355,7 +431,7 @@ $('a[href*="search_save"]').click(function(e) {
 
 // Clear shortened URL
 var txtClear = $("#frmUrlShort").attr("data-clear");
-$('<a href="#" id="urlClear">'+txtClear+'</a>').insertAfter('#btnShorten');
+$('<a href="#" id="urlClear" role="button">'+txtClear+'</a>').insertAfter('#btnShorten');
 $('#urlClear').click(function() {
 	$('#urlLong').val("");
 	$('#urlLong').focus();
@@ -416,8 +492,8 @@ $("#frmUrlShort").submit(function(ev) {
 		$('#urlLongResult').remove();
 		
 		//output on page
-		$('<p id=\'urlShortResult\'>Shortenend URL: <a rel=\'external\' href="' + short + '">' + short + '</a></p>').insertBefore('#frmUrlShort');
-		$('<p id=\'urlLongResult\'>Original URL: <a rel=\'external\' href="' + long + '">' + long + '</a></p>').insertAfter('#urlShortResult');
+		$('<p id=\'urlShortResult\'>Shortenend URL: <a target=\'_blank\' href="' + short + '">' + short + '</a></p>').insertAfter('#frmUrlShort a');
+		$('<p id=\'urlLongResult\'>Original URL: <a target=\'_blank\' href="' + long + '">' + long + '</a></p>').insertAfter('#urlShortResult');
 		alert("Success! The shortened URL has been added to the input field.");
 
 		//focus tweet/dm input

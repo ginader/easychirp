@@ -50,8 +50,9 @@ if (empty($single)):
 			</div>
 		</form>
 
-		<h3><?php echo $xliff_reader->get('write-tweet-h3'); ?></h3>
 		<form id="frmUrlShort" method="post" action="/url_shorten" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>">
+		<fieldset>
+		<legend><?php echo $xliff_reader->get('write-tweet-h3'); ?></legend>
 			<input type="hidden" name="ajax" value="0" />
 			<label for="urlLong"><?php echo $xliff_reader->get('write-tweet-enter-url'); ?></label>
 			<input type="text" name="url_long" id="urlLong" size="50" class="input1" placeholder="http://" required aria-required="true" />
@@ -63,25 +64,31 @@ if (empty($single)):
 				<label for="webaim">weba.im</label>
 			</span>
 			<button type="submit" id="btnShorten" class="btn3"><?php echo $xliff_reader->get('write-tweet-shorten'); ?></button>
+		</fieldset>
 		</form>
 
-		<?php /* <h3>Add Image</h3>
 		<form id="frmTweetImage" method="post" enctype="multipart/form-data" action="/img_post" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>">
+		<fieldset>
+		<legend>Add Image</legend>
 			<input type="hidden" name="ajax" value="0" />
 			<div>
-				<label for="imagePath">Local path to image</label>
+				<label for="imagePath">Local path to image (JPG, GIF, PNG; 2MB limit)</label>
 				<input type="file" name="imagePath" id="imagePath" size="50" class="input1" required aria-required="true" />
 			</div>
 			<div>
 				<label for="imageTitle">Title of image (alt)</label>
-				<input type="text" name="imageTitle" id="imageTitle" size="30" class="input1" required aria-required="true" />
+				<input type="text" name="imageTitle" id="imageTitle" size="50" class="input1" required aria-required="true" />
 			</div>
 			<div>
 				<label for="imageDesc">Description of image (longdesc)</label>
-				<input type="text" name="imageDesc" id="imageDesc" size="60" class="input1" required aria-required="true" />
+				<textarea type="text" name="imageDesc" id="imageDesc" size="30" class="input1" required aria-required="true" /></textarea>
 			</div>
-			<div><button type="submit" id="btnSubmitImage" class="btn3">Submit</button></div>
-		</form>*/ ?>
+			<div>
+				<button type="submit" id="btnSubmitImage" class="btn3">Upload Image</button> &nbsp;
+				<button type="reset" style="border-width:1px;"><?php echo $xliff_reader->get('gbl-clear'); ?></button>
+			</div>
+		</fieldset>
+		</form>
 	</div>
 
 <?php

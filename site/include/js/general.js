@@ -94,6 +94,22 @@ function updateCharCount(charCountField) {
 	}
 })();
 
+/*** show Add Image content in Write Tweet area ***************/
+
+// Create link to show content
+$('<p id="showAddImage"><a href="#" id="showAddImageAnchor">' + 'Add Image' + ' &#187;<\/a><\/p>').insertBefore('#frmTweetImage');
+
+//hide create list form
+$('#frmTweetImage').hide();
+
+// Behavior to show the Add Image content in Write Tweet area
+$('#showAddImageAnchor').click(function(e) {
+	e.preventDefault();
+	$('#frmTweetImage').show();
+	$("#imageTitle").focus();
+	$('#showAddImage').remove();
+});
+
 /*** show/hide for create list content ***************/
 //hide create list form
 $('#frmCreateList').hide();

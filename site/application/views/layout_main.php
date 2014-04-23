@@ -129,6 +129,7 @@ if ($this->session->userdata('logged_in')) {
 <script src="/include/js/megamenu.js"></script>
 <script src="/include/js/general.js"></script>
 <script src="/include/js/ajax.js"></script>
+<script src="/include/js/jquery.form.min.js"></script>
 
 <!-- analytics (start) -->
 <script>

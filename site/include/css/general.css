@@ -220,9 +220,25 @@ input[type=text],input[type=file],textarea {
 }
 button:focus,
 textarea:focus,
+input[type='file']:focus,
 input[type='text']:focus {
 	border-color: #fc6;
 	outline: none;
+}
+
+#frmUrlShort fieldset {
+	margin-top: .5em;
+}
+#frmUrlShort fieldset,
+#frmTweetImage fieldset {
+	border: #ddd 1px solid;
+	border-left-width: 5px;
+	border-left-color: #eee;
+	padding: 1em;
+}
+#frmUrlShort legend,
+#frmTweetImage legend {
+	font-weight: bold;
 }
 
 /* Utilities ************************************************/

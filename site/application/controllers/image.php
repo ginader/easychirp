@@ -69,20 +69,23 @@ class Image extends CI_Controller {
 		$imgData = json_decode($response,false);
 
 		if (isset($imgData->data->link)) {
-			if ($ajax)
-			{
+			if ($ajax) {
 				//log_message('info', 'ajax response ' . print_r($result, true));
-				echo $imgData;
+				echo $imgData->data->id;
 			}
-			else
-			{
+			else {
 				//log_message('info', 'redirect to timeline with image');
 				redirect(base_url() . "timeline?img_url=http://easychirp.com/img/" . $imgData->data->id);
 			}
 		}
 		else {
-			echo "<h2>Sorry, there's an error.</h2>";
-			echo $imgData->data->error;  
+			if ($ajax) {
+				echo $imgData->data->error;
+			}
+			else {
+				echo "<h2>Sorry, there's an error.</h2>";
+				echo "<p>".$imgData->data->error."</p>";
+			}
 		}
 	}
 
