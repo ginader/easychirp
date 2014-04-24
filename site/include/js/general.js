@@ -106,8 +106,8 @@ $('#frmTweetImage').hide();
 $('#showAddImageAnchor').click(function(e) {
 	e.preventDefault();
 	$('#frmTweetImage').show();
-	$("#imageTitle").focus();
 	$('#showAddImage').remove();
+	$("#imagePath").focus();
 });
 
 /*** show/hide for create list content ***************/
@@ -142,7 +142,7 @@ $('#showCreateAnchor').click(function() {
 	return false;
 });
 
-// Browser patch (such as Chrome) for anchor links focus **************/
+// Browser patch for anchor links focus **************/
 $("a[href^='#']").click(function() {
 	$("#"+$(this).attr("href").slice(1)+"").focus()
 });
