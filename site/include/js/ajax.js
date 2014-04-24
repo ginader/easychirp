@@ -173,6 +173,25 @@ $('#frmTweetImage').submit(function(e, files) {
 
 	//var image_title = $("#imageTitle").val();
 
+	//validate image type
+	var v = new RegExp();
+	v.compile("(.gif|.GIF|.jpeg|.JPEG|.jpg|.JPG|.png|.PNG)$");
+	if (!v.test(image_path)) {
+		alert("Invalid file type. Only GIF, JPG, and PNG formats are allowed.");
+		$("#imagePath").focus();
+		return false;
+	}
+	//alert("Pass file type.")
+
+	//validate image size
+	var image_size = ($("#imagePath")[0].files[0].size);// / 1024);
+	if (image_size > 2097152) { // 2 Megs
+		alert("The file size too large. The limit is 2 MB.");
+		$("#imagePath").focus();
+		return false;
+	}
+	//alert("Pass file size.")
+
 	//check length of description
 	var image_desc = $("#imageDesc").val();
 	if (image_desc.length <= 15) {
@@ -180,25 +199,6 @@ $('#frmTweetImage').submit(function(e, files) {
 		$("#imageDesc").focus();
 		return false;
 	}
-
-	//validate image size
-	var image_size = ($("#imagePath")[0].files[0].size);// / 1024);
-	if (image_size > 2097152) { // 2 Megs
-		alert("The file size too large. The limit is 2 MB.");
-		imagePath.focus();
-		return false;
-	}
-	//alert("Pass file size.")
-
-	//validate image type
-	var v = new RegExp();
-	v.compile("(.gif|.GIF|.jpeg|.JPEG|.jpg|.JPG|.png|.PNG)$");
-	if (!v.test(image_path)) {
-		alert("Invalid file type. Only GIF, JPG, and PNG formats are allowed.");
-		imagePath.focus();
-		return false;
-	}
-	//alert("Pass file type.")
 
 	onsuccess = function(data, textStatus, jqXHR){
 		var txtInput = $('#txtEnterTweet');
