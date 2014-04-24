@@ -36,10 +36,7 @@
      </header>
 
      <main role="main">
-          <div><img src="<?php echo $url; ?>" 
-               alt="<?php echo $title; ?>" longdesc="<?php echo $longdescUri; ?>" 
-               width="<?php echo $width; ?>" height="<?php echo $height; ?>"
-               /></div>
+          <div><img src="<?php echo $url; ?>" alt="<?php echo $title; ?>" longdesc="<?php echo $longdescUri; ?>" /></div>
      </main>
 
      <footer role="contentinfo">

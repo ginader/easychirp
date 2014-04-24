@@ -137,12 +137,18 @@ class Image extends CI_Controller {
 			$imgDesc = "[no description available]";
 		}
 
-		// Set the width and height
-		$_data["width"] = $imgData->data->width;
-		$_data["height"] = $imgData->data->height;
+		$isAnimated = $imgData->data->animated;
 
-		// Set vars for image URL and image title
-		$_data["url"] = "https://i.imgur.com/".$id."l.".$imgExt;
+		// Set var for image URL
+		// If animated, get the original image, otherwide get large thumbnail
+		if ($isAnimated) {
+			$_data["url"] = "https://i.imgur.com/".$id.".".$imgExt;
+		}
+		else {
+			$_data["url"] = "https://i.imgur.com/".$id."l.".$imgExt;
+		}
+
+		// Set var for image title
 		$_data["title"] = $imgTitle;
 		
 		// Create dataURI for longdesc
