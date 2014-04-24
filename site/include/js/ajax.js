@@ -431,7 +431,7 @@ $('a[href*="search_save"]').click(function(e) {
 
 // Clear shortened URL
 var txtClear = $("#frmUrlShort").attr("data-clear");
-$('<a href="#" id="urlClear" role="button">'+txtClear+'</a>').insertAfter('#btnShorten');
+$('<button type="reset" id="urlClear">'+txtClear+'</button>').insertAfter('#btnShorten');
 $('#urlClear').click(function() {
 	$('#urlLong').val("");
 	$('#urlLong').focus();
@@ -492,7 +492,7 @@ $("#frmUrlShort").submit(function(ev) {
 		$('#urlLongResult').remove();
 		
 		//output on page
-		$('<p id=\'urlShortResult\'>Shortenend URL: <a target=\'_blank\' href="' + short + '">' + short + '</a></p>').insertAfter('#frmUrlShort a');
+		$('<p id=\'urlShortResult\'>Shortenend URL: <a target=\'_blank\' href="' + short + '">' + short + '</a></p>').insertAfter('#frmUrlShort button[type=reset]');
 		$('<p id=\'urlLongResult\'>Original URL: <a target=\'_blank\' href="' + long + '">' + long + '</a></p>').insertAfter('#urlShortResult');
 		alert("Success! The shortened URL has been added to the input field.");
 

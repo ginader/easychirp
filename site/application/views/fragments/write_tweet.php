@@ -84,8 +84,8 @@ if (empty($single)):
 				<textarea type="text" name="imageDesc" id="imageDesc" size="30" class="input1" required aria-required="true" /></textarea>
 			</div>
 			<div>
-				<button type="submit" id="btnSubmitImage" class="btn3">Upload Image</button> &nbsp;
-				<button type="reset" style="border-width:1px;"><?php echo $xliff_reader->get('gbl-clear'); ?></button>
+				<button type="submit" id="btnSubmitImage" class="btn3">Upload Image</button>
+				<button type="reset"><?php echo $xliff_reader->get('gbl-clear'); ?></button>
 			</div>
 		</fieldset>
 		</form>

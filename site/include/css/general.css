@@ -225,6 +225,10 @@ input[type='text']:focus {
 	border-color: #fc6;
 	outline: none;
 }
+button[type='reset'] {
+	border: 1px #aaa solid;
+	font-weight: lighter;
+}
 
 #frmUrlShort fieldset {
 	margin-top: .5em;
