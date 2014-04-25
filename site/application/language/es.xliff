@@ -435,7 +435,7 @@
         <target>Publicar</target>
       </trans-unit>
 
-      <trans-unit id="write-tweet-h3" datatype="html">
+      <trans-unit id="write-tweet-hd-shorten" datatype="html">
         <source>Shorten URL</source>
         <target>Acortar URL</target>
       </trans-unit>

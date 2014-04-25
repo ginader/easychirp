@@ -52,7 +52,7 @@ if (empty($single)):
 
 		<form id="frmUrlShort" method="post" action="/url_shorten" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>">
 		<fieldset>
-		<legend><?php echo $xliff_reader->get('write-tweet-h3'); ?></legend>
+		<legend><?php echo $xliff_reader->get('write-tweet-hd-shorten'); ?></legend>
 			<input type="hidden" name="ajax" value="0" />
 			<label for="urlLong"><?php echo $xliff_reader->get('write-tweet-enter-url'); ?></label>
 			<input type="text" name="url_long" id="urlLong" size="50" class="input1" placeholder="http://" required aria-required="true" />
