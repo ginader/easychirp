@@ -205,7 +205,7 @@ $('#frmTweetImage').submit(function(e, files) {
 		var imgLink = "http://easychirp.com/img/" + data + " ";
 		//var imgLinkImgur = "http://i.imgur.com/" + data + ".jpg");
 
-		alert("Success! The image link has been added to the input field.\nThe URL is: " + imgLink);
+		alert("Success! The URL has been added to the input field.\nThe image link is: " + imgLink);
 
 		// Delete existing on page
 		$('#imgLinkContainer').remove();
@@ -492,7 +492,7 @@ $("#frmUrlShort").submit(function(ev) {
 		$('#urlLongResult').remove();
 		
 		//output on page
-		$('<p id=\'urlShortResult\'>Shortenend URL: <a target=\'_blank\' href="' + short + '">' + short + '</a></p>').insertAfter('#frmUrlShort button[type=reset]');
+		$('<p id=\'urlShortResult\'>Shortened URL: <a target=\'_blank\' href="' + short + '">' + short + '</a></p>').insertAfter('#frmUrlShort button[type=reset]');
 		$('<p id=\'urlLongResult\'>Original URL: <a target=\'_blank\' href="' + long + '">' + long + '</a></p>').insertAfter('#urlShortResult');
 		alert("Success! The shortened URL has been added to the input field.");
 
