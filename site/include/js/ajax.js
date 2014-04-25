@@ -166,12 +166,8 @@ $('#frmTweetImage').submit(function(e, files) {
 	e.preventDefault();
 
 	var url_send = $(this).attr("action");
-	//alert(url_send); return false;
-
 	var image_path = $("#imagePath").val();
-	//alert(image_path); //return false;
-
-	//var image_title = $("#imageTitle").val();
+	var image_title = $("#imageTitle").val();
 
 	//validate image type
 	var v = new RegExp();
@@ -181,7 +177,6 @@ $('#frmTweetImage').submit(function(e, files) {
 		$("#imagePath").focus();
 		return false;
 	}
-	//alert("Pass file type.")
 
 	//validate image size
 	var image_size = ($("#imagePath")[0].files[0].size);// / 1024);
@@ -190,7 +185,13 @@ $('#frmTweetImage').submit(function(e, files) {
 		$("#imagePath").focus();
 		return false;
 	}
-	//alert("Pass file size.")
+
+	//check length of title
+	if (image_title.length == "") {
+		alert("Please provide a title for this image.");
+		$("#imageTitle").focus();
+		return false;
+	}
 
 	//check length of description
 	var image_desc = $("#imageDesc").val();
