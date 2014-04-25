@@ -69,22 +69,22 @@ if (empty($single)):
 
 		<form id="frmTweetImage" method="post" enctype="multipart/form-data" action="/img_post" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>">
 		<fieldset>
-		<legend>Add Image</legend>
+		<legend><?php echo $xliff_reader->get('add-image-hd'); ?></legend>
 			<input type="hidden" name="ajax" value="0" />
 			<div>
-				<label for="imagePath">Local path to image (JPG, GIF, PNG; 2MB limit)</label>
+				<label for="imagePath"><?php echo $xliff_reader->get('add-image-path'); ?></label>
 				<input type="file" name="imagePath" id="imagePath" size="50" class="input1" required aria-required="true" />
 			</div>
 			<div>
-				<label for="imageTitle">Title of image (alt)</label>
+				<label for="imageTitle"><?php echo $xliff_reader->get('add-image-title'); ?></label>
 				<input type="text" name="imageTitle" id="imageTitle" size="50" class="input1" required aria-required="true" />
 			</div>
 			<div>
-				<label for="imageDesc">Description of image (longdesc)</label>
+				<label for="imageDesc"><?php echo $xliff_reader->get('add-image-desc'); ?></label>
 				<textarea type="text" name="imageDesc" id="imageDesc" size="30" class="input1" required aria-required="true" /></textarea>
 			</div>
 			<div>
-				<button type="submit" id="btnSubmitImage" class="btn3">Upload Image</button>
+				<button type="submit" id="btnSubmitImage" class="btn3"><?php echo $xliff_reader->get('add-image-submit'); ?></button>
 				<button type="reset"><?php echo $xliff_reader->get('gbl-clear'); ?></button>
 			</div>
 		</fieldset>
