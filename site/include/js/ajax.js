@@ -201,6 +201,11 @@ $('#frmTweetImage').submit(function(e, files) {
 	}
 
 	onsuccess = function(data, textStatus, jqXHR){
+		// Enable submit button
+		$("#btnSubmitImage").removeAttr("disabled");
+		// Remove processing message
+		$("#imgUploadMessage").remove();
+
 		var txtInput = $('#txtEnterTweet');
 		var imgLink = "http://easychirp.com/img/" + data + " ";
 		//var imgLinkImgur = "http://i.imgur.com/" + data + ".jpg");
@@ -224,6 +229,12 @@ $('#frmTweetImage').submit(function(e, files) {
 			options.data = {
 				ajax: true
 			};
+		},
+		beforeSubmit: function() { 
+		    // Disable submit button
+		    $("#btnSubmitImage").attr("disabled", "disabled");
+		    // Add processing message
+		    $('<span role="alert" id="imgUploadMessage">Processing...</span>').insertAfter('#btnSubmitImage');
 		},
 		error: function(xhr) {
 			alert('Error. Status = ' + xhr.status);

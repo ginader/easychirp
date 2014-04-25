@@ -805,6 +805,14 @@ a.delete-link {
 #frmTweetImage textarea {
 	width: 70%;
 }
+#imgUploadMessage {
+	display: inline-block;
+	margin-right: 1em;
+}
+#btnSubmitImage[disabled],
+#btnSubmitImage[disabled]:hover {
+	border-color: #999;
+}
 
 /* Module **************************************************/
 
