@@ -1267,6 +1267,7 @@ body.theme-inverse {
 	#txt_listDesc {
 		width: 85%;
 	}
+	#urlLong,
 	#frmTweetImage input,
 	#frmTweetImage textarea,
 	#enterTweet textarea {
