@@ -84,8 +84,19 @@ foreach($tweets AS $tweet):
 
 	<?php 
 	// Insert image if it exists
+	// Twitter image
 	if (isset($tweet->entities->media[0]->media_url)) {
 		echo '<div><img src="' . $tweet->entities->media[0]->media_url . ':thumb" width="150" height="150" alt="" /></div>';
+	}
+	// Imgur image
+	if (isset($tweet->entities->urls[0]->expanded_url)) {
+		$ent_exp_url = $tweet->entities->urls[0]->expanded_url;
+		if (strpos($ent_exp_url,'easychirp.com/img/') !== false) {
+			$pos = strpos($ent_exp_url, 'easychirp.com/img/');
+			$imgurId = substr( $ent_exp_url, $pos+18, strlen($ent_exp_url) );
+		    echo '<div><img src="http://i.imgur.com/' . $imgurId . 'b.jpg" width="160" height="160" alt="" /></div>';
+		    //echo $imgurId;
+		}
 	}
 
 	// Output tweet details
