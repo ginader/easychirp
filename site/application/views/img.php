@@ -16,13 +16,16 @@
           margin-bottom: .5em;
      }
      img[longdesc] {
-          margin-left: .75em;
+          margin-left: .25em;
           max-width: 1000px;
           height: auto;
      }
+     footer {
+          padding-top: 1.5em;
+     }
      footer p {
           margin-bottom: .25em;
-          border-top: 3px solid #ccc;
+          border-top: 2px solid #ccc;
      }
      @media only screen and (max-width: 640px) {
           img[longdesc] {
