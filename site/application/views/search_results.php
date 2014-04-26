@@ -14,7 +14,7 @@
 </ul>
 
 <?php
-if ($num > 0) {
+if (sizeof($tweets) > 0) {
 	echo $tweets;
 }
 else {

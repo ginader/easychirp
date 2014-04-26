@@ -1990,9 +1990,9 @@ class Main extends EC_Controller {
 	/**
 	 * Display the search results page - /search_results
 	 *
-	 * @todo MODIFY items that call this to NOT USE GET parameters
 	 * @param string $query
 	 * @return void
+	 * Reference: https://dev.twitter.com/docs/api/1.1/get/search/tweets
 	 */
 	public function search_results($query = FALSE)
 	{
@@ -2021,6 +2021,10 @@ class Main extends EC_Controller {
 			{
 				$request_param['q'] = $_GET["query"];
 				$this->get_params_deprecated();
+				if (isset($_GET["max_id"]))
+				{
+					$request_param['max_id'] = $_GET["max_id"];
+				}
 			}
 			else
 			{
@@ -2030,11 +2034,12 @@ class Main extends EC_Controller {
 
 		$data = $this->twitter_lib->get('search/tweets', $request_param);
 		$this->_data['meta'] = $data->search_metadata;
-		$this->_data['num'] = count($data->statuses);
 
-		$tweets = $data->statuses;
+		$tweets = $data->statuses; // Need this because node tree differs in search API
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array(
+				'paginateSearch' => 1,
+				'meta' => $this->_data['meta'],
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
 				'time_zone' => $this->session->userdata('time_zone'),

@@ -95,7 +95,6 @@ foreach($tweets AS $tweet):
 			$pos = strpos($ent_exp_url, 'easychirp.com/img/');
 			$imgurId = substr( $ent_exp_url, $pos+18, strlen($ent_exp_url) );
 		    echo '<div><img src="http://i.imgur.com/' . $imgurId . 'b.jpg" width="160" height="160" alt="" /></div>';
-		    //echo $imgurId;
 		}
 	}
 
@@ -224,5 +223,20 @@ else:
 endif;
 ?>
 </div>
+
+<?php
+if (isset($paginateSearch) && $paginateSearch && sizeof($tweets) > 0) {
+	echo '<div class="box1 rounded load-more">';
+	if (sizeof($tweets) == 1) {
+		echo 'No more found.';
+	}
+	else {
+		$pagination_path = '/search_results?query='.$meta->query.'&max_id='.$last_id;
+		echo '<a href="'.$pagination_path.'" class="button load_more">'.$xliff_reader->get('gbl-pag-tweets').'</a>';
+	}
+	echo '</div>';
+}
+?>
+
 <?php
 
