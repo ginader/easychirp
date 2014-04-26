@@ -24,6 +24,11 @@
           margin-bottom: .25em;
           border-top: 3px solid #ccc;
      }
+     @media only screen and (max-width: 640px) {
+          img[longdesc] {
+               width: 90%;
+          }
+     }
      </style>
 </head>
 
