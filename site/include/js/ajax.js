@@ -219,6 +219,11 @@ $('#frmTweetImage').submit(function(e, files) {
 		// Output on page
 		$('<p id="imgLinkContainer">The image link is: <a target="_blank" href="' + imgLink + '">' + imgLink + '</a></p>').insertAfter('#frmTweetImage fieldset div:last-child');
 
+		// Update counter
+		if ( document.getElementById("txtEnterTweet") ) { 
+			updateCharCount("txtEnterTweet");
+		}
+
 		// Insert in tweet input and focus it
 		txtInput.val(txtInput.val() + imgLink);
 		txtInput.focus();
