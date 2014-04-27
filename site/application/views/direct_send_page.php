@@ -27,7 +27,7 @@ if (isset($action)) {
 		data-error-tweep-empty="<?php echo $xliff_reader->get('error-tweep-empty'); ?>">
 		<h3 id="dm-label-tweep"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
 		<div id="enterTweep">
-			<input type="text" size="18" id="tweep" name="tweep" class="input1" required aria-required="true" value="<?php
+			<input type="text" size="20" id="tweep" name="tweep" class="input1" required aria-required="true" value="<?php
 			// Output screen_name if defined
 			if ($screen_name !== FALSE):
 				echo $screen_name;

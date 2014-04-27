@@ -779,7 +779,7 @@ a.delete-link {
 
 #enterTweep {
 	float: left;
-	padding: .5em 0 0 .5em;
+	padding: .3em 0 0;
 }
 
 #txtEnterTweet, 
@@ -887,6 +887,7 @@ button:hover, button:focus,
 }
 #dm-label-tweep {
 	float: left;
+	margin-right: .5em;
 }
 .tweet .tweetAvatar,
 .follow .tweetAvatar {
@@ -1258,6 +1259,10 @@ body.theme-inverse {
 	#editProfileUpdateBtn {
 		margin-left: 35%;
 	}
+	#enterTweep {
+		float: none;
+	}
+	#tweep,
 	#query, 
 	#query2,
 	#queryUsers { /* search inputs */
