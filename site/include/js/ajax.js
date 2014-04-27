@@ -180,8 +180,8 @@ $('#frmTweetImage').submit(function(e, files) {
 
 	//validate image size
 	var image_size = ($("#imagePath")[0].files[0].size);// / 1024);
-	if (image_size > 2097152) { // 2 Megs
-		alert("The file size too large. The limit is 2 MB.");
+	if (image_size > 5242880) { //2097152 2 Megs
+		alert("The file size too large. The limit is 5 MB.");
 		$("#imagePath").focus();
 		return false;
 	}

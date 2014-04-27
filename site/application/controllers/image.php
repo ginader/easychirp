@@ -45,9 +45,9 @@ class Image extends CI_Controller {
 		}
 
 		// Check image size
-		$maxsize = 2097152; // 2 Megs
+		$maxsize = 5242880; // 5 Megs
 		if($_FILES['imagePath']['size'] >= $maxsize) {
-			echo 'The file size too large. The limit is 2 MB.';
+			echo 'The file size too large. The limit is 5 MB.';
 			die;
 		}
 

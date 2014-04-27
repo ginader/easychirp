@@ -461,8 +461,8 @@
       </trans-unit>
 
       <trans-unit id="add-image-path" datatype="html">
-        <source>Local path to image (JPG, GIF, PNG; 2MB limit)</source>
-        <target>Local path to image (JPG, GIF, PNG; 2MB limit)</target>
+        <source>Local path to image (JPG, GIF, PNG; 5MB limit)</source>
+        <target>Local path to image (JPG, GIF, PNG; 5MB limit)</target>
       </trans-unit>
 
       <trans-unit id="add-image-title" datatype="html">
