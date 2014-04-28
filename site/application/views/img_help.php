@@ -12,6 +12,9 @@
      <link rel="shortcut icon" href="/images/brand/favicon.ico"/>
      <link rel="stylesheet" href="/include/css/general.css" />
      <style type="text/css">
+     #wrapper {
+          max-width: 800px;
+     }
      main {
           padding: 1em;
      }
@@ -39,15 +42,35 @@
 
           <h2>Long Description</h2>
           <p>Enter a longer, detailed text description for the image.
-               This will be used to provide to a longdesc attribute on the resulting page (the long description is provided via a dataURI) which is valuable to people with visual impairments.
+               This will be used to provide to a longdesc attribute on the resulting page which is valuable to people with visual impairments. 
+               For help on writing a long description, check out <a href="http://www.d.umn.edu/itss/training/online/images/long_how/">How to Write Long Text Alternatives</a>.
           </p>
-          <p>One limitation is that you can only enter text; structured markup is not supported by this tool.
-               Do not enter a URL in this input field.
+          <p>Do not enter a URL in this input field; the longdesc value is provided by Easy Chirp via a dataURI. 
+               For technical details, view the W3C's <a href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension</a>.
           </p>
 
-          <h2>More</h2>
-          <li><a href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension (longdesc)</a></li>
-          <li><a href="http://www.d.umn.edu/~lcarlson/research/ld.html">Longdesc examples in the wild</a></li>
+          <h2>Limitations</h2>
+          <ul>
+               <li>For the long description, you can only enter text; structured markup (HTML) is not supported by this tool.</li>
+               <li>After submitting an image the content is not editable. 
+                    To get around this, use the Imgur service directly; you can edit the descriptions if you're logged in. 
+                    Steps: 
+                    <ol>
+                         <li>Log into <a href="http://imgur.com/" target="_blank">Imgur.com</a>.</li>
+                         <li>Upload an image with proper descriptions.</li>
+                         <li>Append the image's unique ID to &quot;http://easychirp.com/img/&quot;. For example, http://www.easychirp.com/img/AkoGysu</li>
+                         <li>Copy into a tweet. Magic!</li>
+                         <li>To edit, view the image while logged in Imgur and click the options dropdown.</li>
+                    </ol>
+               </li>
+          </ul>
+
+          <!-- <h2>More</h2>
+          <ul>
+               <li><a href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension (longdesc)</a></li>
+               <li><a href="http://www.d.umn.edu/itss/training/online/images/long_how/">How to Write Long Text Alternatives</a></li>
+               <li><a href="http://www.d.umn.edu/~lcarlson/research/ld.html">Longdesc examples in the wild</a></li>
+          </ul> -->
 
          <!--  <h2>The Result</h2>
           <p>Once you've uploaded an image, a URL will be displayed on the page and also entered in the tweet.
