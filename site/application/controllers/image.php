@@ -158,6 +158,16 @@ class Image extends CI_Controller {
 		$this->load->view("img", $_data);
 	}
 
+
+	/**
+	 * Manages the image help - /img_help
+	 */
+	public function img_help()
+	{
+
+		$this->load->view("img_help");
+	}
+
 }
 
 

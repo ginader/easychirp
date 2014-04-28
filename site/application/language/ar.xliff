@@ -466,13 +466,13 @@
       </trans-unit>
 
       <trans-unit id="add-image-title" datatype="html">
-        <source>Title of image (alt)</source>
-        <target>Title of image (alt)</target>
+        <source>Short Description (title)</source>
+        <target>Short Description (title)</target>
       </trans-unit>
 
       <trans-unit id="add-image-desc" datatype="html">
-        <source>Description of image (longdesc)</source>
-        <target>Description of image (longdesc)</target>
+        <source>Long Description (details)</source>
+        <target>Long Description (details)</target>
       </trans-unit>
 
       <trans-unit id="add-image-submit" datatype="html">

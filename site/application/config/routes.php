@@ -70,6 +70,7 @@ $route['go_user_action'] = "main/go_user_action"; // Logic for 'go to user' form
 $route['phpinfo'] = "main/info";
 $route['img/(:any)'] = "image/img/$1"; // For display of images including from outside the app
 $route['img_post'] = "image/img_post"; // For posting image to service
+$route['img_help'] = "image/img_help";
 $route['lists'] = "main/lists";
 $route['list_edit'] = "main/list_edit";
 $route['list_edit_action'] = "main/list_edit_action";
