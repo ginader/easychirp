@@ -39,13 +39,15 @@
 
           <h2>Long Description</h2>
           <p>Enter a longer, detailed text description for the image.
-               This will be used to provide to a longdesc attribute on the resulting page (the long description is provided via a dataURI).
-               One limitation is that you can only enter text; structured markup is not supported by this tool.
+               This will be used to provide to a longdesc attribute on the resulting page (the long description is provided via a dataURI) which is valuable to people with visual impairments.
+          </p>
+          <p>One limitation is that you can only enter text; structured markup is not supported by this tool.
                Do not enter a URL in this input field.
           </p>
 
           <h2>More</h2>
-          <p><a href="http://www.d.umn.edu/~lcarlson/research/ld.html">Longdesc examples in the wild</a></p>
+          <li><a href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension (longdesc)</a></li>
+          <li><a href="http://www.d.umn.edu/~lcarlson/research/ld.html">Longdesc examples in the wild</a></li>
 
          <!--  <h2>The Result</h2>
           <p>Once you've uploaded an image, a URL will be displayed on the page and also entered in the tweet.
