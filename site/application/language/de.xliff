@@ -457,27 +457,27 @@
 
       <trans-unit id="add-image-hd" datatype="html">
         <source>Add Image</source>
-        <target>Add Image</target>
+        <target>Bild hinzufügen</target>
       </trans-unit>
 
       <trans-unit id="add-image-path" datatype="html">
         <source>Local path to image (JPG, GIF, PNG; 5MB limit)</source>
-        <target>Local path to image (JPG, GIF, PNG; 5MB limit)</target>
+        <target>Lokale Pfad zu Bild (JPG, GIF, PNG, 5MB Grenze)</target>
       </trans-unit>
 
       <trans-unit id="add-image-title" datatype="html">
         <source>Short Description (title)</source>
-        <target>Short Description (title)</target>
+        <target>Kurzbeschreibung (Titel)</target>
       </trans-unit>
 
       <trans-unit id="add-image-desc" datatype="html">
         <source>Long Description (details)</source>
-        <target>Long Description (details)</target>
+        <target>Langbeschreibung (Details)</target>
       </trans-unit>
 
       <trans-unit id="add-image-submit" datatype="html">
         <source>Upload Image</source>
-        <target>Upload Image</target>
+        <target>Bild hinzufügen</target>
       </trans-unit>
 
       <!-- HOME PAGE -->
