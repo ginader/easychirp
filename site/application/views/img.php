@@ -46,12 +46,12 @@
 <div id="wrapper">
 
      <header role="banner">
-          <h1 class="rounded">View Image<span aria-hidden="true">: <?php echo $title; ?></span></h1>
+          <h1 class="rounded"><span class="hide">View Image</span> <span aria-hidden="true"><?php echo $title; ?></span></h1>
      </header>
 
      <main id="main" role="main">
           <div><img src="<?php echo $url; ?>" alt="<?php echo $title; ?>" longdesc="<?php echo $longdescUri; ?>" /></div>
-          <p><a href="<?php echo $urlImgur; ?>" target="_blank">View image on Imgur</a></p>
+          <?php /* <p><a href="<?php echo $urlImgur; ?>" target="_blank">View image on Imgur</a></p> */ ?>
      </main>
 
      <footer id="footer" role="contentinfo">
