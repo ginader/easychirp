@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
      <meta charset="utf-8" />
-     <title>View Image: <?php echo $title; ?></title>
+     <title><?php echo $title; ?> | View Image | Easy Chirp</title>
      
      <meta name="description" content="Image view including long description; provided by Easy Chirp." />
      <meta name="author" content="Easy Chirp | http://www.EasyChirp.com | @EasyChirp" />
@@ -14,19 +14,25 @@
      <style type="text/css">
      h1 {
           margin-bottom: .5em;
+          font-weight: normal;
+     }
+     #main img,
+     #main p {
+          margin-left: .25em;
      }
      img[longdesc] {
-          margin-left: .25em;
           max-width: 1000px;
           height: auto;
+          margin-bottom: 1em;
      }
-     footer {
-          padding-top: 1.5em;
-     }
-     footer p {
-          margin-bottom: .25em;
+     #footer {
+          margin-top: 1.5em;
+          padding-top: 1em;
           border-top: 2px solid #ccc;
      }
+     /*footer p {
+          line-height: 1em;
+     }*/
      @media only screen and (max-width: 640px) {
           img[longdesc] {
                width: 90%;
@@ -40,16 +46,18 @@
 <div id="wrapper">
 
      <header role="banner">
-          <h1 class="rounded">View Image: <?php echo $title; ?></h1>
+          <h1 class="rounded">View Image<span aria-hidden="true">: <?php echo $title; ?></span></h1>
      </header>
 
-     <main role="main">
+     <main id="main" role="main">
           <div><img src="<?php echo $url; ?>" alt="<?php echo $title; ?>" longdesc="<?php echo $longdescUri; ?>" /></div>
+          <p><a href="<?php echo $urlImgur; ?>" target="_blank">View image on Imgur</a></p>
      </main>
 
-     <footer role="contentinfo">
-          <p>Brought to you by <a href="http://www.easychirp.com">Easy Chirp</a> | <a href="http://twitter.com/easychirp">@EasyChirp</a></p>
-          <div><img src="/images/brand/easy_chirp_icon1.png" width="48" height="48" alt="logo" /></div>
+     <footer id="footer" role="contentinfo">
+          <p>This page is designed to provide an <a href="http://webaim.org/techniques/alttext/" target="_blank">accessible image</a>.</p>
+          <p>This service is brought to you by <a href="http://www.easychirp.com">Easy Chirp</a> | <a href="http://twitter.com/easychirp">@EasyChirp</a></p>
+          <div><img src="/images/brand/easy_chirp_icon1.png" width="48" height="48" alt="Easy Chirp icon" /></div>
      </footer>
 
 </div>

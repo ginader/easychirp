@@ -148,6 +148,9 @@ class Image extends CI_Controller {
 			$_data["url"] = "https://i.imgur.com/".$id."l.".$imgExt;
 		}
 
+		// Link to image on Imgur
+		$_data["urlImgur"] = "http://imgur.com/".$id;
+
 		// Set var for image title
 		$_data["title"] = $imgTitle;
 		
@@ -164,7 +167,6 @@ class Image extends CI_Controller {
 	 */
 	public function img_help()
 	{
-
 		$this->load->view("img_help");
 	}
 

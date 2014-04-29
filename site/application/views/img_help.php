@@ -13,7 +13,8 @@
      <link rel="stylesheet" href="/include/css/general.css" />
      <style type="text/css">
      #wrapper {
-          max-width: 800px;
+          width: 85%;
+          max-width: 900px;
      }
      main {
           padding: 1em;
@@ -24,6 +25,11 @@
      footer p {
           margin-bottom: .25em;
           border-top: 2px solid #ccc;
+     }
+     @media only screen and (max-width: 640px) {
+          #wrapper {
+               width: 93%;
+          }
      }
      </style>
 </head>
@@ -58,14 +64,14 @@
                     <ol>
                          <li>Log into <a href="http://imgur.com/" target="_blank">Imgur.com</a>.</li>
                          <li>Upload an image with proper descriptions.</li>
-                         <li>Append the image's unique ID to &quot;http://easychirp.com/img/&quot;. For example, http://www.easychirp.com/img/AkoGysu</li>
+                         <li>Append the image's unique ID to &quot;http://easychirp.com/img/&quot;. For example: http://easychirp.com/img/AkoGysu</li>
                          <li>Copy into a tweet. Magic!</li>
                          <li>To edit, view the image while logged in Imgur and click the options dropdown.</li>
                     </ol>
                </li>
           </ul>
 
-          <!-- <h2>More</h2>
+          <?php /* <h2>More</h2>
           <ul>
                <li><a href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension (longdesc)</a></li>
                <li><a href="http://www.d.umn.edu/itss/training/online/images/long_how/">How to Write Long Text Alternatives</a></li>
@@ -74,7 +80,7 @@
 
          <!--  <h2>The Result</h2>
           <p>Once you've uploaded an image, a URL will be displayed on the page and also entered in the tweet.
-               The URL points to a page hosted by Easy Chirp which displays a page with the image and the descriptions.</p> -->
+               The URL points to a page hosted by Easy Chirp which displays a page with the image and the descriptions.</p> */ ?>
      </main>
 
      <footer role="contentinfo">
