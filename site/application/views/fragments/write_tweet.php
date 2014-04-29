@@ -67,7 +67,8 @@ if (empty($single)):
 		</fieldset>
 		</form>
 
-		<form id="frmTweetImage" method="post" enctype="multipart/form-data" action="/img_post" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>">
+		<form id="frmTweetImage" method="post" enctype="multipart/form-data" action="/img_post" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>"
+			data-add-image="<?php echo $xliff_reader->get('add-image-hd'); ?>">
 		<fieldset>
 		<legend><?php echo $xliff_reader->get('add-image-hd'); ?></legend>
 			<input type="hidden" name="ajax" value="0" />

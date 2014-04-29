@@ -97,7 +97,9 @@ function updateCharCount(charCountField) {
 /*** show Add Image content in Write Tweet area ***************/
 
 // Create link to show content
-$('<p id="showAddImage"><a href="#" id="showAddImageAnchor">' + 'Add Image' + ' &#187;<\/a><\/p>').insertBefore('#frmTweetImage');
+var txtAddImage = {};
+txtAddImage.addImage = $("#frmTweetImage").attr("data-add-image");
+$('<p id="showAddImage"><a href="#" id="showAddImageAnchor" role="button">' + txtAddImage.addImage + ' &#187;<\/a><\/p>').insertBefore('#frmTweetImage');
 
 //hide create list form
 $('#frmTweetImage').hide();
