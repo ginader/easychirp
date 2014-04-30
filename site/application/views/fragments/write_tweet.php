@@ -82,7 +82,7 @@ if (empty($single)):
 			</div>
 			<div>
 				<label for="imageDesc"><?php echo $xliff_reader->get('add-image-desc'); ?></label>
-				<textarea type="text" name="imageDesc" id="imageDesc" size="30" class="input1" required aria-required="true" /></textarea>
+				<textarea type="text" name="imageDesc" id="imageDesc" size="30" class="input1" /></textarea>
 			</div>
 			<div>
 				<button type="submit" id="btnSubmitImage" class="btn3"><?php echo $xliff_reader->get('add-image-submit'); ?></button>

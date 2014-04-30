@@ -195,8 +195,8 @@ $('#frmTweetImage').submit(function(e, files) {
 
 	//check length of description
 	var image_desc = $("#imageDesc").val();
-	if (image_desc.length <= 15) {
-		alert("Please provide a longer description for this image.");
+	if (image_desc.length > 0 && image_desc.length < 15) {
+		alert("Please provide a longer description for this image or leave blank if not needed.");
 		$("#imageDesc").focus();
 		return false;
 	}
