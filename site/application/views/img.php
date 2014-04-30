@@ -50,8 +50,20 @@
      </header>
 
      <main id="main" role="main">
-          <div><img src="<?php echo $url; ?>" alt="<?php echo $title; ?>" longdesc="<?php echo $longdescUri; ?>" /></div>
+
+          <div>
+          <?php
+           echo '<img src="' . $url . '" ';
+           echo 'alt="' . $title . '" ';
+           if ($isLongDesc) {
+               echo 'longdesc="' . $longdescUri . '" ';
+           }
+           echo '/>';
+          ?>
+          </div>
+
           <?php /* <p><a href="<?php echo $urlImgur; ?>" target="_blank">View image on Imgur</a></p> */ ?>
+
      </main>
 
      <footer id="footer" role="contentinfo">

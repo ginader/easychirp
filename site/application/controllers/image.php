@@ -112,7 +112,6 @@ class Image extends CI_Controller {
 		$imgData = json_decode($response,false);
 		//print_r($imgData); die;
 
-		// Set the image extension, title, and description
 		// Image
 		$imgType = $imgData->data->link;
 		$imgExt = "jpg";
@@ -122,6 +121,7 @@ class Image extends CI_Controller {
 		else if ($imgType == "image/png") {
 			$imgExt = "png";
 		}
+
 		// Title
 		if (isset($imgData->data->title)) {
 			$imgTitle = $imgData->data->title;
@@ -129,18 +129,19 @@ class Image extends CI_Controller {
 		else {
 			$imgTitle = "[no title available]";
 		}
+
 		// Description
-		if (isset($imgData->data->description)) {
+		$isLongDesc = isset($imgData->data->description);
+		if ($isLongDesc) {
 			$imgDesc = $imgData->data->description;
 		}
-		else {
-			$imgDesc = "[no description available]";
-		}
+		$_data["isLongDesc"] = $isLongDesc;
 
+		// Check if image is animated
 		$isAnimated = $imgData->data->animated;
 
 		// Set var for image URL
-		// If animated, get the original image, otherwide get large thumbnail
+		// If animated, get the original image, otherwise get large thumbnail
 		if ($isAnimated) {
 			$_data["url"] = "https://i.imgur.com/".$id.".".$imgExt;
 		}
@@ -154,10 +155,13 @@ class Image extends CI_Controller {
 		// Set var for image title
 		$_data["title"] = $imgTitle;
 		
-		// Create dataURI for longdesc
-		$longdescStr = '<html><head><title>Description: '.$imgTitle.'</title><meta charset="utf-8"></head><body>'.$imgDesc.'</body></html>';
-		$_data["longdescUri"] = "data:text/html;base64," . base64_encode($longdescStr);
+		// Create dataURI for longdesc if content exists
+		if ($isLongDesc) {
+			$longdescStr = '<html><head><title>Description: '.$imgTitle.'</title><meta charset="utf-8"></head><body>'.$imgDesc.'</body></html>';
+			$_data["longdescUri"] = "data:text/html;base64," . base64_encode($longdescStr);
+		}
 
+		// Render page
 		$this->load->view("img", $_data);
 	}
 
