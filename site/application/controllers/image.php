@@ -134,6 +134,7 @@ class Image extends CI_Controller {
 		$isLongDesc = isset($imgData->data->description);
 		if ($isLongDesc) {
 			$imgDesc = $imgData->data->description;
+			$_data["imgDesc"] = $imgDesc;
 		}
 		$_data["isLongDesc"] = $isLongDesc;
 

@@ -66,7 +66,8 @@
 
           <?php
            if ($isLongDesc) {
-               echo '<p><a href="' . $longdescUri . '">image description</a></p>';
+               //echo '<p><a href="' . $longdescUri . '">image description</a></p>';
+               echo '<p>Image description: ' . $imgDesc . '</p>';
            }
           ?>
 
@@ -75,7 +76,7 @@
      <footer id="footer" role="contentinfo">
           <p>This page is designed to provide an <a href="http://webaim.org/techniques/alttext/" target="_blank">accessible image</a>.</p>
           <p>Brought to you by <a href="http://www.easychirp.com">Easy Chirp</a> (<a href="http://twitter.com/easychirp">@EasyChirp</a>) 
-               which uses the <a href="http://www.Imgur.com">Imgur</a> photo service.</p>
+               and the <a href="http://www.Imgur.com">Imgur</a> photo service.</p>
           <div><img src="/images/brand/easy_chirp_icon1.png" width="48" height="48" alt="Easy Chirp icon" /></div>
      </footer>
 
