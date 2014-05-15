@@ -18,7 +18,7 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('tips-h2-table'); ?></h2>
 	<p id="tblSyntaxSummary"><?php echo $xliff_reader->get('tips-table-p'); ?></p>
-	<table aria-describedby="tblSyntaxSummary">
+	<table class="table-rwd" aria-describedby="tblSyntaxSummary">
 	<thead>
 		<tr>
 			<th scope="col" style="width:30%;"><?php echo $xliff_reader->get('tips-table-th-1'); ?></th>

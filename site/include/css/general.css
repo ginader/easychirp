@@ -1280,6 +1280,32 @@ body.theme-inverse {
 	}
 }
 
-
+/* RWD table */
+@media only screen and (max-width: 480px) {
+	table.table-rwd table,
+	table.table-rwd thead,
+	table.table-rwd tbody,
+	table.table-rwd tr {
+		width: 100%;
+	}
+	table.table-rwd td,
+	table.table-rwd th {
+		display: block;
+		border: none;
+		position: relative;
+	}
+	table.table-rwd th {
+		margin-top: .75em;
+	}
+	table.table-rwd td {
+		margin-bottom: 0;
+	}
+	table.table-rwd thead tr {
+		display: none;
+	}
+	table.table-rwd tr {
+		border: 1px solid #ccc;
+	}
+}
 
 
