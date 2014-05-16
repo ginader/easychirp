@@ -1036,7 +1036,8 @@ a.favorited:focus,
 a.retweeted:focus {
 	background-color: #ff9;
 }
-#span-user-blocked {
+#span-user-blocked,
+#span-user-muted {
 	background-color: #ff9;	
 }
 
