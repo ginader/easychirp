@@ -2589,7 +2589,7 @@ class Main extends EC_Controller {
 	 * @param string $screen_name
 	 * @return void
 	 */
-	public function user_timeline($screen_name = FALSE)
+	public function user_timeline($screen_name = FALSE, $tweet_id = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -2613,6 +2613,9 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['screen_name'] = $screen_name;
 		$request_param['count'] = TWEETS_PER_PAGE;
+		if ($tweet_id) {
+			$request_param['max_id'] = $tweet_id;
+		}
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 
 		// @todo create a page header for user timeline that lets the username be passed in.
@@ -2631,10 +2634,17 @@ class Main extends EC_Controller {
 		else {
 			$this->_data['tweets'] = $this->load->view('fragments/tweet',
 				array( 'tweets' => $tweets, 
+					'paginate' => 1, 
+					'pagination_path' => '/user_timeline/' . $screen_name . '/',
 					'utc_offset' => $this->session->userdata('utc_offset'),
 					'time_zone' => $this->session->userdata('time_zone'),
 					'xliff_reader' => $this->_data['xliff_reader']
 				), TRUE);
+		}
+
+		if ($tweet_id) 
+		{
+			$tweets_data['last_id'] = $tweet_id; 
 		}
 
 		$this->layout->set_title( $screen_name . " | " . $this->xliff_reader->get('nav-timeline') );
