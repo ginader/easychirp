@@ -208,8 +208,7 @@ $('#frmTweetImage').submit(function(e, files) {
 		$("#imgUploadMessage").remove();
 
 		var txtInput = $('#txtEnterTweet');
-		var imgLink = "http://easychirp.com/img/" + data + " ";
-		//var imgLinkImgur = "http://i.imgur.com/" + data + ".jpg");
+		var imgLink = "http://easychirp.com/img/" + data;
 
 		alert("Success! The URL has been added to the input field.\nThe image link is: " + imgLink);
 
@@ -225,7 +224,7 @@ $('#frmTweetImage').submit(function(e, files) {
 		}
 
 		// Insert in tweet input and focus it
-		txtInput.val(txtInput.val() + imgLink);
+		txtInput.val(txtInput.val() + " " + imgLink);
 		txtInput.focus();
 	}
 
@@ -494,7 +493,7 @@ $("#frmUrlShort").submit(function(ev) {
 		if ( document.getElementById("txtDirectMessage") ) { 
 			txtInput = $('#txtDirectMessage');
 		}
-		txtInput.val(txtInput.val() + short + " ");
+		txtInput.val(txtInput.val() + " " + short);
 		
 		//update counter
 		if ( document.getElementById("txtEnterTweet") ) { 
