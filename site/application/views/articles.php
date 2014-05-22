@@ -85,6 +85,9 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
+	<dt><a href="http://networkedblogs.com/X61we">Highlight an App – Easy Chirp</a></dt>
+		<dd>Student Affairs Women Talk Tech</dd>
+		<dd>2014 May 22</dd>
 	<dt><a href="http://poslepu.blogspot.cz/2013/10/easy-chirp-pristupna-alternativa.html">Easy Chirp: web-accessible alternative interface for Twitter [in Czech]</a></dt>
 		<dd>Blindly, The blind users - web accessibility, assistive technology for disabled users</dd>
 		<dd>2013 Oct 31</dd>
