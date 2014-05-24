@@ -659,6 +659,10 @@ class Main extends EC_Controller {
 		$this->redirect_if_not_logged_in();
 
 		$screen_name =  $_POST["screen_name"];
+		if (substr($screen_name, 0, 1) == '@') {
+		    $screen_name = substr($screen_name, 1);
+		}
+
 		$action =  $_POST["goUserAction"];
 
 		if ($action == "profile") {
