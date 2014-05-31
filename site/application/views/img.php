@@ -30,9 +30,10 @@
           padding-top: 1em;
           border-top: 2px solid #ccc;
      }
-     /*footer p {
-          line-height: 1em;
-     }*/
+     footer p {
+          font-size: .9rem;
+          line-height: 1.1rem;
+     }
      @media only screen and (max-width: 640px) {
           img[longdesc] {
                width: 90%;
@@ -75,8 +76,9 @@
 
      <footer id="footer" role="contentinfo">
           <p>This page is designed to provide an <a href="http://webaim.org/techniques/alttext/" target="_blank">accessible image</a>.</p>
+          <p>Note that the longdesc image attribute on this page (if content is provided) targets a data URI which IE does not yet support.</p>
           <p>Brought to you by <a href="http://www.easychirp.com">Easy Chirp</a> (<a href="http://twitter.com/easychirp">@EasyChirp</a>) 
-               and the <a href="http://www.Imgur.com">Imgur</a> photo service.</p>
+            and the <a href="http://www.Imgur.com">Imgur</a> photo service.</p>
           <div><img src="/images/brand/easy_chirp_icon1.png" width="48" height="48" alt="Easy Chirp icon" /></div>
      </footer>
 
