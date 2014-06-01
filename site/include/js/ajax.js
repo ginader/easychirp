@@ -75,6 +75,8 @@ $('a[href*="block_"]').click(function(e) {
 
 				url_replace = url_replace.replace(/create/,"destroy");
 				$(a).attr("href", url_replace);
+
+				$(a).focus();
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
@@ -93,6 +95,8 @@ $('a[href*="block_"]').click(function(e) {
 
 				url_replace = url_replace.replace(/destroy/,"create");
 				$(a).attr("href", url_replace);
+
+				$(a).focus();
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
