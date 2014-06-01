@@ -16,10 +16,10 @@ if (isset($_GET["action"])) {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unblock').'</div>';
 	}
 	elseif ($_GET["action"] == "mute_created") {
-		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-mute').'</div>';//'.$xliff_reader->get('gbl-msg-mute').'</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-mute').'</div>';
 	}
 	elseif ($_GET["action"] == "mute_destroyed") {
-		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unmute').'</div>';//'.$xliff_reader->get('gbl-msg-unmute').'</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unmute').'</div>';
 	}
 }
 
