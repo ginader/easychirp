@@ -101,6 +101,58 @@ $('a[href*="block_"]').click(function(e) {
 	}
 });
 
+// Ajax for muting/unmuting a user
+$('a[href*="mute_"]').click(function(e) {
+	e.preventDefault();
+
+	var a = $(this);
+	var url_replace = this.href;
+	var url_send = this.href.replace("false","true");
+	var txt = {};
+	txt.mute        = "Mute"; //$("#main").attr("data-mute");
+	txt.unmute      = "Unmute"; //$("#main").attr("data-unmute");
+	txt.AlertMute   = "The user has been muted."; //$("#main").attr("data-msg-mute");
+	txt.AlertUnmute = "The user has been unmuted."; //$("#main").attr("data-msg-unmute");
+
+	if (url_replace.indexOf("create") != -1) {
+		// Create muting
+		$.ajax({
+			url: url_send,
+			success: function(response) {
+				alert(txt.AlertMute);
+				
+				$(a).html(txt.unmute);
+				$("#span-user-muted").css("display", "inline");
+
+				url_replace = url_replace.replace(/create/,"destroy");
+				$(a).attr("href", url_replace);
+				$(a).focus();
+			},
+			error: function(xhr) {
+				alert('Error. Status = ' + xhr.status);
+			}
+		})
+	}
+	else {
+		// Remove muting
+		$.ajax({
+			url: url_send,
+			success: function(response) {
+				alert(txt.AlertUnmute);
+				
+				$(a).html(txt.mute);
+				$("#span-user-muted").css("display", "none");
+
+				url_replace = url_replace.replace(/destroy/,"create");
+				$(a).attr("href", url_replace);
+			},
+			error: function(xhr) {
+				alert('Error. Status = ' + xhr.status);
+			}
+		})
+	}
+});
+
 // Ajax for deleting a DM
 $('a[href*="direct_delete"]').click(function(e) {
 
