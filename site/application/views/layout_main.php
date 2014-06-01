@@ -60,6 +60,8 @@ if ($this->layout->lang_code === "ar") {
 	data-sure-delete="<?php echo $xliff_reader->get('gbl-sure-delete'); ?>" data-sure-spam="<?php echo $xliff_reader->get('gbl-sure-spam'); ?>"
 	data-block="<?php echo $xliff_reader->get('user-block'); ?>" data-unblock="<?php echo $xliff_reader->get('user-unblock'); ?>"
 	data-msg-block="<?php echo $xliff_reader->get('gbl-msg-block'); ?>" data-msg-unblock="<?php echo $xliff_reader->get('gbl-msg-unblock'); ?>"
+	data-mute="<?php echo $xliff_reader->get('gbl-mute'); ?>" data-unmute="<?php echo $xliff_reader->get('gbl-unmute'); ?>"
+	data-msg-mute="<?php echo $xliff_reader->get('gbl-msg-mute'); ?>" data-msg-unmute="<?php echo $xliff_reader->get('gbl-msg-unmute'); ?>"
 	data-msg-dm-deleted="<?php echo $xliff_reader->get('gbl-msg-dm-deleted'); ?>" 
 	data-msg-tweet-deleted="<?php echo $xliff_reader->get('msg-tweet-deleted'); ?>"
 >

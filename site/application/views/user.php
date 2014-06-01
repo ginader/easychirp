@@ -16,10 +16,10 @@ if (isset($_GET["action"])) {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unblock').'</div>';
 	}
 	elseif ($_GET["action"] == "mute_created") {
-		echo '<div class="msgBoxPos rounded">The user has been muted.</div>';//'.$xliff_reader->get('gbl-msg-mute').'</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-mute').'</div>';//'.$xliff_reader->get('gbl-msg-mute').'</div>';
 	}
 	elseif ($_GET["action"] == "mute_destroyed") {
-		echo '<div class="msgBoxPos rounded">The user has been unmuted.</div>';//'.$xliff_reader->get('gbl-msg-unmute').'</div>';
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unmute').'</div>';//'.$xliff_reader->get('gbl-msg-unmute').'</div>';
 	}
 }
 
@@ -78,10 +78,10 @@ else {
 	// Muted?
 	$isMute = $friendship->relationship->source->muting;
 	if ($isMute == 1) {
-		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted">Muted</span> <a href="/mute_destroy/'.$user->screen_name.'/false">Unmute</a>';//.$xliff_reader->get('user-unmute').'</a>';
+		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted">'.$xliff_reader->get('gbl-muted').'</span> <a href="/mute_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('gbl-unmute').'</a>';
 	}
 	else {
-		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted" style="display:none;">Muted</span> <a href="/mute_create/'.$user->screen_name.'/false">Mute</a>';//.$xliff_reader->get('user-mute').'</a>';
+		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted" style="display:none;">'.$xliff_reader->get('gbl-muted').'</span> <a href="/mute_create/'.$user->screen_name.'/false">'.$xliff_reader->get('gbl-mute').'</a>';
 	}
 
 	echo ' &nbsp; ';

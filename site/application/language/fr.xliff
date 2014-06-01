@@ -56,6 +56,21 @@
         <target>Obtenir les tweets plus anciens</target>
       </trans-unit>
 
+      <trans-unit id="gbl-mute" datatype="html">
+        <source>Mute User</source>
+        <target>Mute User</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-unmute" datatype="html">
+        <source>Unmute User</source>
+        <target>Unmute User</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-muted" datatype="html">
+        <source>Muted</source>
+        <target>Muted</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">
@@ -213,6 +228,16 @@
       <trans-unit id="msg-list-empty_add_name" datatype="html">
         <source>Please enter a username to add to the list.</source>
         <target>Veuilliez saisir un nom d'utilisateur à ajouter à la liste.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-mute" datatype="html">
+        <source>The user has been muted.</source>
+        <target>The user has been muted.</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-msg-unmute" datatype="html">
+        <source>The user has been unmuted.</source>
+        <target>The user has been unmuted.</target>
       </trans-unit>
 
       <!-- SKIP LINKS -->
@@ -1922,11 +1947,6 @@
       <trans-unit id="gbl-tweet-tweet-message" datatype="html">
         <source>tweet message</source>
         <target>tweet message</target>
-      </trans-unit>
-
-      <trans-unit id="gbl-tweet-mute" datatype="html">
-        <source>mute user</source>
-        <target>mute user</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-report" datatype="html">

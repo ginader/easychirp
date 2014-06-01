@@ -109,10 +109,10 @@ $('a[href*="mute_"]').click(function(e) {
 	var url_replace = this.href;
 	var url_send = this.href.replace("false","true");
 	var txt = {};
-	txt.mute        = "Mute"; //$("#main").attr("data-mute");
-	txt.unmute      = "Unmute"; //$("#main").attr("data-unmute");
-	txt.AlertMute   = "The user has been muted."; //$("#main").attr("data-msg-mute");
-	txt.AlertUnmute = "The user has been unmuted."; //$("#main").attr("data-msg-unmute");
+	txt.mute        = $("#main").attr("data-mute");
+	txt.unmute      = $("#main").attr("data-unmute");
+	txt.AlertMute   = $("#main").attr("data-msg-mute");
+	txt.AlertUnmute = $("#main").attr("data-msg-unmute");
 
 	if (url_replace.indexOf("create") != -1) {
 		// Create muting
