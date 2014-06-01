@@ -1227,6 +1227,51 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * /muting -  Manage mute & unmute.
+	 *
+	 * @param string $screen_name their twitter username
+	 * @param string|bool $state Default is FALSE.
+	 * @param string|bool $ajax Default is FALSE. when true data will be returned to browser as JSON
+	 * @return void
+	 */
+	public function muting($screen_name, $state = FALSE, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['screen_name'] = $screen_name;
+
+		if ($state == "create") {
+			$post_url = "mutes/users/create";
+			$action = "mute_created";
+		}
+		else {
+			$post_url = "mutes/users/destroy";
+			$action = "mute_destroyed";
+		}
+
+		$data = $this->twitter_lib->post($post_url, $request_param);
+
+		if ($ajax=="true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'user/' . $screen_name.'?action='.$action);
+		}
+	}
+
+	/**
 	 * Manages the My Tweets page - /mytweets
 	 *
 	 * @return void

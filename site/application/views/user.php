@@ -15,6 +15,12 @@ if (isset($_GET["action"])) {
 	elseif ($_GET["action"] == "block_destroyed") {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-unblock').'</div>';
 	}
+	elseif ($_GET["action"] == "mute_created") {
+		echo '<div class="msgBoxPos rounded">The user has been muted.</div>';//'.$xliff_reader->get('gbl-msg-mute').'</div>';
+	}
+	elseif ($_GET["action"] == "mute_destroyed") {
+		echo '<div class="msgBoxPos rounded">The user has been unmuted.</div>';//'.$xliff_reader->get('gbl-msg-unmute').'</div>';
+	}
 }
 
 //debug_object($friendship);
@@ -68,6 +74,17 @@ else {
 
 	<p>
 	<?php 
+
+	// Muted?
+	$isMute = $friendship->relationship->source->muting;
+	if ($isMute == 1) {
+		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted">Muted</span> <a href="/mute_destroy/'.$user->screen_name.'/false">Unmute</a>';//.$xliff_reader->get('user-unmute').'</a>';
+	}
+	else {
+		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted" style="display:none;">Muted</span> <a href="/mute_create/'.$user->screen_name.'/false">Mute</a>';//.$xliff_reader->get('user-mute').'</a>';
+	}
+
+	echo ' &nbsp; ';
 	
 	// Spammer?
 	$isSpam = $friendship->relationship->source->marked_spam;
