@@ -76,9 +76,6 @@
 	<dt><a href="http://preparednessforall.wordpress.com/2012/06/04/report-sociability-social-media-for-people-with-a-disability/">Report: Sociability, Social Media for People with a Disability</a></dt>
 		<dd>Preparedness For All</dd>
 		<dd>2012 Jun 04</dd>
-	<dt><a href="http://www.marcozehe.de/2011/12/08/social-networks-and-accessibility-a-rather-sad-picture/">Social networks and accessibility: A rather sad picture</a></dt>
-		<dd>Marco Zehe</dd>
-		<dd>2011 Dec 08</dd>
 	<dt><a href="http://rivendellbrewery.wordpress.com/2009/07/31/accessible-twitter/">Accessible Twitter: how it should have been done to start with</a></dt>
 		<dd>Andy Bryant</dd>
 		<dd>2009 Jul 31</dd>
@@ -110,6 +107,9 @@
 	<dt><a href="http://lowvisionbureau.com/blog/lvbpodcast/twitter-accessible-for-visually-impaired-people/">Twitter accessible for visually impaired people [podcast]</a></dt>
 		<dd>LowVisionBureau</dd>
 		<dd>2012 Jan 29</dd>
+	<dt><a href="http://www.marcozehe.de/2011/12/08/social-networks-and-accessibility-a-rather-sad-picture/">Social networks and accessibility: A rather sad picture</a></dt>
+		<dd>Marco Zehe</dd>
+		<dd>2011 Dec 08</dd>
 	<dt><a href="http://rscscotlandnewsfeed.blogspot.com/2011/10/easy-chirp-makes-tweeting-more.html">Easy Chirp makes tweeting more accessible</a></dt>
 		<dd>Regional Support Centre Scotland</dd>
 		<dd>2011 Oct 00</dd>
