@@ -1672,6 +1672,15 @@
         <target>الجوائز!</target>
       </trans-unit>
 
+      <trans-unit id="about-awards-h3-fcc" datatype="html">
+        <source>Recipient of the 2014 FCC Chairman's Award for Advancement in Accessibility</source>
+        <target>Recipient of the 2014 FCC Chairman's Award for Advancement in Accessibility</target>
+      </trans-unit>
+      <trans-unit id="about-awards-fcc" datatype="html">
+        <source>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</source>
+        <target>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</target>
+      </trans-unit>
+
       <trans-unit id="about-awards-h3-afb" datatype="html">
         <source>Recipient of the AFB 2011 Access Award</source>
         <target>جائزة الوصول للمستفيد من AFB 2011</target>
@@ -1686,8 +1695,8 @@
         <target>الحائز على جائزة Access IT @web2.0 لعام 2009</target>
       </trans-unit>
       <trans-unit id="about-awards-accessit" datatype="html">
-        <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
-        <target>جائزة Access IT @web2.0 هي تقدير لمشروع أو منتج أو خدمة تسهل الوصول لـ web 2.0. تم إجازته من جمعية أصحاب المواقع الدولية (IWA). تساعد عملية الإختيار في تقييم أهمية الجائزة، تأثيرها، قدرتها على تحمل التكاليف و الإنفتاح، و التحقق من مصداقيتها.</target>
+        <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt;.</source>
+        <target>جائزة Access IT @web2.0 هي تقدير لمشروع أو منتج أو خدمة تسهل الوصول لـ web 2.0. تم إجازته من جمعية أصحاب المواقع الدولية.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-bestweb" datatype="html">

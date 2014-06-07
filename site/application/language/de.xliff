@@ -1682,6 +1682,15 @@
         <target>Ehrungen!</target>
       </trans-unit>
 
+      <trans-unit id="about-awards-h3-fcc" datatype="html">
+        <source>Recipient of the 2014 FCC Chairman's Award for Advancement in Accessibility</source>
+        <target>Recipient of the 2014 FCC Chairman's Award for Advancement in Accessibility</target>
+      </trans-unit>
+      <trans-unit id="about-awards-fcc" datatype="html">
+        <source>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</source>
+        <target>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</target>
+      </trans-unit>
+
       <trans-unit id="about-awards-h3-afb" datatype="html">
         <source>Recipient of the AFB 2011 Access Award</source>
         <target>Gewinner des AFB 2011 Access Award</target>
@@ -1696,8 +1705,8 @@
         <target>Gewinner des 2009 Access IT @web2.0 Award</target>
       </trans-unit>
       <trans-unit id="about-awards-accessit" datatype="html">
-        <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt; (IWA). The selection process assesses the relevance for the award, its impact, its affordability and openness, and its validation level.</source>
-        <target>Der Access IT @web2.0 Award ehrt Projekte, Produkte oder Dienstleistungen, welche die Barrierefreiheit des Web2.0 voranbringen. Empfehlung der International Webmasters Association (IWA). Das Auswahlverfahren beurteilt die Bedeutung für die Auszeichnung, die Auswirkungen, Erschwinglichkeit und Offenheit sowie die Validierungsebene.</target>
+        <source>The Access IT @web2.0 Award is in recognition of a project, product or service that advances accessibility on web 2.0. Endorsed by the &lt;a href=&quot;http://www.iwa.it/&quot;&gt;International Webmasters Association&lt;/a&gt;.</source>
+        <target>Der Access IT @web2.0 Award ehrt Projekte, Produkte oder Dienstleistungen, welche die Barrierefreiheit des Web2.0 voranbringen. Empfehlung der International Webmasters Association.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-bestweb" datatype="html">
