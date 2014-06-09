@@ -113,6 +113,7 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-awards'); ?></h2>
 	<ul class="ulList1">
+		<li><?php echo $xliff_reader->get('about-awards-h3-fcc'); ?>.</li>
 		<li><?php echo $xliff_reader->get('home-awards-afb'); ?></li>
 		<li><?php echo $xliff_reader->get('home-awards-it'); ?></li>
 		<li><?php echo $xliff_reader->get('home-awards-rnib'); ?></li>

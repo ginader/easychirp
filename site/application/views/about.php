@@ -67,11 +67,16 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('about-h2-awards'); ?></h2>
 
+	<h3><?php echo $xliff_reader->get('about-awards-h3-fcc'); ?></h3>
+	<p><?php echo $xliff_reader->get('about-awards-fcc'); ?></p>
+
 	<h3><?php echo $xliff_reader->get('about-awards-h3-afb'); ?></h3>
 	<p><?php echo $xliff_reader->get('about-awards-afb'); ?></p>
 
 	<h3><?php echo $xliff_reader->get('about-awards-h3-accessit'); ?></h3>
 	<p class="clearfix"><img src="/images/awards/access-it-2009-award-sm.jpg" alt="award icon; man in wheelchair holding globe over head" width="55" height="88" class="fl" style="margin-right:10px;" /> <?php echo $xliff_reader->get('about-awards-accessit'); ?></p>
+
+	<hr />
 
 	<h3><?php echo $xliff_reader->get('about-awards-h3-bestweb'); ?></h3>
 	<p class="clearfix"><img src="images/awards/net_mag_awards_2010_sm.png" alt=".net Magazine Awards 2010" width="70" height="58" class="fl" style="margin:0 10px 8px 0;" /> <?php echo $xliff_reader->get('about-awards-bestweb'); ?></p>
