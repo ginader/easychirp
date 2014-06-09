@@ -1685,11 +1685,11 @@
 
       <trans-unit id="about-awards-h3-fcc" datatype="html">
         <source>Recipient of the 2014 FCC Chairman's Award for Advancement in Accessibility</source>
-        <target>Recipient of the 2014 FCC Chairman's Award for Advancement in Accessibility</target>
+        <target>Ganador del Premio de la FCC del Presidente 2014 para el Avance de Accesibilidad</target>
       </trans-unit>
       <trans-unit id="about-awards-fcc" datatype="html">
         <source>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</source>
-        <target>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</target>
+        <target>Easy Chirp fue el ganador en la categoría de Medios de Comunicación Social del Premio de la FCC del Presidente 2014 para el Avance de Accesibilidad.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-afb" datatype="html">

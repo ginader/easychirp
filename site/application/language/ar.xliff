@@ -152,12 +152,12 @@
 
       <trans-unit id="gbl-tweet-rt-alert-added" datatype="html">
         <source>The retweet has been created.</source>
-        <target>The retweet has been created.</target>
+        <target>تم إنشاء الريتويت.</target>
       </trans-unit>
 
       <trans-unit id="gbl-tweet-rt-alert-removed" datatype="html">
         <source>The retweet has been undone.</source>
-        <target>The retweet has been undone.</target>
+        <target>تم التراجع عن الريتويت.</target>
       </trans-unit>
 
       <trans-unit id="gbl-sure-delete" datatype="html">
