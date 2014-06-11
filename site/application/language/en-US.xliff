@@ -1678,7 +1678,7 @@
       </trans-unit>
       <trans-unit id="about-awards-fcc" datatype="html">
         <source>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</source>
-        <target>Easy Chirp was the winner in the Social Media category of the 2014 FCC Chairman's Award for Advancement in Accessibility.</target>
+        <target>Easy Chirp was the winner in the Social Media category of the &lt;a href="http://www.fcc.gov/document/chairman-wheeler-honors-innovators-accessibility"&gt;2014 FCC Chairman's Award for Advancement in Accessibility&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="about-awards-h3-afb" datatype="html">
