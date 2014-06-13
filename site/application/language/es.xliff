@@ -598,6 +598,11 @@
         <target>Caracteristicas Notables</target>
       </trans-unit>
 
+      <trans-unit id="home-features-img" datatype="html">
+        <source>Tweet an image with a caption and long description.</source>
+        <target>Tweet an image with a caption and long description.</target>
+      </trans-unit>
+
       <trans-unit id="home-features-search" datatype="html">
         <source>Search, user search, and saved searches.</source>
         <target>Buscar, buscar usuario y busquedas gravadas.</target>

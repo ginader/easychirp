@@ -597,6 +597,11 @@
         <target>Besondere Funktionen</target>
       </trans-unit>
 
+      <trans-unit id="home-features-img" datatype="html">
+        <source>Tweet an image with a caption and long description.</source>
+        <target>Tweet an image with a caption and long description.</target>
+      </trans-unit>
+
       <trans-unit id="home-features-shorten" datatype="html">
         <source>A built-in shorten URL tool with choice of service.</source>
         <target>Eingebaute URL-Kürzung mit frei wählbarem Dienst.</target>

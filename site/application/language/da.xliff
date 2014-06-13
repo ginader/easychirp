@@ -597,6 +597,11 @@
         <target>Notable Features</target>
       </trans-unit>
 
+      <trans-unit id="home-features-img" datatype="html">
+        <source>Tweet an image with a caption and long description.</source>
+        <target>Tweet an image with a caption and long description.</target>
+      </trans-unit>
+
       <trans-unit id="home-features-shorten" datatype="html">
         <source>A built-in shorten URL tool with choice of service.</source>
         <target>A built-in shorten URL tool with choice of service.</target>

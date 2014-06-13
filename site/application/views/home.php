@@ -99,6 +99,7 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-features'); ?></h2>
       <ul>
+        <li><?php echo $xliff_reader->get('home-features-img'); ?></li>
         <li><?php echo $xliff_reader->get('home-features-shorten'); ?></li>
         <li><?php echo $xliff_reader->get('home-features-search'); ?></li>
         <li><?php echo $xliff_reader->get('home-features-lists'); ?></li>

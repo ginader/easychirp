@@ -28,6 +28,7 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('features-main-h2'); ?></h2>
 	<ul>
+		<li><?php echo $xliff_reader->get('home-features-img'); ?></li>
 		<li><?php echo $xliff_reader->get('features-main-shortener'); ?>
 		<li><?php echo $xliff_reader->get('features-main-replytoall'); ?>
 		<li><?php echo $xliff_reader->get('features-main-lists'); ?>
