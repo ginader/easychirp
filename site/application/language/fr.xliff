@@ -505,6 +505,11 @@
         <target>Ajouter une image</target>
       </trans-unit>
 
+      <trans-unit id="add-image-help-desc" datatype="html">
+        <source>Help with descriptions</source>
+        <target>Help with descriptions</target>
+      </trans-unit>
+
       <!-- HOME PAGE -->
 
       <trans-unit id="home" datatype="html">

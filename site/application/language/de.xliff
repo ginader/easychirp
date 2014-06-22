@@ -505,6 +505,11 @@
         <target>Bild hinzufügen</target>
       </trans-unit>
 
+      <trans-unit id="add-image-help-desc" datatype="html">
+        <source>Help with descriptions</source>
+        <target>Hilfe für Beschreibungen</target>
+      </trans-unit>
+
       <!-- HOME PAGE -->
 
       <trans-unit id="home" datatype="html">
