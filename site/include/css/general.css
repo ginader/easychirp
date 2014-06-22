@@ -729,11 +729,12 @@ div.msgBoxNeg {
 }
 
 .article_mentions dt {
-	margin: 1.2rem 0 .5rem 0;
-	line-height: 1.5rem;
+	margin: 1.2rem 0 .25rem 0;
+	line-height: 1.25rem;
 }
 .article_mentions dd {
-	line-height: 1rem;
+	line-height: 1.25rem;
+	margin-bottom: .25rem;
 }
 
 #userAvatar a {
