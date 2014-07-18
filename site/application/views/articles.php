@@ -82,6 +82,9 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
+	<dt><a href="http://fedscoop.com/social-media-accessibility/">Anti-social: Feds wonder why social media companies drag feet on accessibility issues</a></dt>
+		<dd>FedScoop</dd>
+		<dd>2014 July 17</dd>
 	<dt><a href="http://networkedblogs.com/X61we">Highlight an App – Easy Chirp</a></dt>
 		<dd>Student Affairs Women Talk Tech</dd>
 		<dd>2014 May 22</dd>
