@@ -27,11 +27,9 @@ foreach ($f->users as $user):
 		<?php echo $xliff_reader->get('profile-dt-tweets'); ?> 
 		<?php echo anchor('/user_timeline/' . $user->screen_name, $user->statuses_count); ?> 
 		<?php echo $xliff_reader->get('profile-dt-following'); ?> 
-		<?php echo anchor('/following/' . $user->screen_name, $user->friends_count, 
-			'title="view users that I\'m following"'); ?> 
+		<?php echo anchor('/following/' . $user->screen_name, $user->friends_count); ?> 
 		<?php echo $xliff_reader->get('profile-dt-followers'); ?> 
-		<?php echo anchor('/followers/' . $user->screen_name, $user->followers_count, 
-			'title="view the users that follow me"'); ?> 
+		<?php echo anchor('/followers/' . $user->screen_name, $user->followers_count); ?> 
 	</p>
 </div>
 <?php
