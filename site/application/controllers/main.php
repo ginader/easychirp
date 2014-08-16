@@ -515,7 +515,7 @@ class Main extends EC_Controller {
 	 * @param string $screen_name. if not specified, the current user will be used.
 	 * @return void
 	 */
-	public function followers($screen_name = FALSE)
+	public function followers($screen_name = FALSE, $cursor = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -539,6 +539,13 @@ class Main extends EC_Controller {
 		$request_param['screen_name'] = $screen_name;
 		$this->_data['screen_name'] = $screen_name;
 
+		$this->_data['cursor'] = -1;
+		if ($cursor !== FALSE && $cursor !== "false") {
+			$request_param['cursor'] = $cursor;
+			$this->_data['cursor'] = $cursor;
+		}
+
+		$request_param['include_user_entities'] = false;
 		$this->_data['f'] = $this->twitter_lib->get('followers/list', $request_param);
 
 		$page_title = $this->xliff_reader->get('followers-h1');

@@ -440,6 +440,9 @@ div.msgBoxNeg {
 	display: block;
 	padding: .5rem .3rem .35rem;
 }
+.load-more-1-line a {
+	display: inline-block;
+}
 
 /* app menu */
 #navMain {

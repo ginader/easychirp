@@ -60,6 +60,7 @@ $route['favorite_create/(:any)/(:any)'] = "main/favoriting/$1/create/$2";
 $route['favorite_destroy/(:any)/(:any)'] = "main/favoriting/$1/destroy/$2";
 $route['followers'] = "main/followers";
 $route['followers/(:any)'] = "main/followers/$1";
+$route['followers/(:any)/(:any)'] = "main/followers/$1/$2"; // with pagination
 $route['following'] = "main/following";
 $route['following/(:any)'] = "main/following/$1";
 $route['follow_user/(:any)/(:any)'] = "main/manage_follow_user/$1/follow/$2";
