@@ -6,7 +6,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 *
 * @package EasyChirp
 * @subpackage Libraries
-* @author Andrew Woods <atwoods1@gmail.com>
+* @author Andrew Woods <atwoods1@gmail.com>; modified by Dennis Lembree
 * @version 0.1 
 * 
 */
@@ -52,7 +52,6 @@ class Twitter_lib {
 	}
 
 
-
 	public function get($url, $params = array())
 	{
 		return $this->twitteroauth->get($url, $params);
@@ -75,11 +74,8 @@ class Twitter_lib {
 	{
 		$this->twitteroauth->ssl_verifypeer = $value;
 	}
-	
 
 }
-
-
 
 
 class OAuthCurl { 
@@ -109,65 +105,7 @@ class OAuthCurl {
 		$header['content'] = $content; 
 		return $header; 
 	} 
-} 
-
-
-/**
-* Reformat the date of a tweet
-*
-* @since version 1.9.20131127
-* @see http://www.php.net/manual/en/datetime.createfromformat.php
-* @param  string $date the original date of the tweet
-* @return string $date the newly formatted date of the tweet
-*/
-function reformat_date($date, $offset)
-{
-	$utc_offset =  $offset / 3600;	
-
-	$timezone_name = 'UTC';
-	if (is_int($utc_offset))
-	{
-		if (-4 === $utc_offset)
-		{
-			$timezone_name = 'America/New_York';
-		}
-		elseif (-5 === $utc_offset)
-		{
-			$timezone_name = 'America/Chicago';
-		}
-		elseif (-6 === $utc_offset)
-		{
-			$timezone_name = 'America/Denver';
-		}
-		elseif (-7 === $utc_offset)
-		{
-			$timezone_name = 'America/Los_Angeles';
-		}
-
-	}
-
-
-	if (! ini_get('date.timezone'))
-	{
-		ini_set('date.timezone', $timezone_name);
-	}
-	$twitter_date_format = 'D M d H:i:s e Y';
-	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date, new DateTimeZone($timezone_name));
-	$tweet_time = strtotime($tweet_date->format('Y-m-d h:i:s'));
-
-	
-	;
-	if (0 > $offset){
-		$tweet_time = $tweet_time - abs($offset);
-	} else {
-		$tweet_time = $tweet_time + abs($offset);
-	}
-
-	$date = strftime(DISPLAY_DATETIME_STRFTIME_FORMAT, $tweet_time);
-
-	return $date;
 }
-
 
 
 /* End of file twitter_lib.php */ 
