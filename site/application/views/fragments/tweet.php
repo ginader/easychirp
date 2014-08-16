@@ -10,20 +10,6 @@
 * @see http://www.php.net/manual/en/class.datetime.php
 */
 
-$months = array();
-$months['jan'] = '01';
-$months['feb'] = '02';
-$months['mar'] = '03';
-$months['apr'] = '04';
-$months['may'] = '05';
-$months['jun'] = '06';
-$months['jul'] = '07';
-$months['aug'] = '08';
-$months['sep'] = '09';
-$months['oct'] = '10';
-$months['nov'] = '11';
-$months['dec'] = '12';
-
 $index = 0;
 
 ?>
@@ -37,8 +23,22 @@ $last_id = $tweets[$i]->id;
 
 foreach($tweets AS $tweet):
 
-	$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
-	$date = reformat_date($tweet->created_at, $utc_offset);
+	//$date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
+	//$date = reformat_date($tweet->created_at, $utc_offset);
+	$date = $tweet->created_at;
+	$twitter_date_format = 'D M d H:i:s e Y';
+	$tweet_date = DateTime::createFromFormat($twitter_date_format, $date);
+	try
+	{
+		$display_tz = new DateTimeZone($time_zone);
+	}
+	catch (Exception $e)
+	{
+		$display_tz = new DateTimeZone('America/Los_Angeles');
+	}
+	$tweet_date->setTimeZone($display_tz);
+	$date = date_format($tweet_date, DISPLAY_DATETIME_FORMAT);
+
 
 	//check if this tweet is a reply
 	$isReply = false;
