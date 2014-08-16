@@ -8,12 +8,14 @@ if ($screen_name !== $this->session->userdata('screen_name'))
 ?>
 </h1>
 
-<?php if (count($f->users) == 0): ?>
-	<div class="box1 rounded"><p style="margin: 1rem 0 .5rem;"><?php echo $xliff_reader->get('search-saved-none'); ?></p></div>
-<?php else: ?>
-	<p class="marginAdjustment"><?php echo anchor('/user/' . $screen_name, $screen_name); ?> is following these users. 
-	(<?php echo anchor('/followers/' . $screen_name, $xliff_reader->get('followers-view-followers')); ?>)
-<?php endif; ?>
+<p class="marginAdjustment"><?php echo anchor('/user/' . $screen_name, $screen_name); ?> is following these users. 
+(<?php echo anchor('/followers/' . $screen_name, $xliff_reader->get('followers-view-followers')); ?>)
+
+<?php
+if (count($f->users) == 0): 
+	echo '<div class="box1 rounded"><p style="margin: 1rem 0 .5rem;">' . $xliff_reader->get('search-saved-none') . '</p></div>';
+endif;
+?>
 
 <?php
 foreach ($f->users as $user):
