@@ -9,7 +9,7 @@ if ($screen_name !== $this->session->userdata('screen_name'))
 </h1>
 
 <?php if (count($f->users) == 0): ?>
-	<p><?php echo $xliff_reader->get('following-none'); ?></p>
+	<div class="box1 rounded"><p style="margin: 1rem 0 .5rem;"><?php echo $xliff_reader->get('search-saved-none'); ?></p></div>
 <?php else: ?>
 	<p class="marginAdjustment"><?php echo anchor('/user/' . $screen_name, $screen_name); ?> is following these users. 
 	(<?php echo anchor('/followers/' . $screen_name, $xliff_reader->get('followers-view-followers')); ?>)
@@ -32,16 +32,18 @@ foreach ($f->users as $user):
 endforeach;
 
 // Pagination
-echo '<div class="box1 rounded load-more load-more-1-line">';
-if ($f->previous_cursor != 0) {
-	// also show previous set link
-	echo '<a href="/following/'.$screen_name.'/'.$f->previous_cursor.'">Previous Set</a>';
+if ($f->next_cursor != 0 || $f->previous_cursor != 0) {
+	echo '<div class="box1 rounded load-more load-more-1-line">';
+	if ($f->previous_cursor != 0) {
+		// also show previous set link
+		echo '<a href="/following/'.$screen_name.'/'.$f->previous_cursor.'">Previous Set</a>';
+	}
+	if ($f->next_cursor != 0 && $f->previous_cursor != 0) {
+		echo ' | ';
+	}
+	if ($f->next_cursor != 0) {
+		echo '<a href="/following/'.$screen_name.'/'.$f->next_cursor.'">Next Set</a>';
+	}
+	echo '</div>';
 }
-if ($f->next_cursor != 0 && $f->previous_cursor != 0) {
-	echo ' | ';
-}
-if ($f->next_cursor != 0) {
-	echo '<a href="/following/'.$screen_name.'/'.$f->next_cursor.'">Next Set</a>';
-}
-echo '</div>';
 ?>
