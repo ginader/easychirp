@@ -63,6 +63,7 @@ $route['followers/(:any)'] = "main/followers/$1";
 $route['followers/(:any)/(:any)'] = "main/followers/$1/$2"; // with pagination
 $route['following'] = "main/following";
 $route['following/(:any)'] = "main/following/$1";
+$route['following/(:any)/(:any)'] = "main/following/$1/$2"; // with pagination
 $route['follow_user/(:any)/(:any)'] = "main/manage_follow_user/$1/follow/$2";
 $route['unfollow_user/(:any)/(:any)'] = "main/manage_follow_user/$1/unfollow/$2";
 $route['getResponse/(:any)'] = "main/getResponse/$1";
