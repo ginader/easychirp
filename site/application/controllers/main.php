@@ -63,11 +63,6 @@ class Main extends EC_Controller {
 			$this->_data['screen_name'] =  $session_data['screen_name'];
 		}
 
-		if (isset($session_data['time_zone']))
-		{
-			$this->_data['time_zone'] =  $session_data['time_zone'];
-		}
-
 		$this->layout->set_logged_in($this->_data['logged_in']);
 	}
 
@@ -117,7 +112,6 @@ class Main extends EC_Controller {
 				array(
 				'tweets' => $favorites,
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 				), TRUE);
 		}
@@ -349,7 +343,6 @@ class Main extends EC_Controller {
 		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 
 				'dms' => $dms,
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -384,8 +377,7 @@ class Main extends EC_Controller {
 		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
 		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 
-				'dms' => $dms, 
-				'time_zone' => $this->session->userdata('time_zone'),
+				'dms' => $dms,
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -436,7 +428,6 @@ class Main extends EC_Controller {
 			'pagination_path' => $pagination_path,
 			'tweets' => $tweets,
 			'utc_offset' => $this->session->userdata('utc_offset'),
-			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -639,7 +630,6 @@ class Main extends EC_Controller {
 			array( 
 			'tweets' => $tweets, 
 			'utc_offset' => $this->session->userdata('utc_offset'),
-			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -722,7 +712,6 @@ class Main extends EC_Controller {
 				array(
 				'tweets' => $favorites,
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 				), TRUE);
 		}
@@ -1101,7 +1090,6 @@ class Main extends EC_Controller {
 				'pagination_path' => $pagination_path,
 				'tweets' => $tweets, 
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1224,7 +1212,6 @@ class Main extends EC_Controller {
 			'pagination_path' => '/mentions/',
 			'tweets' => $tweets,
 			'utc_offset' => $this->session->userdata('utc_offset'),
-			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 		);
 
@@ -1321,7 +1308,6 @@ class Main extends EC_Controller {
 				'pagination_path' => $pagination_path,
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1425,7 +1411,6 @@ class Main extends EC_Controller {
 				$session_data['following_count'] = $user_data->friends_count;
 				$session_data['tweet_count']     = $user_data->statuses_count;
 				$session_data['real_name']       = $user_data->name;
-				$session_data['time_zone']       = $user_data->time_zone;
 				$session_data['utc_offset']      = $user_data->utc_offset;
 				$session_data['user_id']         = $user_data->id_str;
 			}
@@ -1478,7 +1463,6 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1626,7 +1610,6 @@ class Main extends EC_Controller {
 			array(
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1695,7 +1678,6 @@ class Main extends EC_Controller {
 			array(
 			'tweets' => $tweets,
 			'utc_offset' => $this->session->userdata('utc_offset'),
-			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -1736,7 +1718,6 @@ class Main extends EC_Controller {
 			array( 
 			'tweets' => $tweets, 
 			'utc_offset' => $this->session->userdata('utc_offset'),
-			'time_zone' => $this->session->userdata('time_zone'),
 			'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 		$this->_data['id'] = $request_param['id'];
@@ -1887,7 +1868,6 @@ class Main extends EC_Controller {
 				'type' => $retweet_type,
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -2105,7 +2085,6 @@ class Main extends EC_Controller {
 				'meta' => $this->_data['meta'],
 				'tweets' => $tweets,
 				'utc_offset' => $this->session->userdata('utc_offset'),
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -2266,8 +2245,7 @@ class Main extends EC_Controller {
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array( 
 				'tweets' => $tweets, 
-				'utc_offset' => $this->session->userdata('utc_offset'), 
-				'time_zone' => $this->session->userdata('time_zone'),
+				'utc_offset' => $this->session->userdata('utc_offset'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
@@ -2302,26 +2280,6 @@ class Main extends EC_Controller {
 		$this->session->set_userdata('active_theme', $theme);
 
 		redirect($_SERVER['HTTP_REFERER']);
-	}
-
-	/**
-	 * Manages the tips page - /test
-	 *
-	 * @return void
-	 */
-	public function test()
-	{
-		$utc_offset = $this->session->userdata('utc_offset');
-		$time_zone = $this->session->userdata('time_zone');
-
-		$this->_data['xliff_reader'] = $this->xliff_reader;
-		$this->_data['user_langs'] = $this->get_user_languages();
-		$this->_data['utc_offset'] = (empty($utc_offset)) ? 'No UTC offset' : $utc_offset; 
-		$this->_data['time_zone'] = (empty($time_zone)) ? 'No Time Zone' : $time_zone;
-
-		$this->layout->set_title( 'Test Page' );
-		$this->layout->set_description('This is a Test Page');
-		$this->layout->view('test', $this->_data);
 	}
 
 	/**
@@ -2402,7 +2360,6 @@ class Main extends EC_Controller {
 				'paginate' => 1,
 				'tweets' => $tweets,
 				'utc_offset' => $utc_offset,
-				'time_zone' => $this->session->userdata('time_zone'),
 				'xliff_reader' => $this->_data['xliff_reader']),
 			TRUE);
 
@@ -2632,7 +2589,6 @@ class Main extends EC_Controller {
 				array(
 					'tweets' => $tweets, 
 					'utc_offset' => $this->session->userdata('utc_offset'),
-					'time_zone' => $this->session->userdata('time_zone'),
 					'xliff_reader' => $this->_data['xliff_reader']
 				), TRUE);
 
@@ -2700,7 +2656,6 @@ class Main extends EC_Controller {
 					'paginate' => 1, 
 					'pagination_path' => '/user_timeline/' . $screen_name . '/',
 					'utc_offset' => $this->session->userdata('utc_offset'),
-					'time_zone' => $this->session->userdata('time_zone'),
 					'xliff_reader' => $this->_data['xliff_reader']
 				), TRUE);
 		}

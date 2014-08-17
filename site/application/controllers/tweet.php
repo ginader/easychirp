@@ -65,12 +65,6 @@
 			$this->_data['screen_name'] =  $session_data['screen_name']; 
 		}
 
-		if (isset($session_data['time_zone'])) 
-		{ 
-			$this->_data['time_zone'] =  $session_data['time_zone']; 
-		}
-
-
 		$this->layout->set_logged_in($this->_data['logged_in']);
 	 }
 
