@@ -125,8 +125,7 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
 	<ul>
-		<li>Tweets times missing AM/PM.</li>
-		<li>Pagination missing on followers/following pages and on list subscriber/member pages.</li>
-		<li>When using reply-to-all, the user's Twitter handle may mistakenly be copied in the tweet.</li>
+		<li>When using reply-to-all, the user's Twitter handle should not be in the draft of the tweet.</li>
+		<li>Pagination missing list subscriber/member pages.</li>
 	</ul>
 </div>
