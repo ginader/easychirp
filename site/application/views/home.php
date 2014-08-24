@@ -125,7 +125,7 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
 	<ul>
-		<li>When using reply-to-all, the user's Twitter handle should not be in the draft of the tweet.</li>
 		<li>Pagination missing list subscriber/member pages.</li>
+		<li>User details page is blank page when user account is private.</li>
 	</ul>
 </div>
