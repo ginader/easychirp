@@ -1596,6 +1596,9 @@ class Main extends EC_Controller {
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
 		$tweets[] = $data;
+
+		$in_reply_to = $data->id_str;
+
 		$reply_to = 'RT @' . $data->user->screen_name . ': ' . $data->text;
 		$this->_data['page_heading'] = $this->xliff_reader->get('quote-h1');
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
@@ -1603,6 +1606,7 @@ class Main extends EC_Controller {
 			'expand' => 1,
 			'single' => '0',
 			'reply_to' => $reply_to,
+			'in_reply_to' => $in_reply_to,
 			'xliff_reader' => $this->_data['xliff_reader']),
 			TRUE);
 
