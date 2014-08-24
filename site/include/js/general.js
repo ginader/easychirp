@@ -252,27 +252,32 @@ $('a[rel=modal]').on('click', function(e) {
 	// Close - if close button is clicked
 	$('.modal .close').click(function (e) {
 		e.preventDefault();
-		$('#mask, .modal').hide();
-		lastFocus.focus();
-		modalOpen = false;
+		closeModal();
 	});
 
 	// Close - if mask is clicked
 	$('#mask').click(function () {
-		$(this).hide();
-		$('.modal').hide();
-		lastFocus.focus();
-		modalOpen = false;
+		closeModal();
 	});
 
 	// Close - Escape key
 	$(document).on('keydown', function (e) {
 	    if (e.keyCode === 27) { // ESC
-			$('#mask, .modal').hide();
-			lastFocus.focus();
-			modalOpen = false;
+	    	closeModal();
 	    }
 	});
+
+	// Close it!
+	function closeModal() {
+		$('#mask, .modal').hide();
+		if ( $(lastFocus).parents("#navTweet").length == 1 ) {
+			$("#navTweet [href='/tools']").focus();
+		}
+		else {
+			lastFocus.focus();
+		}
+		modalOpen = false;
+	}
 });
 // Rename id/label in modal to avoid collision on Search page
 $(".modal #frmSearch label").attr('for','query2');
