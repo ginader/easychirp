@@ -1647,23 +1647,24 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['id'] =  $tweet_id;
 
-		$data = $this->twitter_lib->get('statuses/show', $request_param );
+		$data = $this->twitter_lib->get('statuses/show', $request_param);
 		$tweets = array();
 		$tweets[] = $data;
 
 		$twitter_ids = array();
 		$twitter_ids[] = $data->user->screen_name;
-		if ($all !== FALSE)
-		{
-			foreach ($data->entities->user_mentions AS $user){
+
+		if ($all !== FALSE) {
+			foreach ($data->entities->user_mentions AS $user) {
 				$twitter_ids[] = $user->screen_name;
 			}
 		}
 
 		$reply_to = '';
-		foreach ($twitter_ids AS $twitter_id)
-		{
-			$reply_to .= '@' . $twitter_id . ' ';
+		foreach ($twitter_ids AS $twitter_id) {
+			if ($twitter_id != $this->session->userdata('screen_name')) {
+				$reply_to .= '@' . $twitter_id . ' ';
+			}
 		}
 
 		$in_reply_to = $data->id_str;
