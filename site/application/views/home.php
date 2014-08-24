@@ -33,6 +33,10 @@
 </div>
 
 <div class="box1 rounded" style="margin-top:0;">
+	<p style="margin: .5em 0 0;">Powered by DreamHost. Get powerful web hosting for $8.95/month + FREE domain. Unlimited storage + accounts. <a href="http://www.dreamhost.com/r.cgi?1371661">Start now!</a></p>
+</div>
+
+<div class="box1 rounded" style="margin-top:0;">
 	<?php if($easychirp_statuses): ?>
 		<?php if (isset($error)): ?>
 			<p class="error">
@@ -117,7 +121,6 @@
 		<li><?php echo $xliff_reader->get('about-awards-h3-fcc'); ?>.</li>
 		<li><?php echo $xliff_reader->get('home-awards-afb'); ?></li>
 		<li><?php echo $xliff_reader->get('home-awards-it'); ?></li>
-		<li><?php echo $xliff_reader->get('home-awards-rnib'); ?></li>
 	</ul>
 	<p><?php echo $xliff_reader->get('home-awards-more'); ?></p>
 </div>
