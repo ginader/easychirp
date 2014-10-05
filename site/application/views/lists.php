@@ -59,7 +59,7 @@ if (isset($_GET["action"])) {
 if (count($myLists->lists) != 0) {
 	foreach($myLists->lists AS $lists):
 ?>
-<h3><span aria-hidden="true" class="icon-list"></span> <a title="view tweets from members of this list" href="/list_timeline/<?php echo $lists->id; ?>/false"><?php echo $lists->name; ?></a></h3>
+<h3><span aria-hidden="true" class="icon-list"></span> <a href="/list_timeline/<?php echo $lists->id; ?>/false"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
 	<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 	<dd><?php echo $lists->full_name; ?></dd>
@@ -93,7 +93,11 @@ if (count($myLists->lists) != 0) {
 	</dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
-	<dd><a rel="external" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
+	<dd><?php 
+		$listURL = "http://twitter.com/" . $lists->user->screen_name . "/lists/" . $lists->slug;
+		echo '<a rel="external" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
+		?>
+	</dd>
 </dl>
 <?php 
 	endforeach;
@@ -115,7 +119,7 @@ if (count($subLists->lists) != 0) {
 	foreach($subLists->lists AS $lists):
 ?>
 
-<h3><span aria-hidden="true" class="icon-list"></span> <a title="view tweets from members of this list" href="/list_timeline/<?php echo $lists->id; ?>/subscribed"><?php echo $lists->name; ?></a></h3>
+<h3><span aria-hidden="true" class="icon-list"></span> <a href="/list_timeline/<?php echo $lists->id; ?>/subscribed"><?php echo $lists->name; ?></a></h3>
 <dl class="clearfix">
 	<dt><?php echo $xliff_reader->get('lists-fullname'); ?></dt>
 	<dd><?php echo $lists->full_name; ?></dd>
@@ -141,7 +145,11 @@ if (count($subLists->lists) != 0) {
 	<dd><a href="/list_unsubscribe?id=<?php echo $lists->id; ?>" class="delete-link"><span aria-hidden="true" class="icon-close1"></span> <?php echo $xliff_reader->get('lists-unsubscribe'); ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
-	<dd><a rel="external" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
+	<dd><?php 
+		$listURL = "http://twitter.com/" . $lists->user->screen_name . "/lists/" . $lists->slug;
+		echo '<a rel="external" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
+		?>
+	</dd>
 </dl>
 <?php 
 	endforeach;
