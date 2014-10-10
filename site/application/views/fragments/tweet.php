@@ -47,7 +47,7 @@ foreach($tweets AS $tweet):
 	else if ($isRetweet) { echo ' retweet'; }
 	?>">
 	<?php if (isset($tweet->user)): ?>
-	<div class="tweetAvatar" style="background-image:url(<?php echo $tweet->user->profile_image_url; ?>)"></div>
+	<img src="<?php echo $tweet->user->profile_image_url; ?>" width="48" height="48" alt="" />
 	<h2 class="hide"><?php echo $tweet->user->name; ?></h2>
 	<?php endif; ?>
 	<q><?php
@@ -76,7 +76,7 @@ foreach($tweets AS $tweet):
 	// Insert image if it exists
 	// Twitter image
 	if (isset($tweet->entities->media[0]->media_url)) {
-		echo '<div><img src="' . $tweet->entities->media[0]->media_url . ':thumb" width="150" height="150" alt="" /></div>';
+		echo '<div class="imgThumb"><img src="' . $tweet->entities->media[0]->media_url . ':small" width="333" alt="" /></div>';
 	}
 	// Imgur image
 	if (isset($tweet->entities->urls[0]->expanded_url)) {
@@ -84,7 +84,7 @@ foreach($tweets AS $tweet):
 		if (strpos($ent_exp_url,'easychirp.com/img/') !== false) {
 			$pos = strpos($ent_exp_url, 'easychirp.com/img/');
 			$imgurId = substr( $ent_exp_url, $pos+18, strlen($ent_exp_url) );
-		    echo '<div><img src="http://i.imgur.com/' . $imgurId . 'b.jpg" width="160" height="160" alt="" /></div>';
+		    echo '<div class="imgThumb"><img src="http://i.imgur.com/' . $imgurId . 'b.jpg" width="160" height="160" alt="" /></div>';
 		}
 	}
 
@@ -94,8 +94,7 @@ foreach($tweets AS $tweet):
 	?>
 		<p><?php echo $xliff_reader->get('gbl-from'); ?>
 		<a href="/user/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet_title; ?>"><?php echo $tweet->user->screen_name; ?></a>
-		| <a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a> |
-	
+		| <a href="/status/<?php echo $tweet->id; ?>"><?php echo $date; ?></a> | 
 		<?php
 		// Is reply or retweet?
 		if ($isReply) {
@@ -114,7 +113,6 @@ foreach($tweets AS $tweet):
 		else if ($tweet->retweet_count > 1) {
 			echo 'Retweeted '.$tweet->retweet_count.' '.$xliff_reader->get('gbl-tweet-times').'. | ';
 		}
-
 		?>
 		via <?php echo $tweet->source; ?></p>
 	<?php 

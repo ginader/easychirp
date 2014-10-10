@@ -861,8 +861,19 @@ button:hover, button:focus,
 }
 .tweet {
 	border: 2px solid #a1d5f9;
-	padding: .5rem .5rem .5rem 74px;
+	padding: .5rem .5rem .5rem 70px;
 	margin-bottom: 1rem;
+}
+.tweet > img {
+	float: left;
+	padding: .25rem .5rem .25rem 0;
+	margin-left: -60px;
+}
+.tweet .imgThumb {
+	clear: left;
+}
+.tweet .imgThumb img {
+	max-height: 280px;
 }
 .tweet.dm {
 	padding-left: 150px;
@@ -1282,6 +1293,10 @@ body.theme-inverse {
 	#enterTweet textarea {
 		width: 90%;
 	}
+
+	.tweet .imgThumb img {
+		max-height: 250px;
+	}
 }
 
 /* RWD table */
@@ -1309,6 +1324,11 @@ body.theme-inverse {
 	}
 	table.table-rwd tr {
 		border: 1px solid #ccc;
+	}
+
+	.tweet .imgThumb img {
+		max-height: 170px;
+		max-width: 275px;
 	}
 }
 
