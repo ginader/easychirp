@@ -1327,8 +1327,8 @@ body.theme-inverse {
 	}
 
 	.tweet .imgThumb img {
-		max-height: 170px;
-		max-width: 275px;
+		max-height: 160px;
+		max-width: 250px;
 	}
 }
 
