@@ -50,7 +50,7 @@ foreach($tweets AS $tweet):
 	<img src="<?php echo $tweet->user->profile_image_url; ?>" width="48" height="48" alt="" />
 	<h2 class="hide"><?php echo $tweet->user->name; ?></h2>
 	<?php endif; ?>
-	<q><?php
+	<q lang="<?php echo $tweet->lang; ?>"><?php
 	// Define the text of the tweet
 	if ($isRetweet) {
 		$tweet_text = "RT @" . $tweet->retweeted_status->user->screen_name . " " . $tweet->retweeted_status->text;
