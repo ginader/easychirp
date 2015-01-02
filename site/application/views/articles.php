@@ -82,6 +82,12 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
+	<dt><a href="http://www.paciellogroup.com/blog/2015/01/notes-on-providing-alt-text-for-twitter-images/">Notes on providing alt text for twitter images</a></dt>
+		<dd>The Paciello Group blog</dd>
+		<dd>2015 Jan 02</dd>
+	<dt><a href="http://blog.adrianroselli.com/2014/12/dont-tweet-pictures-of-text.html">Don't Tweet Pictures of Text</a></dt>
+		<dd>Adrian Roselli</dd>
+		<dd>2014 Dec 21</dd>
 	<dt><a href="http://fedscoop.com/social-media-accessibility/">Anti-social: Feds wonder why social media companies drag feet on accessibility issues</a></dt>
 		<dd>FedScoop</dd>
 		<dd>2014 July 17</dd>
