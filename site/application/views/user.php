@@ -58,9 +58,7 @@ else {
 		else {
 			echo '<span id="spanFollowCurrent">' . $xliff_reader->get('user-not-following') . '</span> | <a href="/follow_user/'.$user->screen_name.'/false">' . $xliff_reader->get('user-follow') . '</a>';
 		}
-	?></p>
-	
-	<p><?php
+	?> | <?php
 	echo $xliff_reader->get('user-is-following-me') . " ";
 
 	$isFollowed = $friendship->relationship->target->following;
@@ -71,6 +69,11 @@ else {
 		echo $xliff_reader->get('gbl-no');
 	}
 	?></p>
+
+	<p>
+		<a href="/direct_send_page/<?php echo $user->screen_name; ?>"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></a> | 
+		<a href="/timeline/<?php echo $user->screen_name; ?>" rel="twmess"><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></a>
+	</p>
 
 	<p>
 	<?php 
