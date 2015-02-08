@@ -46,7 +46,7 @@ $("#enterTweet h2 a").click(function(e) {
 	}
 });
 $("#enterTweet h2 a").attr("role","button").attr("aria-expanded",false);
-$("#enterTweet h2 a").keyup(function(e) {
+$("#enterTweet h2 a").keydown(function(e) {
 	if(e.keyCode == 32){ // spacebar
 		e.preventDefault();
 		$("#enterTweet h2 a").trigger("click");
@@ -118,7 +118,7 @@ $('a#showAddImageAnchor').click(function(e) {
 	$('#showAddImage').remove();
 	$("#imagePath").focus();
 });
-$("a#showAddImageAnchor").keyup(function(e) {
+$("a#showAddImageAnchor").keydown(function(e) {
 	if(e.keyCode == 32){ // spacebar
 		e.preventDefault();
 		$("a#showAddImageAnchor").trigger("click");
