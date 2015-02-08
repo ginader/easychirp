@@ -46,6 +46,13 @@ $("#enterTweet h2 a").click(function(e) {
 	}
 });
 $("#enterTweet h2 a").attr("role","button").attr("aria-expanded",false);
+$("#enterTweet h2 a").keyup(function(e) {
+	if(e.keyCode == 32){ // spacebar
+		e.preventDefault();
+		$("#enterTweet h2 a").trigger("click");
+	}
+});
+
 
 /* Character counter ***********************************/
 // Update the count
@@ -105,11 +112,17 @@ $('<p id="showAddImage"><a href="#" id="showAddImageAnchor" role="button">' + tx
 $('#frmTweetImage').hide();
 
 // Behavior to show the Add Image content in Write Tweet area
-$('#showAddImageAnchor').click(function(e) {
+$('a#showAddImageAnchor').click(function(e) {
 	e.preventDefault();
 	$('#frmTweetImage').show();
 	$('#showAddImage').remove();
 	$("#imagePath").focus();
+});
+$("a#showAddImageAnchor").keyup(function(e) {
+	if(e.keyCode == 32){ // spacebar
+		e.preventDefault();
+		$("a#showAddImageAnchor").trigger("click");
+	}
 });
 
 /*** show/hide for create list content ***************/
