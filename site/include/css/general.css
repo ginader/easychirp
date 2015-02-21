@@ -885,6 +885,12 @@ button:hover, button:focus,
 .tweet.respond .btnOptions {
 	display: none;
 }
+.tweet .fave {
+	float: right;
+	margin-right: -.15em;
+	color: #ccc;
+	font-size: 1.35em;
+}
 .dm .dmAvatars {
 	height: 30px;
 	float: left;
