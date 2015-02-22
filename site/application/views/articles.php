@@ -67,15 +67,15 @@
 	<h2><?php echo $xliff_reader->get('articles-h2-blogs'); ?></h2>
 	<h3><?php echo $xliff_reader->get('articles-h3-highlights'); ?></h3>
 	<dl>
+	<dt><a href="https://www.marcozehe.de/2015/02/21/social-networks-and-accessibility-a-rather-sad-picture/">Social networks and accessibility: A not so sad picture</a></dt>
+		<dd>Marco Zehe</dd>
+		<dd>2015 Feb 21</dd>
 	<dt><a href="http://accessibleinsights.info/blog/2013/10/29/easy-chirp-returns-with-new-sporty-features-and-more-power-under-the-hood/">Easy Chirp returns with new sporty features and more power under the hood</a></dt>
 		<dd>Accessible Insights Blog</dd>
 		<dd>2013 Oct 29</dd>
 	<dt><a href="http://www.nomensa.com/blog/2010/accessible-twitter-advancement-through-technology/">Accessible Twitter: Advancement through technology</a></dt>
 		<dd>Nomensa, L&eacute;onie Watson</dd>
 		<dd>2010 Feb 10</dd>
-	<dt><a href="http://preparednessforall.wordpress.com/2012/06/04/report-sociability-social-media-for-people-with-a-disability/">Report: Sociability, Social Media for People with a Disability</a></dt>
-		<dd>Preparedness For All</dd>
-		<dd>2012 Jun 04</dd>
 	<dt><a href="http://rivendellbrewery.wordpress.com/2009/07/31/accessible-twitter/">Accessible Twitter: how it should have been done to start with</a></dt>
 		<dd>Andy Bryant</dd>
 		<dd>2009 Jul 31</dd>
@@ -110,15 +110,15 @@
 	<dt><a href="http://totalacesso.mundocegal.com.br/easy-chirp-twitter-acessivel-via-web/">Easy Chirp: Twitter Acess&iacute;vel Via Web!</a></dt>
 		<dd>Total Acesso</dd>
 		<dd>2012 Sep 10</dd>
+	<dt><a href="http://preparednessforall.wordpress.com/2012/06/04/report-sociability-social-media-for-people-with-a-disability/">Report: Sociability, Social Media for People with a Disability</a></dt>
+		<dd>Preparedness For All</dd>
+		<dd>2012 Jun 04</dd>
 	<dt><a href="https://www-304.ibm.com/connections/blogs/socialbusiness/entry/march_7_2012_3_03_pm3">Making Social Media More Accessible</a></dt>
 		<dd>IBM Social Business Insights Blog</dd>
 		<dd>2012 Mar 7</dd>
 	<dt><a href="http://lowvisionbureau.com/blog/lvbpodcast/twitter-accessible-for-visually-impaired-people/">Twitter accessible for visually impaired people [podcast]</a></dt>
 		<dd>LowVisionBureau</dd>
 		<dd>2012 Jan 29</dd>
-	<dt><a href="http://www.marcozehe.de/2011/12/08/social-networks-and-accessibility-a-rather-sad-picture/">Social networks and accessibility: A rather sad picture</a></dt>
-		<dd>Marco Zehe</dd>
-		<dd>2011 Dec 08</dd>
 	<dt><a href="http://rscscotlandnewsfeed.blogspot.com/2011/10/easy-chirp-makes-tweeting-more.html">Easy Chirp makes tweeting more accessible</a></dt>
 		<dd>Regional Support Centre Scotland</dd>
 		<dd>2011 Oct 00</dd>
@@ -200,7 +200,7 @@
 	<dt><a href="http://www.evengrounds.com/blog/mainstream-sites-or-accessible-solutions">Mainstream Sites Or Accessible Solutions</a></dt>
 		<dd>Even Grounds, Tom Babinszki</dd>
 		<dd>2009 Jun 11</dd>
-	<dt><a href="http://tink.co.uk/2009/05/accessible-twitter-applications/">Accessible Twitter Applications</a></dt>
+	<dt><a href="http://tink.uk/accessible-twitter-applications/">Accessible Twitter Applications</a></dt>
 		<dd>Tink, L&eacute;onie Watson</dd>
 		<dd>2009 May 21</dd>
 	<dt><a href="http://everythingtwitter.com/2009/05/08/accessible-twitter-web-accessibility-for-the-twitter-website/">Accessible Twitter – web accessibility for the Twitter website</a></dt>
@@ -230,9 +230,6 @@
 	<dt><a href="http://www.evengrounds.com/blog/accessible-twitter">Accessible Twitter (from Even Grounds)</a></dt>
 		<dd>Even Grounds, Tom Babinszki</dd>
 		<dd>2009 Feb 28</dd>
-	<dt><a href="http://jebswebs.net/blog/2009/02/accessible-twitter/">Accessible Twitter (by JebsBlog)</a></dt>
-		<dd>JebsBlog</dd>
-		<dd>2009 Feb 19</dd>
 	<dt><a href="http://doteduguru.com/id2215-accessible-twitter.html">Accessible Twitter (from EduGuru)</a></dt>
 		<dd>.EduGuru, Nick DeNardis</dd>
 		<dd>2009 Feb 16</dd>
