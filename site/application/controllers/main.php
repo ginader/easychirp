@@ -2241,18 +2241,8 @@ class Main extends EC_Controller {
 		}
 
 		// Get general data
-		$data = $this->twitter_lib->get('statuses/show', $request_param);
+		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$this->_data['show'] = $data;
-
-		// Get retweeters
-		//$request_param['stringify_ids'] = "true"; //stringify not working in API
-		if ($data->retweet_count > 0 && !isset($data->retweeted_status) ) {
-			$rtList = $this->twitter_lib->get('statuses/retweeters/ids', $request_param);
-			$arRetweeters = $rtList->ids;
-			$comma_separated = implode(",", $arRetweeters);
-			$rtList = $this->twitter_lib->get('users/lookup', ["user_id" => $comma_separated, "include_entities" => false]);
-			$this->_data['rtList'] = $rtList;
-		}
 
 		// Put data in array to then render in tweet fragment
 		$tweets = array();
