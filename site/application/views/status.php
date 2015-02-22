@@ -13,9 +13,22 @@ if (isset($_GET["action"])) {
 <div class="tweetSingle">
 <?php
 echo $tweets;
-require_once 'fragments/write_tweet.php';
 ?>
 </div>
+
+<?php
+if (isset($rtList)) {
+	echo "<h2>Retweeted by</h2>";
+	echo "<p>";
+	foreach ($rtList as $retweeter) {
+		echo anchor('/user/'.$retweeter->screen_name, $retweeter->name);
+		if ($retweeter !== end($rtList)) {
+			echo ", ";
+		}
+	}
+	echo "</p>";
+}
+?>
 
 <h2>More</h2>
 
@@ -25,5 +38,9 @@ require_once 'fragments/write_tweet.php';
 </ul>
 
 <?php
+//echo '<h2>'.$xliff_reader->get('write-tweet-h2-label').'</h2>';
+//require_once 'fragments/write_tweet.php';
+
+
 //echo debug_object( $show );
 ?>
