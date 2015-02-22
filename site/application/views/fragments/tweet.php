@@ -97,7 +97,7 @@ foreach($tweets AS $tweet):
 
 	// Output tweet details
 	if ($this->session->userdata('lang_code') != 'ar') { 
-		$tweet_title = $tweet->user->name . '; followers ' . $tweet->user->followers_count . '; following ' . $tweet->user->friends_count;
+		$tweet_title = $tweet->user->name . '; ' . $xliff_reader->get('followers-h1'). ' ' . $tweet->user->followers_count . '; ' . $xliff_reader->get('following-h1') . ' ' . $tweet->user->friends_count;
 	?>
 		<p><?php echo $xliff_reader->get('gbl-from'); ?>
 		<a href="/user/<?php echo $tweet->user->screen_name; ?>" title="<?php echo $tweet_title; ?>"><?php echo $tweet->user->screen_name; ?></a>
