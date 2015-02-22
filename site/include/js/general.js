@@ -22,7 +22,13 @@ $(".btnOptions > h3 > a").click(function(e) {
 	}
 });
 // Add role of button
-$(".btnOptions h3 a").attr("role","button");
+// Add spacebar support
+$(".btnOptions h3 a").attr("role","button").keydown(function(e) {
+	if(e.keyCode == 32){ // spacebar
+		e.preventDefault();
+		$(this).trigger("click");
+	}
+});
 
 // Add aria-controls pointing to associated element
 $(".btnOptions > h3 > a").each(function () {
@@ -118,8 +124,9 @@ $('a#showAddImageAnchor').click(function(e) {
 	$('#showAddImage').remove();
 	$("#imagePath").focus();
 });
+//Add spacebar support
 $("a#showAddImageAnchor").keydown(function(e) {
-	if(e.keyCode == 32){ // spacebar
+	if(e.keyCode == 32){
 		e.preventDefault();
 		$("a#showAddImageAnchor").trigger("click");
 	}
