@@ -83,7 +83,7 @@ foreach($tweets AS $tweet):
 	// Insert image if it exists
 	// Twitter image
 	if (isset($tweet->entities->media[0]->media_url)) {
-		echo '<div class="imgThumb"><img src="' . $tweet->entities->media[0]->media_url . ':small" width="333" alt="" /></div>';
+		echo '<div class="imgThumb"><img src="' . $tweet->entities->media[0]->media_url . ':small" alt="" /></div>';
 	}
 	// Imgur image
 	if (isset($tweet->entities->urls[0]->expanded_url)) {
