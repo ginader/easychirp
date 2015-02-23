@@ -1334,4 +1334,9 @@ body.theme-inverse {
 	}
 }
 
+@media only screen and (max-width: 640px) {
+	#profileContainer {
+		padding-top: 40px;
+	}
+}
 
