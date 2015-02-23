@@ -1334,9 +1334,12 @@ body.theme-inverse {
 	}
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 320px) {
 	#profileContainer {
 		padding-top: 40px;
+	}
+	.tweet .imgThumb img {
+		max-width: 240px;
 	}
 }
 
