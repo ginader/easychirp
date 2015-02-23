@@ -90,6 +90,7 @@ $route['mentions'] = "main/mentions";
 $route['mentions/(:any)'] = "main/mentions/$1";
 $route['mute_create/(:any)/(:any)'] = "main/muting/$1/create/$2";
 $route['mute_destroy/(:any)/(:any)'] = "main/muting/$1/destroy/$2";
+$route['muted_users'] = "main/muted_users";
 $route['mytweets'] = "main/mytweets";
 $route['mytweets/(:any)'] = "main/mytweets/$1";
 $route['oauth_callback'] = "main/oauth_callback";

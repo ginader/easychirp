@@ -1273,6 +1273,45 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Manages the Muted Users page - /muted_users
+	 *
+	 * @return void
+	 */
+	public function muted_users()
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		// Get muted user IDs
+		$data = $this->twitter_lib->get('mutes/users/ids');
+
+		// Get muted user details
+		if (count($data->ids) > 0) {
+			$arMutedUsers = $data->ids;
+			$comma_separated = implode(",", $arMutedUsers);
+			$params['user_id'] = $comma_separated;
+			$params['include_entities'] = false;
+			$muList = $this->twitter_lib->get('users/lookup', $params);
+			$this->_data['muList'] = $muList;
+		}
+
+		$page_title = "Muted Users";//$this->xliff_reader->get('following-h1');
+		$this->layout->set_title($page_title);
+		$this->layout->set_description('Twitter users whom I muted.');
+		$this->layout->view('muted_users', $this->_data);
+	}
+
+	/**
 	 * Manages the My Tweets page - /mytweets
 	 *
 	 * @return void
