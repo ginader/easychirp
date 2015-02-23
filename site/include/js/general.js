@@ -458,5 +458,9 @@ $(document).bind('keyup', 'ctrl+/', function() {
 	$("a[href='/search_quick']").trigger("click");
 });
 
+// pressing ctrl+u goes to Go to User modal
+$(document).bind('keyup', 'ctrl+u', function() {
+	$("a[href='/go_to_user']").trigger("click");
+});
 
 
