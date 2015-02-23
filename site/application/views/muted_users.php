@@ -1,4 +1,7 @@
-<h1 class="rounded"><?php echo "Muted Users" . $xliff_reader->get('profile-h1'); ?></h1>
+<h1 class="rounded"><?php 
+echo "Muted Users";
+// . $xliff_reader->get('profile-h1'); 
+?></h1>
 
 <div class="box1 rounded" style="padding: 1em;">
 	<?php
