@@ -1,7 +1,4 @@
-<h1 class="rounded"><?php 
-echo "Muted Users";
-// . $xliff_reader->get('profile-h1'); 
-?></h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('gbl-muted-users'); ?></h1>
 
 <div class="box1 rounded" style="padding: 1em;">
 	<?php
@@ -15,7 +12,7 @@ echo "Muted Users";
 		echo "</ul>";
 	}
 	else {
-		echo "<p>None found.</p>";
+		echo "<p>".$xliff_reader->get('search-saved-none')."</p>";
 	}
 	?>
 </div>

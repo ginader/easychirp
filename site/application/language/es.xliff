@@ -71,6 +71,11 @@
         <target>Muted</target>
       </trans-unit>
 
+      <trans-unit id="gbl-muted-users" datatype="html">
+        <source>Muted Users</source>
+        <target>Usuarios silenciadas</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">

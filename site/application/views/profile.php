@@ -62,8 +62,8 @@
 		<dt><?php echo $xliff_reader->get('profile-dt-lists'); ?></dt>
 		<dd><a href="/lists"><?php echo $xliff_reader->get('profile-dd-my-lists'); ?></a></dd>
 
-		<dt>Muted Users</dt>
-		<dd><a href="/muted_users">Muted Users</a></dd>
+		<dt><?php echo $xliff_reader->get('gbl-muted-users'); ?></dt>
+		<dd><a href="/muted_users"><?php echo $xliff_reader->get('gbl-muted-users'); ?></a></dd>
 
 		<dt><?php echo $xliff_reader->get('profile-dt-bg-image'); ?></dt>
 		<dd><?php

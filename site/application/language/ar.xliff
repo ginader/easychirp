@@ -71,6 +71,11 @@
         <target>كتم الصوت</target>
       </trans-unit>
 
+      <trans-unit id="gbl-muted-users" datatype="html">
+        <source>Muted Users</source>
+        <target>المستخدمين صامتة</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">
