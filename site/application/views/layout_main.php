@@ -98,7 +98,7 @@ if ($this->session->userdata('logged_in')) {
 		<?php if ($lang_id === $lang_code): ?>
 			<?php echo $lang_name; ?>
 		<?php else: ?>
-			<?php $link = anchor('/switch_lang/' . $lang_id, $lang_name); ?>
+			<?php $link = anchor('/switch_lang/' . $lang_id, $lang_name, 'lang="'.$lang_id.'"'); ?>
 			<?php echo $link; ?>
 		<?php endif; ?>
 		<?php $langs++; ?>
