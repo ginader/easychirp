@@ -70,7 +70,10 @@ th, td {
 	background-position: left top;
 	padding-right: 74px;
 }
-/* options */
+.tweet > img {
+    float: right;
+    margin-right: -67px;
+}
 .tweet li {
 	float: right;
 }
