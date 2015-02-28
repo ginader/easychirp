@@ -1,8 +1,8 @@
-/* GLOBAL VARS ********************************/
+/* GLOBAL VARS *************/
 var modalOpen = false;
 var txtAlertSureDelete = $("#main").attr("data-sure-delete"); //"Are you sure you want to delete...";
 
-/* Show/hide option buttons ***********************************/
+/* Show/hide option buttons *************/
 $(".btnOptions > h3 > a").click(function(e) {
 	e.preventDefault();
 
@@ -36,7 +36,7 @@ $(".btnOptions > h3 > a").each(function () {
 	$(this).attr("aria-controls", x);
 });
 
-/* Show/hide write tweet ********************************/
+/* Show/hide write tweet *************/
 $("#enterTweet h2 a").click(function(e) {
 	e.preventDefault();
 	var obj = $("#enterTweetContent");
@@ -59,8 +59,14 @@ $("#enterTweet h2 a").keydown(function(e) {
 	}
 });
 
+/* Tooltip *************/
+$(function () {
+	$('a[title]').tooltip({
+		delay: { "show": 1000, "hide": 100 }
+	});
+})
 
-/* Character counter ***********************************/
+/* Character counter *************/
 // Update the count
 var charCntNum = $('#displayCharCountNumber');
 function updateCharCount(charCountField) {
@@ -107,7 +113,7 @@ function updateCharCount(charCountField) {
 	}
 })();
 
-/*** show Add Image content in Write Tweet area ***************/
+/*** show Add Image content in Write Tweet area *************/
 
 // Create link to show content
 var txtAddImage = {};
@@ -132,7 +138,7 @@ $("a#showAddImageAnchor").keydown(function(e) {
 	}
 });
 
-/*** show/hide for create list content ***************/
+/*** show/hide for create list content *************/
 //hide create list form
 $('#frmCreateList').hide();
 
@@ -164,7 +170,7 @@ $('#showCreateAnchor').click(function() {
 	return false;
 });
 
-// Browser patch for anchor links focus **************/
+// Browser patch for anchor links focus *************/
 $("a[href^='#']").click(function() {
 	$("#"+$(this).attr("href").slice(1)+"").focus()
 });
@@ -208,8 +214,7 @@ $('#frmDirectMessage').submit(function() {
 	}
 });
 
-/* Modal *****************************************/
-
+/* Modal *************/
 // Function to resize and reposition the modal window
 function resizeModal(id) {
     // Get the window height and width
@@ -331,6 +336,7 @@ document.addEventListener("focus", function(event) {
 		modal2.focus();
 	}
 }, true);
+/* End Modal *************/
 
 // Tweet message
 $('a[rel=twmess]').click(function(e) {

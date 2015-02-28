@@ -129,8 +129,9 @@ if ($this->session->userdata('logged_in')) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="/include/js/megamenu.js"></script>
-<script src="/include/js/ajax.js"></script>
+<script src="/include/js/tooltip.js"></script>
 <script src="/include/js/jquery.form.min.js"></script>
+<script src="/include/js/ajax.js"></script>
 <script src="/include/js/general.js"></script>
 
 <!-- analytics (start) -->
