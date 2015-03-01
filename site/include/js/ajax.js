@@ -1,6 +1,6 @@
 
 // Ajax for creating/destroying a favorite
-$('a[href*="favorite_"]').click(function(e) {
+$('a[href*="favorite_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
 	var a = $(this);
@@ -51,7 +51,7 @@ $('a[href*="favorite_"]').click(function(e) {
 });
 
 // Ajax for creating/destroying a blocked user
-$('a[href*="block_"]').click(function(e) {
+$('a[href*="block_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
 	var a = $(this);
@@ -106,7 +106,7 @@ $('a[href*="block_"]').click(function(e) {
 });
 
 // Ajax for muting/unmuting a user
-$('a[href*="mute_"]').click(function(e) {
+$('a[href*="mute_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
 	var a = $(this);
@@ -158,7 +158,7 @@ $('a[href*="mute_"]').click(function(e) {
 });
 
 // Ajax for deleting a DM
-$('a[href*="direct_delete"]').click(function(e) {
+$('a[href*="direct_delete"]').attr("role","button").click(function(e) {
 
 	if (!confirm(txtAlertSureDelete)) {
 		 return false;
@@ -309,7 +309,7 @@ $('#frmTweetImage').submit(function(e, files) {
 });
 
 // Ajax for creating a retweet // will do destroying later
-$('a[href*="retweet_"]').click(function(e) {
+$('a[href*="retweet_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
 	var a = $(this);
@@ -362,7 +362,7 @@ $('a[href*="retweet_"]').click(function(e) {
 });
 
 // Ajax for following/unfollowing a user
-$('a[href*="follow_user"]').click(function(e) {
+$('a[href*="follow_user"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
 	var a = $(this);
