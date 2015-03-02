@@ -25,12 +25,18 @@ foreach ($f->users as $user):
 	<h2><?php echo anchor('/user/'.$user->screen_name, $user->name); ?> @<?php echo $user->screen_name; ?></h2>
 	<p><?php echo $user->location . ". " . $user->description; ?></p>
 	<p>
-		<?php echo $xliff_reader->get('profile-dt-tweets'); ?> 
-		<?php echo anchor('/user_timeline/' . $user->screen_name, $user->statuses_count); ?> 
-		<?php echo $xliff_reader->get('profile-dt-following'); ?> 
-		<?php echo anchor('/following/' . $user->screen_name, $user->friends_count); ?> 
-		<?php echo $xliff_reader->get('profile-dt-followers'); ?> 
-		<?php echo anchor('/followers/' . $user->screen_name, $user->followers_count); ?> 
+	<?php echo $xliff_reader->get('profile-dt-tweets'); ?> 
+	<?php echo anchor('/user_timeline/' . $user->screen_name, $user->statuses_count); ?> 
+	<?php echo $xliff_reader->get('profile-dt-following'); ?> 
+	<?php echo anchor('/following/' . $user->screen_name, $user->friends_count); ?> 
+	<?php echo $xliff_reader->get('profile-dt-followers'); ?> 
+	<?php echo anchor('/followers/' . $user->screen_name, $user->followers_count); ?> 
+	<?
+	// Show block link if this is followers of authenticated user 
+	if ($screen_name == $this->session->userdata('screen_name')) {
+		echo '<span class="fr"><span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked" style="display:none;">'.$xliff_reader->get('gbl-blocked').'</span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a></span>';
+	}
+	?>
 	</p>
 </div>
 <?php

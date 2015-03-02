@@ -200,7 +200,7 @@ class Main extends EC_Controller {
 			$this->_data['blockList'] = $blockList;
 		}
 
-		$page_title = "Blocked Users";//$this->xliff_reader->get('gbl-blocked-users');
+		$page_title = $this->xliff_reader->get('gbl-blocked-users');
 		$this->layout->set_title($page_title);
 		$this->layout->set_description('Twitter users whom I blocked.');
 		$this->layout->view('blocked_users', $this->_data);

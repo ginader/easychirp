@@ -76,6 +76,16 @@
         <target>Utilisateurs en Sourdine</target>
       </trans-unit>
 
+      <trans-unit id="gbl-blocked-users" datatype="html">
+        <source>Blocked Users</source>
+        <target>Utilisateurs Bloqués</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-blocked" datatype="html">
+        <source>Blocked</source>
+        <target>Bloqué</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">

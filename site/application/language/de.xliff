@@ -76,6 +76,16 @@
         <target>Gedämpfte Benutzer</target>
       </trans-unit>
 
+      <trans-unit id="gbl-blocked-users" datatype="html">
+        <source>Blocked Users</source>
+        <target>Blockierte Nutzer</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-blocked" datatype="html">
+        <source>Blocked</source>
+        <target>Blockierte</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">
