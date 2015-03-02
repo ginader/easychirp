@@ -81,10 +81,10 @@ else {
 	// Muted?
 	$isMute = $friendship->relationship->source->muting;
 	if ($isMute == 1) {
-		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted">'.$xliff_reader->get('gbl-muted').'</span> <a href="/mute_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('gbl-unmute').'</a>';
+		echo '<span aria-hidden="true" class="icon-mute"></span> <span class="span-user-muted">'.$xliff_reader->get('gbl-muted').'</span> <a href="/mute_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('gbl-unmute').'</a>';
 	}
 	else {
-		echo '<span aria-hidden="true" class="icon-mute"></span> <span id="span-user-muted" style="display:none;">'.$xliff_reader->get('gbl-muted').'</span> <a href="/mute_create/'.$user->screen_name.'/false">'.$xliff_reader->get('gbl-mute').'</a>';
+		echo '<span aria-hidden="true" class="icon-mute"></span> <span class="span-user-muted" style="display:none;">'.$xliff_reader->get('gbl-muted').'</span> <a href="/mute_create/'.$user->screen_name.'/false">'.$xliff_reader->get('gbl-mute').'</a>';
 	}
 
 	echo ' &nbsp; ';
@@ -103,10 +103,10 @@ else {
 	// Blocked?
 	$isBlock = $friendship->relationship->source->blocking;
 	if ($isBlock == 1) {
-		echo '<span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked">Blocked</span> <a href="/block_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('user-unblock').'</a>'; 
+		echo '<span aria-hidden="true" class="icon-blocked"></span> <span class="span-user-blocked">Blocked</span> <a href="/block_destroy/'.$user->screen_name.'/false">'.$xliff_reader->get('user-unblock').'</a>'; 
 	}
 	else {
-		echo '<span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked" style="display:none;">Blocked</span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a>'; 
+		echo '<span aria-hidden="true" class="icon-blocked"></span> <span class="span-user-blocked" style="display:none;">Blocked</span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a>'; 
 	}
 	?>
 	</p>

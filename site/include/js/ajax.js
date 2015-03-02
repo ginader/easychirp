@@ -64,6 +64,11 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 	txt.AlertUnblock = $("#main").attr("data-msg-unblock"); //"The user has been unblocked.";
 
 	if (url_replace.indexOf("create") != -1) {
+
+		if (!confirm("Are you sure you want to block this user?")) { //(txtAlertSureDelete)) {
+			 return false;
+		}
+
 		// Create blocking
 		$.ajax({
 			url: url_send,
@@ -71,7 +76,7 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 				alert(txt.AlertBlock);
 				
 				$(a).html(txt.unblock);
-				$("#span-user-blocked").css("display", "inline");
+				$(a).siblings(".span-user-blocked").css("display", "inline");
 
 				url_replace = url_replace.replace(/create/,"destroy");
 				$(a).attr("href", url_replace);
@@ -91,7 +96,7 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 				alert(txt.AlertUnblock);
 				
 				$(a).html(txt.block);
-				$("#span-user-blocked").css("display", "none");
+				$(a).siblings(".span-user-blocked").css("display", "none");
 
 				url_replace = url_replace.replace(/destroy/,"create");
 				$(a).attr("href", url_replace);
@@ -126,7 +131,7 @@ $('a[href*="mute_"]').attr("role","button").click(function(e) {
 				alert(txt.AlertMute);
 				
 				$(a).html(txt.unmute);
-				$("#span-user-muted").css("display", "inline");
+				$(a).siblings(".span-user-muted").css("display", "inline");
 
 				url_replace = url_replace.replace(/create/,"destroy");
 				$(a).attr("href", url_replace);
@@ -145,7 +150,7 @@ $('a[href*="mute_"]').attr("role","button").click(function(e) {
 				alert(txt.AlertUnmute);
 				
 				$(a).html(txt.mute);
-				$("#span-user-muted").css("display", "none");
+				$(a).siblings(".span-user-muted").css("display", "none");
 
 				url_replace = url_replace.replace(/destroy/,"create");
 				$(a).attr("href", url_replace);

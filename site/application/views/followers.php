@@ -34,7 +34,7 @@ foreach ($f->users as $user):
 	<?
 	// Show block link if this is followers of authenticated user 
 	if ($screen_name == $this->session->userdata('screen_name')) {
-		echo '<span class="fr"><span aria-hidden="true" class="icon-blocked"></span> <span id="span-user-blocked" style="display:none;">'.$xliff_reader->get('gbl-blocked').'</span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a></span>';
+		echo '<span class="fr"><span aria-hidden="true" class="icon-blocked"></span> <span class="span-user-blocked" style="display:none;">'.$xliff_reader->get('gbl-blocked').'</span> <a href="/block_create/'.$user->screen_name.'/false">'.$xliff_reader->get('user-block').'</a></span>';
 	}
 	?>
 	</p>
