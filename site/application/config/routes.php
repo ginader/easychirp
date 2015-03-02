@@ -39,6 +39,7 @@
 */
 
 $route['about'] = "main/about";
+$route['blocked_users'] = "main/blocked_users";
 $route['articles'] = "main/articles";
 $route['block_create/(:any)/(:any)'] = "main/blocking/$1/create/$2";
 $route['block_destroy/(:any)/(:any)'] = "main/blocking/$1/destroy/$2";
