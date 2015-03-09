@@ -47,7 +47,8 @@
 <div id="wrapper">
 
      <header role="banner">
-          <h1 class="rounded"><span class="hide">View Image</span> <span aria-hidden="true"><?php echo $title; ?></span></h1>
+          <?php /* <h1 class="rounded"><span class="hide">View Image</span> <span aria-hidden="true"><?php echo $title; ?></span></h1> */ ?>
+          <h1 class="rounded"><?php echo $title; ?></h1>
      </header>
 
      <main id="main" role="main">

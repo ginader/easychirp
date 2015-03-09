@@ -44,29 +44,29 @@
 
      <main role="main">
           <h2>Short Description</h2>
-          <p>Enter a brief text description for the image. This will be used as a title and an alt attribute on the image. A general suggestion is 5 to 12 words. 
-               For help on writing a short description for a photo, check out section <a href="http://www.w3.org/html/wg/drafts/html/CR/embedded-content-0.html#images-of-pictures">4.7.1.1.14 Images of Pictures</a> in the HTML5 specification.</p>
+          <p>Enter a brief text description for the image. This will be used as a title and an alt attribute on the image. A general suggestion is 3-10 words. 
+               For help on writing a short description for a photo, read section <a href="http://www.w3.org/html/wg/drafts/html/CR/embedded-content-0.html#images-of-pictures">4.7.1.1.14 Images of Pictures</a> in the HTML5 specification.</p>
 
           <h2>Long Description</h2>
           <p>Enter a longer, detailed text description for the image, which will used to create a well-formed longdesc attribute on the resulting page.
                Longdesc is valuable to people with visual and cognitive impairments as well as for adding additional context for search engines. 
-               For help on writing a long description, check out <a href="http://www.d.umn.edu/itss/training/online/images/long_how/">How to Write Long Text Alternatives</a>.
+               For help on writing a long description, read <a href="http://www.d.umn.edu/itss/training/online/images/long_how/">How to Write Long Text Alternatives</a>.
           </p>
-          <p>Do not enter a URL in this input field; the longdesc value is provided by Easy Chirp via a dataURI. 
+          <p>Do not enter a URL in the longdesc input field; the longdesc value is automatically provided by Easy Chirp via a dataURI. 
                For technical details, view the W3C's <a href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension</a>.
           </p>
 
           <h2>Limitations</h2>
           <ul>
                <li>For the long description, you can only enter text; structured markup (HTML) is not supported by this tool.</li>
-               <li>After submitting an image the content is not editable. 
+               <li>After submitting an image, the content is not editable. 
                     To get around this, use the Imgur service directly; you can edit the descriptions if you're logged in. 
                     Steps: 
                     <ol>
                          <li>Log into <a href="http://imgur.com/" target="_blank">Imgur.com</a>.</li>
                          <li>Upload an image with proper descriptions.</li>
                          <li>Append the image's unique ID to &quot;http://easychirp.com/img/&quot;. For example: http://easychirp.com/img/AkoGysu</li>
-                         <li>Copy into a tweet. Magic!</li>
+                         <li>Copy and paste into a tweet. Magic!</li>
                          <li>To edit, view the image while logged in Imgur and click the options dropdown.</li>
                     </ol>
                </li>
