@@ -24,6 +24,7 @@
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="frmDonate">
 				<input type="hidden" name="cmd" value="_s-xclick" />
 				<input type="hidden" name="hosted_button_id" value="2JSYK7TQNL5GA" />
+				<input type="hidden" name="cpp_header_image" value="http://easychirp.com/images/brand/PayPal-EasyChirp-WebOverhauls-750x90.jpg" />
 				<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="<?php echo $xliff_reader->get('home-donate-btn-alt'); ?>" />
 				<img alt="" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1" />
 			</form>
