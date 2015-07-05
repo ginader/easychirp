@@ -967,6 +967,17 @@ button:hover, button:focus,
 /*.content .twtInfo li:not(:last-child):after {
 	content: " | ";
 }*/
+.quotedTweet {
+	border-color: #ccc;
+	border-width: 1px;
+}
+.quotedTweet h3 {
+	padding: 0;
+}
+.quotedTweet p {
+	margin-top: -.5em;
+	margin-bottom: 0;
+}
 
 /* tweet/user option buttons etc */
 .btnOptions {
@@ -1281,6 +1292,9 @@ body.theme-inverse {
 	h3 {
 		font-size: 1.1rem;
 		padding: .75rem 0 .4rem;
+	}
+	.quotedTweet h3 {
+		margin-top: .4em;
 	}
 	#enterTweet {
 		margin: .85rem 0;
