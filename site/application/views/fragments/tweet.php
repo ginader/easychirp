@@ -201,16 +201,18 @@ foreach($tweets AS $tweet):
 
 $index++;
 endforeach;
-	if (empty($pagination_path)):
-		$pagination_path = '/timeline/';
-	endif;
-	if (isset($paginate) && $paginate):
+
+// Pagination
+if (empty($pagination_path)):
+	$pagination_path = '/timeline/';
+endif;
+if (isset($paginate) && $paginate):
 ?>
 	<div class="box1 rounded load-more">
 		<a href="<?php echo $pagination_path . $last_id; ?>" class="button load_more"><?php echo $xliff_reader->get('gbl-pag-tweets'); ?></a>
 	</div>
 <?php
-	endif;
+endif;
 else:
 	echo '<div class="box1 rounded">';
 	echo '<p style="margin: 1rem 0 .5rem;">' . $xliff_reader->get('search-saved-none') . '</p>';
