@@ -1200,9 +1200,9 @@ body.theme-inverse {
   position: absolute;
   z-index: 5;
   display: block;
-  font-size: .9em;
+  font-size: .9rem;
   font-weight: normal;
-  line-height: 1.35;
+  line-height: 1.3;
   visibility: visible;
   filter: alpha(opacity=0);
   opacity: 0;
@@ -1397,6 +1397,10 @@ body.theme-inverse {
 	}
 	.tweet .imgThumb img {
 		max-width: 240px;
+	}
+	.tooltip {
+		font-size: .75rem;
+		line-height: 1.2;
 	}
 }
 
