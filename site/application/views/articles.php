@@ -82,6 +82,9 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
+	<dt><a href="http://www.chooseworkttw.net/blog/easy-chirp-technology-how-people-with-visual-impairments-can-now-access-twitter">Easy Chirp Technology: How People with Visual Impairments Can Now Access Twitter</a></dt>
+		<dd>Ticket to Work (US gov)</dd>
+		<dd>2015 Aug 12</dd>
 	<dt><a href="http://www.paciellogroup.com/blog/2015/01/notes-on-providing-alt-text-for-twitter-images/">Notes on providing alt text for twitter images</a></dt>
 		<dd>The Paciello Group blog</dd>
 		<dd>2015 Jan 02</dd>
