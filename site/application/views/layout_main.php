@@ -39,8 +39,8 @@ if ($this->layout->lang_code === "ar") {
 	</div>
 </header>
 
-<nav role="navigation">
-	<h2 class="hide"><?php echo $xliff_reader->get('nav-heading-menu'); ?></h2>
+<nav role="navigation" aria-labelledby="nav-menu-hd">
+	<h2 class="hide" id="nav-menu-hd"><?php echo $xliff_reader->get('nav-heading-menu'); ?></h2>
 	<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-app-menu'); ?></h3>
 	<?php echo $main_menu; ?>
 
@@ -87,8 +87,8 @@ if ($this->session->userdata('logged_in')) {
 }
 ?>
 
-<footer role="contentinfo">
-	<h2 class="hide"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
+<footer role="contentinfo" aria-labelledby="foot-hd">
+	<h2 class="hide" id="foot-hd"><?php echo $xliff_reader->get('footer-h2'); ?></h2>
 
 	<?php ?>
 	<p><?php echo $xliff_reader->get('footer-select-language'); ?>:
