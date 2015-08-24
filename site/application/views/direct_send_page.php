@@ -36,12 +36,6 @@ if (isset($action)) {
 		<div class="clear"></div>
 
 		<h3 style="padding-top:0"><label for="txtDirectMessage"><?php echo $xliff_reader->get('dm-label-txtDirectMessage'); ?></label></h3>
-
-		<p id="charlimit" style="margin:0" data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>">
-			<span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span>
-			<strong span id="displayCharCountNumber" aria-live="polite"></strong>
-		</p>
-
 		<div class="clearfix">
 			<textarea id="txtDirectMessage" name="message" rows="2" cols="40" required aria-required="true"></textarea>
 			<button class="btnPost" type="submit"><?php echo $xliff_reader->get('dm-send'); ?></button>

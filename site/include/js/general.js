@@ -95,12 +95,6 @@ function updateCharCount(charCountField) {
 	// Modify default text
 	$('#displayCharCountMessage').html($("#enterTweetContent").attr("data-char-remain")+' ');
 
-	// If DM
-	if ($("#txtDirectMessage").length) { 
-		charCountField = "txtDirectMessage";
-		$('#displayCharCountMessage').html($("#frmDirectMessage").attr("data-char-remain")+' ');
-	}
-
 	// Continue if exists on page
 	if(!document.getElementById(charCountField)) { return; }
 
@@ -202,7 +196,7 @@ $('#frmDirectMessage').submit(function() {
 	}
 	x=$("#txtDirectMessage");
 	y = x.val();
-	if (y.length>140) {
+	if (y.length>9999) {
 		alert($("#frmDirectMessage").attr("data-error-over"));
 		x.focus();
 		return false;
