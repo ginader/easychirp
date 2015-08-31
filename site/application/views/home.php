@@ -129,6 +129,7 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
 	<ul>
+		<li>User unable to change Twitter accounts even after logging out on Easy Chirp and on Twitter.</li>
 		<li>Pagination missing list subscriber/member pages.</li>
 		<li>User details page is blank page when user account is private.</li>
 	</ul>
