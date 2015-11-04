@@ -82,6 +82,9 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
+	<dt><a href="http://www.equipmentlink.org/blog/?p=3228">Easy Chirp, an accessible Twitter alternative</a></dt>
+		<dd>Where It's AT – Assistive Technology Blog (Maryland Department of Disabilities)</dd>
+		<dd>2015 Oct 21</dd>
 	<dt><a href="http://www.chooseworkttw.net/blog/easy-chirp-technology-how-people-with-visual-impairments-can-now-access-twitter">Easy Chirp Technology: How People with Visual Impairments Can Now Access Twitter</a></dt>
 		<dd>Ticket to Work (US gov)</dd>
 		<dd>2015 Aug 12</dd>
