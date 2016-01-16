@@ -130,12 +130,14 @@ foreach($tweets AS $tweet):
 		// title="View the tweet to which this tweet is responding"
 		// title="View the original tweet (this is a retweet)"
 
-		// Has been retweeted?
-		if ($tweet->retweet_count == 1) {
-			echo '1 Retweet | ';
+		// Number of retweets - display if not zero
+		if ($tweet->retweet_count > 0) {
+			echo $xliff_reader->get('nav-retweets').': '.$tweet->retweet_count.' | ';
 		}
-		else if ($tweet->retweet_count > 1) {
-			echo 'Retweeted '.$tweet->retweet_count.' '.$xliff_reader->get('gbl-tweet-times').'. | ';
+
+		// Number of favorites - display if not zero
+		if ($tweet->favorite_count > 0) {
+			echo $xliff_reader->get('nav-favorites').': '.$tweet->favorite_count.' | ';
 		}
 		?>
 		via <?php echo $tweet->source; ?></p>
