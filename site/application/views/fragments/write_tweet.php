@@ -6,7 +6,7 @@ if (isset($single) && $single)
 }
 ?>
 <div id="enterTweet" class="<?php echo $classes; ?>">
-<?php 
+<?php
 if (empty($single)):
 ?>
 	<h2>
@@ -24,13 +24,13 @@ if (empty($single)):
 			<span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span>
 			<strong id="displayCharCountNumber" aria-live="polite"></strong>
 		</p>
-		<form id="frmSubmitTweet" action="/tweet/write" method="post" class="clearfix" 
+		<form id="frmSubmitTweet" action="/tweet/write" method="post" class="clearfix"
 			data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
 			data-error-empty="<?php echo $xliff_reader->get('error-tweet-empty'); ?>">
 			<div>
 				<textarea id="txtEnterTweet" name="status" rows="3"><?php
-				
-				if ( isset($reply_to) ) 
+
+				if ( isset($reply_to) )
 				{
 					echo $reply_to;
 				}
@@ -56,13 +56,16 @@ if (empty($single)):
 			<input type="hidden" name="ajax" value="0" />
 			<label for="urlLong"><?php echo $xliff_reader->get('write-tweet-enter-url'); ?></label>
 			<input type="text" name="url_long" id="urlLong" size="50" class="input1" placeholder="http://" required aria-required="true" />
-			<span id="urlService">
+
+			<?php /* <span id="urlService">
 				<span id="urlServiceLabel"><?php echo $xliff_reader->get('write-tweet-service'); ?></span>
 				<input type="radio" name="urlService" id="bitly" value="bitly" aria-describedby="urlServiceLabel" checked="checked" />
 				<label for="bitly">bit.ly</label>
 				<input type="radio" name="urlService" id="webaim" value="webaim" aria-describedby="urlServiceLabel" />
 				<label for="webaim">weba.im</label>
-			</span>
+			</span> */ ?>
+			<input type="hidden" name="urlService" value="bitly" />
+
 			<button type="submit" id="btnShorten" class="btn3"><?php echo $xliff_reader->get('write-tweet-shorten'); ?></button>
 		</fieldset>
 		</form>

@@ -20,7 +20,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 main, footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
 margin:0;
@@ -37,7 +37,7 @@ line-height:1;
 }
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
 display:block;
 }
 
@@ -65,7 +65,7 @@ background:transparent;
 
 mark {
 background-color:#ff9;
-color:#000; 
+color:#000;
 font-style:italic;
 font-weight:bold;
 }
@@ -79,7 +79,7 @@ del {
 text-decoration: line-through;
 }
 
-abbr[title], 
+abbr[title],
 dfn[title] {
 border-bottom:1px dotted;
 cursor:help;
@@ -93,7 +93,7 @@ border-spacing:0;
 hr {
 display:block;
 height:1px;
-border:0;   
+border:0;
 border-top:1px solid #ccc;
 margin:1em 0;
 padding:0;
@@ -170,7 +170,7 @@ h2 + ul {
 	font-size: .85rem;
 }
 .notes {
-	margin-bottom:0; 
+	margin-bottom:0;
 	line-height: 1.2rem;
 }
 
@@ -323,8 +323,8 @@ footer {
 }
 
 #top-pull-link {
-	text-align: right; 
-	margin: -2.1rem 0 .75rem; 
+	text-align: right;
+	margin: -2.1rem 0 .75rem;
 	padding-right: 1rem;
 }
 
@@ -352,7 +352,7 @@ footer {
 
 .p-col-1,.p-col-1-2 {
 	display: inline-block;
-	zoom: 1; *display: inline; 
+	zoom: 1; *display: inline;
 	letter-spacing: normal;
 	word-spacing: normal;
 	vertical-align: top;
@@ -376,9 +376,9 @@ footer {
 }
 
 .p-row-r {
-	letter-spacing: -0.31em; 
-	*letter-spacing: normal; 
-	word-spacing: -0.43em; 
+	letter-spacing: -0.31em;
+	*letter-spacing: normal;
+	word-spacing: -0.43em;
 }
 
 .opera-only :-o-prefocus,
@@ -421,8 +421,8 @@ div.msgBoxNeg {
 @media (max-width:767px) {
 	.p-row-r > [class ^= "p-col"] {
 		width:100%;
-	}            
-	.p-visible-phone     { } 
+	}
+	.p-visible-phone     { }
 	.p-hidden-phone      { display: none; }
 	.p-hidden-desktop    { }
 	.p-visible-desktop   { display: none; }
@@ -459,7 +459,7 @@ div.msgBoxNeg {
 	float: left;
 	padding: .15rem .5rem;
 	margin-right: .25rem;
-	
+
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-khtml-border-radius: 10px;
@@ -647,7 +647,7 @@ div.msgBoxNeg {
 }
 #enterTweet h2 a:hover,
 #enterTweet h2 a:focus {
-	background-color: #A1D5F9;	
+	background-color: #A1D5F9;
 }
 #frmSubmitTweet textarea {
 	float: left;
@@ -666,9 +666,9 @@ div.msgBoxNeg {
 #frmUrlShort {
 	margin-bottom: .8rem;
 }
-#urlService {
+/*#urlService {
 	margin: 0 .75rem;
-}
+}*/
 
 /* alert messages */
 div.msgBoxPos,
@@ -749,7 +749,7 @@ div.msgBoxNeg {
 #createList {
 	margin-top: .5rem;
 }
-#createList legend { 
+#createList legend {
 	padding: .2rem 0 .5rem;
 }
 #createList div.row {
@@ -785,7 +785,7 @@ a.delete-link {
 	padding: .3em 0 0;
 }
 
-#txtEnterTweet, 
+#txtEnterTweet,
 #txtDirectMessage {
 	height: 3.3rem;
 	min-height: 3.3rem;
@@ -989,11 +989,11 @@ button:hover, button:focus,
 a.btnOptionsTweet,
 a.btnOptionsUser,
 .btnOptions a {
-	padding: .5rem .6rem .1rem;	
+	padding: .5rem .6rem .1rem;
 	border: 1px solid #ccc;
 	font-size: 1.3em; /* need this to set the positioning identical in webkit and FF */
 	text-decoration: none;
-	
+
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -1065,7 +1065,7 @@ a.retweeted:focus {
 }
 .span-user-blocked,
 .span-user-muted {
-	background-color: #ff9;	
+	background-color: #ff9;
 }
 
 /* Theme  **************************************************/
@@ -1103,7 +1103,7 @@ body.theme-inverse {
 	border-color: #666;
 }
 
-.theme-inverse .favorited, 
+.theme-inverse .favorited,
 .theme-inverse .retweeted {
 	background-color: #777;
 }
@@ -1134,7 +1134,7 @@ body.theme-inverse {
 
 .theme-inverse #enterTweet h2 a:hover,
 .theme-inverse #enterTweet h2 a:focus {
-	background-color: #555;	
+	background-color: #555;
 }
 
 .theme-inverse button.btnPost {
@@ -1185,7 +1185,7 @@ body.theme-inverse {
 	background:url(../../images/bg_rt_big_inverse.gif) top right no-repeat;
 }
 
-.theme-inverse input[type=text], 
+.theme-inverse input[type=text],
 .theme-inverse textarea {
 	border: 1px solid #666;
 }
@@ -1249,10 +1249,10 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 800px) {
-	#urlService {
+	/*#urlService {
 		display: block;
 		margin: .5rem 0;
-	}
+	}*/
 	#urlLong {
 		width: 65%;
 	}
@@ -1338,7 +1338,7 @@ body.theme-inverse {
 		float: none;
 	}
 	#tweep,
-	#query, 
+	#query,
 	#query2,
 	#queryUsers { /* search inputs */
 		width: 75%;
@@ -1403,4 +1403,3 @@ body.theme-inverse {
 		line-height: 1.2;
 	}
 }
-

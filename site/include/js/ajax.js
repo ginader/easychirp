@@ -10,14 +10,14 @@ $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 	txt.MakeFav      = $("#main").attr("data-fav-make"); //"make favorite";
 	txt.RemoveFav    = $("#main").attr("data-fav-remove"); //"remove favorite";
 	txt.AlertAdded   = $("#main").attr("data-fav-alert-added"); //"The favorite has been added.";
-	txt.AlertRemoved = $("#main").attr("data-fav-alert-removed"); //"The favorite has been removed.";	
+	txt.AlertRemoved = $("#main").attr("data-fav-alert-removed"); //"The favorite has been removed.";
 
 	if (url_replace.indexOf("create") != -1) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertAdded);
-				
+
 				$(a).addClass("favorited");
 
 				url_replace = url_replace.replace(/create/,"destroy");
@@ -35,7 +35,7 @@ $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertRemoved);
-				
+
 				$(a).removeClass("favorited");
 
 				url_replace = url_replace.replace(/destroy/,"create");
@@ -74,7 +74,7 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertBlock);
-				
+
 				$(a).html(txt.unblock);
 				$(a).siblings(".span-user-blocked").css("display", "inline");
 
@@ -94,7 +94,7 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertUnblock);
-				
+
 				$(a).html(txt.block);
 				$(a).siblings(".span-user-blocked").css("display", "none");
 
@@ -129,7 +129,7 @@ $('a[href*="mute_"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertMute);
-				
+
 				$(a).html(txt.unmute);
 				$(a).siblings(".span-user-muted").css("display", "inline");
 
@@ -148,7 +148,7 @@ $('a[href*="mute_"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertUnmute);
-				
+
 				$(a).html(txt.mute);
 				$(a).siblings(".span-user-muted").css("display", "none");
 
@@ -275,12 +275,12 @@ $('#frmTweetImage').submit(function(e, files) {
 
 		// Delete existing on page
 		$('#imgLinkContainer').remove();
-		
+
 		// Output on page
 		$('<p id="imgLinkContainer">The image link is: <a target="_blank" href="' + imgLink + '">' + imgLink + '</a></p>').insertAfter('#frmTweetImage fieldset div:last-child');
 
 		// Update counter
-		if ( document.getElementById("txtEnterTweet") ) { 
+		if ( document.getElementById("txtEnterTweet") ) {
 			updateCharCount("txtEnterTweet");
 		}
 
@@ -296,7 +296,7 @@ $('#frmTweetImage').submit(function(e, files) {
 				ajax: true
 			};
 		},
-		beforeSubmit: function() { 
+		beforeSubmit: function() {
 		    // Disable submit button
 		    $("#btnSubmitImage").attr("disabled", "disabled");
 		    // Add processing message
@@ -331,7 +331,7 @@ $('a[href*="retweet_"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertAdded);
-				
+
 				$(a).addClass("retweeted");
 
 				//url_replace = url_replace.replace(/create/,"destroy");
@@ -351,7 +351,7 @@ $('a[href*="retweet_"]').attr("role","button").click(function(e) {
 	// 		url: url_send,
 	// 		success: function(response) {
 	// 			alert(txt.AlertRemoved);
-				
+
 	// 			$(a).removeClass("favorited");
 
 	// 			url_replace = url_replace.replace(/destroy/,"create");
@@ -387,7 +387,7 @@ $('a[href*="follow_user"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertFollowed);
-				
+
 				$(a).html(txt.unfollow);
 				$("#spanFollowCurrent").html(txt.following);
 
@@ -405,7 +405,7 @@ $('a[href*="follow_user"]').attr("role","button").click(function(e) {
 			url: url_send,
 			success: function(response) {
 				alert(txt.AlertUnfollowed);
-				
+
 				$(a).html(txt.follow);
 				$("#spanFollowCurrent").html(txt.notfollowing);
 
@@ -452,7 +452,7 @@ $('a[href*="tweet_delete"]').click(function(e) {
 // Ajax for tweet threads/conversation via reply
 function theRespGuts(e) {
 	e.preventDefault();
-	
+
 	// Set variables in obj
 	data = {};
 	data.respParent = $(this).parent().parent();
@@ -519,14 +519,14 @@ $('#urlClear').click(function() {
 
 // Get shortened URL
 $("#frmUrlShort").submit(function(ev) {
-	
+
 	ev.preventDefault();
-	
+
 	var frmAction  = $(this).attr('action');
 	var objLongURL = $('#urlLong');
 	var txtLongURL = $('#urlLong').val();
-	var txtUrlService = $('input:radio[name=urlService]:checked').val();
-	
+	var txtUrlService = $('input[name=urlService]').val(); //$('input:radio[name=urlService]:checked').val();
+
 	//validate for completed input
 	if (txtLongURL == "") {
 		alert("URL input is blank. Please enter a URL.");
@@ -551,30 +551,30 @@ $("#frmUrlShort").submit(function(ev) {
 	render = function(short,long) {
 		//add short URL to Tweet input
 		txtInput = $('#txtEnterTweet');
-		if ( document.getElementById("txtDirectMessage") ) { 
+		if ( document.getElementById("txtDirectMessage") ) {
 			txtInput = $('#txtDirectMessage');
 		}
 		txtInput.val(txtInput.val() + " " + short);
-		
+
 		//update counter
-		if ( document.getElementById("txtEnterTweet") ) { 
+		if ( document.getElementById("txtEnterTweet") ) {
 			updateCharCount("txtEnterTweet");
 		}
 		else {
 			updateCharCount("txtDirectMessage");
 		}
-		
+
 		//delete existing on page
 		$('#urlShortResult').remove();
 		$('#urlLongResult').remove();
-		
+
 		//output on page
 		$('<p id=\'urlShortResult\'>Shortened URL: <a target=\'_blank\' href="' + short + '">' + short + '</a></p>').insertAfter('#frmUrlShort button[type=reset]');
 		$('<p id=\'urlLongResult\'>Original URL: <a target=\'_blank\' href="' + long + '">' + long + '</a></p>').insertAfter('#urlShortResult');
 		alert("Success! The shortened URL has been added to the input field.");
 
 		//focus tweet/dm input
-		if ( document.getElementById("txtEnterTweet") ) { 
+		if ( document.getElementById("txtEnterTweet") ) {
 			$("#txtEnterTweet").focus();
 		}
 		else {
@@ -586,7 +586,7 @@ $("#frmUrlShort").submit(function(ev) {
 		url: frmAction,
 		type: "POST",
 		dataType: 'json',
-		data: { 
+		data: {
 			ajax: "true",
 			url_long: txtLongURL,
 			urlService: txtUrlService
@@ -600,5 +600,3 @@ $("#frmUrlShort").submit(function(ev) {
 	});
 
 });
-
-
