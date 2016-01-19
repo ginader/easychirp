@@ -65,6 +65,9 @@
 		<dt><?php echo $xliff_reader->get('gbl-muted-users'); ?></dt>
 		<dd><a href="/muted_users"><?php echo $xliff_reader->get('gbl-muted-users'); ?></a></dd>
 
+		<dt><?php echo $xliff_reader->get('gbl-blocked-users'); ?></dt>
+		<dd><a href="/blocked_users"><?php echo $xliff_reader->get('gbl-blocked-users'); ?></a></dd>
+
 		<dt><?php echo $xliff_reader->get('profile-dt-bg-image'); ?></dt>
 		<dd><?php
 			if ( isset( $profile->profile_background_image_url )) {
