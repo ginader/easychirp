@@ -89,10 +89,16 @@ foreach($tweets AS $tweet):
 		$date2 = date_modify($z, $x);
 		$date2 = date_format($date2,"M d g:i a");
 
+		// Link links
+		$quoted_tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a target="_blank" href="\1">\1</a>', $tweet->quoted_status->text);
+
+		// Link #hashtags
+		$quoted_tweet_text = preg_replace('/\B#([-_0-9a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+)/', '<a href="/search_results?query=%23$1">$0</a>', $quoted_tweet_text);
+
 		echo '<div class="box1 rounded quotedTweet">';
 		echo '<h3 title="'.$tweet->quoted_status->user->name.'">@'.$tweet->quoted_status->user->screen_name;
 		echo '<span class="hide"> - '.$xliff_reader->get('quote-h1').'</span></h3>';
-		echo '<q lang="'.$tweet->quoted_status->lang.'">'.$tweet->quoted_status->text.'</q>';
+		echo '<q lang="'.$tweet->quoted_status->lang.'">'.$quoted_tweet_text.'</q>';
 		echo '<p><a href="/status/'.$tweet->quoted_status_id.'">'.$date2.'</a></p>';
 		echo '</div>';
 	}
