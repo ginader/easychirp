@@ -104,10 +104,17 @@ foreach($tweets AS $tweet):
 	}
 
 	// Insert image if it exists
+	// example tweet with alt: https://twitter.com/todd/status/696049964133146624
 	// Twitter image
 	if (isset($tweet->entities->media[0]->media_url)) {
-		echo '<div class="imgThumb"><img src="' . $tweet->entities->media[0]->media_url . ':small" alt="" /></div>';
+		echo '<div class="imgThumb"><img src="' . $tweet->entities->media[0]->media_url . ':small" alt="';
+		if (isset($tweet->extended_entities->media[0]->ext->altText->r->ok)) {
+			echo $tweet->extended_entities->media[0]->ext->altText->r->ok;
+		}
+		echo '" /></div>';
 	}
+	//echo debug_object( $tweet );
+	
 	// Imgur image
 	if (isset($tweet->entities->urls[0]->expanded_url)) {
 		$ent_exp_url = $tweet->entities->urls[0]->expanded_url;
