@@ -108,8 +108,8 @@ foreach($tweets AS $tweet):
 	// Twitter image
 	if (isset($tweet->entities->media[0]->media_url)) {
 		echo '<div class="imgThumb"><img src="' . $tweet->entities->media[0]->media_url . ':small" alt="';
-		if (isset($tweet->extended_entities->media[0]->ext->altText->r->ok)) {
-			echo $tweet->extended_entities->media[0]->ext->altText->r->ok;
+		if (isset($tweet->extended_entities->media[0]->ext_alt_text)) {
+			echo $tweet->extended_entities->media[0]->ext_alt_text;
 		}
 		echo '" /></div>';
 	}
@@ -265,6 +265,11 @@ if (isset($paginateSearch) && $paginateSearch && sizeof($tweets) > 0) {
 	}
 	echo '</div>';
 }
+?>
+
+<?php
+//debug_object( $tweet );
+//echo json_encode($tweet); 
 ?>
 
 <?php
