@@ -523,12 +523,12 @@ div.msgBoxNeg {
 	background-color: #fc6;
 }
 
-#navTweet li a[aria-haspopup=true] {
+#navTweet a[aria-owns] {
 	position: relative;
 	padding-right: 1rem;
 }
 
-#navTweet li a[aria-haspopup=true]:after {
+#navTweet a[aria-owns]:after {
 	content: ' ';
 	height: 0;
 	width: 0;
