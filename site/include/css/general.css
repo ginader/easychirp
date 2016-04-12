@@ -231,19 +231,18 @@ button[type='reset'] {
 	font-weight: lighter;
 }
 
-#frmUrlShort fieldset {
+#enterTweet fieldset {
 	margin-top: .5em;
-}
-#frmUrlShort fieldset,
-#frmTweetImage fieldset {
 	border: #ddd 1px solid;
 	border-left-width: 5px;
 	border-left-color: #eee;
 	padding: 1em;
 }
-#frmUrlShort legend,
-#frmTweetImage legend {
+#enterTweet legend {
 	font-weight: bold;
+}
+#showAddImage {
+	clear: left;
 }
 
 /* Utilities ************************************************/

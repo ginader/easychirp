@@ -24,7 +24,7 @@ if (empty($single)):
 			<span id="displayCharCountMessage"><?php echo $xliff_reader->get('write-tweet-char-limit'); ?></span>
 			<strong id="displayCharCountNumber" aria-live="polite"></strong>
 		</p>
-		<form id="frmSubmitTweet" action="/tweet/write" method="post" class="clearfix"
+		<form id="frmSubmitTweet" action="/tweet/write" method="post" enctype="multipart/form-data" class="clearfix"
 			data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
 			data-error-empty="<?php echo $xliff_reader->get('error-tweet-empty'); ?>">
 			<div>
@@ -48,6 +48,18 @@ if (empty($single)):
 
 				<button class="btnPost" type="submit"><?php echo $xliff_reader->get('write-tweet-post'); ?></button>
 			</div>
+
+			<fieldset id="fieldAddImage" data-add-image="<?php echo $xliff_reader->get('add-image-hd'); ?>">
+			<legend><?php echo $xliff_reader->get('add-image-hd'); ?></legend>
+				<div>
+					<label for="imagePath"><?php echo $xliff_reader->get('add-image-path'); ?></label>
+					<input type="file" name="imagePath" id="imagePath" size="50" class="input1" />
+				</div>
+				<div>
+					<label for="imageAlt">Alternative Text (limit 300 characters)</label>
+					<textarea type="text" name="imageAlt" id="imageAlt" size="30" maxlength="300" class="input1" /></textarea>
+				</div>
+			</fieldset>
 		</form>
 
 		<form id="frmUrlShort" method="post" action="/url_shorten" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>">
@@ -70,7 +82,7 @@ if (empty($single)):
 		</fieldset>
 		</form>
 
-		<form id="frmTweetImage" method="post" enctype="multipart/form-data" action="/img_post" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>"
+		<?php /* <form id="frmTweetImage" method="post" enctype="multipart/form-data" action="/img_post" data-clear="<?php echo $xliff_reader->get('gbl-clear'); ?>"
 			data-add-image="<?php echo $xliff_reader->get('add-image-hd'); ?>">
 		<fieldset>
 		<legend><?php echo $xliff_reader->get('add-image-hd'); ?></legend>
@@ -93,7 +105,7 @@ if (empty($single)):
 				<a href="/img_help" target="_blank" id="img_help"><?php echo $xliff_reader->get('add-image-help-desc'); ?></a>
 			</div>
 		</fieldset>
-		</form>
+		</form> */ ?>
 	</div>
 
 <?php

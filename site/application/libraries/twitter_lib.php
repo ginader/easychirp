@@ -51,17 +51,14 @@ class Twitter_lib {
 		}
 	}
 
-
-	public function get($url, $params = array())
+	public function get($url, $params = array(), $upload = FALSE)
 	{
 		return $this->twitteroauth->get($url, $params);
-		
 	}
-
 	
-	public function post($url, $params = array())
+	public function post($url, $params = array(), $upload = FALSE)
 	{
-		return $this->twitteroauth->post($url, $params);
+		return $this->twitteroauth->post($url, $params, $upload);
 	}
 
 	/**
@@ -76,7 +73,6 @@ class Twitter_lib {
 	}
 
 }
-
 
 class OAuthCurl { 
 	     
@@ -106,7 +102,6 @@ class OAuthCurl {
 		return $header; 
 	} 
 }
-
 
 /* End of file twitter_lib.php */ 
 /* Location: ./application/libraries/twitter_lib.php */

@@ -4,6 +4,8 @@
  * Abraham Williams (abraham@abrah.am) http://abrah.am
  *
  * The first PHP Library to support OAuth for Twitter's REST API.
+ * 
+ * MODIFIED BY DENNISL FEB 2016 (hostMedia, post method, upload arg)
  */
 
 /* Load OAuth lib. You can find it at http://oauth.net */
@@ -15,28 +17,39 @@ require_once('OAuth.php');
 class TwitterOAuth {
   /* Contains the last HTTP status code returned. */
   public $http_code;
+
   /* Contains the last API call. */
   public $url;
+
   /* Set up the API root URL. */
   public $host = "https://api.twitter.com/1.1/";
+
+  /* Set up the UPLOAD/MEDIA API root URL. */
+  public $hostMedia = "https://upload.twitter.com/1.1/";
+  
   /* Set timeout default. */
   public $timeout = 30;
+  
   /* Set connect timeout. */
   public $connecttimeout = 30; 
+  
   /* Verify SSL Cert. */
   public $ssl_verifypeer = FALSE;
+  
   /* Respons format. */
   public $format = 'json';
+  
   /* Decode returned json data. */
   public $decode_json = TRUE;
+  
   /* Contains the last HTTP headers returned. */
   public $http_info;
+  
   /* Set the useragnet. */
   public $useragent = 'TwitterOAuth v0.2.0-beta2';
+  
   /* Immediately retry the API call if the response was not successful. */
   //public $retry = TRUE;
-
-
 
 
   /**
@@ -138,7 +151,7 @@ class TwitterOAuth {
   /**
    * GET wrapper for oAuthRequest.
    */
-  function get($url, $parameters = array()) {
+  function get($url, $parameters = array(), $upload = FALSE) {
     $response = $this->oAuthRequest($url, 'GET', $parameters);
     if ($this->format === 'json' && $this->decode_json) {
       return json_decode($response);
@@ -149,8 +162,9 @@ class TwitterOAuth {
   /**
    * POST wrapper for oAuthRequest.
    */
-  function post($url, $parameters = array()) {
-    $response = $this->oAuthRequest($url, 'POST', $parameters);
+  function post($url, $parameters = array(), $upload = FALSE) {
+    $response = $this->oAuthRequest($url, 'POST', $parameters, $upload);
+
     if ($this->format === 'json' && $this->decode_json) {
       return json_decode($response);
     }
@@ -160,7 +174,7 @@ class TwitterOAuth {
   /**
    * DELETE wrapper for oAuthReqeust.
    */
-  function delete($url, $parameters = array()) {
+  function delete($url, $parameters = array(), $upload = FALSE) {
     $response = $this->oAuthRequest($url, 'DELETE', $parameters);
     if ($this->format === 'json' && $this->decode_json) {
       return json_decode($response);
@@ -171,17 +185,49 @@ class TwitterOAuth {
   /**
    * Format and sign an OAuth / API request
    */
-  function oAuthRequest($url, $method, $parameters) {
+  function oAuthRequest($url, $method, $parameters, $upload = FALSE) {
     if (strrpos($url, 'https://') !== 0 && strrpos($url, 'http://') !== 0) {
-      $url = "{$this->host}{$url}.{$this->format}";
+      if ($upload === TRUE) {
+        $url = "{$this->hostMedia}{$url}.{$this->format}"; 
+        //DEBUG
+        //echo "UPLOAD IMAGE ".$url;
+      }
+      else if ($upload === "alt_text") {
+        $parameters = json_encode($parameters);
+        //DEBUG
+        //echo "<h2>hitting encode line</h2>";
+        $url = "{$this->host}{$url}.{$this->format}"; 
+        //DEBUG
+        //echo "<P>UPLOAD ALT TEXT ".$url;
+      }
+      else {
+        $url = "{$this->host}{$url}.{$this->format}"; 
+        //DEBUG
+        //echo "<P>UPLOAD TWEET ".$url;
+      }
     }
+
+    // DEBUG
+    //echo "<p>PARAMETERS: ". debug_object($parameters);
+    //echo "<p>Type of above var, parameters: ".gettype($parameters)."</p>";
+    // if ($upload === "alt_text") {
+    //   $parameters = json_encode($parameters);
+    // }
+
     $request = OAuthRequest::from_consumer_and_token($this->consumer, $this->token, $method, $url, $parameters);
     $request->sign_request($this->sha1_method, $this->consumer, $this->token);
+
     switch ($method) {
     case 'GET':
       return $this->http($request->to_url(), 'GET');
     default:
-      return $this->http($request->get_normalized_http_url(), $method, $request->to_postdata());
+      if ($upload === "alt_text") {
+       echo "<p>attempting to post alt_text</p>"; //die;
+       return $this->http($request->get_normalized_http_url(), $method, $request->to_postdata(), $upload);
+      }
+      else {
+       return $this->http($request->get_normalized_http_url(), $method, $request->to_postdata());
+     }
     }
   }
 
@@ -190,7 +236,7 @@ class TwitterOAuth {
    *
    * @return API results
    */
-  function http($url, $method, $postfields = NULL) {
+  function http($url, $method, $postfields = NULL, $upload=FALSE) {
     $this->http_info = array();
     $ci = curl_init();
     /* Curl settings */
@@ -199,6 +245,10 @@ class TwitterOAuth {
     curl_setopt($ci, CURLOPT_TIMEOUT, $this->timeout);
     curl_setopt($ci, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($ci, CURLOPT_HTTPHEADER, array('Expect:'));
+    //curl_setopt($ci, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    // if ($upload==TRUE) {
+    //   curl_setopt($ci, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    // }
     curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, $this->ssl_verifypeer);
     curl_setopt($ci, CURLOPT_HEADERFUNCTION, array($this, 'getHeader'));
     curl_setopt($ci, CURLOPT_HEADER, FALSE);
@@ -225,6 +275,7 @@ class TwitterOAuth {
     curl_close ($ci);
     return $response;
   }
+
 
   /**
    * Get the header info to store.

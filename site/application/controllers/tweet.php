@@ -68,9 +68,13 @@
 		$this->layout->set_logged_in($this->_data['logged_in']);
 	 }
 
+	/*******
+
+	APPEARS NOT BEING USED. SHOULD MOVE REPLY & QUOTE FUNCTIONS FROM MAIN TO HERE.
+
+	********/
 	public function reply($id)
 	{
-
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
 		$params[] = $this->config->item('tw_consumer_secret');
@@ -105,6 +109,7 @@
 		
 		$this->_data['xliff_reader'] = $this->xliff_reader; 	
 
+		// Get tokens etc
 		$params = array();
 		$params[] = $this->config->item('tw_consumer_key');
 		$params[] = $this->config->item('tw_consumer_secret');
@@ -114,11 +119,95 @@
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
-		$request_param = array();	
-		$request_param['status'] =  $_POST["status"];
+		// Do image if provided
+		$media_id = "";
+		if ($_FILES['imagePath']['size'] != 0 ) {
+
+			// Open image
+			$file = $_FILES['imagePath']['tmp_name'];
+			$fh = fopen($file, "r");
+			if ( ! $fh) {
+				echo 'Could not open file.';
+			}
+
+			// Check image type
+			// Ref: http://www.php.net/manual/en/function.exif-imagetype.php
+			$numType = exif_imagetype($file);
+			if ($numType!==1 && $numType!==2 && $numType!==3 ) {
+				echo "file must be GIF, JPG, or PNG";
+				die;
+			}
+
+			// Check image size
+			$maxsize = 5242880; // 5 Megs
+			if($_FILES['imagePath']['size'] >= $maxsize) {
+				echo 'The file size too large. The limit is 5 MB.';
+				die;
+			}
+
+			// Convert image
+			$imgbinary = fread($fh, filesize($file));
+			$b64_image = base64_encode($imgbinary);
+
+			$request_param_img = array();
+			$request_param_img["media_data"] = $b64_image;
+
+			// UPLOAD IMAGE AND GET MEDIA ID
+			// Note: different domain! So adding upload parameter. https://upload.twitter.com/1.1/media/upload.json
+			$img = $this->twitter_lib->post('media/upload', $request_param_img, $upload = TRUE);
+
+			//DEBUG
+			//echo debug_object( $img );
+			//echo "<p>Type of above var $img: ".gettype($img)."</p>";
+
+			// ATTACH ALT TO IMAGE
+			$request_param_meta = array();
+			$request_param_meta["media_id"] = $img->media_id;
+			$request_param_meta["alt_text"]["text"] = $_POST['imageAlt'];
+			//example: $request_param_meta = '{ "media_id": "'.$img->media_id.'", "alt_text": {"text": "'.$_POST['imageAlt'].'" }}';
+
+			$imgMeta = $this->twitter_lib->post('media/metadata/create', $request_param_meta, $upload = "alt_text");
+
+			//DEBUG
+			//echo debug_object( $imgMeta );
+			//echo "<p>Type of above var $imgMeta: ".gettype($imgMeta)."</p>";
+
+			echo "<hr>";
+			echo "<p>Filename: " . $_FILES['imagePath']['name'];
+		}
+		// DEBUG
+		echo "<p>alt text: ".$_POST['imageAlt']."</p>";
+		echo "<p>media_id: ".$img->media_id."</p>";
+
+
+		exit; // *** STILL TESTING ***
+
+/* JSON IMG RETURN
+stdClass Object
+(
+    [media_id] => 697607213268013056
+    [media_id_string] => 697607213268013056
+    [size] => 7591
+    [expires_after_secs] => 86400
+    [image] => stdClass Object
+        (
+            [image_type] => image/jpeg
+            [w] => 225
+            [h] => 225
+        )
+)
+*/
+
+		// Post it!
+		$request_param = array();
+		$request_param['status'] = $_POST["status"];
 		if (isset($_POST["in_reply_to_status_id"]))
 		{
-			$request_param['in_reply_to_status_id'] =  $_POST["in_reply_to_status_id"];
+			$request_param['in_reply_to_status_id'] = $_POST["in_reply_to_status_id"];
+		}
+		if ($media_id != "")
+		{
+			$request_param['media_ids'] = $media_id;
 		}
 		
 		$tweet = $this->twitter_lib->post('statuses/update', $request_param);

@@ -222,6 +222,7 @@ $('.frmListAddMember').submit(function(e) {
 });
 
 // Ajax for uploading image
+/*
 $('#frmTweetImage').submit(function(e, files) {
 
 	e.preventDefault();
@@ -312,6 +313,7 @@ $('#frmTweetImage').submit(function(e, files) {
 	return false;
 
 });
+*/
 
 // Ajax for creating a retweet // will do destroying later
 $('a[href*="retweet_"]').attr("role","button").click(function(e) {

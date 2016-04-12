@@ -111,6 +111,22 @@ function updateCharCount(charCountField) {
 
 // Create link to show content
 var txtAddImage = {};
+txtAddImage.addImage = $("#fieldAddImage").attr("data-add-image");
+$('<div id="showAddImage"><button id="showAddImageBtn">' + txtAddImage.addImage + '<\/button><\/div>').insertBefore('#fieldAddImage');
+
+//hide create list form
+$('#fieldAddImage').hide();
+
+// Behavior to show the Add Image content in Write Tweet area
+$('#showAddImageBtn').click(function(e) {
+	e.preventDefault();
+	$('#fieldAddImage').show();
+	$('#showAddImage').remove();
+	$("#imagePath").focus();
+});
+
+/*
+var txtAddImage = {};
 txtAddImage.addImage = $("#frmTweetImage").attr("data-add-image");
 $('<p id="showAddImage"><a href="#" id="showAddImageAnchor" role="button">' + txtAddImage.addImage + ' &#187;<\/a><\/p>').insertBefore('#frmTweetImage');
 
@@ -131,6 +147,7 @@ $("a#showAddImageAnchor").keydown(function(e) {
 		$("a#showAddImageAnchor").trigger("click");
 	}
 });
+*/
 
 /*** show/hide for create list content *************/
 //hide create list form
@@ -171,6 +188,7 @@ $("a[href^='#']").click(function() {
 
 // Validate tweet entry
 $('#frmSubmitTweet').submit(function() {
+	// Validate tweet text
 	var x=$("#txtEnterTweet");
 	var y = x.val();
 	if (y.length>140) {
@@ -182,6 +200,36 @@ $('#frmSubmitTweet').submit(function() {
 		alert($("#frmSubmitTweet").attr("data-error-empty"));
 		x.focus();
 		return false;
+	}
+
+	// Validate image if needed
+	var image_path = $("#imagePath").val();
+	if (image_path != "") {
+		//var imageAlt = $("#imageAlt").val();
+
+		//validate image type
+		var v = new RegExp();
+		v.compile("(.gif|.GIF|.jpeg|.JPEG|.jpg|.JPG|.png|.PNG)$");
+		if (!v.test(image_path)) {
+			alert("Invalid file type. Only GIF, JPG, and PNG formats are allowed.");
+			$("#imagePath").focus();
+			return false;
+		}
+
+		//validate image size
+		var image_size = ($("#imagePath")[0].files[0].size);// / 1024);
+		if (image_size > 5242880) { // 5 Megs
+			alert("The file size too large. The limit is 5 MB.");
+			$("#imagePath").focus();
+			return false;
+		}
+
+		//check length of title
+		// if (imageAlt.length == "") {
+		// 	alert("Please provide alternative text for this image.");
+		// 	$("#imageAlt").focus();
+		// 	return false;
+		// }
 	}
 });
 
