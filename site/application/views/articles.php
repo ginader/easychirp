@@ -82,9 +82,6 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
-	<dt><a href="https://blog.twitter.com/2016/alt-text-support-for-twitter-cards-and-the-rest-api">Alt text support for Twitter Cards and the REST API</a></dt>
-		<dd>Twitter Blog</dd>
-		<dd>2016 Mar 29</dd>
 	<dt><a href="http://www.equipmentlink.org/blog/?p=3228">Easy Chirp, an accessible Twitter alternative</a></dt>
 		<dd>Where It's AT – Assistive Technology Blog (Maryland Department of Disabilities)</dd>
 		<dd>2015 Oct 21</dd>
