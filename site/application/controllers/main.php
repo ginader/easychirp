@@ -678,7 +678,7 @@ class Main extends EC_Controller {
 		 *
 		 * @todo move this to the tweet fragment.
 		 */
-		echo str_replace('class="tweet', 'aria-live="assertive" class="respond tweet', $theTweet);
+		echo str_replace('class="tweet', 'role="alert" class="respond tweet', $theTweet);
 	}
 
 	/**
