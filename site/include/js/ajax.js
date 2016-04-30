@@ -461,7 +461,7 @@ function theRespGuts(e) {
 
 	// Deactivate link clicked
 	$("a[rel='response']").unbind('click', theRespGuts);
-	$(this).removeAttr("href");
+	$(this).attr("href","javascript:;");
 	$(this).removeAttr("rel");
 	$(this).removeAttr("title");
 
@@ -475,6 +475,7 @@ function theRespGuts(e) {
 			alert('Error. Status = ' + xhr.status);
 		}
 	});
+	$(this).focus();
 }
 $('a[rel="response"]').bind('click', theRespGuts);
 
