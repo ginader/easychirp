@@ -274,7 +274,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Actually sends the Direct Message(DM).
+	 * Actually sends the Direct Message (DM).
 	 *
 	 * @param string $_POST['tweep'] the username of the recipient
 	 * @param string $_POST['message'] the content of the message
@@ -320,7 +320,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Delete a Direct Message(DM)
+	 * Delete a Direct Message (DM)
 	 *
 	 * @param integer $id the unique ID of the DM you want to delete
 	 * @param string $ajax optional. Default is FALSE. if true, data will be returned as JSON.
@@ -356,7 +356,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Render the current users dm_inbox
+	 * The Direct Message (DM) 'inbox' of the current user. A list of all messages received.
 	 *
 	 * @return void
 	 */
@@ -377,8 +377,10 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['include_entities'] = false;
+		$request_param['full_text'] = true;
 
 		$dms = $this->twitter_lib->get('direct_messages', $request_param);
+		//debug_object( $dms ); die;
 		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 
 				'dms' => $dms,
@@ -391,7 +393,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * The 'outbox' of the current user. a list of all the message they sent.
+	 * The Direct Message (DM) 'outbox' of the current user. A list of all messages sent.
 	 *
 	 * @return void
 	 */
