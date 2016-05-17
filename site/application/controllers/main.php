@@ -414,6 +414,7 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['include_entities'] = false;
+		$request_param['full_text'] = true;
 
 		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
 		$this->_data['dms'] = $this->load->view('fragments/dm',
