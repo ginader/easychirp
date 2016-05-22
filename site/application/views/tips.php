@@ -84,14 +84,13 @@
 <div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('tips-h2-apps'); ?></h2>
 	<ul>
+		<li><a href="https://www.hashtags.org/" rel="external">HashTags.org</a>: hashtag analytics.</li>
 		<li><a href="http://twuffer.com/" rel="external">Twuffer</a>: a Twitter buffer (schedule tweets)</li>
-		<li><a href="http://topsy.com/tweets" rel="external">Topsy</a>: Twitter search.</li>
-		<li><a href="http://backtweets.com/" rel="external">BackTweet</a>: Search links on Twitter.</li>
+		<li><a href="http://backtweets.com/" rel="external">BackTweet</a>: search links on Twitter.</li>
 		<li><a href="http://www.tweetwally.com/" rel="external">TweetWally</a>: create custom streams.</li>
-		<li><a href="http://tweetstats.com" rel="external">TweetStats</a>: Graphin' your stats!</li>
-		<li><a href="http://twtvite.com/" rel="external">Twtvite</a>: Organize a tweetup!</li>
+		<li><a href="http://tweetstats.com" rel="external">TweetStats</a>: graphin' your stats!</li>
+		<li><a href="http://twtvite.com/" rel="external">Twtvite</a>: organize a tweetup!</li>
 		<li><a href="http://twtpoll.com/" rel="external">TwtPoll</a>: create and distribute polls on Twitter.</li>
-		<li><a href="http://tweetbeep.com/" rel="external">tweetbeep</a>: Free Twitter alerts by email.</li>
 	</ul>
 </div>
 
