@@ -1052,7 +1052,7 @@ class Main extends EC_Controller {
 		$this->_data['list_id'] = $list_id;
 		$this->_data['list_name'] = $list_name;
 
-		$page_title = $this->xliff_reader->get('lists-subs');
+		$page_title = $this->xliff_reader->get('lists-subs') . " | " . $page_title = $this->xliff_reader->get('lists-h1');
 
 		$this->layout->set_title( $page_title );
 		$this->layout->set_description('Twitter users subscribed to a list.');
@@ -1090,7 +1090,7 @@ class Main extends EC_Controller {
 		$this->_data['list_id'] = $list_id;
 		$this->_data['list_name'] = $list_name;
 
-		$page_title = $this->xliff_reader->get('lists-mems');
+		$page_title = $this->xliff_reader->get('lists-mems') . " | " . $page_title = $this->xliff_reader->get('lists-h1');
 
 		$this->layout->set_title( $page_title );
 		$this->layout->set_description('Users who are on a Twitter list.');
