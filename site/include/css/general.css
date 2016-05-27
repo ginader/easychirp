@@ -246,6 +246,22 @@ button[type='reset'] {
 	font-weight: bold;
 }
 
+kbd {
+    padding: .1em .4em;
+    border: 1px solid #ccc;
+    font-family: Arial,Helvetica,sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 .1em;
+    text-shadow: 0 1px 0 #fff;
+    white-space: nowrap;
+}
+
 /* Utilities ************************************************/
 
 .fl{float:left;}

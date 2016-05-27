@@ -65,16 +65,23 @@
 	<div class="p-col-1-2">
 
 <div class="box1 rounded" style="margin-top:0;">
+	<h2>Keyboard Shortcuts</h2>
+	<ul>
+		<li><kbd>/</kbd> <?php echo $xliff_reader->get('search-h1'); ?></li>
+		<li><kbd>Control+/</kbd> <?php echo $xliff_reader->get('nav-quick-search'); ?></li>
+		<li><kbd>Control+u</kbd> <?php echo $xliff_reader->get('gotouser-h1'); ?></li>
+	</ul>
+
 	<h2><?php echo $xliff_reader->get('tips-h2-keys'); ?></h2>
 	<ul>
-		<li>0 <?php echo $xliff_reader->get('tips-keys-0'); ?></li>
-		<li>1 <?php echo $xliff_reader->get('tips-keys-1'); ?></li>
-		<li>2 <?php echo $xliff_reader->get('tips-keys-2'); ?></li>
-		<li>3 <?php echo $xliff_reader->get('tips-keys-3'); ?></li>
-		<li>4 <?php echo $xliff_reader->get('tips-keys-4'); ?></li>
-		<li>5 <?php echo $xliff_reader->get('tips-keys-5'); ?></li>
-		<li>6 <?php echo $xliff_reader->get('tips-keys-6'); ?></li>
-		<li>7 <?php echo $xliff_reader->get('tips-keys-7'); ?></li>
+		<li><kbd>0</kbd> <?php echo $xliff_reader->get('tips-keys-0'); ?></li>
+		<li><kbd>1</kbd> <?php echo $xliff_reader->get('tips-keys-1'); ?></li>
+		<li><kbd>2</kbd> <?php echo $xliff_reader->get('tips-keys-2'); ?></li>
+		<li><kbd>3</kbd> <?php echo $xliff_reader->get('tips-keys-3'); ?></li>
+		<li><kbd>4</kbd> <?php echo $xliff_reader->get('tips-keys-4'); ?></li>
+		<li><kbd>5</kbd> <?php echo $xliff_reader->get('tips-keys-5'); ?></li>
+		<li><kbd>6</kbd> <?php echo $xliff_reader->get('tips-keys-6'); ?></li>
+		<li><kbd>7</kbd> <?php echo $xliff_reader->get('tips-keys-7'); ?></li>
 	</ul>
 </div>
 
