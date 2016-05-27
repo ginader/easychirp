@@ -1027,7 +1027,7 @@ class Main extends EC_Controller {
 	 * @param $list_owner, $list_id, $list_name
 	 * @return void
 	 */
-	public function list_subscribers($list_owner, $list_id = FALSE, $list_name)
+	public function list_subscribers($list_owner, $list_id = FALSE, $list_name, $cursor = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1045,6 +1045,12 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['skip_status'] =  true;
 		$request_param['list_id'] = $list_id;
+
+		$this->_data['cursor'] = -1;
+		if ($cursor !== FALSE && $cursor !== "false") {
+			$request_param['cursor'] = $cursor;
+			$this->_data['cursor'] = $cursor;
+		}
 
 		$this->_data['f'] = $this->twitter_lib->get('lists/subscribers', $request_param);
 
@@ -1065,7 +1071,7 @@ class Main extends EC_Controller {
 	 * @param $list_owner, $list_id, $list_name
 	 * @return void
 	 */
-	public function list_members($list_owner, $list_id = FALSE, $list_name)
+	public function list_members($list_owner, $list_id = FALSE, $list_name, $cursor = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1083,6 +1089,12 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['skip_status'] =  true;
 		$request_param['list_id'] = $list_id;
+
+		$this->_data['cursor'] = -1;
+		if ($cursor !== FALSE && $cursor !== "false") {
+			$request_param['cursor'] = $cursor;
+			$this->_data['cursor'] = $cursor;
+		}
 
 		$this->_data['f'] = $this->twitter_lib->get('lists/members', $request_param);
 
