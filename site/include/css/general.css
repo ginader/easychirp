@@ -507,6 +507,7 @@ div.msgBoxNeg {
 	position: relative;
 	margin: .15rem 0;
 }
+#navMain li li a,
 #navTweet li a {
 	float: left;
 	text-decoration: none;
@@ -521,7 +522,9 @@ div.msgBoxNeg {
 	-khtml-border-radius: 10px;
 	border-radius: 10px;
 }
-
+#navMain li li a {
+	padding: .6rem .5rem .4rem;
+}
 #navTweet li a:hover,
 #navTweet li a:focus {
 	color: #333;
@@ -533,17 +536,16 @@ div.msgBoxNeg {
 	border-color: #a1d5f9;
 	background-color: #a1d5f9;
 }
-
 #navMain li a:active,
 #navTweet li a:active {
 	background-color: #fc6;
 }
-
+#navMain a[aria-owns],
 #navTweet a[aria-owns] {
 	position: relative;
 	padding-right: 1rem;
 }
-
+#navMain a[aria-owns]:after,
 #navTweet a[aria-owns]:after {
 	content: ' ';
 	height: 0;
@@ -560,6 +562,9 @@ div.msgBoxNeg {
 	border-right: 5px solid transparent;
 	border-top: 5px solid #222;
 }
+#navMain a[aria-owns]:after {
+	bottom: 0;
+}
 
 /* MEGA MENU by Adobe **********************************************/
 .sub-nav-group {
@@ -569,6 +574,9 @@ div.msgBoxNeg {
 	top: 2.25rem;
 	width: 10rem;
 	z-index: 1;
+}
+#navMain .sub-nav-group {
+	top: 1.5em;
 }
 .sub-nav-group li {
 	clear: left;
@@ -582,7 +590,10 @@ div.msgBoxNeg {
 	display: block;
 	position: relative;
 	list-style: none;
-	z-index: 15;
+	z-index: 2;
+}
+#navMain.nav-menu {
+	z-index: 3;
 }
 /* a top level navigation item in the mega menu */
 .nav-item {
@@ -596,11 +607,6 @@ div.msgBoxNeg {
 	padding: 0.5em;
 	margin: 0 0 -1px 0;
 	border: 1px solid transparent;
-}
-/* focus/open states of first descendant link within a top level navigation item */
-.nav-item > a:focus,
-.nav-item > a.open {
-	border: 1px solid #dedede;
 }
 /* open state of first descendant link within a top level navigation item */
 .nav-item > a.open {
