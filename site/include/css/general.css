@@ -485,7 +485,7 @@ div.msgBoxNeg {
 #navMain li a:focus {
 	background-color:#a1d5f9;
 }
-#navMain li a.current {
+#navMain > .nav-item > a.current {
 	background-color: #a1d5f9;
 	text-decoration: none;
 }
