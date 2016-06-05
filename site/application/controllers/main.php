@@ -274,7 +274,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Actually sends the Direct Message(DM).
+	 * Actually sends the Direct Message (DM).
 	 *
 	 * @param string $_POST['tweep'] the username of the recipient
 	 * @param string $_POST['message'] the content of the message
@@ -320,7 +320,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Delete a Direct Message(DM)
+	 * Delete a Direct Message (DM)
 	 *
 	 * @param integer $id the unique ID of the DM you want to delete
 	 * @param string $ajax optional. Default is FALSE. if true, data will be returned as JSON.
@@ -356,7 +356,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * Render the current users dm_inbox
+	 * The Direct Message (DM) 'inbox' of the current user. A list of all messages received.
 	 *
 	 * @return void
 	 */
@@ -377,8 +377,10 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['include_entities'] = false;
+		$request_param['full_text'] = true;
 
 		$dms = $this->twitter_lib->get('direct_messages', $request_param);
+		//debug_object( $dms ); die;
 		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 
 				'dms' => $dms,
@@ -391,7 +393,7 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * The 'outbox' of the current user. a list of all the message they sent.
+	 * The Direct Message (DM) 'outbox' of the current user. A list of all messages sent.
 	 *
 	 * @return void
 	 */
@@ -412,6 +414,7 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['include_entities'] = false;
+		$request_param['full_text'] = true;
 
 		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
 		$this->_data['dms'] = $this->load->view('fragments/dm',
@@ -678,7 +681,7 @@ class Main extends EC_Controller {
 		 *
 		 * @todo move this to the tweet fragment.
 		 */
-		echo str_replace('class="tweet', 'aria-live="assertive" class="respond tweet', $theTweet);
+		echo str_replace('class="tweet', 'role="alert" class="respond tweet', $theTweet);
 	}
 
 	/**
@@ -1024,7 +1027,7 @@ class Main extends EC_Controller {
 	 * @param $list_owner, $list_id, $list_name
 	 * @return void
 	 */
-	public function list_subscribers($list_owner, $list_id = FALSE, $list_name)
+	public function list_subscribers($list_owner, $list_id = FALSE, $list_name, $cursor = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1043,13 +1046,19 @@ class Main extends EC_Controller {
 		$request_param['skip_status'] =  true;
 		$request_param['list_id'] = $list_id;
 
+		$this->_data['cursor'] = -1;
+		if ($cursor !== FALSE && $cursor !== "false") {
+			$request_param['cursor'] = $cursor;
+			$this->_data['cursor'] = $cursor;
+		}
+
 		$this->_data['f'] = $this->twitter_lib->get('lists/subscribers', $request_param);
 
 		$this->_data['list_owner'] = $list_owner;
 		$this->_data['list_id'] = $list_id;
 		$this->_data['list_name'] = $list_name;
 
-		$page_title = $this->xliff_reader->get('lists-subs');
+		$page_title = $this->xliff_reader->get('lists-subs') . " | " . $page_title = $this->xliff_reader->get('lists-h1');
 
 		$this->layout->set_title( $page_title );
 		$this->layout->set_description('Twitter users subscribed to a list.');
@@ -1062,7 +1071,7 @@ class Main extends EC_Controller {
 	 * @param $list_owner, $list_id, $list_name
 	 * @return void
 	 */
-	public function list_members($list_owner, $list_id = FALSE, $list_name)
+	public function list_members($list_owner, $list_id = FALSE, $list_name, $cursor = FALSE)
 	{
 		$this->redirect_if_not_logged_in();
 
@@ -1081,13 +1090,19 @@ class Main extends EC_Controller {
 		$request_param['skip_status'] =  true;
 		$request_param['list_id'] = $list_id;
 
+		$this->_data['cursor'] = -1;
+		if ($cursor !== FALSE && $cursor !== "false") {
+			$request_param['cursor'] = $cursor;
+			$this->_data['cursor'] = $cursor;
+		}
+
 		$this->_data['f'] = $this->twitter_lib->get('lists/members', $request_param);
 
 		$this->_data['list_owner'] = $list_owner;
 		$this->_data['list_id'] = $list_id;
 		$this->_data['list_name'] = $list_name;
 
-		$page_title = $this->xliff_reader->get('lists-mems');
+		$page_title = $this->xliff_reader->get('lists-mems') . " | " . $page_title = $this->xliff_reader->get('lists-h1');
 
 		$this->layout->set_title( $page_title );
 		$this->layout->set_description('Users who are on a Twitter list.');

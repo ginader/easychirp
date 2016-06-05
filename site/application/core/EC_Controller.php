@@ -80,7 +80,7 @@ class EC_Controller extends CI_Controller {
 		$main_menu = array();
 		foreach ($this->config->item('main_menu') AS $path => $data){
 			// Remove the '/profile' link if the user is not logged in
-			if ($this->session->userdata('logged_in') === FALSE && $path == '/profile')
+			if ( $this->session->userdata('logged_in') === FALSE && (strpos($data['id'], 'm_profile') !== false) )
 			{
 				continue;
 			}

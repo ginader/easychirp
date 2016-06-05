@@ -99,6 +99,16 @@ foreach($tweets AS $tweet):
 		echo '<h3 title="'.$tweet->quoted_status->user->name.'">@'.$tweet->quoted_status->user->screen_name;
 		echo '<span class="hide"> - '.$xliff_reader->get('quote-h1').'</span></h3>';
 		echo '<q lang="'.$tweet->quoted_status->lang.'">'.$quoted_tweet_text.'</q>';
+
+		// Twitter image
+		if (isset($tweet->quoted_status->entities->media[0]->media_url)) {
+			echo '<div class="imgThumb"><img src="' . $tweet->quoted_status->entities->media[0]->media_url . ':small" alt="';
+			if (isset($tweet->quoted_status->extended_entities->media[0]->ext_alt_text)) {
+				echo $tweet->quoted_status->extended_entities->media[0]->ext_alt_text;
+			}
+			echo '" /></div>';
+		}
+
 		echo '<p><a href="/status/'.$tweet->quoted_status_id.'">'.$date2.'</a></p>';
 		echo '</div>';
 	}

@@ -65,16 +65,23 @@
 	<div class="p-col-1-2">
 
 <div class="box1 rounded" style="margin-top:0;">
+	<h2>Keyboard Shortcuts</h2>
+	<ul>
+		<li><kbd>/</kbd> <?php echo $xliff_reader->get('search-h1'); ?></li>
+		<li><kbd>Control+/</kbd> <?php echo $xliff_reader->get('nav-quick-search'); ?></li>
+		<li><kbd>Control+u</kbd> <?php echo $xliff_reader->get('gotouser-h1'); ?></li>
+	</ul>
+
 	<h2><?php echo $xliff_reader->get('tips-h2-keys'); ?></h2>
 	<ul>
-		<li>0 <?php echo $xliff_reader->get('tips-keys-0'); ?></li>
-		<li>1 <?php echo $xliff_reader->get('tips-keys-1'); ?></li>
-		<li>2 <?php echo $xliff_reader->get('tips-keys-2'); ?></li>
-		<li>3 <?php echo $xliff_reader->get('tips-keys-3'); ?></li>
-		<li>4 <?php echo $xliff_reader->get('tips-keys-4'); ?></li>
-		<li>5 <?php echo $xliff_reader->get('tips-keys-5'); ?></li>
-		<li>6 <?php echo $xliff_reader->get('tips-keys-6'); ?></li>
-		<li>7 <?php echo $xliff_reader->get('tips-keys-7'); ?></li>
+		<li><kbd>0</kbd> <?php echo $xliff_reader->get('tips-keys-0'); ?></li>
+		<li><kbd>1</kbd> <?php echo $xliff_reader->get('tips-keys-1'); ?></li>
+		<li><kbd>2</kbd> <?php echo $xliff_reader->get('tips-keys-2'); ?></li>
+		<li><kbd>3</kbd> <?php echo $xliff_reader->get('tips-keys-3'); ?></li>
+		<li><kbd>4</kbd> <?php echo $xliff_reader->get('tips-keys-4'); ?></li>
+		<li><kbd>5</kbd> <?php echo $xliff_reader->get('tips-keys-5'); ?></li>
+		<li><kbd>6</kbd> <?php echo $xliff_reader->get('tips-keys-6'); ?></li>
+		<li><kbd>7</kbd> <?php echo $xliff_reader->get('tips-keys-7'); ?></li>
 	</ul>
 </div>
 
@@ -84,14 +91,13 @@
 <div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('tips-h2-apps'); ?></h2>
 	<ul>
+		<li><a href="https://www.hashtags.org/" rel="external">HashTags.org</a>: hashtag analytics.</li>
 		<li><a href="http://twuffer.com/" rel="external">Twuffer</a>: a Twitter buffer (schedule tweets)</li>
-		<li><a href="http://topsy.com/tweets" rel="external">Topsy</a>: Twitter search.</li>
-		<li><a href="http://backtweets.com/" rel="external">BackTweet</a>: Search links on Twitter.</li>
+		<li><a href="http://backtweets.com/" rel="external">BackTweet</a>: search links on Twitter.</li>
 		<li><a href="http://www.tweetwally.com/" rel="external">TweetWally</a>: create custom streams.</li>
-		<li><a href="http://tweetstats.com" rel="external">TweetStats</a>: Graphin' your stats!</li>
-		<li><a href="http://twtvite.com/" rel="external">Twtvite</a>: Organize a tweetup!</li>
+		<li><a href="http://tweetstats.com" rel="external">TweetStats</a>: graphin' your stats!</li>
+		<li><a href="http://twtvite.com/" rel="external">Twtvite</a>: organize a tweetup!</li>
 		<li><a href="http://twtpoll.com/" rel="external">TwtPoll</a>: create and distribute polls on Twitter.</li>
-		<li><a href="http://tweetbeep.com/" rel="external">tweetbeep</a>: Free Twitter alerts by email.</li>
 	</ul>
 </div>
 
