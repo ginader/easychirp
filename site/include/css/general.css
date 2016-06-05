@@ -894,6 +894,9 @@ button:hover, button:focus,
 .tweet .imgThumb {
 	clear: left;
 }
+.tweet .imgThumb img {
+	max-height: 260px;
+}
 .tweet.dm {
 	padding-left: 150px;
 	margin: 1rem 0;
@@ -1380,7 +1383,7 @@ body.theme-inverse {
 	}
 
 	.tweet .imgThumb img {
-		max-width: 500px;
+		max-width: 440px;
 	}
 }
 
