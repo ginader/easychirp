@@ -32,7 +32,9 @@ if ($this->layout->lang_code === "ar") {
 	<div id="welcome">
 		<?php if ($logged_in): ?>
 			<h2 class="hide">My Info</h2>
-			<p><?php  printf( $xliff_reader->get("nav-welcome-user"), $screen_name); ?> 
+			<p><?php 
+				$linkedName = '<a href="/profile">' . $screen_name . '</a>';
+				printf( $xliff_reader->get("nav-welcome-user"), $linkedName); ?> 
 			[<a href="/sign_out"><?php echo $xliff_reader->get('nav-sign-out'); ?></a>]</p>
 			<p id="hdUserStats"><a href="/following"><?php printf( $xliff_reader->get("nav-following"), $following_count); ?></a> | <a href="/followers"><?php printf( $xliff_reader->get("nav-followers"), $follower_count); ?></a> | <a href="/mytweets"><?php printf( $xliff_reader->get("nav-tweet-count"), $tweet_count); ?></a></p>
 		<?php endif; ?>
