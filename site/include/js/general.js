@@ -414,7 +414,7 @@ if ($('#txtEnterTweet').length != 0) {
 /* Adobe Mega Menu
  * https://github.com/adobe-accessibility/Accessible-Mega-Menu/
  */
-$("#tweet_menu_wrapper").accessibleMegaMenu({
+$("#main_menu_wrapper, #tweet_menu_wrapper").accessibleMegaMenu({
 	/* prefix for generated unique id attributes (for aria) */
 	uuidPrefix: "megamenu",
 
