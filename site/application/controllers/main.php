@@ -1191,6 +1191,44 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Manages the Listed page - /listed
+	 *
+	 * @param $list_owner, $list_id, $list_name
+	 * @return void
+	 */
+	public function listed($cursor = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+
+		$this->_data['cursor'] = -1;
+		if ($cursor !== FALSE && $cursor !== "false") {
+			$request_param['cursor'] = $cursor;
+			$this->_data['cursor'] = $cursor;
+		}
+
+		$this->_data['listed'] = $this->twitter_lib->get('lists/memberships', $request_param);
+
+		$page_title = $this->xliff_reader->get('listed-h1');
+
+		$this->layout->set_title( $page_title );
+		$this->layout->set_description('Lists of which user is a member.');
+		$this->layout->view('listed', $this->_data);
+	}
+
+	/**
 	 * Follows or unfollows user - /manage_follow_user
 	 *
 	 * @param string $screen_name twitter username of the desired user.

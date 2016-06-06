@@ -975,6 +975,16 @@
         <target>Sie sind der Eigentümer dieser Liste.</target>
       </trans-unit>
 
+      <trans-unit id="listed-h1" datatype="html">
+        <source>Listed</source>
+        <target>Gelistet</target>
+      </trans-unit>
+
+      <trans-unit id="listed-you-are-member" datatype="html">
+        <source>You are a member of the following lists.</source>
+        <target>Sie sind Mitglied der folgenden Listen.</target>
+      </trans-unit>
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">

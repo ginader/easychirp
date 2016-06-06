@@ -735,6 +735,10 @@ div.msgBoxNeg {
 	margin-right: .5rem;
 	line-height: 1.2rem;
 }
+.twList .listed dt {
+	margin-top: 0;
+	line-height: 1rem;
+}
 #profile dt:after,
 .twList dt:after {
 	content:':';
@@ -747,10 +751,13 @@ div.msgBoxNeg {
 	margin-left: 0;
 	line-height: 1.2rem;
 }
+.twList .listed dd {
+	margin-top: 0;
+	line-height: 1rem;
+}
 #editProfileUpdateBtn {
 	margin-left: 30%;
 }
-
 .article_mentions dt {
 	margin: 1.2rem 0 .25rem 0;
 	line-height: 1.25rem;

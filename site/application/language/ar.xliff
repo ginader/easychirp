@@ -965,6 +965,16 @@
         <target>أنت صاحب هذه القائمة.</target>
       </trans-unit>
 
+      <trans-unit id="listed-h1" datatype="html">
+        <source>Listed</source>
+        <target>المدرجة</target>
+      </trans-unit>
+
+      <trans-unit id="listed-you-are-member" datatype="html">
+        <source>You are a member of the following lists.</source>
+        <target>كنت عضوا في القوائم التالية.</target>
+      </trans-unit>
+
       <!-- MENTIONS -->
 
       <trans-unit id="mentions-h1" datatype="html">
