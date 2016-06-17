@@ -88,6 +88,9 @@
 	<dt><a href="https://abilitynet.org.uk/blog/brief-history-accessibility-twitter-ten-tweets-mark-twitters-10th-birthday">A brief history of accessibility on Twitter in ten tweets to mark Twitter's 10th birthday</a></dt>
 		<dd>AbilityNet</dd>
 		<dd>2016 Mar 21</dd>
+	<dt><a href="http://yinwahkreher.com/2015/11/08/screenreaders-twitter-and-ocr/">Screenreaders, Twitter and OCR</a></dt>
+		<dd>Yin Wah Kreher</dd>
+		<dd>2015 Nov 08</dd>
 	<dt><a href="http://www.equipmentlink.org/blog/?p=3228">Easy Chirp, an accessible Twitter alternative</a></dt>
 		<dd>Where It's AT – Assistive Technology Blog (Maryland Department of Disabilities)</dd>
 		<dd>2015 Oct 21</dd>
