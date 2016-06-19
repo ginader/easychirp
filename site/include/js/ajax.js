@@ -469,7 +469,8 @@ function theRespGuts(e) {
 		url: data.url,
 		success: function(response) {
 			data.respParent.after(response);
-			$("a[rel='response']").bind('click', theRespGuts);
+			$("a[rel='response']").bind('click', theRespGuts).attr("role","button");
+			$(data.respParent).siblings().find('[tabindex=-1]').focus();
 		},
 		error: function(xhr) {
 			alert('Error. Status = ' + xhr.status);
@@ -477,7 +478,7 @@ function theRespGuts(e) {
 	});
 	$(this).focus();
 }
-$('a[rel="response"]').bind('click', theRespGuts);
+$('a[rel="response"]').bind('click', theRespGuts).attr("role","button");
 
 // Ajax for adding a saved search
 $('a[href*="search_save"]').click(function(e) {
