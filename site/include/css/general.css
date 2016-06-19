@@ -294,6 +294,10 @@ overflow: hidden;
 .ar{text-align:right;}
 .ac{text-align:center;}
 
+@keyframes FadeIn {
+  from { opacity:0; } to { opacity:1; }
+}
+
 /* Layout **************************************************/
 
 #wrapper {
@@ -913,6 +917,10 @@ button:hover, button:focus,
 }
 .tweet.respond .btnOptions {
 	display: none;
+}
+.tweet.respond:focus {
+	border-color: #0487E0;
+	animation: FadeIn ease-in 0.5s;
 }
 .tweet .fave {
 	float: right;
