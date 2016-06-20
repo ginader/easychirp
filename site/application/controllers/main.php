@@ -2736,22 +2736,28 @@ class Main extends EC_Controller {
 		// Error handling
 		if (isset($this->_data['user']->errors[0]->code)) {
 			$this->_data['error'] = "not_found";
-			$this->_data['user'] = $screen_name;
+			$this->_data['screen_name'] = $screen_name;
 		}
 		else {
-			$request_param['count'] = 3; // Overriding TWEETS_PER_PAGE because it should only show a subset
-			$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
-
-			$this->_data['tweets'] = $this->load->view('fragments/tweet', 
-				array(
-					'tweets' => $tweets, 
-					'utc_offset' => $this->session->userdata('utc_offset'),
-					'xliff_reader' => $this->_data['xliff_reader']
-				), TRUE);
-
 			$request_param['source_screen_name'] =  $this->session->userdata('screen_name');
 			$request_param['target_screen_name'] =  $screen_name;
 			$this->_data['friendship'] = $this->twitter_lib->get('friendships/show', $request_param);
+
+			// if user is not protected, OR if user is protected tweet AND auth user is following this user, then get tweets
+			if ( $this->_data['user']->protected == 0 || 
+			( $this->_data['user']->protected == 1 && $this->_data['friendship']->relationship->target->followed_by == true) ) { 
+
+				$request_param['count'] = 3; // Overriding TWEETS_PER_PAGE because it should only show a subset
+				$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
+
+				$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+					array(
+						'tweets' => $tweets, 
+						'utc_offset' => $this->session->userdata('utc_offset'),
+						'xliff_reader' => $this->_data['xliff_reader']
+					), TRUE);
+			}
+
 		}
 
 		$this->layout->set_title( $this->xliff_reader->get('user-h1') );
