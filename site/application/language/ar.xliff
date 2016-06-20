@@ -2095,6 +2095,11 @@
         <target>يتم هذا المستخدم لي بعد؟</target>
       </trans-unit>
 
+      <trans-unit id="user-protected" datatype="html">
+        <source>protected tweets</source>
+        <target>تويت المحمية</target>
+      </trans-unit>
+
       <!-- FOOTER -->
 
       <trans-unit id="footer-select-language" datatype="html">

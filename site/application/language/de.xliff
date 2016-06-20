@@ -2095,6 +2095,11 @@
         <target>Ist dieser Benutzer, mir zu folgen?</target>
       </trans-unit>
 
+      <trans-unit id="user-protected" datatype="html">
+        <source>protected tweets</source>
+        <target>geschützte Tweets</target>
+      </trans-unit>
+
       <!-- FOOTER -->
 
       <trans-unit id="footer-select-language" datatype="html">

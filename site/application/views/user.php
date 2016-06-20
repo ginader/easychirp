@@ -50,7 +50,7 @@ else {
 		<?php 
 		echo $user->name . " / @" . $user->screen_name; 
 		if ($user->protected == 1) {
-			echo " [protected tweets]";
+			echo " [" . $xliff_reader->get('user-protected') . "]";
 		}
 		?>
 	</h3>
@@ -201,7 +201,7 @@ else {
 	}
 	else {
 		echo '<div class="box1 rounded">';
-		echo '<p style="padding-top: 1em;">[protected tweets]</p>';
+		echo '<p style="padding-top: 1em;">[' . $xliff_reader->get('user-protected') . ']</p>';
 		echo '</div>';
 	}
 
