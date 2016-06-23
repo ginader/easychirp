@@ -934,10 +934,15 @@ button:hover, button:focus,
 	margin-left: -140px;
 	margin-top: 3px;
 }
-.dm .btn {
+.dm .btn,
+.li-mem-del a {
 	text-decoration: none;
 	padding: .35rem;
 	margin: .25rem .35rem 0 0;
+}
+.li-mem-del {
+	float: right;
+	margin-top: -1.5rem;
 }
 .dm .dmActions {
 	margin-bottom: -.15rem;

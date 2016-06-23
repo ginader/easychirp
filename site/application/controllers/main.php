@@ -1110,6 +1110,44 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Delete a List Member
+	 *
+	 * @param integer $id the unique ID of the user you want to delete
+	 * @param string $ajax optional. Default is FALSE. if true, data will be returned as JSON.
+	 * @return void|json
+	 */
+	public function list_member_delete($owner, $id, $slug, $member, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['list_id'] = $id;
+		$request_param['slug'] = $slug;
+		$request_param['screen_name'] = $member;
+		//$request_param['owner_screen_name'] = $owner; //$session_data['screen_name'];
+
+		$data = $this->twitter_lib->post('lists/members/destroy', $request_param);
+
+		if ($ajax == "true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'list_members/' . $owner . '/' . $id . '/' . $slug . '/?action=member_deleted&member=' . $member);
+		}
+	}
+
+	/**
 	 * Manages the list_timeline page - /list_timeline
 	 *
 	 * @return void

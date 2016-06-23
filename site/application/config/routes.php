@@ -83,6 +83,7 @@ $route['list_timeline/(:any)/(:any)/(:any)'] = "main/list_timeline/$1/$2/$3";
 $route['list_delete'] = "main/list_delete";
 $route['list_create'] = "main/list_create";
 $route['list_add_member/(:any)'] = "main/list_add_member/$1";
+$route['list_member_delete/(:any)/(:any)/(:any)/(:any)/(:any)'] = "main/list_member_delete/$1/$2/$3/$4/$5"; // owner, ID, slug, member, ajax
 $route['list_subscribe'] = "main/list_subscribe";
 $route['list_unsubscribe'] = "main/list_unsubscribe";
 $route['list_subscribers/(:any)/(:any)/(:any)'] = "main/list_subscribers/$1/$2/$3";

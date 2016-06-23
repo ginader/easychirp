@@ -4,6 +4,14 @@ echo $xliff_reader->get('lists-h1') . " : ". rawurldecode($list_name) . " : " . 
 ?>
 </h1>
 
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "member_deleted") {
+		echo '<div class="msgBoxPos rounded" style="margin: 1rem 0;">' . $_GET["member"] . ' deleted from list'.'</div>';
+	}
+}
+?>
+
 <p class="marginAdjustment"><a href="/list_timeline/<?php echo $list_id; ?>/false">View list timeline</a>. 
 	The owner of this list is <a href="/user/<?php echo $list_owner; ?>"><?php echo $list_owner; ?></a>.
 	View <a href="/list_subscribers/<?php echo $list_owner; ?>/<?php echo $list_id; ?>/<?php echo $list_name; ?>">subscribers of this list</a>. 
@@ -37,6 +45,19 @@ foreach ($f->users as $user):
 		<?php echo $xliff_reader->get('profile-dt-followers'); ?> 
 		<?php echo anchor('/followers/' . $user->screen_name, $user->followers_count); ?> 
 	</p>
+	<div class="li-mem-del">
+		<?php 
+		if ($screen_name === $list_owner) {
+		?>
+		<a href="/list_member_delete/<?php echo $screen_name; ?>/<?php echo $list_id; ?>/<?php echo $list_name; ?>/<?php echo $user->screen_name; ?>/false" class="btn" title="<?php echo $xliff_reader->get('global-delete'); ?>">
+			<span aria-hidden="true" class="icon-close"></span>
+			<span class="hide"><?php echo $xliff_reader->get('global-delete'); ?></span>
+		</a>
+		<?php
+		}
+		?>
+	</div>
+
 </div>
 <?php
 endforeach;
