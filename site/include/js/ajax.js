@@ -1,5 +1,5 @@
 
-// Ajax for creating/destroying a favorite
+// Creating/destroying a favorite
 $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
@@ -50,7 +50,7 @@ $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 	}
 });
 
-// Ajax for creating/destroying a blocked user
+// Creating/destroying a blocked user
 $('a[href*="block_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
@@ -110,7 +110,7 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 	}
 });
 
-// Ajax for muting/unmuting a user
+// Muting/unmuting a user
 $('a[href*="mute_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
@@ -162,7 +162,7 @@ $('a[href*="mute_"]').attr("role","button").click(function(e) {
 	}
 });
 
-// Ajax for deleting a DM
+// Deleting a DM
 $('a[href*="direct_delete"]').attr("role","button").click(function(e) {
 
 	if (!confirm(txtAlertSureDelete)) {
@@ -192,7 +192,7 @@ $('a[href*="direct_delete"]').attr("role","button").click(function(e) {
 	})
 });
 
-// Ajax for adding a member to a list
+// Adding a member to a list
 $('.frmListAddMember').submit(function(e) {
 
 	e.preventDefault();
@@ -221,7 +221,7 @@ $('.frmListAddMember').submit(function(e) {
 	});
 });
 
-// Ajax for uploading image
+// Uploading image
 $('#frmTweetImage').submit(function(e, files) {
 
 	e.preventDefault();
@@ -313,7 +313,7 @@ $('#frmTweetImage').submit(function(e, files) {
 
 });
 
-// Ajax for creating a retweet // will do destroying later
+// Creating a retweet // will do destroying later
 $('a[href*="retweet_"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
@@ -366,7 +366,7 @@ $('a[href*="retweet_"]').attr("role","button").click(function(e) {
 	// }
 });
 
-// Ajax for following/unfollowing a user
+// Following/unfollowing a user
 $('a[href*="follow_user"]').attr("role","button").click(function(e) {
 	e.preventDefault();
 
@@ -419,7 +419,7 @@ $('a[href*="follow_user"]').attr("role","button").click(function(e) {
 	}
 });
 
-// Ajax for deleting a tweet
+// Deleting a tweet
 $('a[href*="tweet_delete"]').click(function(e) {
 
 	if (!confirm(txtAlertSureDelete)) {
@@ -449,7 +449,7 @@ $('a[href*="tweet_delete"]').click(function(e) {
 	})
 });
 
-// Ajax for tweet threads/conversation via reply
+// Tweet threads/conversation via reply
 function theRespGuts(e) {
 	e.preventDefault();
 
@@ -506,7 +506,7 @@ $('a[href*="search_save"]').click(function(e) {
 	})
 });
 
-// Ajax for shortening a URL
+// Shortening a URL
 
 // Clear shortened URL
 var txtClear = $("#frmUrlShort").attr("data-clear");
@@ -600,5 +600,4 @@ $("#frmUrlShort").submit(function(ev) {
 			alert("error");
 		}
 	});
-
 });
