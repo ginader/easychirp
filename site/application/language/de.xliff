@@ -255,6 +255,11 @@
         <target>Dieser Nutzer ist nicht mehr Stumm geschaltet.</target>
       </trans-unit>
 
+      <trans-unit id="msg-list-member-deleted" datatype="html">
+        <source>Member of list deleted.</source>
+        <target>Mitglied der Liste gelöscht.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">

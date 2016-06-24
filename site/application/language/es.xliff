@@ -247,12 +247,17 @@
 
       <trans-unit id="gbl-msg-mute" datatype="html">
         <source>The user has been muted.</source>
-        <target>The user has been muted.</target>
+        <target>El usuario ha sido silenciado.</target>
       </trans-unit>
 
       <trans-unit id="gbl-msg-unmute" datatype="html">
         <source>The user has been unmuted.</source>
-        <target>The user has been unmuted.</target>
+        <target>El usuario no se ha silenciado.</target>
+      </trans-unit>
+
+      <trans-unit id="msg-list-member-deleted" datatype="html">
+        <source>Member of list deleted.</source>
+        <target>Miembro de la lista eliminado.</target>
       </trans-unit>
 
       <!-- SKIP LINKS -->

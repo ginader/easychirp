@@ -255,6 +255,11 @@
         <target>قد تم إلغاء كتم صوت المستخدم.</target>
       </trans-unit>
 
+      <trans-unit id="msg-list-member-deleted" datatype="html">
+        <source>Member of list deleted.</source>
+        <target>عضو في قائمة حذف.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">

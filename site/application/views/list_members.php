@@ -1,4 +1,4 @@
-<h1 class="rounded">
+<h1 class="rounded" data-msg-list-member-deleted="<?php echo $xliff_reader->get('msg-list-member-deleted'); ?>">
 <?php
 echo $xliff_reader->get('lists-h1') . " : ". rawurldecode($list_name) . " : " . $xliff_reader->get('lists-mems');
 ?>

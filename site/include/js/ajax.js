@@ -192,6 +192,36 @@ $('a[href*="direct_delete"]').attr("role","button").click(function(e) {
 	})
 });
 
+// Deleting a list member
+$('a[href*="list_member_delete"]').attr("role","button").click(function(e) {
+
+	if (!confirm(txtAlertSureDelete)) {
+		 return false;
+	}
+
+	e.preventDefault();
+
+	var a = $(this);
+	var url_send = this.href.replace("false","true");
+	var txt = {};
+	txt.AlertDeleted = $("h1").attr("data-msg-list-member-deleted");
+
+	$.ajax({
+		url: url_send,
+		success: function(response) {
+
+			$(a).parent().parent().hide('slow', function() {
+				this.remove();
+				alert(txt.AlertDeleted);
+			});
+
+		},
+		error: function(xhr) {
+			alert('Error. Status = ' + xhr.status);
+		}
+	})
+});
+
 // Adding a member to a list
 $('.frmListAddMember').submit(function(e) {
 
@@ -480,7 +510,7 @@ function theRespGuts(e) {
 }
 $('a[rel="response"]').bind('click', theRespGuts).attr("role","button");
 
-// Ajax for adding a saved search
+// Adding a saved search
 $('a[href*="search_save"]').click(function(e) {
 
 	e.preventDefault();
