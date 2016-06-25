@@ -4,7 +4,4 @@
 require_once 'fragments/write_tweet.php';
 ?>
 
-<div id="mentions">
 <?php echo $tweets; ?>
-</div>
-

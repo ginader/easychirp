@@ -12,6 +12,4 @@ if ($screen_name !== $this->session->userdata('screen_name'))
 require_once 'fragments/write_tweet.php';
 ?>
 
-<div id="favorites">
-	<?php echo $tweets; ?>
-</div>
+<?php echo $tweets; ?>
