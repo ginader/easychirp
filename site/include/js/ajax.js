@@ -500,7 +500,7 @@ function theRespGuts(e) {
 		success: function(response) {
 			data.respParent.after(response);
 			$("a[rel='response']").bind('click', theRespGuts).attr("role","button");
-			$(data.respParent).next().find('[tabindex=-1]').focus();
+			$(data.respParent).next('[tabindex=-1]').focus();
 		},
 		error: function(xhr) {
 			alert('Error. Status = ' + xhr.status);

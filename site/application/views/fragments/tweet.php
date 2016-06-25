@@ -12,10 +12,6 @@
 
 $index = 0;
 
-?>
-<div id="timeline">
-<?php
-
 if (isset($tweets) && sizeof($tweets) > 0):
 
 $i = sizeof($tweets) - 1;
@@ -261,7 +257,6 @@ else:
 	echo '</div>';
 endif;
 ?>
-</div>
 
 <?php
 if (isset($paginateSearch) && $paginateSearch && sizeof($tweets) > 0) {
@@ -280,7 +275,4 @@ if (isset($paginateSearch) && $paginateSearch && sizeof($tweets) > 0) {
 <?php
 //debug_object( $tweet );
 //echo json_encode($tweet); 
-?>
-
-<?php
 
