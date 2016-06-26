@@ -762,6 +762,14 @@ div.msgBoxNeg {
 #editProfileUpdateBtn {
 	margin-left: 30%;
 }
+.editProfile #url,
+.editProfile textarea {
+	width: 99%;
+}
+.editProfile #name,
+.editProfile #location {
+	width: 60%;
+}
 .article_mentions dt {
 	margin: 1.2rem 0 .25rem 0;
 	line-height: 1.25rem;
@@ -1401,7 +1409,10 @@ body.theme-inverse {
 	#enterTweet textarea {
 		width: 90%;
 	}
-
+	.editProfile #name,
+	.editProfile #location {
+		width: 99%;
+	}
 	.tweet .imgThumb img {
 		max-width: 440px;
 	}

@@ -24,16 +24,15 @@ if (isset($_GET["action"])) {
 			<dd><input class="input1" type="text" id="name" name="name" maxlength="20" size="30" value="<?php echo $profile->name; ?>" /></dd>
 			
 			<dt><label for="location"><?php echo $xliff_reader->get('profile-dt-location'); ?></label></dt>
-			<dd><input class="input1" type="text" id="location" name="location" maxlength="30" size="30" value="<?php echo $profile->location; ?>" /></dd>
+			<dd><input class="input1" type="text" id="location" name="location" maxlength="30" size="40" value="<?php echo $profile->location; ?>" /></dd>
 			
 			<dt><label for="description"><?php echo $xliff_reader->get('profile-dt-bio'); ?></label></dt>
-			<dd><input class="input1" type="text" id="description" name="description" 
-				maxlength="160" size="70" style="width:98%;" aria-describedby="descHelp" 
-				value="<?php echo $profile->description; ?>" /><br />
-				<span id="descHelp">Maximum 160 characters.</span></dd>
+			<dd><textarea class="input1" id="description" name="description" 
+				maxlength="160" cols="70" rows="3" aria-describedby="descHelp"><?php echo $profile->description; ?></textarea>
+				<br /><span id="descHelp">Maximum 160 characters.</span></dd>
 
 			<dt><label for="url"><?php echo $xliff_reader->get('profile-dt-website'); ?></label></dt>
-			<dd><input class="input1" type="text" id="url" name="url" maxlength="100" size="50" style="width:98%;" value="<?php echo $profile->entities->url->urls[0]->expanded_url; ?>" /></dd>
+			<dd><input class="input1" type="text" id="url" name="url" maxlength="100" size="50" value="<?php echo $profile->entities->url->urls[0]->expanded_url; ?>" /></dd>
 		</dl>
 		<div id="editProfileUpdateBtn" class="clear">
 			<button type="submit" style="margin-left: .5rem;"><?php echo $xliff_reader->get('edit-profile-update'); ?></button>
