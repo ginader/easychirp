@@ -293,6 +293,10 @@ overflow: hidden;
 .ar{text-align:right;}
 .ac{text-align:center;}
 
+@keyframes FadeIn {
+  from { opacity:0; } to { opacity:1; }
+}
+
 /* Layout **************************************************/
 
 #wrapper {
@@ -734,6 +738,10 @@ div.msgBoxNeg {
 	margin-right: .5rem;
 	line-height: 1.2rem;
 }
+.twList .listed dt {
+	margin-top: 0;
+	line-height: 1rem;
+}
 #profile dt:after,
 .twList dt:after {
 	content:':';
@@ -746,10 +754,21 @@ div.msgBoxNeg {
 	margin-left: 0;
 	line-height: 1.2rem;
 }
+.twList .listed dd {
+	margin-top: 0;
+	line-height: 1rem;
+}
 #editProfileUpdateBtn {
 	margin-left: 30%;
 }
-
+.editProfile #url,
+.editProfile textarea {
+	width: 99%;
+}
+.editProfile #name,
+.editProfile #location {
+	width: 60%;
+}
 .article_mentions dt {
 	margin: 1.2rem 0 .25rem 0;
 	line-height: 1.25rem;
@@ -893,6 +912,9 @@ button:hover, button:focus,
 .tweet .imgThumb {
 	clear: left;
 }
+.tweet .imgThumb img {
+	max-height: 260px;
+}
 .tweet.dm {
 	padding-left: 150px;
 	margin: 1rem 0;
@@ -902,6 +924,10 @@ button:hover, button:focus,
 }
 .tweet.respond .btnOptions {
 	display: none;
+}
+.tweet.respond:focus {
+	border-color: #0487E0;
+	animation: FadeIn ease-in 0.5s;
 }
 .tweet .fave {
 	float: right;
@@ -915,10 +941,15 @@ button:hover, button:focus,
 	margin-left: -140px;
 	margin-top: 3px;
 }
-.dm .btn {
+.dm .btn,
+.li-mem-del a {
 	text-decoration: none;
 	padding: .35rem;
 	margin: .25rem .35rem 0 0;
+}
+.li-mem-del {
+	float: right;
+	margin-top: -1.5rem;
 }
 .dm .dmActions {
 	margin-bottom: -.15rem;
@@ -1377,9 +1408,12 @@ body.theme-inverse {
 	#enterTweet textarea {
 		width: 90%;
 	}
-
+	.editProfile #name,
+	.editProfile #location {
+		width: 99%;
+	}
 	.tweet .imgThumb img {
-		max-width: 500px;
+		max-width: 440px;
 	}
 }
 

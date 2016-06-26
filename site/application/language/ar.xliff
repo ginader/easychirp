@@ -255,6 +255,11 @@
         <target>قد تم إلغاء كتم صوت المستخدم.</target>
       </trans-unit>
 
+      <trans-unit id="msg-list-member-deleted" datatype="html">
+        <source>Member of list deleted.</source>
+        <target>عضو في قائمة حذف.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -963,6 +968,16 @@
       <trans-unit id="lists-you-are-owner" datatype="html">
         <source>You are the owner of this list.</source>
         <target>أنت صاحب هذه القائمة.</target>
+      </trans-unit>
+
+      <trans-unit id="listed-h1" datatype="html">
+        <source>Listed</source>
+        <target>المدرجة</target>
+      </trans-unit>
+
+      <trans-unit id="listed-you-are-member" datatype="html">
+        <source>You are a member of the following lists.</source>
+        <target>كنت عضوا في القوائم التالية.</target>
       </trans-unit>
 
       <!-- MENTIONS -->
@@ -2083,6 +2098,11 @@
       <trans-unit id="user-is-following-me" datatype="html">
         <source>Is this user following me?</source>
         <target>يتم هذا المستخدم لي بعد؟</target>
+      </trans-unit>
+
+      <trans-unit id="user-protected" datatype="html">
+        <source>protected tweets</source>
+        <target>تويت المحمية</target>
       </trans-unit>
 
       <!-- FOOTER -->

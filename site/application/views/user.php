@@ -28,7 +28,7 @@ if (isset($_GET["action"])) {
 if (isset($error)) {
 	if ($error === "not_found") {
 		echo '<h1 class="rounded">' . $xliff_reader->get('user-h1') . '</h1>';
-		echo '<h2 class="marginAdjustment">Error. Did not find "' . $user . '".</h2>';
+		echo '<h2 class="marginAdjustment">Error. Did not find "' . $screen_name . '".</h2>';
 	}
 }
 else {
@@ -47,7 +47,12 @@ else {
 		$profileImageLongURL = str_replace("_normal", "" ,$user->profile_image_url);
 	?>
 	<h3><a target="_blank" href="<?php echo $profileImageLongURL; ?>" title="<?php echo $xliff_reader->get('user-pic-open-orig'); ?>"><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="<?php echo $xliff_reader->get('user-pic-alt'); ?>" /></a>
-		<?php echo $user->name . " / @" . $user->screen_name; ?>
+		<?php 
+		echo $user->name . " / @" . $user->screen_name; 
+		if ($user->protected == 1) {
+			echo " [" . $xliff_reader->get('user-protected') . "]";
+		}
+		?>
 	</h3>
 	
 	<p><?php
@@ -189,9 +194,15 @@ else {
 	</dl>
 </div>
 
-<h2 class="marginAdjustment"><?php echo $xliff_reader->get('profile-h2-latest'); ?></h2>
+<?php
+	echo '<h2 class="marginAdjustment">' . $xliff_reader->get('profile-h2-latest') . '</h2>';
+	if (isset($tweets)) {
+		echo $tweets;
+	}
+	else {
+		echo '<div class="box1 rounded">';
+		echo '<p style="padding-top: 1em;">[' . $xliff_reader->get('user-protected') . ']</p>';
+		echo '</div>';
+	}
 
-<?php 
-echo $tweets;
 }
-?>

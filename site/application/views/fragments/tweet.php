@@ -12,10 +12,6 @@
 
 $index = 0;
 
-?>
-<div id="timeline">
-<?php
-
 if (isset($tweets) && sizeof($tweets) > 0):
 
 $i = sizeof($tweets) - 1;
@@ -210,7 +206,7 @@ foreach($tweets AS $tweet):
 			?></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span aria-hidden="true" class="icon-quote"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
 			<?php if (isset($tweet->user)): ?>
-			<li><a href="mailto:?subject=Tweet from <?php echo $tweet->user->screen_name; ?> [via Easy Chirp]&amp;body=<?php echo htmlentities($tweet->text); ?> [via EasyChirp.com]" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>">
+			<li><a href="mailto:?subject=Tweet+from+@<?php echo $tweet->user->screen_name; ?>+(via+Easy+Chirp)&amp;body=<?php echo urlencode($tweet->text . " \n" . $date . "\n"); ?>via+EasyChirp.com" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>">
 				<span aria-hidden="true" class="icon-mail"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
 			<?php endif; ?>
 			<?php 
@@ -261,7 +257,6 @@ else:
 	echo '</div>';
 endif;
 ?>
-</div>
 
 <?php
 if (isset($paginateSearch) && $paginateSearch && sizeof($tweets) > 0) {
@@ -280,7 +275,4 @@ if (isset($paginateSearch) && $paginateSearch && sizeof($tweets) > 0) {
 <?php
 //debug_object( $tweet );
 //echo json_encode($tweet); 
-?>
-
-<?php
 

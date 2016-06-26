@@ -255,6 +255,11 @@
         <target>L'utilisateur à été re-accepté</target>
       </trans-unit>
 
+      <trans-unit id="msg-list-member-deleted" datatype="html">
+        <source>Member of list deleted.</source>
+        <target>Membre de la liste supprimée.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -963,6 +968,16 @@
       <trans-unit id="lists-you-are-owner" datatype="html">
         <source>You are the owner of this list.</source>
         <target>Vous êtes le propriétaire de cette liste.</target>
+      </trans-unit>
+
+      <trans-unit id="listed-h1" datatype="html">
+        <source>Listed</source>
+        <target>Énumérés</target>
+      </trans-unit>
+
+      <trans-unit id="listed-you-are-member" datatype="html">
+        <source>You are a member of the following lists.</source>
+        <target>Vous êtes un membre des listes suivantes.</target>
       </trans-unit>
 
       <!-- MENTIONS -->
@@ -2083,6 +2098,11 @@
       <trans-unit id="user-is-following-me" datatype="html">
         <source>Is this user following me?</source>
         <target>Cet utilisateur me suit-il?</target>
+      </trans-unit>
+
+      <trans-unit id="user-protected" datatype="html">
+        <source>protected tweets</source>
+        <target>tweets protégés</target>
       </trans-unit>
 
       <!-- FOOTER -->

@@ -681,7 +681,7 @@ class Main extends EC_Controller {
 		 *
 		 * @todo move this to the tweet fragment.
 		 */
-		echo str_replace('class="tweet', 'role="alert" class="respond tweet', $theTweet);
+		echo str_replace('class="tweet', 'tabindex="-1" class="respond tweet', $theTweet);
 	}
 
 	/**
@@ -1110,6 +1110,44 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Delete a List Member
+	 *
+	 * @param integer $id the unique ID of the user you want to delete
+	 * @param string $ajax optional. Default is FALSE. if true, data will be returned as JSON.
+	 * @return void|json
+	 */
+	public function list_member_delete($owner, $id, $slug, $member, $ajax = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+		$request_param['list_id'] = $id;
+		$request_param['slug'] = $slug;
+		$request_param['screen_name'] = $member;
+		//$request_param['owner_screen_name'] = $owner; //$session_data['screen_name'];
+
+		$data = $this->twitter_lib->post('lists/members/destroy', $request_param);
+
+		if ($ajax == "true") {
+			echo json_encode($data);
+		}
+		else {
+			redirect( base_url() . 'list_members/' . $owner . '/' . $id . '/' . $slug . '/?action=member_deleted&member=' . $member);
+		}
+	}
+
+	/**
 	 * Manages the list_timeline page - /list_timeline
 	 *
 	 * @return void
@@ -1188,6 +1226,44 @@ class Main extends EC_Controller {
 		$this->layout->set_title( $this->xliff_reader->get('lists-h1') );
 		$this->layout->set_description('Twitter lists - subscribed and owned');
 		$this->layout->view('lists', $this->_data);
+	}
+
+	/**
+	 * Manages the Listed page - /listed
+	 *
+	 * @param $list_owner, $list_id, $list_name
+	 * @return void
+	 */
+	public function listed($cursor = FALSE)
+	{
+		$this->redirect_if_not_logged_in();
+
+		$this->_data['xliff_reader'] = $this->xliff_reader;
+
+		$params = array();
+		$params[] = $this->config->item('tw_consumer_key');
+		$params[] = $this->config->item('tw_consumer_secret');
+		$params[] = $this->session->userdata('user_oauth_token');
+		$params[] = $this->session->userdata('user_oauth_token_secret');
+
+		$this->load->library('twitter_lib');
+		$this->twitter_lib->connect($params);
+
+		$request_param = array();
+
+		$this->_data['cursor'] = -1;
+		if ($cursor !== FALSE && $cursor !== "false") {
+			$request_param['cursor'] = $cursor;
+			$this->_data['cursor'] = $cursor;
+		}
+
+		$this->_data['listed'] = $this->twitter_lib->get('lists/memberships', $request_param);
+
+		$page_title = $this->xliff_reader->get('listed-h1');
+
+		$this->layout->set_title( $page_title );
+		$this->layout->set_description('Lists of which user is a member.');
+		$this->layout->view('listed', $this->_data);
 	}
 
 	/**
@@ -2698,22 +2774,28 @@ class Main extends EC_Controller {
 		// Error handling
 		if (isset($this->_data['user']->errors[0]->code)) {
 			$this->_data['error'] = "not_found";
-			$this->_data['user'] = $screen_name;
+			$this->_data['screen_name'] = $screen_name;
 		}
 		else {
-			$request_param['count'] = 3; // Overriding TWEETS_PER_PAGE because it should only show a subset
-			$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
-
-			$this->_data['tweets'] = $this->load->view('fragments/tweet', 
-				array(
-					'tweets' => $tweets, 
-					'utc_offset' => $this->session->userdata('utc_offset'),
-					'xliff_reader' => $this->_data['xliff_reader']
-				), TRUE);
-
 			$request_param['source_screen_name'] =  $this->session->userdata('screen_name');
 			$request_param['target_screen_name'] =  $screen_name;
 			$this->_data['friendship'] = $this->twitter_lib->get('friendships/show', $request_param);
+
+			// if user is not protected, OR if user is protected tweet AND auth user is following this user, then get tweets
+			if ( $this->_data['user']->protected == 0 || 
+			( $this->_data['user']->protected == 1 && $this->_data['friendship']->relationship->target->followed_by == true) ) { 
+
+				$request_param['count'] = 3; // Overriding TWEETS_PER_PAGE because it should only show a subset
+				$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
+
+				$this->_data['tweets'] = $this->load->view('fragments/tweet', 
+					array(
+						'tweets' => $tweets, 
+						'utc_offset' => $this->session->userdata('utc_offset'),
+						'xliff_reader' => $this->_data['xliff_reader']
+					), TRUE);
+			}
+
 		}
 
 		$this->layout->set_title( $this->xliff_reader->get('user-h1') );

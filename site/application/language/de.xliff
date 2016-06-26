@@ -255,6 +255,11 @@
         <target>Dieser Nutzer ist nicht mehr Stumm geschaltet.</target>
       </trans-unit>
 
+      <trans-unit id="msg-list-member-deleted" datatype="html">
+        <source>Member of list deleted.</source>
+        <target>Mitglied der Liste gelöscht.</target>
+      </trans-unit>
+
       <!-- SKIP LINKS -->
 
       <trans-unit id="skip-sign-in" datatype="html">
@@ -973,6 +978,16 @@
       <trans-unit id="lists-you-are-owner" datatype="html">
         <source>You are the owner of this list.</source>
         <target>Sie sind der Eigentümer dieser Liste.</target>
+      </trans-unit>
+
+      <trans-unit id="listed-h1" datatype="html">
+        <source>Listed</source>
+        <target>Gelistet</target>
+      </trans-unit>
+
+      <trans-unit id="listed-you-are-member" datatype="html">
+        <source>You are a member of the following lists.</source>
+        <target>Sie sind Mitglied der folgenden Listen.</target>
       </trans-unit>
 
       <!-- MENTIONS -->
@@ -2083,6 +2098,11 @@
       <trans-unit id="user-is-following-me" datatype="html">
         <source>Is this user following me?</source>
         <target>Ist dieser Benutzer, mir zu folgen?</target>
+      </trans-unit>
+
+      <trans-unit id="user-protected" datatype="html">
+        <source>protected tweets</source>
+        <target>geschützte Tweets</target>
       </trans-unit>
 
       <!-- FOOTER -->
