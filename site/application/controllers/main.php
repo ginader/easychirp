@@ -460,7 +460,6 @@ class Main extends EC_Controller {
 		if ( $tweet_id) {
 			$request_param['max_id'] = $tweet_id;
 		}
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		$pagination_path = '/favorites/' . $request_param['screen_name'] . '/';
 
@@ -1173,7 +1172,6 @@ class Main extends EC_Controller {
 		if ($tweet_id !== FALSE && $tweet_id !== "false") {
 			$request_param['max_id'] = $tweet_id;
 		}
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		$pagination_path = '/list_timeline/'.$list_id.'/'.$subscribed.'/';
 
@@ -1337,7 +1335,6 @@ class Main extends EC_Controller {
 		if ($tweet_id) {
 			$request_param['max_id'] =  $tweet_id;
 		}
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
 		$tweets_data = array(
@@ -1470,7 +1467,6 @@ class Main extends EC_Controller {
 		if ($tweet_id) {
 			$request_param['max_id'] = $tweet_id;
 		}
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		$pagination_path = '/mytweets/';
 
@@ -1630,7 +1626,6 @@ class Main extends EC_Controller {
 		$this->session->set_userdata($session_data);
 
 		$request_param['count'] = 3; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
@@ -1766,7 +1761,6 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['id'] =  $tweet_id;
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
@@ -1821,7 +1815,6 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['id'] =  $tweet_id;
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param);
 		$tweets = array();
@@ -2415,7 +2408,6 @@ class Main extends EC_Controller {
 		{
 			$request_param['id'] = $tweet_id;
 		}
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		// Get general data
 		$data = $this->twitter_lib->get('statuses/show', $request_param);
@@ -2502,7 +2494,6 @@ class Main extends EC_Controller {
 		$request_param = array();	
 		$request_param['count'] = TWEETS_PER_PAGE;
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		if (FALSE !== $tweet_id)
 		{
@@ -2836,7 +2827,6 @@ class Main extends EC_Controller {
 		if ($tweet_id) {
 			$request_param['max_id'] = $tweet_id;
 		}
-		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param );
 
 		// @todo create a page header for user timeline that lets the username be passed in.
