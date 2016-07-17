@@ -43,7 +43,7 @@ class EC_Controller extends CI_Controller {
 		if($this->uri->total_segments() == 0) {
 			$this->layout->set_tagline('a simple web-based Twitter application accessible to all');
 		}
-		$this->layout->set_description('Easy Chirp is a web-based Twitter app with a simple interface. It is optimized for disabled users and works well with assistive technology such as screen readers. It also functions well with keyboard-only users, older browsers such as IE8, a lowband internet connection, and even without JavaScript.');
+		$this->layout->set_description('Easy Chirp is a web-based Twitter app with a simple interface. It is optimized for disabled users and works well with assistive technology such as screen readers. It also functions well with keyboard-only users, older browsers such as IE9, a lowband internet connection, and even no JavaScript.');
 
 		// META TAGS
 		$this->layout->add_meta_tag_name('charset', 'utf-8');
@@ -57,8 +57,8 @@ class EC_Controller extends CI_Controller {
 		$this->layout->add_meta_tag_name('twitter:creator', '@DennisL');
 		$this->layout->add_meta_tag_name('twitter:url', 'http://www.easychirp.com/');
 		$this->layout->add_meta_tag_name('twitter:title', 'Easy Chirp, a user-friendly web-based Twitter app');
-		$this->layout->add_meta_tag_name('twitter:image', 'http://www.easychirp.com/images/easy_chirp_icon_300.png');
-		$this->layout->add_meta_tag_name('twitter:description', 'Easy Chirp is a web-based Twitter app with a simple interface. It is optimized for disabled users and works well with assistive technology such as screen readers. It also functions well with keyboard-only users, older browsers such as IE9, a lowband internet connection, and even without JavaScript.');
+		$this->layout->add_meta_tag_name('twitter:image', 'http://www.easychirp.com/images/brand/easy_chirp_icon_300.png');
+		$this->layout->add_meta_tag_name('twitter:description', 'Easy Chirp is a web-based Twitter app with a simple interface. It is optimized for disabled users and works well with assistive technology such as screen readers. It also functions well with keyboard-only users, older browsers such as IE9, a lowband internet connection, and even no JavaScript.');
 
 		$this->layout->add_link_tag('/images/brand/favicon.ico', 'shortcut icon');
 		$this->layout->add_link_tag('/include/css/general.css', 'stylesheet', 'text/css');
