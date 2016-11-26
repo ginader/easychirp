@@ -63,7 +63,7 @@ foreach($tweets AS $tweet):
 	}
 
 	// Link links
-	$tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a target="_blank" href="\1">\1</a>', $tweet_text);
+	$tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a rel="noopener" target="_blank" href="\1">\1</a>', $tweet_text);
 
 	// Link @usernames
 	$tweet_text = preg_replace('/@+([-_0-9a-zA-Z]+)/', '<a href="/user/$1">$0</a>', $tweet_text);
@@ -86,7 +86,7 @@ foreach($tweets AS $tweet):
 		$date2 = date_format($date2,"M d g:i a");
 
 		// Link links
-		$quoted_tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a target="_blank" href="\1">\1</a>', $tweet->quoted_status->text);
+		$quoted_tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a rel="noopener" target="_blank" href="\1">\1</a>', $tweet->quoted_status->text);
 
 		// Link #hashtags
 		$quoted_tweet_text = preg_replace('/\B#([-_0-9a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+)/', '<a href="/search_results?query=%23$1">$0</a>', $quoted_tweet_text);

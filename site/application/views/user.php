@@ -46,7 +46,7 @@ else {
 	<?php
 		$profileImageLongURL = str_replace("_normal", "" ,$user->profile_image_url);
 	?>
-	<h3><a target="_blank" href="<?php echo $profileImageLongURL; ?>" title="<?php echo $xliff_reader->get('user-pic-open-orig'); ?>"><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="<?php echo $xliff_reader->get('user-pic-alt'); ?>" /></a>
+	<h3><a rel="noopener" target="_blank" href="<?php echo $profileImageLongURL; ?>" title="<?php echo $xliff_reader->get('user-pic-open-orig'); ?>"><img src="<?php echo $user->profile_image_url; ?>" width="48" height="48" alt="<?php echo $xliff_reader->get('user-pic-alt'); ?>" /></a>
 		<?php 
 		echo $user->name . " / @" . $user->screen_name; 
 		if ($user->protected == 1) {
@@ -185,7 +185,7 @@ else {
 		<dt><?php echo $xliff_reader->get('profile-dt-bg-image'); ?></dt>
 		<dd><?php
 			if ( isset( $user->profile_background_image_url )) {
-				echo '<a href="' . $user->profile_background_image_url . '" rel="external" target="_blank">' . $xliff_reader->get('profile-view-image') . '</a> ' . $xliff_reader->get('profile-no-alt');
+				echo '<a href="' . $user->profile_background_image_url . '" rel="noopener" target="_blank">' . $xliff_reader->get('profile-view-image') . '</a> ' . $xliff_reader->get('profile-no-alt');
 			}
 			else {
 				echo $xliff_reader->get('profile-no-img');

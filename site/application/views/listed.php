@@ -32,7 +32,7 @@ if (count($listed->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><?php 
 		$listURL = "http://twitter.com/" . $lists->user->screen_name . "/lists/" . $lists->slug;
-		echo '<a rel="external" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
+		echo '<a rel="noopener" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
 		?>
 	</dd>
 </dl>

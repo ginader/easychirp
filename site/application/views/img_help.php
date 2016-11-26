@@ -44,16 +44,17 @@
 
      <main role="main">
           <h2>Short Description</h2>
-          <p>Enter a brief text description for the image. This will be used as a title and an alt attribute on the image. A general suggestion is 3-10 words. 
-               For help on writing a short description for a photo, read section <a href="http://www.w3.org/html/wg/drafts/html/CR/embedded-content-0.html#images-of-pictures">4.7.1.1.14 Images of Pictures</a> in the HTML5 specification.</p>
+          <p>Enter a brief text description for the image. This will be used as a title and an alt attribute on the image. A general suggestion is 5 to 20 words. 
+               For help on writing a short description for a photo, read <a rel="noopener" target="_blank" href="https://www.w3.org/WAI/tutorials/images/informative/">Informative Images
+</a> section of the W3C Web Accessibility Tutorials.</p>
 
           <h2>Long Description</h2>
           <p>Enter a longer, detailed text description for the image, which will used to create a well-formed longdesc attribute on the resulting page.
                Longdesc is valuable to people with visual and cognitive impairments as well as for adding additional context for search engines. 
-               For help on writing a long description, read <a href="http://www.d.umn.edu/itss/training/online/images/long_how/">How to Write Long Text Alternatives</a>.
+               For help on writing a long description, read <a rel="noopener" target="_blank" href="http://www.d.umn.edu/itss/training/online/images/long_how/">How to Write Long Text Alternatives</a>.
           </p>
           <p>Do not enter a URL in the longdesc input field; the longdesc value is automatically provided by Easy Chirp via a dataURI. 
-               For technical details, view the W3C's <a href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension</a>.
+               For technical details, view the W3C's <a rel="noopener" target="_blank" href="http://www.w3.org/TR/html-longdesc/">HTML5 Image Description Extension</a>.
           </p>
 
           <h2>Limitations</h2>
@@ -63,7 +64,7 @@
                     To get around this, use the Imgur service directly; you can edit the descriptions if you're logged in. 
                     Steps: 
                     <ol>
-                         <li>Log into <a href="http://imgur.com/" target="_blank">Imgur.com</a>.</li>
+                         <li>Log into <a href="http://imgur.com/" rel="noopener" target="_blank">Imgur.com</a>.</li>
                          <li>Upload an image with proper descriptions.</li>
                          <li>Append the image's unique ID to &quot;http://easychirp.com/img/&quot;. For example: http://easychirp.com/img/AkoGysu</li>
                          <li>Copy and paste into a tweet. Magic!</li>

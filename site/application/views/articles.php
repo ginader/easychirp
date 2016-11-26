@@ -57,7 +57,7 @@
 	}
 	?>
 
-	<p>Tweets about Easy Chirp are archived via <a href="https://twitter.com/EasyChirp/favorites" rel="external" target="_blank">Easy Chirp's Twitter favorites</a>.</p>
+	<p>Tweets about Easy Chirp are archived via <a href="https://twitter.com/EasyChirp/favorites" rel="noopener" target="_blank">Easy Chirp's Twitter favorites</a>.</p>
 </div>
 
 	</div>
