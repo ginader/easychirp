@@ -78,12 +78,17 @@
 
       <trans-unit id="gbl-blocked-users" datatype="html">
         <source>Blocked Users</source>
-        <target>Blocked Users</target>
+        <target>المستخدمين المحظورين</target>
       </trans-unit>
 
       <trans-unit id="gbl-blocked" datatype="html">
         <source>Blocked</source>
-        <target>Blocked</target>
+        <target>مسدود</target>
+      </trans-unit>
+
+      <trans-unit id="gbl-play-video" datatype="html">
+        <source>play video</source>
+        <target>شغل الفيديو</target>
       </trans-unit>
 
       <!-- SELECT THEME -->

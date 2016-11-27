@@ -86,6 +86,11 @@
         <target>Blockierte</target>
       </trans-unit>
 
+      <trans-unit id="gbl-play-video" datatype="html">
+        <source>play video</source>
+        <target>Video abspielen</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">

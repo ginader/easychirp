@@ -117,8 +117,16 @@ foreach($tweets AS $tweet):
 		if (isset($tweet->extended_entities->media[0]->ext_alt_text)) {
 			echo $tweet->extended_entities->media[0]->ext_alt_text;
 		}
-		echo '" /></div>';
+		echo '" />';
+		// Video/gif link
+		if (isset($tweet->extended_entities->media[0]->video_info->variants[0]->url)) {
+			echo '<div style="margin-bottom: .35em"><a rel="noopener" target="_blank" href="';
+			echo $tweet->extended_entities->media[0]->video_info->variants[0]->url;
+			echo '">'.$xliff_reader->get('gbl-play-video').'</a></div>';
+		}
+		echo '</div>';
 	}
+
 	//echo debug_object( $tweet );
 	
 	// Imgur image
