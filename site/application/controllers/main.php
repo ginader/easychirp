@@ -1786,6 +1786,14 @@ class Main extends EC_Controller {
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
+		$this->_data['more'] = $this->load->view('fragments/tweet_more',
+			array(
+				'screen_name' => $data->user->name,
+				'name' => $data->user->screen_name,
+				'id' => $data->id,
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
+
 		$this->layout->set_title( $this->xliff_reader->get('quote-h1') );
 		$this->layout->set_description('Quote a tweet.');
 		$this->layout->view('timeline', $this->_data);
@@ -1853,6 +1861,14 @@ class Main extends EC_Controller {
 			'tweets' => $tweets,
 			'utc_offset' => $this->session->userdata('utc_offset'),
 			'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
+
+		$this->_data['more'] = $this->load->view('fragments/tweet_more',
+			array(
+				'screen_name' => $data->user->name,
+				'name' => $data->user->screen_name,
+				'id' => $data->id,
+				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('reply-h1') );
@@ -2432,6 +2448,14 @@ class Main extends EC_Controller {
 			array( 
 				'tweets' => $tweets, 
 				'utc_offset' => $this->session->userdata('utc_offset'),
+				'xliff_reader' => $this->_data['xliff_reader']
+			), TRUE);
+
+		$this->_data['more'] = $this->load->view('fragments/tweet_more',
+			array(
+				'screen_name' => $data->user->name,
+				'name' => $data->user->screen_name,
+				'id' => $data->id,
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 

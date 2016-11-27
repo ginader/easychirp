@@ -18,4 +18,7 @@ if (isset($error)) {
 else {
 	echo $write_tweet_form;
 	echo $tweets;
+	if (isset($more)) {
+		echo $more;
+	}
 }
