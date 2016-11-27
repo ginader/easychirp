@@ -117,14 +117,24 @@ foreach($tweets AS $tweet):
 		if (isset($tweet->extended_entities->media[0]->ext_alt_text)) {
 			echo $tweet->extended_entities->media[0]->ext_alt_text;
 		}
-		echo '" />';
+		echo '" /></div>';
+		
 		// Video/gif link
-		if (isset($tweet->extended_entities->media[0]->video_info->variants[0]->url)) {
-			echo '<div style="margin-bottom: .35em"><a rel="noopener" target="_blank" href="';
-			echo $tweet->extended_entities->media[0]->video_info->variants[0]->url;
-			echo '">'.$xliff_reader->get('gbl-play-video').'</a></div>';
+		if (isset($tweet->extended_entities->media[0]->video_info->variants)) {
+			echo '<div class="vidLink">';
+			$arVideos = $tweet->extended_entities->media[0]->video_info->variants;
+			if (isset($arVideos[0]->url) && (strpos($arVideos[0]->url, 'mp4') !== false) ) {
+				$videoHTML = '<a rel="noopener" target="_blank" href="'.$arVideos[0]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+			}
+			else if (isset($arVideos[1]->url) && (strpos($arVideos[1]->url, 'mp4') !== false) ) {
+				$videoHTML = '<a rel="noopener" target="_blank" href="'.$arVideos[1]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+			}
+			else {
+				$videoHTML = "Video link not found.";
+			}
+			echo $videoHTML;
+			echo '</div>';
 		}
-		echo '</div>';
 	}
 
 	//echo debug_object( $tweet );
