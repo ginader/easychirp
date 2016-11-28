@@ -1,18 +1,18 @@
 <?php
 if (isset($action)) {
 	if ($action == "sent") {
-		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-sent').'</div>';
+		echo '<div id="alert-message" tabindex="-1" class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-sent').'</div>';
 	}
 	elseif ($action == "error-not-followed") {
-		echo '<div class="msgBoxNeg rounded">'.$xliff_reader->get('gbl-msg-dm-error-not-followed');
+		echo '<div id="alert-message" tabindex="-1" class="msgBoxNeg rounded">'.$xliff_reader->get('gbl-msg-dm-error-not-followed').' ';
 		echo anchor('/timeline/' . $screen_name, $xliff_reader->get('gbl-tweet-tweet-message') . ' @' . $screen_name);
 		echo '</div>';
 	}
 	elseif ($action == "error-other") {
-		echo '<div class="msgBoxNeg rounded">Error. ' . $_GET["msg"] . '</div>';
+		echo '<div id="alert-message" tabindex="-1" class="msgBoxNeg rounded">Error. ' . $_GET["msg"] . '</div>';
 	}
 	elseif ($action == "deleted") {
-		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-deleted').'</div>';
+		echo '<div id="alert-message" tabindex="-1" class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-deleted').'</div>';
 	}
 }
 ?>
@@ -56,8 +56,14 @@ if (isset($action)) {
 
 <?php
 
-// Set focus to textarea if user defined
+// If user is defined, set focus to alert message if exists OR else the textarea
 if ($screen_name != FALSE) {
-	echo '<script>document.getElementById("txtDirectMessage").focus();</script>';
+	echo '<script>
+	if (document.getElementById("alert-message")) {
+		document.getElementById("alert-message").focus();
+	}
+	else {
+		document.getElementById("txtDirectMessage").focus();
+	}
+	</script>';
 }
-
