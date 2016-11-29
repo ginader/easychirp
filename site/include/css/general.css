@@ -937,7 +937,11 @@ button:hover, button:focus,
 	font-size: 1.35em;
 }
 .tweet .vidLink {
-	margin-bottom: .35em;
+	margin: .4em 0;
+}
+.tweet .vidLink a {
+	padding-left: 1.4em;
+	background:url(../../images/svg/icon-video-play.svg) top left no-repeat;
 }
 .dm .dmAvatars {
 	height: 30px;
