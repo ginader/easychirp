@@ -41,20 +41,20 @@ if ($this->layout->lang_code === "ar") {
 	</div>
 </header>
 
-<nav role="navigation" aria-labelledby="nav-menu-hd">
-	<h2 class="hide" id="nav-menu-hd"><?php echo $xliff_reader->get('nav-heading-menu'); ?></h2>
-	<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-app-menu'); ?></h3>
-	<div id="main_menu_wrapper">
+<div>
+	<h2 class="hide"><?php echo $xliff_reader->get('nav-heading-menu'); ?></h2>
+	<h3 class="hide" id="nav-menu-app"><?php echo $xliff_reader->get('nav-heading-app-menu'); ?></h3>
+	<nav id="main_menu_wrapper" aria-labelledby="nav-menu-app">
 		<?php echo $main_menu; ?>
-	</div>
+	</nav>
 
 	<?php if ($screen_name): ?>
-		<h3 class="hide"><?php echo $xliff_reader->get('nav-heading-tweet-menu'); ?></h3>
-		<div id="tweet_menu_wrapper">
+		<h3 class="hide" id="nav-menu-tweet"><?php echo $xliff_reader->get('nav-heading-tweet-menu'); ?></h3>
+		<nav id="tweet_menu_wrapper" aria-labelledby="nav-menu-tweet">
 		<?php echo $tweet_menu; ?>
-		</div>
+		</nav>
 	<?php endif; ?>
-</nav>
+</div>
 
 <main id="main" tabindex="-1" 
 	data-fav-make="<?php echo $xliff_reader->get('gbl-tweet-make-fav'); ?>" data-fav-remove="<?php echo $xliff_reader->get('gbl-tweet-remove-fav'); ?>"
