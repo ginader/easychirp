@@ -103,6 +103,22 @@ foreach($tweets AS $tweet):
 				echo $tweet->quoted_status->extended_entities->media[0]->ext_alt_text;
 			}
 			echo '" /></div>';
+			// Video/gif link
+			if (isset($tweet->quoted_status->extended_entities->media[0]->video_info->variants)) {
+				echo '<div class="vidLink">';
+				$arVideos = $tweet->quoted_status->extended_entities->media[0]->video_info->variants;
+				if (isset($arVideos[0]->url) && (strpos($arVideos[0]->url, 'mp4') !== false) ) {
+					$videoHTML = '<a rel="noopener" target="_blank" href="'.$arVideos[0]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+				}
+				else if (isset($arVideos[1]->url) && (strpos($arVideos[1]->url, 'mp4') !== false) ) {
+					$videoHTML = '<a rel="noopener" target="_blank" href="'.$arVideos[1]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+				}
+				else {
+					$videoHTML = "Video link not found.";
+				}
+				echo $videoHTML;
+				echo '</div>';
+			}
 		}
 
 		echo '<p><a href="/status/'.$tweet->quoted_status_id.'">'.$date2.'</a></p>';
