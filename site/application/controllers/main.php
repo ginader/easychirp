@@ -2506,6 +2506,20 @@ class Main extends EC_Controller {
 	}
 
 	/**
+	 * Change user political filter
+	 *
+	 * @param string $pol_bool
+	 * @return void
+	 */
+	public function switch_political_filter($pol_bool)
+	{
+		$this->_data['pol_bool'] = $pol_bool;
+		$this->session->set_userdata('pol_bool', $pol_bool);
+
+		redirect($_SERVER['HTTP_REFERER']);
+	}
+
+	/**
 	 * Manages the timeline page - /timeline
 	 * @todo add ajax in the future. Update to retrieve new tweets since page has been loaded.
 	 *

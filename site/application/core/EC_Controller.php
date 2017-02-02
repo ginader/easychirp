@@ -35,6 +35,13 @@ class EC_Controller extends CI_Controller {
 			$lang_code = $this->config->item('site_language');
 		}
 
+		$pol_bool = $this->session->userdata('pol_bool');
+		if ( ! $pol_bool)
+		{
+			$pol_bool = $this->config->item('pol_bool');
+		}
+
+
 		log_message('info', 'Before xliff->load lang_code=' . $lang_code);
 		$this->xliff_reader->load( $lang_code );
 
@@ -105,6 +112,7 @@ class EC_Controller extends CI_Controller {
 		$this->layout->theme_menu = $this->config->item('supported_themes');
 		$this->layout->active_theme = $active_theme;
 		$this->layout->lang_code = $lang_code;
+		$this->layout->pol_bool = $pol_bool;
 	}
 
 	/**

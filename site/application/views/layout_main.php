@@ -22,12 +22,17 @@ if ($this->layout->lang_code === "ar") {
 <body class="<?php echo $active_theme; ?>">
 <div id="wrapper">
 
+<?php if ($pol_bool === "on"): ?>
+	<div id="political_filter"><p>Politics filter is on.</p></div>
+<?php endif ?>
+
 <div id="skip">
 <?php if ($skip_to_sign_in): ?> 
 <a href="#sign_in"><?php echo $xliff_reader->get('skip-sign-in'); ?></a> | 
 <?php endif; ?> <a href="#main"><?php echo $xliff_reader->get('skip-main-content'); ?></a></div>
 
 <header role="banner">
+	
 	<div id="logoContainer"><img src="/images/brand/EasyChirp_Logo2_300_beta.png" alt="Easy Chirp 2 beta" width="300" height="109" /></div>
 	<div id="welcome">
 		<?php if ($logged_in): ?>
@@ -124,6 +129,23 @@ if ($this->session->userdata('logged_in')) {
 		<?php $items++; ?>
 	<?php endforeach; ?>
 	</p>
+
+	<p><?php echo "Politics filter: " ?>
+		<?php if ($pol_bool === "on"): ?>
+			<?php 
+				$pol_name = "turn off";
+				$pol_bool = "off";
+			?>
+		<?php else: ?>
+			<?php 
+				$pol_name = "turn on";
+				$pol_bool = "on";
+			?>
+		<?php endif; ?>
+		<?php $link = anchor('/switch_political_filter/' . $pol_bool, $pol_name); ?>
+		<?php echo $link; ?>
+	</p>
+
 	<p>&copy; <?php echo $xliff_reader->get('footer-copyright'); ?> 2009-<?php echo date('Y'); ?> <a href="http://www.dennislembree.com" title="web site professional | www.dennislembree.com">Dennis Lembree</a>, 
 	<a href="http://www.weboverhauls.com" title="tune-up your web site! | www.weboverhauls.com">Web Overhauls</a></p>
 	<p><img src="/images/powered-by-twitter-sig.gif" width="137" height="11" alt="powered by Twitter" /></p>

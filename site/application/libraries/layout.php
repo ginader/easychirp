@@ -36,6 +36,7 @@ class Layout
 	public $tweet_menu = "";
 	public $active_theme = "theme-inverse";
 	public $theme_menu = "";
+	public $pol_bool = "off";
 
 	public $meta_name_tags = array();
 	public $meta_http_equiv_tags = array();
@@ -378,6 +379,7 @@ class Layout
 		$loaded_data['lang_menu'] = $this->lang_menu;
 		$loaded_data['theme_menu'] = $this->theme_menu;
 		$loaded_data['active_theme'] = $this->active_theme;
+		$loaded_data['pol_bool'] = $this->pol_bool;
 
 		if($return)
 		{

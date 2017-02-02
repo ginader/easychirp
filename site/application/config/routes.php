@@ -127,6 +127,7 @@ $route['status'] = "main/status"; // View single tweet
 $route['status/(:any)'] = "main/status/$1"; // View single tweet
 $route['switch_lang/(:any)'] = "main/switch_lang/$1";
 $route['switch_theme/(:any)'] = "main/switch_theme/$1";
+$route['switch_political_filter/(:any)'] = "main/switch_political_filter/$1";
 $route['test'] = "main/test";
 $route['tips'] = "main/tips";
 $route['tools'] = "main/tools"; // For non-JS (menu)

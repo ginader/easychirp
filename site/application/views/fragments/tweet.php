@@ -19,6 +19,21 @@ $last_id = $tweets[$i]->id;
 
 foreach($tweets AS $tweet):
 
+
+	// FILTER!
+	// check tweet text against array of values
+	if ($this->layout->pol_bool == "on") {
+		$termsPolitics = array("trump","potus","politic","refugee","immigrant","republican","democrat");
+		if (preg_match('/'.implode('|', $termsPolitics).'/i', $tweet->text)) {
+			continue;
+		}
+		if (isset($tweet->quoted_status)) {
+			if (preg_match('/'.implode('|', $termsPolitics).'/i', $tweet->quoted_status->text)) {
+				continue;
+			}
+		}
+	}
+
 	//date
 	$api_date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
 	$z = new DateTime('@' . strtotime($api_date));
