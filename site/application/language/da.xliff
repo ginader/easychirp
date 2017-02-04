@@ -91,6 +91,28 @@
         <target>afspille video</target>
       </trans-unit>
 
+      <!-- FILTER -->
+
+      <trans-unit id="filter-pol-is-on" datatype="html">
+        <source>Politics filter is on.</source>
+        <target>Politik filter er slået til.</target>
+      </trans-unit>
+
+      <trans-unit id="filter-pol" datatype="html">
+        <source>Politics filter</source>
+        <target>Politik filter</target>
+      </trans-unit>
+
+      <trans-unit id="filter-pol-turn-on" datatype="html">
+        <source>turn on</source>
+        <target>tænde den</target>
+      </trans-unit>
+
+      <trans-unit id="filter-pol-turn-off" datatype="html">
+        <source>turn off</source>
+        <target>sluk den</target>
+      </trans-unit>
+
       <!-- SELECT THEME -->
 
       <trans-unit id="gbl-theme-select" datatype="html">

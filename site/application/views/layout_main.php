@@ -23,7 +23,7 @@ if ($this->layout->lang_code === "ar") {
 <div id="wrapper">
 
 <?php if ($pol_bool === "on"): ?>
-	<div id="political_filter"><p>Politics filter is on.</p></div>
+	<div id="political_filter"><p><?php echo $xliff_reader->get('filter-pol-is-on'); ?></p></div>
 <?php endif ?>
 
 <div id="skip">
@@ -130,15 +130,15 @@ if ($this->session->userdata('logged_in')) {
 	<?php endforeach; ?>
 	</p>
 
-	<p><?php echo "Politics filter: " ?>
+	<p><?php echo $xliff_reader->get('filter-pol') . ": " ?>
 		<?php if ($pol_bool === "on"): ?>
 			<?php 
-				$pol_name = "turn off";
+				$pol_name = $xliff_reader->get('filter-pol-turn-off');
 				$pol_bool = "off";
 			?>
 		<?php else: ?>
 			<?php 
-				$pol_name = "turn on";
+				$pol_name = $xliff_reader->get('filter-pol-turn-on');
 				$pol_bool = "on";
 			?>
 		<?php endif; ?>
