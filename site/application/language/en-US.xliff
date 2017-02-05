@@ -6,6 +6,11 @@
 
       <!-- GLOBAL -->
 
+      <trans-unit id="gbl-img-desc" datatype="html">
+        <source>image description</source>
+        <target>image description</target>
+      </trans-unit>
+
       <trans-unit id="global-delete" datatype="html">
         <source>Delete</source>
         <target>Delete</target>

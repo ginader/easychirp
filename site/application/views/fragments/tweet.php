@@ -151,7 +151,7 @@ foreach($tweets AS $tweet):
 
 		// show alt
 		if (isset($tweet->extended_entities->media[0]->ext_alt_text)) {
-			echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>image description</button>";
+			echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>".$xliff_reader->get('gbl-img-desc')."</button>";
 			echo "<div tabindex=\"-1\" class=\"imageDesc rounded\">".$tweet->extended_entities->media[0]->ext_alt_text."</div>";
 		}
 
