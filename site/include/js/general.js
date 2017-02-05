@@ -59,6 +59,25 @@ $("#enterTweet h2 a").keydown(function(e) {
 	}
 });
 
+/* Show/hide image descriptions *************/
+$(".tweet .btnSecondary").attr("aria-expanded", "false")
+.click(function(e) {
+	e.preventDefault();
+
+	// set vars
+    var objDesc = $(this).next(".imageDesc");
+    var isDisplayed = $(objDesc).is(":visible");
+
+	if (isDisplayed===false) {
+		$(objDesc).css("display","block");
+		$(this).attr("aria-expanded",true);
+	}
+	else {
+		$(objDesc).css("display","none");
+		$(this).attr("aria-expanded",false);
+	}
+});
+
 /* Tooltip *************/
 $(function () {
 	$('a[title]').tooltip({

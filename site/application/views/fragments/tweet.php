@@ -140,16 +140,21 @@ foreach($tweets AS $tweet):
 		echo '</div>';
 	}
 
-	// Insert image if it exists
+	// Insert Twitter image if it exists
 	// example tweet with alt: https://twitter.com/todd/status/696049964133146624
-	// Twitter image
 	if (isset($tweet->entities->media[0]->media_url)) {
 		echo '<div class="imgThumb"><img src="' . $tweet->entities->media[0]->media_url . ':small" alt="';
 		if (isset($tweet->extended_entities->media[0]->ext_alt_text)) {
 			echo $tweet->extended_entities->media[0]->ext_alt_text;
 		}
 		echo '" /></div>';
-		
+
+		// show alt
+		if (isset($tweet->extended_entities->media[0]->ext_alt_text)) {
+			echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>image description</button>";
+			echo "<div tabindex=\"-1\" class=\"imageDesc rounded\">".$tweet->extended_entities->media[0]->ext_alt_text."</div>";
+		}
+
 		// Video/gif link
 		if (isset($tweet->extended_entities->media[0]->video_info->variants)) {
 			echo '<div class="vidLink">';

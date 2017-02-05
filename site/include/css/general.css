@@ -226,10 +226,6 @@ input[type='text']:focus {
 	border-color: #fc6;
 	outline: none;
 }
-button[type='reset'] {
-	border: 1px #aaa solid;
-	font-weight: lighter;
-}
 
 #frmUrlShort fieldset {
 	margin-top: .5em;
@@ -898,6 +894,37 @@ button {
 button:hover, button:focus,
 .btnPost:hover, .btnPost:focus {
 	border-color: #fc6;
+}
+button[type='reset'] {
+	border: 1px #aaa solid;
+	font-weight: lighter;
+}
+.btnSecondary {
+	border-width: 1px;
+	font-weight: normal;
+	font-size: .9rem;
+	padding: .3rem .7rem;
+}
+.btnSecondary[aria-expanded=false] span:before {
+	content: "+ ";
+}
+.btnSecondary[aria-expanded=true] span:before {
+	content: "- ";
+}
+.imageDesc {
+	border: 1px solid #ccc;/*#0487E0*/
+	font-weight: normal;
+	font-size: .95rem;
+	padding: .3rem .7rem;
+	margin: -.3em .5rem .5rem 0;
+
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-khtml-border-radius: 12px;
+	border-radius: 12px;
+}
+.js .imageDesc {
+	display: none;
 }
 
 /* Tweets, DMs, Follow */
