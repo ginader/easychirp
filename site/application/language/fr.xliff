@@ -575,8 +575,8 @@
       </trans-unit>
 
       <trans-unit id="home-lead-p1" datatype="html">
-        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE8, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
-        <target>Easy Chirp est une interface web alternative au site Twitter.com. Elle est conçu pour être simple d'utilisation et optimisée pour les personnes en situation de handicap. Elle fonctionne aussi en utilisant uniquement le clavier, de vieux navigateurs comme IE8, une connexion bas débit, ou sans javascript. En apprendre plus sur  &lt;a href=&quot;http://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web&quot;&gt;l'accessibilité du web&lt;/a&gt;.</target>
+        <source>Easy Chirp is a web-accessible alternative to the Twitter.com website. It is designed to be simple to use and is optimized for people who are disabled. It also works with keyboard-only, older browsers like IE9, lowband internet connection, and without JavaScript. Learn more about &lt;a href=&quot;http://en.wikipedia.org/wiki/Web_accessibility&quot;&gt;web accessibility&lt;/a&gt;.</source>
+        <target>Easy Chirp est une interface web alternative au site Twitter.com. Elle est conçu pour être simple d'utilisation et optimisée pour les personnes en situation de handicap. Elle fonctionne aussi en utilisant uniquement le clavier, de vieux navigateurs comme IE9, une connexion bas débit, ou sans javascript. En apprendre plus sur  &lt;a href=&quot;http://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web&quot;&gt;l'accessibilité du web&lt;/a&gt;.</target>
       </trans-unit>
 
       <trans-unit id="home-lead-p2" datatype="html">
@@ -1618,8 +1618,8 @@
       </trans-unit>
 
       <trans-unit id="features-main-browsers" datatype="html">
-        <source>Works on all major browsers: IE8+, Firefox, Safari, Opera, and Chrome.</source>
-        <target>Fonctionne sur tous les principaux navigateurs: IE8+, Firefox, Safari, Opera, et Chrome.</target>
+        <source>Works on all major browsers: IE9+, Firefox, Safari, Opera, and Chrome.</source>
+        <target>Fonctionne sur tous les principaux navigateurs: IE9+, Firefox, Safari, Opera, et Chrome.</target>
       </trans-unit>
 
       <!-- ABOUT -->
