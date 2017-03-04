@@ -656,7 +656,7 @@
 
       <trans-unit id="home-features-img" datatype="html">
         <source>Tweet an image with a caption and long description.</source>
-        <target>Tweet an image with a caption and long description.</target>
+        <target>Tweet ein Bild mit einer Beschriftung und lange Beschreibung.</target>
       </trans-unit>
 
       <trans-unit id="home-features-shorten" datatype="html">
@@ -1465,6 +1465,11 @@
         <target>Barrierefreiheit</target>
       </trans-unit>
 
+      <trans-unit id="features-a11y-alt" datatype="html">
+        <source>Alternative text for an image is rendered for screen reader users and also can be displayed for sighted users (when alternative text is provided by the Twitter API).</source>
+        <target>Alternativer Text für ein Bild wird für Screenreader-Benutzer gerendert und kann auch für gesichtete Benutzer angezeigt werden (wenn alternativer Text von der Twitter-API bereitgestellt wird).</target>
+      </trans-unit>
+
       <trans-unit id="features-a11y-kybd" datatype="html">
         <source>All links and functionality is keyboard accessible.</source>
         <target>Alle Links und alle Funktionen sind vollständig per Tastatur bedienbar.</target>
@@ -1535,6 +1540,11 @@
       <trans-unit id="features-main-h2" datatype="html">
         <source>Main Features</source>
         <target>Hauptfunktionen</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-pol" datatype="html">
+        <source>Political filter removes tweets with "Trump" and a few other related terms. Toggle from footer.</source>
+        <target>Politischer Filter entfernt Tweets mit "Trump" und ein paar andere verwandte Begriffe. Umschalten von der Fußzeile.</target>
       </trans-unit>
 
       <trans-unit id="features-main-shortener" datatype="html">

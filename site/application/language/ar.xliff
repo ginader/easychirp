@@ -656,7 +656,7 @@
 
       <trans-unit id="home-features-img" datatype="html">
         <source>Tweet an image with a caption and long description.</source>
-        <target>Tweet an image with a caption and long description.</target>
+        <target>تويت صورة مع التعليق والشرح الطويل.</target>
       </trans-unit>
 
       <trans-unit id="home-features-shorten" datatype="html">
@@ -1455,6 +1455,11 @@
         <target>الميزات للمكفوفين</target>
       </trans-unit>
 
+      <trans-unit id="features-a11y-alt" datatype="html">
+        <source>Alternative text for an image is rendered for screen reader users and also can be displayed for sighted users (when alternative text is provided by the Twitter API).</source>
+        <target>يتم تقديم النص البديل للصورة لمستخدمي قارئ الشاشة ويمكن أيضا أن يتم عرض للمستخدمين النظر (عندما يتم توفير نص بديل من قبل API تويتر).</target>
+      </trans-unit>
+
       <trans-unit id="features-a11y-kybd" datatype="html">
         <source>All links and functionality is keyboard accessible.</source>
         <target>يمكن من خلال لوحة المفاتيح الوصول إلى جميع  الروابط و الوظائف.</target>
@@ -1525,6 +1530,11 @@
       <trans-unit id="features-main-h2" datatype="html">
         <source>Main Features</source>
         <target>الميزات الرئيسية</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-pol" datatype="html">
+        <source>Political filter removes tweets with "Trump" and a few other related terms. Toggle from footer.</source>
+        <target>مرشح سياسي يزيل تويت مع "ترامب" وبعض المصطلحات الأخرى ذات الصلة. تبديل من تذييل الصفحة.</target>
       </trans-unit>
 
       <trans-unit id="features-main-shortener" datatype="html">

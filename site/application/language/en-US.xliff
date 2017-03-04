@@ -1455,6 +1455,11 @@
         <target>Accessibility Features</target>
       </trans-unit>
 
+      <trans-unit id="features-a11y-alt" datatype="html">
+        <source>Alternative text for an image is rendered for screen reader users and also can be displayed for sighted users (when alternative text is provided by the Twitter API).</source>
+        <target>Alternative text for an image is rendered for screen reader users and also can be displayed for sighted users (when alternative text is provided by the Twitter API).</target>
+      </trans-unit>
+
       <trans-unit id="features-a11y-kybd" datatype="html">
         <source>All links and functionality is keyboard accessible.</source>
         <target>All links and functionality is keyboard accessible.</target>
@@ -1525,6 +1530,11 @@
       <trans-unit id="features-main-h2" datatype="html">
         <source>Main Features</source>
         <target>Main Features</target>
+      </trans-unit>
+
+      <trans-unit id="features-main-pol" datatype="html">
+        <source>Political filter removes tweets with "Trump" and a few other related terms. Toggle from footer.</source>
+        <target>Political filter removes tweets with "Trump" and a few other related terms. Toggle from footer.</target>
       </trans-unit>
 
       <trans-unit id="features-main-shortener" datatype="html">
