@@ -118,6 +118,13 @@ foreach($tweets AS $tweet):
 				echo $tweet->quoted_status->extended_entities->media[0]->ext_alt_text;
 			}
 			echo '" /></div>';
+
+			// show alt
+			if (isset($tweet->quoted_status->extended_entities->media[0]->ext_alt_text)) {
+				echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>".$xliff_reader->get('gbl-img-desc')."</button>";
+				echo "<div tabindex=\"-1\" class=\"imageDesc rounded\">".$tweet->quoted_status->extended_entities->media[0]->ext_alt_text."</div>";
+			}
+
 			// Video/gif link
 			if (isset($tweet->quoted_status->extended_entities->media[0]->video_info->variants)) {
 				echo '<div class="vidLink">';
