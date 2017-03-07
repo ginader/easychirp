@@ -501,6 +501,25 @@ function theRespGuts(e) {
 			data.respParent.after(response);
 			$("a[rel='response']").bind('click', theRespGuts).attr("role","button");
 			$(data.respParent).next('[tabindex=-1]').focus();
+			
+			// the following is duplicated in general.js
+			$(data.respParent).next().find(".btnSecondary").attr("aria-expanded", "false")
+			.click(function(e) {
+				e.preventDefault();
+
+				// set vars
+			    var objDesc = $(this).next(".imageDesc");
+			    var isDisplayed = $(objDesc).is(":visible");
+
+				if (isDisplayed===false) {
+					$(objDesc).css("display","block");
+					$(this).attr("aria-expanded",true);
+				}
+				else {
+					$(objDesc).css("display","none");
+					$(this).attr("aria-expanded",false);
+				}
+				});
 		},
 		error: function(xhr) {
 			alert('Error. Status = ' + xhr.status);

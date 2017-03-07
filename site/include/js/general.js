@@ -60,6 +60,7 @@ $("#enterTweet h2 a").keydown(function(e) {
 });
 
 /* Show/hide image descriptions *************/
+// the following is duplicated in ajax.js
 $(".tweet .btnSecondary").attr("aria-expanded", "false")
 .click(function(e) {
 	e.preventDefault();

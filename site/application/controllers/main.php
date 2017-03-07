@@ -665,6 +665,7 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['id'] = $id;
+		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param);
 		$tweets = array();
