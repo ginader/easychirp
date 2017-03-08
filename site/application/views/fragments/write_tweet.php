@@ -90,7 +90,7 @@ if (empty($single)):
 			<div>
 				<button type="submit" id="btnSubmitImage" class="btn3"><?php echo $xliff_reader->get('add-image-submit'); ?></button>
 				<button type="reset"><?php echo $xliff_reader->get('gbl-clear'); ?></button>
-				<a href="/img_help" rel="noopener" target="_blank" id="img_help"><?php echo $xliff_reader->get('add-image-help-desc'); ?></a>
+				<a href="/img_help" rel="noopener noreferrer" target="_blank" id="img_help"><?php echo $xliff_reader->get('add-image-help-desc'); ?></a>
 			</div>
 		</fieldset>
 		</form>

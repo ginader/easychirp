@@ -64,7 +64,7 @@
           ?>
           </div>
 
-          <?php /* <p><a href="<?php echo $urlImgur; ?>" rel="noopener" target="_blank">View image on Imgur</a></p> */ ?>
+          <?php /* <p><a href="<?php echo $urlImgur; ?>" rel="noopener noreferrer" target="_blank">View image on Imgur</a></p> */ ?>
 
           <?php
            if ($isLongDesc) {
@@ -76,10 +76,10 @@
      </main>
 
      <footer id="footer" role="contentinfo">
-          <p>This page is designed to provide an <a href="http://webaim.org/techniques/alttext/" rel="noopener" target="_blank">accessible image</a>.</p>
+          <p>This page is designed to provide an <a href="http://webaim.org/techniques/alttext/" rel="noopener noreferrer" target="_blank">accessible image</a>.</p>
           <p>Note that the longdesc image attribute on this page (if content is provided) targets a data URI which IE does not yet support.</p>
           <p>Brought to you by <a href="http://www.easychirp.com">Easy Chirp</a> (<a href="http://twitter.com/easychirp">@EasyChirp</a>) 
-            and the <a href="http://www.Imgur.com" rel="noopener" target="_blank">Imgur</a> photo service.</p>
+            and the <a href="http://www.Imgur.com" rel="noopener noreferrer" target="_blank">Imgur</a> photo service.</p>
           <div><img src="/images/brand/easy_chirp_icon1.png" width="48" height="48" alt="Easy Chirp icon" /></div>
      </footer>
 

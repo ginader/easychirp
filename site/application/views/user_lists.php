@@ -48,7 +48,7 @@ if (count($ownedLists->lists) != 0) {
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
-	<dd><a rel="noopener" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
+	<dd><a rel="noopener noreferrer" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
 	endforeach;
@@ -91,7 +91,7 @@ if (count($subLists->lists) != 0) {
 	<dd><a href="/user?id=<?php echo $lists->user->screen_name; ?>"><?php echo $lists->user->name; ?></a></dd>
 
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
-	<dd><a rel="noopener" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
+	<dd><a rel="noopener noreferrer" target="_blank" href="http://twitter.com<?php echo $lists->uri; ?>"><?php echo $lists->name; ?></a></dd>
 </dl>
 <?php 
 	endforeach;

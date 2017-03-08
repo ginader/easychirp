@@ -95,7 +95,7 @@ if (count($myLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><?php 
 		$listURL = "http://twitter.com/" . $lists->user->screen_name . "/lists/" . $lists->slug;
-		echo '<a rel="noopener" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
+		echo '<a rel="noopener noreferrer" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
 		?>
 	</dd>
 </dl>
@@ -147,7 +147,7 @@ if (count($subLists->lists) != 0) {
 	<dt><?php echo $xliff_reader->get('lists-on-twitter'); ?></dt>
 	<dd><?php 
 		$listURL = "http://twitter.com/" . $lists->user->screen_name . "/lists/" . $lists->slug;
-		echo '<a rel="noopener" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
+		echo '<a rel="noopener noreferrer" target="_blank" href="' . $listURL . '">' . $lists->name . '</a>';
 		?>
 	</dd>
 </dl>
