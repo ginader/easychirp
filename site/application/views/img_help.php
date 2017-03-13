@@ -49,7 +49,7 @@
 
           <h2>Long Description</h2>
           <p>Enter a longer, detailed text description for the image which will shown on the resulting page. 
-           Longdesc is most valuable to people with visual and cognitive impairments as well as for adding additional context for search engines. 
+           A textual long description is most valuable to people with visual and cognitive impairments as well as for adding additional context for search engines. 
            For help on writing a long description, read <a rel="noopener noreferrer" target="_blank" href="http://4syllables.com.au/articles/long-descriptions-2/">Long descriptions for images</a> by 4 Syllables.
           </p>
 
