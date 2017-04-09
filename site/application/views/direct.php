@@ -1,3 +1,10 @@
+<?php
+if (isset($_GET["action"])) {
+	if ($_GET["action"] == "deleted") {
+		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('gbl-msg-dm-deleted').'</div>';
+	}
+}
+?>
 
 <h1 class="rounded"><?php echo $xliff_reader->get('dm-h1'); ?></h1>
 

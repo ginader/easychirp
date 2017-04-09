@@ -4,6 +4,16 @@ if (isset($_GET["action"])) {
 		echo '<div class="msgBoxPos rounded">'.$xliff_reader->get('msg-tweet-deleted').'</div>';
 	}
 }
+if (isset($_GET["url_short"])) {
+	if ($_GET["url_short"] != "") {
+		echo '<div class="msgBoxPos rounded">Success! The shortened URL has been added to the input field.</div>';
+	}
+}
+if (isset($_GET["img_url"])) {
+	if ($_GET["img_url"] != "") {
+		echo '<div class="msgBoxPos rounded">Success! The image URL has been added to the input field.</div>';
+	}
+}
 ?>
 
 <h1 class="rounded"><?php echo $page_heading; ?></h1>
