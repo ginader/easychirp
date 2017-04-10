@@ -172,6 +172,11 @@
         <target>يجب عليك إدخال أقل من 140 حرفا.</target>
       </trans-unit>
 
+      <trans-unit id="error-over-dm" datatype="html">
+        <source>You must enter less than 1000 characters.</source>
+        <target>يجب عليك إدخال أقل من 1000 حرفا.</target>
+      </trans-unit>
+
       <trans-unit id="error-tweet-empty" datatype="html">
         <source>Please enter a tweet.</source>
         <target>الرجاء إدخال سقسقة.</target>

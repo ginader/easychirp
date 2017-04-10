@@ -172,6 +172,11 @@
         <target>You must enter less than 140 characters.</target>
       </trans-unit>
 
+      <trans-unit id="error-over-dm" datatype="html">
+        <source>You must enter less than 1000 characters.</source>
+        <target>You must enter less than 1000 characters.</target>
+      </trans-unit>
+
       <trans-unit id="error-tweet-empty" datatype="html">
         <source>Please enter a tweet.</source>
         <target>Please enter a tweet.</target>

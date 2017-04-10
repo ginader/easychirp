@@ -22,7 +22,7 @@ if (isset($action)) {
 <div class="box1 rounded">
 	<form id="frmDirectMessage" action="/direct_send" method="post" class="clear" 
 		data-char-remain="<?php echo $xliff_reader->get('write-tweet-char-remain'); ?>"
-		data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
+		data-error-over="<?php echo $xliff_reader->get('error-over-dm'); ?>"
 		data-error-empty="<?php echo $xliff_reader->get('error-dm-empty'); ?>"
 		data-error-tweep-empty="<?php echo $xliff_reader->get('error-tweep-empty'); ?>">
 		<h3 id="dm-label-tweep"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>

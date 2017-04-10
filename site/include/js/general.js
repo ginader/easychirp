@@ -213,7 +213,7 @@ $('#frmDirectMessage').submit(function() {
 	}
 	x=$("#txtDirectMessage");
 	y = x.val();
-	if (y.length>10000) {
+	if (y.length>1000) {
 		openModal(event, $("#frmDirectMessage").attr("data-error-over"), $("#frmDirectMessage #txtDirectMessage"));
 		return false;
 	}
