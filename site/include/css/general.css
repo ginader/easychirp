@@ -1142,6 +1142,9 @@ a.btnOptionsUser,
 	position: absolute;
 	font-size: 2rem;
 }
+#alertMsg {
+	font-size: 1.25rem;
+}
 
 /* State  **************************************************/
 

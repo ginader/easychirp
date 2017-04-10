@@ -91,6 +91,10 @@ if ($this->session->userdata('logged_in')) {
 	<?php require('fragments/search_quick_form.php'); ?>
 	<a href="#" class="close" role="button"><span aria-hidden="true" class="icon-close1"></span><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
 </div>
+<div id="alertMsg" class="modal rounded" role="dialog" aria-label="Alert" aria-describedby="alertText" tabindex="-1">
+	<p id="alertText"></p>
+	<a href="#" class="close" role="button"><span aria-hidden="true" class="icon-close1"></span><span class="hide"><?php echo $xliff_reader->get('lists-create-close'); ?></span></a>
+</div>
 <div id="mask"></div>
 <?php
 }
