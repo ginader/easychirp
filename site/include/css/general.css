@@ -891,13 +891,13 @@ button {
 	border-width: 1px;
 	font-weight: normal;
 }
+button[type='reset'] {
+	border: 1px #aaa solid;
+	font-weight: normal;
+}
 button:hover, button:focus,
 .btnPost:hover, .btnPost:focus {
 	border-color: #fc6;
-}
-button[type='reset'] {
-	border: 1px #aaa solid;
-	font-weight: lighter;
 }
 .btnSecondary {
 	border-width: 1px;
