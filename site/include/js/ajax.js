@@ -253,36 +253,38 @@ $('#frmTweetImage').submit(function(e, files) {
 	var url_send = $(this).attr("action");
 	var image_path = $("#imagePath").val();
 	var image_title = $("#imageTitle").val();
+	var txt = {};
+	txt.alertImgType  = "Invalid file type. Only GIF, JPG, and PNG formats are allowed.";
+	txt.alertImgSize  = "The file size too large. The limit is 5 MB.";
+	txt.alertImgTitle = "Please provide a title for this image.";
+	txt.alertImgDesc  = "Please provide a longer description for this image or leave blank if not needed.";
+	txt.alertImgSuccess = "Success! The URL has been added to the input field.\nThe image link is: ";
 
 	//validate image type
 	var v = new RegExp();
 	v.compile("(.gif|.GIF|.jpeg|.JPEG|.jpg|.JPG|.png|.PNG)$");
 	if (!v.test(image_path)) {
-		alert("Invalid file type. Only GIF, JPG, and PNG formats are allowed.");
-		$("#imagePath").focus();
+		openModal(e, txt.alertImgType, $("#imagePath"));
 		return false;
 	}
 
 	//validate image size
 	var image_size = ($("#imagePath")[0].files[0].size);// / 1024);
 	if (image_size > 5242880) { //2097152 2 Megs
-		alert("The file size too large. The limit is 5 MB.");
-		$("#imagePath").focus();
+		openModal(e, txt.alertImgSize, $("#imagePath"));
 		return false;
 	}
 
 	//check length of title
 	if (image_title.length == "") {
-		alert("Please provide a title for this image.");
-		$("#imageTitle").focus();
+		openModal(e, txt.alertImgTitle, $("#imageTitle"));
 		return false;
 	}
 
 	//check length of description
 	var image_desc = $("#imageDesc").val();
 	if (image_desc.length > 0 && image_desc.length < 15) {
-		alert("Please provide a longer description for this image or leave blank if not needed.");
-		$("#imageDesc").focus();
+		openModal(e, txt.alertImgDesc, $("#imageDesc"));
 		return false;
 	}
 
@@ -295,8 +297,6 @@ $('#frmTweetImage').submit(function(e, files) {
 		var txtInput = $('#txtEnterTweet');
 		var imgLink = "http://easychirp.com/img/" + data;
 
-		alert("Success! The URL has been added to the input field.\nThe image link is: " + imgLink);
-
 		// Delete existing on page
 		$('#imgLinkContainer').remove();
 
@@ -308,9 +308,9 @@ $('#frmTweetImage').submit(function(e, files) {
 			updateCharCount("txtEnterTweet");
 		}
 
-		// Insert in tweet input and focus it
+		// Insert in tweet input; send success modal with focus
 		txtInput.val(txtInput.val() + " " + imgLink);
-		txtInput.focus();
+		openModal(e, txt.alertImgSuccess + imgLink, txtInput);
 	}
 
 	var options = {
