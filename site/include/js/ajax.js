@@ -410,7 +410,7 @@ $('a[href*="follow_user"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
-				openModal(e, txt.AlertFollowed, a);
+				alert(txt.AlertFollowed);
 
 				$(a).html(txt.unfollow);
 				$("#spanFollowCurrent").html(txt.following);
@@ -428,7 +428,7 @@ $('a[href*="follow_user"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
-				openModal(e, txt.AlertUnfollowed, a);
+				alert(txt.AlertUnfollowed);
 
 				$(a).html(txt.follow);
 				$("#spanFollowCurrent").html(txt.notfollowing);
