@@ -230,24 +230,25 @@ $('.frmListAddMember').submit(function(e) {
 	var url_send = "/list_add_member/true";
 	var data = $(this).serialize();
 	var AlertAdded = $("#myLists").attr("data-msg-list-added");
-	var btn = $(this).find('button');
 
 	$.ajax({
 		type: "POST",
 		url: url_send,
 		data: data,
 		success: function(response) {
-			var ea = $(e.target).parent().parent().find(".memCnt a");
+			alert(AlertAdded);
+
+			var et = e.target;
+			var ea = $(et).parent().parent().find(".memCnt a");
 			var ct = ea.html();
 			var ddMemCnt = parseInt(ct, 10) + 1;
 			$(ea).parent().parent().find(".memCnt a").html(ddMemCnt);
+
 		},
 		error: function(xhr) {
 			alert('Error. Status = ' + xhr.status);
 		}
 	});
-
-	openModal(event, AlertAdded, btn);
 });
 
 // Uploading image
