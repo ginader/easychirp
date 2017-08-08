@@ -262,7 +262,7 @@ function openModal(event, message, lastFocusObj) {
 	modalOpen = true;
 
 	// Remember what opened me to focus when closing
-	var lastFocus = event.target;
+	var lastFocus = $(this);
 	if (lastFocusObj) {
 		lastFocus = lastFocusObj;
 	}

@@ -354,16 +354,16 @@ $('a[href*="retweet_"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
+				alert(txt.AlertAdded);
+
 				$(a).addClass("retweeted");
 
 				//url_replace = url_replace.replace(/create/,"destroy");
 				//$(a).attr("href", url_replace);
-				$(a).removeAttr("href").attr("tabindex","-1");
+				$(a).removeAttr("href");
 
 				//$(a).attr("title", txt.RemoveRt);
 				$(a).attr("title", "retweeted");
-
-				openModal(e, txt.AlertAdded, a);
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
