@@ -16,7 +16,7 @@ $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
-				openModal(e, txt.AlertAdded, a);
+				alert(txt.AlertAdded);
 
 				$(a).addClass("favorited");
 
@@ -34,7 +34,7 @@ $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
-				openModal(e, txt.AlertRemoved, a);
+				alert(txt.AlertRemoved);
 
 				$(a).removeClass("favorited");
 
@@ -73,13 +73,15 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
+				alert(txt.AlertBlock);
+
 				$(a).html(txt.unblock);
 				$(a).siblings(".span-user-blocked").css("display", "inline");
 
 				url_replace = url_replace.replace(/create/,"destroy");
 				$(a).attr("href", url_replace);
 
-				openModal(e, txt.AlertBlock, a);
+				$(a).focus();
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
@@ -91,13 +93,15 @@ $('a[href*="block_"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
+				alert(txt.AlertUnblock);
+
 				$(a).html(txt.block);
 				$(a).siblings(".span-user-blocked").css("display", "none");
 
 				url_replace = url_replace.replace(/destroy/,"create");
 				$(a).attr("href", url_replace);
 
-				openModal(e, txt.AlertUnblock, a);
+				$(a).focus();
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
@@ -124,13 +128,14 @@ $('a[href*="mute_"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
+				alert(txt.AlertMute);
+
 				$(a).html(txt.unmute);
 				$(a).siblings(".span-user-muted").css("display", "inline");
 
 				url_replace = url_replace.replace(/create/,"destroy");
 				$(a).attr("href", url_replace);
-				
-				openModal(e, txt.AlertMute, a);
+				$(a).focus();
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
@@ -142,13 +147,13 @@ $('a[href*="mute_"]').attr("role","button").click(function(e) {
 		$.ajax({
 			url: url_send,
 			success: function(response) {
+				alert(txt.AlertUnmute);
+
 				$(a).html(txt.mute);
 				$(a).siblings(".span-user-muted").css("display", "none");
 
 				url_replace = url_replace.replace(/destroy/,"create");
 				$(a).attr("href", url_replace);
-
-				openModal(e, txt.AlertUnmute, a);
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
@@ -242,7 +247,7 @@ $('.frmListAddMember').submit(function(e) {
 		}
 	});
 
-	openModal(e, AlertAdded, btn);
+	openModal(event, AlertAdded, btn);
 });
 
 // Uploading image

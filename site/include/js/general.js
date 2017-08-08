@@ -190,7 +190,7 @@ $("a[href^='#']").click(function() {
 });
 
 // Validate tweet entry
-$('#frmSubmitTweet').submit(function(event) {
+$('#frmSubmitTweet').submit(function() {
 	var x=$("#txtEnterTweet");
 	var y = x.val();
 	if (y.length>140) {
@@ -204,7 +204,7 @@ $('#frmSubmitTweet').submit(function(event) {
 });
 
 // Validate DM entry
-$('#frmDirectMessage').submit(function(event) {
+$('#frmDirectMessage').submit(function() {
 	var x=$("#tweep");
 	var y = x.val();
 	if (y.length==0) {
