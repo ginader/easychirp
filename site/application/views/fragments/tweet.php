@@ -183,8 +183,8 @@ foreach($tweets AS $tweet):
 	//echo debug_object( $tweet );
 	
 	// Imgur image
-	if (isset($tweet->entities->urls[0]->expanded_url)) {
-		$ent_exp_url = $tweet->entities->urls[0]->expanded_url;
+	foreach ($tweet->entities->urls as $xurl) {
+		$ent_exp_url = $xurl->expanded_url;
 		if (strpos($ent_exp_url,'easychirp.com/img/') !== false) {
 			$pos = strpos($ent_exp_url, 'easychirp.com/img/');
 			$imgurId = substr( $ent_exp_url, $pos+18, strlen($ent_exp_url) );
