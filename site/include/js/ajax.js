@@ -563,35 +563,33 @@ $('#urlClear').click(function() {
 });
 
 // Get shortened URL
-$("#frmUrlShort").submit(function(e) {
+$("#frmUrlShort").submit(function(ev) {
 
-	e.preventDefault();
+	ev.preventDefault();
 
 	var frmAction  = $(this).attr('action');
 	var objLongURL = $('#urlLong');
 	var txtLongURL = $('#urlLong').val();
 	var txtUrlService = $('input[name=urlService]').val(); //$('input:radio[name=urlService]:checked').val();
 
-	var txt = {};
-	txt.alertUrlEmpty  = "URL input is blank. Please enter a URL.";
-	txt.alertUrlBitly  = "URL cannot be a bit.ly link. Please enter a different URL.";
-	txt.alertUrlValid  = "You must provide a valid URL.";
-
 	//validate for completed input
 	if (txtLongURL == "") {
-		openModal(e, txt.alertUrlEmpty, objLongURL);
+		alert("URL input is blank. Please enter a URL.");
+		objLongURL.focus();
 		return false;
 	}
 	//validate for non bit.ly
 	var pos = txtLongURL.indexOf("http://bit.ly");
 	if (pos != -1) {
-		openModal(e, txt.alertUrlBitly, objLongURL);
+		alert("URL cannot be a bit.ly link. Please enter a different URL.");
+		objLongURL.focus();
 		return false;
 	}
 	//validate for valid URL
 	var urlReg = /^HTTP|HTTP|http(s)?:\/\/(www\.)?[A-Za-z0-9]+([\-\.]{1}[A-Za-z0-9]+)*\.[A-Za-z]{2,40}(:[0-9]{1,40})?(\/.*)?$/;
 	if ( (!urlReg.test(txtLongURL)) || (txtLongURL.length <=7) ) {
-		openModal(e, txt.alertUrlValid, objLongURL);
+		alert("You must provide a valid URL.");
+		objLongURL.focus();
 		return false;
 	}
 
