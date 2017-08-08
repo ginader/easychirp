@@ -194,11 +194,13 @@ $('#frmSubmitTweet').submit(function() {
 	var x=$("#txtEnterTweet");
 	var y = x.val();
 	if (y.length>140) {
-		openModal(event, $("#frmSubmitTweet").attr("data-error-over"), $("#frmSubmitTweet .btnPost"));
+		alert($("#frmSubmitTweet").attr("data-error-over"));
+		x.focus();
 		return false;
 	}
 	if (y.length==0) {
-		openModal(event, $("#frmSubmitTweet").attr("data-error-empty"), $("#frmSubmitTweet .btnPost"));
+		alert($("#frmSubmitTweet").attr("data-error-empty"));
+		x.focus();
 		return false;
 	}
 });
@@ -208,17 +210,20 @@ $('#frmDirectMessage').submit(function() {
 	var x=$("#tweep");
 	var y = x.val();
 	if (y.length==0) {
-		openModal(event, $("#frmDirectMessage").attr("data-error-tweep-empty"), $("#frmDirectMessage #tweep"));
+		alert($("#frmDirectMessage").attr("data-error-tweep-empty"));
+		x.focus();
 		return false;
 	}
 	x=$("#txtDirectMessage");
 	y = x.val();
-	if (y.length>1000) {
-		openModal(event, $("#frmDirectMessage").attr("data-error-over"), $("#frmDirectMessage #txtDirectMessage"));
+	if (y.length>9999) {
+		alert($("#frmDirectMessage").attr("data-error-over"));
+		x.focus();
 		return false;
 	}
 	if (y.length==0) {
-		openModal(event, $("#frmDirectMessage").attr("data-error-empty"), $("#frmDirectMessage #txtDirectMessage"));
+		alert($("#frmDirectMessage").attr("data-error-empty"));
+		x.focus();
 		return false;
 	}
 });
@@ -247,25 +252,13 @@ function resizeMask() {
 }
 
 // Handle links to modals
-$('a[rel=modal]').on('click', openModal);
-
-function openModal(event, message, lastFocusObj) {
-	event.preventDefault();
-
-	if (!message) {
-		var id = $(this).attr('href').replace("/","#");
-	}
-	else {
-		var id = "#alertMsg";
-	}
-
+$('a[rel=modal]').on('click', function(e) {
+	e.preventDefault();
+	var id = $(this).attr('href').replace("/","#");
 	modalOpen = true;
 
 	// Remember what opened me to focus when closing
 	var lastFocus = $(this);
-	if (lastFocusObj) {
-		lastFocus = lastFocusObj;
-	}
 
     // Resize the mask
     resizeMask();
@@ -282,7 +275,7 @@ function openModal(event, message, lastFocusObj) {
 	$(".close").css('left', modalLeft);
 
 	// Transition effect and focus the modal
-	$(id).fadeIn(400);
+	$(id).fadeIn(500);
 	
 	// Focus mgmt
 	if (id=="#search_quick") {
@@ -291,21 +284,14 @@ function openModal(event, message, lastFocusObj) {
 	else if (id=="#go_to_user") {
 		$("#goUser").focus();
 	}
-	else if (id=="#alertMsg") {
-		$("#alertText").html(message);
-		$("#alertMsg .close").focus();
+	else {
+		$(id).focus();
 	}
 
 	// Close - if close button is clicked
 	$('.modal .close').click(function (e) {
 		e.preventDefault();
 		closeModal();
-	});
-	$('.modal .close').keydown(function(e) {
-		if(e.keyCode == 32){ // spacebar
-			e.preventDefault();
-			closeModal();
-		}
 	});
 
 	// Close - if mask is clicked
@@ -331,7 +317,7 @@ function openModal(event, message, lastFocusObj) {
 		}
 		modalOpen = false;
 	}
-};
+});
 // Rename id/label in modal to avoid collision on Search page
 $(".modal #frmSearch label").attr('for','query2');
 $(".modal #frmSearch input").attr('id','query2');
@@ -496,5 +482,4 @@ $(document).bind('keyup', 'ctrl+/', function() {
 $(document).bind('keyup', 'ctrl+u', function() {
 	$("a[href='/go_to_user']").trigger("click");
 });
-
 
