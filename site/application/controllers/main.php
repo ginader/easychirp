@@ -462,6 +462,7 @@ class Main extends EC_Controller {
 		}
 
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$pagination_path = '/favorites/' . $request_param['screen_name'] . '/';
 
@@ -666,6 +667,7 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['id'] = $id;
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param);
 		$tweets = array();
@@ -1177,6 +1179,7 @@ class Main extends EC_Controller {
 		}
 
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$pagination_path = '/list_timeline/'.$list_id.'/'.$subscribed.'/';
 
@@ -1342,6 +1345,7 @@ class Main extends EC_Controller {
 		}
 
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$tweets = $this->twitter_lib->get('statuses/mentions_timeline', $request_param );
 		$tweets_data = array(
@@ -1476,6 +1480,7 @@ class Main extends EC_Controller {
 		}
 
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$pagination_path = '/mytweets/';
 
@@ -1636,6 +1641,7 @@ class Main extends EC_Controller {
 
 		$request_param['count'] = 3; // This doesn't use TWEETS_PER_PAGE because it should only show a subset
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
 
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
@@ -1772,6 +1778,7 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['id'] = $tweet_id;
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
@@ -1779,7 +1786,7 @@ class Main extends EC_Controller {
 
 		$in_reply_to = $data->id_str;
 
-		$reply_to = 'RT @' . $data->user->screen_name . ': ' . $data->text;
+		$reply_to = 'RT @' . $data->user->screen_name . ': ' . $data->full_text;
 		$this->_data['page_heading'] = $this->xliff_reader->get('quote-h1');
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
 			array(
@@ -1835,6 +1842,7 @@ class Main extends EC_Controller {
 		$request_param = array();
 		$request_param['id'] =  $tweet_id;
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param);
 		$tweets = array();
@@ -2438,6 +2446,7 @@ class Main extends EC_Controller {
 		}
 
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		// Get general data
 		$data = $this->twitter_lib->get('statuses/show', $request_param);
@@ -2547,6 +2556,7 @@ class Main extends EC_Controller {
 		$request_param['count'] = TWEETS_PER_PAGE;
 		$request_param['screen_name'] = $this->session->userdata('screen_name');
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		if (FALSE !== $tweet_id)
 		{
@@ -2881,6 +2891,7 @@ class Main extends EC_Controller {
 			$request_param['max_id'] = $tweet_id;
 		}
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 		$tweets = $this->twitter_lib->get('statuses/user_timeline', $request_param);
 
 		// @todo create a page header for user timeline that lets the username be passed in.

@@ -19,12 +19,11 @@ $last_id = $tweets[$i]->id;
 
 foreach($tweets AS $tweet):
 
-
 	// FILTER!
 	// check tweet text against array of values
 	if ($this->layout->pol_bool == "on") {
 		$termsPolitics = array("trump","potus","politic","refugee","immigrant","republican","democrat");
-		if (preg_match('/'.implode('|', $termsPolitics).'/i', $tweet->text)) {
+		if (preg_match('/'.implode('|', $termsPolitics).'/i', $tweet->full_text)) {
 			continue;
 		}
 		if (isset($tweet->quoted_status)) {
@@ -71,10 +70,10 @@ foreach($tweets AS $tweet):
 	<q lang="<?php echo $tweet->lang; ?>"><?php
 	// Define the text of the tweet
 	if ($isRetweet) {
-		$tweet_text = "RT @" . $tweet->retweeted_status->user->screen_name . " " . $tweet->retweeted_status->text;
+		$tweet_text = "RT @" . $tweet->retweeted_status->user->screen_name . " " . $tweet->retweeted_status->full_text;
 	}
 	else {
-		$tweet_text = $tweet->text;
+		$tweet_text = $tweet->full_text;
 	}
 
 	// Link links
@@ -101,7 +100,7 @@ foreach($tweets AS $tweet):
 		$date2 = date_format($date2,"M d g:i a");
 
 		// Link links
-		$quoted_tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a rel="noopener noreferrer" target="_blank" href="\1">\1</a>', $tweet->quoted_status->text);
+		$quoted_tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a rel="noopener noreferrer" target="_blank" href="\1">\1</a>', $tweet->quoted_status->full_text);
 
 		// Link #hashtags
 		$quoted_tweet_text = preg_replace('/\B#([-_0-9a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+)/', '<a href="/search_results?query=%23$1">$0</a>', $quoted_tweet_text);
@@ -267,7 +266,7 @@ foreach($tweets AS $tweet):
 			?></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>" title="<?php echo $xliff_reader->get('gbl-tweet-quote'); ?>"><span aria-hidden="true" class="icon-quote"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></span></a></li>
 			<?php if (isset($tweet->user)): ?>
-			<li><a href="mailto:?subject=Tweet+from+@<?php echo $tweet->user->screen_name; ?>+(via+Easy+Chirp)&amp;body=<?php echo urlencode($tweet->text . " \n" . $date . "\n"); ?>via+EasyChirp.com" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>">
+			<li><a href="mailto:?subject=Tweet+from+@<?php echo $tweet->user->screen_name; ?>+(via+Easy+Chirp)&amp;body=<?php echo urlencode($tweet->full_text . " \n" . $date . "\n"); ?>via+EasyChirp.com" title="<?php echo $xliff_reader->get('gbl-tweet-email'); ?>">
 				<span aria-hidden="true" class="icon-mail"></span><span class="hide"><?php echo $xliff_reader->get('gbl-tweet-email'); ?></span></a></li>
 			<?php endif; ?>
 			<?php 
