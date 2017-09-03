@@ -1919,6 +1919,8 @@ class Main extends EC_Controller {
 
 		$request_param = array();
 		$request_param['id'] =  $_GET["id"];
+		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
@@ -2099,6 +2101,8 @@ class Main extends EC_Controller {
 
 		$params['include_rts'] = 'true';
 		$params['exclude_replies'] = 'true';
+		$params['include_ext_alt_text'] = "true"; // Required to request alt text
+		$params['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$results = $this->twitter_lib->get('statuses/user_timeline', $params );
 		$tweets = array();
@@ -2123,6 +2127,8 @@ class Main extends EC_Controller {
 	public function retweets_of_me($params)
 	{
 		$this->redirect_if_not_logged_in();
+		$params['include_ext_alt_text'] = "true"; // Required to request alt text
+		$params['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$tweets = $this->twitter_lib->get('statuses/retweets_of_me', $params );
 
@@ -2145,6 +2151,8 @@ class Main extends EC_Controller {
 		$params['include_rts'] = 'true';
 		$params['exclude_replies'] = 'true';
 		$params['count'] = TWEETS_PER_PAGE;
+		$params['include_ext_alt_text'] = "true"; // Required to request alt text
+		$params['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$results = $this->twitter_lib->get('statuses/home_timeline', $params );
 		$tweets = array();
@@ -2284,6 +2292,8 @@ class Main extends EC_Controller {
 				$request_param['q'] = $query;
 			}
 		}
+		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
 		$data = $this->twitter_lib->get('search/tweets', $request_param);
 		$this->_data['meta'] = $data->search_metadata;
