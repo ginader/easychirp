@@ -2843,6 +2843,9 @@ class Main extends EC_Controller {
 		else {
 			$request_param['source_screen_name'] =  $this->session->userdata('screen_name');
 			$request_param['target_screen_name'] =  $screen_name;
+			$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
+			$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
+			
 			$this->_data['friendship'] = $this->twitter_lib->get('friendships/show', $request_param);
 
 			// if user is not protected, OR if user is protected tweet AND auth user is following this user, then get tweets
