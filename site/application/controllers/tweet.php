@@ -119,7 +119,7 @@
 
 		if (isset($_POST["quoted_tweet_url"]))
 		{
-			$request_param['status'] .= " " . $_POST["quoted_tweet_url"];
+			$request_param['attachment_url'] = $_POST["quoted_tweet_url"];
 		}
 
 		if (isset($_POST["in_reply_to_status_id"]))
