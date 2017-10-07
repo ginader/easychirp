@@ -2298,6 +2298,8 @@ class Main extends EC_Controller {
 		$data = $this->twitter_lib->get('search/tweets', $request_param);
 		$this->_data['meta'] = $data->search_metadata;
 
+		//debug_object($data);
+
 		$tweets = $data->statuses; // Need this because node tree differs in search API
 		$this->_data['tweets'] = $this->load->view('fragments/tweet',
 			array(
