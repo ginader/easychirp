@@ -10,6 +10,40 @@
 * @see http://www.php.net/manual/en/class.datetime.php
 */
 
+function doMedia ($arMedia, $xliff_reader) {
+	foreach ($arMedia as $medium) {
+
+		echo '<div class="imgThumb"><img src="' . $medium->media_url . ':small" alt="';
+		if (isset($medium->ext_alt_text)) {
+			echo $medium->ext_alt_text;
+		}
+		echo '" /></div>';
+
+		// show alt
+		if (isset($medium->ext_alt_text)) {
+			echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>".$xliff_reader->get('gbl-img-desc')."</button>";
+			echo "<div tabindex=\"-1\" class=\"imageDesc rounded\">".$medium->ext_alt_text."</div>";
+		}
+
+		// Video/gif link
+		if (isset($medium->video_info->variants)) {
+			echo '<div class="vidLink">';
+			$arVideos = $medium->video_info->variants;
+			if (isset($arVideos[0]->url) && (strpos($arVideos[0]->url, 'mp4') !== false) ) {
+				$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[0]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+			}
+			else if (isset($arVideos[1]->url) && (strpos($arVideos[1]->url, 'mp4') !== false) ) {
+				$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[1]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+			}
+			else {
+				$videoHTML = "Video link not found.";
+			}
+			echo $videoHTML;
+			echo '</div>';
+		}
+	}
+}
+
 $index = 0;
 
 if (isset($tweets) && sizeof($tweets) > 0):
@@ -112,37 +146,7 @@ foreach($tweets AS $tweet):
 
 		// Twitter image
 		if (isset($tweet->quoted_status->entities->media[0]->media_url)) {
-			foreach ($tweet->quoted_status->extended_entities->media as $medium) {
-
-				echo '<div class="imgThumb"><img src="' . $medium->media_url . ':small" alt="';
-				if (isset($medium->ext_alt_text)) {
-					echo $medium->ext_alt_text;
-				}
-				echo '" /></div>';
-
-				// show alt
-				if (isset($medium->ext_alt_text)) {
-					echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>".$xliff_reader->get('gbl-img-desc')."</button>";
-					echo "<div tabindex=\"-1\" class=\"imageDesc rounded\">".$medium->ext_alt_text."</div>";
-				}
-
-				// Video/gif link
-				if (isset($medium->video_info->variants)) {
-					echo '<div class="vidLink">';
-					$arVideos = $medium->video_info->variants;
-					if (isset($arVideos[0]->url) && (strpos($arVideos[0]->url, 'mp4') !== false) ) {
-						$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[0]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
-					}
-					else if (isset($arVideos[1]->url) && (strpos($arVideos[1]->url, 'mp4') !== false) ) {
-						$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[1]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
-					}
-					else {
-						$videoHTML = "Video link not found.";
-					}
-					echo $videoHTML;
-					echo '</div>';
-				}
-			}
+			doMedia($tweet->quoted_status->extended_entities->media, $xliff_reader);
 		}
 
 		echo '<p><a href="/status/'.$tweet->quoted_status_id.'">'.$date2.'</a></p>';
@@ -151,37 +155,7 @@ foreach($tweets AS $tweet):
 
 	// Insert Twitter image if it exists
 	if (isset($tweet->extended_entities->media[0]->media_url)) {
-		foreach ($tweet->extended_entities->media as $medium) {
-
-			echo '<div class="imgThumb"><img src="' . $medium->media_url . ':small" alt="';
-			if (isset($medium->ext_alt_text)) {
-				echo $medium->ext_alt_text;
-			}
-			echo '" /></div>';
-
-			// show alt
-			if (isset($medium->ext_alt_text)) {
-				echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>".$xliff_reader->get('gbl-img-desc')."</button>";
-				echo "<div tabindex=\"-1\" class=\"imageDesc rounded\">".$medium->ext_alt_text."</div>";
-			}
-
-			// Video/gif link
-			if (isset($medium->video_info->variants)) {
-				echo '<div class="vidLink">';
-				$arVideos = $medium->video_info->variants;
-				if (isset($arVideos[0]->url) && (strpos($arVideos[0]->url, 'mp4') !== false) ) {
-					$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[0]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
-				}
-				else if (isset($arVideos[1]->url) && (strpos($arVideos[1]->url, 'mp4') !== false) ) {
-					$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[1]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
-				}
-				else {
-					$videoHTML = "Video link not found.";
-				}
-				echo $videoHTML;
-				echo '</div>';
-			}
-		}
+		doMedia($tweet->extended_entities->media, $xliff_reader);
 	}
 
 	//echo debug_object( $tweet );
