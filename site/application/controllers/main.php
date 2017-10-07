@@ -1779,23 +1779,16 @@ class Main extends EC_Controller {
 		$request_param['id'] = $tweet_id;
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
-		//$request_param['include_entities'] = "true";
 
 		$data = $this->twitter_lib->get('statuses/show', $request_param );
 		$tweets = array();
 		$tweets[] = $data;
 
-		//$in_reply_to = $data->id_str;
-		//$quote_ref_id = $data->entities->urls->url;
-
-		//$reply_to = 'RT @' . $data->user->screen_name . ': ' . $data->full_text;
 		$this->_data['page_heading'] = $this->xliff_reader->get('quote-h1');
 		$this->_data['write_tweet_form'] = $this->load->view('fragments/write_tweet',
 			array(
 			'expand' => 1,
 			'single' => '0',
-			//'reply_to' => $reply_to,
-			//'in_reply_to' => $in_reply_to,
 			'quoted_tweet_url' => "https://twitter.com/".$data->user->screen_name."/status/".$data->id_str,
 			'xliff_reader' => $this->_data['xliff_reader']),
 			TRUE);
