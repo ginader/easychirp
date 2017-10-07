@@ -42,8 +42,13 @@ if (empty($single)):
 				}
 
 				?></textarea>
+
 				<?php if (isset($in_reply_to)): ?>
 					<input type="hidden" name="in_reply_to_status_id" value="<?php echo $in_reply_to; ?>">
+				<?php endif;  ?>
+
+				<?php if (isset($quoted_tweet_url)): ?>
+					<input type="hidden" name="quoted_tweet_url" value="<?php echo $quoted_tweet_url; ?>">
 				<?php endif;  ?>
 
 				<button class="btnPost" type="submit"><?php echo $xliff_reader->get('write-tweet-post'); ?></button>

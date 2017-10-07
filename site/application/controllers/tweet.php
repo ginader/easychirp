@@ -115,10 +115,16 @@
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();	
-		$request_param['status'] =  $_POST["status"];
+		$request_param['status'] = $_POST["status"];
+
+		if (isset($_POST["quoted_tweet_url"]))
+		{
+			$request_param['status'] .= " " . $_POST["quoted_tweet_url"];
+		}
+
 		if (isset($_POST["in_reply_to_status_id"]))
 		{
-			$request_param['in_reply_to_status_id'] =  $_POST["in_reply_to_status_id"];
+			$request_param['in_reply_to_status_id'] = $_POST["in_reply_to_status_id"];
 		}
 		
 		$tweet = $this->twitter_lib->post('statuses/update', $request_param);
