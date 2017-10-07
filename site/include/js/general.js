@@ -418,16 +418,22 @@ $('.frmListAddMember').submit(function(e) {
 	}
 });
 
-// If reply or quote tweet (first character in tweet textarea on page load is "@" or "R") then set focus
+// If reply or quote tweet then set focus
 if ($('#txtEnterTweet').length != 0) {
 	var input = {};
 	input.obj = $('#txtEnterTweet');
 	input.txt = input.obj.val();
 	input.first = input.obj.val().substring(0, 1);
-	if (input.first === "@" || input.first === "R") {
+
+	// reply--first character in tweet textarea on page load is "@"
+	if (input.first === "@") {
 		input.obj.focus();
 		input.obj.val('');
 		input.obj.val(input.txt);
+	}
+	// quote tweet--check if param exists
+	else if ( $('input[name="quoted_tweet_url"]').length ) {
+		input.obj.focus();
 	}
 }
 
