@@ -978,9 +978,10 @@ button:hover, button:focus,
 .tweet .vidLink {
 	margin: .4em 0;
 }
-.tweet .vidLink a {
-	padding-left: 1.4em;
-	background:url(../../images/svg/icon-video-play.svg) top left no-repeat;
+ul.list-more li {
+	background: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 .dm .dmAvatars {
 	height: 30px;
