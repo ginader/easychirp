@@ -1085,7 +1085,7 @@ a.btnOptionsUser {
     display: inline-block;
 }
 .btnOptions h3 {
-	padding: .5rem .5rem .5rem 0;
+	padding: .3rem 0;
 }
 .btnOptions h3 a[aria-expanded=true] {
 	border-color: #000;
