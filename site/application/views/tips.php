@@ -6,7 +6,7 @@
 	<ul>
 		<li><?php echo $xliff_reader->get('tips-spam-li-1'); ?></li>
 		<li><?php echo $xliff_reader->get('tips-spam-li-2'); ?></li>
-		<li><?php echo $xliff_reader->get('tips-spam-li-3'); ?></li>
+		<li><a href="https://support.twitter.com/articles/64986" rel="external"><?php echo $xliff_reader->get('tips-spam-li-3'); ?></a></li>
 	</ul>
 </div>
 
@@ -52,11 +52,6 @@
 			<td><?php echo $xliff_reader->get('tips-table-caret-2'); ?></td>
 			<td><?php echo $xliff_reader->get('tips-table-caret-3'); ?></td>
 		</tr>
-		<tr>
-			<th scope="row"><?php echo $xliff_reader->get('tips-table-d-1'); ?></th>
-			<td><?php echo $xliff_reader->get('tips-table-d-2'); ?></td>
-			<td><?php echo $xliff_reader->get('tips-table-d-3'); ?></td>
-		</tr>
 	</tbody>
 	</table>
 </div>
@@ -92,12 +87,12 @@
 	<h2><?php echo $xliff_reader->get('tips-h2-apps'); ?></h2>
 	<ul>
 		<li><a href="https://www.hashtags.org/" rel="external">HashTags.org</a>: hashtag analytics.</li>
-		<li><a href="http://twuffer.com/" rel="external">Twuffer</a>: a Twitter buffer (schedule tweets)</li>
-		<li><a href="http://backtweets.com/" rel="external">BackTweet</a>: search links on Twitter.</li>
+		<li><a href="https://buffer.com" rel="external">Buffer</a> and <a href="http://twuffer.com/" rel="external">Twuffer</a>: schedule tweets.</li>
+		<li><a href="http://backtweets.com/" rel="external">BackTweets</a>: search links and more on Twitter.</li>
 		<li><a href="http://www.tweetwally.com/" rel="external">TweetWally</a>: create custom streams.</li>
 		<li><a href="http://tweetstats.com" rel="external">TweetStats</a>: graphin' your stats!</li>
-		<li><a href="http://twtvite.com/" rel="external">Twtvite</a>: organize a tweetup!</li>
-		<li><a href="http://twtpoll.com/" rel="external">TwtPoll</a>: create and distribute polls on Twitter.</li>
+		<li><a href="http://vite.io/" rel="external">Vite</a>: social media event manager.</li>
+		<li><a href="https://twtpoll.com/" rel="external">TwtPoll</a>: create and distribute polls on Twitter.</li>
 	</ul>
 </div>
 

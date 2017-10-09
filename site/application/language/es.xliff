@@ -1204,8 +1204,8 @@
       </trans-unit>
 
       <trans-unit id="tips-spam-li-3" datatype="html">
-        <source>Send a direct message to the Twitter account &quot;spam&quot; followed by the user's account name. Follow this syntax: d spam @username. For example: d spam @fake is a spammer!</source>
-        <target>Mandar un mensaje directo a la cuenta de Twitter "spam" seguido por el nombre del usuario. Siga este mensaje: d spam @nombreDeUsuario. Ejemplo: d spam @fake es un spammer!</target>
+        <source>Reporting spam on Twitter</source>
+        <target>Notificación de spam en Twitter</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-search" datatype="html">
@@ -1316,21 +1316,6 @@
       <trans-unit id="tips-table-caret-3" datatype="html">
         <source>@somebody Yes, sent to email address associated with the account. ^DW</source>
         <target>@somebody Si, env&#237;a un correo electronico asociado con la cuenta ^DW</target>
-      </trans-unit>
-
-      <trans-unit id="tips-table-d-1" datatype="html">
-        <source>D username + message</source>
-        <target>D nombreDeUsuario + mensaje</target>
-      </trans-unit>
-
-      <trans-unit id="tips-table-d-2" datatype="html">
-        <source>Sends a person a direct (private) message.</source>
-        <target>Manda un mensaje directo y privado a una persona.</target>
-      </trans-unit>
-
-      <trans-unit id="tips-table-d-3" datatype="html">
-        <source>d dennisl Want to meet at Starbucks at 4pm today?</source>
-        <target>d dennis! &#191;Deseas reunirte a las 4pm en Starbucks el d&#237;a de hoy?</target>
       </trans-unit>
 
       <trans-unit id="tips-h2-keys" datatype="html">
