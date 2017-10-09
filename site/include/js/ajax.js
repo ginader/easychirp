@@ -23,7 +23,7 @@ $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 				url_replace = url_replace.replace(/create/,"destroy");
 				$(a).attr("href", url_replace);
 
-				$(a).attr("title", txt.RemoveFav);
+				$(a).find("span:nth-child(2)").html(txt.RemoveFav);
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
@@ -41,12 +41,19 @@ $('a[href*="favorite_"]').attr("role","button").click(function(e) {
 				url_replace = url_replace.replace(/destroy/,"create");
 				$(a).attr("href", url_replace);
 
-				$(a).attr("title", txt.MakeFav);
+				$(a).find("span:nth-child(2)").html(txt.MakeFav);
 			},
 			error: function(xhr) {
 				alert('Error. Status = ' + xhr.status);
 			}
 		})
+	}
+});
+// Add spacebar support
+$('a[href*="favorite_"]').keydown(function(e) {
+	if(e.keyCode == 32){ // spacebar
+		e.preventDefault();
+		$(this).trigger("click");
 	}
 });
 

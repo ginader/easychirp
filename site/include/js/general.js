@@ -3,6 +3,7 @@ var modalOpen = false;
 var txtAlertSureDelete = $("#main").attr("data-sure-delete"); //"Are you sure you want to delete...";
 
 /* Show/hide option buttons *************/
+$(".btnOptions > h3 > a").attr("aria-expanded",false); // set default
 $(".btnOptions > h3 > a").click(function(e) {
 	e.preventDefault();
 
@@ -12,18 +13,17 @@ $(".btnOptions > h3 > a").click(function(e) {
 
 	// first close both sections
     $(".btnOptions ul").removeClass('displayOptions');
-	$(".btnOptions h3 a").attr("aria-expanded",false);
+	$(".btnOptions > h3 > a").attr("aria-expanded",false);
 
 	// open section clicked
 	if (isDisplayed===false) {
 		obj.addClass('displayOptions');
 		$(this).attr("aria-expanded",true);
-		$(this).parent().next().find("li:first a").focus();
 	}
 });
 // Add role of button
 // Add spacebar support
-$(".btnOptions h3 a").attr("role","button").keydown(function(e) {
+$(".btnOptions > h3 > a").attr("role","button").keydown(function(e) {
 	if(e.keyCode == 32){ // spacebar
 		e.preventDefault();
 		$(this).trigger("click");

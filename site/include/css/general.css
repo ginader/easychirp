@@ -1027,8 +1027,6 @@ button:hover, button:focus,
 	margin: 0 0 .5em;
 }
 .no-js .tweet h3 {
-	/*font-size: 1rem;
-	margin-bottom: .5rem;*/
 	display: none;
 }
 .no-js .btnOptions {
@@ -1042,7 +1040,7 @@ button:hover, button:focus,
 	margin: 0 .5rem .5rem 0;
 }
 .js .tweet li {
-	margin: .5rem .5rem 0 0;
+	margin: .5rem .5rem .75rem 0;
 }
 .reply {
 	border-color:#ccc;
@@ -1063,9 +1061,6 @@ button:hover, button:focus,
 	background-image: none;
 	margin: 0 0 1em;
 }
-/*.content .twtInfo li:not(:last-child):after {
-	content: " | ";
-}*/
 .quotedTweet {
 	border-width: 1px;
 }
@@ -1085,20 +1080,38 @@ button:hover, button:focus,
 	position: relative;
 	display: inline-block;
 }
+a.btnOptionsTweet,
+a.btnOptionsUser {
+    display: inline-block;
+}
 .btnOptions h3 {
 	padding: .5rem .5rem .5rem 0;
+}
+.btnOptions h3 a[aria-expanded=true] {
+	border-color: #000;
+}
+.btnOptions h3 a[aria-expanded=true] span:nth-child(2):after {
+	content: " -";
+}
+.btnOptions h3 a[aria-expanded=false] span:nth-child(2):after {
+	content: " +";
 }
 a.btnOptionsTweet,
 a.btnOptionsUser,
 .btnOptions a {
-	padding: .5rem .6rem .1rem;
+	padding: .3rem .5rem;
 	border: 1px solid #ccc;
-	font-size: 1.3em; /* need this to set the positioning identical in webkit and FF */
+	font-size: 1rem; /* need this to set the positioning identical in webkit and FF */
 	text-decoration: none;
+	font-weight: normal;
 
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+}
+.btnOptions span[aria-hidden=true]  {
+    margin-right: .2em;
+    vertical-align: middle;
 }
 /* reset from styled 'regular' lists */
 .btnOptions ul li {
@@ -1150,6 +1163,7 @@ a.btnOptionsUser,
 
 .js .btnOptions ul.displayOptions {
 	display: block;
+    margin-bottom: 2.5rem;
 }
 .js #enterTweet #enterTweetContent.displayEnterTweet {
 	display: block;
@@ -1246,6 +1260,10 @@ body.theme-inverse {
 }
 .theme-inverse button.btnPost:hover,
 .theme-inverse button.btnPost:focus {
+	border-color: #fff;
+}
+
+.theme-inverse .btnOptions h3 a[aria-expanded=true] {
 	border-color: #fff;
 }
 
@@ -1351,10 +1369,6 @@ body.theme-inverse {
 }
 
 @media only screen and (max-width: 800px) {
-	/*#urlService {
-		display: block;
-		margin: .5rem 0;
-	}*/
 	#urlLong {
 		width: 65%;
 	}
@@ -1414,11 +1428,6 @@ body.theme-inverse {
 	#navTweet li a {
 		margin-right: .25rem;
 		padding: 0.4rem 0.5rem 0.2rem;
-	}
-	a.btnOptionsTweet,
-	a.btnOptionsUser,
-	.btnOptions a {
-		font-size: 1.2em;
 	}
 	button,
 	button.btnPost {
