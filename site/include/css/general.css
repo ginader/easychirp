@@ -165,6 +165,9 @@ dd, li {
 h2 + ul {
 	margin-top: .3rem;
 }
+ul.ul-more-info li {
+	background: none;
+}
 
 .smallText {
 	font-size: .85rem;
@@ -622,7 +625,6 @@ div.msgBoxNeg {
 }
 /* open state of first descendant link within a top level navigation item */
 .nav-item > a.open {
-	background-color: #fff;
 	border-bottom: none;
 	z-index: 1;
 }
@@ -1225,6 +1227,7 @@ body.theme-inverse {
 	background-color: #777;
 }
 
+.theme-inverse #navMain li li a,
 .theme-inverse #navTweet li a {
 	border-color: #aaa;
 	background-color: #444;
@@ -1321,6 +1324,11 @@ body.theme-inverse {
 	border-color: #999;
 }
 
+.theme-inverse #political_filter {
+    color: #fff;
+    background-color: #666;
+}
+
 /* tooltip */
 .tooltip {
   position: absolute;
@@ -1334,8 +1342,8 @@ body.theme-inverse {
   opacity: 0;
 }
 .tooltip.in {
-  filter: alpha(opacity=90);
-  opacity: .9;
+  filter: alpha(opacity=95);
+  opacity: .95;
 }
 .tooltip.top {
   padding: 5px 0;
