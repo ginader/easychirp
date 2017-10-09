@@ -999,7 +999,7 @@ button:hover, button:focus,
 	margin-top: -1.5rem;
 }
 .dm .dmActions {
-	margin-bottom: -.15rem;
+	margin: .9em 0 .5em;
 }
 #dm-label-tweep {
 	float: left;
@@ -1098,7 +1098,8 @@ a.btnOptionsUser {
 }
 a.btnOptionsTweet,
 a.btnOptionsUser,
-.btnOptions a {
+.btnOptions a,
+.dmActions a {
 	padding: .3rem .5rem;
 	border: 1px solid #ccc;
 	font-size: 1rem; /* need this to set the positioning identical in webkit and FF */

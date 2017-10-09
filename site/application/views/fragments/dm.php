@@ -45,13 +45,13 @@ if (count($dms) != 0) {
 		else {
 			echo $dm->recipient->screen_name;
 		}
-		?>" class="btn" title="<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>">
+		?>" class="btn">
 			<span aria-hidden="true" class="icon-bubbles"></span>
-			<span class="hide"><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></span>
+			<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>
 		</a>
-		<a href="/direct_delete/<?php echo $dm->id; ?>/false" class="btn" title="<?php echo $xliff_reader->get('global-delete'); ?>">
+		<a href="/direct_delete/<?php echo $dm->id; ?>/false" class="btn">
 			<span aria-hidden="true" class="icon-close"></span>
-			<span class="hide"><?php echo $xliff_reader->get('global-delete'); ?></span>
+			<?php echo strtolower($xliff_reader->get('global-delete')); ?>
 		</a></p>
 </div>
 <?php 
