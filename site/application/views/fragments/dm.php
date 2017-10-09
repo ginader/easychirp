@@ -21,7 +21,7 @@ if (count($dms) != 0) {
 	<h2 class="hide"><?php echo $dm->sender->name?></h2>
 	<div class="dmAvatars">
 		<a href="/user/<?php echo $dm->sender->screen_name?>"><img src="<?php echo $dm->sender->profile_image_url; ?>" width="48" height="48" alt="<?php echo $dm->sender->screen_name?>" /></a>
-		<img src="/images/arrowDm.png" width="12" height="24" alt="sent to" />
+		<span aria-hidden="true" class="icon-arrow2"></span><span class="hide">sent to</span>
 		<a href="/user/<?php echo $dm->recipient->screen_name?>"><img src="<?php echo $dm->recipient->profile_image_url; ?>" width="48" height="48" alt="<?php echo $dm->recipient->screen_name?>" /></a>
 	</div>
 	<q><?php echo $dm->text?></q>
