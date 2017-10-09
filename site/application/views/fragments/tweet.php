@@ -250,7 +250,7 @@ foreach($tweets AS $tweet):
 			<?php endif; ?>
 			<?php 
 			if ($tweet->user->screen_name == $this->session->userdata('screen_name')): 
-				echo '<li><a href="/tweet_delete/'.$tweet->id.'/false"><span aria-hidden="true" class="icon-close"></span>'.$xliff_reader->get('global-delete').'</a></li>';
+				echo '<li><a href="/tweet_delete/'.$tweet->id.'/false"><span aria-hidden="true" class="icon-close"></span>'.strtolower($xliff_reader->get('global-delete')).'</a></li>';
 			endif;
 			?>
 		</ul>
