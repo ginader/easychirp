@@ -240,7 +240,7 @@ foreach($tweets AS $tweet):
 				}
 				else 
 				{
-					echo '<a class="retweeted"><span aria-hidden="true" class="icon-reload1"></span>retweeted/a>';
+					echo '<a class="retweeted"><span aria-hidden="true" class="icon-reload1"></span>retweeted</a>';
 				}
 			?></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>"><span aria-hidden="true" class="icon-quote"></span><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></a></li>
