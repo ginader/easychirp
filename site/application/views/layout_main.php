@@ -20,6 +20,7 @@ if ($this->layout->lang_code === "ar") {
 	<!--[if lte IE 7]><script src="/include/js/lte-ie7.js"></script><![endif]-->
 </head>
 <body class="<?php echo $active_theme; ?>">
+<?php include_once("images/svg/icons.svg"); ?>
 <div id="wrapper">
 
 <?php if ($pol_bool === "on"): ?>

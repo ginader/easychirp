@@ -978,11 +978,7 @@ button:hover, button:focus,
 	font-size: 1.35em;
 }
 .tweet .vidLink {
-	margin: .4em 0;
-}
-.tweet .vidLink a {
-	padding-left: 1.4em;
-	background:url(../../images/svg/icon-video-play.svg) top left no-repeat;
+	margin: .5em 0;
 }
 .dm .dmAvatars {
 	height: 30px;
@@ -1327,10 +1323,6 @@ body.theme-inverse {
 .theme-inverse #political_filter {
     color: #fff;
     background-color: #666;
-}
-
-.theme-inverse .tweet .vidLink a svg {
-    fill: #eee;
 }
 
 

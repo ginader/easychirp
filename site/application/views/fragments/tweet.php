@@ -30,10 +30,10 @@ function doMedia ($arMedia, $xliff_reader) {
 			echo '<div class="vidLink">';
 			$arVideos = $medium->video_info->variants;
 			if (isset($arVideos[0]->url) && (strpos($arVideos[0]->url, 'mp4') !== false) ) {
-				$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[0]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+				$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[0]->url.'"><svg class="icon"><use xlink:href="#icon-play"></use></svg>'.$xliff_reader->get('gbl-play-video').'</a>';
 			}
 			else if (isset($arVideos[1]->url) && (strpos($arVideos[1]->url, 'mp4') !== false) ) {
-				$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[1]->url.'">'.$xliff_reader->get('gbl-play-video').'</a>';
+				$videoHTML = '<a rel="noopener noreferrer" target="_blank" href="'.$arVideos[1]->url.'"><svg class="icon"><use xlink:href="#icon-play"></use></svg>'.$xliff_reader->get('gbl-play-video').'</a>';
 			}
 			else {
 				$videoHTML = "Video link not found.";
