@@ -1298,6 +1298,11 @@ body.theme-inverse {
 	border-color: #999;
 }
 
+.theme-inverse .tweet .vidLink a svg {
+    fill: #eee;
+}
+
+
 /* tooltip */
 .tooltip {
   position: absolute;
