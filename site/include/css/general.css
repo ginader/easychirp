@@ -1229,6 +1229,11 @@ body.theme-inverse {
 	background-color: #444;
 }
 
+.theme-inverse #navMain a[aria-owns]:after,
+.theme-inverse #navTweet a[aria-owns]:after {
+	border-top: 5px solid #eee;
+}
+
 .theme-inverse a:hover,
 .theme-inverse a:focus,
 .theme-inverse a:active {
