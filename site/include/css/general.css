@@ -928,6 +928,9 @@ button:hover, button:focus,
 	-khtml-border-radius: 12px;
 	border-radius: 12px;
 }
+.imageDesc p {
+	margin-bottom: .1rem;
+}
 .js .imageDesc {
 	display: none;
 }

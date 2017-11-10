@@ -22,7 +22,7 @@ function doMedia ($arMedia, $xliff_reader) {
 		// show alt
 		if (isset($medium->ext_alt_text)) {
 			echo "<button class=\"btnSecondary\"><span aria-hidden=\"true\"></span>".$xliff_reader->get('gbl-img-desc')."</button>";
-			echo "<div tabindex=\"-1\" class=\"imageDesc rounded\">".$medium->ext_alt_text."</div>";
+			echo "<div tabindex=\"-1\" class=\"imageDesc rounded\"><p>".$medium->ext_alt_text."</p></div>";
 		}
 
 		// Video/gif link
