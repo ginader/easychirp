@@ -167,9 +167,9 @@
         <target>You are no longer following this user.</target>
       </trans-unit>
 
-      <trans-unit id="error-over-140" datatype="html">
-        <source>You must enter less than 140 characters.</source>
-        <target>You must enter less than 140 characters.</target>
+      <trans-unit id="error-over-limit" datatype="html">
+        <source>You must enter less than 280 characters.</source>
+        <target>You must enter less than 280 characters.</target>
       </trans-unit>
 
       <trans-unit id="error-over-dm" datatype="html">
@@ -503,8 +503,8 @@
       </trans-unit>
 
       <trans-unit id="write-tweet-char-limit" datatype="html">
-        <source>The character limit is 140.</source>
-        <target>The character limit is 140.</target>
+        <source>The character limit is 280.</source>
+        <target>The character limit is 280.</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-char-remain" datatype="html">

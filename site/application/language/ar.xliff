@@ -167,9 +167,9 @@
         <target>أنك لم تعد تتبع هذا المستخدم.</target>
       </trans-unit>
 
-      <trans-unit id="error-over-140" datatype="html">
-        <source>You must enter less than 140 characters.</source>
-        <target>يجب عليك إدخال أقل من 140 حرفا.</target>
+      <trans-unit id="error-over-limit" datatype="html">
+        <source>You must enter less than 280 characters.</source>
+        <target>يجب عليك إدخال أقل من 280 حرفا.</target>
       </trans-unit>
 
       <trans-unit id="error-over-dm" datatype="html">
@@ -503,8 +503,8 @@
       </trans-unit>
 
       <trans-unit id="write-tweet-char-limit" datatype="html">
-        <source>The character limit is 140.</source>
-        <target>الحد الأقصى ١٤٠ حرف.</target>
+        <source>The character limit is 280.</source>
+        <target>الحد الأقصى 280 حرفا.</target>
       </trans-unit>
 
       <trans-unit id="write-tweet-char-remain" datatype="html">

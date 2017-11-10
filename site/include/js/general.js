@@ -95,7 +95,7 @@ function updateCharCount(charCountField) {
 	
 	// Calculate number of characters entered
 	theField = document.getElementById(charCountField);
-	currentCount = 140 - theField.value.length;
+	currentCount = 280 - theField.value.length;
 	
 	// Update number
 	charCntNum.html(currentCount);
@@ -193,7 +193,7 @@ $("a[href^='#']").click(function() {
 $('#frmSubmitTweet').submit(function() {
 	var x=$("#txtEnterTweet");
 	var y = x.val();
-	if (y.length>140) {
+	if (y.length>280) {
 		alert($("#frmSubmitTweet").attr("data-error-over"));
 		x.focus();
 		return false;

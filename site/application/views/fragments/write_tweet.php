@@ -25,7 +25,7 @@ if (empty($single)):
 			<strong id="displayCharCountNumber" aria-live="polite"></strong>
 		</p>
 		<form id="frmSubmitTweet" action="/tweet/write" method="post" class="clearfix"
-			data-error-over="<?php echo $xliff_reader->get('error-over-140'); ?>"
+			data-error-over="<?php echo $xliff_reader->get('error-over-limit'); ?>"
 			data-error-empty="<?php echo $xliff_reader->get('error-tweet-empty'); ?>">
 			<div>
 				<textarea id="txtEnterTweet" name="status" rows="3"><?php
