@@ -82,6 +82,10 @@
 	</dl>
 	<h3><?php echo $xliff_reader->get('articles-h3-more'); ?></h3>
 	<dl>
+	<dt><a href="https://werwoelfchenstestecke.blogspot.com/2017/12/vom-sinn-eines-accessible-twitter.html">Vom Sinn eines accessible Twitter clients</a></dt>
+		<dd><a href="http://translate.google.com/translate?hl=en&amp;sl=auto&amp;tl=en&amp;u=https%3A%2F%2Fwerwoelfchenstestecke.blogspot.com%2F2017%2F12%2Fvom-sinn-eines-accessible-twitter.html&amp;sandbox=1">German to English translation</a> by Google</dd>
+		<dd>Werwoelfchens Blog</dd>
+		<dd>2017 Dec 09</dd>
 	<dt><a href="https://blog.twitter.com/2016/alt-text-support-for-twitter-cards-and-the-rest-api">Alt text support for Twitter Cards and the REST API</a></dt>
 		<dd>Twitter Blog</dd>
 		<dd>2016 Mar 29</dd>
