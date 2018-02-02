@@ -16,6 +16,17 @@ if (count($dms) != 0) {
 	if ($dm->sender->screen_name===$this->session->userdata('screen_name')) {
 		$state = "sent";
 	}
+
+	$dm_text = $dm->text;
+
+	// Link links
+	$dm_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a rel="noopener noreferrer" target="_blank" href="\1">\1</a>', $dm_text);
+
+	// Link @usernames
+	$dm_text = preg_replace('/@+([-_0-9a-zA-Z]+)/', '<a href="/user/$1">$0</a>', $dm_text);
+
+	// Link #hashtags
+	$dm_text = preg_replace('/\B#([-_0-9a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+)/', '<a href="/search_results?query=%23$1">$0</a>', $dm_text);
 ?>
 <div class="tweet rounded clearfix dm">
 	<h2 class="hide"><?php echo $dm->sender->name?></h2>
@@ -24,7 +35,7 @@ if (count($dms) != 0) {
 		<span aria-hidden="true" class="icon-arrow2"></span><span class="hide">sent to</span>
 		<a href="/user/<?php echo $dm->recipient->screen_name?>"><img src="<?php echo $dm->recipient->profile_image_url; ?>" width="48" height="48" alt="<?php echo $dm->recipient->screen_name?>" /></a>
 	</div>
-	<q><?php echo $dm->text?></q>
+	<q><?php echo $dm_text; ?></q>
 	<p>
 		from <a href="/user/<?php echo $dm->sender->screen_name?>"><?php echo $dm->sender->name?></a> 
 		to <a href="/user/<?php echo $dm->recipient->screen_name?>"><?php echo $dm->recipient->name?></a> | 
