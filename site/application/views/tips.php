@@ -62,9 +62,10 @@
 <div class="box1 rounded" style="margin-top:0;">
 	<h2>Keyboard Shortcuts</h2>
 	<ul>
-		<li><kbd>/</kbd> <?php echo $xliff_reader->get('search-h1'); ?></li>
-		<li><kbd>Control+/</kbd> <?php echo $xliff_reader->get('nav-quick-search'); ?></li>
-		<li><kbd>Control+u</kbd> <?php echo $xliff_reader->get('gotouser-h1'); ?></li>
+		<li><kbd>Control</kbd>+<kbd>/</kbd> <?php echo $xliff_reader->get('search-h1'); ?></li>
+		<li><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>/</kbd> <?php echo $xliff_reader->get('nav-quick-search'); ?></li>
+		<li><kbd>Control</kbd>+<kbd>u</kbd> <?php echo $xliff_reader->get('gotouser-h1'); ?></li>
+		<li><kbd>Control</kbd>+<kbd>m</kbd> <?php echo $xliff_reader->get('profile-h1'); ?></li>
 	</ul>
 
 	<h2><?php echo $xliff_reader->get('tips-h2-keys'); ?></h2>
