@@ -193,12 +193,30 @@ a:active {
 }
 
 .box1 blockquote {
-	padding: 10px 0 10px 38px;
-	background: url(/images/blockquote.png) no-repeat 0 10px;
+	margin: .5em 0 1.25em;
+	padding: .25em 1.75em;
+	line-height: 1.45;
+	position: relative;
+	max-width: 50em;
+}
+.box1 blockquote:before {
+	color: #919191;
+	display: block;
+	content: "\201C";
+	font-size: 3em;
+	position: absolute;
+	left: 0;
+	top: -.1em;
+}
+.box1 blockquote p {
+	margin-bottom: 0;
 }
 .box1 blockquote div {
 	font-style: italic;
 	text-align: right;
+}
+blockquote cite:before {
+content: "\2014 \2009";
 }
 
 /* tables */
@@ -977,9 +995,10 @@ button:hover, button:focus,
 }
 .tweet .fave {
 	float: right;
-	margin-right: -.15em;
-	color: #ccc;
-	font-size: 1.35em;
+	margin-right: -.3em;
+	margin-top: -.25em;
+	color: #939393;
+	font-size: 1.4em;
 }
 .tweet .vidLink {
 	margin: .5em 0;
@@ -1054,7 +1073,7 @@ button:hover, button:focus,
 }
 .tweet.reply,
 .tweet.retweet {
-	padding-right: 60px;
+	padding-right: 40px;
 }
 .tweetSingle {
 	margin: 1rem 0 -1rem;
