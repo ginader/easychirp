@@ -61,7 +61,7 @@
 			</ul>
 		<?php endif; ?>
 	<?php endif; ?>
-	<p<?php if (!$easychirp_statuses) echo ' style="margin: .5em 0 0;"' ?>><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="nofollow">@EasyChirp</a>.</p>
+	<p<?php if (!$easychirp_statuses) echo ' style="margin: .5em 0 0;"' ?>><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="noopener noreferrer nofollow" target="_blank">@EasyChirp</a>.</p>
 </div>
 
 <div class="box1 rounded" <?php if(!$easychirp_statuses) { echo 'style="margin-top:0;"'; } ?>>
@@ -84,9 +84,9 @@
 	<h2><?php echo $xliff_reader->get('home-h2-articles'); ?></h2>
 	<p><?php echo $xliff_reader->get('home-articles-highlights'); ?></p>
 	<ul>
-		<li><a rel="nofollow" href="http://accessibleinsights.info/blog/2013/10/29/easy-chirp-returns-with-new-sporty-features-and-more-power-under-the-hood/">Easy Chirp returns with new sporty features and more power under the hood</a> (Accessible Insights Blog)</li>
-		<li><a rel="nofollow" href="http://poslepu.blogspot.cz/2013/10/easy-chirp-pristupna-alternativa.html">Easy Chirp: web-accessible alternative interface for Twitter [in Czech]</a> (Blindly)</li>
-		<li><a rel="nofollow" href="http://www.webaxe.org/easy-chirp-2-soft-beta-launched/">Easy Chirp 2 soft beta launched!</a> (Web Axe)</li>
+		<li><a rel="noopener noreferrer nofollow" target="_blank" href="http://accessibleinsights.info/blog/2013/10/29/easy-chirp-returns-with-new-sporty-features-and-more-power-under-the-hood/">Easy Chirp returns with new sporty features and more power under the hood</a> (Accessible Insights Blog)</li>
+		<li><a rel="noopener noreferrer nofollow" target="_blank" href="http://poslepu.blogspot.cz/2013/10/easy-chirp-pristupna-alternativa.html">Easy Chirp: web-accessible alternative interface for Twitter [in Czech]</a> (Blindly)</li>
+		<li><a rel="noopener noreferrer nofollow" target="_blank" href="http://www.webaxe.org/easy-chirp-2-soft-beta-launched/">Easy Chirp 2 soft beta launched!</a> (Web Axe)</li>
 	</ul>
 	<p><?php echo $xliff_reader->get('home-articles-more'); ?></p>
 </div>

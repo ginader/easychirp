@@ -6,7 +6,7 @@
 	<ul>
 		<li><?php echo $xliff_reader->get('tips-spam-li-1'); ?></li>
 		<li><?php echo $xliff_reader->get('tips-spam-li-2'); ?></li>
-		<li><a href="https://support.twitter.com/articles/64986" rel="external"><?php echo $xliff_reader->get('tips-spam-li-3'); ?></a></li>
+		<li><a href="https://support.twitter.com/articles/64986" rel="noopener noreferrer nofollow" target="_blank"><?php echo $xliff_reader->get('tips-spam-li-3'); ?></a></li>
 	</ul>
 </div>
 
@@ -87,13 +87,13 @@
 <div class="box1 rounded" style="margin-top:0;">
 	<h2><?php echo $xliff_reader->get('tips-h2-apps'); ?></h2>
 	<ul>
-		<li><a href="https://www.hashtags.org/" rel="external">HashTags.org</a>: hashtag analytics.</li>
-		<li><a href="https://buffer.com" rel="external">Buffer</a> and <a href="http://twuffer.com/" rel="external">Twuffer</a>: schedule tweets.</li>
-		<li><a href="http://backtweets.com/" rel="external">BackTweets</a>: search links and more on Twitter.</li>
-		<li><a href="http://www.tweetwally.com/" rel="external">TweetWally</a>: create custom streams.</li>
-		<li><a href="http://tweetstats.com" rel="external">TweetStats</a>: graphin' your stats!</li>
-		<li><a href="http://vite.io/" rel="external">Vite</a>: social media event manager.</li>
-		<li><a href="https://twtpoll.com/" rel="external">TwtPoll</a>: create and distribute polls on Twitter.</li>
+		<li><a href="https://www.hashtags.org/" rel="noopener noreferrer nofollow" target="_blank">HashTags.org</a>: hashtag analytics.</li>
+		<li><a href="https://buffer.com" rel="noopener noreferrer nofollow" target="_blank">Buffer</a> and <a href="http://twuffer.com/" rel="noopener noreferrer nofollow" target="_blank">Twuffer</a>: schedule tweets.</li>
+		<li><a href="http://backtweets.com/" rel="noopener noreferrer nofollow" target="_blank">BackTweets</a>: search links and more on Twitter.</li>
+		<li><a href="http://www.tweetwally.com/" rel="noopener noreferrer nofollow" target="_blank">TweetWally</a>: create custom streams.</li>
+		<li><a href="http://tweetstats.com" rel="noopener noreferrer nofollow" target="_blank">TweetStats</a>: graphin' your stats!</li>
+		<li><a href="http://vite.io/" rel="noopener noreferrer nofollow" target="_blank">Vite</a>: social media event manager.</li>
+		<li><a href="https://twtpoll.com/" rel="noopener noreferrer nofollow" target="_blank">TwtPoll</a>: create and distribute polls on Twitter.</li>
 	</ul>
 </div>
 
