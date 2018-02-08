@@ -1046,6 +1046,7 @@ button:hover, button:focus,
 	font-size: 1.35rem;
 	line-height: 1.7rem;
 	margin: 0 0 .5em;
+	overflow-wrap: break-word;
 }
 .no-js .tweet h3 {
 	display: none;
