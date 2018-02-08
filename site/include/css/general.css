@@ -1425,11 +1425,8 @@ body.theme-inverse {
 	body {
 		font-size: .95em;
 	}
-	#hdUserStats {
-		display: none;
-	}
 	#welcome {
-		margin-top: -85px;
+		margin-top: -105px;
 	}
 	header img {
 		width: 210px;
@@ -1540,6 +1537,15 @@ body.theme-inverse {
 
 	.tweet .imgThumb img {
 		max-width: 270px;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	#welcome {
+		margin-bottom: 1em;
+		margin-top: 0;
+		float: none;
+		padding: .25em .5em;
 	}
 }
 
