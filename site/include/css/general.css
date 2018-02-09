@@ -616,7 +616,7 @@ div.msgBoxNeg {
 	clear: left;
 	float: left;
 }
-.sub-nav-group li:first-child {
+#navMain .sub-nav-group li:first-child {
     padding-top: 0.5rem;
 }
 /* mega menu list */
@@ -1547,6 +1547,9 @@ body.theme-inverse {
 		margin-top: 0;
 		float: none;
 		padding: .25em .5em;
+	}
+	.sub-nav-group {
+		width: inherit;
 	}
 }
 
