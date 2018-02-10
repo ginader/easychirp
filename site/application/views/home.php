@@ -41,20 +41,18 @@
 			</p>
 		<?php else: ?>
 			<h2><?php echo $xliff_reader->get('home-h2-latest-tweets'); ?></h2>
-			<ul id="homeECtweets">
 			<?php $count = 0; ?>
 			<?php foreach($easychirp_statuses AS $tweet): ?>
 				<?php $count++; ?>
-				<?php if ($count > 7){ break; }  ?>
+				<?php if ($count > 5){ break; }  ?>
 			<?php /*?><?php $tweet_url = 'http://twitter.com/' . $tweet->user->screen_name 
 				. '/status/' . $tweet->id_str; ?><?php */?>
-				<li>
+				<blockquote>
 					<?php echo $tweet->text; ?><?php /*?><br />
 					<a href="<?php echo $tweet_url; ?>"><?php echo $tweet->user->name; ?></a> 
 					(<?php echo $tweet->user->screen_name; ?>)<?php */?>
-				</li>
+				</blockquote>
 			<?php endforeach; ?>
-			</ul>
 		<?php endif; ?>
 	<?php endif; ?>
 	<p<?php if (!$easychirp_statuses) echo ' style="margin: .5em 0 0;"' ?>><?php echo $xliff_reader->get('home-h2-follow-me'); ?> <a href="http://twitter.com/EasyChirp" rel="noopener noreferrer nofollow" target="_blank">@EasyChirp</a>.</p>

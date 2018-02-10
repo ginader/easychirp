@@ -746,11 +746,6 @@ div.msgBoxNeg {
 }
 
 /* page-specific */
-
-#homeECtweets li {
-	line-height: 1.25rem;
-	margin-bottom: .75rem;
-}
 #frmProfileEdit dt,
 .twListDtAdj {
 	padding-top: .4rem;
