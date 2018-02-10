@@ -1505,11 +1505,10 @@ body.theme-inverse {
 		width: 99%;
 	}
 	.tweet .imgThumb img {
-		max-width: 440px;
+		max-width: 90%;
 	}
 }
 
-/* RWD table */
 @media only screen and (max-width: 480px) {
 	table.table-rwd table,
 	table.table-rwd thead,
@@ -1535,10 +1534,6 @@ body.theme-inverse {
 	table.table-rwd tr {
 		border: 1px solid #ccc;
 	}
-
-	.tweet .imgThumb img {
-		max-width: 270px;
-	}
 }
 
 @media only screen and (max-width: 440px) {
@@ -1556,9 +1551,6 @@ body.theme-inverse {
 @media only screen and (max-width: 320px) {
 	#profileContainer {
 		padding-top: 40px;
-	}
-	.tweet .imgThumb img {
-		max-width: 240px;
 	}
 	.tooltip {
 		font-size: .75rem;
