@@ -71,7 +71,9 @@ border-bottom:#999 1px solid;
 a[href="/sign_in"],
 .modal .close,
 a.delete-search,
-a.delete-link {
+a.delete-link,
+#userDetails a[target="_blank"],
+#userActions a {
 border-bottom:none;
 }
 

@@ -80,7 +80,7 @@ else {
 		<a href="/timeline/<?php echo $user->screen_name; ?>" rel="twmess"><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></a>
 	</p>
 
-	<p>
+	<p id="userActions">
 	<?php 
 
 	// Muted?
