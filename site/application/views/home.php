@@ -17,7 +17,10 @@
 				<?php if (! empty($screen_name)): ?>
 					<p><?php echo $xliff_reader->get('home-signin-signed-in-as'); ?> <?php echo $screen_name; ?>.</p>
 				<?php else: ?>
-					<div><a href="/sign_in"><img src="/images/sign-in-with-twitter-gray.png" alt="<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>" width="158" height="28" /></a></div>
+					<div><a href="/sign_in" class="rounded">
+						<span aria-hidden="true" class="icon-twitter2"></span>
+						<?php echo $xliff_reader->get('home-signin-btn-alt'); ?>
+					</a></div>
 				<?php endif; ?>
 
 			<h2><?php echo $xliff_reader->get('home-h2-donate'); ?></h2>
