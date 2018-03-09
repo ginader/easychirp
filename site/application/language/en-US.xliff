@@ -1105,7 +1105,7 @@
 
       <trans-unit id="profile-dt-bg-image" datatype="html">
         <source>Background image</source>
-        <target>Background image</target>
+        <target>Banner image</target>
       </trans-unit>
 
       <trans-unit id="profile-view-image" datatype="html">
