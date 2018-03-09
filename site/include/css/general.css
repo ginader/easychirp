@@ -209,7 +209,6 @@ a:active {
 	padding: .25em 1.75em;
 	line-height: 1.45;
 	position: relative;
-	max-width: 50em;
 }
 .box1 blockquote:before {
 	color: #919191;
