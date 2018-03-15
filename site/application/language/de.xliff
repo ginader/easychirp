@@ -738,7 +738,7 @@
 
       <trans-unit id="dm-h2-send" datatype="html">
         <source>Send a DM</source>
-        <target>Senden Sie eine direkte Nachricht:</target>
+        <target>Eine direkte Nachricht senden</target>
       </trans-unit>
 
       <trans-unit id="dm-label-tweep" datatype="html">
