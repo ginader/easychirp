@@ -422,7 +422,7 @@
       </trans-unit>
 
       <trans-unit id="nav-direct-messages" datatype="html">
-        <source>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</source>
+        <source>DM</source>
         <target>Mensajes Directos</target>
       </trans-unit>
 

@@ -422,8 +422,8 @@
       </trans-unit>
 
       <trans-unit id="nav-direct-messages" datatype="html">
-        <source>&lt;abbr title="Direct Messages"&gt;DM&lt;/abbr&gt;</source>
-        <target>&lt;abbr title="Direktnachrichten"&gt;DM&lt;/abbr&gt;</target>
+        <source>DM</source>
+        <target>Direktnachrichten</target>
       </trans-unit>
 
       <trans-unit id="nav-direct-inbox" datatype="html">
