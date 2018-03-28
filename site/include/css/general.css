@@ -1545,7 +1545,10 @@ body.theme-inverse {
 		margin-bottom: 1em;
 		margin-top: 0;
 		float: none;
-		padding: .25em .5em;
+		padding: .2em .15em 0;
+	}
+	#welcome p {
+		text-align: left;
 	}
 	.sub-nav-group {
 		width: inherit;
