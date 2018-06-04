@@ -42,11 +42,7 @@ if (count($dms) != 0) {
 		<?php
 		//date
 		$api_date = $dm->created_at;  // Fri Jun 14 00:49:09 +0000 2013
-		$z = new DateTime('@' . strtotime($api_date));
-		$x  = $this->session->userdata('utc_offset') . " seconds";
-		$date = date_modify($z, $x);
-		$date = date_format($date,"M d g:i a");
-		echo $date;
+		echo date("Y-m-d H:i:s", strtotime($api_date)) . " UTC";
 		?> 
 	</p>
 	<p class="dmActions"><a href="/direct_send_page/<?php 
