@@ -42,7 +42,7 @@ if (count($dms) != 0) {
 		<?php
 		//date
 		$api_date = $dm->created_at;  // Fri Jun 14 00:49:09 +0000 2013
-		echo date("d M g:i a", strtotime($api_date)) . " UTC";
+		echo date("d M g:i a", strtotime($api_date));
 		?> 
 	</p>
 	<p class="dmActions"><a href="/direct_send_page/<?php 
