@@ -68,11 +68,8 @@ foreach($tweets AS $tweet):
 	}
 
 	//date
-	$api_date = $tweet->created_at;  // Fri Jun 14 00:49:09 +0000 2013
-	$z = new DateTime('@' . strtotime($api_date));
-	$x  = $utc_offset . " seconds";
-	$date = date_modify($z, $x);
-	$date = date_format($date,"M d g:i a");
+	$api_date = $tweet->created_at; // Fri Jun 14 00:49:09 +0000 2013
+	$date = date("Y-m-d H:i:s", strtotime($api_date)) . " UTC";
 
 	//check if this tweet is a reply
 	$isReply = false;
@@ -128,10 +125,7 @@ foreach($tweets AS $tweet):
 	if (isset($tweet->quoted_status)) {
 
 		$api_date = $tweet->quoted_status->created_at;  // Fri Jun 14 00:49:09 +0000 2013
-		$z = new DateTime('@' . strtotime($api_date));
-		$x  = $utc_offset . " seconds";
-		$date2 = date_modify($z, $x);
-		$date2 = date_format($date2,"M d g:i a");
+		$date = date("Y-m-d H:i:s", strtotime($api_date)) . " UTC";
 
 		// Link links
 		$quoted_tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a rel="noopener noreferrer" target="_blank" href="\1">\1</a>', $tweet->quoted_status->full_text);
@@ -149,7 +143,7 @@ foreach($tweets AS $tweet):
 			doMedia($tweet->quoted_status->extended_entities->media, $xliff_reader);
 		}
 
-		echo '<p><a href="/status/'.$tweet->quoted_status_id.'">'.$date2.'</a></p>';
+		echo '<p><a href="/status/'.$tweet->quoted_status_id.'">'.$date.'</a></p>';
 		echo '</div>';
 	}
 
