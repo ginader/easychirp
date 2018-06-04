@@ -69,7 +69,7 @@ foreach($tweets AS $tweet):
 
 	//date
 	$api_date = $tweet->created_at; // Fri Jun 14 00:49:09 +0000 2013
-	$date = date("Y-m-d H:i:s", strtotime($api_date)) . " UTC";
+	$date = date("d M g:i a", strtotime($api_date)) . " UTC";
 
 	//check if this tweet is a reply
 	$isReply = false;
@@ -125,7 +125,7 @@ foreach($tweets AS $tweet):
 	if (isset($tweet->quoted_status)) {
 
 		$api_date = $tweet->quoted_status->created_at;  // Fri Jun 14 00:49:09 +0000 2013
-		$date = date("Y-m-d H:i:s", strtotime($api_date)) . " UTC";
+		$date = date("d M g:i a", strtotime($api_date)) . " UTC";
 
 		// Link links
 		$quoted_tweet_text = preg_replace('#\b(https?://[\w\d\/\.]+)\b#', '<a rel="noopener noreferrer" target="_blank" href="\1">\1</a>', $tweet->quoted_status->full_text);
