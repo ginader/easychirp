@@ -131,3 +131,9 @@
 		<li>User details page is blank page when user account is private.</li>
 	</ul>
 </div>
+
+<script src="/include/js/timezone.js"></script>
+<script>
+var tz = getTimezoneName();
+document.cookie="tz="+tz;
+</script>

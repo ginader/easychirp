@@ -1577,7 +1577,17 @@ class Main extends EC_Controller {
 			$session_data['user_id']                 = $accOAuthData['user_id'];
 			$session_data['screen_name']             = $accOAuthData['screen_name'];
 			$session_data['logged_in']               = TRUE;
-			$session_data['utc_offset']              = -18000; // EST 5 hours behind UTC
+			
+			function getUtcOffset($tz) {
+				$datetime = new DateTime("now", new DateTimeZone($tz));
+				return $datetime->getOffset();
+			}
+			if( isset($_COOKIE['tz']) ) {
+				$session_data['utc_offset'] = getUtcOffset($_COOKIE['tz']); //-18000; // EST 5 hours behind UTC
+			}
+			else {
+				$session_data['utc_offset'] = 0;
+			}
 
 			$lang_code = $this->session->userdata('lang_code');
 			if (empty($lang_code)){
@@ -1594,7 +1604,7 @@ class Main extends EC_Controller {
 				$session_data['following_count'] = $user_data->friends_count;
 				$session_data['tweet_count']     = $user_data->statuses_count;
 				$session_data['real_name']       = $user_data->name;
-				$session_data['utc_offset']      = $user_data->utc_offset;
+				//$session_data['utc_offset']      = $user_data->utc_offset;
 				$session_data['user_id']         = $user_data->id_str;
 			}
 
