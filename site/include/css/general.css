@@ -197,6 +197,10 @@ a:active {
 	background-color: #A1D5F9;
 }
 
+a[aria-disabled=true] {
+	border-bottom: none;
+}
+
 .rounded {
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;

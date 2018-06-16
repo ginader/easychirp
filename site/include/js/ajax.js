@@ -498,7 +498,8 @@ function theRespGuts(e) {
 
 	// Deactivate link clicked
 	$("a[rel='response']").unbind('click', theRespGuts);
-	$(this).attr("href","javascript:;");
+	$(this).attr("href","javascript:;")
+		   .attr("aria-disabled","true");
 	$(this).removeAttr("rel");
 	$(this).removeAttr("title");
 
