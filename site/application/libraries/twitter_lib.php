@@ -51,17 +51,20 @@ class Twitter_lib {
 		}
 	}
 
-
 	public function get($url, $params = array())
 	{
 		return $this->twitteroauth->get($url, $params);
 		
 	}
-
 	
 	public function post($url, $params = array())
 	{
 		return $this->twitteroauth->post($url, $params);
+	}
+	
+	public function delete($url, $params = array())
+	{
+		return $this->twitteroauth->delete($url, $params);
 	}
 
 	/**

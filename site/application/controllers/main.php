@@ -345,7 +345,7 @@ class Main extends EC_Controller {
 		$request_param['id'] = $id;
 		$request_param['include_entities'] = "false";
 
-		$data = $this->twitter_lib->post('direct_messages/destroy', $request_param);
+		$data = $this->twitter_lib->delete('direct_messages/events/destroy', $request_param);
 
 		if ($ajax == "true") {
 			echo json_encode($data);
