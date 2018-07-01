@@ -206,3 +206,5 @@ else {
 	}
 
 }
+
+//debug_object( $user );
