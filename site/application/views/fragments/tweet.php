@@ -245,7 +245,7 @@ foreach($tweets AS $tweet):
 			?></li>
 			<li><a href="/quote/<?php echo $tweet->id; ?>"><span aria-hidden="true" class="icon-quote"></span><?php echo $xliff_reader->get('gbl-tweet-quote'); ?></a></li>
 			<?php if (isset($tweet->user)): ?>
-			<li><a href="mailto:?subject=Tweet+from+@<?php echo $tweet->user->screen_name; ?>+(via+Easy+Chirp)&amp;body=<?php echo urlencode($tweet->full_text . " \n" . $date . "\n"); ?>via+EasyChirp.com">
+			<li><a href="mailto:?subject=Tweet%20from%20@<?php echo $tweet->user->screen_name; ?>%20(via%20Easy%20Chirp)&amp;body=<?php echo $tweet->full_text . " %0D%0A%0D%0A" . $date . " %0D%0A%0D%0A"; ?>via%20@EasyChirp%20http://www.EasyChirp.com">
 				<span aria-hidden="true" class="icon-mail"></span><?php echo $xliff_reader->get('gbl-tweet-email'); ?></a></li>
 			<?php endif; ?>
 			<?php 
