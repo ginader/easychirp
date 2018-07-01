@@ -379,11 +379,13 @@ class Main extends EC_Controller {
 		$request_param['include_entities'] = false;
 		$request_param['full_text'] = true;
 
-		$dms = $this->twitter_lib->get('direct_messages', $request_param);
+		$dms = $this->twitter_lib->get('direct_messages/events/list', $request_param);
 		//debug_object( $dms ); die;
 		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 
 				'dms' => $dms,
+				'user_id' => $this->session->userdata('user_id'),
+				'screen_name' => $this->session->userdata('screen_name'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
