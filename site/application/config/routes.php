@@ -50,7 +50,6 @@ $route['direct_action/(:any)/(:any)/(:any)'] = "main/direct_action/$1/$2/$3";
 $route['direct_send'] = "main/direct_send";
 $route['direct_delete/(:any)/(:any)'] = "main/direct_delete/$1/$2";
 $route['direct_inbox'] = "main/direct_inbox";
-$route['direct_sent'] = "main/direct_sent";
 $route['donate_thank'] = "donate/donate_thank";
 $route['donation_thank.html'] = "donate/donate_thank"; // The old path
 $route['features'] = "main/features";

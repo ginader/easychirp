@@ -395,42 +395,6 @@ class Main extends EC_Controller {
 	}
 
 	/**
-	 * The Direct Message (DM) 'outbox' of the current user. A list of all messages sent.
-	 *
-	 * @return void
-	 */
-	public function direct_sent()
-	{
-		$this->redirect_if_not_logged_in();
-
-		$this->_data['xliff_reader'] = $this->xliff_reader;
-
-		$params = array();
-		$params[] = $this->config->item('tw_consumer_key');
-		$params[] = $this->config->item('tw_consumer_secret');
-		$params[] = $this->session->userdata('user_oauth_token');
-		$params[] = $this->session->userdata('user_oauth_token_secret');
-
-		$this->load->library('twitter_lib');
-		$this->twitter_lib->connect($params);
-
-		$request_param = array();
-		$request_param['include_entities'] = false;
-		$request_param['full_text'] = true;
-
-		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
-		$this->_data['dms'] = $this->load->view('fragments/dm',
-			array( 
-				'dms' => $dms,
-				'xliff_reader' => $this->_data['xliff_reader']
-			), TRUE);
-
-		$this->layout->set_title( $this->xliff_reader->get('dm-sent') .' | '. $this->xliff_reader->get('dm-h1') );
-		$this->layout->set_description('Direct messages sent from user.');
-		$this->layout->view('direct_sent', $this->_data);
-	}
-
-	/**
 	 * Display the favorite tweets for a user. Assumes current user if not specified.
 	 *
 	 * @param string $screen_name the twitter username
