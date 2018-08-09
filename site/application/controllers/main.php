@@ -296,10 +296,11 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['screen_name'] = $this->input->post('tweep');
-		$request_param['text'] = $this->input->post('message');
+		$request_param['event->type'] = "message_create";
+		$request_param['event->message_create->target->recipient_id'] = $this->input->post('tweep');
+		$request_param['event->message_create->message_data->text'] = $this->input->post('message');
 
-		$data = $this->twitter_lib->post('direct_messages/new', $request_param);
+		$data = $this->twitter_lib->post('direct_messages/events/new', $request_param);
 
 		if (isset($data->errors[0]->code)) 
 		{
@@ -315,7 +316,7 @@ class Main extends EC_Controller {
 		}
 		else 
 		{
-			redirect( base_url() . 'direct_action/sent/-/' . $request_param['screen_name']);
+			echo "SENT!";//redirect( base_url() . 'direct_action/sent/-/' . $request_param['screen_name']);
 		}
 	}
 

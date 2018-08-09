@@ -33,11 +33,13 @@ if (count($dms) != 0) {
 	$senderName = $dm->message_create->sender_id;
 	if ($user_id == $senderName) {
 		$senderName = $screen_name;
+		$dmIncoming = false;
 	}
 	
 	$recipientName = $dm->message_create->target->recipient_id;
 	if ($user_id == $recipientName) {
 		$recipientName = $screen_name;
+		$dmIncoming = true;
 	}
 ?>
 <div class="tweet rounded clearfix dm">
@@ -69,17 +71,17 @@ if (count($dms) != 0) {
 		echo $date;
 		?> 
 	</p>
-	<p class="dmActions"><?php /* <a href="/direct_send_page/<?php 
-		if ($state == "inbox") {
-			echo $dm->sender->screen_name;
+	<p class="dmActions"><a href="/direct_send_page/<?php 
+		if ($dmIncoming == true) {
+			echo $dm->message_create->sender_id;
 		}
 		else {
-			echo $dm->recipient->screen_name;
+			echo $dm->message_create->target->recipient_id;
 		}
 		?>" class="btn">
 			<span aria-hidden="true" class="icon-bubbles"></span>
 			<?php echo $xliff_reader->get('gbl-tweet-dm'); ?>
-		</a> */ ?>
+		</a>
 		<a href="/direct_delete/<?php echo $dm->id; ?>/false" class="btn">
 			<span aria-hidden="true" class="icon-close"></span>
 			<?php echo strtolower($xliff_reader->get('global-delete')); ?>
