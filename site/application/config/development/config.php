@@ -562,7 +562,6 @@ $config['tweet_menu'] = array(
 		'id' => 'm_direct', 
 		'access_key' => '6', 
 		'lang-id' => 'nav-direct-messages', 
-		'label' => '<abbr title="Direct Messages">DM</abbr>', 
 		'parent' => '')
 	,'/direct_send_page' => array(
 		'id' => 'm_direct_send', 
