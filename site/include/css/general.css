@@ -340,6 +340,7 @@ overflow: hidden !important;
 	margin: 0 auto 2rem;
 	width: 99%;
 	max-width: 1100px;
+	max-width: 105ch;
 	text-align:left; /* Overrides the previously set center alignment that older IE versions reqd */
 }
 
