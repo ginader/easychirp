@@ -92,7 +92,7 @@ class Menu_generator {
 	{
 		$link = '<a href="' . $path . '" ';
 		if ($selected_class){
-			$link .= ' class="' . $selected_class . '" ';
+			$link .= ' class="' . $selected_class . '" ' . 'aria-current="page"';
 		} 
 		if ($access_key !== ''){
 			$link .= ' accesskey="' . $access_key . '" ';
