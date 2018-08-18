@@ -1,4 +1,4 @@
-<h1 class="rounded"><?php echo $xliff_reader->get('dm-inbox-h1'); ?></h1>
+<h1 class="rounded"><?php echo $xliff_reader->get('dm-h1'); ?></h1>
 
 <?php 
 echo $dms;

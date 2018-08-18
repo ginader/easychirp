@@ -44,23 +44,26 @@ if (count($dms) != 0) {
 ?>
 <div class="tweet rounded clearfix dm">
 	<h2 class="hide"><?php //echo $dm->sender->name?></h2>
-	<!-- <div class="dmAvatars">
+	<?php /* <div class="dmAvatars">
 		<a href="/user/<?php echo $dm->sender->screen_name?>"><img src="<?php echo $dm->sender->profile_image_url; ?>" width="48" height="48" alt="<?php echo $dm->sender->screen_name?>" /></a>
 		<span aria-hidden="true" class="icon-arrow2"></span><span class="hide">sent to</span>
 		<a href="/user/<?php echo $dm->recipient->screen_name?>"><img src="<?php echo $dm->recipient->profile_image_url; ?>" width="48" height="48" alt="<?php echo $dm->recipient->screen_name?>" /></a>
-	</div> -->
+	</div> */?>
 
-	<!-- <div class="dmAvatars">
+	<?php /* <div class="dmAvatars">
 		<a href="/user/<?php echo $senderName ?>"><img src="foo" width="48" height="48" alt="<?php echo $senderName ?>" /></a>
 		<span aria-hidden="true" class="icon-arrow2"></span><span class="hide">sent to</span>
 		<a href="/user/<?php echo $recipientName ?>"><img src="foo" width="48" height="48" alt="<?php echo $recipientName ?>" /></a>
-	</div> -->
+	</div> */?>
 
 	<q><?php echo $dm_text; ?></q>
 	
 	<p>
-		from <a href="/user/<?php echo $senderName; ?>"><?php echo $senderName; ?></a> 
-		to <a href="/user/<?php echo $recipientName; ?>"><?php echo $recipientName; ?></a> | 
+		from <?php echo $senderName; ?>
+		to <?php echo $recipientName; ?> | 
+
+		<?php /* from <a href="/user/<?php echo $senderName; ?>"><?php echo $senderName; ?></a> 
+		to <a href="/user/<?php echo $recipientName; ?>"><?php echo $recipientName; ?></a> |  */?>
 		<?php
 		//date
 		$api_date = gmdate("D M d G:i:s",$dm->created_timestamp); // TO Fri Jun 14 00:49:09 FROM 1529259015420
@@ -69,9 +72,9 @@ if (count($dms) != 0) {
 		$date = date_modify($z, $x);
 		$date = date_format($date,"d M g:i a");
 		echo $date;
-		?> 
+		?>
 	</p>
-	<p class="dmActions"><a href="/direct_send_page/<?php 
+	<?php /* <p class="dmActions"><a href="/direct_send_page/<?php 
 		if ($dmIncoming == true) {
 			echo $dm->message_create->sender_id;
 		}
@@ -85,7 +88,7 @@ if (count($dms) != 0) {
 		<a href="/direct_delete/<?php echo $dm->id; ?>/false" class="btn">
 			<span aria-hidden="true" class="icon-close"></span>
 			<?php echo strtolower($xliff_reader->get('global-delete')); ?>
-		</a></p>
+		</a></p> */?>
 </div>
 <?php 
 	endforeach;
