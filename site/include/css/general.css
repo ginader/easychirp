@@ -990,7 +990,7 @@ a[href="/sign_in"] {
 	max-height: 260px;
 }
 .tweet.dm {
-	padding-left: 150px;
+	padding-left: 1.25rem;
 	margin: 1rem 0;
 }
 .tweet.respond {

@@ -296,10 +296,11 @@ class Main extends EC_Controller {
 		$this->twitter_lib->connect($params);
 
 		$request_param = array();
-		$request_param['screen_name'] = $this->input->post('tweep');
-		$request_param['text'] = $this->input->post('message');
+		$request_param['event->type'] = "message_create";
+		$request_param['event->message_create->target->recipient_id'] = $this->input->post('tweep');
+		$request_param['event->message_create->message_data->text'] = $this->input->post('message');
 
-		$data = $this->twitter_lib->post('direct_messages/new', $request_param);
+		$data = $this->twitter_lib->post('direct_messages/events/new', $request_param);
 
 		if (isset($data->errors[0]->code)) 
 		{
@@ -315,7 +316,7 @@ class Main extends EC_Controller {
 		}
 		else 
 		{
-			redirect( base_url() . 'direct_action/sent/-/' . $request_param['screen_name']);
+			echo "SENT!";//redirect( base_url() . 'direct_action/sent/-/' . $request_param['screen_name']);
 		}
 	}
 
@@ -379,53 +380,19 @@ class Main extends EC_Controller {
 		$request_param['include_entities'] = false;
 		$request_param['full_text'] = true;
 
-		$dms = $this->twitter_lib->get('direct_messages', $request_param);
+		$dms = $this->twitter_lib->get('direct_messages/events/list', $request_param);
 		//debug_object( $dms ); die;
 		$this->_data['dms'] = $this->load->view('fragments/dm',
 			array( 
 				'dms' => $dms,
+				'user_id' => $this->session->userdata('user_id'),
+				'screen_name' => $this->session->userdata('screen_name'),
 				'xliff_reader' => $this->_data['xliff_reader']
 			), TRUE);
 
 		$this->layout->set_title( $this->xliff_reader->get('dm-inbox') .' | '. $this->xliff_reader->get('dm-h1') );
 		$this->layout->set_description('Direct messages sent to user.');
 		$this->layout->view('direct_inbox', $this->_data);
-	}
-
-	/**
-	 * The Direct Message (DM) 'outbox' of the current user. A list of all messages sent.
-	 *
-	 * @return void
-	 */
-	public function direct_sent()
-	{
-		$this->redirect_if_not_logged_in();
-
-		$this->_data['xliff_reader'] = $this->xliff_reader;
-
-		$params = array();
-		$params[] = $this->config->item('tw_consumer_key');
-		$params[] = $this->config->item('tw_consumer_secret');
-		$params[] = $this->session->userdata('user_oauth_token');
-		$params[] = $this->session->userdata('user_oauth_token_secret');
-
-		$this->load->library('twitter_lib');
-		$this->twitter_lib->connect($params);
-
-		$request_param = array();
-		$request_param['include_entities'] = false;
-		$request_param['full_text'] = true;
-
-		$dms = $this->twitter_lib->get('direct_messages/sent', $request_param);
-		$this->_data['dms'] = $this->load->view('fragments/dm',
-			array( 
-				'dms' => $dms,
-				'xliff_reader' => $this->_data['xliff_reader']
-			), TRUE);
-
-		$this->layout->set_title( $this->xliff_reader->get('dm-sent') .' | '. $this->xliff_reader->get('dm-h1') );
-		$this->layout->set_description('Direct messages sent from user.');
-		$this->layout->view('direct_sent', $this->_data);
 	}
 
 	/**

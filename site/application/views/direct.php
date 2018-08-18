@@ -13,6 +13,5 @@ if (isset($_GET["action"])) {
 	<ul>
 		<li><a href="/direct_send_page"><?php echo $xliff_reader->get('dm-h2-send'); ?></a></li>
 		<li><a href="/direct_inbox"><?php echo $xliff_reader->get('dm-inbox'); ?></a></li>
-		<li><a href="/direct_sent"><?php echo $xliff_reader->get('dm-sent'); ?></a></li>
 	</ul>
 </div>
