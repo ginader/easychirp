@@ -6,6 +6,11 @@
 
       <!-- GLOBAL -->
 
+      <trans-unit id="gbl-tagline" datatype="html">
+        <source>a simple web-based Twitter application accessible to all</source>
+        <target>a simple web-based Twitter application accessible to all</target>
+      </trans-unit>
+
       <trans-unit id="gbl-img-desc" datatype="html">
         <source>image description</source>
         <target>image description</target>

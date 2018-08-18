@@ -41,14 +41,13 @@ class EC_Controller extends CI_Controller {
 			$pol_bool = $this->config->item('pol_bool');
 		}
 
-
 		log_message('info', 'Before xliff->load lang_code=' . $lang_code);
 		$this->xliff_reader->load( $lang_code );
 
 		$this->layout->set_site_name('EasyChirp');
 		// Output tagline only if on home page
 		if($this->uri->total_segments() == 0) {
-			$this->layout->set_tagline('a simple web-based Twitter application accessible to all');
+			$this->layout->set_tagline($this->xliff_reader->get('gbl-tagline'));
 		}
 		$this->layout->set_description('Easy Chirp is a web-based Twitter app with a simple interface. It is optimized for disabled users and works well with assistive technology such as screen readers. It also functions well with keyboard-only users, older browsers such as IE9, a lowband internet connection, and even no JavaScript.');
 
