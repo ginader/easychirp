@@ -256,12 +256,12 @@ input[type=text],input[type=file],textarea {
 	padding: .25rem;
 	margin: .25rem 0;
 }
+button:hover,
 button:focus,
 textarea:focus,
 input[type='file']:focus,
 input[type='text']:focus {
-	border-color: #fc6;
-	outline: none;
+	border-color: #000;
 }
 
 #frmUrlShort fieldset {
@@ -923,9 +923,10 @@ button[type='reset'] {
 	border: 1px #aaa solid;
 	font-weight: normal;
 }
-button:hover, button:focus,
-.btnPost:hover, .btnPost:focus {
-	border-color: #fc6;
+button[type='reset']:hover,
+button[type='reset']:focus {
+	border: 1px #000 solid;
+	font-weight: normal;
 }
 .btnSecondary {
 	border-width: 1px;
