@@ -263,7 +263,7 @@ foreach($tweets AS $tweet):
 		<h3><a href="#userOptions_<?php echo $index; ?>" class="btnOptionsUser"><span aria-hidden="true" class="icon-user"></span><?php echo $xliff_reader->get('gbl-tweet-user-options'); ?><span aria-hidden="true"></span></a></h3>
 		<ul id="userOptions_<?php echo $index; ?>">
 			<li><a href="/user_timeline/<?php echo $tweet->user->screen_name; ?>"><span aria-hidden="true" class="icon-list2"></span><?php echo $xliff_reader->get('gbl-tweet-timeline'); ?></a></li>
-			<li><a href="/direct_send_page/<?php echo $tweet->user->screen_name; ?>"><span aria-hidden="true" class="icon-bubbles"></span><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></a></li>
+			<?php /* <li><a href="/direct_send_page/<?php echo $tweet->user->screen_name; ?>"><span aria-hidden="true" class="icon-bubbles"></span><?php echo $xliff_reader->get('gbl-tweet-dm'); ?></a></li> */ ?>
 			<li><a href="/timeline/<?php echo $tweet->user->screen_name; ?>" rel="twmess"><span aria-hidden="true" class="icon-at"></span><?php echo $xliff_reader->get('gbl-tweet-tweet-message'); ?></a></li>
 			<li><a href="/user_lists/<?php echo $tweet->user->screen_name; ?>"><span aria-hidden="true" class="icon-list"></span><?php echo $xliff_reader->get('profile-dt-lists'); ?></a></li>
 			<li><a href="/report_spam/<?php echo $tweet->user->screen_name; ?>/false" class="spammer"><span aria-hidden="true" class="icon-alert"></span><?php echo $xliff_reader->get('gbl-tweet-report'); ?></a></li>
