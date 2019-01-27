@@ -12,3 +12,6 @@ echo $dms;
 	</ul>
 </div> -->
 
+<?php
+//echo debug_object( $dms );
+?>

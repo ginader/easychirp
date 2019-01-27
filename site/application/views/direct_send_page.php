@@ -25,34 +25,44 @@ if (isset($action)) {
 		data-error-over="<?php echo $xliff_reader->get('error-over-dm'); ?>"
 		data-error-empty="<?php echo $xliff_reader->get('error-dm-empty'); ?>"
 		data-error-tweep-empty="<?php echo $xliff_reader->get('error-tweep-empty'); ?>">
+
+			<input type="hidden" name="recipient_id" value="<?php
+			// Output id; must be defined to send with new DM API
+			if ($id !== FALSE):
+				echo $id;
+			endif; ?>" />
+
 		<h3 id="dm-label-tweep"><label for="tweep"><?php echo $xliff_reader->get('dm-label-tweep'); ?></label></h3>
 		<div id="enterTweep">
-			<input type="text" size="20" id="tweep" name="tweep" class="input1" required aria-required="true" value="<?php
+			<input type="text" readonly size="20" id="tweep" name="tweep" class="input1" required aria-required="true" value="<?php
 			// Output screen_name if defined
 			if ($screen_name !== FALSE):
 				echo $screen_name;
-			endif; ?>" />
+			endif; ?>"
+			style="background-color:#ddd;" />
 		</div>
 		<div class="clear"></div>
 
 		<h3 style="padding-top:0"><label for="txtDirectMessage"><?php echo $xliff_reader->get('dm-label-txtDirectMessage'); ?></label></h3>
 		<div class="clearfix">
-			<textarea id="txtDirectMessage" name="message" rows="2" cols="40" required aria-required="true"></textarea>
+			<textarea id="txtDirectMessage" name="message" rows="2" cols="40" 
+				required aria-required="true"
+				aria-describedby="dm-note1"></textarea>
 			<button class="btnPost" type="submit"><?php echo $xliff_reader->get('dm-send'); ?></button>
 		</div>
 	</form>
 
-	<p class="smallText notes"><?php echo $xliff_reader->get('dm-note1'); ?></p>
-	<p class="smallText notes"><?php echo $xliff_reader->get('dm-note2'); ?></p>
+	<p class="smallText notes" id="dm-note1"><?php echo $xliff_reader->get('dm-note1'); ?></p>
+	<?php /*<p class="smallText notes"><?php echo $xliff_reader->get('dm-note2'); ?></p>*/?>
 </div>
 
-<div class="box1 rounded">
+<?php /*<div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('gbl-select-page'); ?></h2>
 	<ul>
 		<li><a href="/direct_inbox"><?php echo $xliff_reader->get('dm-inbox'); ?></a></li>
 		<li><a href="/direct_sent"><?php echo $xliff_reader->get('dm-sent'); ?></a></li>
 	</ul>
-</div>
+</div>*/?>
 
 <?php
 

@@ -236,11 +236,12 @@ class Main extends EC_Controller {
 	 * @param string $message optional. the content of the message
 	 * @return void
 	 */
-	public function direct_send_page($screen_name = '', $action = FALSE, $message = '')
+	public function direct_send_page($screen_name = '', $id, $action = FALSE, $message = '')
 	{
 		$this->redirect_if_not_logged_in();
 
 		$this->_data['screen_name'] = $screen_name;
+		$this->_data['id'] = $id;
 		$this->_data['action'] = $action;
 		$this->_data['msg'] = $message;
 		$this->_data['xliff_reader'] = $this->xliff_reader;
@@ -295,10 +296,27 @@ class Main extends EC_Controller {
 		$this->load->library('twitter_lib');
 		$this->twitter_lib->connect($params);
 
+		// $data = array(
+		//     'userID'      => 'a7664093-502e-4d2b-bf30-25a2b26d6021',
+		//     'itemKind'    => 0,
+		//     'value'       => 1,
+		//     'description' => 'Boa saudaÁ„o.',
+		//     'itemID'      => '03e76d0a-8bab-11e0-8250-000c29b481aa'
+		// );
+
+		// $data->event->type = "message_create";
+		// $data->event->message_create->target->recipient_id = $this->input->post('recipient_id');
+		// $data->event->message_create->message_data->text = $this->input->post('message');
+		// $request_param = $data;
+		//$json = json_encode($data);
+		//$request_param = json_encode($data);
+
 		$request_param = array();
-		$request_param['event->type'] = "message_create";
-		$request_param['event->message_create->target->recipient_id'] = $this->input->post('tweep');
-		$request_param['event->message_create->message_data->text'] = $this->input->post('message');
+		$request_param['event']['type'] = "message_create";
+		$request_param['event']['message_create']['target']['recipient_id'] = $this->input->post('recipient_id');
+		$request_param['event']['message_create']['message_data->text'] = $this->input->post('message');
+
+		//echo debug_object( $request_param ); die;
 
 		$data = $this->twitter_lib->post('direct_messages/events/new', $request_param);
 
