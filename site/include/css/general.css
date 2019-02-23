@@ -269,9 +269,9 @@ input[type='text']:focus {
 }
 #frmUrlShort fieldset,
 #frmTweetImage fieldset {
-	border: #ddd 1px solid;
+	border: #ccc 1px solid;
 	border-left-width: 5px;
-	border-left-color: #eee;
+	border-left-color: #ddd;
 	padding: 1em;
 }
 #frmUrlShort legend,
