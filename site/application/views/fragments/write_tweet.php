@@ -13,7 +13,7 @@ if (empty($single)):
 		<label for="txtEnterTweet"><a href="#enterTweetContent" aria-controls="enterTweetContent" id="controlEnterTweet">
 			<span data-icon="&#x27;" aria-hidden="true"></span><?php echo $xliff_reader->get('write-tweet-h2-label'); ?></a></label>
 	</h2>
-	<div id="enterTweetContent" aria-labelledby="controlEnterTweet" <?php
+	<div id="enterTweetContent" role="region" aria-labelledby="controlEnterTweet" <?php
 	if (isset($expand) && $expand)
 	{
 		echo ' class="displayEnterTweet" ';
