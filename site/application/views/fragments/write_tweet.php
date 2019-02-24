@@ -28,7 +28,7 @@ if (empty($single)):
 			data-error-over="<?php echo $xliff_reader->get('error-over-limit'); ?>"
 			data-error-empty="<?php echo $xliff_reader->get('error-tweet-empty'); ?>">
 			<div>
-				<textarea id="txtEnterTweet" name="status" rows="3"><?php
+				<textarea id="txtEnterTweet" name="status" rows="3" aria-describedby="charlimit"><?php
 
 				if ( isset($reply_to) )
 				{
