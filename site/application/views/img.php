@@ -51,32 +51,31 @@
      </header>
 
      <main id="main" role="main">
-
           <div>
           <?php
-           echo '<img src="' . $url . '" ';
-           echo 'alt="' . $title . '" ';
-           if ($isLongDesc) {
-               echo 'aria-details="longdesc" ';
-           }
-           echo '/>';
+          echo '<img src="' . $url . '" ';
+          echo 'alt="' . $title . '" ';
+          if ($isLongDesc) {
+            echo 'aria-details="longdescription" ';
+            echo 'longdesc="' . $longdescUri . '" ';
+          }
+          echo '/>';
           ?>
           </div>
 
-          <?php /* <p><a href="<?php echo $urlImgur; ?>" rel="noopener noreferrer" target="_blank">View image on Imgur</a></p> */ ?>
-
           <?php
-           if ($isLongDesc) {
-               echo '<p id="longdesc">' . $imgDesc . '</p>';
-           }
+          if ($isLongDesc) {
+            echo '<p id="longdescription">' . $imgDesc . '</p>';
+          }
           ?>
-
      </main>
 
      <footer id="footer" role="contentinfo">
+          <p><a href="<?php echo $urlImgur; ?>" rel="noopener noreferrer" target="_blank">View this image on Imgur</a></p>          
           <p>This page is designed to provide an <a href="http://webaim.org/techniques/alttext/" rel="noopener noreferrer" target="_blank">accessible image</a> posted on Twitter via Easy Chirp.</p>
-          <p>This page implements the ARIA 1.1 <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details" rel="noopener noreferrer" target="_blank">aria-details</a> attribute. This page previously provided a proof for the longdesc attribute.</p>
-          <p>Brought to you by <a href="http://www.easychirp.com">Easy Chirp</a> (<a href="http://twitter.com/easychirp">@EasyChirp</a>) 
+          <p>This page implements the ARIA 1.1 <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details" rel="noopener noreferrer" target="_blank">aria-details</a> attribute 
+            and provides a proof for the <a href="https://www.w3.org/TR/html-longdesc/" rel="noopener noreferrer" target="_blank">longdesc</a> attribute.</p>
+          <p>Brought to you by <a href="http://www.easychirp.com" rel="noopener noreferrer" target="_blank">Easy Chirp</a> (<a href="http://twitter.com/easychirp" rel="noopener noreferrer" target="_blank">@EasyChirp</a>) 
             and the <a href="http://www.Imgur.com" rel="noopener noreferrer" target="_blank">Imgur</a> photo service.</p>
           <div><img src="/images/brand/easy_chirp_icon1.png" width="48" height="48" alt="Easy Chirp icon" /></div>
      </footer>
