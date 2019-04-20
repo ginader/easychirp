@@ -97,6 +97,14 @@ function updateCharCount(charCountField) {
 	theField = document.getElementById(charCountField);
 	currentCount = 280 - theField.value.length;
 	
+	// Return aria-live if char count closer to limit
+	if (currentCount < 75) {
+		$(charCntNum).attr("aria-live","polite");
+	}
+	// else {
+	// 	$(charCntNum).removeAttr("aria-live");
+	// }
+
 	// Update number
 	charCntNum.html(currentCount);
 	
@@ -120,6 +128,9 @@ function updateCharCount(charCountField) {
 
 	// Set initial value and variables
 	updateCharCount(charCountField);
+
+	// Remove aria-live onload--return later if char count closer to limit
+	$(charCntNum).removeAttr("aria-live");
 
 	// Event listener
 	theField.onkeyup = function() {
