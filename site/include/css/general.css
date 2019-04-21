@@ -269,9 +269,9 @@ input[type='text']:focus {
 }
 #frmUrlShort fieldset,
 #frmTweetImage fieldset {
-	border: #ddd 1px solid;
+	border: #ccc 1px solid;
 	border-left-width: 5px;
-	border-left-color: #eee;
+	border-left-color: #ddd;
 	padding: 1em;
 }
 #frmUrlShort legend,
@@ -722,6 +722,7 @@ div.msgBoxNeg {
 	width: 80%;
 	font-size: 1.2rem;
 	line-height: 1.6rem;
+	min-height: 4.8rem;
 }
 #enterTweet h3 {
     font-size: 1rem;

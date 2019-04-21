@@ -157,10 +157,10 @@ class Image extends CI_Controller {
 		$_data["title"] = $imgTitle;
 		
 		// Create dataURI for longdesc if content exists
-		// if ($isLongDesc) {
-		// 	$longdescStr = '<html><head><title>Description: '.$imgTitle.'</title><meta charset="utf-8"></head><body>'.$imgDesc.'</body></html>';
-		// 	$_data["longdescUri"] = "data:text/html;base64," . base64_encode($longdescStr);
-		// }
+		if ($isLongDesc) {
+			$longdescStr = '<html><head><title>Description: '.$imgTitle.'</title><meta charset="utf-8"></head><body>'.$imgDesc.'</body></html>';
+			$_data["longdescUri"] = "data:text/html;base64," . base64_encode($longdescStr);
+		}
 
 		// Render page
 		$this->load->view("img", $_data);

@@ -13,7 +13,7 @@ if (empty($single)):
 		<label for="txtEnterTweet"><a href="#enterTweetContent" aria-controls="enterTweetContent" id="controlEnterTweet">
 			<span data-icon="&#x27;" aria-hidden="true"></span><?php echo $xliff_reader->get('write-tweet-h2-label'); ?></a></label>
 	</h2>
-	<div id="enterTweetContent" aria-labelledby="controlEnterTweet" <?php
+	<div id="enterTweetContent" role="region" aria-labelledby="controlEnterTweet" <?php
 	if (isset($expand) && $expand)
 	{
 		echo ' class="displayEnterTweet" ';
@@ -28,7 +28,7 @@ if (empty($single)):
 			data-error-over="<?php echo $xliff_reader->get('error-over-limit'); ?>"
 			data-error-empty="<?php echo $xliff_reader->get('error-tweet-empty'); ?>">
 			<div>
-				<textarea id="txtEnterTweet" name="status" rows="3"><?php
+				<textarea id="txtEnterTweet" name="status" rows="3" aria-describedby="charlimit"><?php
 
 				if ( isset($reply_to) )
 				{

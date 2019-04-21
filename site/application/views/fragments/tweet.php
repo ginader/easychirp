@@ -119,6 +119,9 @@ foreach($tweets AS $tweet):
 	// Link #hashtags
 	$tweet_text = preg_replace('/\B#([-_0-9a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+)/', '<a href="/search_results?query=%23$1">$0</a>', $tweet_text);
 
+	// Line breaks
+	$tweet_text = preg_replace('/\n/', '<br>', $tweet_text);
+
 	// Output tweet text;
 	echo $tweet_text;
 	?></q>

@@ -2283,6 +2283,7 @@ class Main extends EC_Controller {
 				$request_param['q'] = $query;
 			}
 		}
+		$request_param['q'] = strip_tags($request_param['q']); // Sanitize
 		$request_param['include_ext_alt_text'] = "true"; // Required to request alt text
 		$request_param['tweet_mode'] = "extended"; // Required to get full tweet text (not truncated)
 
