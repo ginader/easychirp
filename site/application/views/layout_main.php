@@ -131,6 +131,9 @@ if ($this->session->userdata('logged_in')) {
 	<?php endforeach; ?>
 	</p>
 
+	<p>Operating System color theme detected: 
+		<span id="os-color-scheme">none </span> (overrides app-level selection above<span id="os-color-js">, Javascript required</span>)</p>
+
 	<p><?php echo $xliff_reader->get('filter-pol') . ": " ?>
 		<?php if ($pol_bool === "on"): ?>
 			<?php 

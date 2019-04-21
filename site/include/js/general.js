@@ -2,6 +2,21 @@
 var modalOpen = false;
 var txtAlertSureDelete = $("#main").attr("data-sure-delete"); //"Are you sure you want to delete...";
 
+/* detect color schemes */
+var mode = getComputedStyle(document.getElementById("os-color-scheme")).getPropertyValue('content');
+$("#os-color-js").html("");
+if (mode=="dark"){
+	$("body").removeClass("theme-default").addClass("theme-inverse");
+	$("#os-color-scheme").html("");
+}
+else if (mode=="light"){
+	$("body").removeClass("theme-inverse").addClass("theme-default");
+	$("#os-color-scheme").html("");
+}
+else {
+	$("#os-color-scheme").html("none");
+}
+
 /* Show/hide option buttons *************/
 $(".btnOptions > h3 > a").attr("aria-expanded",false); // set default
 $(".btnOptions > h3 > a").click(function(e) {
@@ -493,4 +508,3 @@ $(document).bind('keyup', 'ctrl+u', function() {
 $(document).bind('keyup', 'ctrl+m', function() {
 	window.location.href = "/profile";
 });
-

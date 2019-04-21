@@ -1570,3 +1570,27 @@ body.theme-inverse {
 		line-height: 1.2;
 	}
 }
+
+/* detect color schemes */
+#os-color-scheme {
+	content: "";
+}
+/*#os-color-scheme::after {
+	content: "none";
+}*/
+@media (prefers-color-scheme: light) {
+	#os-color-scheme {
+		content: "light";
+	}
+	#os-color-scheme::after {
+		content: "light";
+	}
+}
+@media (prefers-color-scheme: dark) {
+	#os-color-scheme {
+		content: "dark";
+	}
+	#os-color-scheme::after {
+		content: "dark";
+	}
+}
