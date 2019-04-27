@@ -142,6 +142,9 @@ foreach($tweets AS $tweet):
 		// Link #hashtags
 		$quoted_tweet_text = preg_replace('/\B#([-_0-9a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ]+)/', '<a href="/search_results?query=%23$1">$0</a>', $quoted_tweet_text);
 
+		// Line breaks
+		$quoted_tweet_text = preg_replace('/\n/', '<br>', $quoted_tweet_text);
+
 		echo '<div class="box1 rounded quotedTweet">';
 		echo '<h3 title="'.$tweet->quoted_status->user->name.'">@'.$tweet->quoted_status->user->screen_name;
 		echo '<span class="hide"> - '.$xliff_reader->get('quote-h1').'</span></h3>';
