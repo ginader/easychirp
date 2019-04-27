@@ -508,7 +508,6 @@ function theRespGuts(e) {
 		success: function(response) {
 			data.respParent.after(response);
 			$("a[rel='response']").bind('click', theRespGuts).attr("role","button");
-			$(data.respParent).next('[tabindex=-1]').focus();
 			
 			// the following is duplicated in general.js
 			$(data.respParent).next().find(".btnSecondary").attr("aria-expanded", "false")
