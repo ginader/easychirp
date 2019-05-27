@@ -36,8 +36,8 @@ if (isset($_GET["action"])) {
 		</div>
 	</form>
 
-	<div class="clearfix" style="font-size: 1.25rem;">
-		<a class="delete-link fr" href="list_delete?id=<?php echo $list->id; ?>"><span aria-hidden="true" class="icon-close1"></span> Delete</a>
+	<div class="clearfix" id="edit-list-delete">
+		<a class="delete-link" href="list_delete?id=<?php echo $list->id; ?>"><span aria-hidden="true" class="icon-close1"></span> Delete</a>
 	</div>
 
 </div>

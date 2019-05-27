@@ -849,6 +849,15 @@ div.msgBoxNeg {
 #createList legend span {
 	font-weight: normal;
 }
+#edit-list-delete {
+	margin-left:31%; 
+	margin-top:1.75rem; 
+	margin-bottom:1rem; 
+	font-size:1.2rem;
+}
+#txt_listDesc {
+	width: 95%;
+}
 
 a.delete-search {
 	margin-left: .5rem;
@@ -1500,9 +1509,8 @@ body.theme-inverse {
 	#queryUsers { /* search inputs */
 		width: 75%;
 	}
-	#txt_listName,
-	#txt_listDesc {
-		width: 85%;
+	#txt_listName {
+		width: 95%;
 	}
 	#urlLong,
 	#frmTweetImage input,
