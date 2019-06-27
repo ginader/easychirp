@@ -200,6 +200,11 @@ a:active {
 a[aria-disabled=true] {
 	border-bottom: none;
 }
+a[aria-disabled=true]:hover,
+a[aria-disabled=true]:focus,
+a[aria-disabled=true]:active {
+	background-color: inherit;
+}
 
 .rounded {
 	-moz-border-radius: 15px;

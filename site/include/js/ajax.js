@@ -498,10 +498,8 @@ function theRespGuts(e) {
 
 	// Deactivate link clicked
 	$("a[rel='response']").unbind('click', theRespGuts);
-	$(this).attr("href","javascript:;")
-		   .attr("aria-disabled","true");
-	$(this).removeAttr("rel");
-	$(this).removeAttr("title");
+	$(this).attr("aria-disabled","true");
+	$(this).removeAttr("href").removeAttr("rel");
 
 	$.ajax({
 		url: data.url,
@@ -510,6 +508,7 @@ function theRespGuts(e) {
 			$("a[rel='response']").bind('click', theRespGuts).attr("role","button");
 			
 			// the following is duplicated in general.js
+			// Show/hide image descriptions
 			$(data.respParent).next().find(".btnSecondary").attr("aria-expanded", "false")
 			.click(function(e) {
 				e.preventDefault();
@@ -527,12 +526,12 @@ function theRespGuts(e) {
 					$(this).attr("aria-expanded",false);
 				}
 				});
+			$(data.respParent).next().focus();
 		},
 		error: function(xhr) {
 			alert('Error. Status = ' + xhr.status);
 		}
 	});
-	$(this).focus();
 }
 $('a[rel="response"]').bind('click', theRespGuts).attr("role","button");
 
