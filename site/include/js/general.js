@@ -185,7 +185,7 @@ $('#showCreateAnchor').click(function() {
 });
 
 // Browser patch for anchor links focus *************/
-$("a[href^='#']").click(function() {
+$("a[href^='#']:not(.close)").click(function() {
 	$("#"+$(this).attr("href").slice(1)+"").focus()
 });
 
