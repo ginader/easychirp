@@ -31,9 +31,6 @@
 				<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="<?php echo $xliff_reader->get('home-donate-btn-alt'); ?>" />
 				<img alt="" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1" />
 			</form>
-			<h2 class="hide">Ad</h2>
-			<iframe style="width:100%; margin-top:2em" title="amazon ad" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=2cb1995e17362867da27e7ee188f83b9&t=weboverhauls-20&tracking_id=weboverhauls-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-			<?php /* <iframe style="margin-top:2em" title="amazon ad"  src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=9&l=ez&f=ifr&linkID=55b1bf42614e24bc9e878de47034f6f2&t=weboverhauls-20&tracking_id=weboverhauls-20" width="180" height="150" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe> */ ?>
 		</div>
 	</div>
 </div>
@@ -128,7 +125,8 @@
 <div class="box1 rounded">
 	<h2><?php echo $xliff_reader->get('home-h2-dev-tasks'); ?></h2>
 	<ul>
-		<li>User unable to change Twitter accounts even after logging out on Easy Chirp and on Twitter.</li>
+		<li>Direct Messages functionality broken; only displays text message; due to Twitter completely changing the DM API.</li>
+		<li>Periodically user unable to change Twitter accounts even after logging out on Easy Chirp and on Twitter.</li>
 		<li>Pagination missing list subscriber/member pages.</li>
 		<li>User details page is blank page when user account is private.</li>
 	</ul>
