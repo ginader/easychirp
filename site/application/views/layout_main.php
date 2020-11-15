@@ -22,6 +22,8 @@ if ($this->layout->lang_code === "ar") {
 <body class="<?php echo $active_theme; ?>">
 <?php include_once("images/svg/icons.svg"); ?>
 <div id="wrapper">
+	
+<h1 style="margin-bottom:.5em; color:#900;">Easy Chirp is no longer maintained.</h1>
 
 <?php if ($pol_bool === "on"): ?>
 	<div id="political_filter"><p><?php echo $xliff_reader->get('filter-pol-is-on'); ?></p></div>
